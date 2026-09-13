@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "arial",
+        "files": [
+          "web/app/globals.css"
+        ],
+        "createdAt": "2026-09-13T09:58:08.691Z",
+        "reason": "Implementation decision recorded in evidence/lumenia/design/application-visual-specification.md: use locally installed fonts with no font download, preserve the verified lightweight Japanese interface; Arial is the Latin fallback. This exception applies only to this file and value."
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "web/components/ArtistStudio.styles.ts"
+        ],
+        "createdAt": "2026-09-13T14:26:43.080Z",
+        "reason": "Assistant triage: ArtistStudio.styles.ts:107-116 draws a literal 100 by 7 pixel paintbrush; the 25 pixel dark left border is its bristle tip. ArtistStudio.tsx:82 mounts it as an aria-hidden studio prop, not a card accent. Preserve the artwork; scope this exception to this file only."
+      }
+    ]
+  }
+}

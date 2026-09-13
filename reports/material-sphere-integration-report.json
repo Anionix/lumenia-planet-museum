@@ -1,0 +1,187 @@
+{
+  "artifactIdentifier": "e67bec4e-cc81-54b8-8de8-e04f06503867",
+  "executionIdentifier": "01a09b39-61ce-7125-a2a9-30d531af2116",
+  "recordedAt": "2026-09-13T14:43:44.525Z",
+  "sourceRevision": "sha256:e71b7270c68cc3ffb60eb1c6ab9adf5a6c1a901c38d80dbc6365b16f3f4f2481",
+  "mathematicsSourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
+  "status": "blocked",
+  "predecessors": [
+    {
+      "file": "verification/planet-museum-intent.md",
+      "sha256": "05d736470ba3d2722febbf9d91b52425d5f026f56cf8349c716acabd89dc4fe4"
+    },
+    {
+      "file": "verification/planet-museum-spec.md",
+      "sha256": "4d5dfed8b475b9c18014939194cce2c0008d965817b64b2d08792b9c9081cf6f"
+    },
+    {
+      "file": "planetarium/reports/proof-report.json",
+      "sha256": "7b641713c486d8ddb939cd92ae5db5b2b86ca3c9146457b93e51ae2d0d73e532"
+    }
+  ],
+  "attachments": [
+    {
+      "file": "proof-report.json",
+      "sha256": "7b641713c486d8ddb939cd92ae5db5b2b86ca3c9146457b93e51ae2d0d73e532",
+      "scope": "Original mathematics receipt; inspect its own source revision"
+    },
+    {
+      "file": "wolfram-receipt.json",
+      "sha256": "7f172a4683ba5142f8f42ec20c669ea0427078e39fed266aa0aeb72414926b7a",
+      "scope": "Original mathematics receipt; inspect its own source revision"
+    }
+  ],
+  "gates": [
+    {
+      "gateName": "MathematicalPrerequisites",
+      "gateIdentifier": "21b8162e-08a4-585e-abe9-87adda3ff119",
+      "executionIdentifier": "01a09b39-61ce-7125-a2a9-30d531af2116",
+      "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
+      "status": "pass",
+      "observation": {
+        "value": 0,
+        "limit": 0,
+        "unit": "violations"
+      },
+      "tools": [
+        "current mathematics manifest",
+        "original gate report"
+      ],
+      "failureReason": null
+    },
+    {
+      "gateName": "GeneratedBridgeIntegrity",
+      "gateIdentifier": "e10972ca-c5da-5251-88b5-29829f194a5c",
+      "executionIdentifier": "01a09b39-61ce-7125-a2a9-30d531af2116",
+      "sourceRevision": "sha256:e71b7270c68cc3ffb60eb1c6ab9adf5a6c1a901c38d80dbc6365b16f3f4f2481",
+      "status": "pass",
+      "observation": {
+        "value": 0,
+        "limit": 0,
+        "unit": "changedFiles"
+      },
+      "tools": [
+        "SHA-256 of every generated bridge output"
+      ],
+      "failureReason": null
+    },
+    {
+      "gateName": "ApplicationBuildAndCodeInspection",
+      "gateIdentifier": "810af02d-1589-5bcb-a9b5-1b19a67a586d",
+      "executionIdentifier": "01a09b39-61ce-7125-a2a9-30d531af2116",
+      "sourceRevision": "sha256:e71b7270c68cc3ffb60eb1c6ab9adf5a6c1a901c38d80dbc6365b16f3f4f2481",
+      "status": "pass",
+      "observation": {
+        "value": 0,
+        "limit": 0,
+        "unit": "nonPassingGates"
+      },
+      "tools": [
+        "Next.js production build",
+        "application report",
+        "exported output digests"
+      ],
+      "failureReason": null
+    },
+    {
+      "gateName": "CharacterAdmission",
+      "gateIdentifier": "9ee5bb0d-3c4f-5b53-871f-442ec289e4ca",
+      "executionIdentifier": "01a09b39-61ce-7125-a2a9-30d531af2116",
+      "sourceRevision": "sha256:e71b7270c68cc3ffb60eb1c6ab9adf5a6c1a901c38d80dbc6365b16f3f4f2481",
+      "status": "blocked",
+      "observation": {
+        "value": null,
+        "limit": 0,
+        "unit": "violations"
+      },
+      "tools": [
+        "character receipt admission",
+        "image and evidence digests"
+      ],
+      "failureReason": "Character receipt is absent or invalid"
+    },
+    {
+      "gateName": "CurrentBuildBrowserVerification",
+      "gateIdentifier": "6238b980-5791-5395-b2f1-94f43a2b475b",
+      "executionIdentifier": "01a09b39-61ce-7125-a2a9-30d531af2116",
+      "sourceRevision": "sha256:e71b7270c68cc3ffb60eb1c6ab9adf5a6c1a901c38d80dbc6365b16f3f4f2481",
+      "status": "blocked",
+      "observation": {
+        "value": null,
+        "limit": 0,
+        "unit": "violations"
+      },
+      "tools": [
+        "browser observation receipt required"
+      ],
+      "failureReason": "No complete browser observation receipt is attached to this exact application revision"
+    },
+    {
+      "gateName": "FourBrowserPerformanceVerification",
+      "gateIdentifier": "68d5e3f5-8ebd-51cd-95be-01d6c8d10eaa",
+      "executionIdentifier": "01a09b39-61ce-7125-a2a9-30d531af2116",
+      "sourceRevision": "sha256:e71b7270c68cc3ffb60eb1c6ab9adf5a6c1a901c38d80dbc6365b16f3f4f2481",
+      "status": "blocked",
+      "observation": {
+        "value": null,
+        "limit": 0,
+        "unit": "violations"
+      },
+      "tools": [
+        "Chrome, Safari, Firefox, Edge measurement receipts required"
+      ],
+      "failureReason": "Four-browser and performance acceptance has not been completed"
+    }
+  ],
+  "rendererBranches": [
+    {
+      "renderer": "plumeriaCss",
+      "label": "Plumeria / CSS",
+      "availability": "connected",
+      "rendererIdentifier": "2a04bcd8-e137-5616-aff8-6c81b2a0113e",
+      "projectionPolicy": "firstTwoSpatialAxes",
+      "limitation": "ブラウザーごとの検査は別に必要です。"
+    },
+    {
+      "renderer": "rasterImage",
+      "label": "画像",
+      "availability": "notConnected",
+      "rendererIdentifier": "11756f65-21cc-5be2-a7ab-439d40981f74",
+      "projectionPolicy": "firstTwoSpatialAxes",
+      "limitation": "変換処理と表示検査は未接続です。CSSとの見た目の一致も未検証です。"
+    },
+    {
+      "renderer": "scalableVectorGraphics",
+      "label": "SVG",
+      "availability": "notConnected",
+      "rendererIdentifier": "6114feb9-ca3d-54cd-8dbd-23c77a501dc1",
+      "projectionPolicy": "firstTwoSpatialAxes",
+      "limitation": "変換処理と表示検査は未接続です。CSSとの見た目の一致も未検証です。"
+    },
+    {
+      "renderer": "canvasTwoDimensional",
+      "label": "Canvas",
+      "availability": "notConnected",
+      "rendererIdentifier": "75c24328-6d06-52a3-8093-ab6613cfa6b9",
+      "projectionPolicy": "firstTwoSpatialAxes",
+      "limitation": "変換処理と表示検査は未接続です。CSSとの見た目の一致も未検証です。"
+    },
+    {
+      "renderer": "threeDimensionalScene",
+      "label": "Three.js",
+      "availability": "notConnected",
+      "rendererIdentifier": "093667d3-2e02-5dbd-9efe-975c2f7ab8c9",
+      "projectionPolicy": "firstTwoSpatialAxes",
+      "limitation": "変換処理と表示検査は未接続です。CSSとの見た目の一致も未検証です。"
+    }
+  ],
+  "machineContract": {
+    "state": "inspected",
+    "transition": "source-bound evidence -> local report; missing checks remain blocked"
+  },
+  "limitations": [
+    "Local report, not a deployment receipt",
+    "Character image is not Material Sphere raster conversion",
+    "Artistic quality and historical interpretation are not mathematical conclusions"
+  ]
+}

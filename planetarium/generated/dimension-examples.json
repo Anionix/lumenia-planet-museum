@@ -1,0 +1,153 @@
+{
+  "artifactIdentifier": "e67bec4e-cc81-54b8-8de8-e04f06503867",
+  "executionIdentifier": "01a09acc-4808-7629-b5d4-a4839d16870c",
+  "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
+  "placements": [
+    {
+      "result": {
+        "accepted": true,
+        "spaceDimensions": 1,
+        "coordinateUnit": "integerGridUnit",
+        "components": [
+          1
+        ],
+        "embeddedComponents": [
+          1,
+          0
+        ],
+        "restoredComponents": [
+          1
+        ],
+        "projectedComponents": [
+          1,
+          0
+        ],
+        "quarterTurnComponents": null,
+        "discardedAxisCount": 0,
+        "timeMilliseconds": 1000
+      },
+      "pixelsPerGridUnit": 8,
+      "style": {
+        "position": "absolute",
+        "transform": "translate(8px, 0px)"
+      }
+    },
+    {
+      "result": {
+        "accepted": true,
+        "spaceDimensions": 2,
+        "coordinateUnit": "integerGridUnit",
+        "components": [
+          1,
+          2
+        ],
+        "embeddedComponents": [
+          1,
+          2,
+          0
+        ],
+        "restoredComponents": [
+          1,
+          2
+        ],
+        "projectedComponents": [
+          1,
+          2
+        ],
+        "quarterTurnComponents": [
+          -2,
+          1
+        ],
+        "discardedAxisCount": 0,
+        "timeMilliseconds": 1000
+      },
+      "pixelsPerGridUnit": 8,
+      "style": {
+        "position": "absolute",
+        "transform": "translate(8px, 16px)"
+      }
+    },
+    {
+      "result": {
+        "accepted": true,
+        "spaceDimensions": 3,
+        "coordinateUnit": "integerGridUnit",
+        "components": [
+          1,
+          2,
+          3
+        ],
+        "embeddedComponents": [
+          1,
+          2,
+          3,
+          0
+        ],
+        "restoredComponents": [
+          1,
+          2,
+          3
+        ],
+        "projectedComponents": [
+          1,
+          2
+        ],
+        "quarterTurnComponents": [
+          -2,
+          1,
+          3
+        ],
+        "discardedAxisCount": 1,
+        "timeMilliseconds": 1000
+      },
+      "pixelsPerGridUnit": 8,
+      "style": {
+        "position": "absolute",
+        "transform": "translate(8px, 16px)"
+      }
+    },
+    {
+      "result": {
+        "accepted": true,
+        "spaceDimensions": 4,
+        "coordinateUnit": "integerGridUnit",
+        "components": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "embeddedComponents": [
+          1,
+          2,
+          3,
+          4,
+          0
+        ],
+        "restoredComponents": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "projectedComponents": [
+          1,
+          2
+        ],
+        "quarterTurnComponents": [
+          -2,
+          1,
+          3,
+          4
+        ],
+        "discardedAxisCount": 2,
+        "timeMilliseconds": 1000
+      },
+      "pixelsPerGridUnit": 8,
+      "style": {
+        "position": "absolute",
+        "transform": "translate(8px, 16px)"
+      }
+    }
+  ]
+}

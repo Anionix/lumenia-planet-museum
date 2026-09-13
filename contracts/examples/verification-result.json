@@ -1,0 +1,61 @@
+{
+  "artifactIdentifier": "23a957e5-9f59-5c3b-bc34-893c4fd25630",
+  "claimIdentifiers": [
+    "a0e5e544-3a28-588f-a04a-ecef28a75a68",
+    "a968cd0f-8c5d-5953-906c-e40769388abd",
+    "bb538e9e-fbbb-5ca6-8ec2-1e1fb756eeb2"
+  ],
+  "proofTargets": [
+    "Lumenia.validate_raw_asset_accepts_iff",
+    "Lumenia.shipment_trace_is_exactly_optimize_validate_ship",
+    "Lumenia.core_transfer_total_within_budget"
+  ],
+  "sourceRevision": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "measurementProfile": {
+    "targetBrowsers": [
+      "chrome",
+      "safari",
+      "firefox",
+      "edge"
+    ],
+    "coreTransferBudgetKibibytes": 200,
+    "htmlBudgetKibibytes": 30,
+    "javascriptBudgetKibibytes": 120,
+    "styleBudgetKibibytes": 20,
+    "fontBudgetKibibytes": 20,
+    "metadataBudgetKibibytes": 10,
+    "largestContentfulPaintMilliseconds": 2500,
+    "firstUsableArtworkMilliseconds": 3000
+  },
+  "executionIdentifier": "01999d4a-7c70-7a00-8a27-3f0126ab4d40",
+  "createdAt": "2026-09-13T00:00:00Z",
+  "status": "pass",
+  "observations": [
+    {
+      "gateIdentifier": "b4cdb7b9-21bf-5af0-a9bb-74d6a09c35e2",
+      "status": "pass",
+      "observedValue": true,
+      "limit": true,
+      "unit": "boolean",
+      "checkedBy": [
+        "schema regression fixture; not an execution receipt"
+      ],
+      "failureReason": null,
+      "sourceRevision": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+      "executionIdentifier": "01999d4a-7c70-7a00-8a27-3f0126ab4d40"
+    },
+    {
+      "gateIdentifier": "a9d79b1c-5e31-5b35-8d90-1cb17e87a2f1",
+      "status": "pass",
+      "observedValue": 204800,
+      "limit": 204800,
+      "unit": "bytes",
+      "checkedBy": [
+        "schema regression fixture; not an execution receipt"
+      ],
+      "failureReason": null,
+      "sourceRevision": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+      "executionIdentifier": "01999d4a-7c70-7a00-8a27-3f0126ab4d40"
+    }
+  ]
+}

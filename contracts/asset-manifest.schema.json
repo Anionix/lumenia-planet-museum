@@ -1,0 +1,186 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lumenia.local/contracts/asset-manifest.schema.json",
+  "title": "Lumenia raw asset manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifactIdentifier",
+    "format",
+    "usesExtensionMeshopt",
+    "usesKhronosMeshopt",
+    "usesKtx2",
+    "usesWebp",
+    "usesDraco",
+    "requiresNamedNodes",
+    "requiresExtras",
+    "keepsNamedNodes",
+    "keepsExtras",
+    "hasMeshoptDecoder",
+    "hasKtx2Loader",
+    "hasDracoLoader"
+  ],
+  "properties": {
+    "artifactIdentifier": {
+      "type": "string",
+      "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-5[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$"
+    },
+    "format": {
+      "type": "string",
+      "enum": [
+        "glb",
+        "gltf"
+      ]
+    },
+    "usesExtensionMeshopt": {
+      "type": "boolean"
+    },
+    "usesKhronosMeshopt": {
+      "type": "boolean"
+    },
+    "usesKtx2": {
+      "type": "boolean"
+    },
+    "usesWebp": {
+      "type": "boolean"
+    },
+    "usesDraco": {
+      "type": "boolean"
+    },
+    "requiresNamedNodes": {
+      "type": "boolean"
+    },
+    "requiresExtras": {
+      "type": "boolean"
+    },
+    "keepsNamedNodes": {
+      "type": "boolean"
+    },
+    "keepsExtras": {
+      "type": "boolean"
+    },
+    "hasMeshoptDecoder": {
+      "type": "boolean"
+    },
+    "hasKtx2Loader": {
+      "type": "boolean"
+    },
+    "hasDracoLoader": {
+      "type": "boolean"
+    }
+  },
+  "allOf": [
+    {
+      "not": {
+        "required": [
+          "usesExtensionMeshopt",
+          "usesKhronosMeshopt"
+        ],
+        "properties": {
+          "usesExtensionMeshopt": {
+            "const": true
+          },
+          "usesKhronosMeshopt": {
+            "const": true
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "usesExtensionMeshopt": {
+            "const": true
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "hasMeshoptDecoder": {
+            "const": true
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "usesKhronosMeshopt": {
+            "const": true
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "hasMeshoptDecoder": {
+            "const": true
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "usesKtx2": {
+            "const": true
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "hasKtx2Loader": {
+            "const": true
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "usesDraco": {
+            "const": true
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "hasDracoLoader": {
+            "const": true
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "requiresNamedNodes": {
+            "const": true
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "keepsNamedNodes": {
+            "const": true
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "requiresExtras": {
+            "const": true
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "keepsExtras": {
+            "const": true
+          }
+        }
+      }
+    }
+  ]
+}

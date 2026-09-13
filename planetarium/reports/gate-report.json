@@ -1,0 +1,270 @@
+{
+  "artifactIdentifier": "e67bec4e-cc81-54b8-8de8-e04f06503867",
+  "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
+  "executionIdentifier": "01a09acc-4808-7629-b5d4-a4839d16870c",
+  "recordedAt": "2026-09-13T12:44:34.184Z",
+  "machineContract": {
+    "state": "observed",
+    "transition": "source-bound evidence -> proof report -> gate report"
+  },
+  "predecessor": {
+    "file": "proof-report.json",
+    "digest": "sha256:7b641713c486d8ddb939cd92ae5db5b2b86ca3c9146457b93e51ae2d0d73e532"
+  },
+  "summary": {
+    "pass": 10,
+    "fail": 0,
+    "blocked": 2,
+    "staleEvidence": 0
+  },
+  "gates": [
+    {
+      "gateIdentifier": "162e3ea1-e9e7-50d6-824c-6d4b9f28473b",
+      "gateName": "ArtifactChainReferences",
+      "status": "pass",
+      "observedValue": 0,
+      "limitValue": 0,
+      "unit": "failedAssertions",
+      "tool": "Node.js",
+      "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
+      "executionIdentifier": "01a09acc-4808-7629-b5d4-a4839d16870c",
+      "failureReason": null,
+      "observation": {
+        "intentDigest": "sha256:7e583a3b54e4b6b5a0b90bb578eb14c104076e13e368ef82ad8b768cbc54bc5a",
+        "specificationDigest": "sha256:939c76152aa2a8d1072b1969f8ecd6faaaf29480c295b07d67671d0df8749c21",
+        "knowledgeDigest": "sha256:44b3a42b8a8ecfafc63869689560b1a36627c95f77288560835474dea4f545da"
+      },
+      "comparison": "equal"
+    },
+    {
+      "gateIdentifier": "34435695-e927-522d-9f58-07f50085833d",
+      "gateName": "LeanProjectBuild",
+      "status": "pass",
+      "observedValue": 0,
+      "limitValue": 0,
+      "unit": "exitCode",
+      "tool": "Lean 4.28.0 / Lake",
+      "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
+      "executionIdentifier": "01a09acc-4808-7629-b5d4-a4839d16870c",
+      "failureReason": null,
+      "comparison": "equal"
+    },
+    {
+      "gateIdentifier": "cdc5dfc8-47aa-5e1c-9665-03486da831eb",
+      "gateName": "LeanTransitiveAxioms",
+      "status": "pass",
+      "observedValue": 0,
+      "limitValue": 0,
+      "unit": "failedAssertions",
+      "tool": "Lean #print axioms",
+      "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
+      "executionIdentifier": "01a09acc-4808-7629-b5d4-a4839d16870c",
+      "failureReason": null,
+      "observation": {
+        "theorems": 38,
+        "transitiveAxiomCount": 0
+      },
+      "comparison": "equal"
+    },
+    {
+      "gateIdentifier": "40951590-c73b-57b7-8644-d5b51ae03770",
+      "gateName": "MaterialJsonBoundaryAgreement",
+      "status": "pass",
+      "observedValue": 0,
+      "limitValue": 0,
+      "unit": "failedAssertions",
+      "tool": "Lean executable + Node.js",
+      "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
+      "executionIdentifier": "01a09acc-4808-7629-b5d4-a4839d16870c",
+      "failureReason": null,
+      "observation": {
+        "comparedRequests": 2232,
+        "mismatches": 0,
+        "rejectedMalformed": 12,
+        "rejectedArtistSpecificInputs": 2,
+        "requestBytes": 665742
+      },
+      "comparison": "equal"
+    },
+    {
+      "gateIdentifier": "5e9cf7ef-a632-54bd-9053-e04fad353642",
+      "gateName": "DimensionJsonBoundaryAgreement",
+      "status": "pass",
+      "observedValue": 0,
+      "limitValue": 0,
+      "unit": "failedAssertions",
+      "tool": "Lean executable + Node.js",
+      "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
+      "executionIdentifier": "01a09acc-4808-7629-b5d4-a4839d16870c",
+      "failureReason": null,
+      "observation": {
+        "comparedRequests": 736,
+        "dimensions": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "mismatches": 0,
+        "rejectedMalformed": 18,
+        "projectionCounterexamples": 1
+      },
+      "comparison": "equal"
+    },
+    {
+      "gateIdentifier": "b9abd12a-6d10-546c-8809-d4b6e6a191f0",
+      "gateName": "KnowledgeGraphReferences",
+      "status": "pass",
+      "observedValue": 0,
+      "limitValue": 0,
+      "unit": "failedAssertions",
+      "tool": "Node.js assertions + Exa capture metadata",
+      "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
+      "executionIdentifier": "01a09acc-4808-7629-b5d4-a4839d16870c",
+      "failureReason": null,
+      "observation": {
+        "peopleWithProfiles": 15,
+        "retainedSources": 30,
+        "connectedClaims": 55,
+        "connectedEvidence": 55,
+        "danglingReferences": 0
+      },
+      "comparison": "equal"
+    },
+    {
+      "gateIdentifier": "ee6c2d39-22b8-5e7a-b951-89abdcc82d7f",
+      "gateName": "GeneratedPlumeriaTypes",
+      "status": "pass",
+      "observedValue": 0,
+      "limitValue": 0,
+      "unit": "exitCode",
+      "tool": "TypeScript",
+      "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
+      "executionIdentifier": "01a09acc-4808-7629-b5d4-a4839d16870c",
+      "failureReason": null,
+      "comparison": "equal"
+    },
+    {
+      "gateIdentifier": "5bc0d322-25c8-5384-91e1-37ff42efe293",
+      "gateName": "LeanLanguageServerInspection",
+      "status": "pass",
+      "observedValue": 0,
+      "limitValue": 0,
+      "unit": "failedAssertions",
+      "tool": "lean-lsp-mcp",
+      "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
+      "executionIdentifier": "01a09acc-4808-7629-b5d4-a4839d16870c",
+      "failureReason": null,
+      "observation": {
+        "recordedCalls": 55,
+        "inspectedTheorems": 38,
+        "receiptExecutionIdentifier": "01a09ac8-db6e-7ec4-9085-5ad329eb62b5"
+      },
+      "comparison": "equal"
+    },
+    {
+      "gateIdentifier": "879a468a-1ce4-52d3-9b84-c33ae765d2c0",
+      "gateName": "WolframIndependentCalculation",
+      "status": "pass",
+      "observedValue": 0,
+      "limitValue": 0,
+      "unit": "failedAssertions",
+      "tool": "Wolfram Language evaluator",
+      "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
+      "executionIdentifier": "01a09acc-4808-7629-b5d4-a4839d16870c",
+      "failureReason": null,
+      "observation": {
+        "checks": 13,
+        "comparedRows": 156,
+        "mismatches": 0,
+        "receiptExecutionIdentifier": "01a09ac8-db6e-7947-93b0-7c398b16f6eb"
+      },
+      "comparison": "equal"
+    },
+    {
+      "gateIdentifier": "73efa149-aa18-5249-ae66-17242d5cad05",
+      "gateName": "MaterialSphereBrowserRendering",
+      "status": "blocked",
+      "observedValue": 0,
+      "limitValue": 4,
+      "unit": "measuredBrowsers",
+      "tool": "Chrome / Safari / Firefox / Edge",
+      "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
+      "executionIdentifier": "01a09acc-4808-7629-b5d4-a4839d16870c",
+      "failureReason": "The new Material Sphere schemas have not been connected to the exhibition application or measured in browsers."
+    },
+    {
+      "gateIdentifier": "d508bc6b-5b9f-504a-af50-754371e82897",
+      "gateName": "PlumeriaBuildRuntimeRemoval",
+      "status": "blocked",
+      "observedValue": null,
+      "limitValue": 0,
+      "unit": "remainingRuntimeCalls",
+      "tool": "Plumeria production build",
+      "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
+      "executionIdentifier": "01a09acc-4808-7629-b5d4-a4839d16870c",
+      "failureReason": "Generated schemas are type-checked; a production Plumeria build for these schemas has not been measured."
+    },
+    {
+      "gateIdentifier": "f6f6b3ca-13f8-53d0-9e61-5fccc5b0a17a",
+      "gateName": "SourceRevisionUnchangedDuringVerification",
+      "status": "pass",
+      "observedValue": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
+      "limitValue": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
+      "unit": "sourceRevision",
+      "tool": "SHA-256 source manifest",
+      "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
+      "executionIdentifier": "01a09acc-4808-7629-b5d4-a4839d16870c",
+      "failureReason": null,
+      "comparison": "equal"
+    }
+  ],
+  "observations": {
+    "ArtifactChainReferences": {
+      "intentDigest": "sha256:7e583a3b54e4b6b5a0b90bb578eb14c104076e13e368ef82ad8b768cbc54bc5a",
+      "specificationDigest": "sha256:939c76152aa2a8d1072b1969f8ecd6faaaf29480c295b07d67671d0df8749c21",
+      "knowledgeDigest": "sha256:44b3a42b8a8ecfafc63869689560b1a36627c95f77288560835474dea4f545da"
+    },
+    "LeanTransitiveAxioms": {
+      "theorems": 38,
+      "transitiveAxiomCount": 0
+    },
+    "MaterialJsonBoundaryAgreement": {
+      "comparedRequests": 2232,
+      "mismatches": 0,
+      "rejectedMalformed": 12,
+      "rejectedArtistSpecificInputs": 2,
+      "requestBytes": 665742
+    },
+    "DimensionJsonBoundaryAgreement": {
+      "comparedRequests": 736,
+      "dimensions": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "mismatches": 0,
+      "rejectedMalformed": 18,
+      "projectionCounterexamples": 1
+    },
+    "KnowledgeGraphReferences": {
+      "peopleWithProfiles": 15,
+      "retainedSources": 30,
+      "connectedClaims": 55,
+      "connectedEvidence": 55,
+      "danglingReferences": 0
+    },
+    "LeanLanguageServerInspection": {
+      "recordedCalls": 55,
+      "inspectedTheorems": 38,
+      "receiptExecutionIdentifier": "01a09ac8-db6e-7ec4-9085-5ad329eb62b5"
+    },
+    "WolframIndependentCalculation": {
+      "checks": 13,
+      "comparedRows": 156,
+      "mismatches": 0,
+      "receiptExecutionIdentifier": "01a09ac8-db6e-7947-93b0-7c398b16f6eb"
+    }
+  }
+}

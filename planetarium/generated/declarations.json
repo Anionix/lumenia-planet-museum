@@ -1,0 +1,817 @@
+{
+  "artifactIdentifier": "e67bec4e-cc81-54b8-8de8-e04f06503867",
+  "executionIdentifier": "01a09acc-4808-7629-b5d4-a4839d16870c",
+  "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
+  "declarations": [
+    {
+      "declarationIdentifier": "11439aae-5886-5842-beec-17dad0d4f400",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.ConstructiveArithmetic.cancelAddedRight",
+      "file": "formal/ArtPlanetarium/ConstructiveArithmetic.lean",
+      "line": 17,
+      "column": 9,
+      "sourceSignature": "theorem cancelAddedRight (first second : Nat) : first + second - second = first",
+      "category": "arithmeticHelper"
+    },
+    {
+      "declarationIdentifier": "0ed75250-a5ef-5c60-874e-98b11b61c5c3",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.ConstructiveArithmetic.cancelAddedLeft",
+      "file": "formal/ArtPlanetarium/ConstructiveArithmetic.lean",
+      "line": 24,
+      "column": 9,
+      "sourceSignature": "theorem cancelAddedLeft (first second : Nat) : first + second - first = second",
+      "category": "arithmeticHelper"
+    },
+    {
+      "declarationIdentifier": "7a63ea12-9170-590c-a3d2-9a692ef9d746",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.ConstructiveArithmetic.restoreSubtracted",
+      "file": "formal/ArtPlanetarium/ConstructiveArithmetic.lean",
+      "line": 29,
+      "column": 9,
+      "sourceSignature": "theorem restoreSubtracted (span coordinate : Nat) (inside : coordinate ≤ span) :\n    span - coordinate + coordinate = span",
+      "category": "arithmeticHelper"
+    },
+    {
+      "declarationIdentifier": "b716c140-b323-576b-9f4d-3826659f0754",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.ConstructiveArithmetic.addOneSpan",
+      "file": "formal/ArtPlanetarium/ConstructiveArithmetic.lean",
+      "line": 81,
+      "column": 9,
+      "sourceSignature": "theorem addOneSpan (coordinate span : Nat) : (coordinate + span) % span = coordinate % span",
+      "category": "arithmeticHelper"
+    },
+    {
+      "declarationIdentifier": "aa49a091-ee74-5c0d-ab4c-9972be7d2daf",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.ConstructiveArithmetic.addManySpans",
+      "file": "formal/ArtPlanetarium/ConstructiveArithmetic.lean",
+      "line": 89,
+      "column": 9,
+      "sourceSignature": "theorem addManySpans (coordinate span copies : Nat) :\n    (coordinate + span * copies) % span = coordinate % span",
+      "category": "arithmeticHelper"
+    },
+    {
+      "declarationIdentifier": "ff90f68a-42a9-52fb-bc1b-c9fac0803c39",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.ConstructiveArithmetic.multipleHasZeroRemainder",
+      "file": "formal/ArtPlanetarium/ConstructiveArithmetic.lean",
+      "line": 98,
+      "column": 9,
+      "sourceSignature": "theorem multipleHasZeroRemainder (span copies : Nat) : (span * copies) % span = 0",
+      "category": "arithmeticHelper"
+    },
+    {
+      "declarationIdentifier": "9e1598c9-6515-5266-a95d-7b52359e03f0",
+      "kind": "inductive",
+      "name": "ArtPlanetarium.CoordinateUnit",
+      "file": "formal/ArtPlanetarium/Dimension.lean",
+      "line": 19,
+      "column": 11,
+      "sourceSignature": "inductive CoordinateUnit",
+      "category": "dimensionKernel"
+    },
+    {
+      "declarationIdentifier": "60d222e0-f432-5d74-bc6c-f12064678377",
+      "kind": "def",
+      "name": "ArtPlanetarium.coordinateUnitName",
+      "file": "formal/ArtPlanetarium/Dimension.lean",
+      "line": 24,
+      "column": 5,
+      "sourceSignature": "def coordinateUnitName : CoordinateUnit → String\n  | .integerGridUnit => \"integerGridUnit\"\n\n-- declaration identifier (UUIDv5): 187b451c-d11c-5255-9602-96b2a9736799\ndef supportedSpaceDimension (dimension : Nat) : Prop",
+      "category": "dimensionKernel"
+    },
+    {
+      "declarationIdentifier": "187b451c-d11c-5255-9602-96b2a9736799",
+      "kind": "def",
+      "name": "ArtPlanetarium.supportedSpaceDimension",
+      "file": "formal/ArtPlanetarium/Dimension.lean",
+      "line": 28,
+      "column": 5,
+      "sourceSignature": "def supportedSpaceDimension (dimension : Nat) : Prop",
+      "category": "dimensionKernel"
+    },
+    {
+      "declarationIdentifier": "9c930190-fb5f-5144-8c2f-baa329bed16b",
+      "kind": "def",
+      "name": "ArtPlanetarium.validateSpaceDimension",
+      "file": "formal/ArtPlanetarium/Dimension.lean",
+      "line": 36,
+      "column": 5,
+      "sourceSignature": "def validateSpaceDimension (dimension : Nat) : Option Nat",
+      "category": "dimensionKernel"
+    },
+    {
+      "declarationIdentifier": "1f608e96-3b46-5655-8b36-2bec63067142",
+      "kind": "inductive",
+      "name": "ArtPlanetarium.Coordinates",
+      "file": "formal/ArtPlanetarium/Dimension.lean",
+      "line": 40,
+      "column": 11,
+      "sourceSignature": "inductive Coordinates : Nat → Type",
+      "category": "dimensionKernel"
+    },
+    {
+      "declarationIdentifier": "fa468782-1b31-5de0-8c1a-bf5771d1274f",
+      "kind": "def",
+      "name": "ArtPlanetarium.coordinatesToList",
+      "file": "formal/ArtPlanetarium/Dimension.lean",
+      "line": 47,
+      "column": 5,
+      "sourceSignature": "def coordinatesToList {dimension : Nat} : Coordinates dimension → List Int\n  | .empty => []\n  | .prepend value tail => value :: coordinatesToList tail\n\n/-- Eliminate the indexed type directly, without an arithmetic index matcher. -/\n-- declaration identifier (UUIDv5): c37344c9-f2dc-5f4d-8cae-86d242521665\ndef coordinateHeadAndTail {dimension : Nat} (coordinates : Coordinates dimension) :\n    match dimension with\n    | 0 => Unit\n    | Nat.succ remaining => Int × Coordinates remaining",
+      "category": "dimensionKernel"
+    },
+    {
+      "declarationIdentifier": "c37344c9-f2dc-5f4d-8cae-86d242521665",
+      "kind": "def",
+      "name": "ArtPlanetarium.coordinateHeadAndTail",
+      "file": "formal/ArtPlanetarium/Dimension.lean",
+      "line": 53,
+      "column": 5,
+      "sourceSignature": "def coordinateHeadAndTail {dimension : Nat} (coordinates : Coordinates dimension) :\n    match dimension with\n    | 0 => Unit\n    | Nat.succ remaining => Int × Coordinates remaining",
+      "category": "dimensionKernel"
+    },
+    {
+      "declarationIdentifier": "97361373-d8ed-5392-8c88-abc387267781",
+      "kind": "def",
+      "name": "ArtPlanetarium.decodeCoordinates",
+      "file": "formal/ArtPlanetarium/Dimension.lean",
+      "line": 64,
+      "column": 5,
+      "sourceSignature": "def decodeCoordinates : (dimension : Nat) → List Int → Option (Coordinates dimension)\n  | 0, [] => some .empty\n  | 0, _ :: _ => none\n  | dimension + 1, value :: rest =>\n      match decodeCoordinates dimension rest with\n      | some tail => some (.prepend value tail)\n      | none => none\n  | _ + 1, [] => none\n\n-- declaration identifier (UUIDv5): 402608dc-c1ba-5334-a63f-d9f97d30acc6\ndef appendAxis {dimension : Nat} :\n    Coordinates dimension → Int → Coordinates (dimension + 1)\n  | .empty, value => .prepend value .empty\n  | .prepend head tail, value => .prepend head (appendAxis tail value)\n\n-- declaration identifier (UUIDv5): 76adb1a5-8764-5a14-a615-411e484d5f3b\ndef dropLastAxis {dimension : Nat} (coordinates : Coordinates (Nat.succ dimension)) :\n    Coordinates dimension",
+      "category": "dimensionKernel"
+    },
+    {
+      "declarationIdentifier": "402608dc-c1ba-5334-a63f-d9f97d30acc6",
+      "kind": "def",
+      "name": "ArtPlanetarium.appendAxis",
+      "file": "formal/ArtPlanetarium/Dimension.lean",
+      "line": 74,
+      "column": 5,
+      "sourceSignature": "def appendAxis {dimension : Nat} :\n    Coordinates dimension → Int → Coordinates (dimension + 1)\n  | .empty, value => .prepend value .empty\n  | .prepend head tail, value => .prepend head (appendAxis tail value)\n\n-- declaration identifier (UUIDv5): 76adb1a5-8764-5a14-a615-411e484d5f3b\ndef dropLastAxis {dimension : Nat} (coordinates : Coordinates (Nat.succ dimension)) :\n    Coordinates dimension",
+      "category": "dimensionKernel"
+    },
+    {
+      "declarationIdentifier": "76adb1a5-8764-5a14-a615-411e484d5f3b",
+      "kind": "def",
+      "name": "ArtPlanetarium.dropLastAxis",
+      "file": "formal/ArtPlanetarium/Dimension.lean",
+      "line": 80,
+      "column": 5,
+      "sourceSignature": "def dropLastAxis {dimension : Nat} (coordinates : Coordinates (Nat.succ dimension)) :\n    Coordinates dimension",
+      "category": "dimensionKernel"
+    },
+    {
+      "declarationIdentifier": "11ceca75-0c77-56af-9607-82ed71862747",
+      "kind": "def",
+      "name": "ArtPlanetarium.quarterTurnFirstPlane",
+      "file": "formal/ArtPlanetarium/Dimension.lean",
+      "line": 89,
+      "column": 5,
+      "sourceSignature": "def quarterTurnFirstPlane {dimension : Nat}\n    (coordinates : Coordinates (Nat.succ (Nat.succ dimension))) :\n    Coordinates (Nat.succ (Nat.succ dimension))",
+      "category": "dimensionKernel"
+    },
+    {
+      "declarationIdentifier": "59a36d4f-aa6c-50d1-b179-b18cf1219482",
+      "kind": "def",
+      "name": "ArtPlanetarium.twoCoordinates",
+      "file": "formal/ArtPlanetarium/Dimension.lean",
+      "line": 97,
+      "column": 5,
+      "sourceSignature": "def twoCoordinates (first second : Int) : Coordinates 2",
+      "category": "dimensionKernel"
+    },
+    {
+      "declarationIdentifier": "3369aa36-69c3-5e12-a481-4928b65a4a4e",
+      "kind": "def",
+      "name": "ArtPlanetarium.projectToPlane",
+      "file": "formal/ArtPlanetarium/Dimension.lean",
+      "line": 101,
+      "column": 5,
+      "sourceSignature": "def projectToPlane {dimension : Nat} (coordinates : Coordinates dimension) : Coordinates 2",
+      "category": "dimensionKernel"
+    },
+    {
+      "declarationIdentifier": "eaf50046-fb04-5dd6-84ef-5fd07102883e",
+      "kind": "structure",
+      "name": "ArtPlanetarium.SpatiotemporalSample",
+      "file": "formal/ArtPlanetarium/Dimension.lean",
+      "line": 110,
+      "column": 11,
+      "sourceSignature": "structure SpatiotemporalSample (spaceDimension : Nat)",
+      "category": "dimensionKernel"
+    },
+    {
+      "declarationIdentifier": "d8785f8e-2c76-5127-bd52-2bee41b3bb7d",
+      "kind": "def",
+      "name": "ArtPlanetarium.makeSpatiotemporalSample",
+      "file": "formal/ArtPlanetarium/Dimension.lean",
+      "line": 115,
+      "column": 5,
+      "sourceSignature": "def makeSpatiotemporalSample {spaceDimension : Nat}\n    (coordinates : Coordinates spaceDimension) (timeMilliseconds : Nat) :\n    SpatiotemporalSample spaceDimension",
+      "category": "dimensionKernel"
+    },
+    {
+      "declarationIdentifier": "95f01ef6-7976-58d2-ba05-1a4ac17426f8",
+      "kind": "structure",
+      "name": "ArtPlanetarium.CoordinateProjectionRequest",
+      "file": "formal/ArtPlanetarium/Dimension.lean",
+      "line": 121,
+      "column": 11,
+      "sourceSignature": "structure CoordinateProjectionRequest",
+      "category": "dimensionKernel"
+    },
+    {
+      "declarationIdentifier": "afcdb8f1-3c1e-5542-9e61-9004bf45861d",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.coordinate_count_matches_dimension",
+      "file": "formal/ArtPlanetarium/DimensionProofs.lean",
+      "line": 31,
+      "column": 9,
+      "sourceSignature": "theorem coordinate_count_matches_dimension {dimension : Nat}\n    (coordinates : Coordinates dimension) :\n    (coordinatesToList coordinates).length = dimension",
+      "category": "dimensionKernel"
+    },
+    {
+      "declarationIdentifier": "106a3d19-29b4-5edb-8b94-a429b7d614b7",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.decoding_encoded_coordinates_recovers_input",
+      "file": "formal/ArtPlanetarium/DimensionProofs.lean",
+      "line": 39,
+      "column": 9,
+      "sourceSignature": "theorem decoding_encoded_coordinates_recovers_input {dimension : Nat}\n    (coordinates : Coordinates dimension) :\n    decodeCoordinates dimension (coordinatesToList coordinates) = some coordinates",
+      "category": "dimensionKernel"
+    },
+    {
+      "declarationIdentifier": "babd30e5-a7d9-58d0-91e6-18b382fdef3e",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.embedding_then_dropping_axis_recovers_coordinates",
+      "file": "formal/ArtPlanetarium/DimensionProofs.lean",
+      "line": 52,
+      "column": 9,
+      "sourceSignature": "theorem embedding_then_dropping_axis_recovers_coordinates {dimension : Nat}\n    (coordinates : Coordinates dimension) (appendedAxis : Int) :\n    dropLastAxis (appendAxis coordinates appendedAxis) = coordinates",
+      "category": "dimensionKernel"
+    },
+    {
+      "declarationIdentifier": "46744f84-6213-53ee-b402-0830ac05ee84",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.four_quarter_turns_recover_coordinates",
+      "file": "formal/ArtPlanetarium/DimensionProofs.lean",
+      "line": 60,
+      "column": 9,
+      "sourceSignature": "theorem four_quarter_turns_recover_coordinates {dimension : Nat}\n    (coordinates : Coordinates (dimension + 2)) :\n    quarterTurnFirstPlane\n        (quarterTurnFirstPlane\n          (quarterTurnFirstPlane (quarterTurnFirstPlane coordinates))) = coordinates",
+      "category": "dimensionKernel"
+    },
+    {
+      "declarationIdentifier": "a5dcdfdd-7cc7-59fa-9d04-1831481591ac",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.projection_ignores_additional_axis",
+      "file": "formal/ArtPlanetarium/DimensionProofs.lean",
+      "line": 75,
+      "column": 9,
+      "sourceSignature": "theorem projection_ignores_additional_axis {dimension : Nat}\n    (coordinates : Coordinates (dimension + 2)) (appendedAxis : Int) :\n    projectToPlane (appendAxis coordinates appendedAxis) = projectToPlane coordinates",
+      "category": "dimensionKernel"
+    },
+    {
+      "declarationIdentifier": "2f2e4648-3de3-537a-8901-05f4fdf217ba",
+      "kind": "def",
+      "name": "ArtPlanetarium.fourDimensionalPointFirst",
+      "file": "formal/ArtPlanetarium/DimensionProofs.lean",
+      "line": 85,
+      "column": 5,
+      "sourceSignature": "def fourDimensionalPointFirst : Coordinates 4",
+      "category": "dimensionKernel"
+    },
+    {
+      "declarationIdentifier": "370eaadd-7ef5-5ed3-89a9-f27dcf9b0f7b",
+      "kind": "def",
+      "name": "ArtPlanetarium.fourDimensionalPointSecond",
+      "file": "formal/ArtPlanetarium/DimensionProofs.lean",
+      "line": 89,
+      "column": 5,
+      "sourceSignature": "def fourDimensionalPointSecond : Coordinates 4",
+      "category": "dimensionKernel"
+    },
+    {
+      "declarationIdentifier": "73c9bac3-9ee7-527a-ac14-e71379cedfb4",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.projection_can_hide_fourth_axis",
+      "file": "formal/ArtPlanetarium/DimensionProofs.lean",
+      "line": 93,
+      "column": 9,
+      "sourceSignature": "theorem projection_can_hide_fourth_axis :\n    fourDimensionalPointFirst ≠ fourDimensionalPointSecond ∧\n      projectToPlane fourDimensionalPointFirst =\n        projectToPlane fourDimensionalPointSecond",
+      "category": "dimensionKernel"
+    },
+    {
+      "declarationIdentifier": "1a7894e1-0151-58fd-a3ed-556e7dc5b58e",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.timestamp_is_not_a_spatial_axis",
+      "file": "formal/ArtPlanetarium/DimensionProofs.lean",
+      "line": 105,
+      "column": 9,
+      "sourceSignature": "theorem timestamp_is_not_a_spatial_axis {spaceDimension : Nat}\n    (coordinates : Coordinates spaceDimension) (firstTimeMilliseconds secondTimeMilliseconds : Nat) :\n    (makeSpatiotemporalSample coordinates firstTimeMilliseconds).coordinates =\n        (makeSpatiotemporalSample coordinates secondTimeMilliseconds).coordinates",
+      "category": "dimensionKernel"
+    },
+    {
+      "declarationIdentifier": "9352bd0f-e257-587c-818a-bde8474f0159",
+      "kind": "structure",
+      "name": "ArtPlanetarium.RawMaterialParameters",
+      "file": "formal/ArtPlanetarium/Model.lean",
+      "line": 18,
+      "column": 11,
+      "sourceSignature": "structure RawMaterialParameters",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "f8f7120f-e2e2-5e6f-8def-bb6cf061b60d",
+      "kind": "def",
+      "name": "ArtPlanetarium.ParameterRequirements",
+      "file": "formal/ArtPlanetarium/Model.lean",
+      "line": 28,
+      "column": 5,
+      "sourceSignature": "def ParameterRequirements (raw : RawMaterialParameters) : Prop",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "8f16f361-3136-5a84-846d-7150ff3d9526",
+      "kind": "structure",
+      "name": "ArtPlanetarium.ValidatedMaterialParameters",
+      "file": "formal/ArtPlanetarium/Model.lean",
+      "line": 40,
+      "column": 11,
+      "sourceSignature": "structure ValidatedMaterialParameters",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "749402db-7719-56bf-bbee-22e969444fc2",
+      "kind": "def",
+      "name": "ArtPlanetarium.validateMaterialParameters",
+      "file": "formal/ArtPlanetarium/Model.lean",
+      "line": 45,
+      "column": 5,
+      "sourceSignature": "def validateMaterialParameters (raw : RawMaterialParameters) :\n    Option ValidatedMaterialParameters",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "3ce14ddf-9d24-5fdd-ab20-52c57694d745",
+      "kind": "def",
+      "name": "ArtPlanetarium.tileCoordinate",
+      "file": "formal/ArtPlanetarium/Model.lean",
+      "line": 50,
+      "column": 5,
+      "sourceSignature": "def tileCoordinate (coordinate span : Nat) : Nat",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "499066b9-3669-5e0a-af79-81c89f651e8d",
+      "kind": "def",
+      "name": "ArtPlanetarium.mirrorCoordinate",
+      "file": "formal/ArtPlanetarium/Model.lean",
+      "line": 52,
+      "column": 5,
+      "sourceSignature": "def mirrorCoordinate (span coordinate : Nat) : Nat",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "519b1577-bb63-50bf-b66e-ba16e7114d44",
+      "kind": "def",
+      "name": "ArtPlanetarium.gridCoordinate",
+      "file": "formal/ArtPlanetarium/Model.lean",
+      "line": 54,
+      "column": 5,
+      "sourceSignature": "def gridCoordinate (step index : Nat) : Nat",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "cf63c5e8-2fc0-534e-8841-c80695f3e56a",
+      "kind": "def",
+      "name": "ArtPlanetarium.haloAngle",
+      "file": "formal/ArtPlanetarium/Model.lean",
+      "line": 56,
+      "column": 5,
+      "sourceSignature": "def haloAngle (index : Nat) : Nat",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "c4e31f84-c980-5bd4-aa6e-f25ed66f68ef",
+      "kind": "def",
+      "name": "ArtPlanetarium.orthogonalAngle",
+      "file": "formal/ArtPlanetarium/Model.lean",
+      "line": 58,
+      "column": 5,
+      "sourceSignature": "def orthogonalAngle (index : Nat) : Nat",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "563dcc9c-a78b-5d7f-8d6b-db15cb2be2f6",
+      "kind": "def",
+      "name": "ArtPlanetarium.routeAngle",
+      "file": "formal/ArtPlanetarium/Model.lean",
+      "line": 60,
+      "column": 5,
+      "sourceSignature": "def routeAngle (index : Nat) : Nat",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "0b517c2d-d60d-5c85-85b5-4bb32c5a54bf",
+      "kind": "def",
+      "name": "ArtPlanetarium.paletteIndex",
+      "file": "formal/ArtPlanetarium/Model.lean",
+      "line": 62,
+      "column": 5,
+      "sourceSignature": "def paletteIndex (index size : Nat) : Nat",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "9daae6c2-860b-53a8-8fcc-ba8306787460",
+      "kind": "def",
+      "name": "ArtPlanetarium.cyclePhase",
+      "file": "formal/ArtPlanetarium/Model.lean",
+      "line": 64,
+      "column": 5,
+      "sourceSignature": "def cyclePhase (elapsed duration : Nat) : Nat",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "821c300e-8590-5846-a9fb-c9b4c7a636b4",
+      "kind": "def",
+      "name": "ArtPlanetarium.motionPhase",
+      "file": "formal/ArtPlanetarium/Model.lean",
+      "line": 66,
+      "column": 5,
+      "sourceSignature": "def motionPhase (reducedMotion : Bool) (elapsed duration : Nat) : Nat",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "2455dede-1263-58c0-835a-29d2d0e23f49",
+      "kind": "def",
+      "name": "ArtPlanetarium.togglePlaying",
+      "file": "formal/ArtPlanetarium/Model.lean",
+      "line": 69,
+      "column": 5,
+      "sourceSignature": "def togglePlaying (playing : Bool) : Bool",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "906ce419-6551-5fe9-af87-a23990b40804",
+      "kind": "def",
+      "name": "ArtPlanetarium.channelMixNumerator",
+      "file": "formal/ArtPlanetarium/Model.lean",
+      "line": 73,
+      "column": 5,
+      "sourceSignature": "def channelMixNumerator (first second weight : Nat) : Nat",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "f6e32dd8-6d22-5460-9694-dae3d1b743ed",
+      "kind": "def",
+      "name": "ArtPlanetarium.foldLeftWidth",
+      "file": "formal/ArtPlanetarium/Model.lean",
+      "line": 78,
+      "column": 5,
+      "sourceSignature": "def foldLeftWidth (seed : Nat) : Nat",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "b49e2bf2-16fb-5371-92a1-faed0615680f",
+      "kind": "def",
+      "name": "ArtPlanetarium.foldRightWidth",
+      "file": "formal/ArtPlanetarium/Model.lean",
+      "line": 80,
+      "column": 5,
+      "sourceSignature": "def foldRightWidth (seed : Nat) : Nat",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "56e7f041-f174-5a17-b0d8-37d9a94d784b",
+      "kind": "inductive",
+      "name": "ArtPlanetarium.PlaneNormal",
+      "file": "formal/ArtPlanetarium/Model.lean",
+      "line": 83,
+      "column": 11,
+      "sourceSignature": "inductive PlaneNormal",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "a9a43db4-a6de-59ae-90e5-970daef18388",
+      "kind": "def",
+      "name": "ArtPlanetarium.normalVector",
+      "file": "formal/ArtPlanetarium/Model.lean",
+      "line": 88,
+      "column": 5,
+      "sourceSignature": "def normalVector : PlaneNormal → Nat × Nat × Nat\n  | .horizontal => (1, 0, 0)\n  | .vertical => (0, 1, 0)\n  | .depth => (0, 0, 1)\n\n-- declaration identifier (UUIDv5): 48d3afc8-f20f-5438-a339-022fa9f7aced\ndef planeNormalForIndex (index : Nat) : PlaneNormal",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "48d3afc8-f20f-5438-a339-022fa9f7aced",
+      "kind": "def",
+      "name": "ArtPlanetarium.planeNormalForIndex",
+      "file": "formal/ArtPlanetarium/Model.lean",
+      "line": 94,
+      "column": 5,
+      "sourceSignature": "def planeNormalForIndex (index : Nat) : PlaneNormal",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "dc3c152c-cb36-5f12-aa05-ad01839de0cd",
+      "kind": "def",
+      "name": "ArtPlanetarium.normalDot",
+      "file": "formal/ArtPlanetarium/Model.lean",
+      "line": 101,
+      "column": 5,
+      "sourceSignature": "def normalDot (first second : PlaneNormal) : Nat",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "cfdc811d-db96-5afd-b317-7c199b1e4bf5",
+      "kind": "inductive",
+      "name": "ArtPlanetarium.RelationKind",
+      "file": "formal/ArtPlanetarium/Model.lean",
+      "line": 107,
+      "column": 11,
+      "sourceSignature": "inductive RelationKind",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "77267089-1274-594a-a331-6b0c94a820a0",
+      "kind": "inductive",
+      "name": "ArtPlanetarium.EvidenceDecision",
+      "file": "formal/ArtPlanetarium/Model.lean",
+      "line": 114,
+      "column": 11,
+      "sourceSignature": "inductive EvidenceDecision",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "b6a18395-d6c2-5042-a96e-048564f3e1ae",
+      "kind": "def",
+      "name": "ArtPlanetarium.reviewEvidence",
+      "file": "formal/ArtPlanetarium/Model.lean",
+      "line": 120,
+      "column": 5,
+      "sourceSignature": "def reviewEvidence (supportCount contradictionCount : Nat) (stale : Bool) : EvidenceDecision",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "1aac7f3c-426a-537b-ac6c-41aca7f1126f",
+      "kind": "def",
+      "name": "ArtPlanetarium.relationFromVisualDistance",
+      "file": "formal/ArtPlanetarium/Model.lean",
+      "line": 129,
+      "column": 5,
+      "sourceSignature": "def relationFromVisualDistance (_distance : Nat) : RelationKind",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "402b742e-4136-5355-899a-9961fe13d731",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.accepted_parameters_iff",
+      "file": "formal/ArtPlanetarium/Proofs.lean",
+      "line": 17,
+      "column": 9,
+      "sourceSignature": "theorem accepted_parameters_iff (raw : RawMaterialParameters) :\n    (∃ validated, validateMaterialParameters raw = some validated) ↔\n      ParameterRequirements raw",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "82b668a3-b035-5249-8f4c-6a485a29da10",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.accepted_parameters_preserve_input",
+      "file": "formal/ArtPlanetarium/Proofs.lean",
+      "line": 30,
+      "column": 9,
+      "sourceSignature": "theorem accepted_parameters_preserve_input (raw : RawMaterialParameters)\n    (validated : ValidatedMaterialParameters)\n    (accepted : validateMaterialParameters raw = some validated) : validated.raw = raw",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "5c5d6531-8da0-52ae-a83d-7e2b09c034e8",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.tile_repeats_after_any_number_of_spans",
+      "file": "formal/ArtPlanetarium/Proofs.lean",
+      "line": 40,
+      "column": 9,
+      "sourceSignature": "theorem tile_repeats_after_any_number_of_spans (coordinate span copies : Nat) :\n    tileCoordinate (coordinate + span * copies) span = tileCoordinate coordinate span",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "a7cde63c-9907-5b39-ae6b-52d7619855f8",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.tile_coordinate_remains_inside_span",
+      "file": "formal/ArtPlanetarium/Proofs.lean",
+      "line": 45,
+      "column": 9,
+      "sourceSignature": "theorem tile_coordinate_remains_inside_span (coordinate span : Nat) (positive : 0 < span) :\n    tileCoordinate coordinate span < span",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "877ba798-c744-5eb0-b185-f3be495e3b90",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.mirror_twice_recovers_coordinate",
+      "file": "formal/ArtPlanetarium/Proofs.lean",
+      "line": 49,
+      "column": 9,
+      "sourceSignature": "theorem mirror_twice_recovers_coordinate (span coordinate : Nat) (inside : coordinate ≤ span) :\n    mirrorCoordinate span (mirrorCoordinate span coordinate) = coordinate",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "83947bb4-a245-5c80-9886-582d09120cf0",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.mirrored_pair_preserves_span",
+      "file": "formal/ArtPlanetarium/Proofs.lean",
+      "line": 57,
+      "column": 9,
+      "sourceSignature": "theorem mirrored_pair_preserves_span (span coordinate : Nat) (inside : coordinate ≤ span) :\n    coordinate + mirrorCoordinate span coordinate = span",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "d945cf70-cb97-54bf-be14-2189e6abda31",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.grid_coordinates_are_aligned",
+      "file": "formal/ArtPlanetarium/Proofs.lean",
+      "line": 62,
+      "column": 9,
+      "sourceSignature": "theorem grid_coordinates_are_aligned (step index : Nat) :\n    gridCoordinate step index % step = 0",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "8c3a4859-4ab3-51c4-98da-82687b2e9899",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.grid_coordinates_preserve_strict_order",
+      "file": "formal/ArtPlanetarium/Proofs.lean",
+      "line": 66,
+      "column": 9,
+      "sourceSignature": "theorem grid_coordinates_preserve_strict_order (step first second : Nat)\n    (positive : 0 < step) (ordered : first < second) :\n    gridCoordinate step first < gridCoordinate step second",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "c1f6787d-dcf6-55ff-8a04-accb6fe0fe65",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.halo_closes_after_twelve_slots",
+      "file": "formal/ArtPlanetarium/Proofs.lean",
+      "line": 72,
+      "column": 9,
+      "sourceSignature": "theorem halo_closes_after_twelve_slots (index : Nat) : haloAngle (index + 12) = haloAngle index",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "fe15e7e0-7582-5632-a805-a9e45b2381d3",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.halo_has_twelve_distinct_angles",
+      "file": "formal/ArtPlanetarium/Proofs.lean",
+      "line": 76,
+      "column": 9,
+      "sourceSignature": "theorem halo_has_twelve_distinct_angles :\n    ∀ first second : Fin 12, haloAngle first.val = haloAngle second.val → first = second",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "38314214-5991-53c6-aaa5-2c060a65a45c",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.halo_angles_remain_inside_turn",
+      "file": "formal/ArtPlanetarium/Proofs.lean",
+      "line": 81,
+      "column": 9,
+      "sourceSignature": "theorem halo_angles_remain_inside_turn (index : Nat) : haloAngle index < 360",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "29c0bf35-24d1-5f7f-80b2-03be0b636ae4",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.orthogonal_angles_are_quarter_turns",
+      "file": "formal/ArtPlanetarium/Proofs.lean",
+      "line": 85,
+      "column": 9,
+      "sourceSignature": "theorem orthogonal_angles_are_quarter_turns (index : Nat) :\n    orthogonalAngle index < 360 ∧ orthogonalAngle index % 90 = 0",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "4bbe45d8-ebbb-56a3-b424-cd2c145f34ae",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.route_angles_are_eighth_turns",
+      "file": "formal/ArtPlanetarium/Proofs.lean",
+      "line": 91,
+      "column": 9,
+      "sourceSignature": "theorem route_angles_are_eighth_turns (index : Nat) :\n    routeAngle index < 360 ∧ routeAngle index % 45 = 0",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "076962ce-578d-5093-8fcc-1c9051db002d",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.different_plane_normals_are_perpendicular",
+      "file": "formal/ArtPlanetarium/Proofs.lean",
+      "line": 97,
+      "column": 9,
+      "sourceSignature": "theorem different_plane_normals_are_perpendicular (first second : PlaneNormal)\n    (different : first ≠ second) : normalDot first second = 0",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "fa38b9fc-c12a-52f7-b68a-5616749d009a",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.palette_selection_stays_inside_palette",
+      "file": "formal/ArtPlanetarium/Proofs.lean",
+      "line": 102,
+      "column": 9,
+      "sourceSignature": "theorem palette_selection_stays_inside_palette (index size : Nat) (positive : 0 < size) :\n    paletteIndex index size < size",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "520d5557-442c-57da-8f05-42be338699a1",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.colour_channel_mix_stays_bounded",
+      "file": "formal/ArtPlanetarium/Proofs.lean",
+      "line": 106,
+      "column": 9,
+      "sourceSignature": "theorem colour_channel_mix_stays_bounded (first second weight : Nat)\n    (firstBound : first ≤ 255) (secondBound : second ≤ 255) (weightBound : weight ≤ 100) :\n    channelMixNumerator first second weight ≤ 25500",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "f2641249-e90f-543d-b3fe-41af59691635",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.fold_widths_are_deliberately_unequal",
+      "file": "formal/ArtPlanetarium/Proofs.lean",
+      "line": 119,
+      "column": 9,
+      "sourceSignature": "theorem fold_widths_are_deliberately_unequal (seed : Nat) : foldLeftWidth seed < foldRightWidth seed",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "229fad8f-1ccf-5fae-8398-72627d4273a1",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.cycle_returns_after_any_number_of_periods",
+      "file": "formal/ArtPlanetarium/Proofs.lean",
+      "line": 123,
+      "column": 9,
+      "sourceSignature": "theorem cycle_returns_after_any_number_of_periods (elapsed duration cycles : Nat) :\n    cyclePhase (elapsed + duration * cycles) duration = cyclePhase elapsed duration",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "f403ed14-5236-5008-8a65-dbd7f780c596",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.reduced_motion_is_independent_of_time",
+      "file": "formal/ArtPlanetarium/Proofs.lean",
+      "line": 128,
+      "column": 9,
+      "sourceSignature": "theorem reduced_motion_is_independent_of_time (first second duration : Nat) :\n    motionPhase true first duration = motionPhase true second duration",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "285a898b-c964-5d62-bf7e-c759d6454a81",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.two_toggles_restore_playback",
+      "file": "formal/ArtPlanetarium/Proofs.lean",
+      "line": 132,
+      "column": 9,
+      "sourceSignature": "theorem two_toggles_restore_playback (playing : Bool) : togglePlaying (togglePlaying playing) = playing",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "1442b214-77c1-54ac-aa17-411d14ad18e5",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.visual_distance_does_not_establish_influence",
+      "file": "formal/ArtPlanetarium/Proofs.lean",
+      "line": 136,
+      "column": 9,
+      "sourceSignature": "theorem visual_distance_does_not_establish_influence (distance : Nat) :\n    relationFromVisualDistance distance ≠ .influencedBy",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "8aa86c95-3282-5def-bc4d-2424d7b78d05",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.stale_evidence_cannot_pass",
+      "file": "formal/ArtPlanetarium/Proofs.lean",
+      "line": 142,
+      "column": 9,
+      "sourceSignature": "theorem stale_evidence_cannot_pass (supports contradicts : Nat) :\n    reviewEvidence supports contradicts true = .staleEvidence",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "4a634b09-1c93-5015-b263-c85ad944b010",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.contradiction_cannot_pass",
+      "file": "formal/ArtPlanetarium/Proofs.lean",
+      "line": 146,
+      "column": 9,
+      "sourceSignature": "theorem contradiction_cannot_pass (supports contradictions : Nat) :\n    reviewEvidence supports (contradictions + 1) false = .fail",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "b20a4eb7-5aa7-5d4d-b085-9ab58818968b",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.neutral_only_evidence_cannot_pass",
+      "file": "formal/ArtPlanetarium/Proofs.lean",
+      "line": 150,
+      "column": 9,
+      "sourceSignature": "theorem neutral_only_evidence_cannot_pass : reviewEvidence 0 0 false = .blocked",
+      "category": "materialKernel"
+    },
+    {
+      "declarationIdentifier": "02dfd26a-aa61-5fe4-a900-f6d7dabc61e6",
+      "kind": "theorem",
+      "name": "ArtPlanetarium.evidence_pass_requires_support_without_contradiction",
+      "file": "formal/ArtPlanetarium/Proofs.lean",
+      "line": 153,
+      "column": 9,
+      "sourceSignature": "theorem evidence_pass_requires_support_without_contradiction (supports contradicts : Nat) (stale : Bool) :\n    reviewEvidence supports contradicts stale = .pass ↔\n      0 < supports ∧ contradicts = 0 ∧ stale = false",
+      "category": "materialKernel"
+    }
+  ]
+}

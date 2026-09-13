@@ -1,0 +1,12 @@
+name = "lumenia_planetarium"
+version = "0.1.0"
+defaultTargets = ["ArtPlanetarium", "planetarium_boundary"]
+
+[[lean_lib]]
+name = "ArtPlanetarium"
+srcDir = "formal"
+
+[[lean_exe]]
+name = "planetarium_boundary"
+root = "Main"
+srcDir = "formal"

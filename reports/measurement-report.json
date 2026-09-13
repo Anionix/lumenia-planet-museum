@@ -1,0 +1,533 @@
+{
+  "artifactIdentifier": "1036f4f5-c476-56df-99d4-150b9fadeabb",
+  "claimIdentifiers": [
+    "543e95a7-25d9-53eb-addf-1eca7283be44",
+    "a0e5e544-3a28-588f-a04a-ecef28a75a68",
+    "884dc2e4-94c4-5622-904e-789dd2186b47",
+    "2914c7f0-ea38-5cec-9c53-715cf16e3f2c",
+    "9ed18638-7432-544f-8710-0cde084b9195",
+    "b3467681-81a2-5183-929d-9afc9aaf60f0",
+    "3e92b122-d2fe-5890-8c24-aafcd8fc5e33",
+    "90c7faa1-9721-596d-a8db-5b581572be33",
+    "e76f697b-718a-5cbb-b937-3695710767a3",
+    "35ba9d6b-abfe-5438-bdcf-960f8eb0158f",
+    "935c5368-7869-56ac-9346-a3719e4c4a62",
+    "7ba57ba1-7481-5f8b-bb84-1e94930879d9",
+    "13c791ec-40a2-5749-986c-7816c521b2ff",
+    "12ebcc33-1640-5e81-b5a2-f400102331f1",
+    "947ff2cf-29cd-5a00-bb98-ef9e37ff7408",
+    "04f36807-d7c2-527f-b22c-dacbdd0aded0",
+    "92cfff56-17f5-5995-b0f2-00254f41e0af",
+    "a968cd0f-8c5d-5953-906c-e40769388abd",
+    "f781bfd5-a32e-534e-ac60-9ea5a9e9288a",
+    "b4f27f24-d941-5e95-80fb-e70b2bb3eea9",
+    "bc433078-b2a0-5ce6-9fc1-4eab157d6651",
+    "21c3fceb-8154-5259-a619-ccfab976b7ee",
+    "f248748f-077d-55e1-bda4-cff8afc69b06",
+    "0aa200fe-8e88-529c-a69e-88c174a6df03",
+    "bb538e9e-fbbb-5ca6-8ec2-1e1fb756eeb2",
+    "03b95321-0d34-58a2-9486-a88ac41889a5",
+    "f5b5cea2-0aae-5d44-b5d6-4a1b36e192c5"
+  ],
+  "proofTargets": [
+    "Lumenia.asset_checks_iff_requirements",
+    "Lumenia.validate_raw_asset_accepts_iff",
+    "Lumenia.validate_raw_asset_rejects_iff",
+    "Lumenia.validate_raw_asset_preserves_input",
+    "Lumenia.validate_raw_asset_sound",
+    "Lumenia.validated_asset_satisfies_requirements",
+    "Lumenia.meshopt_variants_are_exclusive",
+    "Lumenia.extension_meshopt_requires_decoder",
+    "Lumenia.khronos_meshopt_requires_decoder",
+    "Lumenia.ktx2_requires_loader",
+    "Lumenia.draco_requires_loader",
+    "Lumenia.draco_is_enabled_iff_explicit",
+    "Lumenia.named_nodes_require_preservation",
+    "Lumenia.extras_require_preservation",
+    "Lumenia.both_meshopt_flags_reject",
+    "Lumenia.missing_meshopt_decoder_rejects",
+    "Lumenia.shipped_requires_validation",
+    "Lumenia.shipment_trace_is_exactly_optimize_validate_ship",
+    "Lumenia.shipped_history_requires_asset_requirements",
+    "Lumenia.invalid_asset_has_no_shipped_history",
+    "Lumenia.browser_capability_requires_client_component",
+    "Lumenia.static_export_cannot_require_server_only",
+    "Lumenia.accepted_component_places_browser_requirements_on_client",
+    "Lumenia.client_component_cannot_require_server_only",
+    "Lumenia.core_transfer_total_within_budget",
+    "Lumenia.category_budget_total_is_204800_bytes",
+    "Lumenia.measured_gate_pass_iff"
+  ],
+  "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+  "measurementProfile": {
+    "targetBrowsers": [
+      "chrome",
+      "safari",
+      "firefox",
+      "edge"
+    ],
+    "coreTransferBudgetKibibytes": 200,
+    "htmlBudgetKibibytes": 30,
+    "javascriptBudgetKibibytes": 120,
+    "styleBudgetKibibytes": 20,
+    "fontBudgetKibibytes": 20,
+    "metadataBudgetKibibytes": 10,
+    "largestContentfulPaintMilliseconds": 2500,
+    "firstUsableArtworkMilliseconds": 3000
+  },
+  "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5",
+  "createdAt": "2026-09-13T09:54:00.696Z",
+  "status": "blocked",
+  "observations": [
+    {
+      "gateIdentifier": "f6a1a2ad-e119-5e11-b2dd-514b073f0f45",
+      "status": "pass",
+      "observedValue": 122646,
+      "limit": 204800,
+      "unit": "bytes",
+      "checkedBy": [
+        "Chrome 153.0.8010.36; Performance APIs and actual control interactions; cold local diagnostic profile"
+      ],
+      "failureReason": null,
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+    },
+    {
+      "gateIdentifier": "9c03cc70-46e8-523d-8ccc-19ba97bfcf02",
+      "status": "pass",
+      "observedValue": 5369,
+      "limit": 30720,
+      "unit": "bytes",
+      "checkedBy": [
+        "Chrome 153.0.8010.36; Performance APIs and actual control interactions; cold local diagnostic profile"
+      ],
+      "failureReason": null,
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+    },
+    {
+      "gateIdentifier": "8eac01e5-6b3f-5fdb-a9ba-76d595d3873e",
+      "status": "pass",
+      "observedValue": 114000,
+      "limit": 122880,
+      "unit": "bytes",
+      "checkedBy": [
+        "Chrome 153.0.8010.36; Performance APIs and actual control interactions; cold local diagnostic profile"
+      ],
+      "failureReason": null,
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+    },
+    {
+      "gateIdentifier": "4c95a3e0-4f1f-5551-81c9-fe3582854a17",
+      "status": "pass",
+      "observedValue": 2797,
+      "limit": 20480,
+      "unit": "bytes",
+      "checkedBy": [
+        "Chrome 153.0.8010.36; Performance APIs and actual control interactions; cold local diagnostic profile"
+      ],
+      "failureReason": null,
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+    },
+    {
+      "gateIdentifier": "aed2b772-86ae-5cf1-b770-cdc7531df6db",
+      "status": "pass",
+      "observedValue": 0,
+      "limit": 20480,
+      "unit": "bytes",
+      "checkedBy": [
+        "Chrome 153.0.8010.36; Performance APIs and actual control interactions; cold local diagnostic profile"
+      ],
+      "failureReason": null,
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+    },
+    {
+      "gateIdentifier": "91040add-14a2-5124-9ceb-0a8facf28338",
+      "status": "pass",
+      "observedValue": 480,
+      "limit": 10240,
+      "unit": "bytes",
+      "checkedBy": [
+        "Chrome 153.0.8010.36; Performance APIs and actual control interactions; cold local diagnostic profile"
+      ],
+      "failureReason": null,
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+    },
+    {
+      "gateIdentifier": "6c3b3252-838d-54f8-9d61-4b31b31c1f09",
+      "status": "pass",
+      "observedValue": 200,
+      "limit": 2500,
+      "unit": "milliseconds",
+      "checkedBy": [
+        "Chrome 153.0.8010.36; Performance APIs and actual control interactions; cold local diagnostic profile"
+      ],
+      "failureReason": null,
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+    },
+    {
+      "gateIdentifier": "f68d1108-08fa-5731-98ea-243e0464bd61",
+      "status": "pass",
+      "observedValue": 267.5,
+      "limit": 3000,
+      "unit": "milliseconds",
+      "checkedBy": [
+        "Chrome 153.0.8010.36; Performance APIs and actual control interactions; cold local diagnostic profile"
+      ],
+      "failureReason": null,
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+    },
+    {
+      "gateIdentifier": "20e6d64f-f964-5b32-9707-b01635fcba3f",
+      "status": "pass",
+      "observedValue": 0,
+      "limit": 0,
+      "unit": "violations",
+      "checkedBy": [
+        "TypeScript syntax tree",
+        "@plumeria/eslint-plugin 19.1.4"
+      ],
+      "failureReason": null,
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+    },
+    {
+      "gateIdentifier": "af18b455-fd9d-5cb0-bb49-97d09c8b8038",
+      "status": "pass",
+      "observedValue": 0,
+      "limit": 0,
+      "unit": "violations",
+      "checkedBy": [
+        "TypeScript syntax tree",
+        "@plumeria/eslint-plugin 19.1.4 with type information"
+      ],
+      "failureReason": null,
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+    },
+    {
+      "gateIdentifier": "23a2895e-534c-5999-9c75-42981efd82d4",
+      "status": "pass",
+      "observedValue": 0,
+      "limit": 0,
+      "unit": "runtime occurrences",
+      "checkedBy": [
+        "official @plumeria/turbopack-loader",
+        "webpack client module graph",
+        "emitted JavaScript syntax and source maps"
+      ],
+      "failureReason": null,
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+    },
+    {
+      "gateIdentifier": "71c2026b-0e76-5330-bff3-9af4157230ff",
+      "status": "pass",
+      "observedValue": 0,
+      "limit": 0,
+      "unit": "violations",
+      "checkedBy": [
+        "Next.js configuration",
+        "TypeScript syntax tree"
+      ],
+      "failureReason": null,
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+    },
+    {
+      "gateIdentifier": "25be1b45-323c-5527-b69d-fc6367ed331d",
+      "status": "pass",
+      "observedValue": 0,
+      "limit": 0,
+      "unit": "violations",
+      "checkedBy": [
+        "TypeScript static and dynamic import graph",
+        "closed application capability policy"
+      ],
+      "failureReason": null,
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+    },
+    {
+      "gateIdentifier": "27d5a609-6455-5ca2-9ccd-6f0fec2f7457",
+      "status": "blocked",
+      "observedValue": null,
+      "limit": null,
+      "unit": "bytes",
+      "checkedBy": [
+        "Chrome 153.0.8010.36; Performance APIs and actual control interactions; cold local diagnostic profile"
+      ],
+      "failureReason": "No usable machine observation. Safari remote automation is disabled; Firefox and Edge are not connected. GPU memory is unavailable.",
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+    },
+    {
+      "gateIdentifier": "18bf036a-e293-517b-9e08-cd64e3011f86",
+      "status": "pass",
+      "observedValue": true,
+      "limit": true,
+      "unit": "boolean",
+      "checkedBy": [
+        "Chrome 153.0.8010.36; Performance APIs and actual control interactions; cold local diagnostic profile"
+      ],
+      "failureReason": null,
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+    },
+    {
+      "gateIdentifier": "fd46b510-3741-59f4-b4c0-c4a538888f31",
+      "status": "pass",
+      "observedValue": true,
+      "limit": true,
+      "unit": "boolean",
+      "checkedBy": [
+        "Chrome 153.0.8010.36; Performance APIs and actual control interactions; cold local diagnostic profile"
+      ],
+      "failureReason": null,
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+    },
+    {
+      "gateIdentifier": "7baa5bd8-2fe5-5c3e-8aa9-876f61e3db67",
+      "status": "pass",
+      "observedValue": true,
+      "limit": true,
+      "unit": "boolean",
+      "checkedBy": [
+        "Chrome 153.0.8010.36; Performance APIs and actual control interactions; cold local diagnostic profile"
+      ],
+      "failureReason": null,
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+    },
+    {
+      "gateIdentifier": "a0274963-d398-56cc-9d33-16bce9a2b94f",
+      "status": "pass",
+      "observedValue": true,
+      "limit": true,
+      "unit": "boolean",
+      "checkedBy": [
+        "Chrome 153.0.8010.36; Performance APIs and actual control interactions; cold local diagnostic profile"
+      ],
+      "failureReason": null,
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+    },
+    {
+      "gateIdentifier": "7a0e3aaa-5937-55bf-b39e-ee74c8a4e8f1",
+      "status": "blocked",
+      "observedValue": null,
+      "limit": true,
+      "unit": "boolean",
+      "checkedBy": [
+        "enabled browser availability check"
+      ],
+      "failureReason": "No usable machine observation. Safari remote automation is disabled; Firefox and Edge are not connected. GPU memory is unavailable.",
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+    },
+    {
+      "gateIdentifier": "63c0abb6-8082-570e-bac5-a9afbcd5dbb5",
+      "status": "blocked",
+      "observedValue": null,
+      "limit": true,
+      "unit": "boolean",
+      "checkedBy": [
+        "enabled browser availability check"
+      ],
+      "failureReason": "No usable machine observation. Safari remote automation is disabled; Firefox and Edge are not connected. GPU memory is unavailable.",
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+    },
+    {
+      "gateIdentifier": "a50c6e35-5af4-570f-8b3b-6ae36ec70c01",
+      "status": "blocked",
+      "observedValue": null,
+      "limit": true,
+      "unit": "boolean",
+      "checkedBy": [
+        "enabled browser availability check"
+      ],
+      "failureReason": "No usable machine observation. Safari remote automation is disabled; Firefox and Edge are not connected. GPU memory is unavailable.",
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+    },
+    {
+      "gateIdentifier": "330e26be-4344-50a8-8ad1-b0f7dd892718",
+      "status": "blocked",
+      "observedValue": null,
+      "limit": true,
+      "unit": "boolean",
+      "checkedBy": [
+        "enabled browser availability check"
+      ],
+      "failureReason": "No usable machine observation. Safari remote automation is disabled; Firefox and Edge are not connected. GPU memory is unavailable.",
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+    },
+    {
+      "gateIdentifier": "7dfefcce-f16d-5a6b-8df3-94cc9ce042d4",
+      "status": "blocked",
+      "observedValue": null,
+      "limit": true,
+      "unit": "boolean",
+      "checkedBy": [
+        "enabled browser availability check"
+      ],
+      "failureReason": "No usable machine observation. Safari remote automation is disabled; Firefox and Edge are not connected. GPU memory is unavailable.",
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+    },
+    {
+      "gateIdentifier": "bc61b4da-f725-5429-bc96-5fca7723b810",
+      "status": "blocked",
+      "observedValue": null,
+      "limit": true,
+      "unit": "boolean",
+      "checkedBy": [
+        "enabled browser availability check"
+      ],
+      "failureReason": "No usable machine observation. Safari remote automation is disabled; Firefox and Edge are not connected. GPU memory is unavailable.",
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+    },
+    {
+      "gateIdentifier": "4acc32d2-c34c-5afb-aaca-3d6f4917088e",
+      "status": "blocked",
+      "observedValue": null,
+      "limit": true,
+      "unit": "boolean",
+      "checkedBy": [
+        "enabled browser availability check"
+      ],
+      "failureReason": "No usable machine observation. Safari remote automation is disabled; Firefox and Edge are not connected. GPU memory is unavailable.",
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+    },
+    {
+      "gateIdentifier": "a1b17dc7-7eb0-569f-b877-599c2d32c1af",
+      "status": "blocked",
+      "observedValue": null,
+      "limit": true,
+      "unit": "boolean",
+      "checkedBy": [
+        "enabled browser availability check"
+      ],
+      "failureReason": "No usable machine observation. Safari remote automation is disabled; Firefox and Edge are not connected. GPU memory is unavailable.",
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+    },
+    {
+      "gateIdentifier": "00cf27f0-b591-5d35-a953-8e90fa2cebce",
+      "status": "blocked",
+      "observedValue": null,
+      "limit": true,
+      "unit": "boolean",
+      "checkedBy": [
+        "enabled browser availability check"
+      ],
+      "failureReason": "No usable machine observation. Safari remote automation is disabled; Firefox and Edge are not connected. GPU memory is unavailable.",
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+    },
+    {
+      "gateIdentifier": "9fa2ada1-9286-5121-9886-44f10fe584f2",
+      "status": "blocked",
+      "observedValue": null,
+      "limit": true,
+      "unit": "boolean",
+      "checkedBy": [
+        "enabled browser availability check"
+      ],
+      "failureReason": "No usable machine observation. Safari remote automation is disabled; Firefox and Edge are not connected. GPU memory is unavailable.",
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+    },
+    {
+      "gateIdentifier": "9175a814-0727-546a-888b-a9ebd0e03497",
+      "status": "blocked",
+      "observedValue": null,
+      "limit": true,
+      "unit": "boolean",
+      "checkedBy": [
+        "enabled browser availability check"
+      ],
+      "failureReason": "No usable machine observation. Safari remote automation is disabled; Firefox and Edge are not connected. GPU memory is unavailable.",
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+    },
+    {
+      "gateIdentifier": "4b4827b3-62d2-5367-b5a7-10e21c2776da",
+      "status": "blocked",
+      "observedValue": null,
+      "limit": true,
+      "unit": "boolean",
+      "checkedBy": [
+        "enabled browser availability check"
+      ],
+      "failureReason": "No usable machine observation. Safari remote automation is disabled; Firefox and Edge are not connected. GPU memory is unavailable.",
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+    },
+    {
+      "gateIdentifier": "7ee74b3d-059a-5ea6-b26f-4c5e7383f3c6",
+      "status": "pass",
+      "observedValue": true,
+      "limit": true,
+      "unit": "boolean",
+      "checkedBy": [
+        "Chrome 153.0.8010.36; Performance APIs and actual control interactions; cold local diagnostic profile"
+      ],
+      "failureReason": null,
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+    },
+    {
+      "gateIdentifier": "2ec9706d-6206-5de2-aaf6-542e7f336b63",
+      "status": "pass",
+      "observedValue": 0,
+      "limit": 0,
+      "unit": "violations",
+      "checkedBy": [
+        "actual client module graph",
+        "application source policy",
+        "exported file inventory"
+      ],
+      "failureReason": null,
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+    },
+    {
+      "gateIdentifier": "7cbebf58-9bb0-5346-a350-028a31978c07",
+      "status": "pass",
+      "observedValue": true,
+      "limit": true,
+      "unit": "boolean",
+      "checkedBy": [
+        "Chrome 153.0.8010.36; Performance APIs and actual control interactions; cold local diagnostic profile"
+      ],
+      "failureReason": null,
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+    },
+    {
+      "gateIdentifier": "d63d9265-a8d6-5c44-94b7-2c6259cd6bf6",
+      "status": "pass",
+      "observedValue": true,
+      "limit": true,
+      "unit": "boolean",
+      "checkedBy": [
+        "Chrome 153.0.8010.36; Performance APIs and actual control interactions; cold local diagnostic profile"
+      ],
+      "failureReason": null,
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+    }
+  ]
+}

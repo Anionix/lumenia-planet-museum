@@ -1,0 +1,132 @@
+{
+  "artifactIdentifier": "e67bec4e-cc81-54b8-8de8-e04f06503867",
+  "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
+  "executionIdentifier": "01a09acc-4808-7629-b5d4-a4839d16870c",
+  "recordedAt": "2026-09-13T12:44:34.184Z",
+  "machineContract": {
+    "state": "observed",
+    "transition": "source-bound evidence -> proof report -> gate report"
+  },
+  "files": [
+    {
+      "path": "../package-lock.json",
+      "digest": "sha256:65e21e4e7a5b9110a238d6848b53254df3ce8878099ff6985cfeba9ff46df142"
+    },
+    {
+      "path": "../package.json",
+      "digest": "sha256:ceec3257ddc64c87186fb7104e2f8b123b2a2ac3f8df47abe08be4ac8af8ffd2"
+    },
+    {
+      "path": "../scripts/identifiers.mjs",
+      "digest": "sha256:fa658b8a45f3e414ab940631e8ca7f186f0be8917393a8054c0676e00f21134b"
+    },
+    {
+      "path": "checks/boundary-check.mjs",
+      "digest": "sha256:5d47471ed37285b8bc7f923bcbb33f913c7ca5d6250fb585d3c89fd5cd41c809"
+    },
+    {
+      "path": "checks/dimension-check.mjs",
+      "digest": "sha256:4ea66e9701e341057bbfb377d0bc58dda99881a1ac2a01f8626cd9e35b735469"
+    },
+    {
+      "path": "checks/knowledge-check.mjs",
+      "digest": "sha256:b11e55aaa968c75a41026f40dfcb7f6f4f6f453eaeb6f387c319f600cb42714f"
+    },
+    {
+      "path": "checks/wolfram-check.mjs",
+      "digest": "sha256:06ef01182437563d669613085fd38cb75cc220a9a87cd7ec9729e545349c8397"
+    },
+    {
+      "path": "formal/ArtPlanetarium.lean",
+      "digest": "sha256:7db2035a5da5c36eaca6cc94e0c1cf70ab27ee380ba913a574506bcb8f4b6512"
+    },
+    {
+      "path": "formal/ArtPlanetarium/AxiomAudit.lean",
+      "digest": "sha256:9f1474a8060749798243577a11b80199565ca2aa51274dc2b813ee8b16aa4c5d"
+    },
+    {
+      "path": "formal/ArtPlanetarium/ConstructiveArithmetic.lean",
+      "digest": "sha256:2d8de699a50ec329f39af004208e13db68052ce0be4b30d0f7893f1a31195ad8"
+    },
+    {
+      "path": "formal/ArtPlanetarium/Dimension.lean",
+      "digest": "sha256:f8e865ff1824353c3af01f04b00f7f262c098e08c01cc7fc251784caa98eb116"
+    },
+    {
+      "path": "formal/ArtPlanetarium/DimensionProofs.lean",
+      "digest": "sha256:c7f9fb2b3ceaea0278a7f732aa2b9c560ff595f0ea8a3936e2ef2977f39488b6"
+    },
+    {
+      "path": "formal/ArtPlanetarium/Model.lean",
+      "digest": "sha256:c50d9f31335adf6d8cd7530f2e59c894cca52d6988cae30fc2bfbf43feaebdd6"
+    },
+    {
+      "path": "formal/ArtPlanetarium/Proofs.lean",
+      "digest": "sha256:cb6973e554a54df774c6dbf9a370249e6be8589fcb785f3c2b8da1797b5ba9e1"
+    },
+    {
+      "path": "formal/Main.lean",
+      "digest": "sha256:18f9415985f98a2ff340f98ecbe0144e4e3525a4b7308c6b0956656e86862f6f"
+    },
+    {
+      "path": "intent.md",
+      "digest": "sha256:7e583a3b54e4b6b5a0b90bb578eb14c104076e13e368ef82ad8b768cbc54bc5a"
+    },
+    {
+      "path": "knowledge.json",
+      "digest": "sha256:dd5d929a885f4dd730202636c61273ce7c09a91f7b8eca75a3630d67d6e85eb5"
+    },
+    {
+      "path": "lake-manifest.json",
+      "digest": "sha256:3244800c29fc7264e6e253d0b0b758a83b7e6951f24b8f11fad337901cad9a90"
+    },
+    {
+      "path": "lakefile.toml",
+      "digest": "sha256:d19b8bf85d91b1abb8752935273eb824a4dd1dd127816fd51c4936a2e189d98e"
+    },
+    {
+      "path": "lean-toolchain",
+      "digest": "sha256:db7bb24b756d745bbde83fe92718b51bd3625dae3701ba0f598d0eedcd3f3028"
+    },
+    {
+      "path": "lib/declarations.mjs",
+      "digest": "sha256:b3c25a614064e8922466f7c489f5d3c6a4a0f14cf88f2c8e028a34f7461757f3"
+    },
+    {
+      "path": "lib/dimension.mjs",
+      "digest": "sha256:3f5090c856b86e8625886dd35f59368fdbbd1fd60b787fad21394f21179273b7"
+    },
+    {
+      "path": "lib/kernel.mjs",
+      "digest": "sha256:3f16166f19cb4144fa8c9a5fd2acc0d521f3ba4fae6fd3c1eb4add7e02e656c4"
+    },
+    {
+      "path": "lib/material-sphere.mjs",
+      "digest": "sha256:8ccc67f7b009bc2228dc4a9a272f2a7f65a579d97fbbe357d0961f1166c927c4"
+    },
+    {
+      "path": "lib/revision.mjs",
+      "digest": "sha256:3985f93a8f4a6af200c27fdc50dadf7b10329e5c768bbfdfc400e58113ab13a5"
+    },
+    {
+      "path": "research-receipt.json",
+      "digest": "sha256:fb73e5d602c0e4cade86ddac824022c501dea6b1d25fa6c436ac431d333d74bf"
+    },
+    {
+      "path": "scripts/check.mjs",
+      "digest": "sha256:724758e359cb6304e90341aab02605296a61a2211036f5507966e64e2371029f"
+    },
+    {
+      "path": "scripts/generate-artifacts.mjs",
+      "digest": "sha256:4640c1eba835a1cef482790ccf851940f27999bf9411dac8ff94cbbf0d4d7432"
+    },
+    {
+      "path": "spec.md",
+      "digest": "sha256:939c76152aa2a8d1072b1969f8ecd6faaaf29480c295b07d67671d0df8749c21"
+    },
+    {
+      "path": "verification-dimension.wl",
+      "digest": "sha256:a5fd26ab0975c074a9703a8fa0467ac44bd19f5ee611d33a34c93018e4de9ea5"
+    }
+  ]
+}

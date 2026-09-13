@@ -1,0 +1,21 @@
+{
+  "claimIdentifier": "5cdd969e-a78b-57cd-b751-2a5178fd8bf8",
+  "executionIdentifier": "01a09a05-7b02-78db-b8c7-cc7797481f78",
+  "name": "Lumenia.cssLineArtworkRendersWithoutSvgOrFrameLoop",
+  "claimKind": "machine-measured implementation, not a Lean theorem",
+  "machineContract": "SVG path regeneration -> static HTML border rings and extracted CSS -> browser-owned animation; user controls remain client-side",
+  "gateIdentifier": "7ee74b3d-059a-5ea6-b26f-4c5e7383f3c6",
+  "ringCount": 48,
+  "drawingElements": "HTML div with circular border",
+  "styleAuthoring": "module-level Plumeria css.create and css.keyframes, classStyle arrays",
+  "forbiddenDrawingElements": ["svg", "canvas", "img"],
+  "animationDriver": "CSS keyframes, not requestAnimationFrame or a timer loop",
+  "allowedClientWork": ["two one-time startup presentation callbacks", "pause and resume", "native animation playback rate", "native animation reset", "pointer-driven view change", "reduced-motion preference changes"],
+  "measurementLimits": "CSS rendered-frame counts and GPU memory are unknown and must remain null; no zero-browser-cost claim",
+  "sources": [
+    "https://plumeria.dev/docs/api-reference/javascript/keyframes",
+    "https://plumeria.dev/docs/ai",
+    "https://www.w3.org/TR/css-transforms-2/",
+    "https://www.w3.org/TR/web-animations-1/"
+  ]
+}

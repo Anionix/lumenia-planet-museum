@@ -1,0 +1,338 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lumenia.local/contracts/verification-contract.schema.json",
+  "title": "Lumenia verification contract",
+  "type": "object",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/verificationRequest"
+    },
+    {
+      "$ref": "#/$defs/verificationResult"
+    }
+  ],
+  "$defs": {
+    "uuidv5": {
+      "type": "string",
+      "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-5[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$"
+    },
+    "uuidv7": {
+      "type": "string",
+      "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-7[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$"
+    },
+    "sourceRevision": {
+      "type": "string",
+      "pattern": "^(sha256:[0-9a-fA-F]{64}|[0-9a-fA-F]{40})$"
+    },
+    "verificationStatus": {
+      "type": "string",
+      "enum": [
+        "pass",
+        "fail",
+        "blocked",
+        "staleEvidence"
+      ]
+    },
+    "measurementProfile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "targetBrowsers",
+        "coreTransferBudgetKibibytes",
+        "htmlBudgetKibibytes",
+        "javascriptBudgetKibibytes",
+        "styleBudgetKibibytes",
+        "fontBudgetKibibytes",
+        "metadataBudgetKibibytes",
+        "largestContentfulPaintMilliseconds",
+        "firstUsableArtworkMilliseconds"
+      ],
+      "properties": {
+        "targetBrowsers": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": [
+              "chrome",
+              "safari",
+              "firefox",
+              "edge"
+            ]
+          },
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "coreTransferBudgetKibibytes": {
+          "type": "integer",
+          "const": 200
+        },
+        "htmlBudgetKibibytes": {
+          "type": "integer",
+          "const": 30
+        },
+        "javascriptBudgetKibibytes": {
+          "type": "integer",
+          "const": 120
+        },
+        "styleBudgetKibibytes": {
+          "type": "integer",
+          "const": 20
+        },
+        "fontBudgetKibibytes": {
+          "type": "integer",
+          "const": 20
+        },
+        "metadataBudgetKibibytes": {
+          "type": "integer",
+          "const": 10
+        },
+        "largestContentfulPaintMilliseconds": {
+          "type": "integer",
+          "const": 2500
+        },
+        "firstUsableArtworkMilliseconds": {
+          "type": "integer",
+          "const": 3000
+        }
+      }
+    },
+    "verificationRequest": {
+      "title": "Lumenia verification request",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "artifactIdentifier",
+        "claimIdentifiers",
+        "proofTargets",
+        "sourceRevision",
+        "measurementProfile"
+      ],
+      "properties": {
+        "artifactIdentifier": {
+          "$ref": "#/$defs/uuidv5"
+        },
+        "claimIdentifiers": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/uuidv5"
+          }
+        },
+        "proofTargets": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "sourceRevision": {
+          "$ref": "#/$defs/sourceRevision"
+        },
+        "measurementProfile": {
+          "$ref": "#/$defs/measurementProfile"
+        }
+      }
+    },
+    "gateObservation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "gateIdentifier",
+        "status",
+        "observedValue",
+        "limit",
+        "unit",
+        "checkedBy",
+        "failureReason",
+        "sourceRevision",
+        "executionIdentifier"
+      ],
+      "properties": {
+        "gateIdentifier": {
+          "$ref": "#/$defs/uuidv5"
+        },
+        "status": {
+          "$ref": "#/$defs/verificationStatus"
+        },
+        "observedValue": {
+          "type": [
+            "number",
+            "boolean",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "limit": {
+          "type": [
+            "number",
+            "boolean",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "checkedBy": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "failureReason": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "evidenceIdentifiers": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/uuidv5"
+          }
+        },
+        "sourceRevision": {
+          "$ref": "#/$defs/sourceRevision"
+        },
+        "executionIdentifier": {
+          "$ref": "#/$defs/uuidv7"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "pass"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "observedValue": {
+                "type": [
+                  "number",
+                  "boolean"
+                ]
+              },
+              "failureReason": {
+                "type": "null"
+              },
+              "limit": {
+                "type": [
+                  "number",
+                  "boolean"
+                ]
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "failureReason": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "blocked"
+              }
+            }
+          },
+          "then": {
+            "anyOf": [
+              {
+                "properties": {
+                  "observedValue": {
+                    "type": "null"
+                  }
+                }
+              },
+              {
+                "properties": {
+                  "limit": {
+                    "type": "null"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "verificationResult": {
+      "title": "Lumenia verification result",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "artifactIdentifier",
+        "claimIdentifiers",
+        "proofTargets",
+        "sourceRevision",
+        "measurementProfile",
+        "executionIdentifier",
+        "createdAt",
+        "status",
+        "observations"
+      ],
+      "properties": {
+        "artifactIdentifier": {
+          "$ref": "#/$defs/uuidv5"
+        },
+        "claimIdentifiers": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/uuidv5"
+          }
+        },
+        "proofTargets": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "sourceRevision": {
+          "$ref": "#/$defs/sourceRevision"
+        },
+        "measurementProfile": {
+          "$ref": "#/$defs/measurementProfile"
+        },
+        "executionIdentifier": {
+          "$ref": "#/$defs/uuidv7"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "status": {
+          "$ref": "#/$defs/verificationStatus"
+        },
+        "observations": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/gateObservation"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "type": "Historical Evidence",
+  "status": "staleEvidence",
+  "failureReason": "This receipt predates the corrected model and is not accepted for the current revision.",
+  "supersededBy": "../reports/gate-report.json",
+  "previousResult": {
+    "documentIdentifier": "1e54b300-bd3f-5c75-8da6-5072f4c8e13a",
+    "documentType": "gate-report",
+    "executionIdentifier": "01a0999c-0816-77a4-8ab7-ac3e9c8e772e",
+    "sourceRevision": "unavailable-chatgpt-project-mirror",
+    "measurementProfile": {
+      "profileIdentifier": "lumenia-fixed-desktop-browser-profile",
+      "browser": "Chrome-Safari-Firefox-Edge-current",
+      "network": "fixed-network-profile",
+      "device": "fixed-desktop-profile",
+      "buildIdentifier": "lake-build",
+      "toolVersions": [
+        "Lean 4.28.0",
+        "lean-lsp-mcp 0.30.0"
+      ]
+    },
+    "checks": [
+      {
+        "checkIdentifier": "2e75a6f6-6fe5-5c54-9b82-9d0e1f2a3b46",
+        "claimIdentifiers": [
+          "6eb18f53-acd9-5e07-9b84-9cde6f2080a5"
+        ],
+        "status": "pass",
+        "observedValue": "204800",
+        "upperBound": "204800",
+        "unit": "bytes",
+        "tool": "Lean proof",
+        "sourceRevision": "unavailable-chatgpt-project-mirror",
+        "failureReason": "none",
+        "evidence": [
+          "formal/Lumenia/Proofs.lean:255-265"
+        ]
+      },
+      {
+        "checkIdentifier": "3f86b707-70f6-5d65-8c93-0e1f2a3b4c57",
+        "claimIdentifiers": [
+          "6eb18f53-acd9-5e07-9b84-9cde6f2080a5"
+        ],
+        "status": "blocked",
+        "observedValue": "not measured",
+        "upperBound": "200",
+        "unit": "KiB",
+        "tool": "browser measurement",
+        "sourceRevision": "unavailable-chatgpt-project-mirror",
+        "failureReason": "No runnable Lumenia browser application or asset bundle exists in this project mirror.",
+        "evidence": [
+          "verification/gate-report.md"
+        ]
+      },
+      {
+        "checkIdentifier": "4a97c818-81f7-5e76-9da4-1f2a3b4c5d68",
+        "claimIdentifiers": [
+          "6eb18f53-acd9-5e07-9b84-9cde6f2080a5"
+        ],
+        "status": "blocked",
+        "observedValue": "not measured",
+        "upperBound": "2.5",
+        "unit": "seconds",
+        "tool": "browser performance measurement",
+        "sourceRevision": "unavailable-chatgpt-project-mirror",
+        "failureReason": "No runnable Lumenia browser application exists in this project mirror.",
+        "evidence": [
+          "verification/gate-report.md"
+        ]
+      },
+      {
+        "checkIdentifier": "5b08d929-92f8-5f87-8eb5-2a3b4c5d6e79",
+        "claimIdentifiers": [
+          "9c6bcb7e-7d47-5b9f-8f1d-1e530c1a0f44"
+        ],
+        "status": "blocked",
+        "observedValue": "not validated",
+        "upperBound": "0 major errors",
+        "unit": "validator errors",
+        "tool": "glTF Validator",
+        "sourceRevision": "unavailable-chatgpt-project-mirror",
+        "failureReason": "No glTF asset is present in the project mirror.",
+        "evidence": [
+          "verification/gate-report.md"
+        ]
+      }
+    ],
+    "overallStatus": "blocked"
+  }
+}

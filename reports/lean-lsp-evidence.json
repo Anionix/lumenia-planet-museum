@@ -1,0 +1,1636 @@
+{
+  "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+  "files": [
+    {
+      "path": "CONSTRAINTS.md",
+      "sha256": "497ae62402dc9e7492480152f4b16d3ba0e017584a461251d342b716b831c9da"
+    },
+    {
+      "path": "contracts/asset-manifest.schema.json",
+      "sha256": "1ac3534da3c258b5eaacfe031c5cdf71bf8d77e66a84349b7fbd5318c3c47cbb"
+    },
+    {
+      "path": "contracts/claims.json",
+      "sha256": "2250c5046c0a3c1a0836267d3b4823b255cce0303b25ff3fa76c8fe9060da087"
+    },
+    {
+      "path": "contracts/css-artworks.json",
+      "sha256": "134ecfcb05f92cf9fcc573f9eed02b5220fa7230e77bd514b38b687b26b43922"
+    },
+    {
+      "path": "contracts/css-line-artwork.json",
+      "sha256": "5b6c0cab63d6c829c3c71fe18f7c8632fa61d6d60fb16fddcb29f40fb2d82b89"
+    },
+    {
+      "path": "contracts/examples/valid-asset-manifest.json",
+      "sha256": "5a112a222b51c635cb473550b6a8077d0626c208a7305fe9e81a7350c3d67d20"
+    },
+    {
+      "path": "contracts/examples/verification-request.json",
+      "sha256": "7a6c9e468f145685ef766bfc3e77c60c212072d0eecf58d7b7298a0bb0153b0e"
+    },
+    {
+      "path": "contracts/examples/verification-result.json",
+      "sha256": "28f87578eadb898be5135cdf94b7dcbd1ccc1e65ae44ea286d2991e9be360c5d"
+    },
+    {
+      "path": "contracts/external-gates.json",
+      "sha256": "af11e1ca96fd1de4612ed53042de89e12f0732010e15bc06bea4658a4c66fdca"
+    },
+    {
+      "path": "contracts/verification-contract.schema.json",
+      "sha256": "fbe69c9db9eac5debee95d2b9fc723ddd152e27f3892bc646718f1283c6b23de"
+    },
+    {
+      "path": "eslint.config.mjs",
+      "sha256": "978430f74599f639af8650e0f36ece7f26e916f819e7563df8f5809bba9be226"
+    },
+    {
+      "path": "formal/Lumenia.lean",
+      "sha256": "25d82dde7ad6966f8bd27c35d32bc016ef0e027629db9d9f4d1468a6133038f2"
+    },
+    {
+      "path": "formal/Lumenia/AxiomAudit.lean",
+      "sha256": "a2ac9deab960ba87a619b4d76866e2dea1699c610d049ba0e54b0379eb8daf00"
+    },
+    {
+      "path": "formal/Lumenia/Boundary.lean",
+      "sha256": "41be9e4293f8f54e671150aa2f1afadc27d0393f865af9ebdbdcb6bb8ea363c3"
+    },
+    {
+      "path": "formal/Lumenia/Model.lean",
+      "sha256": "0f528929e0243d7f922a9d7f9603eed43e8c0e13c6f44a86922f06dad82a0b06"
+    },
+    {
+      "path": "formal/Lumenia/Proofs.lean",
+      "sha256": "dc185dc0b11ffc1471061e7301249def8111ef69707876e0cf4ebb3ea05afb04"
+    },
+    {
+      "path": "formal/Lumenia/Tests.lean",
+      "sha256": "329500e65c6d3c601e25d95d91de28d904ecf197b8b5a3ec1e95753b62a52995"
+    },
+    {
+      "path": "formal/Main.lean",
+      "sha256": "8b3eeea5ac3bcfb89963c5064a1307da6cb975ca5a89eb109319f2bce377e715"
+    },
+    {
+      "path": "intent.md",
+      "sha256": "9c36b5d17dce933b4966c3a291616b0e8236866ff1e5daa2d21d933b8c87682b"
+    },
+    {
+      "path": "lake-manifest.json",
+      "sha256": "4273a8dd6528dfcfc627997ee3f06313b97d795918cfc09b5ae65821723e54fb"
+    },
+    {
+      "path": "lakefile.toml",
+      "sha256": "450866fae5ba7ab3c9d0b025436f30ea29e39124837b035b428bd40233048c62"
+    },
+    {
+      "path": "lean-toolchain",
+      "sha256": "db7bb24b756d745bbde83fe92718b51bd3625dae3701ba0f598d0eedcd3f3028"
+    },
+    {
+      "path": "mcp/application-verification.md",
+      "sha256": "4e3624c1b89b97c74ac2833d070d958d21187de2a5650b5259d41e43743ab735"
+    },
+    {
+      "path": "mcp/chrome-measurements.js",
+      "sha256": "1d052b24aa89a1145e3b38364951aa4f81f712f9983bf28e5b406c95e54d33c5"
+    },
+    {
+      "path": "mcp/lean-lsp-mcp.json",
+      "sha256": "98a7471d12c4e449b04a8867fffeaf77424d84cb75a451a18d2efeb94e410fec"
+    },
+    {
+      "path": "mcp/lumenia-verification-contract.schema.json",
+      "sha256": "0b054151d9949e9a46f8ee470da837109aa07b0d3baf7161eda4cdd8f4ed33a9"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "65e21e4e7a5b9110a238d6848b53254df3ce8878099ff6985cfeba9ff46df142"
+    },
+    {
+      "path": "package.json",
+      "sha256": "ceec3257ddc64c87186fb7104e2f8b123b2a2ac3f8df47abe08be4ac8af8ffd2"
+    },
+    {
+      "path": "scripts/browser-observations.mjs",
+      "sha256": "e75e81e7853ff9abaaef9d7842fc143e5372d13dbd8e25f61be867aae79df59e"
+    },
+    {
+      "path": "scripts/build-artwork.mjs",
+      "sha256": "887dcaa527e92f80401a91bf7c065fd6d787a4e83e531b2a61c59454f6396e2b"
+    },
+    {
+      "path": "scripts/build-web.mjs",
+      "sha256": "ac9c581505b756b096316efa0fe8f246be7afadca0a9c76ea494a6f6d305801b"
+    },
+    {
+      "path": "scripts/collect-measurements.mjs",
+      "sha256": "1dcdb72aa8b03042ed97fc72b5b000f4aa28523f42a471af0fe4b22648a673ff"
+    },
+    {
+      "path": "scripts/contract.mjs",
+      "sha256": "96fa1a635a416efb050968b9dd81352610b951b2d40da4df97c56c28e9afcfa0"
+    },
+    {
+      "path": "scripts/identifiers.mjs",
+      "sha256": "fa658b8a45f3e414ab940631e8ca7f186f0be8917393a8054c0676e00f21134b"
+    },
+    {
+      "path": "scripts/language-server-evidence.mjs",
+      "sha256": "59fdf821773569b9dbd4b62527a64b29bf39adb2f923b345cbcd4fb185784898"
+    },
+    {
+      "path": "scripts/measurement-context.mjs",
+      "sha256": "338b53a2650f08c0967c079f9574b97b66be30e1a3058539c75c94fe8bec9ac2"
+    },
+    {
+      "path": "scripts/publish-local-evidence.mjs",
+      "sha256": "68cf5d26ed835551babde2eb2a2b214c1cda95184001f669835d4c0b64372357"
+    },
+    {
+      "path": "scripts/report.mjs",
+      "sha256": "2ed519504df41e4dc7cb09a6e2b62a4d0aaf9a67cc6ef7b05fe6efda5995cc56"
+    },
+    {
+      "path": "scripts/run-application-check.mjs",
+      "sha256": "81e1cf381fbe9b27be3af062703553e9b01bde2b7f98a17180265cfaa690b98f"
+    },
+    {
+      "path": "scripts/run-asset-reference-check.mjs",
+      "sha256": "4439f90e72a97c896650342c12e390e1495860fd704512efd98c7482e196ae59"
+    },
+    {
+      "path": "scripts/run-formal-check.mjs",
+      "sha256": "10a575905640953302c3d407665b9b7c012c47f8ca9f202044b1be0b4114eb56"
+    },
+    {
+      "path": "scripts/run-gates.mjs",
+      "sha256": "5f4099e2c34e0f2c270767d52d6816d9b524cac857debe8d9cd12b68f38bc09e"
+    },
+    {
+      "path": "scripts/serve-web.mjs",
+      "sha256": "4fc98fee7ee795ebf7068db998b867e2ffc21a1d850e5ba8e2084fa3e11c74d0"
+    },
+    {
+      "path": "scripts/source-inspection.mjs",
+      "sha256": "7f25dd18eb364a3b40f45ccd09d46bc54b7dca010812966909733b97aad6c5ec"
+    },
+    {
+      "path": "scripts/source-revision.mjs",
+      "sha256": "e00d8c5624a04f6c169322611391067ef54badcf52332ab245cbfd23ecaa198d"
+    },
+    {
+      "path": "scripts/verify-contract.mjs",
+      "sha256": "dfaf2d2774cbbea870beed8f384447d11b4b5cca903713544f67dd09a7a97eb2"
+    },
+    {
+      "path": "spec.md",
+      "sha256": "b293e5c86933bcdd000b85ddc2b1c9942d693f24831d38d34f5c15be3fe8a223"
+    },
+    {
+      "path": "tests/application.test.mjs",
+      "sha256": "ceb7d054fc9a2186907a31edc23a5345c4bf1365e220e3ec96dafa57aaa8de26"
+    },
+    {
+      "path": "tests/browser-observations.test.mjs",
+      "sha256": "6f5786316aec0e5987a46c2d6b2de1a06f2008ee269e642a81d5c44de446b6d4"
+    },
+    {
+      "path": "tests/contract.test.mjs",
+      "sha256": "46d8e96c1a68093a52b14f9762d50b21c00a96f39f08fb8b6de94f758c9ccc9d"
+    },
+    {
+      "path": "tests/language-server-evidence.test.mjs",
+      "sha256": "60e73ef3764b7d6cabdf7fde7d76a4cc9fa52913db4f3a74af3b277cb516b425"
+    },
+    {
+      "path": "tests/lean-boundary.test.mjs",
+      "sha256": "3ae3fb10a0b31ab7aaab4565ff37db509123d3cf4f9863f59c91a1a0683eed3e"
+    },
+    {
+      "path": "web/app/compare/[stage]/page.tsx",
+      "sha256": "5609017531139affde21942379a3a7332da042807460ff572818b8b32316adef"
+    },
+    {
+      "path": "web/app/globals.css",
+      "sha256": "acbcf35992f1b5d85b1c411f5918cb79d9943f2095046b2f0b3703cbd928166f"
+    },
+    {
+      "path": "web/app/layout.tsx",
+      "sha256": "426cba2b42c1b2d4e23765dca0684a33a8260b9cb506ee3dd6856157aaf3492f"
+    },
+    {
+      "path": "web/app/page.tsx",
+      "sha256": "3ad6b8670a3bc1c09f1716724f49c6f5d8c5e0ff907d66e4e51d121c6a474390"
+    },
+    {
+      "path": "web/app/records/page.tsx",
+      "sha256": "7e21477ea1ff8f52d59b26f17ea391b04f3483a56fc3fd619937339e545615de"
+    },
+    {
+      "path": "web/artwork/asset-contract.ts",
+      "sha256": "ba59eac5fdd51295c380d870b141d52022c32fe224deed967b899c4ac2be0257"
+    },
+    {
+      "path": "web/artwork/catalog.ts",
+      "sha256": "6a759815d7b2bf3e059aed18a85d0a1450959c1bbed16aa8f6c2d8735a215624"
+    },
+    {
+      "path": "web/artwork/css-geometry.ts",
+      "sha256": "ca30e7eaeb6e2705f4f867daed770243319715a876507e2392f85240413297fd"
+    },
+    {
+      "path": "web/artwork/measurement.ts",
+      "sha256": "26e4f708d398d45a5d1b415842e987586a1b3915f8e1af79e816f3c99551b0f7"
+    },
+    {
+      "path": "web/components/ArtworkExperience.tsx",
+      "sha256": "87a70790dd0ef3330b31600f7ee0da3fbc311c531f440319273efb7e9faceed1"
+    },
+    {
+      "path": "web/components/CssArtwork.styles.ts",
+      "sha256": "80c6969d39fed5581415d59b33cd6aab6f6e6d89724d07eb32525711825ac848"
+    },
+    {
+      "path": "web/components/CssArtwork.tsx",
+      "sha256": "5f91c8fe4664b55dce30b7474ea837ff3793dd17968c455dd5c951f554b99631"
+    },
+    {
+      "path": "web/components/Gallery.styles.ts",
+      "sha256": "ab14e6f83086a5cb94ec7b31d6526c1254af6d1d278e2155fac69f01f4bed788"
+    },
+    {
+      "path": "web/components/Gallery.tsx",
+      "sha256": "c56f057bcc7906a25b071630b28cd396cbf4c7c3699d5a4bd2f97116af57dd7a"
+    },
+    {
+      "path": "web/next.config.mjs",
+      "sha256": "35fe3344aba5d30d201ebb94db59f8646edb19a901688cf75cce206f46eb4d93"
+    },
+    {
+      "path": "web/plumeria.d.ts",
+      "sha256": "1879e1b9739a04a44842a8a3e2a256c56b7d2503ff131dcab9b66febd5751503"
+    },
+    {
+      "path": "web/public/favicon.svg",
+      "sha256": "b2a54a1ce80bfa8b03ccbab7fd6c1e1c57a8f4e3c11c83be25fee5700fe1e744"
+    },
+    {
+      "path": "web/tsconfig.json",
+      "sha256": "c77757068271adb58670f7d2de2d253ef2ffe2918809f8460b6d624496293d19"
+    }
+  ],
+  "executionIdentifier": "01a09a2c-15c2-7b12-85af-7716e8abc298",
+  "createdAt": "2026-09-13T09:49:35.554Z",
+  "afterSourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+  "completedAt": "2026-09-13T09:53:12.936Z",
+  "checks": [
+    {
+      "tool": "lean_build",
+      "target": "Lumenia",
+      "args": {
+        "lean_project_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94",
+        "output_lines": 30
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"success\": true,\n  \"output\": \"Build completed successfully (12 jobs).\",\n  \"errors\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "success": true,
+          "output": "Build completed successfully (12 jobs).",
+          "errors": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_diagnostic_messages",
+      "target": "formal/Lumenia/Model.lean",
+      "args": {
+        "file_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Model.lean"
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"success\": true,\n  \"timed_out\": false,\n  \"items\": [],\n  \"failed_dependencies\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "result": {
+            "success": true,
+            "timed_out": false,
+            "items": [],
+            "failed_dependencies": []
+          }
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_diagnostic_messages",
+      "target": "formal/Lumenia/Proofs.lean",
+      "args": {
+        "file_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Proofs.lean"
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"success\": true,\n  \"timed_out\": false,\n  \"items\": [],\n  \"failed_dependencies\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "result": {
+            "success": true,
+            "timed_out": false,
+            "items": [],
+            "failed_dependencies": []
+          }
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_diagnostic_messages",
+      "target": "formal/Lumenia/Tests.lean",
+      "args": {
+        "file_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Tests.lean"
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"success\": true,\n  \"timed_out\": false,\n  \"items\": [],\n  \"failed_dependencies\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "result": {
+            "success": true,
+            "timed_out": false,
+            "items": [],
+            "failed_dependencies": []
+          }
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_diagnostic_messages",
+      "target": "formal/Lumenia/Boundary.lean",
+      "args": {
+        "file_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Boundary.lean"
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"success\": true,\n  \"timed_out\": false,\n  \"items\": [],\n  \"failed_dependencies\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "result": {
+            "success": true,
+            "timed_out": false,
+            "items": [],
+            "failed_dependencies": []
+          }
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_diagnostic_messages",
+      "target": "formal/Lumenia.lean",
+      "args": {
+        "file_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia.lean"
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"success\": true,\n  \"timed_out\": false,\n  \"items\": [],\n  \"failed_dependencies\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "result": {
+            "success": true,
+            "timed_out": false,
+            "items": [],
+            "failed_dependencies": []
+          }
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_diagnostic_messages",
+      "target": "formal/Main.lean",
+      "args": {
+        "file_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Main.lean"
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"success\": true,\n  \"timed_out\": false,\n  \"items\": [],\n  \"failed_dependencies\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "result": {
+            "success": true,
+            "timed_out": false,
+            "items": [],
+            "failed_dependencies": []
+          }
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_goal",
+      "target": "Lumenia.validate_raw_asset_accepts_iff",
+      "args": {
+        "file_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Proofs.lean",
+        "line": 73
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"line_context\": \"    exact ⟨⟨flags, options, passed⟩, dif_pos passed⟩\",\n  \"goals\": null,\n  \"goals_before\": [\n    \"case mpr\\nflags : RawAssetFlags\\noptions : AssetPipelineOptions\\nrequirements : AssetRequirementsSatisfied flags options\\npassed : assetChecks flags options = true\\n⊢ ∃ asset, validateRawAsset flags options = some asset\"\n  ],\n  \"goals_after\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "line_context": "    exact ⟨⟨flags, options, passed⟩, dif_pos passed⟩",
+          "goals": null,
+          "goals_before": [
+            "case mpr\nflags : RawAssetFlags\noptions : AssetPipelineOptions\nrequirements : AssetRequirementsSatisfied flags options\npassed : assetChecks flags options = true\n⊢ ∃ asset, validateRawAsset flags options = some asset"
+          ],
+          "goals_after": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_hover_info",
+      "target": "Lumenia.validate_raw_asset_accepts_iff",
+      "args": {
+        "file_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Proofs.lean",
+        "line": 60,
+        "column": 9
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"symbol\": \"validate_raw_asset_accepts_iff\",\n  \"info\": \"Lumenia.validate_raw_asset_accepts_iff (flags : RawAssetFlags) (options : AssetPipelineOptions) :\\n  (∃ asset, validateRawAsset flags options = some asset) ↔ AssetRequirementsSatisfied flags options\",\n  \"diagnostics\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "symbol": "validate_raw_asset_accepts_iff",
+          "info": "Lumenia.validate_raw_asset_accepts_iff (flags : RawAssetFlags) (options : AssetPipelineOptions) :\n  (∃ asset, validateRawAsset flags options = some asset) ↔ AssetRequirementsSatisfied flags options",
+          "diagnostics": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_file_outline",
+      "target": "formal/Lumenia/Proofs.lean",
+      "args": {
+        "file_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Proofs.lean",
+        "max_declarations": 100
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"imports\": [\n    \"Lumenia.Model\"\n  ],\n  \"declarations\": [\n    {\n      \"name\": \"Lumenia\",\n      \"kind\": \"Ns\",\n      \"start_line\": 3,\n      \"end_line\": 395,\n      \"type_signature\": null,\n      \"children\": []\n    },\n    {\n      \"name\": \"boolean_conjunction\",\n      \"kind\": \"Thm\",\n      \"start_line\": 13,\n      \"end_line\": 15,\n      \"type_signature\": \"∀ (first second : Bool),\\n        (first && second) = true ↔ first = true ∧ second = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"boolean_disjunction\",\n      \"kind\": \"Thm\",\n      \"start_line\": 17,\n      \"end_line\": 19,\n      \"type_signature\": \"∀ (first second : Bool),\\n        (first || second) = true ↔ first = true ∨ second = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"boolean_implication\",\n      \"kind\": \"Thm\",\n      \"start_line\": 21,\n      \"end_line\": 23,\n      \"type_signature\": \"∀ (required available : Bool),\\n        (!required || available) = true ↔ required = true → available = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"boolean_exclusion\",\n      \"kind\": \"Thm\",\n      \"start_line\": 25,\n      \"end_line\": 27,\n      \"type_signature\": \"∀ (first second : Bool),\\n        (!(first && second)) = true ↔ ¬(first = true ∧ second = true)\",\n      \"children\": []\n    },\n    {\n      \"name\": \"asset_checks_iff_requirements\",\n      \"kind\": \"Thm\",\n      \"start_line\": 30,\n      \"end_line\": 57,\n      \"type_signature\": \"∀ (flags : RawAssetFlags)\\n        (options : AssetPipelineOptions),\\n        assetChecks flags options = true ↔ AssetRequirementsSatisfied flags options\",\n      \"children\": []\n    },\n    {\n      \"name\": \"validate_raw_asset_accepts_iff\",\n      \"kind\": \"Thm\",\n      \"start_line\": 60,\n      \"end_line\": 73,\n      \"type_signature\": \"∀ (flags : RawAssetFlags)\\n        (options : AssetPipelineOptions),\\n        (∃ asset, validateRawAsset flags options = some asset) ↔\\n          AssetRequirementsSatisfied flags options\",\n      \"children\": []\n    },\n    {\n      \"name\": \"validate_raw_asset_rejects_iff\",\n      \"kind\": \"Thm\",\n      \"start_line\": 76,\n      \"end_line\": 87,\n      \"type_signature\": \"∀ (flags : RawAssetFlags)\\n        (options : AssetPipelineOptions),\\n        validateRawAsset flags options = none ↔ ¬AssetRequirementsSatisfied flags options\",\n      \"children\": []\n    },\n    {\n      \"name\": \"validate_raw_asset_preserves_input\",\n      \"kind\": \"Thm\",\n      \"start_line\": 90,\n      \"end_line\": 98,\n      \"type_signature\": \"∀ (flags : RawAssetFlags)\\n        (options : AssetPipelineOptions) (asset : ValidatedAsset),\\n        validateRawAsset flags options = some asset →\\n          asset.sourceFlags = flags ∧ asset.pipelineOptions = options\",\n      \"children\": []\n    },\n    {\n      \"name\": \"validate_raw_asset_sound\",\n      \"kind\": \"Thm\",\n      \"start_line\": 101,\n      \"end_line\": 105,\n      \"type_signature\": \"∀ (flags : RawAssetFlags) (options : AssetPipelineOptions)\\n        (asset : ValidatedAsset),\\n        validateRawAsset flags options = some asset → AssetRequirementsSatisfied flags options\",\n      \"children\": []\n    },\n    {\n      \"name\": \"validated_asset_satisfies_requirements\",\n      \"kind\": \"Thm\",\n      \"start_line\": 108,\n      \"end_line\": 110,\n      \"type_signature\": \"∀ (asset : ValidatedAsset),\\n        AssetRequirementsSatisfied asset.sourceFlags asset.pipelineOptions\",\n      \"children\": []\n    },\n    {\n      \"name\": \"meshopt_variants_are_exclusive\",\n      \"kind\": \"Thm\",\n      \"start_line\": 113,\n      \"end_line\": 117,\n      \"type_signature\": \"∀ (flags : RawAssetFlags)\\n        (options : AssetPipelineOptions) (asset : ValidatedAsset),\\n        validateRawAsset flags options = some asset →\\n          ¬(flags.usesExtensionMeshopt = true ∧ flags.usesKhronosMeshopt = true)\",\n      \"children\": []\n    },\n    {\n      \"name\": \"extension_meshopt_requires_decoder\",\n      \"kind\": \"Thm\",\n      \"start_line\": 120,\n      \"end_line\": 125,\n      \"type_signature\": \"∀ (flags : RawAssetFlags)\\n        (options : AssetPipelineOptions) (asset : ValidatedAsset),\\n        validateRawAsset flags options = some asset →\\n          flags.usesExtensionMeshopt = true → options.hasMeshoptDecoder = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"khronos_meshopt_requires_decoder\",\n      \"kind\": \"Thm\",\n      \"start_line\": 128,\n      \"end_line\": 133,\n      \"type_signature\": \"∀ (flags : RawAssetFlags)\\n        (options : AssetPipelineOptions) (asset : ValidatedAsset),\\n        validateRawAsset flags options = some asset →\\n          flags.usesKhronosMeshopt = true → options.hasMeshoptDecoder = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"ktx2_requires_loader\",\n      \"kind\": \"Thm\",\n      \"start_line\": 136,\n      \"end_line\": 141,\n      \"type_signature\": \"∀ (flags : RawAssetFlags) (options : AssetPipelineOptions)\\n        (asset : ValidatedAsset),\\n        validateRawAsset flags options = some asset →\\n          flags.usesKtx2 = true → options.hasKtx2Loader = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"draco_requires_loader\",\n      \"kind\": \"Thm\",\n      \"start_line\": 144,\n      \"end_line\": 150,\n      \"type_signature\": \"∀ (flags : RawAssetFlags) (options : AssetPipelineOptions)\\n        (asset : ValidatedAsset),\\n        validateRawAsset flags options = some asset →\\n          (selectAssetLoaders flags).dracoEnabled = true →\\n            flags.usesDraco = true ∧ options.hasDracoLoader = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"draco_is_enabled_iff_explicit\",\n      \"kind\": \"Thm\",\n      \"start_line\": 153,\n      \"end_line\": 155,\n      \"type_signature\": \"∀ (flags : RawAssetFlags),\\n        (selectAssetLoaders flags).dracoEnabled = true ↔ flags.usesDraco = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"named_nodes_require_preservation\",\n      \"kind\": \"Thm\",\n      \"start_line\": 158,\n      \"end_line\": 163,\n      \"type_signature\": \"∀ (flags : RawAssetFlags)\\n        (options : AssetPipelineOptions) (asset : ValidatedAsset),\\n        validateRawAsset flags options = some asset →\\n          flags.requiresNamedNodes = true → options.keepsNamedNodes = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"extras_require_preservation\",\n      \"kind\": \"Thm\",\n      \"start_line\": 166,\n      \"end_line\": 171,\n      \"type_signature\": \"∀ (flags : RawAssetFlags) (options : AssetPipelineOptions)\\n        (asset : ValidatedAsset),\\n        validateRawAsset flags options = some asset →\\n          flags.requiresExtras = true → options.keepsExtras = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"both_meshopt_flags_reject\",\n      \"kind\": \"Thm\",\n      \"start_line\": 174,\n      \"end_line\": 180,\n      \"type_signature\": \"∀ (flags : RawAssetFlags) (options : AssetPipelineOptions),\\n        flags.usesExtensionMeshopt = true →\\n          flags.usesKhronosMeshopt = true → validateRawAsset flags options = none\",\n      \"children\": []\n    },\n    {\n      \"name\": \"missing_meshopt_decoder_rejects\",\n      \"kind\": \"Thm\",\n      \"start_line\": 183,\n      \"end_line\": 191,\n      \"type_signature\": \"∀ (flags : RawAssetFlags)\\n        (options : AssetPipelineOptions),\\n        flags.usesExtensionMeshopt = true ∨ flags.usesKhronosMeshopt = true →\\n          options.hasMeshoptDecoder = false → validateRawAsset flags options = none\",\n      \"children\": []\n    },\n    {\n      \"name\": \"shipped_requires_validation\",\n      \"kind\": \"Thm\",\n      \"start_line\": 194,\n      \"end_line\": 196,\n      \"type_signature\": \"∀ (stage : ArtifactStage) (event : ArtifactEvent),\\n        transition stage event = some ArtifactStage.shipped ↔\\n          stage = ArtifactStage.validated ∧ event = ArtifactEvent.ship\",\n      \"children\": []\n    },\n    {\n      \"name\": \"rejected_never_reaches_shipped\",\n      \"kind\": \"Thm\",\n      \"start_line\": 198,\n      \"end_line\": 203,\n      \"type_signature\": \"∀ (events : List ArtifactEvent),\\n        runTransitions ArtifactStage.rejected events ≠ some ArtifactStage.shipped\",\n      \"children\": []\n    },\n    {\n      \"name\": \"shipped_trace_is_empty\",\n      \"kind\": \"Thm\",\n      \"start_line\": 205,\n      \"end_line\": 214,\n      \"type_signature\": \"∀ (events : List ArtifactEvent),\\n        runTransitions ArtifactStage.shipped events = some ArtifactStage.shipped ↔ events = []\",\n      \"children\": []\n    },\n    {\n      \"name\": \"validated_trace_is_ship\",\n      \"kind\": \"Thm\",\n      \"start_line\": 216,\n      \"end_line\": 233,\n      \"type_signature\": \"∀ (events : List ArtifactEvent),\\n        runTransitions ArtifactStage.validated events = some ArtifactStage.shipped ↔\\n          events = [ArtifactEvent.ship]\",\n      \"children\": []\n    },\n    {\n      \"name\": \"optimized_trace_is_validate_ship\",\n      \"kind\": \"Thm\",\n      \"start_line\": 235,\n      \"end_line\": 252,\n      \"type_signature\": \"∀ (events : List ArtifactEvent),\\n        runTransitions ArtifactStage.optimized events = some ArtifactStage.shipped ↔\\n          events = [ArtifactEvent.validate, ArtifactEvent.ship]\",\n      \"children\": []\n    },\n    {\n      \"name\": \"shipment_trace_is_exactly_optimize_validate_ship\",\n      \"kind\": \"Thm\",\n      \"start_line\": 255,\n      \"end_line\": 273,\n      \"type_signature\": \"∀ (events : List ArtifactEvent),\\n        runTransitions ArtifactStage.source events = some ArtifactStage.shipped ↔\\n          events = [ArtifactEvent.optimize, ArtifactEvent.validate, ArtifactEvent.ship]\",\n      \"children\": []\n    },\n    {\n      \"name\": \"shipped_history_requires_asset_requirements\",\n      \"kind\": \"Thm\",\n      \"start_line\": 276,\n      \"end_line\": 283,\n      \"type_signature\": \"∀ {identity : ArtifactIdentity}\\n        {flags : RawAssetFlags} {options : AssetPipelineOptions}\\n        (history : ArtifactHistory identity flags options ArtifactStage.shipped),\\n        AssetRequirementsSatisfied flags options\",\n      \"children\": []\n    },\n    {\n      \"name\": \"invalid_asset_has_no_shipped_history\",\n      \"kind\": \"Thm\",\n      \"start_line\": 286,\n      \"end_line\": 291,\n      \"type_signature\": \"∀ {identity : ArtifactIdentity}\\n        {flags : RawAssetFlags} {options : AssetPipelineOptions},\\n        ¬AssetRequirementsSatisfied flags options →\\n          ¬Nonempty (ArtifactHistory identity flags options ArtifactStage.shipped)\",\n      \"children\": []\n    },\n    {\n      \"name\": \"browser_capability_requires_client_component\",\n      \"kind\": \"Thm\",\n      \"start_line\": 294,\n      \"end_line\": 300,\n      \"type_signature\": \"∀ (capability : RuntimeCapability)\\n        (placement : ComponentPlacement),\\n        capabilityRequiresClient capability = true →\\n          componentPlacementAllowed placement capability = true →\\n            placement = ComponentPlacement.client\",\n      \"children\": []\n    },\n    {\n      \"name\": \"all_checked_at_member\",\n      \"kind\": \"Thm\",\n      \"start_line\": 302,\n      \"end_line\": 312,\n      \"type_signature\": \"∀ {Element : Type} (predicate : Element → Bool)\\n        {values : List Element} {value : Element},\\n        values.all predicate = true → value ∈ values → predicate value = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"static_export_cannot_require_server_only\",\n      \"kind\": \"Thm\",\n      \"start_line\": 315,\n      \"end_line\": 322,\n      \"type_signature\": \"∀ (placement : ComponentPlacement)\\n        (requirements : List RuntimeCapability),\\n        componentRequirementsAllowed DeploymentMode.staticExport placement requirements = true →\\n          ¬RuntimeCapability.serverOnly ∈ requirements\",\n      \"children\": []\n    },\n    {\n      \"name\": \"accepted_component_places_browser_requirements_on_client\",\n      \"kind\": \"Thm\",\n      \"start_line\": 325,\n      \"end_line\": 334,\n      \"type_signature\": \"∀ (mode : DeploymentMode)\\n        (placement : ComponentPlacement) (requirements : List RuntimeCapability) (capability : RuntimeCapability),\\n        capability ∈ requirements →\\n          capabilityRequiresClient capability = true →\\n            componentRequirementsAllowed mode placement requirements = true →\\n              placement = ComponentPlacement.client\",\n      \"children\": []\n    },\n    {\n      \"name\": \"client_component_cannot_require_server_only\",\n      \"kind\": \"Thm\",\n      \"start_line\": 337,\n      \"end_line\": 344,\n      \"type_signature\": \"∀ (mode : DeploymentMode)\\n        (requirements : List RuntimeCapability),\\n        componentRequirementsAllowed mode ComponentPlacement.client requirements = true →\\n          ¬RuntimeCapability.serverOnly ∈ requirements\",\n      \"children\": []\n    },\n    {\n      \"name\": \"core_transfer_total_within_budget\",\n      \"kind\": \"Thm\",\n      \"start_line\": 347,\n      \"end_line\": 352,\n      \"type_signature\": \"∀ (transfer : CoreTransfer),\\n        transfer.withinBudget → transfer.total ≤ coreTransferBudget\",\n      \"children\": []\n    },\n    {\n      \"name\": \"category_budget_total_is_204800_bytes\",\n      \"kind\": \"Thm\",\n      \"start_line\": 355,\n      \"end_line\": 359,\n      \"type_signature\": \"30 * kibibyte + 120 * kibibyte + 20 * kibibyte +\\n              20 * kibibyte +\\n            10 * kibibyte =\\n          coreTransferBudget ∧\\n        coreTransferBudget = 204800\",\n      \"children\": []\n    },\n    {\n      \"name\": \"measured_gate_pass_iff\",\n      \"kind\": \"Thm\",\n      \"start_line\": 362,\n      \"end_line\": 393,\n      \"type_signature\": \"∀ (gate : MeasuredGate),\\n        evaluateMeasuredGate gate = VerificationStatus.pass ↔\\n          gate.measuredRevision = gate.requiredRevision ∧\\n            ∃ value, gate.observedValue = some value ∧ value ≤ gate.upperBound\",\n      \"children\": []\n    },\n    {\n      \"name\": \"asset_checks_iff_requirements\",\n      \"kind\": \"Thm\",\n      \"start_line\": 30,\n      \"end_line\": 30,\n      \"type_signature\": \"(flags : RawAssetFlags) (options : AssetPipelineOptions) : assetChecks flags options = true ↔ AssetRequirementsSatisfied flags options\",\n      \"children\": []\n    },\n    {\n      \"name\": \"validate_raw_asset_accepts_iff\",\n      \"kind\": \"Thm\",\n      \"start_line\": 60,\n      \"end_line\": 60,\n      \"type_signature\": \"(flags : RawAssetFlags) (options : AssetPipelineOptions) : (∃ asset, validateRawAsset flags options = some asset) ↔ AssetRequirementsSatisfied flags options\",\n      \"children\": []\n    },\n    {\n      \"name\": \"validate_raw_asset_rejects_iff\",\n      \"kind\": \"Thm\",\n      \"start_line\": 76,\n      \"end_line\": 76,\n      \"type_signature\": \"(flags : RawAssetFlags) (options : AssetPipelineOptions) : validateRawAsset flags options = none ↔ ¬ AssetRequirementsSatisfied flags options\",\n      \"children\": []\n    },\n    {\n      \"name\": \"validate_raw_asset_preserves_input\",\n      \"kind\": \"Thm\",\n      \"start_line\": 90,\n      \"end_line\": 90,\n      \"type_signature\": \"(flags : RawAssetFlags) (options : AssetPipelineOptions) (asset : ValidatedAsset) (accepted : validateRawAsset flags options = some asset) : asset.sourceFlags = flags ∧ asset.pipelineOptions = options\",\n      \"children\": []\n    },\n    {\n      \"name\": \"validate_raw_asset_sound\",\n      \"kind\": \"Thm\",\n      \"start_line\": 101,\n      \"end_line\": 101,\n      \"type_signature\": \"(flags : RawAssetFlags) (options : AssetPipelineOptions) (asset : ValidatedAsset) (accepted : validateRawAsset flags options = some asset) : AssetRequirementsSatisfied flags options\",\n      \"children\": []\n    },\n    {\n      \"name\": \"validated_asset_satisfies_requirements\",\n      \"kind\": \"Thm\",\n      \"start_line\": 108,\n      \"end_line\": 108,\n      \"type_signature\": \"(asset : ValidatedAsset) : AssetRequirementsSatisfied asset.sourceFlags asset.pipelineOptions\",\n      \"children\": []\n    },\n    {\n      \"name\": \"meshopt_variants_are_exclusive\",\n      \"kind\": \"Thm\",\n      \"start_line\": 113,\n      \"end_line\": 113,\n      \"type_signature\": \"(flags : RawAssetFlags) (options : AssetPipelineOptions) (asset : ValidatedAsset) (accepted : validateRawAsset flags options = some asset) : ¬ (flags.usesExtensionMeshopt = true ∧ flags.usesKhronosMeshopt = true)\",\n      \"children\": []\n    },\n    {\n      \"name\": \"extension_meshopt_requires_decoder\",\n      \"kind\": \"Thm\",\n      \"start_line\": 120,\n      \"end_line\": 120,\n      \"type_signature\": \"(flags : RawAssetFlags) (options : AssetPipelineOptions) (asset : ValidatedAsset) (accepted : validateRawAsset flags options = some asset) (required : flags.usesExtensionMeshopt = true) : options.hasMeshoptDecoder = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"khronos_meshopt_requires_decoder\",\n      \"kind\": \"Thm\",\n      \"start_line\": 128,\n      \"end_line\": 128,\n      \"type_signature\": \"(flags : RawAssetFlags) (options : AssetPipelineOptions) (asset : ValidatedAsset) (accepted : validateRawAsset flags options = some asset) (required : flags.usesKhronosMeshopt = true) : options.hasMeshoptDecoder = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"ktx2_requires_loader\",\n      \"kind\": \"Thm\",\n      \"start_line\": 136,\n      \"end_line\": 136,\n      \"type_signature\": \"(flags : RawAssetFlags) (options : AssetPipelineOptions) (asset : ValidatedAsset) (accepted : validateRawAsset flags options = some asset) (required : flags.usesKtx2 = true) : options.hasKtx2Loader = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"draco_requires_loader\",\n      \"kind\": \"Thm\",\n      \"start_line\": 144,\n      \"end_line\": 144,\n      \"type_signature\": \"(flags : RawAssetFlags) (options : AssetPipelineOptions) (asset : ValidatedAsset) (accepted : validateRawAsset flags options = some asset) (required : (selectAssetLoaders flags).dracoEnabled = true) : flags.usesDraco = true ∧ options.hasDracoLoader = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"draco_is_enabled_iff_explicit\",\n      \"kind\": \"Thm\",\n      \"start_line\": 153,\n      \"end_line\": 153,\n      \"type_signature\": \"(flags : RawAssetFlags) : (selectAssetLoaders flags).dracoEnabled = true ↔ flags.usesDraco = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"named_nodes_require_preservation\",\n      \"kind\": \"Thm\",\n      \"start_line\": 158,\n      \"end_line\": 158,\n      \"type_signature\": \"(flags : RawAssetFlags) (options : AssetPipelineOptions) (asset : ValidatedAsset) (accepted : validateRawAsset flags options = some asset) (required : flags.requiresNamedNodes = true) : options.keepsNamedNodes = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"extras_require_preservation\",\n      \"kind\": \"Thm\",\n      \"start_line\": 166,\n      \"end_line\": 166,\n      \"type_signature\": \"(flags : RawAssetFlags) (options : AssetPipelineOptions) (asset : ValidatedAsset) (accepted : validateRawAsset flags options = some asset) (required : flags.requiresExtras = true) : options.keepsExtras = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"both_meshopt_flags_reject\",\n      \"kind\": \"Thm\",\n      \"start_line\": 174,\n      \"end_line\": 174,\n      \"type_signature\": \"(flags : RawAssetFlags) (options : AssetPipelineOptions) (extension : flags.usesExtensionMeshopt = true) (khronos : flags.usesKhronosMeshopt = true) : validateRawAsset flags options = none\",\n      \"children\": []\n    },\n    {\n      \"name\": \"missing_meshopt_decoder_rejects\",\n      \"kind\": \"Thm\",\n      \"start_line\": 183,\n      \"end_line\": 183,\n      \"type_signature\": \"(flags : RawAssetFlags) (options : AssetPipelineOptions) (required : flags.usesExtensionMeshopt = true ∨ flags.usesKhronosMeshopt = true) (missing : options.hasMeshoptDecoder = false) : validateRawAsset flags options = none\",\n      \"children\": []\n    },\n    {\n      \"name\": \"shipped_requires_validation\",\n      \"kind\": \"Thm\",\n      \"start_line\": 194,\n      \"end_line\": 194,\n      \"type_signature\": \"(stage : ArtifactStage) (event : ArtifactEvent) : transition stage event = some .shipped ↔ stage = .validated ∧ event = .ship\",\n      \"children\": []\n    },\n    {\n      \"name\": \"shipment_trace_is_exactly_optimize_validate_ship\",\n      \"kind\": \"Thm\",\n      \"start_line\": 255,\n      \"end_line\": 255,\n      \"type_signature\": \"(events : List ArtifactEvent) : runTransitions .source events = some .shipped ↔ events = [.optimize, .validate, .ship]\",\n      \"children\": []\n    },\n    {\n      \"name\": \"shipped_history_requires_asset_requirements\",\n      \"kind\": \"Thm\",\n      \"start_line\": 276,\n      \"end_line\": 276,\n      \"type_signature\": \"{identity : ArtifactIdentity} {flags : RawAssetFlags} {options : AssetPipelineOptions} (history : ArtifactHistory identity flags options .shipped) : AssetRequirementsSatisfied flags options\",\n      \"children\": []\n    },\n    {\n      \"name\": \"invalid_asset_has_no_shipped_history\",\n      \"kind\": \"Thm\",\n      \"start_line\": 286,\n      \"end_line\": 286,\n      \"type_signature\": \"{identity : ArtifactIdentity} {flags : RawAssetFlags} {options : AssetPipelineOptions} (invalid : ¬ AssetRequirementsSatisfied flags options) : ¬ Nonempty (ArtifactHistory identity flags options .shipped)\",\n      \"children\": []\n    },\n    {\n      \"name\": \"browser_capability_requires_client_component\",\n      \"kind\": \"Thm\",\n      \"start_line\": 294,\n      \"end_line\": 294,\n      \"type_signature\": \"(capability : RuntimeCapability) (placement : ComponentPlacement) (required : capabilityRequiresClient capability = true) (allowed : componentPlacementAllowed placement capability = true) : placement = .client\",\n      \"children\": []\n    },\n    {\n      \"name\": \"static_export_cannot_require_server_only\",\n      \"kind\": \"Thm\",\n      \"start_line\": 315,\n      \"end_line\": 315,\n      \"type_signature\": \"(placement : ComponentPlacement) (requirements : List RuntimeCapability) (allowed : componentRequirementsAllowed .staticExport placement requirements = true) : RuntimeCapability.serverOnly ∉ requirements\",\n      \"children\": []\n    },\n    {\n      \"name\": \"accepted_component_places_browser_requirements_on_client\",\n      \"kind\": \"Thm\",\n      \"start_line\": 325,\n      \"end_line\": 325,\n      \"type_signature\": \"(mode : DeploymentMode) (placement : ComponentPlacement) (requirements : List RuntimeCapability) (capability : RuntimeCapability) (member : capability ∈ requirements) (required : capabilityRequiresClient capability = true) (allowed : componentRequirementsAllowed mode placement requirements = true) : placement = .client\",\n      \"children\": []\n    },\n    {\n      \"name\": \"client_component_cannot_require_server_only\",\n      \"kind\": \"Thm\",\n      \"start_line\": 337,\n      \"end_line\": 337,\n      \"type_signature\": \"(mode : DeploymentMode) (requirements : List RuntimeCapability) (allowed : componentRequirementsAllowed mode .client requirements = true) : RuntimeCapability.serverOnly ∉ requirements\",\n      \"children\": []\n    },\n    {\n      \"name\": \"core_transfer_total_within_budget\",\n      \"kind\": \"Thm\",\n      \"start_line\": 347,\n      \"end_line\": 347,\n      \"type_signature\": \"(transfer : CoreTransfer) (bounded : transfer.withinBudget) : transfer.total ≤ coreTransferBudget\",\n      \"children\": []\n    },\n    {\n      \"name\": \"category_budget_total_is_204800_bytes\",\n      \"kind\": \"Thm\",\n      \"start_line\": 355,\n      \"end_line\": 355,\n      \"type_signature\": \": 30 * kibibyte + 120 * kibibyte + 20 * kibibyte + 20 * kibibyte + 10 * kibibyte = coreTransferBudget ∧ coreTransferBudget = 204800\",\n      \"children\": []\n    },\n    {\n      \"name\": \"measured_gate_pass_iff\",\n      \"kind\": \"Thm\",\n      \"start_line\": 362,\n      \"end_line\": 362,\n      \"type_signature\": \"(gate : MeasuredGate) : evaluateMeasuredGate gate = .pass ↔ gate.measuredRevision = gate.requiredRevision ∧ ∃ value, gate.observedValue = some value ∧ value ≤ gate.upperBound\",\n      \"children\": []\n    }\n  ],\n  \"total_declarations\": null\n}"
+          }
+        ],
+        "structuredContent": {
+          "imports": [
+            "Lumenia.Model"
+          ],
+          "declarations": [
+            {
+              "name": "Lumenia",
+              "kind": "Ns",
+              "start_line": 3,
+              "end_line": 395,
+              "type_signature": null,
+              "children": []
+            },
+            {
+              "name": "boolean_conjunction",
+              "kind": "Thm",
+              "start_line": 13,
+              "end_line": 15,
+              "type_signature": "∀ (first second : Bool),\n        (first && second) = true ↔ first = true ∧ second = true",
+              "children": []
+            },
+            {
+              "name": "boolean_disjunction",
+              "kind": "Thm",
+              "start_line": 17,
+              "end_line": 19,
+              "type_signature": "∀ (first second : Bool),\n        (first || second) = true ↔ first = true ∨ second = true",
+              "children": []
+            },
+            {
+              "name": "boolean_implication",
+              "kind": "Thm",
+              "start_line": 21,
+              "end_line": 23,
+              "type_signature": "∀ (required available : Bool),\n        (!required || available) = true ↔ required = true → available = true",
+              "children": []
+            },
+            {
+              "name": "boolean_exclusion",
+              "kind": "Thm",
+              "start_line": 25,
+              "end_line": 27,
+              "type_signature": "∀ (first second : Bool),\n        (!(first && second)) = true ↔ ¬(first = true ∧ second = true)",
+              "children": []
+            },
+            {
+              "name": "asset_checks_iff_requirements",
+              "kind": "Thm",
+              "start_line": 30,
+              "end_line": 57,
+              "type_signature": "∀ (flags : RawAssetFlags)\n        (options : AssetPipelineOptions),\n        assetChecks flags options = true ↔ AssetRequirementsSatisfied flags options",
+              "children": []
+            },
+            {
+              "name": "validate_raw_asset_accepts_iff",
+              "kind": "Thm",
+              "start_line": 60,
+              "end_line": 73,
+              "type_signature": "∀ (flags : RawAssetFlags)\n        (options : AssetPipelineOptions),\n        (∃ asset, validateRawAsset flags options = some asset) ↔\n          AssetRequirementsSatisfied flags options",
+              "children": []
+            },
+            {
+              "name": "validate_raw_asset_rejects_iff",
+              "kind": "Thm",
+              "start_line": 76,
+              "end_line": 87,
+              "type_signature": "∀ (flags : RawAssetFlags)\n        (options : AssetPipelineOptions),\n        validateRawAsset flags options = none ↔ ¬AssetRequirementsSatisfied flags options",
+              "children": []
+            },
+            {
+              "name": "validate_raw_asset_preserves_input",
+              "kind": "Thm",
+              "start_line": 90,
+              "end_line": 98,
+              "type_signature": "∀ (flags : RawAssetFlags)\n        (options : AssetPipelineOptions) (asset : ValidatedAsset),\n        validateRawAsset flags options = some asset →\n          asset.sourceFlags = flags ∧ asset.pipelineOptions = options",
+              "children": []
+            },
+            {
+              "name": "validate_raw_asset_sound",
+              "kind": "Thm",
+              "start_line": 101,
+              "end_line": 105,
+              "type_signature": "∀ (flags : RawAssetFlags) (options : AssetPipelineOptions)\n        (asset : ValidatedAsset),\n        validateRawAsset flags options = some asset → AssetRequirementsSatisfied flags options",
+              "children": []
+            },
+            {
+              "name": "validated_asset_satisfies_requirements",
+              "kind": "Thm",
+              "start_line": 108,
+              "end_line": 110,
+              "type_signature": "∀ (asset : ValidatedAsset),\n        AssetRequirementsSatisfied asset.sourceFlags asset.pipelineOptions",
+              "children": []
+            },
+            {
+              "name": "meshopt_variants_are_exclusive",
+              "kind": "Thm",
+              "start_line": 113,
+              "end_line": 117,
+              "type_signature": "∀ (flags : RawAssetFlags)\n        (options : AssetPipelineOptions) (asset : ValidatedAsset),\n        validateRawAsset flags options = some asset →\n          ¬(flags.usesExtensionMeshopt = true ∧ flags.usesKhronosMeshopt = true)",
+              "children": []
+            },
+            {
+              "name": "extension_meshopt_requires_decoder",
+              "kind": "Thm",
+              "start_line": 120,
+              "end_line": 125,
+              "type_signature": "∀ (flags : RawAssetFlags)\n        (options : AssetPipelineOptions) (asset : ValidatedAsset),\n        validateRawAsset flags options = some asset →\n          flags.usesExtensionMeshopt = true → options.hasMeshoptDecoder = true",
+              "children": []
+            },
+            {
+              "name": "khronos_meshopt_requires_decoder",
+              "kind": "Thm",
+              "start_line": 128,
+              "end_line": 133,
+              "type_signature": "∀ (flags : RawAssetFlags)\n        (options : AssetPipelineOptions) (asset : ValidatedAsset),\n        validateRawAsset flags options = some asset →\n          flags.usesKhronosMeshopt = true → options.hasMeshoptDecoder = true",
+              "children": []
+            },
+            {
+              "name": "ktx2_requires_loader",
+              "kind": "Thm",
+              "start_line": 136,
+              "end_line": 141,
+              "type_signature": "∀ (flags : RawAssetFlags) (options : AssetPipelineOptions)\n        (asset : ValidatedAsset),\n        validateRawAsset flags options = some asset →\n          flags.usesKtx2 = true → options.hasKtx2Loader = true",
+              "children": []
+            },
+            {
+              "name": "draco_requires_loader",
+              "kind": "Thm",
+              "start_line": 144,
+              "end_line": 150,
+              "type_signature": "∀ (flags : RawAssetFlags) (options : AssetPipelineOptions)\n        (asset : ValidatedAsset),\n        validateRawAsset flags options = some asset →\n          (selectAssetLoaders flags).dracoEnabled = true →\n            flags.usesDraco = true ∧ options.hasDracoLoader = true",
+              "children": []
+            },
+            {
+              "name": "draco_is_enabled_iff_explicit",
+              "kind": "Thm",
+              "start_line": 153,
+              "end_line": 155,
+              "type_signature": "∀ (flags : RawAssetFlags),\n        (selectAssetLoaders flags).dracoEnabled = true ↔ flags.usesDraco = true",
+              "children": []
+            },
+            {
+              "name": "named_nodes_require_preservation",
+              "kind": "Thm",
+              "start_line": 158,
+              "end_line": 163,
+              "type_signature": "∀ (flags : RawAssetFlags)\n        (options : AssetPipelineOptions) (asset : ValidatedAsset),\n        validateRawAsset flags options = some asset →\n          flags.requiresNamedNodes = true → options.keepsNamedNodes = true",
+              "children": []
+            },
+            {
+              "name": "extras_require_preservation",
+              "kind": "Thm",
+              "start_line": 166,
+              "end_line": 171,
+              "type_signature": "∀ (flags : RawAssetFlags) (options : AssetPipelineOptions)\n        (asset : ValidatedAsset),\n        validateRawAsset flags options = some asset →\n          flags.requiresExtras = true → options.keepsExtras = true",
+              "children": []
+            },
+            {
+              "name": "both_meshopt_flags_reject",
+              "kind": "Thm",
+              "start_line": 174,
+              "end_line": 180,
+              "type_signature": "∀ (flags : RawAssetFlags) (options : AssetPipelineOptions),\n        flags.usesExtensionMeshopt = true →\n          flags.usesKhronosMeshopt = true → validateRawAsset flags options = none",
+              "children": []
+            },
+            {
+              "name": "missing_meshopt_decoder_rejects",
+              "kind": "Thm",
+              "start_line": 183,
+              "end_line": 191,
+              "type_signature": "∀ (flags : RawAssetFlags)\n        (options : AssetPipelineOptions),\n        flags.usesExtensionMeshopt = true ∨ flags.usesKhronosMeshopt = true →\n          options.hasMeshoptDecoder = false → validateRawAsset flags options = none",
+              "children": []
+            },
+            {
+              "name": "shipped_requires_validation",
+              "kind": "Thm",
+              "start_line": 194,
+              "end_line": 196,
+              "type_signature": "∀ (stage : ArtifactStage) (event : ArtifactEvent),\n        transition stage event = some ArtifactStage.shipped ↔\n          stage = ArtifactStage.validated ∧ event = ArtifactEvent.ship",
+              "children": []
+            },
+            {
+              "name": "rejected_never_reaches_shipped",
+              "kind": "Thm",
+              "start_line": 198,
+              "end_line": 203,
+              "type_signature": "∀ (events : List ArtifactEvent),\n        runTransitions ArtifactStage.rejected events ≠ some ArtifactStage.shipped",
+              "children": []
+            },
+            {
+              "name": "shipped_trace_is_empty",
+              "kind": "Thm",
+              "start_line": 205,
+              "end_line": 214,
+              "type_signature": "∀ (events : List ArtifactEvent),\n        runTransitions ArtifactStage.shipped events = some ArtifactStage.shipped ↔ events = []",
+              "children": []
+            },
+            {
+              "name": "validated_trace_is_ship",
+              "kind": "Thm",
+              "start_line": 216,
+              "end_line": 233,
+              "type_signature": "∀ (events : List ArtifactEvent),\n        runTransitions ArtifactStage.validated events = some ArtifactStage.shipped ↔\n          events = [ArtifactEvent.ship]",
+              "children": []
+            },
+            {
+              "name": "optimized_trace_is_validate_ship",
+              "kind": "Thm",
+              "start_line": 235,
+              "end_line": 252,
+              "type_signature": "∀ (events : List ArtifactEvent),\n        runTransitions ArtifactStage.optimized events = some ArtifactStage.shipped ↔\n          events = [ArtifactEvent.validate, ArtifactEvent.ship]",
+              "children": []
+            },
+            {
+              "name": "shipment_trace_is_exactly_optimize_validate_ship",
+              "kind": "Thm",
+              "start_line": 255,
+              "end_line": 273,
+              "type_signature": "∀ (events : List ArtifactEvent),\n        runTransitions ArtifactStage.source events = some ArtifactStage.shipped ↔\n          events = [ArtifactEvent.optimize, ArtifactEvent.validate, ArtifactEvent.ship]",
+              "children": []
+            },
+            {
+              "name": "shipped_history_requires_asset_requirements",
+              "kind": "Thm",
+              "start_line": 276,
+              "end_line": 283,
+              "type_signature": "∀ {identity : ArtifactIdentity}\n        {flags : RawAssetFlags} {options : AssetPipelineOptions}\n        (history : ArtifactHistory identity flags options ArtifactStage.shipped),\n        AssetRequirementsSatisfied flags options",
+              "children": []
+            },
+            {
+              "name": "invalid_asset_has_no_shipped_history",
+              "kind": "Thm",
+              "start_line": 286,
+              "end_line": 291,
+              "type_signature": "∀ {identity : ArtifactIdentity}\n        {flags : RawAssetFlags} {options : AssetPipelineOptions},\n        ¬AssetRequirementsSatisfied flags options →\n          ¬Nonempty (ArtifactHistory identity flags options ArtifactStage.shipped)",
+              "children": []
+            },
+            {
+              "name": "browser_capability_requires_client_component",
+              "kind": "Thm",
+              "start_line": 294,
+              "end_line": 300,
+              "type_signature": "∀ (capability : RuntimeCapability)\n        (placement : ComponentPlacement),\n        capabilityRequiresClient capability = true →\n          componentPlacementAllowed placement capability = true →\n            placement = ComponentPlacement.client",
+              "children": []
+            },
+            {
+              "name": "all_checked_at_member",
+              "kind": "Thm",
+              "start_line": 302,
+              "end_line": 312,
+              "type_signature": "∀ {Element : Type} (predicate : Element → Bool)\n        {values : List Element} {value : Element},\n        values.all predicate = true → value ∈ values → predicate value = true",
+              "children": []
+            },
+            {
+              "name": "static_export_cannot_require_server_only",
+              "kind": "Thm",
+              "start_line": 315,
+              "end_line": 322,
+              "type_signature": "∀ (placement : ComponentPlacement)\n        (requirements : List RuntimeCapability),\n        componentRequirementsAllowed DeploymentMode.staticExport placement requirements = true →\n          ¬RuntimeCapability.serverOnly ∈ requirements",
+              "children": []
+            },
+            {
+              "name": "accepted_component_places_browser_requirements_on_client",
+              "kind": "Thm",
+              "start_line": 325,
+              "end_line": 334,
+              "type_signature": "∀ (mode : DeploymentMode)\n        (placement : ComponentPlacement) (requirements : List RuntimeCapability) (capability : RuntimeCapability),\n        capability ∈ requirements →\n          capabilityRequiresClient capability = true →\n            componentRequirementsAllowed mode placement requirements = true →\n              placement = ComponentPlacement.client",
+              "children": []
+            },
+            {
+              "name": "client_component_cannot_require_server_only",
+              "kind": "Thm",
+              "start_line": 337,
+              "end_line": 344,
+              "type_signature": "∀ (mode : DeploymentMode)\n        (requirements : List RuntimeCapability),\n        componentRequirementsAllowed mode ComponentPlacement.client requirements = true →\n          ¬RuntimeCapability.serverOnly ∈ requirements",
+              "children": []
+            },
+            {
+              "name": "core_transfer_total_within_budget",
+              "kind": "Thm",
+              "start_line": 347,
+              "end_line": 352,
+              "type_signature": "∀ (transfer : CoreTransfer),\n        transfer.withinBudget → transfer.total ≤ coreTransferBudget",
+              "children": []
+            },
+            {
+              "name": "category_budget_total_is_204800_bytes",
+              "kind": "Thm",
+              "start_line": 355,
+              "end_line": 359,
+              "type_signature": "30 * kibibyte + 120 * kibibyte + 20 * kibibyte +\n              20 * kibibyte +\n            10 * kibibyte =\n          coreTransferBudget ∧\n        coreTransferBudget = 204800",
+              "children": []
+            },
+            {
+              "name": "measured_gate_pass_iff",
+              "kind": "Thm",
+              "start_line": 362,
+              "end_line": 393,
+              "type_signature": "∀ (gate : MeasuredGate),\n        evaluateMeasuredGate gate = VerificationStatus.pass ↔\n          gate.measuredRevision = gate.requiredRevision ∧\n            ∃ value, gate.observedValue = some value ∧ value ≤ gate.upperBound",
+              "children": []
+            },
+            {
+              "name": "asset_checks_iff_requirements",
+              "kind": "Thm",
+              "start_line": 30,
+              "end_line": 30,
+              "type_signature": "(flags : RawAssetFlags) (options : AssetPipelineOptions) : assetChecks flags options = true ↔ AssetRequirementsSatisfied flags options",
+              "children": []
+            },
+            {
+              "name": "validate_raw_asset_accepts_iff",
+              "kind": "Thm",
+              "start_line": 60,
+              "end_line": 60,
+              "type_signature": "(flags : RawAssetFlags) (options : AssetPipelineOptions) : (∃ asset, validateRawAsset flags options = some asset) ↔ AssetRequirementsSatisfied flags options",
+              "children": []
+            },
+            {
+              "name": "validate_raw_asset_rejects_iff",
+              "kind": "Thm",
+              "start_line": 76,
+              "end_line": 76,
+              "type_signature": "(flags : RawAssetFlags) (options : AssetPipelineOptions) : validateRawAsset flags options = none ↔ ¬ AssetRequirementsSatisfied flags options",
+              "children": []
+            },
+            {
+              "name": "validate_raw_asset_preserves_input",
+              "kind": "Thm",
+              "start_line": 90,
+              "end_line": 90,
+              "type_signature": "(flags : RawAssetFlags) (options : AssetPipelineOptions) (asset : ValidatedAsset) (accepted : validateRawAsset flags options = some asset) : asset.sourceFlags = flags ∧ asset.pipelineOptions = options",
+              "children": []
+            },
+            {
+              "name": "validate_raw_asset_sound",
+              "kind": "Thm",
+              "start_line": 101,
+              "end_line": 101,
+              "type_signature": "(flags : RawAssetFlags) (options : AssetPipelineOptions) (asset : ValidatedAsset) (accepted : validateRawAsset flags options = some asset) : AssetRequirementsSatisfied flags options",
+              "children": []
+            },
+            {
+              "name": "validated_asset_satisfies_requirements",
+              "kind": "Thm",
+              "start_line": 108,
+              "end_line": 108,
+              "type_signature": "(asset : ValidatedAsset) : AssetRequirementsSatisfied asset.sourceFlags asset.pipelineOptions",
+              "children": []
+            },
+            {
+              "name": "meshopt_variants_are_exclusive",
+              "kind": "Thm",
+              "start_line": 113,
+              "end_line": 113,
+              "type_signature": "(flags : RawAssetFlags) (options : AssetPipelineOptions) (asset : ValidatedAsset) (accepted : validateRawAsset flags options = some asset) : ¬ (flags.usesExtensionMeshopt = true ∧ flags.usesKhronosMeshopt = true)",
+              "children": []
+            },
+            {
+              "name": "extension_meshopt_requires_decoder",
+              "kind": "Thm",
+              "start_line": 120,
+              "end_line": 120,
+              "type_signature": "(flags : RawAssetFlags) (options : AssetPipelineOptions) (asset : ValidatedAsset) (accepted : validateRawAsset flags options = some asset) (required : flags.usesExtensionMeshopt = true) : options.hasMeshoptDecoder = true",
+              "children": []
+            },
+            {
+              "name": "khronos_meshopt_requires_decoder",
+              "kind": "Thm",
+              "start_line": 128,
+              "end_line": 128,
+              "type_signature": "(flags : RawAssetFlags) (options : AssetPipelineOptions) (asset : ValidatedAsset) (accepted : validateRawAsset flags options = some asset) (required : flags.usesKhronosMeshopt = true) : options.hasMeshoptDecoder = true",
+              "children": []
+            },
+            {
+              "name": "ktx2_requires_loader",
+              "kind": "Thm",
+              "start_line": 136,
+              "end_line": 136,
+              "type_signature": "(flags : RawAssetFlags) (options : AssetPipelineOptions) (asset : ValidatedAsset) (accepted : validateRawAsset flags options = some asset) (required : flags.usesKtx2 = true) : options.hasKtx2Loader = true",
+              "children": []
+            },
+            {
+              "name": "draco_requires_loader",
+              "kind": "Thm",
+              "start_line": 144,
+              "end_line": 144,
+              "type_signature": "(flags : RawAssetFlags) (options : AssetPipelineOptions) (asset : ValidatedAsset) (accepted : validateRawAsset flags options = some asset) (required : (selectAssetLoaders flags).dracoEnabled = true) : flags.usesDraco = true ∧ options.hasDracoLoader = true",
+              "children": []
+            },
+            {
+              "name": "draco_is_enabled_iff_explicit",
+              "kind": "Thm",
+              "start_line": 153,
+              "end_line": 153,
+              "type_signature": "(flags : RawAssetFlags) : (selectAssetLoaders flags).dracoEnabled = true ↔ flags.usesDraco = true",
+              "children": []
+            },
+            {
+              "name": "named_nodes_require_preservation",
+              "kind": "Thm",
+              "start_line": 158,
+              "end_line": 158,
+              "type_signature": "(flags : RawAssetFlags) (options : AssetPipelineOptions) (asset : ValidatedAsset) (accepted : validateRawAsset flags options = some asset) (required : flags.requiresNamedNodes = true) : options.keepsNamedNodes = true",
+              "children": []
+            },
+            {
+              "name": "extras_require_preservation",
+              "kind": "Thm",
+              "start_line": 166,
+              "end_line": 166,
+              "type_signature": "(flags : RawAssetFlags) (options : AssetPipelineOptions) (asset : ValidatedAsset) (accepted : validateRawAsset flags options = some asset) (required : flags.requiresExtras = true) : options.keepsExtras = true",
+              "children": []
+            },
+            {
+              "name": "both_meshopt_flags_reject",
+              "kind": "Thm",
+              "start_line": 174,
+              "end_line": 174,
+              "type_signature": "(flags : RawAssetFlags) (options : AssetPipelineOptions) (extension : flags.usesExtensionMeshopt = true) (khronos : flags.usesKhronosMeshopt = true) : validateRawAsset flags options = none",
+              "children": []
+            },
+            {
+              "name": "missing_meshopt_decoder_rejects",
+              "kind": "Thm",
+              "start_line": 183,
+              "end_line": 183,
+              "type_signature": "(flags : RawAssetFlags) (options : AssetPipelineOptions) (required : flags.usesExtensionMeshopt = true ∨ flags.usesKhronosMeshopt = true) (missing : options.hasMeshoptDecoder = false) : validateRawAsset flags options = none",
+              "children": []
+            },
+            {
+              "name": "shipped_requires_validation",
+              "kind": "Thm",
+              "start_line": 194,
+              "end_line": 194,
+              "type_signature": "(stage : ArtifactStage) (event : ArtifactEvent) : transition stage event = some .shipped ↔ stage = .validated ∧ event = .ship",
+              "children": []
+            },
+            {
+              "name": "shipment_trace_is_exactly_optimize_validate_ship",
+              "kind": "Thm",
+              "start_line": 255,
+              "end_line": 255,
+              "type_signature": "(events : List ArtifactEvent) : runTransitions .source events = some .shipped ↔ events = [.optimize, .validate, .ship]",
+              "children": []
+            },
+            {
+              "name": "shipped_history_requires_asset_requirements",
+              "kind": "Thm",
+              "start_line": 276,
+              "end_line": 276,
+              "type_signature": "{identity : ArtifactIdentity} {flags : RawAssetFlags} {options : AssetPipelineOptions} (history : ArtifactHistory identity flags options .shipped) : AssetRequirementsSatisfied flags options",
+              "children": []
+            },
+            {
+              "name": "invalid_asset_has_no_shipped_history",
+              "kind": "Thm",
+              "start_line": 286,
+              "end_line": 286,
+              "type_signature": "{identity : ArtifactIdentity} {flags : RawAssetFlags} {options : AssetPipelineOptions} (invalid : ¬ AssetRequirementsSatisfied flags options) : ¬ Nonempty (ArtifactHistory identity flags options .shipped)",
+              "children": []
+            },
+            {
+              "name": "browser_capability_requires_client_component",
+              "kind": "Thm",
+              "start_line": 294,
+              "end_line": 294,
+              "type_signature": "(capability : RuntimeCapability) (placement : ComponentPlacement) (required : capabilityRequiresClient capability = true) (allowed : componentPlacementAllowed placement capability = true) : placement = .client",
+              "children": []
+            },
+            {
+              "name": "static_export_cannot_require_server_only",
+              "kind": "Thm",
+              "start_line": 315,
+              "end_line": 315,
+              "type_signature": "(placement : ComponentPlacement) (requirements : List RuntimeCapability) (allowed : componentRequirementsAllowed .staticExport placement requirements = true) : RuntimeCapability.serverOnly ∉ requirements",
+              "children": []
+            },
+            {
+              "name": "accepted_component_places_browser_requirements_on_client",
+              "kind": "Thm",
+              "start_line": 325,
+              "end_line": 325,
+              "type_signature": "(mode : DeploymentMode) (placement : ComponentPlacement) (requirements : List RuntimeCapability) (capability : RuntimeCapability) (member : capability ∈ requirements) (required : capabilityRequiresClient capability = true) (allowed : componentRequirementsAllowed mode placement requirements = true) : placement = .client",
+              "children": []
+            },
+            {
+              "name": "client_component_cannot_require_server_only",
+              "kind": "Thm",
+              "start_line": 337,
+              "end_line": 337,
+              "type_signature": "(mode : DeploymentMode) (requirements : List RuntimeCapability) (allowed : componentRequirementsAllowed mode .client requirements = true) : RuntimeCapability.serverOnly ∉ requirements",
+              "children": []
+            },
+            {
+              "name": "core_transfer_total_within_budget",
+              "kind": "Thm",
+              "start_line": 347,
+              "end_line": 347,
+              "type_signature": "(transfer : CoreTransfer) (bounded : transfer.withinBudget) : transfer.total ≤ coreTransferBudget",
+              "children": []
+            },
+            {
+              "name": "category_budget_total_is_204800_bytes",
+              "kind": "Thm",
+              "start_line": 355,
+              "end_line": 355,
+              "type_signature": ": 30 * kibibyte + 120 * kibibyte + 20 * kibibyte + 20 * kibibyte + 10 * kibibyte = coreTransferBudget ∧ coreTransferBudget = 204800",
+              "children": []
+            },
+            {
+              "name": "measured_gate_pass_iff",
+              "kind": "Thm",
+              "start_line": 362,
+              "end_line": 362,
+              "type_signature": "(gate : MeasuredGate) : evaluateMeasuredGate gate = .pass ↔ gate.measuredRevision = gate.requiredRevision ∧ ∃ value, gate.observedValue = some value ∧ value ≤ gate.upperBound",
+              "children": []
+            }
+          ],
+          "total_declarations": null
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_verify",
+      "target": "Lumenia.asset_checks_iff_requirements",
+      "args": {
+        "file_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.asset_checks_iff_requirements",
+        "scan_source": true
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "axioms": [],
+          "warnings": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_verify",
+      "target": "Lumenia.validate_raw_asset_accepts_iff",
+      "args": {
+        "file_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.validate_raw_asset_accepts_iff",
+        "scan_source": true
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "axioms": [],
+          "warnings": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_verify",
+      "target": "Lumenia.validate_raw_asset_rejects_iff",
+      "args": {
+        "file_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.validate_raw_asset_rejects_iff",
+        "scan_source": true
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "axioms": [],
+          "warnings": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_verify",
+      "target": "Lumenia.validate_raw_asset_preserves_input",
+      "args": {
+        "file_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.validate_raw_asset_preserves_input",
+        "scan_source": true
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "axioms": [],
+          "warnings": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_verify",
+      "target": "Lumenia.validate_raw_asset_sound",
+      "args": {
+        "file_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.validate_raw_asset_sound",
+        "scan_source": true
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "axioms": [],
+          "warnings": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_verify",
+      "target": "Lumenia.validated_asset_satisfies_requirements",
+      "args": {
+        "file_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.validated_asset_satisfies_requirements",
+        "scan_source": true
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "axioms": [],
+          "warnings": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_verify",
+      "target": "Lumenia.meshopt_variants_are_exclusive",
+      "args": {
+        "file_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.meshopt_variants_are_exclusive",
+        "scan_source": true
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "axioms": [],
+          "warnings": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_verify",
+      "target": "Lumenia.extension_meshopt_requires_decoder",
+      "args": {
+        "file_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.extension_meshopt_requires_decoder",
+        "scan_source": true
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "axioms": [],
+          "warnings": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_verify",
+      "target": "Lumenia.khronos_meshopt_requires_decoder",
+      "args": {
+        "file_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.khronos_meshopt_requires_decoder",
+        "scan_source": true
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "axioms": [],
+          "warnings": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_verify",
+      "target": "Lumenia.ktx2_requires_loader",
+      "args": {
+        "file_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.ktx2_requires_loader",
+        "scan_source": true
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "axioms": [],
+          "warnings": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_verify",
+      "target": "Lumenia.draco_requires_loader",
+      "args": {
+        "file_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.draco_requires_loader",
+        "scan_source": true
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "axioms": [],
+          "warnings": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_verify",
+      "target": "Lumenia.draco_is_enabled_iff_explicit",
+      "args": {
+        "file_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.draco_is_enabled_iff_explicit",
+        "scan_source": true
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "axioms": [],
+          "warnings": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_verify",
+      "target": "Lumenia.named_nodes_require_preservation",
+      "args": {
+        "file_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.named_nodes_require_preservation",
+        "scan_source": true
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "axioms": [],
+          "warnings": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_verify",
+      "target": "Lumenia.extras_require_preservation",
+      "args": {
+        "file_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.extras_require_preservation",
+        "scan_source": true
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "axioms": [],
+          "warnings": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_verify",
+      "target": "Lumenia.both_meshopt_flags_reject",
+      "args": {
+        "file_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.both_meshopt_flags_reject",
+        "scan_source": true
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "axioms": [],
+          "warnings": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_verify",
+      "target": "Lumenia.missing_meshopt_decoder_rejects",
+      "args": {
+        "file_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.missing_meshopt_decoder_rejects",
+        "scan_source": true
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "axioms": [],
+          "warnings": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_verify",
+      "target": "Lumenia.shipped_requires_validation",
+      "args": {
+        "file_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.shipped_requires_validation",
+        "scan_source": true
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "axioms": [],
+          "warnings": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_verify",
+      "target": "Lumenia.shipment_trace_is_exactly_optimize_validate_ship",
+      "args": {
+        "file_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.shipment_trace_is_exactly_optimize_validate_ship",
+        "scan_source": true
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "axioms": [],
+          "warnings": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_verify",
+      "target": "Lumenia.shipped_history_requires_asset_requirements",
+      "args": {
+        "file_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.shipped_history_requires_asset_requirements",
+        "scan_source": true
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "axioms": [],
+          "warnings": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_verify",
+      "target": "Lumenia.invalid_asset_has_no_shipped_history",
+      "args": {
+        "file_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.invalid_asset_has_no_shipped_history",
+        "scan_source": true
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "axioms": [],
+          "warnings": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_verify",
+      "target": "Lumenia.browser_capability_requires_client_component",
+      "args": {
+        "file_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.browser_capability_requires_client_component",
+        "scan_source": true
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "axioms": [],
+          "warnings": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_verify",
+      "target": "Lumenia.static_export_cannot_require_server_only",
+      "args": {
+        "file_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.static_export_cannot_require_server_only",
+        "scan_source": true
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "axioms": [],
+          "warnings": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_verify",
+      "target": "Lumenia.accepted_component_places_browser_requirements_on_client",
+      "args": {
+        "file_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.accepted_component_places_browser_requirements_on_client",
+        "scan_source": true
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "axioms": [],
+          "warnings": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_verify",
+      "target": "Lumenia.client_component_cannot_require_server_only",
+      "args": {
+        "file_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.client_component_cannot_require_server_only",
+        "scan_source": true
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "axioms": [],
+          "warnings": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_verify",
+      "target": "Lumenia.core_transfer_total_within_budget",
+      "args": {
+        "file_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.core_transfer_total_within_budget",
+        "scan_source": true
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "axioms": [],
+          "warnings": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_verify",
+      "target": "Lumenia.category_budget_total_is_204800_bytes",
+      "args": {
+        "file_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.category_budget_total_is_204800_bytes",
+        "scan_source": true
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "axioms": [],
+          "warnings": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_verify",
+      "target": "Lumenia.measured_gate_pass_iff",
+      "args": {
+        "file_path": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.measured_gate_pass_iff",
+        "scan_source": true
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "axioms": [],
+          "warnings": []
+        },
+        "isError": false
+      }
+    }
+  ]
+}

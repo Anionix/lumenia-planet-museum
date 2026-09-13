@@ -1,0 +1,113 @@
+{
+  "type": "Historical Evidence",
+  "status": "staleEvidence",
+  "failureReason": "This receipt predates the corrected model and is not accepted for the current revision.",
+  "supersededBy": "../reports/proof-report.json",
+  "previousResult": {
+    "documentIdentifier": "9d43a2ff-ac2e-5b64-9c95-4f607e1b3d12",
+    "documentType": "proof-report",
+    "executionIdentifier": "01a0999c-0816-77a4-8ab7-ac3e9c8e772e",
+    "artifactIdentifiers": [
+      "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Model.lean",
+      "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Proofs.lean",
+      "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/formal/Lumenia/Tests.lean"
+    ],
+    "sourceRevision": "unavailable-chatgpt-project-mirror",
+    "toolVersions": [
+      "Lean 4.28.0",
+      "Lake 5.0.0",
+      "lean-lsp-mcp 0.30.0"
+    ],
+    "checks": [
+      {
+        "checkIdentifier": "7f20b1a1-1a90-5d0f-8c3d-4e5f6a7b8c91",
+        "claimIdentifiers": [
+          "9c6bcb7e-7d47-5b9f-8f1d-1e530c1a0f44",
+          "2a3db2d2-1e59-5b79-9f1c-6e3b1c8f42d1"
+        ],
+        "status": "pass",
+        "observedValue": "6 jobs completed; diagnostics empty",
+        "upperBound": "0 Lean errors",
+        "unit": "build and diagnostics",
+        "tool": "lake build and lean-lsp-mcp",
+        "sourceRevision": "unavailable-chatgpt-project-mirror",
+        "failureReason": "none",
+        "evidence": [
+          "formal/Lumenia/Proofs.lean:13-40",
+          "formal/Lumenia/Tests.lean:20-92"
+        ]
+      },
+      {
+        "checkIdentifier": "8a31c2b2-2ba1-5e10-9d4e-5f6a7b8c9d02",
+        "claimIdentifiers": [
+          "2a7d4b19-6f85-5bc3-9f40-5e9a2b8d3c61",
+          "3b8e5c20-7a96-5bd4-8f51-6fab3c9e4d72"
+        ],
+        "status": "pass",
+        "observedValue": "no unfinished goals; canonical typed pipeline ends at shipped",
+        "upperBound": "0 unfinished goals",
+        "unit": "LSP goal state",
+        "tool": "lean_goal and lean_file_outline",
+        "sourceRevision": "unavailable-chatgpt-project-mirror",
+        "failureReason": "none",
+        "evidence": [
+          "formal/Lumenia/Proofs.lean:142-205",
+          "formal/Lumenia/Model.lean:293-310"
+        ]
+      },
+      {
+        "checkIdentifier": "9b42d3c3-3cb2-5f21-8e5f-6a7b8c9d0e13",
+        "claimIdentifiers": [
+          "6eb18f53-acd9-5e07-9b84-9cde6f2080a5"
+        ],
+        "status": "pass",
+        "observedValue": "204800",
+        "upperBound": "204800",
+        "unit": "bytes",
+        "tool": "Lean 4.28.0 reduction and proof",
+        "sourceRevision": "unavailable-chatgpt-project-mirror",
+        "failureReason": "none",
+        "evidence": [
+          "formal/Lumenia/Proofs.lean:247-274",
+          "formal/Lumenia/Tests.lean:159-184"
+        ]
+      },
+      {
+        "checkIdentifier": "0c53e4d4-4dc3-5a32-9f60-7b8c9d0e1f24",
+        "claimIdentifiers": [
+          "4c9f6d31-8ba7-5ce5-9f62-7abc4d0e5e83",
+          "5da07e42-9cb8-5df6-8a73-8bcd5e1f6f94"
+        ],
+        "status": "pass",
+        "observedValue": "staticExport/serverOnly=false; server/browserApi=false; client/browserApi=true",
+        "upperBound": "no disallowed pair",
+        "unit": "Boolean policy evaluation",
+        "tool": "Lean 4.28.0 reduction and proof",
+        "sourceRevision": "unavailable-chatgpt-project-mirror",
+        "failureReason": "none",
+        "evidence": [
+          "formal/Lumenia/Proofs.lean:202-240",
+          "formal/Lumenia/Tests.lean:132-158"
+        ]
+      },
+      {
+        "checkIdentifier": "1d64f5e5-5ed4-5b43-8a71-8c9d0e1f2a35",
+        "claimIdentifiers": [
+          "9c6bcb7e-7d47-5b9f-8f1d-1e530c1a0f44"
+        ],
+        "status": "blocked",
+        "observedValue": "lean_verify returned no #print axioms output",
+        "upperBound": "inconclusive is not pass",
+        "unit": "LSP theorem verification",
+        "tool": "lean-lsp-mcp 0.30.0 lean_verify",
+        "sourceRevision": "unavailable-chatgpt-project-mirror",
+        "failureReason": "The tool reported an inconclusive axiom check for Lean 4.28.0; lake build and diagnostics remain successful.",
+        "evidence": [
+          "lean-lsp-mcp response for Lumenia.meshopt_encodings_are_exclusive",
+          "lake build: Build completed successfully (6 jobs)."
+        ]
+      }
+    ],
+    "overallStatus": "blocked"
+  }
+}

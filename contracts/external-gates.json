@@ -1,0 +1,288 @@
+{
+  "applicationProfile": "All three current artworks use Plumeria CSS rendering; user-approved replacement of Canvas and WebGL",
+  "gates": [
+    {
+      "name": "Lumenia.CoreInitialTransferGate",
+      "limit": 204800,
+      "unit": "bytes",
+      "measurement": "cold browser resource transfer",
+      "gateIdentifier": "f6a1a2ad-e119-5e11-b2dd-514b073f0f45"
+    },
+    {
+      "name": "Lumenia.HtmlInitialTransferGate",
+      "limit": 30720,
+      "unit": "bytes",
+      "measurement": "cold browser HTML transfer",
+      "gateIdentifier": "9c03cc70-46e8-523d-8ccc-19ba97bfcf02"
+    },
+    {
+      "name": "Lumenia.JavaScriptInitialTransferGate",
+      "limit": 122880,
+      "unit": "bytes",
+      "measurement": "cold browser JavaScript transfer including decoder code",
+      "gateIdentifier": "8eac01e5-6b3f-5fdb-a9ba-76d595d3873e"
+    },
+    {
+      "name": "Lumenia.StyleInitialTransferGate",
+      "limit": 20480,
+      "unit": "bytes",
+      "measurement": "cold browser CSS transfer",
+      "gateIdentifier": "4c95a3e0-4f1f-5551-81c9-fe3582854a17"
+    },
+    {
+      "name": "Lumenia.FontInitialTransferGate",
+      "limit": 20480,
+      "unit": "bytes",
+      "measurement": "cold browser font transfer",
+      "gateIdentifier": "aed2b772-86ae-5cf1-b770-cdc7531df6db"
+    },
+    {
+      "name": "Lumenia.MetadataInitialTransferGate",
+      "limit": 10240,
+      "unit": "bytes",
+      "measurement": "cold browser metadata transfer",
+      "gateIdentifier": "91040add-14a2-5124-9ceb-0a8facf28338"
+    },
+    {
+      "name": "Lumenia.LargestContentfulPaintGate",
+      "limit": 2500,
+      "unit": "milliseconds",
+      "measurement": "browser PerformanceObserver",
+      "gateIdentifier": "6c3b3252-838d-54f8-9d61-4b31b31c1f09"
+    },
+    {
+      "name": "Lumenia.FirstUsableArtworkGate",
+      "limit": 3000,
+      "unit": "milliseconds",
+      "measurement": "application artwork-ready performance mark",
+      "gateIdentifier": "f68d1108-08fa-5731-98ea-243e0464bd61"
+    },
+    {
+      "name": "Lumenia.PlumeriaModuleScopeGate",
+      "limit": 0,
+      "unit": "violations",
+      "measurement": "syntax-tree inspection of css.create call locations",
+      "gateIdentifier": "20e6d64f-f964-5b32-9707-b01635fcba3f"
+    },
+    {
+      "name": "Lumenia.PlumeriaClassStyleCompositionGate",
+      "limit": 0,
+      "unit": "violations",
+      "measurement": "syntax-tree inspection of classStyle and array composition",
+      "gateIdentifier": "af18b455-fd9d-5cb0-bb49-97d09c8b8038"
+    },
+    {
+      "name": "Lumenia.PlumeriaRuntimeRemovalGate",
+      "limit": 0,
+      "unit": "runtime occurrences",
+      "measurement": "production bundle and source-map inspection",
+      "gateIdentifier": "23a2895e-534c-5999-9c75-42981efd82d4"
+    },
+    {
+      "name": "Lumenia.NextStaticExportBoundaryGate",
+      "limit": 0,
+      "unit": "violations",
+      "measurement": "Next.js configuration and source inspection",
+      "gateIdentifier": "71c2026b-0e76-5330-bff3-9af4157230ff"
+    },
+    {
+      "name": "Lumenia.NextComponentBoundaryGate",
+      "limit": 0,
+      "unit": "violations",
+      "measurement": "Next.js module import graph and capability inspection",
+      "gateIdentifier": "25be1b45-323c-5527-b69d-fc6367ed331d"
+    },
+    {
+      "name": "Lumenia.ArtworkGpuMemoryGate",
+      "limit": null,
+      "unit": "bytes",
+      "measurement": "per-artwork graphics memory measurement and configured budget",
+      "gateIdentifier": "27d5a609-6455-5ca2-9ccd-6f0fec2f7457"
+    },
+    {
+      "name": "Lumenia.ChromeEmptyFunctionalityGate",
+      "limit": true,
+      "unit": "boolean",
+      "measurement": "current Chrome version; Empty stage functional test",
+      "gateIdentifier": "18bf036a-e293-517b-9e08-cd64e3011f86"
+    },
+    {
+      "name": "Lumenia.ChromeCssFunctionalityGate",
+      "limit": true,
+      "unit": "boolean",
+      "measurement": "current Chrome version; CSS stage functional test",
+      "gateIdentifier": "fd46b510-3741-59f4-b4c0-c4a538888f31"
+    },
+    {
+      "name": "Lumenia.ChromeSurfaceFunctionalityGate",
+      "limit": true,
+      "unit": "boolean",
+      "measurement": "current Chrome version; CSS surface stage functional test",
+      "gateIdentifier": "7baa5bd8-2fe5-5c3e-8aa9-876f61e3db67"
+    },
+    {
+      "name": "Lumenia.ChromeSolidFunctionalityGate",
+      "limit": true,
+      "unit": "boolean",
+      "measurement": "current Chrome version; CSS solid stage functional test",
+      "gateIdentifier": "a0274963-d398-56cc-9d33-16bce9a2b94f"
+    },
+    {
+      "name": "Lumenia.SafariEmptyFunctionalityGate",
+      "limit": true,
+      "unit": "boolean",
+      "measurement": "current Safari version; Empty stage functional test",
+      "gateIdentifier": "7a0e3aaa-5937-55bf-b39e-ee74c8a4e8f1"
+    },
+    {
+      "name": "Lumenia.SafariCssFunctionalityGate",
+      "limit": true,
+      "unit": "boolean",
+      "measurement": "current Safari version; CSS stage functional test",
+      "gateIdentifier": "63c0abb6-8082-570e-bac5-a9afbcd5dbb5"
+    },
+    {
+      "name": "Lumenia.SafariSurfaceFunctionalityGate",
+      "limit": true,
+      "unit": "boolean",
+      "measurement": "current Safari version; CSS surface stage functional test",
+      "gateIdentifier": "a50c6e35-5af4-570f-8b3b-6ae36ec70c01"
+    },
+    {
+      "name": "Lumenia.SafariSolidFunctionalityGate",
+      "limit": true,
+      "unit": "boolean",
+      "measurement": "current Safari version; CSS solid stage functional test",
+      "gateIdentifier": "330e26be-4344-50a8-8ad1-b0f7dd892718"
+    },
+    {
+      "name": "Lumenia.FirefoxEmptyFunctionalityGate",
+      "limit": true,
+      "unit": "boolean",
+      "measurement": "current Firefox version; Empty stage functional test",
+      "gateIdentifier": "7dfefcce-f16d-5a6b-8df3-94cc9ce042d4"
+    },
+    {
+      "name": "Lumenia.FirefoxCssFunctionalityGate",
+      "limit": true,
+      "unit": "boolean",
+      "measurement": "current Firefox version; CSS stage functional test",
+      "gateIdentifier": "bc61b4da-f725-5429-bc96-5fca7723b810"
+    },
+    {
+      "name": "Lumenia.FirefoxSurfaceFunctionalityGate",
+      "limit": true,
+      "unit": "boolean",
+      "measurement": "current Firefox version; CSS surface stage functional test",
+      "gateIdentifier": "4acc32d2-c34c-5afb-aaca-3d6f4917088e"
+    },
+    {
+      "name": "Lumenia.FirefoxSolidFunctionalityGate",
+      "limit": true,
+      "unit": "boolean",
+      "measurement": "current Firefox version; CSS solid stage functional test",
+      "gateIdentifier": "a1b17dc7-7eb0-569f-b877-599c2d32c1af"
+    },
+    {
+      "name": "Lumenia.EdgeEmptyFunctionalityGate",
+      "limit": true,
+      "unit": "boolean",
+      "measurement": "current Edge version; Empty stage functional test",
+      "gateIdentifier": "00cf27f0-b591-5d35-a953-8e90fa2cebce"
+    },
+    {
+      "name": "Lumenia.EdgeCssFunctionalityGate",
+      "limit": true,
+      "unit": "boolean",
+      "measurement": "current Edge version; CSS stage functional test",
+      "gateIdentifier": "9fa2ada1-9286-5121-9886-44f10fe584f2"
+    },
+    {
+      "name": "Lumenia.EdgeSurfaceFunctionalityGate",
+      "limit": true,
+      "unit": "boolean",
+      "measurement": "current Edge version; CSS surface stage functional test",
+      "gateIdentifier": "9175a814-0727-546a-888b-a9ebd0e03497"
+    },
+    {
+      "name": "Lumenia.EdgeSolidFunctionalityGate",
+      "limit": true,
+      "unit": "boolean",
+      "measurement": "current Edge version; CSS solid stage functional test",
+      "gateIdentifier": "4b4827b3-62d2-5367-b5a7-10e21c2776da"
+    },
+    {
+      "name": "Lumenia.CssLineArtworkDrawingGate",
+      "limit": true,
+      "unit": "boolean",
+      "measurement": "48 CSS border rings; no SVG, canvas or image; autonomous CSS animation with JavaScript disabled; actual stop, speed, reset and reduced-motion tests",
+      "gateIdentifier": "7ee74b3d-059a-5ea6-b26f-4c5e7383f3c6"
+    },
+    {
+      "name": "Lumenia.CssOnlyApplicationGate",
+      "limit": 0,
+      "unit": "violations",
+      "measurement": "no SVG artwork, Canvas, Three.js, decoder modules or binary artwork in the application build; only the existing favicon.svg, byte-identical to its source, is admitted as interface metadata",
+      "gateIdentifier": "2ec9706d-6206-5de2-aaf6-542e7f336b63"
+    },
+    {
+      "name": "Lumenia.CssArtworkAndCharacterIsolationGate",
+      "limit": 0,
+      "unit": "violations",
+      "measurement": "CSS artworks with one explicitly registered, byte-verified and independently reviewed William Morris sprite; no other raster artwork, SVG artwork, Canvas, Three.js or decoders; the source-identical favicon.svg is interface metadata",
+      "gateIdentifier": "5a53901a-f69e-52cb-aa03-a2f3dc97eb39"
+    },
+    {
+      "name": "Lumenia.CssSurfaceArtworkDrawingGate",
+      "limit": true,
+      "unit": "boolean",
+      "measurement": "24 native CSS ribbons; actual controls and movement without JavaScript",
+      "gateIdentifier": "7cbebf58-9bb0-5346-a350-028a31978c07"
+    },
+    {
+      "name": "Lumenia.CssSolidArtworkDrawingGate",
+      "limit": true,
+      "unit": "boolean",
+      "measurement": "288 native CSS panels; actual controls and movement without JavaScript",
+      "gateIdentifier": "d63d9265-a8d6-5c44-94b7-2c6259cd6bf6"
+    }
+  ],
+  "referenceGates": [
+    {
+      "name": "Lumenia.ThreeLoaderCompatibilityGate",
+      "limit": 0,
+      "unit": "missing registrations",
+      "measurement": "asset extension inspection and versioned Three.js loader registration",
+      "gateIdentifier": "e579a58f-e5a3-5358-b254-63e00d0c21e0"
+    },
+    {
+      "name": "Lumenia.GltfpackOptimizationGate",
+      "limit": 0,
+      "unit": "exit code",
+      "measurement": "gltfpack with recorded arguments and input/output digests",
+      "gateIdentifier": "871e62aa-cc84-53c3-8c85-5aea8e9f0d88"
+    },
+    {
+      "name": "Lumenia.GltfValidatorConformanceGate",
+      "limit": 0,
+      "unit": "errors",
+      "measurement": "glTF Validator over optimized asset bytes",
+      "gateIdentifier": "a12dc2ec-1f9f-5923-adb6-eee8f9175a20"
+    },
+    {
+      "name": "Lumenia.ArtworkTransferDeltaGate",
+      "limit": null,
+      "unit": "bytes",
+      "measurement": "per-artwork encoded transfer delta and configured budget",
+      "gateIdentifier": "a28e0030-7cf0-5691-af54-789af54708d8"
+    },
+    {
+      "name": "Lumenia.ArtworkDecodeTimeGate",
+      "limit": null,
+      "unit": "milliseconds",
+      "measurement": "per-artwork decoder measurement and configured budget",
+      "gateIdentifier": "59df5d98-2505-508b-95da-744a73cc4a87"
+    }
+  ],
+  "referenceScope": "Asset optimization, validation, loader and decode checks remain a separate reusable reference workflow. They are not a claim about assets used by the CSS application."
+}

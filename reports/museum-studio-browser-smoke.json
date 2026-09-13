@@ -1,0 +1,52 @@
+{
+  "executionIdentifier": "01a09b39-66cc-7b34-bbdc-7b842b21afb4",
+  "claimIdentifier": "602bac85-7b9d-5ba3-8bde-f6f446e5ac9e",
+  "recordedAt": "2026-09-13T14:43:45.484Z",
+  "sourceRevision": "sha256:e71b7270c68cc3ffb60eb1c6ab9adf5a6c1a901c38d80dbc6365b16f3f4f2481",
+  "buildExecutionIdentifier": "01a09b37-7009-7aa4-9a0e-ff72bc350a42",
+  "status": "pass",
+  "scope": "One bounded local studio smoke check, not full browser or release acceptance",
+  "url": "http://127.0.0.1:4173/atelier/william-morris/",
+  "tool": "Codex in-app browser via computer-use interface",
+  "machineContract": {
+    "state": "observed",
+    "transition": "current build reload -> visible conversation choice -> DOM and console readback"
+  },
+  "observations": [
+    {
+      "name": "StudioChoice",
+      "observedValue": 3,
+      "limit": 3,
+      "unit": "stepIndex",
+      "comparison": "equals",
+      "failureReason": null
+    },
+    {
+      "name": "HorizontalOverflow",
+      "observedValue": 0,
+      "limit": 0,
+      "unit": "violations",
+      "failureReason": null
+    },
+    {
+      "name": "ConsoleWarningsAndErrors",
+      "observedValue": 0,
+      "limit": 0,
+      "unit": "messages",
+      "failureReason": null
+    },
+    {
+      "name": "UnapprovedCharacterMounted",
+      "observedValue": 0,
+      "limit": 0,
+      "unit": "elements",
+      "failureReason": null
+    }
+  ],
+  "visibleResult": "球にしてみよう was selected; the scripted sphere dialogue replaced the greeting.",
+  "limitations": [
+    "Character asset is absent and was not verified in the browser",
+    "Reduced-motion, every gaze direction, all numerical controls, and four-browser performance are outside this smoke check",
+    "The earlier 1280x900 and 390x844 screenshots belong to the earlier source revision; they are not promoted to current-build evidence"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "name": "lumenia-verification-contract",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev web --webpack --hostname 127.0.0.1",
+    "build": "node scripts/build-web.mjs",
+    "preview": "node scripts/serve-web.mjs",
+    "lint": "eslint web/app web/components web/artwork",
+    "typecheck": "tsc --project web/tsconfig.json --noEmit",
+    "build:artwork": "node scripts/build-artwork.mjs",
+    "test": "node --test",
+    "verify:contracts": "node scripts/verify-contract.mjs contracts/examples/verification-request.json contracts/examples/verification-result.json contracts/examples/valid-asset-manifest.json",
+    "verify:formal": "node scripts/run-formal-check.mjs",
+    "verify:gates": "node scripts/run-gates.mjs",
+    "verify:application": "node scripts/run-application-check.mjs",
+    "verify:asset-reference": "node scripts/run-asset-reference-check.mjs",
+    "verify:measurements": "node scripts/collect-measurements.mjs",
+    "evidence:local": "node scripts/publish-local-evidence.mjs",
+    "check:fast": "lake build && npm run test && npm run verify:contracts",
+    "check": "npm run verify:formal"
+  },
+  "dependencies": {
+    "@plumeria/core": "19.1.4",
+    "next": "16.3.5",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "three": "0.186.0",
+    "@plumeria/next-plugin": "19.1.4",
+    "@plumeria/turbopack-loader": "19.1.4",
+    "@plumeria/eslint-plugin": "19.1.4",
+    "@types/node": "26.5.1",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/three": "0.186.0",
+    "gltf-validator": "2.0.0-dev.3.10",
+    "gltfpack": "1.2.0",
+    "eslint": "10.10.0",
+    "typescript-eslint": "8.70.0",
+    "typescript": "6.0.3"
+  }
+}

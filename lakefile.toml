@@ -1,0 +1,12 @@
+name = "lumenia"
+version = "0.1.0"
+defaultTargets = ["Lumenia", "lumenia_boundary"]
+
+[[lean_lib]]
+name = "Lumenia"
+srcDir = "formal"
+
+[[lean_exe]]
+name = "lumenia_boundary"
+root = "Main"
+srcDir = "formal"

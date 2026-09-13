@@ -1,0 +1,200 @@
+{
+  "artifactIdentifier": "1036f4f5-c476-56df-99d4-150b9fadeabb",
+  "claimIdentifiers": [
+    "543e95a7-25d9-53eb-addf-1eca7283be44",
+    "a0e5e544-3a28-588f-a04a-ecef28a75a68",
+    "884dc2e4-94c4-5622-904e-789dd2186b47",
+    "2914c7f0-ea38-5cec-9c53-715cf16e3f2c",
+    "9ed18638-7432-544f-8710-0cde084b9195",
+    "b3467681-81a2-5183-929d-9afc9aaf60f0",
+    "3e92b122-d2fe-5890-8c24-aafcd8fc5e33",
+    "90c7faa1-9721-596d-a8db-5b581572be33",
+    "e76f697b-718a-5cbb-b937-3695710767a3",
+    "35ba9d6b-abfe-5438-bdcf-960f8eb0158f",
+    "935c5368-7869-56ac-9346-a3719e4c4a62",
+    "7ba57ba1-7481-5f8b-bb84-1e94930879d9",
+    "13c791ec-40a2-5749-986c-7816c521b2ff",
+    "12ebcc33-1640-5e81-b5a2-f400102331f1",
+    "947ff2cf-29cd-5a00-bb98-ef9e37ff7408",
+    "04f36807-d7c2-527f-b22c-dacbdd0aded0",
+    "92cfff56-17f5-5995-b0f2-00254f41e0af",
+    "a968cd0f-8c5d-5953-906c-e40769388abd",
+    "f781bfd5-a32e-534e-ac60-9ea5a9e9288a",
+    "b4f27f24-d941-5e95-80fb-e70b2bb3eea9",
+    "bc433078-b2a0-5ce6-9fc1-4eab157d6651",
+    "21c3fceb-8154-5259-a619-ccfab976b7ee",
+    "f248748f-077d-55e1-bda4-cff8afc69b06",
+    "0aa200fe-8e88-529c-a69e-88c174a6df03",
+    "bb538e9e-fbbb-5ca6-8ec2-1e1fb756eeb2",
+    "03b95321-0d34-58a2-9486-a88ac41889a5",
+    "f5b5cea2-0aae-5d44-b5d6-4a1b36e192c5"
+  ],
+  "proofTargets": [
+    "Lumenia.asset_checks_iff_requirements",
+    "Lumenia.validate_raw_asset_accepts_iff",
+    "Lumenia.validate_raw_asset_rejects_iff",
+    "Lumenia.validate_raw_asset_preserves_input",
+    "Lumenia.validate_raw_asset_sound",
+    "Lumenia.validated_asset_satisfies_requirements",
+    "Lumenia.meshopt_variants_are_exclusive",
+    "Lumenia.extension_meshopt_requires_decoder",
+    "Lumenia.khronos_meshopt_requires_decoder",
+    "Lumenia.ktx2_requires_loader",
+    "Lumenia.draco_requires_loader",
+    "Lumenia.draco_is_enabled_iff_explicit",
+    "Lumenia.named_nodes_require_preservation",
+    "Lumenia.extras_require_preservation",
+    "Lumenia.both_meshopt_flags_reject",
+    "Lumenia.missing_meshopt_decoder_rejects",
+    "Lumenia.shipped_requires_validation",
+    "Lumenia.shipment_trace_is_exactly_optimize_validate_ship",
+    "Lumenia.shipped_history_requires_asset_requirements",
+    "Lumenia.invalid_asset_has_no_shipped_history",
+    "Lumenia.browser_capability_requires_client_component",
+    "Lumenia.static_export_cannot_require_server_only",
+    "Lumenia.accepted_component_places_browser_requirements_on_client",
+    "Lumenia.client_component_cannot_require_server_only",
+    "Lumenia.core_transfer_total_within_budget",
+    "Lumenia.category_budget_total_is_204800_bytes",
+    "Lumenia.measured_gate_pass_iff"
+  ],
+  "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+  "measurementProfile": {
+    "targetBrowsers": [
+      "chrome",
+      "safari",
+      "firefox",
+      "edge"
+    ],
+    "coreTransferBudgetKibibytes": 200,
+    "htmlBudgetKibibytes": 30,
+    "javascriptBudgetKibibytes": 120,
+    "styleBudgetKibibytes": 20,
+    "fontBudgetKibibytes": 20,
+    "metadataBudgetKibibytes": 10,
+    "largestContentfulPaintMilliseconds": 2500,
+    "firstUsableArtworkMilliseconds": 3000
+  },
+  "executionIdentifier": "01a09a2f-6a86-7f3e-885e-1b516bd73d53",
+  "createdAt": "2026-09-13T09:53:15.344Z",
+  "status": "pass",
+  "observations": [
+    {
+      "gateIdentifier": "79885f8e-618d-5cd3-9ee7-350d8e279b8b",
+      "status": "pass",
+      "observedValue": 0,
+      "limit": 0,
+      "unit": "exit code",
+      "checkedBy": [
+        "lake build"
+      ],
+      "failureReason": null,
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a2f-6a86-7f3e-885e-1b516bd73d53"
+    },
+    {
+      "gateIdentifier": "46de9356-94a7-5355-a9a6-a6fde3471fcc",
+      "status": "pass",
+      "observedValue": 0,
+      "limit": 0,
+      "unit": "warnings",
+      "checkedBy": [
+        "lake build diagnostics"
+      ],
+      "failureReason": null,
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a2f-6a86-7f3e-885e-1b516bd73d53"
+    },
+    {
+      "gateIdentifier": "f41d531f-0196-5b20-b945-ca46fae9c68c",
+      "status": "pass",
+      "observedValue": 0,
+      "limit": 0,
+      "unit": "exit code",
+      "checkedBy": [
+        "/Users/st/.local/share/mise/installs/node/24.15.0/bin/node --test --test-reporter=tap"
+      ],
+      "failureReason": null,
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a2f-6a86-7f3e-885e-1b516bd73d53"
+    },
+    {
+      "gateIdentifier": "086560f2-20bf-57f3-9a27-90eb0a01a009",
+      "status": "pass",
+      "observedValue": 0,
+      "limit": 0,
+      "unit": "exit code",
+      "checkedBy": [
+        "/Users/st/.local/share/mise/installs/node/24.15.0/bin/node scripts/verify-contract.mjs contracts/examples/verification-request.json contracts/examples/verification-result.json contracts/examples/valid-asset-manifest.json"
+      ],
+      "failureReason": null,
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a2f-6a86-7f3e-885e-1b516bd73d53"
+    },
+    {
+      "gateIdentifier": "def07315-f6e6-5266-818b-d351c346b7bf",
+      "status": "pass",
+      "observedValue": 0,
+      "limit": 0,
+      "unit": "mismatches",
+      "checkedBy": [
+        "UUIDv5 namespace recomputation and Lean declaration inventory"
+      ],
+      "failureReason": null,
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a2f-6a86-7f3e-885e-1b516bd73d53"
+    },
+    {
+      "gateIdentifier": "12e7cf84-79d8-5287-8370-9150ed6afc8b",
+      "status": "pass",
+      "observedValue": 0,
+      "limit": 0,
+      "unit": "files",
+      "checkedBy": [
+        "local Lean source scan; all project Lean files"
+      ],
+      "failureReason": null,
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a2f-6a86-7f3e-885e-1b516bd73d53"
+    },
+    {
+      "gateIdentifier": "6d27294e-b98b-5837-8931-d6907c80c2be",
+      "status": "pass",
+      "observedValue": 0,
+      "limit": 0,
+      "unit": "exit code",
+      "checkedBy": [
+        "lake env lean formal/Lumenia/AxiomAudit.lean"
+      ],
+      "failureReason": null,
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a2f-6a86-7f3e-885e-1b516bd73d53"
+    },
+    {
+      "gateIdentifier": "35302202-9761-5b5d-ac14-01302e53c2bc",
+      "status": "pass",
+      "observedValue": 0,
+      "limit": 0,
+      "unit": "unverified theorems",
+      "checkedBy": [
+        "Lean #print axioms for every registered public theorem"
+      ],
+      "failureReason": null,
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a2f-6a86-7f3e-885e-1b516bd73d53"
+    },
+    {
+      "gateIdentifier": "10f73733-d314-5c04-9ee1-10f74f8c6a6c",
+      "status": "pass",
+      "observedValue": 0,
+      "limit": 0,
+      "unit": "failed or missing checks",
+      "checkedBy": [
+        "lean-lsp-mcp: lean_build, lean_diagnostic_messages, lean_goal, lean_hover_info, lean_verify, lean_file_outline"
+      ],
+      "failureReason": null,
+      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+      "executionIdentifier": "01a09a2f-6a86-7f3e-885e-1b516bd73d53"
+    }
+  ]
+}

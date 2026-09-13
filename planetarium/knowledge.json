@@ -1,0 +1,2708 @@
+{
+  "artifactIdentifier": "e67bec4e-cc81-54b8-8de8-e04f06503867",
+  "executionIdentifier": "01a09a97-f5a0-77ec-b829-e0164f69344c",
+  "recordedAt": "2026-09-13T11:47:25.217Z",
+  "title": "Art Knowledge Planetarium — Material Sphere",
+  "schemaVersion": 1,
+  "states": {
+    "interpretation": "proposed",
+    "sourceReading": "agentReviewed",
+    "historicalTruth": "notMachineProved",
+    "browser": "notConnected"
+  },
+  "research": {
+    "tool": "Exa",
+    "searchWorkstreams": 4,
+    "searchCalls": 15,
+    "requestedSearchResults": 75,
+    "retainedArtistSourcePages": 30,
+    "searchResultCountIsNotEvidenceCount": true
+  },
+  "entities": [
+    {
+      "entityIdentifier": "960e77fa-b01c-5b9d-9798-5eb26dfe642e",
+      "entityType": "referenceScope",
+      "canonicalName": "Strawberry Thief",
+      "referencePeriod": "1883年のデザイン",
+      "personIdentifier": "4f7cc469-4d4a-5409-95f3-0691a8214497"
+    },
+    {
+      "entityIdentifier": "3d0abcea-5fec-5d11-96c5-43acd6b811eb",
+      "entityType": "referenceScope",
+      "canonicalName": "Zodiac",
+      "referencePeriod": "1896年のデザイン",
+      "personIdentifier": "d2ccba89-2c3b-5fe9-b1dc-bd47ef62f6fe"
+    },
+    {
+      "entityIdentifier": "975a60d5-76de-5754-8d40-7076b3db8418",
+      "entityType": "referenceScope",
+      "canonicalName": "後期テキスタイルのデザインスケッチ",
+      "referencePeriod": "晩年のテキスタイル設計を対象",
+      "personIdentifier": "f341a7fe-8b14-5fd8-8b31-2b66d5e9446e"
+    },
+    {
+      "entityIdentifier": "488a68e0-9b13-595e-abb2-61ca0fe91c86",
+      "entityType": "referenceScope",
+      "canonicalName": "Composition with Red, Blue, Black, Yellow, and Gray",
+      "referencePeriod": "1921年",
+      "personIdentifier": "b54052dd-e206-5067-beb8-e19b11154606"
+    },
+    {
+      "entityIdentifier": "ae700c39-3d4a-5d7f-a561-d830af6e00dc",
+      "entityType": "referenceScope",
+      "canonicalName": "Red Blue Chair",
+      "referencePeriod": "MoMAの記録では1918–1923年",
+      "personIdentifier": "b64f31b6-d52c-5b7a-975d-58b96b4166e6"
+    },
+    {
+      "entityIdentifier": "26c7f81a-c989-594d-ba19-afdaff443268",
+      "entityType": "referenceScope",
+      "canonicalName": "Carlton / Bacterio",
+      "referencePeriod": "Carltonは1981年",
+      "personIdentifier": "d9d0b5bf-2276-585c-9eb2-15a79103957f"
+    },
+    {
+      "entityIdentifier": "ebf04286-32f4-52d1-be07-a88ddc7896b9",
+      "entityType": "referenceScope",
+      "canonicalName": "Universal alphabetとバウハウス期の文字構成",
+      "referencePeriod": "1920年代の文字設計を対象",
+      "personIdentifier": "8066869d-a972-5884-a2e3-8df1e3af3f52"
+    },
+    {
+      "entityIdentifier": "cde80f0c-b7c1-58e7-8e0b-78385a5c58fd",
+      "entityType": "referenceScope",
+      "canonicalName": "Beethoven",
+      "referencePeriod": "1955年のポスター",
+      "personIdentifier": "b9dfa052-7db4-5d65-b0d8-ceb5f041fbe9"
+    },
+    {
+      "entityIdentifier": "dece3d3e-34d7-50c2-a06d-1d4400ebb258",
+      "entityType": "referenceScope",
+      "canonicalName": "New York Subway Map",
+      "referencePeriod": "1970–1972年",
+      "personIdentifier": "8f7c1bbe-3cde-5bbd-86e8-40cdf410482a"
+    },
+    {
+      "entityIdentifier": "58c1cc16-5fcf-55d4-a55b-40272e35f627",
+      "entityType": "referenceScope",
+      "canonicalName": "606 Universal Shelving Systemと1976年の講演",
+      "referencePeriod": "1960年に棚を発売、1976年に設計思想を講演",
+      "personIdentifier": "0c7444ac-0261-5cea-ad94-086616f052d6"
+    },
+    {
+      "entityIdentifier": "f653f412-bb32-5237-b618-c6f9f82f4286",
+      "entityType": "referenceScope",
+      "canonicalName": "Wall mounted CD Player",
+      "referencePeriod": "1999年",
+      "personIdentifier": "682eabd5-5258-58d2-a6ad-7ba432f2126f"
+    },
+    {
+      "entityIdentifier": "884c9bc1-8b6d-50b0-ba24-1838af95caaa",
+      "entityType": "referenceScope",
+      "canonicalName": "2017年のArt of the In-Between展における衣服と造形",
+      "referencePeriod": "1980年代以降の選択された作品",
+      "personIdentifier": "ffd3151d-c433-5546-9d95-e3afce1abc66"
+    },
+    {
+      "entityIdentifier": "86141cac-338c-5f13-93aa-c65f1e4bc557",
+      "entityType": "referenceScope",
+      "canonicalName": "Lounge Chair and Ottoman",
+      "referencePeriod": "1956年に発表",
+      "personIdentifier": "10777ce7-f6db-56a6-8c73-86364cadba1b"
+    },
+    {
+      "entityIdentifier": "c0d54e01-7555-5f17-9ed1-85773129570d",
+      "entityType": "referenceScope",
+      "canonicalName": "House of Cardsの菱形模様の試作",
+      "referencePeriod": "1952年",
+      "personIdentifier": "21709063-b8c0-5945-bdfd-b223eac44abc"
+    },
+    {
+      "entityIdentifier": "94b80ea1-96f6-599b-93d8-93f090c52fc9",
+      "entityType": "referenceScope",
+      "canonicalName": "Bauhaus Building, Dessau",
+      "referencePeriod": "1926年に開校",
+      "personIdentifier": "a7b5f284-c3af-5177-9aaf-74e58c313a63"
+    },
+    {
+      "entityIdentifier": "4f7cc469-4d4a-5409-95f3-0691a8214497",
+      "entityType": "person",
+      "canonicalName": "William Morris",
+      "displayName": "ウィリアム・モリス",
+      "field": "テキスタイル・装飾",
+      "readingLink": "https://en.wikipedia.org/wiki/William_Morris",
+      "identityLink": "https://www.wikidata.org/wiki/Q182589",
+      "identityStatus": "labelAndDescriptionMatched",
+      "identityRole": "同定用。作品・影響関係の根拠としては使わない。"
+    },
+    {
+      "entityIdentifier": "d2ccba89-2c3b-5fe9-b1dc-bd47ef62f6fe",
+      "entityType": "person",
+      "canonicalName": "Alphonse Mucha",
+      "displayName": "アルフォンス・ミュシャ",
+      "field": "ポスター・版画",
+      "readingLink": "https://en.wikipedia.org/wiki/Alphonse_Mucha",
+      "identityLink": "https://www.wikidata.org/wiki/Q146691",
+      "identityStatus": "labelAndDescriptionMatched",
+      "identityRole": "同定用。作品・影響関係の根拠としては使わない。"
+    },
+    {
+      "entityIdentifier": "f341a7fe-8b14-5fd8-8b31-2b66d5e9446e",
+      "entityType": "person",
+      "canonicalName": "Charles Rennie Mackintosh",
+      "displayName": "チャールズ・レニー・マッキントッシュ",
+      "field": "建築・家具・テキスタイル",
+      "readingLink": "https://en.wikipedia.org/wiki/Charles_Rennie_Mackintosh",
+      "identityLink": "https://www.wikidata.org/wiki/Q220703",
+      "identityStatus": "labelAndDescriptionMatched",
+      "identityRole": "同定用。作品・影響関係の根拠としては使わない。"
+    },
+    {
+      "entityIdentifier": "b54052dd-e206-5067-beb8-e19b11154606",
+      "entityType": "person",
+      "canonicalName": "Piet Mondrian",
+      "displayName": "ピート・モンドリアン",
+      "field": "絵画・幾何学的抽象",
+      "readingLink": "https://en.wikipedia.org/wiki/Piet_Mondrian",
+      "identityLink": "https://www.wikidata.org/wiki/Q151803",
+      "identityStatus": "labelAndDescriptionMatched",
+      "identityRole": "同定用。作品・影響関係の根拠としては使わない。"
+    },
+    {
+      "entityIdentifier": "b64f31b6-d52c-5b7a-975d-58b96b4166e6",
+      "entityType": "person",
+      "canonicalName": "Gerrit Rietveld",
+      "displayName": "ヘリット・リートフェルト",
+      "field": "家具・建築",
+      "readingLink": "https://en.wikipedia.org/wiki/Gerrit_Rietveld",
+      "identityLink": "https://www.wikidata.org/wiki/Q160435",
+      "identityStatus": "labelAndDescriptionMatched",
+      "identityRole": "同定用。作品・影響関係の根拠としては使わない。"
+    },
+    {
+      "entityIdentifier": "d9d0b5bf-2276-585c-9eb2-15a79103957f",
+      "entityType": "person",
+      "canonicalName": "Ettore Sottsass",
+      "displayName": "エットレ・ソットサス",
+      "field": "家具・表面模様",
+      "readingLink": "https://en.wikipedia.org/wiki/Ettore_Sottsass",
+      "identityLink": "https://www.wikidata.org/wiki/Q78885",
+      "identityStatus": "labelAndDescriptionMatched",
+      "identityRole": "同定用。作品・影響関係の根拠としては使わない。"
+    },
+    {
+      "entityIdentifier": "8066869d-a972-5884-a2e3-8df1e3af3f52",
+      "entityType": "person",
+      "canonicalName": "Herbert Bayer",
+      "displayName": "ヘルベルト・バイヤー",
+      "field": "文字・写真・展示設計",
+      "readingLink": "https://en.wikipedia.org/wiki/Herbert_Bayer",
+      "identityLink": "https://www.wikidata.org/wiki/Q213637",
+      "identityStatus": "labelAndDescriptionMatched",
+      "identityRole": "同定用。作品・影響関係の根拠としては使わない。"
+    },
+    {
+      "entityIdentifier": "b9dfa052-7db4-5d65-b0d8-ceb5f041fbe9",
+      "entityType": "person",
+      "canonicalName": "Josef Müller-Brockmann",
+      "displayName": "ヨゼフ・ミューラー＝ブロックマン",
+      "field": "グラフィック・情報設計",
+      "readingLink": "https://en.wikipedia.org/wiki/Josef_M%C3%BCller-Brockmann",
+      "identityLink": "https://www.wikidata.org/wiki/Q123409",
+      "identityStatus": "labelAndDescriptionMatched",
+      "identityRole": "同定用。作品・影響関係の根拠としては使わない。"
+    },
+    {
+      "entityIdentifier": "8f7c1bbe-3cde-5bbd-86e8-40cdf410482a",
+      "entityType": "person",
+      "canonicalName": "Massimo Vignelli",
+      "displayName": "マッシモ・ヴィネッリ",
+      "field": "情報設計・視覚的な体系",
+      "readingLink": "https://en.wikipedia.org/wiki/Massimo_Vignelli",
+      "identityLink": "https://www.wikidata.org/wiki/Q2317903",
+      "identityStatus": "labelAndDescriptionMatched",
+      "identityRole": "同定用。作品・影響関係の根拠としては使わない。"
+    },
+    {
+      "entityIdentifier": "0c7444ac-0261-5cea-ad94-086616f052d6",
+      "entityType": "person",
+      "canonicalName": "Dieter Rams",
+      "displayName": "ディーター・ラムス",
+      "field": "製品・家具システム",
+      "readingLink": "https://en.wikipedia.org/wiki/Dieter_Rams",
+      "identityLink": "https://www.wikidata.org/wiki/Q76427",
+      "identityStatus": "labelAndDescriptionMatched",
+      "identityRole": "同定用。作品・影響関係の根拠としては使わない。"
+    },
+    {
+      "entityIdentifier": "682eabd5-5258-58d2-a6ad-7ba432f2126f",
+      "entityType": "person",
+      "canonicalName": "Naoto Fukasawa",
+      "displayName": "深澤直人",
+      "field": "製品・自然な操作",
+      "readingLink": "https://en.wikipedia.org/wiki/Naoto_Fukasawa",
+      "identityLink": "https://www.wikidata.org/wiki/Q636724",
+      "identityStatus": "labelAndDescriptionMatched",
+      "identityRole": "同定用。作品・影響関係の根拠としては使わない。"
+    },
+    {
+      "entityIdentifier": "ffd3151d-c433-5546-9d95-e3afce1abc66",
+      "entityType": "person",
+      "canonicalName": "Rei Kawakubo",
+      "displayName": "川久保玲",
+      "field": "衣服・身体・造形",
+      "readingLink": "https://en.wikipedia.org/wiki/Rei_Kawakubo",
+      "identityLink": "https://www.wikidata.org/wiki/Q268033",
+      "identityStatus": "labelAndDescriptionMatched",
+      "identityRole": "同定用。作品・影響関係の根拠としては使わない。"
+    },
+    {
+      "entityIdentifier": "10777ce7-f6db-56a6-8c73-86364cadba1b",
+      "entityType": "person",
+      "canonicalName": "Charles Eames",
+      "displayName": "チャールズ・イームズ",
+      "field": "家具・構成・製造",
+      "readingLink": "https://en.wikipedia.org/wiki/Charles_Eames",
+      "identityLink": "https://www.wikidata.org/w/index.php?search=Charles%20Eames",
+      "identityStatus": "lookupNeeded",
+      "identityRole": "同定用。作品・影響関係の根拠としては使わない。"
+    },
+    {
+      "entityIdentifier": "21709063-b8c0-5945-bdfd-b223eac44abc",
+      "entityType": "person",
+      "canonicalName": "Ray Eames",
+      "displayName": "レイ・イームズ",
+      "field": "色面・コラージュ・共同設計",
+      "readingLink": "https://en.wikipedia.org/wiki/Ray_Eames",
+      "identityLink": "https://www.wikidata.org/w/index.php?search=Ray%20Eames",
+      "identityStatus": "lookupNeeded",
+      "identityRole": "同定用。作品・影響関係の根拠としては使わない。"
+    },
+    {
+      "entityIdentifier": "a7b5f284-c3af-5177-9aaf-74e58c313a63",
+      "entityType": "person",
+      "canonicalName": "Walter Gropius",
+      "displayName": "ヴァルター・グロピウス",
+      "field": "建築・空間構成",
+      "readingLink": "https://en.wikipedia.org/wiki/Walter_Gropius",
+      "identityLink": "https://www.wikidata.org/w/index.php?search=Walter%20Gropius",
+      "identityStatus": "lookupNeeded",
+      "identityRole": "同定用。作品・影響関係の根拠としては使わない。"
+    },
+    {
+      "entityIdentifier": "7db1b675-4aff-5232-b295-51b2a769384f",
+      "entityType": "work",
+      "canonicalName": "New York Subway Map"
+    },
+    {
+      "entityIdentifier": "8d0a0fd0-5859-5e14-80a5-b53e8f4f9557",
+      "entityType": "person",
+      "canonicalName": "Joan Charysyn",
+      "materialSphereStatus": "notInInitialFifteen"
+    },
+    {
+      "entityIdentifier": "9de30b99-d618-5841-817f-becf44fbf191",
+      "entityType": "person",
+      "canonicalName": "Bob Noorda",
+      "materialSphereStatus": "notInInitialFifteen"
+    },
+    {
+      "entityIdentifier": "91636069-2765-5aa8-93da-49f28a94d5cf",
+      "entityType": "organization",
+      "canonicalName": "Unimark International Corporation, New York",
+      "materialSphereStatus": "notInInitialFifteen"
+    },
+    {
+      "entityIdentifier": "4f109dc1-d672-5fc0-a379-dbe94ae58e49",
+      "entityType": "work",
+      "canonicalName": "The Mackintosh House"
+    },
+    {
+      "entityIdentifier": "d018d7dc-2267-53fd-ab09-4bda624dee19",
+      "entityType": "person",
+      "canonicalName": "Margaret Macdonald Mackintosh",
+      "materialSphereStatus": "notInInitialFifteen"
+    },
+    {
+      "entityIdentifier": "23d6929a-aaf5-51b8-b6e7-a67e71913675",
+      "entityType": "work",
+      "canonicalName": "Braun SK 4"
+    },
+    {
+      "entityIdentifier": "d1ab5c97-f940-53f8-bad0-0e6e33fd7f1a",
+      "entityType": "person",
+      "canonicalName": "Hans Gugelot",
+      "materialSphereStatus": "notInInitialFifteen"
+    },
+    {
+      "entityIdentifier": "8a4a70ce-1d28-51b7-aa7e-94db277586c2",
+      "entityType": "work",
+      "canonicalName": "House of Cards"
+    },
+    {
+      "entityIdentifier": "1ecd4ec4-62cc-520e-b182-58d84740140a",
+      "entityType": "work",
+      "canonicalName": "Lounge Chair and Ottoman"
+    },
+    {
+      "entityIdentifier": "457470f1-ef18-51f7-a336-9cc81f9e15fb",
+      "entityType": "work",
+      "canonicalName": "House of Cards diamond mock-up"
+    }
+  ],
+  "sources": [
+    {
+      "sourceIdentifier": "86cb342f-c0d4-5b25-bbb3-c89689f7c270",
+      "title": "Strawberry Thief — Victoria and Albert Museum",
+      "url": "https://collections.vam.ac.uk/item/O78889/",
+      "sourceKind": "institutional",
+      "observedOn": "2026-09-13",
+      "quality": "所蔵機関・財団の記録または解説。機関の解釈を作者本人の断言と取り違えない。",
+      "captureIdentifier": "01a09a97-f59f-7d1e-91bc-564507234c0a",
+      "captureScope": "Exaで取得した本文の抜粋。原ページ全体の保存・画像の再配布ではない。"
+    },
+    {
+      "sourceIdentifier": "0dd5a9c7-6077-510a-aa75-52ca0a452dc5",
+      "title": "William Morris textiles — Victoria and Albert Museum",
+      "url": "https://www.vam.ac.uk/articles/willam-morris-textiles/",
+      "sourceKind": "institutional",
+      "observedOn": "2026-09-13",
+      "quality": "所蔵機関・財団の記録または解説。機関の解釈を作者本人の断言と取り違えない。",
+      "captureIdentifier": "01a09a97-f59f-76cb-bd5b-93e902d0c47a",
+      "captureScope": "Exaで取得した本文の抜粋。原ページ全体の保存・画像の再配布ではない。"
+    },
+    {
+      "sourceIdentifier": "0bc5195f-fed6-5097-b948-bfc639358c16",
+      "title": "Zodiac — Mucha Foundation",
+      "url": "https://www.muchafoundation.org/en/gallery/browse-works/object/242",
+      "sourceKind": "institutional",
+      "observedOn": "2026-09-13",
+      "quality": "所蔵機関・財団の記録または解説。機関の解釈を作者本人の断言と取り違えない。",
+      "captureIdentifier": "01a09a97-f59f-7c70-a84f-e734b43516c4",
+      "captureScope": "Exaで取得した本文の抜粋。原ページ全体の保存・画像の再配布ではない。"
+    },
+    {
+      "sourceIdentifier": "7e6de424-1ec8-53c0-83e1-95f5b9e8ede0",
+      "title": "Alphonse Mucha Timeline — Mucha Foundation",
+      "url": "https://muchafoundation.org/en/timeline",
+      "sourceKind": "institutional",
+      "observedOn": "2026-09-13",
+      "quality": "所蔵機関・財団の記録または解説。機関の解釈を作者本人の断言と取り違えない。",
+      "captureIdentifier": "01a09a97-f59f-7aec-9785-fde0d10983eb",
+      "captureScope": "Exaで取得した本文の抜粋。原ページ全体の保存・画像の再配布ではない。"
+    },
+    {
+      "sourceIdentifier": "d48831e5-058e-5a3b-b3c7-269aa1e21699",
+      "title": "Taking a fresh look at Mackintosh — University of Glasgow",
+      "url": "https://www.gla.ac.uk/news/archiveofnews/2008/september/headline_90636_en.html",
+      "sourceKind": "institutional",
+      "observedOn": "2026-09-13",
+      "quality": "所蔵機関・財団の記録または解説。機関の解釈を作者本人の断言と取り違えない。",
+      "captureIdentifier": "01a09a97-f59f-7792-9ee2-9ec074ab34e3",
+      "captureScope": "Exaで取得した本文の抜粋。原ページ全体の保存・画像の再配布ではない。"
+    },
+    {
+      "sourceIdentifier": "0feb047c-5ff6-5d39-a984-9a1e87bd4ab7",
+      "title": "The Mackintosh House — The Hunterian",
+      "url": "https://www.gla.ac.uk/hunterian/visit/our-venues/mackintosh-house/",
+      "sourceKind": "institutional",
+      "observedOn": "2026-09-13",
+      "quality": "所蔵機関・財団の記録または解説。機関の解釈を作者本人の断言と取り違えない。",
+      "captureIdentifier": "01a09a97-f59f-7c37-9e2b-aa9d6dab11b5",
+      "captureScope": "Exaで取得した本文の抜粋。原ページ全体の保存・画像の再配布ではない。"
+    },
+    {
+      "sourceIdentifier": "0cd2ba89-2413-52e5-8d4c-a139be157574",
+      "title": "Composition with Red, Blue, Black, Yellow, and Gray — MoMA",
+      "url": "https://www.moma.org/collection/works/79002",
+      "sourceKind": "institutional",
+      "observedOn": "2026-09-13",
+      "quality": "所蔵機関・財団の記録または解説。機関の解釈を作者本人の断言と取り違えない。",
+      "captureIdentifier": "01a09a97-f59f-7818-86eb-9f964e4eb575",
+      "captureScope": "Exaで取得した本文の抜粋。原ページ全体の保存・画像の再配布ではない。"
+    },
+    {
+      "sourceIdentifier": "61a02caf-f1a4-5fea-a66a-2061b77e3765",
+      "title": "Broadway Boogie Woogie — MoMA",
+      "url": "https://www.moma.org/collection/works/78682",
+      "sourceKind": "institutional",
+      "observedOn": "2026-09-13",
+      "quality": "所蔵機関・財団の記録または解説。機関の解釈を作者本人の断言と取り違えない。",
+      "captureIdentifier": "01a09a97-f59f-7e3c-b200-6568eb1ac142",
+      "captureScope": "Exaで取得した本文の抜粋。原ページ全体の保存・画像の再配布ではない。"
+    },
+    {
+      "sourceIdentifier": "b57e508a-f0aa-57ef-a447-409a455721fc",
+      "title": "Red Blue Chair — MoMA",
+      "url": "https://www.moma.org/collection/works/4044",
+      "sourceKind": "institutional",
+      "observedOn": "2026-09-13",
+      "quality": "所蔵機関・財団の記録または解説。機関の解釈を作者本人の断言と取り違えない。",
+      "captureIdentifier": "01a09a97-f59f-7e97-bb97-b705298976c6",
+      "captureScope": "Exaで取得した本文の抜粋。原ページ全体の保存・画像の再配布ではない。"
+    },
+    {
+      "sourceIdentifier": "51ae5866-40a3-52f7-93e3-f3c41b0963f1",
+      "title": "Rood-blauwe stoel — Stedelijk Museum",
+      "url": "https://www.stedelijk.nl/en/collection/4720-gerrit-rietveld-rood-blauwe-stoel",
+      "sourceKind": "institutional",
+      "observedOn": "2026-09-13",
+      "quality": "所蔵機関・財団の記録または解説。機関の解釈を作者本人の断言と取り違えない。",
+      "captureIdentifier": "01a09a97-f59f-730b-95a0-a82337c00a19",
+      "captureScope": "Exaで取得した本文の抜粋。原ページ全体の保存・画像の再配布ではない。"
+    },
+    {
+      "sourceIdentifier": "36d41374-9c40-58f4-987c-d7e3cd8b1d0c",
+      "title": "Carlton — Memphis Milano",
+      "url": "https://memphis.it/en/products/carlton/",
+      "sourceKind": "primary",
+      "observedOn": "2026-09-13",
+      "quality": "本人・事務所・製造者の記録。販売表現や本人の主張と、独立した評価を区別する。",
+      "captureIdentifier": "01a09a97-f59f-7c8d-9217-97b07e70ea04",
+      "captureScope": "Exaで取得した本文の抜粋。原ページ全体の保存・画像の再配布ではない。"
+    },
+    {
+      "sourceIdentifier": "3b904738-9747-56bb-9110-a2175ad23571",
+      "title": "Bacterio — Abet Laminati",
+      "url": "https://abetlaminati.com/en/collections/bacterio-ettore-sottsass/",
+      "sourceKind": "primary",
+      "observedOn": "2026-09-13",
+      "quality": "本人・事務所・製造者の記録。販売表現や本人の主張と、独立した評価を区別する。",
+      "captureIdentifier": "01a09a97-f59f-7274-9b73-2985aec9e82e",
+      "captureScope": "Exaで取得した本文の抜粋。原ページ全体の保存・画像の再配布ではない。"
+    },
+    {
+      "sourceIdentifier": "dcbba08f-9fae-5fc6-9a7f-75eff86fbe7a",
+      "title": "Herbert Bayer biography — Cooper Hewitt",
+      "url": "https://collection.cooperhewitt.org/people/18059359/bio",
+      "sourceKind": "institutional",
+      "observedOn": "2026-09-13",
+      "quality": "所蔵機関・財団の記録または解説。機関の解釈を作者本人の断言と取り違えない。",
+      "captureIdentifier": "01a09a97-f59f-7e55-9130-fae2669d8852",
+      "captureScope": "Exaで取得した本文の抜粋。原ページ全体の保存・画像の再配布ではない。"
+    },
+    {
+      "sourceIdentifier": "b3055c4e-856c-5978-9a3e-1bf19be39145",
+      "title": "Herbert Bayer — MoMA",
+      "url": "https://www.moma.org/collection/artists/399",
+      "sourceKind": "institutional",
+      "observedOn": "2026-09-13",
+      "quality": "所蔵機関・財団の記録または解説。機関の解釈を作者本人の断言と取り違えない。",
+      "captureIdentifier": "01a09a97-f59f-7fea-9ebb-80bdf42244f7",
+      "captureScope": "Exaで取得した本文の抜粋。原ページ全体の保存・画像の再配布ではない。"
+    },
+    {
+      "sourceIdentifier": "f6fd7cb6-0111-57fd-ba4e-fd472bde34ed",
+      "title": "Josef Müller-Brockmann — Shizuko Yoshikawa and Josef Müller-Brockmann Foundation",
+      "url": "https://syjmb.foundation/en/josef-mueller-brockmann/",
+      "sourceKind": "institutional",
+      "observedOn": "2026-09-13",
+      "quality": "所蔵機関・財団の記録または解説。機関の解釈を作者本人の断言と取り違えない。",
+      "captureIdentifier": "01a09a97-f59f-7035-a998-0092e0c11b91",
+      "captureScope": "Exaで取得した本文の抜粋。原ページ全体の保存・画像の再配布ではない。"
+    },
+    {
+      "sourceIdentifier": "4b93d51d-6fad-5769-adf9-7f3fd5d7d339",
+      "title": "Poster, Beethoven — Cooper Hewitt",
+      "url": "https://collection.cooperhewitt.org/objects/2318803418/",
+      "sourceKind": "institutional",
+      "observedOn": "2026-09-13",
+      "quality": "所蔵機関・財団の記録または解説。機関の解釈を作者本人の断言と取り違えない。",
+      "captureIdentifier": "01a09a97-f59f-7976-ac95-81610a100250",
+      "captureScope": "Exaで取得した本文の抜粋。原ページ全体の保存・画像の再配布ではない。"
+    },
+    {
+      "sourceIdentifier": "667442d4-744b-5d54-8a48-343427d81871",
+      "title": "New York Subway Map — MoMA",
+      "url": "https://www.moma.org/collection/works/89300",
+      "sourceKind": "institutional",
+      "observedOn": "2026-09-13",
+      "quality": "所蔵機関・財団の記録または解説。機関の解釈を作者本人の断言と取り違えない。",
+      "captureIdentifier": "01a09a97-f59f-746e-b2f2-68bff7f01422",
+      "captureScope": "Exaで取得した本文の抜粋。原ページ全体の保存・画像の再配布ではない。"
+    },
+    {
+      "sourceIdentifier": "1317d040-f91a-5948-a916-b545d3fdb303",
+      "title": "Towards a Better Way: The Vignelli Map at 50 — New York Transit Museum",
+      "url": "https://www.nytransitmuseum.org/vignelli/",
+      "sourceKind": "institutional",
+      "observedOn": "2026-09-13",
+      "quality": "所蔵機関・財団の記録または解説。機関の解釈を作者本人の断言と取り違えない。",
+      "captureIdentifier": "01a09a97-f59f-700f-8c5f-00dabedcfb8a",
+      "captureScope": "Exaで取得した本文の抜粋。原ページ全体の保存・画像の再配布ではない。"
+    },
+    {
+      "sourceIdentifier": "fb4e80f5-43ea-558a-acba-911e86ef8626",
+      "title": "Dieter Rams — Vitsœ",
+      "url": "https://www.vitsoe.com/us/about/dieter-rams",
+      "sourceKind": "primary",
+      "observedOn": "2026-09-13",
+      "quality": "本人・事務所・製造者の記録。販売表現や本人の主張と、独立した評価を区別する。",
+      "captureIdentifier": "01a09a97-f59f-733d-a671-5986e0eb1571",
+      "captureScope": "Exaで取得した本文の抜粋。原ページ全体の保存・画像の再配布ではない。"
+    },
+    {
+      "sourceIdentifier": "cf2255f2-63b9-57e7-a243-fb2b3c771453",
+      "title": "Design by Vitsœ: 1976 speech by Dieter Rams",
+      "url": "https://www.vitsoe.com/us/voice/design-by-vitsoe?",
+      "sourceKind": "primary",
+      "observedOn": "2026-09-13",
+      "quality": "本人・事務所・製造者の記録。販売表現や本人の主張と、独立した評価を区別する。",
+      "captureIdentifier": "01a09a97-f59f-771d-96b2-9cccdec2fc8c",
+      "captureScope": "Exaで取得した本文の抜粋。原ページ全体の保存・画像の再配布ではない。"
+    },
+    {
+      "sourceIdentifier": "227d61e8-ad76-5542-835c-bdc8015aad65",
+      "title": "Wall mounted CD Player — Naoto Fukasawa Design",
+      "url": "https://naotofukasawa.com/projects/540/",
+      "sourceKind": "primary",
+      "observedOn": "2026-09-13",
+      "quality": "本人・事務所・製造者の記録。販売表現や本人の主張と、独立した評価を区別する。",
+      "captureIdentifier": "01a09a97-f59f-7f2f-9c46-7d729149e0af",
+      "captureScope": "Exaで取得した本文の抜粋。原ページ全体の保存・画像の再配布ではない。"
+    },
+    {
+      "sourceIdentifier": "c4cbf3a0-b3fd-5db3-89f6-7add1862a7ea",
+      "title": "CD-player — Victoria and Albert Museum",
+      "url": "https://collections.vam.ac.uk/item/O1227135/",
+      "sourceKind": "institutional",
+      "observedOn": "2026-09-13",
+      "quality": "所蔵機関・財団の記録または解説。機関の解釈を作者本人の断言と取り違えない。",
+      "captureIdentifier": "01a09a97-f59f-77c7-9544-a8b4f8268fe5",
+      "captureScope": "Exaで取得した本文の抜粋。原ページ全体の保存・画像の再配布ではない。"
+    },
+    {
+      "sourceIdentifier": "153b1c48-6930-5ed6-a8c9-8a21982d4d0a",
+      "title": "Rei Kawakubo/Comme des Garçons: Art of the In-Between — The Met",
+      "url": "https://www.metmuseum.org/exhibitions/listings/2017/rei-kawakubo",
+      "sourceKind": "institutional",
+      "observedOn": "2026-09-13",
+      "quality": "所蔵機関・財団の記録または解説。機関の解釈を作者本人の断言と取り違えない。",
+      "captureIdentifier": "01a09a97-f59f-7458-99dc-7a641b7a9da7",
+      "captureScope": "Exaで取得した本文の抜粋。原ページ全体の保存・画像の再配布ではない。"
+    },
+    {
+      "sourceIdentifier": "760027c4-80b8-5422-8e2a-9c1849f60c10",
+      "title": "Exhibition Galleries — The Met",
+      "url": "https://www.metmuseum.org/exhibitions/listings/2017/rei-kawakubo/exhibition-galleries",
+      "sourceKind": "institutional",
+      "observedOn": "2026-09-13",
+      "quality": "所蔵機関・財団の記録または解説。機関の解釈を作者本人の断言と取り違えない。",
+      "captureIdentifier": "01a09a97-f59f-738f-980b-fece22a10694",
+      "captureScope": "Exaで取得した本文の抜粋。原ページ全体の保存・画像の再配布ではない。"
+    },
+    {
+      "sourceIdentifier": "20065102-a071-5360-a709-f51b1d9ff83d",
+      "title": "Charles and Ray biography — Eames Office",
+      "url": "https://www.eamesoffice.com/about/biography/",
+      "sourceKind": "primary",
+      "observedOn": "2026-09-13",
+      "quality": "本人・事務所・製造者の記録。販売表現や本人の主張と、独立した評価を区別する。",
+      "captureIdentifier": "01a09a97-f59f-7532-a096-f354574a5cbd",
+      "captureScope": "Exaで取得した本文の抜粋。原ページ全体の保存・画像の再配布ではない。"
+    },
+    {
+      "sourceIdentifier": "fe8ce6fa-89fd-51a8-8ee8-fb963ab06e1a",
+      "title": "Lounge Chair and Ottoman — Eames Foundation",
+      "url": "https://eamesfoundation.org/work/lounge-chair-and-ottoman/",
+      "sourceKind": "institutional",
+      "observedOn": "2026-09-13",
+      "quality": "所蔵機関・財団の記録または解説。機関の解釈を作者本人の断言と取り違えない。",
+      "captureIdentifier": "01a09a97-f59f-7cb6-9528-5321423f3765",
+      "captureScope": "Exaで取得した本文の抜粋。原ページ全体の保存・画像の再配布ではない。"
+    },
+    {
+      "sourceIdentifier": "1ad6f2f1-5819-5492-b3f2-04a4e0f8ef8e",
+      "title": "House of Cards Mock-up Process — Eames Institute",
+      "url": "https://www.eamesinstitute.org/collection/artifacts/house-of-cards-mock-up-process-diamond-cards/",
+      "sourceKind": "institutional",
+      "observedOn": "2026-09-13",
+      "quality": "所蔵機関・財団の記録または解説。機関の解釈を作者本人の断言と取り違えない。",
+      "captureIdentifier": "01a09a97-f59f-7211-bc45-0a25808ef084",
+      "captureScope": "Exaで取得した本文の抜粋。原ページ全体の保存・画像の再配布ではない。"
+    },
+    {
+      "sourceIdentifier": "7dd2584e-d9c6-51a6-ad1e-be3ad79314b0",
+      "title": "Small House of Cards — Eames Office",
+      "url": "https://www.eamesoffice.com/product/small-house-of-cards/",
+      "sourceKind": "primary",
+      "observedOn": "2026-09-13",
+      "quality": "本人・事務所・製造者の記録。販売表現や本人の主張と、独立した評価を区別する。",
+      "captureIdentifier": "01a09a97-f59f-7aa1-b074-78fc58180621",
+      "captureScope": "Exaで取得した本文の抜粋。原ページ全体の保存・画像の再配布ではない。"
+    },
+    {
+      "sourceIdentifier": "5c5d1525-fe78-53fe-b221-7e805601df18",
+      "title": "Bauhaus Building — Bauhaus Dessau Foundation",
+      "url": "https://bauhaus-dessau.de/en/venues/bauhaus-building/",
+      "sourceKind": "institutional",
+      "observedOn": "2026-09-13",
+      "quality": "所蔵機関・財団の記録または解説。機関の解釈を作者本人の断言と取り違えない。",
+      "captureIdentifier": "01a09a97-f59f-736c-8bb7-4f3717a084b7",
+      "captureScope": "Exaで取得した本文の抜粋。原ページ全体の保存・画像の再配布ではない。"
+    },
+    {
+      "sourceIdentifier": "5c4a479b-3b2d-5134-a7c3-24f69132371f",
+      "title": "Glass | Concrete | Metal — Bauhaus Dessau Foundation",
+      "url": "https://bauhaus-dessau.de/en/exhibitions/glass-concrete-metal/?dt=20260328",
+      "sourceKind": "institutional",
+      "observedOn": "2026-09-13",
+      "quality": "所蔵機関・財団の記録または解説。機関の解釈を作者本人の断言と取り違えない。",
+      "captureIdentifier": "01a09a97-f59f-78b9-916e-ed71cc68fabf",
+      "captureScope": "Exaで取得した本文の抜粋。原ページ全体の保存・画像の再配布ではない。"
+    }
+  ],
+  "claims": [
+    {
+      "claimIdentifier": "01a09a97-f59f-7ba5-8380-19a3c2bd065f",
+      "claimDefinitionIdentifier": "6b51ab95-9c2d-5555-a454-0d1b651dabff",
+      "subjectIdentifier": "4f7cc469-4d4a-5409-95f3-0691a8214497",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "Strawberry Thief",
+        "statement": "鳥・イチゴ・草花を組み合わせた室内用の綿布。モリスがデザインし、Morris & Co.が製造した。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-7dfd-882a-893d9ee13a94"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-7e1a-8dd4-6238f5d16acc",
+      "claimDefinitionIdentifier": "9b0ec772-04d0-56b9-9183-ec82ee0555b2",
+      "subjectIdentifier": "4f7cc469-4d4a-5409-95f3-0691a8214497",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "Strawberry Thief",
+        "statement": "藍の抜染と木版による印刷を用い、赤・黄を青白の地に加えた。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-76cf-b4f8-5216e09ab6d8"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-7d03-8db8-d1ebd40ee1ac",
+      "claimDefinitionIdentifier": "0c4ca8e1-9c98-5972-8382-c8149bb39ee9",
+      "subjectIdentifier": "4f7cc469-4d4a-5409-95f3-0691a8214497",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "Strawberry Thief",
+        "statement": "モリスのテキスタイルは反復模様と身近な草花を中心に発展した。技法や製造には協働があった。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-75a2-b090-d47bed977efd"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-7444-be28-cb85b8a1e59e",
+      "claimDefinitionIdentifier": "7414d840-022a-5046-8fcb-77383a09087e",
+      "subjectIdentifier": "d2ccba89-2c3b-5fe9-b1dc-bd47ef62f6fe",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "Zodiac",
+        "statement": "女性の頭の後ろに、黄道十二宮を含む円盤を配置した。印刷業者Champenoisのカレンダーが出発点だった。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-78a4-914c-9a7bf988f96b"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-7d0a-959f-c4b5cf2b3a66",
+      "claimDefinitionIdentifier": "830c3458-c919-57b1-bb38-5500a24a06b1",
+      "subjectIdentifier": "d2ccba89-2c3b-5fe9-b1dc-bd47ef62f6fe",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "Zodiac",
+        "statement": "文字のない装飾パネルを含む複数の版が存在する。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-7f7b-bcb9-585462f3f31e"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-7dd2-bcd3-4a8fb7bac54f",
+      "claimDefinitionIdentifier": "a4061a62-dbbc-5da4-a134-d9109cf03e2e",
+      "subjectIdentifier": "d2ccba89-2c3b-5fe9-b1dc-bd47ef62f6fe",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "Zodiac",
+        "statement": "Sarah BernhardtのGismondaのポスターを契機にパリで広く知られた。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-7453-8c01-fc74c346cf12"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-78ff-a175-c1640608c6b3",
+      "claimDefinitionIdentifier": "510b21ee-7549-542e-b9f5-c3fdf75c9c0b",
+      "subjectIdentifier": "f341a7fe-8b14-5fd8-8b31-2b66d5e9446e",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "後期テキスタイルのデザインスケッチ",
+        "statement": "所蔵スケッチには有機的な形と幾何学模様が併存し、デザイン・色の変奏が残る。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-7a7d-9736-d038a1eaa0e4"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-7b7b-9d33-698bb1246363",
+      "claimDefinitionIdentifier": "fa6440a2-3bea-5105-955a-3c818c4afe0d",
+      "subjectIdentifier": "f341a7fe-8b14-5fd8-8b31-2b66d5e9446e",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "後期テキスタイルのデザインスケッチ",
+        "statement": "生前に実際に製造されたものは少数とされ、後世のデジタル布地は再解釈として展示された。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-7359-95ad-069453ec2f80"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-71dc-803c-e2d40c60a154",
+      "claimDefinitionIdentifier": "4fc6e939-aaab-54f1-bcd9-eb97a8d81808",
+      "subjectIdentifier": "f341a7fe-8b14-5fd8-8b31-2b66d5e9446e",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "後期テキスタイルのデザインスケッチ",
+        "statement": "自邸の内部はMargaret Macdonald Mackintoshとの共同設計。単独作者として一括しない。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-7aed-b720-b8cbdb62bc79"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-7244-a87b-ca3a3e2af887",
+      "claimDefinitionIdentifier": "ddaf855e-6b20-5b68-8d10-3b3aaf99916f",
+      "subjectIdentifier": "b54052dd-e206-5067-beb8-e19b11154606",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "Composition with Red, Blue, Black, Yellow, and Gray",
+        "statement": "参照作は1921年の油彩画。赤・青・黒・黄・灰色を題名に持つ。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-7c65-b4df-a78a6f2bae92"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-751d-8e1a-53dd574067f5",
+      "claimDefinitionIdentifier": "92c56f9c-aa2c-5276-8ebc-f187e264a1ed",
+      "subjectIdentifier": "b54052dd-e206-5067-beb8-e19b11154606",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "Composition with Red, Blue, Black, Yellow, and Gray",
+        "statement": "水平・垂直と限定した配色は新造形主義の絵画に関する方針として説明される。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-71b3-998a-773d6311432d"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-7725-845a-9d40e3662f83",
+      "claimDefinitionIdentifier": "7b1bc691-9c2e-5fff-b959-8d8542212cdf",
+      "subjectIdentifier": "b54052dd-e206-5067-beb8-e19b11154606",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "Composition with Red, Blue, Black, Yellow, and Gray",
+        "statement": "1942–43年のBroadway Boogie Woogieでは黒を省き、色の線を分節している。黒い格子は全作品共通ではない。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-7f53-8889-3bf1537bdcbf"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-7752-8259-e78e04e985c4",
+      "claimDefinitionIdentifier": "0afc5280-65c0-5f54-ad76-2d88da9026a5",
+      "subjectIdentifier": "b64f31b6-d52c-5b7a-975d-58b96b4166e6",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "Red Blue Chair",
+        "statement": "標準寸法の木材と水平・垂直の面を使い、構造の簡潔さを追求した。原色と黒の配色は1923年頃に加わった。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-7f32-8eed-86d01829344a"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-7a65-9f9a-ad66d7553f72",
+      "claimDefinitionIdentifier": "bad9e25c-9695-541c-bf02-8716a37da1c7",
+      "subjectIdentifier": "b64f31b6-d52c-5b7a-975d-58b96b4166e6",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "Red Blue Chair",
+        "statement": "Stedelijkの所蔵個体は銀灰色も含み、1925年頃の制作と記録される。設計年と個体の製造年は分ける。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-7750-8046-a5553af054f1"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-70e4-a989-afe45d8bbe44",
+      "claimDefinitionIdentifier": "ee6d913f-1913-52ec-b867-765d42a70113",
+      "subjectIdentifier": "b64f31b6-d52c-5b7a-975d-58b96b4166e6",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "Red Blue Chair",
+        "statement": "Stedelijkは実作者としてG.A. van de Groenekanも記載する。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-749f-b66e-f6c3d33e8b13"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-7111-a1ef-3082c14478b2",
+      "claimDefinitionIdentifier": "a93179a0-6565-566a-b490-f22a5f1af972",
+      "subjectIdentifier": "d9d0b5bf-2276-585c-9eb2-15a79103957f",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "Carlton / Bacterio",
+        "statement": "Carltonは木に装飾ラミネートを張った家具で、書棚と空間の仕切りを兼ねる。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-7098-b2e2-f36510ca520d"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-7eb1-abd9-7158bebec0a6",
+      "claimDefinitionIdentifier": "c0b4c55d-fdad-5d85-a7c5-be4c0cf6ead3",
+      "subjectIdentifier": "d9d0b5bf-2276-585c-9eb2-15a79103957f",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "Carlton / Bacterio",
+        "statement": "Bacterioはソットサスによる表面模様で、黒い曲がりくねった線の集まりとしてメーカーが説明する。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-7bc0-b6c2-199518bf0896"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-7a31-b2a2-270f4a75e514",
+      "claimDefinitionIdentifier": "434d8cc1-9c10-5f8e-9204-4084bb884a23",
+      "subjectIdentifier": "8066869d-a972-5884-a2e3-8df1e3af3f52",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "Universal alphabetとバウハウス期の文字構成",
+        "statement": "Universal alphabetは円弧・角・水平垂直線を用いて小文字の形を整理した。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-74c7-8f97-a8bf36a61e5d"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-746c-aa9f-07ec5fd11f32",
+      "claimDefinitionIdentifier": "b584280c-f997-5cbb-87f3-1e58f4919461",
+      "subjectIdentifier": "8066869d-a972-5884-a2e3-8df1e3af3f52",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "Universal alphabetとバウハウス期の文字構成",
+        "statement": "情報の重要度に応じて文字の大きさや太さを変え、棒・長方形などで面を分けた。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-7f44-9925-f959af1b1aeb"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-7c13-93cc-b8d768866540",
+      "claimDefinitionIdentifier": "bee6e48e-4d19-5744-b494-937b005052f7",
+      "subjectIdentifier": "8066869d-a972-5884-a2e3-8df1e3af3f52",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "Universal alphabetとバウハウス期の文字構成",
+        "statement": "写真・フォトモンタージュや展示の設計も行っており、幾何学的な文字だけが仕事ではない。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-7386-b4dc-b6530060562d"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-7e29-8542-5f5c8e9a7bcf",
+      "claimDefinitionIdentifier": "0ca5a292-bd58-5b7f-af03-c69b5ae307ce",
+      "subjectIdentifier": "b9dfa052-7db4-5d65-b0d8-ceb5f041fbe9",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "Beethoven",
+        "statement": "Beethovenのポスターは1955年の石版印刷で、印刷会社の役割も所蔵記録に残る。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-77bc-8e57-5b1a741c8a94"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-7572-be4c-9c7673297ed4",
+      "claimDefinitionIdentifier": "7e6cfcd6-be42-5bab-92d4-5358f363a9cc",
+      "subjectIdentifier": "b9dfa052-7db4-5d65-b0d8-ceb5f041fbe9",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "Beethoven",
+        "statement": "財団は幾何学と文字の構成、内容に役立つ機能的な形、教育・グリッドに関する著作を説明している。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-76da-808a-31ce77c85671"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-778b-a5ae-87d6b8c54a44",
+      "claimDefinitionIdentifier": "a1e5b92b-5223-5624-8d36-450e00d6f1a6",
+      "subjectIdentifier": "b9dfa052-7db4-5d65-b0d8-ceb5f041fbe9",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "Beethoven",
+        "statement": "初期には挿絵的な仕事があり、1950年代初頭に転換した。後期にも明るい配色の作品がある。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-7d52-9d42-bfd5d54253c6"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-7b1c-b8e6-68edf40fe79c",
+      "claimDefinitionIdentifier": "abcd6972-7dae-5997-92fa-fbd146f8fa0e",
+      "subjectIdentifier": "8f7c1bbe-3cde-5bbd-86e8-40cdf410482a",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "New York Subway Map",
+        "statement": "MoMAはMassimo Vignelli、Joan Charysyn、Bob Noorda、Unimarkを制作者として記録し、Charysynを主担当と説明する。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-7a55-9018-c4b09a84321f"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-73b9-856c-9132fc1eaf0c",
+      "claimDefinitionIdentifier": "017b156c-281c-57fe-951f-ea2bdbd03b80",
+      "subjectIdentifier": "8f7c1bbe-3cde-5bbd-86e8-40cdf410482a",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "New York Subway Map",
+        "statement": "路線を45度・90度の直線へ整理し、駅を点で表した。背景の地理的な形は簡略化されている。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-70bf-a055-6309581382c5"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-7576-9843-39bef074f325",
+      "claimDefinitionIdentifier": "440ec54f-f8a2-59fa-bffd-a00cfd72e1ec",
+      "subjectIdentifier": "8f7c1bbe-3cde-5bbd-86e8-40cdf410482a",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "New York Subway Map",
+        "statement": "交通博物館もUnimarkの共同作業と、情報を伝えるための地図の整理を説明する。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-76a1-bef9-e02b05acc206"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-7fc5-ad0b-e3ec6f86eb65",
+      "claimDefinitionIdentifier": "51876fcf-75bd-5543-bff5-93f437807ac4",
+      "subjectIdentifier": "0c7444ac-0261-5cea-ad94-086616f052d6",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "606 Universal Shelving Systemと1976年の講演",
+        "statement": "606は壁に取り付ける収納システムとして1960年に発売された。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-77cb-9cd7-ddf0e2e77ebc"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-77e7-abd8-7409ffa02aaf",
+      "claimDefinitionIdentifier": "e7785092-3914-5714-ab68-c7ac746f2ad7",
+      "subjectIdentifier": "0c7444ac-0261-5cea-ad94-086616f052d6",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "606 Universal Shelving Systemと1976年の講演",
+        "statement": "1976年の本人の講演は、形・色・素材・構造をまとめて考え、用途と周囲の生活に役立つ設計を求めている。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-7c79-9c0a-224de7e4aec8"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-7915-b6f8-a61500b11155",
+      "claimDefinitionIdentifier": "7362bddb-f40a-5184-a3d8-70c4b9770e9a",
+      "subjectIdentifier": "0c7444ac-0261-5cea-ad94-086616f052d6",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "606 Universal Shelving Systemと1976年の講演",
+        "statement": "Braun SK 4はHans Gugelotとの共同設計として掲載されている。Braun製品を一律にラムス単独作と扱わない。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-775d-9273-63e0cfb15d44"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-774a-a1df-689b6d72c13d",
+      "claimDefinitionIdentifier": "89c2e783-21f9-5ff5-bf9c-0be365441896",
+      "subjectIdentifier": "682eabd5-5258-58d2-a6ad-7ba432f2126f",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "Wall mounted CD Player",
+        "statement": "本人の事務所が壁掛けCDプレーヤーを仕事として掲載している。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-7a58-806a-ca31343f1f7a"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-7f3f-80b3-04e1d10759b2",
+      "claimDefinitionIdentifier": "91228925-fea9-58f7-a844-a68f2d75cdf1",
+      "subjectIdentifier": "682eabd5-5258-58d2-a6ad-7ba432f2126f",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "Wall mounted CD Player",
+        "statement": "V&AはMUJI向けの1999年の製品を記録する。換気扇と回るディスクの類似に着想した。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-725d-aafd-560f92d78a8a"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-7b54-8e23-b8b578df47e6",
+      "claimDefinitionIdentifier": "50d5c0e2-cca7-52db-92cc-e4577e247b45",
+      "subjectIdentifier": "682eabd5-5258-58d2-a6ad-7ba432f2126f",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "Wall mounted CD Player",
+        "statement": "紐を引く既知の動作で再生を始める。Without Thoughtは無意識的な行動と機能の関係として説明されている。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-7ca4-ba27-2ef049c02803"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-7096-b795-1787d9528bd4",
+      "claimDefinitionIdentifier": "4dd98129-cf82-5e29-8098-0578a646c659",
+      "subjectIdentifier": "ffd3151d-c433-5546-9d95-e3afce1abc66",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "2017年のArt of the In-Between展における衣服と造形",
+        "statement": "展覧会は衣服と非衣服、存在と不在などの境界を横断する表現を主題にした。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-7571-9992-0a9046005874"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-7d9a-8966-f6609625778b",
+      "claimDefinitionIdentifier": "801225b9-9064-5a0f-a2a0-e7f8595a73c8",
+      "subjectIdentifier": "ffd3151d-c433-5546-9d95-e3afce1abc66",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "2017年のArt of the In-Between展における衣服と造形",
+        "statement": "解説にはねじれた紙のような構成、重なり、不均衡、未完成などの具体例がある。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-7375-8784-99197133b420"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-7324-ae1f-b2ae4d7f70f0",
+      "claimDefinitionIdentifier": "2afef82e-7d5c-54f9-be49-8e080e212578",
+      "subjectIdentifier": "ffd3151d-c433-5546-9d95-e3afce1abc66",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "2017年のArt of the In-Between展における衣服と造形",
+        "statement": "初期1980年代の黒を中心とする配色は一つの時期の特徴であり、展示には色のある別の仕事も含まれる。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-7f8f-aa68-6c40ec1e3b80"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-7254-9c42-b31060f0f7b4",
+      "claimDefinitionIdentifier": "bd808dd5-a3b7-57e0-99d9-25b7cbf1afca",
+      "subjectIdentifier": "10777ce7-f6db-56a6-8c73-86364cadba1b",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "Lounge Chair and Ottoman",
+        "statement": "CharlesとRayは成形合板を共同で実験し、家具だけでなく複数の領域で設計した。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-7f41-ae33-e14cd365661a"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-7c5e-bcf5-e5e0637c9ae9",
+      "claimDefinitionIdentifier": "a85ac178-9b4d-5efd-aa01-aeeaa97ed05c",
+      "subjectIdentifier": "10777ce7-f6db-56a6-8c73-86364cadba1b",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "Lounge Chair and Ottoman",
+        "statement": "椅子は成形合板、革のクッション、アルミの支持部を組み合わせ、部品の共通化も行っている。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-76eb-8f65-d5c641770cef"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-70b1-a5d4-5fd3a0bd4f59",
+      "claimDefinitionIdentifier": "bdb6ce71-ad6f-5cf5-9afc-edc7a205fd6a",
+      "subjectIdentifier": "21709063-b8c0-5945-bdfd-b223eac44abc",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "House of Cardsの菱形模様の試作",
+        "statement": "所蔵される菱形模様の試作はRayが紙のコラージュで作ったものと記録される。灰色の階調と多色の対比が検討された。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-73dc-9175-9d341482e32f"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-74f0-bf46-de71c4fbe0fe",
+      "claimDefinitionIdentifier": "6a7aa01d-711a-5526-a704-57844a0bc05e",
+      "subjectIdentifier": "21709063-b8c0-5945-bdfd-b223eac44abc",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "House of Cardsの菱形模様の試作",
+        "statement": "House of Cards製品自体はCharlesとRayの共同設計。カードの切り込みで組み立てられる。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-7ae1-a103-57d5d9fc6183"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-74fb-9c67-b1164882dd01",
+      "claimDefinitionIdentifier": "0ccc1b11-794e-5a21-8fa0-95b9f977db72",
+      "subjectIdentifier": "a7b5f284-c3af-5177-9aaf-74e58c313a63",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "Bauhaus Building, Dessau",
+        "statement": "用途に応じて大きさ・高さの異なる棟を組み合わせ、全体を理解するには周囲を歩く必要がある配置を取った。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-7029-a21a-b7583cac34ff"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-79e8-b823-61376c30dc1c",
+      "claimDefinitionIdentifier": "9671d81b-2d89-5640-a7f5-fd0f18dc7977",
+      "subjectIdentifier": "a7b5f284-c3af-5177-9aaf-74e58c313a63",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "Bauhaus Building, Dessau",
+        "statement": "ガラスの外壁と構造の組合せが特徴。Gropiusの私設事務所が設計し、Carl Fieger、Ernst Neufert、Otto Meyer-Ottens、Bernhard Sturtzkopfが主要な役割を担った。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-7040-8107-3a2d8faf0da4"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-73c4-b604-8f21df139452",
+      "claimDefinitionIdentifier": "17315308-30b3-5133-931d-4504e9e7c1c0",
+      "subjectIdentifier": "a7b5f284-c3af-5177-9aaf-74e58c313a63",
+      "predicate": "documentedFeature",
+      "object": {
+        "referenceScope": "Bauhaus Building, Dessau",
+        "statement": "財団は素材を外見だけでなく、産業・製造・調達の歴史と結びつけて展示している。"
+      },
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-73ba-b008-62d403304cc1"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading",
+      "limitation": "資料の読解に基づく主張。Leanが歴史的真実を証明したという意味ではない。"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-7b72-94e7-773930ccb1a0",
+      "claimDefinitionIdentifier": "9f7155b7-34c1-5648-90e2-d9c52da0a0e3",
+      "subjectIdentifier": "7db1b675-4aff-5232-b295-51b2a769384f",
+      "predicate": "designedBy",
+      "objectIdentifier": "8f7c1bbe-3cde-5bbd-86e8-40cdf410482a",
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-7326-8cd2-0f37a5144d60"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-73ef-8350-c833b08db6c0",
+      "claimDefinitionIdentifier": "97c50d14-1459-5dd4-98c6-372715aadf75",
+      "subjectIdentifier": "7db1b675-4aff-5232-b295-51b2a769384f",
+      "predicate": "designedBy",
+      "objectIdentifier": "8d0a0fd0-5859-5e14-80a5-b53e8f4f9557",
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-7f8e-94a1-c4a7563d9e65"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-7f00-95c8-2e417c60da75",
+      "claimDefinitionIdentifier": "aa0f814a-d14f-5a35-9485-ebd4067bcff1",
+      "subjectIdentifier": "7db1b675-4aff-5232-b295-51b2a769384f",
+      "predicate": "designedBy",
+      "objectIdentifier": "9de30b99-d618-5841-817f-becf44fbf191",
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-7467-85b0-566c3e9dec90"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-7397-a89a-6c9d369e21b0",
+      "claimDefinitionIdentifier": "13436f37-b8fe-53de-8cc1-1464bb44f8e8",
+      "subjectIdentifier": "7db1b675-4aff-5232-b295-51b2a769384f",
+      "predicate": "designedBy",
+      "objectIdentifier": "91636069-2765-5aa8-93da-49f28a94d5cf",
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-7a69-9e9e-2cc5b18ae1fc"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-7cac-b158-b9d5de4c4f1b",
+      "claimDefinitionIdentifier": "86f4e9a8-96fc-517f-bfa6-6dc8ec651315",
+      "subjectIdentifier": "4f109dc1-d672-5fc0-a379-dbe94ae58e49",
+      "predicate": "designedBy",
+      "objectIdentifier": "f341a7fe-8b14-5fd8-8b31-2b66d5e9446e",
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-7bd5-82d8-3ca849bebbfd"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading"
+    },
+    {
+      "claimIdentifier": "01a09a97-f59f-7725-8d74-d49c392cd316",
+      "claimDefinitionIdentifier": "03afcbfc-58b1-5106-a8a9-46eeaf631d3b",
+      "subjectIdentifier": "4f109dc1-d672-5fc0-a379-dbe94ae58e49",
+      "predicate": "designedBy",
+      "objectIdentifier": "d018d7dc-2267-53fd-ab09-4bda624dee19",
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f59f-7e16-91bd-61f2197a62ea"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading"
+    },
+    {
+      "claimIdentifier": "01a09a97-f5a0-73da-8876-3e9efa1a21a1",
+      "claimDefinitionIdentifier": "1b54109b-046a-5159-a97b-8fb732678a18",
+      "subjectIdentifier": "23d6929a-aaf5-51b8-b6e7-a67e71913675",
+      "predicate": "designedBy",
+      "objectIdentifier": "0c7444ac-0261-5cea-ad94-086616f052d6",
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f5a0-72b0-98e6-4a3fe72786b6"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading"
+    },
+    {
+      "claimIdentifier": "01a09a97-f5a0-759d-8c04-527096b84529",
+      "claimDefinitionIdentifier": "a28101bb-576a-58ee-8072-07a294eea20d",
+      "subjectIdentifier": "23d6929a-aaf5-51b8-b6e7-a67e71913675",
+      "predicate": "designedBy",
+      "objectIdentifier": "d1ab5c97-f940-53f8-bad0-0e6e33fd7f1a",
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f5a0-7992-bbc1-ca9b4f291aac"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading"
+    },
+    {
+      "claimIdentifier": "01a09a97-f5a0-7b0f-ba3e-a3e96dcce3c4",
+      "claimDefinitionIdentifier": "dce78604-aa3d-5c65-b520-0ca6d32c00f9",
+      "subjectIdentifier": "8a4a70ce-1d28-51b7-aa7e-94db277586c2",
+      "predicate": "designedBy",
+      "objectIdentifier": "10777ce7-f6db-56a6-8c73-86364cadba1b",
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f5a0-717d-a442-b89a22d3f079"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading"
+    },
+    {
+      "claimIdentifier": "01a09a97-f5a0-7a1e-9fb3-a1fd33c29d19",
+      "claimDefinitionIdentifier": "ea9e92f1-52df-5c10-b745-2000b6b40efd",
+      "subjectIdentifier": "8a4a70ce-1d28-51b7-aa7e-94db277586c2",
+      "predicate": "designedBy",
+      "objectIdentifier": "21709063-b8c0-5945-bdfd-b223eac44abc",
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f5a0-7a4b-8f60-9d6ab44a4097"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading"
+    },
+    {
+      "claimIdentifier": "01a09a97-f5a0-7b2b-ab22-56da08cda80f",
+      "claimDefinitionIdentifier": "f28e309c-c88c-5edf-82ae-40f58b6c1d7a",
+      "subjectIdentifier": "1ecd4ec4-62cc-520e-b182-58d84740140a",
+      "predicate": "designedBy",
+      "objectIdentifier": "10777ce7-f6db-56a6-8c73-86364cadba1b",
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f5a0-7d18-be79-b7d65bb8b5b4"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading"
+    },
+    {
+      "claimIdentifier": "01a09a97-f5a0-7514-9307-411a4d4913b2",
+      "claimDefinitionIdentifier": "e1a112a6-5b22-5a44-9e16-178c315173c4",
+      "subjectIdentifier": "1ecd4ec4-62cc-520e-b182-58d84740140a",
+      "predicate": "designedBy",
+      "objectIdentifier": "21709063-b8c0-5945-bdfd-b223eac44abc",
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f5a0-79c9-a6e5-af7f8ecd5819"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading"
+    },
+    {
+      "claimIdentifier": "01a09a97-f5a0-762c-8ad2-d6b72eb5201b",
+      "claimDefinitionIdentifier": "6b45943c-1ffb-5540-b0c2-d013854ee81f",
+      "subjectIdentifier": "457470f1-ef18-51f7-a336-9cc81f9e15fb",
+      "predicate": "designedBy",
+      "objectIdentifier": "21709063-b8c0-5945-bdfd-b223eac44abc",
+      "status": "asserted",
+      "evidenceIdentifiers": [
+        "01a09a97-f5a0-7e7b-976a-d0e9759e5645"
+      ],
+      "recordedAt": "2026-09-13T11:47:25.217Z",
+      "certainty": "sourceBackedAgentReading"
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceIdentifier": "01a09a97-f59f-7dfd-882a-893d9ee13a94",
+      "claimIdentifier": "01a09a97-f59f-7ba5-8380-19a3c2bd065f",
+      "sourceIdentifier": "86cb342f-c0d4-5b25-bbb3-c89689f7c270",
+      "captureIdentifier": "01a09a97-f59f-7d1e-91bc-564507234c0a",
+      "polarity": "supports",
+      "locator": "Strawberry Thief — Victoria and Albert Museum",
+      "paraphrase": "鳥・イチゴ・草花を組み合わせた室内用の綿布。モリスがデザインし、Morris & Co.が製造した。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-76cf-b4f8-5216e09ab6d8",
+      "claimIdentifier": "01a09a97-f59f-7e1a-8dd4-6238f5d16acc",
+      "sourceIdentifier": "86cb342f-c0d4-5b25-bbb3-c89689f7c270",
+      "captureIdentifier": "01a09a97-f59f-7d1e-91bc-564507234c0a",
+      "polarity": "supports",
+      "locator": "Strawberry Thief — Victoria and Albert Museum",
+      "paraphrase": "藍の抜染と木版による印刷を用い、赤・黄を青白の地に加えた。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-75a2-b090-d47bed977efd",
+      "claimIdentifier": "01a09a97-f59f-7d03-8db8-d1ebd40ee1ac",
+      "sourceIdentifier": "0dd5a9c7-6077-510a-aa75-52ca0a452dc5",
+      "captureIdentifier": "01a09a97-f59f-76cb-bd5b-93e902d0c47a",
+      "polarity": "supports",
+      "locator": "William Morris textiles — Victoria and Albert Museum",
+      "paraphrase": "モリスのテキスタイルは反復模様と身近な草花を中心に発展した。技法や製造には協働があった。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-78a4-914c-9a7bf988f96b",
+      "claimIdentifier": "01a09a97-f59f-7444-be28-cb85b8a1e59e",
+      "sourceIdentifier": "0bc5195f-fed6-5097-b948-bfc639358c16",
+      "captureIdentifier": "01a09a97-f59f-7c70-a84f-e734b43516c4",
+      "polarity": "supports",
+      "locator": "Zodiac — Mucha Foundation",
+      "paraphrase": "女性の頭の後ろに、黄道十二宮を含む円盤を配置した。印刷業者Champenoisのカレンダーが出発点だった。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-7f7b-bcb9-585462f3f31e",
+      "claimIdentifier": "01a09a97-f59f-7d0a-959f-c4b5cf2b3a66",
+      "sourceIdentifier": "0bc5195f-fed6-5097-b948-bfc639358c16",
+      "captureIdentifier": "01a09a97-f59f-7c70-a84f-e734b43516c4",
+      "polarity": "supports",
+      "locator": "Zodiac — Mucha Foundation",
+      "paraphrase": "文字のない装飾パネルを含む複数の版が存在する。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-7453-8c01-fc74c346cf12",
+      "claimIdentifier": "01a09a97-f59f-7dd2-bcd3-4a8fb7bac54f",
+      "sourceIdentifier": "7e6de424-1ec8-53c0-83e1-95f5b9e8ede0",
+      "captureIdentifier": "01a09a97-f59f-7aec-9785-fde0d10983eb",
+      "polarity": "supports",
+      "locator": "Alphonse Mucha Timeline — Mucha Foundation",
+      "paraphrase": "Sarah BernhardtのGismondaのポスターを契機にパリで広く知られた。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-7a7d-9736-d038a1eaa0e4",
+      "claimIdentifier": "01a09a97-f59f-78ff-a175-c1640608c6b3",
+      "sourceIdentifier": "d48831e5-058e-5a3b-b3c7-269aa1e21699",
+      "captureIdentifier": "01a09a97-f59f-7792-9ee2-9ec074ab34e3",
+      "polarity": "supports",
+      "locator": "Taking a fresh look at Mackintosh — University of Glasgow",
+      "paraphrase": "所蔵スケッチには有機的な形と幾何学模様が併存し、デザイン・色の変奏が残る。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-7359-95ad-069453ec2f80",
+      "claimIdentifier": "01a09a97-f59f-7b7b-9d33-698bb1246363",
+      "sourceIdentifier": "d48831e5-058e-5a3b-b3c7-269aa1e21699",
+      "captureIdentifier": "01a09a97-f59f-7792-9ee2-9ec074ab34e3",
+      "polarity": "supports",
+      "locator": "Taking a fresh look at Mackintosh — University of Glasgow",
+      "paraphrase": "生前に実際に製造されたものは少数とされ、後世のデジタル布地は再解釈として展示された。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-7aed-b720-b8cbdb62bc79",
+      "claimIdentifier": "01a09a97-f59f-71dc-803c-e2d40c60a154",
+      "sourceIdentifier": "0feb047c-5ff6-5d39-a984-9a1e87bd4ab7",
+      "captureIdentifier": "01a09a97-f59f-7c37-9e2b-aa9d6dab11b5",
+      "polarity": "supports",
+      "locator": "The Mackintosh House — The Hunterian",
+      "paraphrase": "自邸の内部はMargaret Macdonald Mackintoshとの共同設計。単独作者として一括しない。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-7c65-b4df-a78a6f2bae92",
+      "claimIdentifier": "01a09a97-f59f-7244-a87b-ca3a3e2af887",
+      "sourceIdentifier": "0cd2ba89-2413-52e5-8d4c-a139be157574",
+      "captureIdentifier": "01a09a97-f59f-7818-86eb-9f964e4eb575",
+      "polarity": "supports",
+      "locator": "Composition with Red, Blue, Black, Yellow, and Gray — MoMA",
+      "paraphrase": "参照作は1921年の油彩画。赤・青・黒・黄・灰色を題名に持つ。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-71b3-998a-773d6311432d",
+      "claimIdentifier": "01a09a97-f59f-751d-8e1a-53dd574067f5",
+      "sourceIdentifier": "61a02caf-f1a4-5fea-a66a-2061b77e3765",
+      "captureIdentifier": "01a09a97-f59f-7e3c-b200-6568eb1ac142",
+      "polarity": "supports",
+      "locator": "Broadway Boogie Woogie — MoMA",
+      "paraphrase": "水平・垂直と限定した配色は新造形主義の絵画に関する方針として説明される。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-7f53-8889-3bf1537bdcbf",
+      "claimIdentifier": "01a09a97-f59f-7725-845a-9d40e3662f83",
+      "sourceIdentifier": "61a02caf-f1a4-5fea-a66a-2061b77e3765",
+      "captureIdentifier": "01a09a97-f59f-7e3c-b200-6568eb1ac142",
+      "polarity": "supports",
+      "locator": "Broadway Boogie Woogie — MoMA",
+      "paraphrase": "1942–43年のBroadway Boogie Woogieでは黒を省き、色の線を分節している。黒い格子は全作品共通ではない。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-7f32-8eed-86d01829344a",
+      "claimIdentifier": "01a09a97-f59f-7752-8259-e78e04e985c4",
+      "sourceIdentifier": "b57e508a-f0aa-57ef-a447-409a455721fc",
+      "captureIdentifier": "01a09a97-f59f-7e97-bb97-b705298976c6",
+      "polarity": "supports",
+      "locator": "Red Blue Chair — MoMA",
+      "paraphrase": "標準寸法の木材と水平・垂直の面を使い、構造の簡潔さを追求した。原色と黒の配色は1923年頃に加わった。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-7750-8046-a5553af054f1",
+      "claimIdentifier": "01a09a97-f59f-7a65-9f9a-ad66d7553f72",
+      "sourceIdentifier": "51ae5866-40a3-52f7-93e3-f3c41b0963f1",
+      "captureIdentifier": "01a09a97-f59f-730b-95a0-a82337c00a19",
+      "polarity": "supports",
+      "locator": "Rood-blauwe stoel — Stedelijk Museum",
+      "paraphrase": "Stedelijkの所蔵個体は銀灰色も含み、1925年頃の制作と記録される。設計年と個体の製造年は分ける。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-749f-b66e-f6c3d33e8b13",
+      "claimIdentifier": "01a09a97-f59f-70e4-a989-afe45d8bbe44",
+      "sourceIdentifier": "51ae5866-40a3-52f7-93e3-f3c41b0963f1",
+      "captureIdentifier": "01a09a97-f59f-730b-95a0-a82337c00a19",
+      "polarity": "supports",
+      "locator": "Rood-blauwe stoel — Stedelijk Museum",
+      "paraphrase": "Stedelijkは実作者としてG.A. van de Groenekanも記載する。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-7098-b2e2-f36510ca520d",
+      "claimIdentifier": "01a09a97-f59f-7111-a1ef-3082c14478b2",
+      "sourceIdentifier": "36d41374-9c40-58f4-987c-d7e3cd8b1d0c",
+      "captureIdentifier": "01a09a97-f59f-7c8d-9217-97b07e70ea04",
+      "polarity": "supports",
+      "locator": "Carlton — Memphis Milano",
+      "paraphrase": "Carltonは木に装飾ラミネートを張った家具で、書棚と空間の仕切りを兼ねる。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-7bc0-b6c2-199518bf0896",
+      "claimIdentifier": "01a09a97-f59f-7eb1-abd9-7158bebec0a6",
+      "sourceIdentifier": "3b904738-9747-56bb-9110-a2175ad23571",
+      "captureIdentifier": "01a09a97-f59f-7274-9b73-2985aec9e82e",
+      "polarity": "supports",
+      "locator": "Bacterio — Abet Laminati",
+      "paraphrase": "Bacterioはソットサスによる表面模様で、黒い曲がりくねった線の集まりとしてメーカーが説明する。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-74c7-8f97-a8bf36a61e5d",
+      "claimIdentifier": "01a09a97-f59f-7a31-b2a2-270f4a75e514",
+      "sourceIdentifier": "dcbba08f-9fae-5fc6-9a7f-75eff86fbe7a",
+      "captureIdentifier": "01a09a97-f59f-7e55-9130-fae2669d8852",
+      "polarity": "supports",
+      "locator": "Herbert Bayer biography — Cooper Hewitt",
+      "paraphrase": "Universal alphabetは円弧・角・水平垂直線を用いて小文字の形を整理した。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-7f44-9925-f959af1b1aeb",
+      "claimIdentifier": "01a09a97-f59f-746c-aa9f-07ec5fd11f32",
+      "sourceIdentifier": "dcbba08f-9fae-5fc6-9a7f-75eff86fbe7a",
+      "captureIdentifier": "01a09a97-f59f-7e55-9130-fae2669d8852",
+      "polarity": "supports",
+      "locator": "Herbert Bayer biography — Cooper Hewitt",
+      "paraphrase": "情報の重要度に応じて文字の大きさや太さを変え、棒・長方形などで面を分けた。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-7386-b4dc-b6530060562d",
+      "claimIdentifier": "01a09a97-f59f-7c13-93cc-b8d768866540",
+      "sourceIdentifier": "b3055c4e-856c-5978-9a3e-1bf19be39145",
+      "captureIdentifier": "01a09a97-f59f-7fea-9ebb-80bdf42244f7",
+      "polarity": "supports",
+      "locator": "Herbert Bayer — MoMA",
+      "paraphrase": "写真・フォトモンタージュや展示の設計も行っており、幾何学的な文字だけが仕事ではない。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-77bc-8e57-5b1a741c8a94",
+      "claimIdentifier": "01a09a97-f59f-7e29-8542-5f5c8e9a7bcf",
+      "sourceIdentifier": "4b93d51d-6fad-5769-adf9-7f3fd5d7d339",
+      "captureIdentifier": "01a09a97-f59f-7976-ac95-81610a100250",
+      "polarity": "supports",
+      "locator": "Poster, Beethoven — Cooper Hewitt",
+      "paraphrase": "Beethovenのポスターは1955年の石版印刷で、印刷会社の役割も所蔵記録に残る。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-76da-808a-31ce77c85671",
+      "claimIdentifier": "01a09a97-f59f-7572-be4c-9c7673297ed4",
+      "sourceIdentifier": "f6fd7cb6-0111-57fd-ba4e-fd472bde34ed",
+      "captureIdentifier": "01a09a97-f59f-7035-a998-0092e0c11b91",
+      "polarity": "supports",
+      "locator": "Josef Müller-Brockmann — Shizuko Yoshikawa and Josef Müller-Brockmann Foundation",
+      "paraphrase": "財団は幾何学と文字の構成、内容に役立つ機能的な形、教育・グリッドに関する著作を説明している。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-7d52-9d42-bfd5d54253c6",
+      "claimIdentifier": "01a09a97-f59f-778b-a5ae-87d6b8c54a44",
+      "sourceIdentifier": "f6fd7cb6-0111-57fd-ba4e-fd472bde34ed",
+      "captureIdentifier": "01a09a97-f59f-7035-a998-0092e0c11b91",
+      "polarity": "supports",
+      "locator": "Josef Müller-Brockmann — Shizuko Yoshikawa and Josef Müller-Brockmann Foundation",
+      "paraphrase": "初期には挿絵的な仕事があり、1950年代初頭に転換した。後期にも明るい配色の作品がある。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-7a55-9018-c4b09a84321f",
+      "claimIdentifier": "01a09a97-f59f-7b1c-b8e6-68edf40fe79c",
+      "sourceIdentifier": "667442d4-744b-5d54-8a48-343427d81871",
+      "captureIdentifier": "01a09a97-f59f-746e-b2f2-68bff7f01422",
+      "polarity": "supports",
+      "locator": "New York Subway Map — MoMA",
+      "paraphrase": "MoMAはMassimo Vignelli、Joan Charysyn、Bob Noorda、Unimarkを制作者として記録し、Charysynを主担当と説明する。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-70bf-a055-6309581382c5",
+      "claimIdentifier": "01a09a97-f59f-73b9-856c-9132fc1eaf0c",
+      "sourceIdentifier": "667442d4-744b-5d54-8a48-343427d81871",
+      "captureIdentifier": "01a09a97-f59f-746e-b2f2-68bff7f01422",
+      "polarity": "supports",
+      "locator": "New York Subway Map — MoMA",
+      "paraphrase": "路線を45度・90度の直線へ整理し、駅を点で表した。背景の地理的な形は簡略化されている。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-76a1-bef9-e02b05acc206",
+      "claimIdentifier": "01a09a97-f59f-7576-9843-39bef074f325",
+      "sourceIdentifier": "1317d040-f91a-5948-a916-b545d3fdb303",
+      "captureIdentifier": "01a09a97-f59f-700f-8c5f-00dabedcfb8a",
+      "polarity": "supports",
+      "locator": "Towards a Better Way: The Vignelli Map at 50 — New York Transit Museum",
+      "paraphrase": "交通博物館もUnimarkの共同作業と、情報を伝えるための地図の整理を説明する。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-77cb-9cd7-ddf0e2e77ebc",
+      "claimIdentifier": "01a09a97-f59f-7fc5-ad0b-e3ec6f86eb65",
+      "sourceIdentifier": "fb4e80f5-43ea-558a-acba-911e86ef8626",
+      "captureIdentifier": "01a09a97-f59f-733d-a671-5986e0eb1571",
+      "polarity": "supports",
+      "locator": "Dieter Rams — Vitsœ",
+      "paraphrase": "606は壁に取り付ける収納システムとして1960年に発売された。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-7c79-9c0a-224de7e4aec8",
+      "claimIdentifier": "01a09a97-f59f-77e7-abd8-7409ffa02aaf",
+      "sourceIdentifier": "cf2255f2-63b9-57e7-a243-fb2b3c771453",
+      "captureIdentifier": "01a09a97-f59f-771d-96b2-9cccdec2fc8c",
+      "polarity": "supports",
+      "locator": "Design by Vitsœ: 1976 speech by Dieter Rams",
+      "paraphrase": "1976年の本人の講演は、形・色・素材・構造をまとめて考え、用途と周囲の生活に役立つ設計を求めている。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-775d-9273-63e0cfb15d44",
+      "claimIdentifier": "01a09a97-f59f-7915-b6f8-a61500b11155",
+      "sourceIdentifier": "fb4e80f5-43ea-558a-acba-911e86ef8626",
+      "captureIdentifier": "01a09a97-f59f-733d-a671-5986e0eb1571",
+      "polarity": "supports",
+      "locator": "Dieter Rams — Vitsœ",
+      "paraphrase": "Braun SK 4はHans Gugelotとの共同設計として掲載されている。Braun製品を一律にラムス単独作と扱わない。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-7a58-806a-ca31343f1f7a",
+      "claimIdentifier": "01a09a97-f59f-774a-a1df-689b6d72c13d",
+      "sourceIdentifier": "227d61e8-ad76-5542-835c-bdc8015aad65",
+      "captureIdentifier": "01a09a97-f59f-7f2f-9c46-7d729149e0af",
+      "polarity": "supports",
+      "locator": "Wall mounted CD Player — Naoto Fukasawa Design",
+      "paraphrase": "本人の事務所が壁掛けCDプレーヤーを仕事として掲載している。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-725d-aafd-560f92d78a8a",
+      "claimIdentifier": "01a09a97-f59f-7f3f-80b3-04e1d10759b2",
+      "sourceIdentifier": "c4cbf3a0-b3fd-5db3-89f6-7add1862a7ea",
+      "captureIdentifier": "01a09a97-f59f-77c7-9544-a8b4f8268fe5",
+      "polarity": "supports",
+      "locator": "CD-player — Victoria and Albert Museum",
+      "paraphrase": "V&AはMUJI向けの1999年の製品を記録する。換気扇と回るディスクの類似に着想した。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-7ca4-ba27-2ef049c02803",
+      "claimIdentifier": "01a09a97-f59f-7b54-8e23-b8b578df47e6",
+      "sourceIdentifier": "c4cbf3a0-b3fd-5db3-89f6-7add1862a7ea",
+      "captureIdentifier": "01a09a97-f59f-77c7-9544-a8b4f8268fe5",
+      "polarity": "supports",
+      "locator": "CD-player — Victoria and Albert Museum",
+      "paraphrase": "紐を引く既知の動作で再生を始める。Without Thoughtは無意識的な行動と機能の関係として説明されている。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-7571-9992-0a9046005874",
+      "claimIdentifier": "01a09a97-f59f-7096-b795-1787d9528bd4",
+      "sourceIdentifier": "153b1c48-6930-5ed6-a8c9-8a21982d4d0a",
+      "captureIdentifier": "01a09a97-f59f-7458-99dc-7a641b7a9da7",
+      "polarity": "supports",
+      "locator": "Rei Kawakubo/Comme des Garçons: Art of the In-Between — The Met",
+      "paraphrase": "展覧会は衣服と非衣服、存在と不在などの境界を横断する表現を主題にした。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-7375-8784-99197133b420",
+      "claimIdentifier": "01a09a97-f59f-7d9a-8966-f6609625778b",
+      "sourceIdentifier": "760027c4-80b8-5422-8e2a-9c1849f60c10",
+      "captureIdentifier": "01a09a97-f59f-738f-980b-fece22a10694",
+      "polarity": "supports",
+      "locator": "Exhibition Galleries — The Met",
+      "paraphrase": "解説にはねじれた紙のような構成、重なり、不均衡、未完成などの具体例がある。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-7f8f-aa68-6c40ec1e3b80",
+      "claimIdentifier": "01a09a97-f59f-7324-ae1f-b2ae4d7f70f0",
+      "sourceIdentifier": "760027c4-80b8-5422-8e2a-9c1849f60c10",
+      "captureIdentifier": "01a09a97-f59f-738f-980b-fece22a10694",
+      "polarity": "supports",
+      "locator": "Exhibition Galleries — The Met",
+      "paraphrase": "初期1980年代の黒を中心とする配色は一つの時期の特徴であり、展示には色のある別の仕事も含まれる。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-7f41-ae33-e14cd365661a",
+      "claimIdentifier": "01a09a97-f59f-7254-9c42-b31060f0f7b4",
+      "sourceIdentifier": "20065102-a071-5360-a709-f51b1d9ff83d",
+      "captureIdentifier": "01a09a97-f59f-7532-a096-f354574a5cbd",
+      "polarity": "supports",
+      "locator": "Charles and Ray biography — Eames Office",
+      "paraphrase": "CharlesとRayは成形合板を共同で実験し、家具だけでなく複数の領域で設計した。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-76eb-8f65-d5c641770cef",
+      "claimIdentifier": "01a09a97-f59f-7c5e-bcf5-e5e0637c9ae9",
+      "sourceIdentifier": "fe8ce6fa-89fd-51a8-8ee8-fb963ab06e1a",
+      "captureIdentifier": "01a09a97-f59f-7cb6-9528-5321423f3765",
+      "polarity": "supports",
+      "locator": "Lounge Chair and Ottoman — Eames Foundation",
+      "paraphrase": "椅子は成形合板、革のクッション、アルミの支持部を組み合わせ、部品の共通化も行っている。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-73dc-9175-9d341482e32f",
+      "claimIdentifier": "01a09a97-f59f-70b1-a5d4-5fd3a0bd4f59",
+      "sourceIdentifier": "1ad6f2f1-5819-5492-b3f2-04a4e0f8ef8e",
+      "captureIdentifier": "01a09a97-f59f-7211-bc45-0a25808ef084",
+      "polarity": "supports",
+      "locator": "House of Cards Mock-up Process — Eames Institute",
+      "paraphrase": "所蔵される菱形模様の試作はRayが紙のコラージュで作ったものと記録される。灰色の階調と多色の対比が検討された。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-7ae1-a103-57d5d9fc6183",
+      "claimIdentifier": "01a09a97-f59f-74f0-bf46-de71c4fbe0fe",
+      "sourceIdentifier": "7dd2584e-d9c6-51a6-ad1e-be3ad79314b0",
+      "captureIdentifier": "01a09a97-f59f-7aa1-b074-78fc58180621",
+      "polarity": "supports",
+      "locator": "Small House of Cards — Eames Office",
+      "paraphrase": "House of Cards製品自体はCharlesとRayの共同設計。カードの切り込みで組み立てられる。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-7029-a21a-b7583cac34ff",
+      "claimIdentifier": "01a09a97-f59f-74fb-9c67-b1164882dd01",
+      "sourceIdentifier": "5c5d1525-fe78-53fe-b221-7e805601df18",
+      "captureIdentifier": "01a09a97-f59f-736c-8bb7-4f3717a084b7",
+      "polarity": "supports",
+      "locator": "Bauhaus Building — Bauhaus Dessau Foundation",
+      "paraphrase": "用途に応じて大きさ・高さの異なる棟を組み合わせ、全体を理解するには周囲を歩く必要がある配置を取った。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-7040-8107-3a2d8faf0da4",
+      "claimIdentifier": "01a09a97-f59f-79e8-b823-61376c30dc1c",
+      "sourceIdentifier": "5c5d1525-fe78-53fe-b221-7e805601df18",
+      "captureIdentifier": "01a09a97-f59f-736c-8bb7-4f3717a084b7",
+      "polarity": "supports",
+      "locator": "Bauhaus Building — Bauhaus Dessau Foundation",
+      "paraphrase": "ガラスの外壁と構造の組合せが特徴。Gropiusの私設事務所が設計し、Carl Fieger、Ernst Neufert、Otto Meyer-Ottens、Bernhard Sturtzkopfが主要な役割を担った。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-73ba-b008-62d403304cc1",
+      "claimIdentifier": "01a09a97-f59f-73c4-b604-8f21df139452",
+      "sourceIdentifier": "5c4a479b-3b2d-5134-a7c3-24f69132371f",
+      "captureIdentifier": "01a09a97-f59f-78b9-916e-ed71cc68fabf",
+      "polarity": "supports",
+      "locator": "Glass | Concrete | Metal — Bauhaus Dessau Foundation",
+      "paraphrase": "財団は素材を外見だけでなく、産業・製造・調達の歴史と結びつけて展示している。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-7326-8cd2-0f37a5144d60",
+      "claimIdentifier": "01a09a97-f59f-7b72-94e7-773930ccb1a0",
+      "sourceIdentifier": "667442d4-744b-5d54-8a48-343427d81871",
+      "captureIdentifier": "01a09a97-f59f-746e-b2f2-68bff7f01422",
+      "polarity": "supports",
+      "locator": "New York Subway Map — MoMA",
+      "paraphrase": "New York Subway Mapの設計者としてMassimo Vignelliを記録。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-7f8e-94a1-c4a7563d9e65",
+      "claimIdentifier": "01a09a97-f59f-73ef-8350-c833b08db6c0",
+      "sourceIdentifier": "667442d4-744b-5d54-8a48-343427d81871",
+      "captureIdentifier": "01a09a97-f59f-746e-b2f2-68bff7f01422",
+      "polarity": "supports",
+      "locator": "New York Subway Map — MoMA",
+      "paraphrase": "New York Subway Mapの設計者としてJoan Charysynを記録。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-7467-85b0-566c3e9dec90",
+      "claimIdentifier": "01a09a97-f59f-7f00-95c8-2e417c60da75",
+      "sourceIdentifier": "667442d4-744b-5d54-8a48-343427d81871",
+      "captureIdentifier": "01a09a97-f59f-746e-b2f2-68bff7f01422",
+      "polarity": "supports",
+      "locator": "New York Subway Map — MoMA",
+      "paraphrase": "New York Subway Mapの設計者としてBob Noordaを記録。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-7a69-9e9e-2cc5b18ae1fc",
+      "claimIdentifier": "01a09a97-f59f-7397-a89a-6c9d369e21b0",
+      "sourceIdentifier": "667442d4-744b-5d54-8a48-343427d81871",
+      "captureIdentifier": "01a09a97-f59f-746e-b2f2-68bff7f01422",
+      "polarity": "supports",
+      "locator": "New York Subway Map — MoMA",
+      "paraphrase": "New York Subway Mapの設計者としてUnimark International Corporation, New Yorkを記録。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-7bd5-82d8-3ca849bebbfd",
+      "claimIdentifier": "01a09a97-f59f-7cac-b158-b9d5de4c4f1b",
+      "sourceIdentifier": "0feb047c-5ff6-5d39-a984-9a1e87bd4ab7",
+      "captureIdentifier": "01a09a97-f59f-7c37-9e2b-aa9d6dab11b5",
+      "polarity": "supports",
+      "locator": "The Mackintosh House — The Hunterian",
+      "paraphrase": "The Mackintosh Houseの設計者としてCharles Rennie Mackintoshを記録。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f59f-7e16-91bd-61f2197a62ea",
+      "claimIdentifier": "01a09a97-f59f-7725-8d74-d49c392cd316",
+      "sourceIdentifier": "0feb047c-5ff6-5d39-a984-9a1e87bd4ab7",
+      "captureIdentifier": "01a09a97-f59f-7c37-9e2b-aa9d6dab11b5",
+      "polarity": "supports",
+      "locator": "The Mackintosh House — The Hunterian",
+      "paraphrase": "The Mackintosh Houseの設計者としてMargaret Macdonald Mackintoshを記録。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f5a0-72b0-98e6-4a3fe72786b6",
+      "claimIdentifier": "01a09a97-f5a0-73da-8876-3e9efa1a21a1",
+      "sourceIdentifier": "fb4e80f5-43ea-558a-acba-911e86ef8626",
+      "captureIdentifier": "01a09a97-f59f-733d-a671-5986e0eb1571",
+      "polarity": "supports",
+      "locator": "Dieter Rams — Vitsœ",
+      "paraphrase": "Braun SK 4の設計者としてDieter Ramsを記録。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f5a0-7992-bbc1-ca9b4f291aac",
+      "claimIdentifier": "01a09a97-f5a0-759d-8c04-527096b84529",
+      "sourceIdentifier": "fb4e80f5-43ea-558a-acba-911e86ef8626",
+      "captureIdentifier": "01a09a97-f59f-733d-a671-5986e0eb1571",
+      "polarity": "supports",
+      "locator": "Dieter Rams — Vitsœ",
+      "paraphrase": "Braun SK 4の設計者としてHans Gugelotを記録。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f5a0-717d-a442-b89a22d3f079",
+      "claimIdentifier": "01a09a97-f5a0-7b0f-ba3e-a3e96dcce3c4",
+      "sourceIdentifier": "7dd2584e-d9c6-51a6-ad1e-be3ad79314b0",
+      "captureIdentifier": "01a09a97-f59f-7aa1-b074-78fc58180621",
+      "polarity": "supports",
+      "locator": "Small House of Cards — Eames Office",
+      "paraphrase": "House of Cardsの設計者としてCharles Eamesを記録。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f5a0-7a4b-8f60-9d6ab44a4097",
+      "claimIdentifier": "01a09a97-f5a0-7a1e-9fb3-a1fd33c29d19",
+      "sourceIdentifier": "7dd2584e-d9c6-51a6-ad1e-be3ad79314b0",
+      "captureIdentifier": "01a09a97-f59f-7aa1-b074-78fc58180621",
+      "polarity": "supports",
+      "locator": "Small House of Cards — Eames Office",
+      "paraphrase": "House of Cardsの設計者としてRay Eamesを記録。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f5a0-7d18-be79-b7d65bb8b5b4",
+      "claimIdentifier": "01a09a97-f5a0-7b2b-ab22-56da08cda80f",
+      "sourceIdentifier": "fe8ce6fa-89fd-51a8-8ee8-fb963ab06e1a",
+      "captureIdentifier": "01a09a97-f59f-7cb6-9528-5321423f3765",
+      "polarity": "supports",
+      "locator": "Lounge Chair and Ottoman — Eames Foundation",
+      "paraphrase": "Lounge Chair and Ottomanの設計者としてCharles Eamesを記録。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f5a0-79c9-a6e5-af7f8ecd5819",
+      "claimIdentifier": "01a09a97-f5a0-7514-9307-411a4d4913b2",
+      "sourceIdentifier": "fe8ce6fa-89fd-51a8-8ee8-fb963ab06e1a",
+      "captureIdentifier": "01a09a97-f59f-7cb6-9528-5321423f3765",
+      "polarity": "supports",
+      "locator": "Lounge Chair and Ottoman — Eames Foundation",
+      "paraphrase": "Lounge Chair and Ottomanの設計者としてRay Eamesを記録。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    },
+    {
+      "evidenceIdentifier": "01a09a97-f5a0-7e7b-976a-d0e9759e5645",
+      "claimIdentifier": "01a09a97-f5a0-762c-8ad2-d6b72eb5201b",
+      "sourceIdentifier": "1ad6f2f1-5819-5492-b3f2-04a4e0f8ef8e",
+      "captureIdentifier": "01a09a97-f59f-7211-bc45-0a25808ef084",
+      "polarity": "supports",
+      "locator": "House of Cards Mock-up Process — Eames Institute",
+      "paraphrase": "House of Cards diamond mock-upの設計者としてRay Eamesを記録。",
+      "recordedAt": "2026-09-13T11:47:25.217Z"
+    }
+  ],
+  "profiles": [
+    {
+      "profileIdentifier": "e9146e26-704e-5073-8222-11be30c6d0be",
+      "personIdentifier": "4f7cc469-4d4a-5409-95f3-0691a8214497",
+      "referenceScopeIdentifier": "960e77fa-b01c-5b9d-9798-5eb26dfe642e",
+      "title": "ウィリアム・モリス — Material Sphere",
+      "canonicalName": "William Morris",
+      "componentName": "WilliamMorris",
+      "referenceWork": "Strawberry Thief",
+      "referencePeriod": "1883年のデザイン",
+      "sourceClaimIdentifiers": [
+        "01a09a97-f59f-7ba5-8380-19a3c2bd065f",
+        "01a09a97-f59f-7e1a-8dd4-6238f5d16acc",
+        "01a09a97-f59f-7d03-8db8-d1ebd40ee1ac"
+      ],
+      "family": "botanicalRepeat",
+      "interpretation": "小さな葉の対をタイル状に繰り返し、濃い地色の上に花のアクセントを置く。",
+      "interpretationStatus": "proposed",
+      "limitation": "植物の細密さや織物の触感は再現しない。図柄の反復規則は証明できても、原作と同一とはしない。",
+      "cssMechanisms": "radial-gradient / border-radius / background-size",
+      "palette": [
+        "#183b36",
+        "#e4d4ac",
+        "#9bad77",
+        "#ac5148"
+      ],
+      "paletteStatus": "chosenForPrototypeNotSampledFromArtwork",
+      "parameters": {
+        "repeatCount": 24,
+        "gridStep": 16,
+        "durationMilliseconds": 36000,
+        "layerCount": 4,
+        "opacityPercent": 85,
+        "paletteSize": 4
+      },
+      "proofTargets": [
+        "ArtPlanetarium.tile_repeats_after_any_number_of_spans",
+        "ArtPlanetarium.mirror_twice_recovers_coordinate",
+        "ArtPlanetarium.mirrored_pair_preserves_span"
+      ],
+      "renderingStatus": "browserNotConnected",
+      "prompt": "Material Sphere。小さな葉の対をタイル状に繰り返し、濃い地色の上に花のアクセントを置く。 球としての陰影は共通層。原作の複製・作者本人の制作物とは表示しない。植物の細密さや織物の触感は再現しない。図柄の反復規則は証明できても、原作と同一とはしない。"
+    },
+    {
+      "profileIdentifier": "c622c342-9799-5e44-84e0-bf659ef4ec94",
+      "personIdentifier": "d2ccba89-2c3b-5fe9-b1dc-bd47ef62f6fe",
+      "referenceScopeIdentifier": "3d0abcea-5fec-5d11-96c5-43acd6b811eb",
+      "title": "アルフォンス・ミュシャ — Material Sphere",
+      "canonicalName": "Alphonse Mucha",
+      "componentName": "AlphonseMucha",
+      "referenceWork": "Zodiac",
+      "referencePeriod": "1896年のデザイン",
+      "sourceClaimIdentifiers": [
+        "01a09a97-f59f-7444-be28-cb85b8a1e59e",
+        "01a09a97-f59f-7d0a-959f-c4b5cf2b3a66",
+        "01a09a97-f59f-7dd2-bcd3-4a8fb7bac54f"
+      ],
+      "family": "zodiacHalo",
+      "interpretation": "12個の等間隔スロットと二重の円環で、装飾的な額縁を球の表面に置く。",
+      "interpretationStatus": "proposed",
+      "limitation": "12個ある事実と等角配置の設計判断を分ける。人物画、十二宮の異なる図像、絵画全体の再現は含まない。",
+      "cssMechanisms": "conic-gradient / radial-gradient / rotate",
+      "palette": [
+        "#374639",
+        "#d0b97f",
+        "#eadbbc"
+      ],
+      "paletteStatus": "chosenForPrototypeNotSampledFromArtwork",
+      "parameters": {
+        "repeatCount": 12,
+        "gridStep": 24,
+        "durationMilliseconds": 48000,
+        "layerCount": 3,
+        "opacityPercent": 90,
+        "paletteSize": 3
+      },
+      "proofTargets": [
+        "ArtPlanetarium.halo_closes_after_twelve_slots",
+        "ArtPlanetarium.halo_has_twelve_distinct_angles",
+        "ArtPlanetarium.halo_angles_remain_inside_turn"
+      ],
+      "renderingStatus": "browserNotConnected",
+      "prompt": "Material Sphere。12個の等間隔スロットと二重の円環で、装飾的な額縁を球の表面に置く。 球としての陰影は共通層。原作の複製・作者本人の制作物とは表示しない。12個ある事実と等角配置の設計判断を分ける。人物画、十二宮の異なる図像、絵画全体の再現は含まない。"
+    },
+    {
+      "profileIdentifier": "27ae05bc-5298-51fc-8e02-c16ab93048ce",
+      "personIdentifier": "f341a7fe-8b14-5fd8-8b31-2b66d5e9446e",
+      "referenceScopeIdentifier": "975a60d5-76de-5754-8d40-7076b3db8418",
+      "title": "チャールズ・レニー・マッキントッシュ — Material Sphere",
+      "canonicalName": "Charles Rennie Mackintosh",
+      "componentName": "CharlesRennieMackintosh",
+      "referenceWork": "後期テキスタイルのデザインスケッチ",
+      "referencePeriod": "晩年のテキスタイル設計を対象",
+      "sourceClaimIdentifiers": [
+        "01a09a97-f59f-78ff-a175-c1640608c6b3",
+        "01a09a97-f59f-7b7b-9d33-698bb1246363",
+        "01a09a97-f59f-71dc-803c-e2d40c60a154"
+      ],
+      "family": "geometricBotanical",
+      "interpretation": "細い格子と、格子から少し離れた丸い花形を重ねる。",
+      "interpretationStatus": "proposed",
+      "limitation": "抽象的な花形を特定の原画や夫婦どちらかの意匠と断定しない。格子の証明は布の色調を保証しない。",
+      "cssMechanisms": "repeating-linear-gradient / radial-gradient",
+      "palette": [
+        "#f0e6cb",
+        "#242d2b",
+        "#ad6f76"
+      ],
+      "paletteStatus": "chosenForPrototypeNotSampledFromArtwork",
+      "parameters": {
+        "repeatCount": 16,
+        "gridStep": 20,
+        "durationMilliseconds": 40000,
+        "layerCount": 3,
+        "opacityPercent": 80,
+        "paletteSize": 3
+      },
+      "proofTargets": [
+        "ArtPlanetarium.grid_coordinates_are_aligned",
+        "ArtPlanetarium.grid_coordinates_preserve_strict_order",
+        "ArtPlanetarium.mirror_twice_recovers_coordinate"
+      ],
+      "renderingStatus": "browserNotConnected",
+      "prompt": "Material Sphere。細い格子と、格子から少し離れた丸い花形を重ねる。 球としての陰影は共通層。原作の複製・作者本人の制作物とは表示しない。抽象的な花形を特定の原画や夫婦どちらかの意匠と断定しない。格子の証明は布の色調を保証しない。"
+    },
+    {
+      "profileIdentifier": "2da4bfe7-d11a-5615-ae87-6143a563ab0e",
+      "personIdentifier": "b54052dd-e206-5067-beb8-e19b11154606",
+      "referenceScopeIdentifier": "488a68e0-9b13-595e-abb2-61ca0fe91c86",
+      "title": "ピート・モンドリアン — Material Sphere",
+      "canonicalName": "Piet Mondrian",
+      "componentName": "PietMondrian",
+      "referenceWork": "Composition with Red, Blue, Black, Yellow, and Gray",
+      "referencePeriod": "1921年",
+      "sourceClaimIdentifiers": [
+        "01a09a97-f59f-7244-a87b-ca3a3e2af887",
+        "01a09a97-f59f-751d-8e1a-53dd574067f5",
+        "01a09a97-f59f-7725-845a-9d40e3662f83"
+      ],
+      "family": "orthogonalColourPlanes",
+      "interpretation": "水平・垂直だけの色面と黒い区切りを使い、色は登録パレットからだけ選ぶ。",
+      "interpretationStatus": "proposed",
+      "limitation": "このレシピは1921年の作品群を参照する一案。球の陰影は別層とし、原作の配色そのものとは区別する。",
+      "cssMechanisms": "linear-gradient / background-size / rotate",
+      "palette": [
+        "#e5dfcf",
+        "#1c2222",
+        "#cf4436",
+        "#e4b536",
+        "#366184"
+      ],
+      "paletteStatus": "chosenForPrototypeNotSampledFromArtwork",
+      "parameters": {
+        "repeatCount": 12,
+        "gridStep": 20,
+        "durationMilliseconds": 36000,
+        "layerCount": 4,
+        "opacityPercent": 100,
+        "paletteSize": 5
+      },
+      "proofTargets": [
+        "ArtPlanetarium.orthogonal_angles_are_quarter_turns",
+        "ArtPlanetarium.palette_selection_stays_inside_palette"
+      ],
+      "renderingStatus": "browserNotConnected",
+      "prompt": "Material Sphere。水平・垂直だけの色面と黒い区切りを使い、色は登録パレットからだけ選ぶ。 球としての陰影は共通層。原作の複製・作者本人の制作物とは表示しない。このレシピは1921年の作品群を参照する一案。球の陰影は別層とし、原作の配色そのものとは区別する。"
+    },
+    {
+      "profileIdentifier": "1af32ad1-c8f1-5c0c-a100-d5d9a5f83579",
+      "personIdentifier": "b64f31b6-d52c-5b7a-975d-58b96b4166e6",
+      "referenceScopeIdentifier": "ae700c39-3d4a-5d7f-a561-d830af6e00dc",
+      "title": "ヘリット・リートフェルト — Material Sphere",
+      "canonicalName": "Gerrit Rietveld",
+      "componentName": "GerritRietveld",
+      "referenceWork": "Red Blue Chair",
+      "referencePeriod": "MoMAの記録では1918–1923年",
+      "sourceClaimIdentifiers": [
+        "01a09a97-f59f-7752-8259-e78e04e985c4",
+        "01a09a97-f59f-7a65-9f9a-ad66d7553f72",
+        "01a09a97-f59f-70e4-a989-afe45d8bbe44"
+      ],
+      "family": "perpendicularConstruction",
+      "interpretation": "直交する三方向の平面を分けたまま重ね、輪郭に影を付けて立体風に見せる。",
+      "interpretationStatus": "proposed",
+      "limitation": "椅子を球として作り直す解釈。垂直な数学上の面でも透視投影後の画面上では直角に見えるとは限らない。",
+      "cssMechanisms": "perspective / rotateX / rotateY / box-shadow",
+      "palette": [
+        "#1b2323",
+        "#cb4438",
+        "#e2b833",
+        "#365d82"
+      ],
+      "paletteStatus": "chosenForPrototypeNotSampledFromArtwork",
+      "parameters": {
+        "repeatCount": 6,
+        "gridStep": 24,
+        "durationMilliseconds": 42000,
+        "layerCount": 3,
+        "opacityPercent": 90,
+        "paletteSize": 4
+      },
+      "proofTargets": [
+        "ArtPlanetarium.different_plane_normals_are_perpendicular",
+        "ArtPlanetarium.orthogonal_angles_are_quarter_turns"
+      ],
+      "renderingStatus": "browserNotConnected",
+      "prompt": "Material Sphere。直交する三方向の平面を分けたまま重ね、輪郭に影を付けて立体風に見せる。 球としての陰影は共通層。原作の複製・作者本人の制作物とは表示しない。椅子を球として作り直す解釈。垂直な数学上の面でも透視投影後の画面上では直角に見えるとは限らない。"
+    },
+    {
+      "profileIdentifier": "eff6ec3c-4e67-5e2a-bc11-ed8d12f52a39",
+      "personIdentifier": "d9d0b5bf-2276-585c-9eb2-15a79103957f",
+      "referenceScopeIdentifier": "26c7f81a-c989-594d-ba19-afdaff443268",
+      "title": "エットレ・ソットサス — Material Sphere",
+      "canonicalName": "Ettore Sottsass",
+      "componentName": "EttoreSottsass",
+      "referenceWork": "Carlton / Bacterio",
+      "referencePeriod": "Carltonは1981年",
+      "sourceClaimIdentifiers": [
+        "01a09a97-f59f-7111-a1ef-3082c14478b2",
+        "01a09a97-f59f-7eb1-abd9-7158bebec0a6"
+      ],
+      "family": "laminateAndAccent",
+      "interpretation": "色面の間に斜めの小片を置き、細かい反復模様と大きな色面を対比する。",
+      "interpretationStatus": "proposed",
+      "limitation": "ランダムさを芸術性の点数にしない。原作のBacterioを複製せず独自の小片を使う。メーカーの販売表現を美的事実として扱わない。",
+      "cssMechanisms": "repeating-linear-gradient / conic-gradient",
+      "palette": [
+        "#d46476",
+        "#e7bb4b",
+        "#65a0a0",
+        "#e7ddc9",
+        "#272731"
+      ],
+      "paletteStatus": "chosenForPrototypeNotSampledFromArtwork",
+      "parameters": {
+        "repeatCount": 24,
+        "gridStep": 14,
+        "durationMilliseconds": 32000,
+        "layerCount": 4,
+        "opacityPercent": 90,
+        "paletteSize": 5
+      },
+      "proofTargets": [
+        "ArtPlanetarium.palette_selection_stays_inside_palette",
+        "ArtPlanetarium.tile_repeats_after_any_number_of_spans",
+        "ArtPlanetarium.route_angles_are_eighth_turns"
+      ],
+      "renderingStatus": "browserNotConnected",
+      "prompt": "Material Sphere。色面の間に斜めの小片を置き、細かい反復模様と大きな色面を対比する。 球としての陰影は共通層。原作の複製・作者本人の制作物とは表示しない。ランダムさを芸術性の点数にしない。原作のBacterioを複製せず独自の小片を使う。メーカーの販売表現を美的事実として扱わない。"
+    },
+    {
+      "profileIdentifier": "aa8db2eb-17e5-5771-8443-94445af34296",
+      "personIdentifier": "8066869d-a972-5884-a2e3-8df1e3af3f52",
+      "referenceScopeIdentifier": "ebf04286-32f4-52d1-be07-a88ddc7896b9",
+      "title": "ヘルベルト・バイヤー — Material Sphere",
+      "canonicalName": "Herbert Bayer",
+      "componentName": "HerbertBayer",
+      "referenceWork": "Universal alphabetとバウハウス期の文字構成",
+      "referencePeriod": "1920年代の文字設計を対象",
+      "sourceClaimIdentifiers": [
+        "01a09a97-f59f-7a31-b2a2-270f4a75e514",
+        "01a09a97-f59f-746c-aa9f-07ec5fd11f32",
+        "01a09a97-f59f-7c13-93cc-b8d768866540"
+      ],
+      "family": "geometricLettering",
+      "interpretation": "円弧と棒の組合せを共通の格子へ載せ、大小二段階の幾何学的な記号を作る。",
+      "interpretationStatus": "proposed",
+      "limitation": "既存書体の再実装ではない。文字が読めることや情報の理解しやすさは別途、人と画面で検査する。",
+      "cssMechanisms": "border-radius / border / linear-gradient",
+      "palette": [
+        "#e8deca",
+        "#212627",
+        "#c8503d"
+      ],
+      "paletteStatus": "chosenForPrototypeNotSampledFromArtwork",
+      "parameters": {
+        "repeatCount": 8,
+        "gridStep": 24,
+        "durationMilliseconds": 44000,
+        "layerCount": 3,
+        "opacityPercent": 95,
+        "paletteSize": 3
+      },
+      "proofTargets": [
+        "ArtPlanetarium.grid_coordinates_are_aligned",
+        "ArtPlanetarium.orthogonal_angles_are_quarter_turns"
+      ],
+      "renderingStatus": "browserNotConnected",
+      "prompt": "Material Sphere。円弧と棒の組合せを共通の格子へ載せ、大小二段階の幾何学的な記号を作る。 球としての陰影は共通層。原作の複製・作者本人の制作物とは表示しない。既存書体の再実装ではない。文字が読めることや情報の理解しやすさは別途、人と画面で検査する。"
+    },
+    {
+      "profileIdentifier": "200bbbd0-c4d4-5ebf-89e7-7bb100b9d737",
+      "personIdentifier": "b9dfa052-7db4-5d65-b0d8-ceb5f041fbe9",
+      "referenceScopeIdentifier": "cde80f0c-b7c1-58e7-8e0b-78385a5c58fd",
+      "title": "ヨゼフ・ミューラー＝ブロックマン — Material Sphere",
+      "canonicalName": "Josef Müller-Brockmann",
+      "componentName": "JosefMullerBrockmann",
+      "referenceWork": "Beethoven",
+      "referencePeriod": "1955年のポスター",
+      "sourceClaimIdentifiers": [
+        "01a09a97-f59f-7e29-8542-5f5c8e9a7bcf",
+        "01a09a97-f59f-7572-be4c-9c7673297ed4",
+        "01a09a97-f59f-778b-a5ae-87d6b8c54a44"
+      ],
+      "family": "typographicGrid",
+      "interpretation": "一定間隔の基準線に文字用の帯と円弧をそろえ、帯同士の距離を維持する。",
+      "interpretationStatus": "proposed",
+      "limitation": "余白の多さを固定点数にしない。画面上の読みやすさ、実際の文字組み、全経歴の代表性は未証明。",
+      "cssMechanisms": "repeating-linear-gradient / radial-gradient / grid",
+      "palette": [
+        "#ddd6bf",
+        "#283131",
+        "#b65345"
+      ],
+      "paletteStatus": "chosenForPrototypeNotSampledFromArtwork",
+      "parameters": {
+        "repeatCount": 8,
+        "gridStep": 12,
+        "durationMilliseconds": 48000,
+        "layerCount": 3,
+        "opacityPercent": 85,
+        "paletteSize": 3
+      },
+      "proofTargets": [
+        "ArtPlanetarium.grid_coordinates_are_aligned",
+        "ArtPlanetarium.grid_coordinates_preserve_strict_order"
+      ],
+      "renderingStatus": "browserNotConnected",
+      "prompt": "Material Sphere。一定間隔の基準線に文字用の帯と円弧をそろえ、帯同士の距離を維持する。 球としての陰影は共通層。原作の複製・作者本人の制作物とは表示しない。余白の多さを固定点数にしない。画面上の読みやすさ、実際の文字組み、全経歴の代表性は未証明。"
+    },
+    {
+      "profileIdentifier": "fda39095-201d-5703-a75a-072fceac56f4",
+      "personIdentifier": "8f7c1bbe-3cde-5bbd-86e8-40cdf410482a",
+      "referenceScopeIdentifier": "dece3d3e-34d7-50c2-a06d-1d4400ebb258",
+      "title": "マッシモ・ヴィネッリ — Material Sphere",
+      "canonicalName": "Massimo Vignelli",
+      "componentName": "MassimoVignelli",
+      "referenceWork": "New York Subway Map",
+      "referencePeriod": "1970–1972年",
+      "sourceClaimIdentifiers": [
+        "01a09a97-f59f-7b1c-b8e6-68edf40fe79c",
+        "01a09a97-f59f-73b9-856c-9132fc1eaf0c",
+        "01a09a97-f59f-7576-9843-39bef074f325"
+      ],
+      "family": "transitDiagram",
+      "interpretation": "45度刻みの線分と駅の点を少ない色で反復し、同じ路線は同色にそろえる。",
+      "interpretationStatus": "proposed",
+      "limitation": "これは使える路線案内図ではない。視覚的な近さから作者間の影響や共同制作を自動生成しない。",
+      "cssMechanisms": "linear-gradient / rotate / radial-gradient",
+      "palette": [
+        "#ded8c7",
+        "#cb5845",
+        "#476c91",
+        "#bba042"
+      ],
+      "paletteStatus": "chosenForPrototypeNotSampledFromArtwork",
+      "parameters": {
+        "repeatCount": 16,
+        "gridStep": 12,
+        "durationMilliseconds": 40000,
+        "layerCount": 4,
+        "opacityPercent": 95,
+        "paletteSize": 4
+      },
+      "proofTargets": [
+        "ArtPlanetarium.route_angles_are_eighth_turns",
+        "ArtPlanetarium.palette_selection_stays_inside_palette",
+        "ArtPlanetarium.visual_distance_does_not_establish_influence"
+      ],
+      "renderingStatus": "browserNotConnected",
+      "prompt": "Material Sphere。45度刻みの線分と駅の点を少ない色で反復し、同じ路線は同色にそろえる。 球としての陰影は共通層。原作の複製・作者本人の制作物とは表示しない。これは使える路線案内図ではない。視覚的な近さから作者間の影響や共同制作を自動生成しない。"
+    },
+    {
+      "profileIdentifier": "66355416-1298-53e7-af26-05303e93d7ad",
+      "personIdentifier": "0c7444ac-0261-5cea-ad94-086616f052d6",
+      "referenceScopeIdentifier": "58c1cc16-5fcf-55d4-a55b-40272e35f627",
+      "title": "ディーター・ラムス — Material Sphere",
+      "canonicalName": "Dieter Rams",
+      "componentName": "DieterRams",
+      "referenceWork": "606 Universal Shelving Systemと1976年の講演",
+      "referencePeriod": "1960年に棚を発売、1976年に設計思想を講演",
+      "sourceClaimIdentifiers": [
+        "01a09a97-f59f-7fc5-ad0b-e3ec6f86eb65",
+        "01a09a97-f59f-77e7-abd8-7409ffa02aaf",
+        "01a09a97-f59f-7915-b6f8-a61500b11155"
+      ],
+      "family": "modularProduct",
+      "interpretation": "中性色の繰り返す部品、整列した小さな点、控えめな面の陰影で構成する。",
+      "interpretationStatus": "proposed",
+      "limitation": "白い球だから機能的とは判定しない。装飾を減らす理由や実際の使いやすさは用途に照らして別に確認する。",
+      "cssMechanisms": "repeating-linear-gradient / radial-gradient / box-shadow",
+      "palette": [
+        "#d9d9ce",
+        "#454d4a",
+        "#b2b7aa"
+      ],
+      "paletteStatus": "chosenForPrototypeNotSampledFromArtwork",
+      "parameters": {
+        "repeatCount": 6,
+        "gridStep": 16,
+        "durationMilliseconds": 60000,
+        "layerCount": 3,
+        "opacityPercent": 85,
+        "paletteSize": 3
+      },
+      "proofTargets": [
+        "ArtPlanetarium.grid_coordinates_are_aligned",
+        "ArtPlanetarium.grid_coordinates_preserve_strict_order"
+      ],
+      "renderingStatus": "browserNotConnected",
+      "prompt": "Material Sphere。中性色の繰り返す部品、整列した小さな点、控えめな面の陰影で構成する。 球としての陰影は共通層。原作の複製・作者本人の制作物とは表示しない。白い球だから機能的とは判定しない。装飾を減らす理由や実際の使いやすさは用途に照らして別に確認する。"
+    },
+    {
+      "profileIdentifier": "4944ca35-5584-54dd-9b11-d3ab77dacad6",
+      "personIdentifier": "682eabd5-5258-58d2-a6ad-7ba432f2126f",
+      "referenceScopeIdentifier": "f653f412-bb32-5237-b618-c6f9f82f4286",
+      "title": "深澤直人 — Material Sphere",
+      "canonicalName": "Naoto Fukasawa",
+      "componentName": "NaotoFukasawa",
+      "referenceWork": "Wall mounted CD Player",
+      "referencePeriod": "1999年",
+      "sourceClaimIdentifiers": [
+        "01a09a97-f59f-774a-a1df-689b6d72c13d",
+        "01a09a97-f59f-7f3f-80b3-04e1d10759b2",
+        "01a09a97-f59f-7b54-8e23-b8b578df47e6"
+      ],
+      "family": "familiarPullControl",
+      "interpretation": "丸い中心と柔らかな角の器を組み合わせ、ひとつの操作で動く・止まるを切り替える。",
+      "interpretationStatus": "proposed",
+      "limitation": "静かな白さだけでは設計思想を表せない。操作の意味と見た目を一緒に扱い、再度操作すれば元に戻る規則を証明する。",
+      "cssMechanisms": "border-radius / radial-gradient / animation-play-state",
+      "palette": [
+        "#e4e3d8",
+        "#5d6763",
+        "#bfc4b8"
+      ],
+      "paletteStatus": "chosenForPrototypeNotSampledFromArtwork",
+      "parameters": {
+        "repeatCount": 1,
+        "gridStep": 24,
+        "durationMilliseconds": 60000,
+        "layerCount": 3,
+        "opacityPercent": 90,
+        "paletteSize": 3
+      },
+      "proofTargets": [
+        "ArtPlanetarium.two_toggles_restore_playback",
+        "ArtPlanetarium.reduced_motion_is_independent_of_time"
+      ],
+      "renderingStatus": "browserNotConnected",
+      "prompt": "Material Sphere。丸い中心と柔らかな角の器を組み合わせ、ひとつの操作で動く・止まるを切り替える。 球としての陰影は共通層。原作の複製・作者本人の制作物とは表示しない。静かな白さだけでは設計思想を表せない。操作の意味と見た目を一緒に扱い、再度操作すれば元に戻る規則を証明する。"
+    },
+    {
+      "profileIdentifier": "5240f8a5-f200-5127-9fe8-3f8a6e909188",
+      "personIdentifier": "ffd3151d-c433-5546-9d95-e3afce1abc66",
+      "referenceScopeIdentifier": "884c9bc1-8b6d-50b0-ba24-1838af95caaa",
+      "title": "川久保玲 — Material Sphere",
+      "canonicalName": "Rei Kawakubo",
+      "componentName": "ReiKawakubo",
+      "referenceWork": "2017年のArt of the In-Between展における衣服と造形",
+      "referencePeriod": "1980年代以降の選択された作品",
+      "sourceClaimIdentifiers": [
+        "01a09a97-f59f-7096-b795-1787d9528bd4",
+        "01a09a97-f59f-7d9a-8966-f6609625778b",
+        "01a09a97-f59f-7324-ae1f-b2ae4d7f70f0"
+      ],
+      "family": "asymmetricVolume",
+      "interpretation": "左右で幅が異なる折り重なりと空隙を、暗い面と少し明るい縁で見せる。",
+      "interpretationStatus": "proposed",
+      "limitation": "不均衡は今回の球の幾何学規則であり、川久保作品の本質を数値で証明するものではない。布の物理や着用性も対象外。",
+      "cssMechanisms": "clip-path polygon / rotate / box-shadow",
+      "palette": [
+        "#1a2025",
+        "#42494e",
+        "#737879"
+      ],
+      "paletteStatus": "chosenForPrototypeNotSampledFromArtwork",
+      "parameters": {
+        "repeatCount": 12,
+        "gridStep": 12,
+        "durationMilliseconds": 54000,
+        "layerCount": 8,
+        "opacityPercent": 95,
+        "paletteSize": 3
+      },
+      "proofTargets": [
+        "ArtPlanetarium.fold_widths_are_deliberately_unequal",
+        "ArtPlanetarium.colour_channel_mix_stays_bounded"
+      ],
+      "renderingStatus": "browserNotConnected",
+      "prompt": "Material Sphere。左右で幅が異なる折り重なりと空隙を、暗い面と少し明るい縁で見せる。 球としての陰影は共通層。原作の複製・作者本人の制作物とは表示しない。不均衡は今回の球の幾何学規則であり、川久保作品の本質を数値で証明するものではない。布の物理や着用性も対象外。"
+    },
+    {
+      "profileIdentifier": "ea3de1f9-179b-5bca-89e0-289084190234",
+      "personIdentifier": "10777ce7-f6db-56a6-8c73-86364cadba1b",
+      "referenceScopeIdentifier": "86141cac-338c-5f13-93aa-c65f1e4bc557",
+      "title": "チャールズ・イームズ — Material Sphere",
+      "canonicalName": "Charles Eames",
+      "componentName": "CharlesEames",
+      "referenceWork": "Lounge Chair and Ottoman",
+      "referencePeriod": "1956年に発表",
+      "sourceClaimIdentifiers": [
+        "01a09a97-f59f-7254-9c42-b31060f0f7b4",
+        "01a09a97-f59f-7c5e-bcf5-e5e0637c9ae9"
+      ],
+      "family": "layeredMaterials",
+      "interpretation": "暖色の薄い外殻、暗く柔らかい内側、細い支持部を別の層として重ねる。",
+      "interpretationStatus": "proposed",
+      "limitation": "レイの寄与を消さない。素材の見分け、柔らかさ、耐久性は色や陰影の計算だけでは証明しない。",
+      "cssMechanisms": "radial-gradient / border-radius / box-shadow",
+      "palette": [
+        "#95664b",
+        "#dfc6a0",
+        "#303637",
+        "#b4b8b1"
+      ],
+      "paletteStatus": "chosenForPrototypeNotSampledFromArtwork",
+      "parameters": {
+        "repeatCount": 3,
+        "gridStep": 24,
+        "durationMilliseconds": 48000,
+        "layerCount": 4,
+        "opacityPercent": 90,
+        "paletteSize": 4
+      },
+      "proofTargets": [
+        "ArtPlanetarium.palette_selection_stays_inside_palette",
+        "ArtPlanetarium.colour_channel_mix_stays_bounded"
+      ],
+      "renderingStatus": "browserNotConnected",
+      "prompt": "Material Sphere。暖色の薄い外殻、暗く柔らかい内側、細い支持部を別の層として重ねる。 球としての陰影は共通層。原作の複製・作者本人の制作物とは表示しない。レイの寄与を消さない。素材の見分け、柔らかさ、耐久性は色や陰影の計算だけでは証明しない。"
+    },
+    {
+      "profileIdentifier": "0fcb82c9-fa68-5fb0-bb38-41102237b725",
+      "personIdentifier": "21709063-b8c0-5945-bdfd-b223eac44abc",
+      "referenceScopeIdentifier": "c0d54e01-7555-5f17-9ed1-85773129570d",
+      "title": "レイ・イームズ — Material Sphere",
+      "canonicalName": "Ray Eames",
+      "componentName": "RayEames",
+      "referenceWork": "House of Cardsの菱形模様の試作",
+      "referencePeriod": "1952年",
+      "sourceClaimIdentifiers": [
+        "01a09a97-f59f-70b1-a5d4-5fd3a0bd4f59",
+        "01a09a97-f59f-74f0-bf46-de71c4fbe0fe"
+      ],
+      "family": "colourCollage",
+      "interpretation": "同じ菱形を少しずつ異なる色で並べ、暖色・寒色と明暗を対比する。",
+      "interpretationStatus": "proposed",
+      "limitation": "特定の試作と共同製品の作者を区別する。配色の良さを数値の大小でランキングしない。",
+      "cssMechanisms": "conic-gradient / rotate / repeating-linear-gradient",
+      "palette": [
+        "#ce695d",
+        "#e5c477",
+        "#6d9c9a",
+        "#dab5c1",
+        "#414945"
+      ],
+      "paletteStatus": "chosenForPrototypeNotSampledFromArtwork",
+      "parameters": {
+        "repeatCount": 16,
+        "gridStep": 16,
+        "durationMilliseconds": 42000,
+        "layerCount": 4,
+        "opacityPercent": 95,
+        "paletteSize": 5
+      },
+      "proofTargets": [
+        "ArtPlanetarium.grid_coordinates_are_aligned",
+        "ArtPlanetarium.palette_selection_stays_inside_palette",
+        "ArtPlanetarium.colour_channel_mix_stays_bounded"
+      ],
+      "renderingStatus": "browserNotConnected",
+      "prompt": "Material Sphere。同じ菱形を少しずつ異なる色で並べ、暖色・寒色と明暗を対比する。 球としての陰影は共通層。原作の複製・作者本人の制作物とは表示しない。特定の試作と共同製品の作者を区別する。配色の良さを数値の大小でランキングしない。"
+    },
+    {
+      "profileIdentifier": "6956222e-f308-5e00-a3d5-d0129505f27e",
+      "personIdentifier": "a7b5f284-c3af-5177-9aaf-74e58c313a63",
+      "referenceScopeIdentifier": "94b80ea1-96f6-599b-93d8-93f090c52fc9",
+      "title": "ヴァルター・グロピウス — Material Sphere",
+      "canonicalName": "Walter Gropius",
+      "componentName": "WalterGropius",
+      "referenceWork": "Bauhaus Building, Dessau",
+      "referencePeriod": "1926年に開校",
+      "sourceClaimIdentifiers": [
+        "01a09a97-f59f-74fb-9c67-b1164882dd01",
+        "01a09a97-f59f-79e8-b823-61376c30dc1c",
+        "01a09a97-f59f-73c4-b604-8f21df139452"
+      ],
+      "family": "transparentStructure",
+      "interpretation": "透明感のある格子と不透明な面をずらして重ね、視点によって見える構成を変える。",
+      "interpretationStatus": "proposed",
+      "limitation": "ガラス風の半透明はガラスの物理を表さない。校舎の配色担当Hinnerk Scheperや事務所の共同作業を省略しない。",
+      "cssMechanisms": "opacity / perspective / linear-gradient",
+      "palette": [
+        "#cfdbd8",
+        "#334549",
+        "#b6beb6"
+      ],
+      "paletteStatus": "chosenForPrototypeNotSampledFromArtwork",
+      "parameters": {
+        "repeatCount": 12,
+        "gridStep": 20,
+        "durationMilliseconds": 54000,
+        "layerCount": 4,
+        "opacityPercent": 45,
+        "paletteSize": 3
+      },
+      "proofTargets": [
+        "ArtPlanetarium.different_plane_normals_are_perpendicular",
+        "ArtPlanetarium.grid_coordinates_are_aligned",
+        "ArtPlanetarium.colour_channel_mix_stays_bounded"
+      ],
+      "renderingStatus": "browserNotConnected",
+      "prompt": "Material Sphere。透明感のある格子と不透明な面をずらして重ね、視点によって見える構成を変える。 球としての陰影は共通層。原作の複製・作者本人の制作物とは表示しない。ガラス風の半透明はガラスの物理を表さない。校舎の配色担当Hinnerk Scheperや事務所の共同作業を省略しない。"
+    }
+  ]
+}

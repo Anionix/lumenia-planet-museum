@@ -1,0 +1,1061 @@
+{
+  "manifest": {
+    "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+    "files": [
+      {
+        "path": "CONSTRAINTS.md",
+        "sha256": "497ae62402dc9e7492480152f4b16d3ba0e017584a461251d342b716b831c9da"
+      },
+      {
+        "path": "contracts/asset-manifest.schema.json",
+        "sha256": "1ac3534da3c258b5eaacfe031c5cdf71bf8d77e66a84349b7fbd5318c3c47cbb"
+      },
+      {
+        "path": "contracts/claims.json",
+        "sha256": "2250c5046c0a3c1a0836267d3b4823b255cce0303b25ff3fa76c8fe9060da087"
+      },
+      {
+        "path": "contracts/css-artworks.json",
+        "sha256": "134ecfcb05f92cf9fcc573f9eed02b5220fa7230e77bd514b38b687b26b43922"
+      },
+      {
+        "path": "contracts/css-line-artwork.json",
+        "sha256": "5b6c0cab63d6c829c3c71fe18f7c8632fa61d6d60fb16fddcb29f40fb2d82b89"
+      },
+      {
+        "path": "contracts/examples/valid-asset-manifest.json",
+        "sha256": "5a112a222b51c635cb473550b6a8077d0626c208a7305fe9e81a7350c3d67d20"
+      },
+      {
+        "path": "contracts/examples/verification-request.json",
+        "sha256": "7a6c9e468f145685ef766bfc3e77c60c212072d0eecf58d7b7298a0bb0153b0e"
+      },
+      {
+        "path": "contracts/examples/verification-result.json",
+        "sha256": "28f87578eadb898be5135cdf94b7dcbd1ccc1e65ae44ea286d2991e9be360c5d"
+      },
+      {
+        "path": "contracts/external-gates.json",
+        "sha256": "af11e1ca96fd1de4612ed53042de89e12f0732010e15bc06bea4658a4c66fdca"
+      },
+      {
+        "path": "contracts/verification-contract.schema.json",
+        "sha256": "fbe69c9db9eac5debee95d2b9fc723ddd152e27f3892bc646718f1283c6b23de"
+      },
+      {
+        "path": "eslint.config.mjs",
+        "sha256": "978430f74599f639af8650e0f36ece7f26e916f819e7563df8f5809bba9be226"
+      },
+      {
+        "path": "formal/Lumenia.lean",
+        "sha256": "25d82dde7ad6966f8bd27c35d32bc016ef0e027629db9d9f4d1468a6133038f2"
+      },
+      {
+        "path": "formal/Lumenia/AxiomAudit.lean",
+        "sha256": "a2ac9deab960ba87a619b4d76866e2dea1699c610d049ba0e54b0379eb8daf00"
+      },
+      {
+        "path": "formal/Lumenia/Boundary.lean",
+        "sha256": "41be9e4293f8f54e671150aa2f1afadc27d0393f865af9ebdbdcb6bb8ea363c3"
+      },
+      {
+        "path": "formal/Lumenia/Model.lean",
+        "sha256": "0f528929e0243d7f922a9d7f9603eed43e8c0e13c6f44a86922f06dad82a0b06"
+      },
+      {
+        "path": "formal/Lumenia/Proofs.lean",
+        "sha256": "dc185dc0b11ffc1471061e7301249def8111ef69707876e0cf4ebb3ea05afb04"
+      },
+      {
+        "path": "formal/Lumenia/Tests.lean",
+        "sha256": "329500e65c6d3c601e25d95d91de28d904ecf197b8b5a3ec1e95753b62a52995"
+      },
+      {
+        "path": "formal/Main.lean",
+        "sha256": "8b3eeea5ac3bcfb89963c5064a1307da6cb975ca5a89eb109319f2bce377e715"
+      },
+      {
+        "path": "intent.md",
+        "sha256": "9c36b5d17dce933b4966c3a291616b0e8236866ff1e5daa2d21d933b8c87682b"
+      },
+      {
+        "path": "lake-manifest.json",
+        "sha256": "4273a8dd6528dfcfc627997ee3f06313b97d795918cfc09b5ae65821723e54fb"
+      },
+      {
+        "path": "lakefile.toml",
+        "sha256": "450866fae5ba7ab3c9d0b025436f30ea29e39124837b035b428bd40233048c62"
+      },
+      {
+        "path": "lean-toolchain",
+        "sha256": "db7bb24b756d745bbde83fe92718b51bd3625dae3701ba0f598d0eedcd3f3028"
+      },
+      {
+        "path": "mcp/application-verification.md",
+        "sha256": "4e3624c1b89b97c74ac2833d070d958d21187de2a5650b5259d41e43743ab735"
+      },
+      {
+        "path": "mcp/chrome-measurements.js",
+        "sha256": "1d052b24aa89a1145e3b38364951aa4f81f712f9983bf28e5b406c95e54d33c5"
+      },
+      {
+        "path": "mcp/lean-lsp-mcp.json",
+        "sha256": "98a7471d12c4e449b04a8867fffeaf77424d84cb75a451a18d2efeb94e410fec"
+      },
+      {
+        "path": "mcp/lumenia-verification-contract.schema.json",
+        "sha256": "0b054151d9949e9a46f8ee470da837109aa07b0d3baf7161eda4cdd8f4ed33a9"
+      },
+      {
+        "path": "package-lock.json",
+        "sha256": "65e21e4e7a5b9110a238d6848b53254df3ce8878099ff6985cfeba9ff46df142"
+      },
+      {
+        "path": "package.json",
+        "sha256": "ceec3257ddc64c87186fb7104e2f8b123b2a2ac3f8df47abe08be4ac8af8ffd2"
+      },
+      {
+        "path": "scripts/browser-observations.mjs",
+        "sha256": "e75e81e7853ff9abaaef9d7842fc143e5372d13dbd8e25f61be867aae79df59e"
+      },
+      {
+        "path": "scripts/build-artwork.mjs",
+        "sha256": "887dcaa527e92f80401a91bf7c065fd6d787a4e83e531b2a61c59454f6396e2b"
+      },
+      {
+        "path": "scripts/build-web.mjs",
+        "sha256": "ac9c581505b756b096316efa0fe8f246be7afadca0a9c76ea494a6f6d305801b"
+      },
+      {
+        "path": "scripts/collect-measurements.mjs",
+        "sha256": "1dcdb72aa8b03042ed97fc72b5b000f4aa28523f42a471af0fe4b22648a673ff"
+      },
+      {
+        "path": "scripts/contract.mjs",
+        "sha256": "96fa1a635a416efb050968b9dd81352610b951b2d40da4df97c56c28e9afcfa0"
+      },
+      {
+        "path": "scripts/identifiers.mjs",
+        "sha256": "fa658b8a45f3e414ab940631e8ca7f186f0be8917393a8054c0676e00f21134b"
+      },
+      {
+        "path": "scripts/language-server-evidence.mjs",
+        "sha256": "59fdf821773569b9dbd4b62527a64b29bf39adb2f923b345cbcd4fb185784898"
+      },
+      {
+        "path": "scripts/measurement-context.mjs",
+        "sha256": "338b53a2650f08c0967c079f9574b97b66be30e1a3058539c75c94fe8bec9ac2"
+      },
+      {
+        "path": "scripts/publish-local-evidence.mjs",
+        "sha256": "68cf5d26ed835551babde2eb2a2b214c1cda95184001f669835d4c0b64372357"
+      },
+      {
+        "path": "scripts/report.mjs",
+        "sha256": "2ed519504df41e4dc7cb09a6e2b62a4d0aaf9a67cc6ef7b05fe6efda5995cc56"
+      },
+      {
+        "path": "scripts/run-application-check.mjs",
+        "sha256": "81e1cf381fbe9b27be3af062703553e9b01bde2b7f98a17180265cfaa690b98f"
+      },
+      {
+        "path": "scripts/run-asset-reference-check.mjs",
+        "sha256": "4439f90e72a97c896650342c12e390e1495860fd704512efd98c7482e196ae59"
+      },
+      {
+        "path": "scripts/run-formal-check.mjs",
+        "sha256": "10a575905640953302c3d407665b9b7c012c47f8ca9f202044b1be0b4114eb56"
+      },
+      {
+        "path": "scripts/run-gates.mjs",
+        "sha256": "5f4099e2c34e0f2c270767d52d6816d9b524cac857debe8d9cd12b68f38bc09e"
+      },
+      {
+        "path": "scripts/serve-web.mjs",
+        "sha256": "4fc98fee7ee795ebf7068db998b867e2ffc21a1d850e5ba8e2084fa3e11c74d0"
+      },
+      {
+        "path": "scripts/source-inspection.mjs",
+        "sha256": "7f25dd18eb364a3b40f45ccd09d46bc54b7dca010812966909733b97aad6c5ec"
+      },
+      {
+        "path": "scripts/source-revision.mjs",
+        "sha256": "e00d8c5624a04f6c169322611391067ef54badcf52332ab245cbfd23ecaa198d"
+      },
+      {
+        "path": "scripts/verify-contract.mjs",
+        "sha256": "dfaf2d2774cbbea870beed8f384447d11b4b5cca903713544f67dd09a7a97eb2"
+      },
+      {
+        "path": "spec.md",
+        "sha256": "b293e5c86933bcdd000b85ddc2b1c9942d693f24831d38d34f5c15be3fe8a223"
+      },
+      {
+        "path": "tests/application.test.mjs",
+        "sha256": "ceb7d054fc9a2186907a31edc23a5345c4bf1365e220e3ec96dafa57aaa8de26"
+      },
+      {
+        "path": "tests/browser-observations.test.mjs",
+        "sha256": "6f5786316aec0e5987a46c2d6b2de1a06f2008ee269e642a81d5c44de446b6d4"
+      },
+      {
+        "path": "tests/contract.test.mjs",
+        "sha256": "46d8e96c1a68093a52b14f9762d50b21c00a96f39f08fb8b6de94f758c9ccc9d"
+      },
+      {
+        "path": "tests/language-server-evidence.test.mjs",
+        "sha256": "60e73ef3764b7d6cabdf7fde7d76a4cc9fa52913db4f3a74af3b277cb516b425"
+      },
+      {
+        "path": "tests/lean-boundary.test.mjs",
+        "sha256": "3ae3fb10a0b31ab7aaab4565ff37db509123d3cf4f9863f59c91a1a0683eed3e"
+      },
+      {
+        "path": "web/app/compare/[stage]/page.tsx",
+        "sha256": "5609017531139affde21942379a3a7332da042807460ff572818b8b32316adef"
+      },
+      {
+        "path": "web/app/globals.css",
+        "sha256": "acbcf35992f1b5d85b1c411f5918cb79d9943f2095046b2f0b3703cbd928166f"
+      },
+      {
+        "path": "web/app/layout.tsx",
+        "sha256": "426cba2b42c1b2d4e23765dca0684a33a8260b9cb506ee3dd6856157aaf3492f"
+      },
+      {
+        "path": "web/app/page.tsx",
+        "sha256": "3ad6b8670a3bc1c09f1716724f49c6f5d8c5e0ff907d66e4e51d121c6a474390"
+      },
+      {
+        "path": "web/app/records/page.tsx",
+        "sha256": "7e21477ea1ff8f52d59b26f17ea391b04f3483a56fc3fd619937339e545615de"
+      },
+      {
+        "path": "web/artwork/asset-contract.ts",
+        "sha256": "ba59eac5fdd51295c380d870b141d52022c32fe224deed967b899c4ac2be0257"
+      },
+      {
+        "path": "web/artwork/catalog.ts",
+        "sha256": "6a759815d7b2bf3e059aed18a85d0a1450959c1bbed16aa8f6c2d8735a215624"
+      },
+      {
+        "path": "web/artwork/css-geometry.ts",
+        "sha256": "ca30e7eaeb6e2705f4f867daed770243319715a876507e2392f85240413297fd"
+      },
+      {
+        "path": "web/artwork/measurement.ts",
+        "sha256": "26e4f708d398d45a5d1b415842e987586a1b3915f8e1af79e816f3c99551b0f7"
+      },
+      {
+        "path": "web/components/ArtworkExperience.tsx",
+        "sha256": "87a70790dd0ef3330b31600f7ee0da3fbc311c531f440319273efb7e9faceed1"
+      },
+      {
+        "path": "web/components/CssArtwork.styles.ts",
+        "sha256": "80c6969d39fed5581415d59b33cd6aab6f6e6d89724d07eb32525711825ac848"
+      },
+      {
+        "path": "web/components/CssArtwork.tsx",
+        "sha256": "5f91c8fe4664b55dce30b7474ea837ff3793dd17968c455dd5c951f554b99631"
+      },
+      {
+        "path": "web/components/Gallery.styles.ts",
+        "sha256": "ab14e6f83086a5cb94ec7b31d6526c1254af6d1d278e2155fac69f01f4bed788"
+      },
+      {
+        "path": "web/components/Gallery.tsx",
+        "sha256": "c56f057bcc7906a25b071630b28cd396cbf4c7c3699d5a4bd2f97116af57dd7a"
+      },
+      {
+        "path": "web/next.config.mjs",
+        "sha256": "35fe3344aba5d30d201ebb94db59f8646edb19a901688cf75cce206f46eb4d93"
+      },
+      {
+        "path": "web/plumeria.d.ts",
+        "sha256": "1879e1b9739a04a44842a8a3e2a256c56b7d2503ff131dcab9b66febd5751503"
+      },
+      {
+        "path": "web/public/favicon.svg",
+        "sha256": "b2a54a1ce80bfa8b03ccbab7fd6c1e1c57a8f4e3c11c83be25fee5700fe1e744"
+      },
+      {
+        "path": "web/tsconfig.json",
+        "sha256": "c77757068271adb58670f7d2de2d253ef2ffe2918809f8460b6d624496293d19"
+      }
+    ]
+  },
+  "executionIdentifier": "01a09a30-8bc1-7d6d-bc05-5ee327268c94",
+  "applicationProfile": "All three current artworks use Plumeria CSS rendering; user-approved replacement of Canvas and WebGL",
+  "referenceScope": "Asset optimization, validation, loader and decode checks remain a separate reusable reference workflow. They are not a claim about assets used by the CSS application.",
+  "gateNames": {
+    "accf612a-073a-5118-8842-a5c4a8cbdb92": "Lumenia.ProofReportPrerequisiteGate",
+    "f6a1a2ad-e119-5e11-b2dd-514b073f0f45": "Lumenia.CoreInitialTransferGate",
+    "9c03cc70-46e8-523d-8ccc-19ba97bfcf02": "Lumenia.HtmlInitialTransferGate",
+    "8eac01e5-6b3f-5fdb-a9ba-76d595d3873e": "Lumenia.JavaScriptInitialTransferGate",
+    "4c95a3e0-4f1f-5551-81c9-fe3582854a17": "Lumenia.StyleInitialTransferGate",
+    "aed2b772-86ae-5cf1-b770-cdc7531df6db": "Lumenia.FontInitialTransferGate",
+    "91040add-14a2-5124-9ceb-0a8facf28338": "Lumenia.MetadataInitialTransferGate",
+    "6c3b3252-838d-54f8-9d61-4b31b31c1f09": "Lumenia.LargestContentfulPaintGate",
+    "f68d1108-08fa-5731-98ea-243e0464bd61": "Lumenia.FirstUsableArtworkGate",
+    "20e6d64f-f964-5b32-9707-b01635fcba3f": "Lumenia.PlumeriaModuleScopeGate",
+    "af18b455-fd9d-5cb0-bb49-97d09c8b8038": "Lumenia.PlumeriaClassStyleCompositionGate",
+    "23a2895e-534c-5999-9c75-42981efd82d4": "Lumenia.PlumeriaRuntimeRemovalGate",
+    "71c2026b-0e76-5330-bff3-9af4157230ff": "Lumenia.NextStaticExportBoundaryGate",
+    "25be1b45-323c-5527-b69d-fc6367ed331d": "Lumenia.NextComponentBoundaryGate",
+    "27d5a609-6455-5ca2-9ccd-6f0fec2f7457": "Lumenia.ArtworkGpuMemoryGate",
+    "18bf036a-e293-517b-9e08-cd64e3011f86": "Lumenia.ChromeEmptyFunctionalityGate",
+    "fd46b510-3741-59f4-b4c0-c4a538888f31": "Lumenia.ChromeCssFunctionalityGate",
+    "7baa5bd8-2fe5-5c3e-8aa9-876f61e3db67": "Lumenia.ChromeSurfaceFunctionalityGate",
+    "a0274963-d398-56cc-9d33-16bce9a2b94f": "Lumenia.ChromeSolidFunctionalityGate",
+    "7a0e3aaa-5937-55bf-b39e-ee74c8a4e8f1": "Lumenia.SafariEmptyFunctionalityGate",
+    "63c0abb6-8082-570e-bac5-a9afbcd5dbb5": "Lumenia.SafariCssFunctionalityGate",
+    "a50c6e35-5af4-570f-8b3b-6ae36ec70c01": "Lumenia.SafariSurfaceFunctionalityGate",
+    "330e26be-4344-50a8-8ad1-b0f7dd892718": "Lumenia.SafariSolidFunctionalityGate",
+    "7dfefcce-f16d-5a6b-8df3-94cc9ce042d4": "Lumenia.FirefoxEmptyFunctionalityGate",
+    "bc61b4da-f725-5429-bc96-5fca7723b810": "Lumenia.FirefoxCssFunctionalityGate",
+    "4acc32d2-c34c-5afb-aaca-3d6f4917088e": "Lumenia.FirefoxSurfaceFunctionalityGate",
+    "a1b17dc7-7eb0-569f-b877-599c2d32c1af": "Lumenia.FirefoxSolidFunctionalityGate",
+    "00cf27f0-b591-5d35-a953-8e90fa2cebce": "Lumenia.EdgeEmptyFunctionalityGate",
+    "9fa2ada1-9286-5121-9886-44f10fe584f2": "Lumenia.EdgeCssFunctionalityGate",
+    "9175a814-0727-546a-888b-a9ebd0e03497": "Lumenia.EdgeSurfaceFunctionalityGate",
+    "4b4827b3-62d2-5367-b5a7-10e21c2776da": "Lumenia.EdgeSolidFunctionalityGate",
+    "7ee74b3d-059a-5ea6-b26f-4c5e7383f3c6": "Lumenia.CssLineArtworkDrawingGate",
+    "2ec9706d-6206-5de2-aaf6-542e7f336b63": "Lumenia.CssOnlyApplicationGate",
+    "7cbebf58-9bb0-5346-a350-028a31978c07": "Lumenia.CssSurfaceArtworkDrawingGate",
+    "d63d9265-a8d6-5c44-94b7-2c6259cd6bf6": "Lumenia.CssSolidArtworkDrawingGate"
+  },
+  "proofReport": {
+    "artifactIdentifier": "1036f4f5-c476-56df-99d4-150b9fadeabb",
+    "claimIdentifiers": [
+      "543e95a7-25d9-53eb-addf-1eca7283be44",
+      "a0e5e544-3a28-588f-a04a-ecef28a75a68",
+      "884dc2e4-94c4-5622-904e-789dd2186b47",
+      "2914c7f0-ea38-5cec-9c53-715cf16e3f2c",
+      "9ed18638-7432-544f-8710-0cde084b9195",
+      "b3467681-81a2-5183-929d-9afc9aaf60f0",
+      "3e92b122-d2fe-5890-8c24-aafcd8fc5e33",
+      "90c7faa1-9721-596d-a8db-5b581572be33",
+      "e76f697b-718a-5cbb-b937-3695710767a3",
+      "35ba9d6b-abfe-5438-bdcf-960f8eb0158f",
+      "935c5368-7869-56ac-9346-a3719e4c4a62",
+      "7ba57ba1-7481-5f8b-bb84-1e94930879d9",
+      "13c791ec-40a2-5749-986c-7816c521b2ff",
+      "12ebcc33-1640-5e81-b5a2-f400102331f1",
+      "947ff2cf-29cd-5a00-bb98-ef9e37ff7408",
+      "04f36807-d7c2-527f-b22c-dacbdd0aded0",
+      "92cfff56-17f5-5995-b0f2-00254f41e0af",
+      "a968cd0f-8c5d-5953-906c-e40769388abd",
+      "f781bfd5-a32e-534e-ac60-9ea5a9e9288a",
+      "b4f27f24-d941-5e95-80fb-e70b2bb3eea9",
+      "bc433078-b2a0-5ce6-9fc1-4eab157d6651",
+      "21c3fceb-8154-5259-a619-ccfab976b7ee",
+      "f248748f-077d-55e1-bda4-cff8afc69b06",
+      "0aa200fe-8e88-529c-a69e-88c174a6df03",
+      "bb538e9e-fbbb-5ca6-8ec2-1e1fb756eeb2",
+      "03b95321-0d34-58a2-9486-a88ac41889a5",
+      "f5b5cea2-0aae-5d44-b5d6-4a1b36e192c5"
+    ],
+    "proofTargets": [
+      "Lumenia.asset_checks_iff_requirements",
+      "Lumenia.validate_raw_asset_accepts_iff",
+      "Lumenia.validate_raw_asset_rejects_iff",
+      "Lumenia.validate_raw_asset_preserves_input",
+      "Lumenia.validate_raw_asset_sound",
+      "Lumenia.validated_asset_satisfies_requirements",
+      "Lumenia.meshopt_variants_are_exclusive",
+      "Lumenia.extension_meshopt_requires_decoder",
+      "Lumenia.khronos_meshopt_requires_decoder",
+      "Lumenia.ktx2_requires_loader",
+      "Lumenia.draco_requires_loader",
+      "Lumenia.draco_is_enabled_iff_explicit",
+      "Lumenia.named_nodes_require_preservation",
+      "Lumenia.extras_require_preservation",
+      "Lumenia.both_meshopt_flags_reject",
+      "Lumenia.missing_meshopt_decoder_rejects",
+      "Lumenia.shipped_requires_validation",
+      "Lumenia.shipment_trace_is_exactly_optimize_validate_ship",
+      "Lumenia.shipped_history_requires_asset_requirements",
+      "Lumenia.invalid_asset_has_no_shipped_history",
+      "Lumenia.browser_capability_requires_client_component",
+      "Lumenia.static_export_cannot_require_server_only",
+      "Lumenia.accepted_component_places_browser_requirements_on_client",
+      "Lumenia.client_component_cannot_require_server_only",
+      "Lumenia.core_transfer_total_within_budget",
+      "Lumenia.category_budget_total_is_204800_bytes",
+      "Lumenia.measured_gate_pass_iff"
+    ],
+    "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+    "measurementProfile": {
+      "targetBrowsers": [
+        "chrome",
+        "safari",
+        "firefox",
+        "edge"
+      ],
+      "coreTransferBudgetKibibytes": 200,
+      "htmlBudgetKibibytes": 30,
+      "javascriptBudgetKibibytes": 120,
+      "styleBudgetKibibytes": 20,
+      "fontBudgetKibibytes": 20,
+      "metadataBudgetKibibytes": 10,
+      "largestContentfulPaintMilliseconds": 2500,
+      "firstUsableArtworkMilliseconds": 3000
+    },
+    "executionIdentifier": "01a09a2f-6a86-7f3e-885e-1b516bd73d53",
+    "createdAt": "2026-09-13T09:53:15.344Z",
+    "status": "pass",
+    "observations": [
+      {
+        "gateIdentifier": "79885f8e-618d-5cd3-9ee7-350d8e279b8b",
+        "status": "pass",
+        "observedValue": 0,
+        "limit": 0,
+        "unit": "exit code",
+        "checkedBy": [
+          "lake build"
+        ],
+        "failureReason": null,
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a2f-6a86-7f3e-885e-1b516bd73d53"
+      },
+      {
+        "gateIdentifier": "46de9356-94a7-5355-a9a6-a6fde3471fcc",
+        "status": "pass",
+        "observedValue": 0,
+        "limit": 0,
+        "unit": "warnings",
+        "checkedBy": [
+          "lake build diagnostics"
+        ],
+        "failureReason": null,
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a2f-6a86-7f3e-885e-1b516bd73d53"
+      },
+      {
+        "gateIdentifier": "f41d531f-0196-5b20-b945-ca46fae9c68c",
+        "status": "pass",
+        "observedValue": 0,
+        "limit": 0,
+        "unit": "exit code",
+        "checkedBy": [
+          "/Users/st/.local/share/mise/installs/node/24.15.0/bin/node --test --test-reporter=tap"
+        ],
+        "failureReason": null,
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a2f-6a86-7f3e-885e-1b516bd73d53"
+      },
+      {
+        "gateIdentifier": "086560f2-20bf-57f3-9a27-90eb0a01a009",
+        "status": "pass",
+        "observedValue": 0,
+        "limit": 0,
+        "unit": "exit code",
+        "checkedBy": [
+          "/Users/st/.local/share/mise/installs/node/24.15.0/bin/node scripts/verify-contract.mjs contracts/examples/verification-request.json contracts/examples/verification-result.json contracts/examples/valid-asset-manifest.json"
+        ],
+        "failureReason": null,
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a2f-6a86-7f3e-885e-1b516bd73d53"
+      },
+      {
+        "gateIdentifier": "def07315-f6e6-5266-818b-d351c346b7bf",
+        "status": "pass",
+        "observedValue": 0,
+        "limit": 0,
+        "unit": "mismatches",
+        "checkedBy": [
+          "UUIDv5 namespace recomputation and Lean declaration inventory"
+        ],
+        "failureReason": null,
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a2f-6a86-7f3e-885e-1b516bd73d53"
+      },
+      {
+        "gateIdentifier": "12e7cf84-79d8-5287-8370-9150ed6afc8b",
+        "status": "pass",
+        "observedValue": 0,
+        "limit": 0,
+        "unit": "files",
+        "checkedBy": [
+          "local Lean source scan; all project Lean files"
+        ],
+        "failureReason": null,
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a2f-6a86-7f3e-885e-1b516bd73d53"
+      },
+      {
+        "gateIdentifier": "6d27294e-b98b-5837-8931-d6907c80c2be",
+        "status": "pass",
+        "observedValue": 0,
+        "limit": 0,
+        "unit": "exit code",
+        "checkedBy": [
+          "lake env lean formal/Lumenia/AxiomAudit.lean"
+        ],
+        "failureReason": null,
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a2f-6a86-7f3e-885e-1b516bd73d53"
+      },
+      {
+        "gateIdentifier": "35302202-9761-5b5d-ac14-01302e53c2bc",
+        "status": "pass",
+        "observedValue": 0,
+        "limit": 0,
+        "unit": "unverified theorems",
+        "checkedBy": [
+          "Lean #print axioms for every registered public theorem"
+        ],
+        "failureReason": null,
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a2f-6a86-7f3e-885e-1b516bd73d53"
+      },
+      {
+        "gateIdentifier": "10f73733-d314-5c04-9ee1-10f74f8c6a6c",
+        "status": "pass",
+        "observedValue": 0,
+        "limit": 0,
+        "unit": "failed or missing checks",
+        "checkedBy": [
+          "lean-lsp-mcp: lean_build, lean_diagnostic_messages, lean_goal, lean_hover_info, lean_verify, lean_file_outline"
+        ],
+        "failureReason": null,
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a2f-6a86-7f3e-885e-1b516bd73d53"
+      }
+    ]
+  },
+  "measurementReceipt": {
+    "artifactIdentifier": "1036f4f5-c476-56df-99d4-150b9fadeabb",
+    "claimIdentifiers": [
+      "543e95a7-25d9-53eb-addf-1eca7283be44",
+      "a0e5e544-3a28-588f-a04a-ecef28a75a68",
+      "884dc2e4-94c4-5622-904e-789dd2186b47",
+      "2914c7f0-ea38-5cec-9c53-715cf16e3f2c",
+      "9ed18638-7432-544f-8710-0cde084b9195",
+      "b3467681-81a2-5183-929d-9afc9aaf60f0",
+      "3e92b122-d2fe-5890-8c24-aafcd8fc5e33",
+      "90c7faa1-9721-596d-a8db-5b581572be33",
+      "e76f697b-718a-5cbb-b937-3695710767a3",
+      "35ba9d6b-abfe-5438-bdcf-960f8eb0158f",
+      "935c5368-7869-56ac-9346-a3719e4c4a62",
+      "7ba57ba1-7481-5f8b-bb84-1e94930879d9",
+      "13c791ec-40a2-5749-986c-7816c521b2ff",
+      "12ebcc33-1640-5e81-b5a2-f400102331f1",
+      "947ff2cf-29cd-5a00-bb98-ef9e37ff7408",
+      "04f36807-d7c2-527f-b22c-dacbdd0aded0",
+      "92cfff56-17f5-5995-b0f2-00254f41e0af",
+      "a968cd0f-8c5d-5953-906c-e40769388abd",
+      "f781bfd5-a32e-534e-ac60-9ea5a9e9288a",
+      "b4f27f24-d941-5e95-80fb-e70b2bb3eea9",
+      "bc433078-b2a0-5ce6-9fc1-4eab157d6651",
+      "21c3fceb-8154-5259-a619-ccfab976b7ee",
+      "f248748f-077d-55e1-bda4-cff8afc69b06",
+      "0aa200fe-8e88-529c-a69e-88c174a6df03",
+      "bb538e9e-fbbb-5ca6-8ec2-1e1fb756eeb2",
+      "03b95321-0d34-58a2-9486-a88ac41889a5",
+      "f5b5cea2-0aae-5d44-b5d6-4a1b36e192c5"
+    ],
+    "proofTargets": [
+      "Lumenia.asset_checks_iff_requirements",
+      "Lumenia.validate_raw_asset_accepts_iff",
+      "Lumenia.validate_raw_asset_rejects_iff",
+      "Lumenia.validate_raw_asset_preserves_input",
+      "Lumenia.validate_raw_asset_sound",
+      "Lumenia.validated_asset_satisfies_requirements",
+      "Lumenia.meshopt_variants_are_exclusive",
+      "Lumenia.extension_meshopt_requires_decoder",
+      "Lumenia.khronos_meshopt_requires_decoder",
+      "Lumenia.ktx2_requires_loader",
+      "Lumenia.draco_requires_loader",
+      "Lumenia.draco_is_enabled_iff_explicit",
+      "Lumenia.named_nodes_require_preservation",
+      "Lumenia.extras_require_preservation",
+      "Lumenia.both_meshopt_flags_reject",
+      "Lumenia.missing_meshopt_decoder_rejects",
+      "Lumenia.shipped_requires_validation",
+      "Lumenia.shipment_trace_is_exactly_optimize_validate_ship",
+      "Lumenia.shipped_history_requires_asset_requirements",
+      "Lumenia.invalid_asset_has_no_shipped_history",
+      "Lumenia.browser_capability_requires_client_component",
+      "Lumenia.static_export_cannot_require_server_only",
+      "Lumenia.accepted_component_places_browser_requirements_on_client",
+      "Lumenia.client_component_cannot_require_server_only",
+      "Lumenia.core_transfer_total_within_budget",
+      "Lumenia.category_budget_total_is_204800_bytes",
+      "Lumenia.measured_gate_pass_iff"
+    ],
+    "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+    "measurementProfile": {
+      "targetBrowsers": [
+        "chrome",
+        "safari",
+        "firefox",
+        "edge"
+      ],
+      "coreTransferBudgetKibibytes": 200,
+      "htmlBudgetKibibytes": 30,
+      "javascriptBudgetKibibytes": 120,
+      "styleBudgetKibibytes": 20,
+      "fontBudgetKibibytes": 20,
+      "metadataBudgetKibibytes": 10,
+      "largestContentfulPaintMilliseconds": 2500,
+      "firstUsableArtworkMilliseconds": 3000
+    },
+    "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5",
+    "createdAt": "2026-09-13T09:54:00.696Z",
+    "status": "blocked",
+    "observations": [
+      {
+        "gateIdentifier": "f6a1a2ad-e119-5e11-b2dd-514b073f0f45",
+        "status": "pass",
+        "observedValue": 122646,
+        "limit": 204800,
+        "unit": "bytes",
+        "checkedBy": [
+          "Chrome 153.0.8010.36; Performance APIs and actual control interactions; cold local diagnostic profile"
+        ],
+        "failureReason": null,
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+      },
+      {
+        "gateIdentifier": "9c03cc70-46e8-523d-8ccc-19ba97bfcf02",
+        "status": "pass",
+        "observedValue": 5369,
+        "limit": 30720,
+        "unit": "bytes",
+        "checkedBy": [
+          "Chrome 153.0.8010.36; Performance APIs and actual control interactions; cold local diagnostic profile"
+        ],
+        "failureReason": null,
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+      },
+      {
+        "gateIdentifier": "8eac01e5-6b3f-5fdb-a9ba-76d595d3873e",
+        "status": "pass",
+        "observedValue": 114000,
+        "limit": 122880,
+        "unit": "bytes",
+        "checkedBy": [
+          "Chrome 153.0.8010.36; Performance APIs and actual control interactions; cold local diagnostic profile"
+        ],
+        "failureReason": null,
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+      },
+      {
+        "gateIdentifier": "4c95a3e0-4f1f-5551-81c9-fe3582854a17",
+        "status": "pass",
+        "observedValue": 2797,
+        "limit": 20480,
+        "unit": "bytes",
+        "checkedBy": [
+          "Chrome 153.0.8010.36; Performance APIs and actual control interactions; cold local diagnostic profile"
+        ],
+        "failureReason": null,
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+      },
+      {
+        "gateIdentifier": "aed2b772-86ae-5cf1-b770-cdc7531df6db",
+        "status": "pass",
+        "observedValue": 0,
+        "limit": 20480,
+        "unit": "bytes",
+        "checkedBy": [
+          "Chrome 153.0.8010.36; Performance APIs and actual control interactions; cold local diagnostic profile"
+        ],
+        "failureReason": null,
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+      },
+      {
+        "gateIdentifier": "91040add-14a2-5124-9ceb-0a8facf28338",
+        "status": "pass",
+        "observedValue": 480,
+        "limit": 10240,
+        "unit": "bytes",
+        "checkedBy": [
+          "Chrome 153.0.8010.36; Performance APIs and actual control interactions; cold local diagnostic profile"
+        ],
+        "failureReason": null,
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+      },
+      {
+        "gateIdentifier": "6c3b3252-838d-54f8-9d61-4b31b31c1f09",
+        "status": "pass",
+        "observedValue": 200,
+        "limit": 2500,
+        "unit": "milliseconds",
+        "checkedBy": [
+          "Chrome 153.0.8010.36; Performance APIs and actual control interactions; cold local diagnostic profile"
+        ],
+        "failureReason": null,
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+      },
+      {
+        "gateIdentifier": "f68d1108-08fa-5731-98ea-243e0464bd61",
+        "status": "pass",
+        "observedValue": 267.5,
+        "limit": 3000,
+        "unit": "milliseconds",
+        "checkedBy": [
+          "Chrome 153.0.8010.36; Performance APIs and actual control interactions; cold local diagnostic profile"
+        ],
+        "failureReason": null,
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+      },
+      {
+        "gateIdentifier": "20e6d64f-f964-5b32-9707-b01635fcba3f",
+        "status": "pass",
+        "observedValue": 0,
+        "limit": 0,
+        "unit": "violations",
+        "checkedBy": [
+          "TypeScript syntax tree",
+          "@plumeria/eslint-plugin 19.1.4"
+        ],
+        "failureReason": null,
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+      },
+      {
+        "gateIdentifier": "af18b455-fd9d-5cb0-bb49-97d09c8b8038",
+        "status": "pass",
+        "observedValue": 0,
+        "limit": 0,
+        "unit": "violations",
+        "checkedBy": [
+          "TypeScript syntax tree",
+          "@plumeria/eslint-plugin 19.1.4 with type information"
+        ],
+        "failureReason": null,
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+      },
+      {
+        "gateIdentifier": "23a2895e-534c-5999-9c75-42981efd82d4",
+        "status": "pass",
+        "observedValue": 0,
+        "limit": 0,
+        "unit": "runtime occurrences",
+        "checkedBy": [
+          "official @plumeria/turbopack-loader",
+          "webpack client module graph",
+          "emitted JavaScript syntax and source maps"
+        ],
+        "failureReason": null,
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+      },
+      {
+        "gateIdentifier": "71c2026b-0e76-5330-bff3-9af4157230ff",
+        "status": "pass",
+        "observedValue": 0,
+        "limit": 0,
+        "unit": "violations",
+        "checkedBy": [
+          "Next.js configuration",
+          "TypeScript syntax tree"
+        ],
+        "failureReason": null,
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+      },
+      {
+        "gateIdentifier": "25be1b45-323c-5527-b69d-fc6367ed331d",
+        "status": "pass",
+        "observedValue": 0,
+        "limit": 0,
+        "unit": "violations",
+        "checkedBy": [
+          "TypeScript static and dynamic import graph",
+          "closed application capability policy"
+        ],
+        "failureReason": null,
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+      },
+      {
+        "gateIdentifier": "27d5a609-6455-5ca2-9ccd-6f0fec2f7457",
+        "status": "blocked",
+        "observedValue": null,
+        "limit": null,
+        "unit": "bytes",
+        "checkedBy": [
+          "Chrome 153.0.8010.36; Performance APIs and actual control interactions; cold local diagnostic profile"
+        ],
+        "failureReason": "No usable machine observation. Safari remote automation is disabled; Firefox and Edge are not connected. GPU memory is unavailable.",
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+      },
+      {
+        "gateIdentifier": "18bf036a-e293-517b-9e08-cd64e3011f86",
+        "status": "pass",
+        "observedValue": true,
+        "limit": true,
+        "unit": "boolean",
+        "checkedBy": [
+          "Chrome 153.0.8010.36; Performance APIs and actual control interactions; cold local diagnostic profile"
+        ],
+        "failureReason": null,
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+      },
+      {
+        "gateIdentifier": "fd46b510-3741-59f4-b4c0-c4a538888f31",
+        "status": "pass",
+        "observedValue": true,
+        "limit": true,
+        "unit": "boolean",
+        "checkedBy": [
+          "Chrome 153.0.8010.36; Performance APIs and actual control interactions; cold local diagnostic profile"
+        ],
+        "failureReason": null,
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+      },
+      {
+        "gateIdentifier": "7baa5bd8-2fe5-5c3e-8aa9-876f61e3db67",
+        "status": "pass",
+        "observedValue": true,
+        "limit": true,
+        "unit": "boolean",
+        "checkedBy": [
+          "Chrome 153.0.8010.36; Performance APIs and actual control interactions; cold local diagnostic profile"
+        ],
+        "failureReason": null,
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+      },
+      {
+        "gateIdentifier": "a0274963-d398-56cc-9d33-16bce9a2b94f",
+        "status": "pass",
+        "observedValue": true,
+        "limit": true,
+        "unit": "boolean",
+        "checkedBy": [
+          "Chrome 153.0.8010.36; Performance APIs and actual control interactions; cold local diagnostic profile"
+        ],
+        "failureReason": null,
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+      },
+      {
+        "gateIdentifier": "7a0e3aaa-5937-55bf-b39e-ee74c8a4e8f1",
+        "status": "blocked",
+        "observedValue": null,
+        "limit": true,
+        "unit": "boolean",
+        "checkedBy": [
+          "enabled browser availability check"
+        ],
+        "failureReason": "No usable machine observation. Safari remote automation is disabled; Firefox and Edge are not connected. GPU memory is unavailable.",
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+      },
+      {
+        "gateIdentifier": "63c0abb6-8082-570e-bac5-a9afbcd5dbb5",
+        "status": "blocked",
+        "observedValue": null,
+        "limit": true,
+        "unit": "boolean",
+        "checkedBy": [
+          "enabled browser availability check"
+        ],
+        "failureReason": "No usable machine observation. Safari remote automation is disabled; Firefox and Edge are not connected. GPU memory is unavailable.",
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+      },
+      {
+        "gateIdentifier": "a50c6e35-5af4-570f-8b3b-6ae36ec70c01",
+        "status": "blocked",
+        "observedValue": null,
+        "limit": true,
+        "unit": "boolean",
+        "checkedBy": [
+          "enabled browser availability check"
+        ],
+        "failureReason": "No usable machine observation. Safari remote automation is disabled; Firefox and Edge are not connected. GPU memory is unavailable.",
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+      },
+      {
+        "gateIdentifier": "330e26be-4344-50a8-8ad1-b0f7dd892718",
+        "status": "blocked",
+        "observedValue": null,
+        "limit": true,
+        "unit": "boolean",
+        "checkedBy": [
+          "enabled browser availability check"
+        ],
+        "failureReason": "No usable machine observation. Safari remote automation is disabled; Firefox and Edge are not connected. GPU memory is unavailable.",
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+      },
+      {
+        "gateIdentifier": "7dfefcce-f16d-5a6b-8df3-94cc9ce042d4",
+        "status": "blocked",
+        "observedValue": null,
+        "limit": true,
+        "unit": "boolean",
+        "checkedBy": [
+          "enabled browser availability check"
+        ],
+        "failureReason": "No usable machine observation. Safari remote automation is disabled; Firefox and Edge are not connected. GPU memory is unavailable.",
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+      },
+      {
+        "gateIdentifier": "bc61b4da-f725-5429-bc96-5fca7723b810",
+        "status": "blocked",
+        "observedValue": null,
+        "limit": true,
+        "unit": "boolean",
+        "checkedBy": [
+          "enabled browser availability check"
+        ],
+        "failureReason": "No usable machine observation. Safari remote automation is disabled; Firefox and Edge are not connected. GPU memory is unavailable.",
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+      },
+      {
+        "gateIdentifier": "4acc32d2-c34c-5afb-aaca-3d6f4917088e",
+        "status": "blocked",
+        "observedValue": null,
+        "limit": true,
+        "unit": "boolean",
+        "checkedBy": [
+          "enabled browser availability check"
+        ],
+        "failureReason": "No usable machine observation. Safari remote automation is disabled; Firefox and Edge are not connected. GPU memory is unavailable.",
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+      },
+      {
+        "gateIdentifier": "a1b17dc7-7eb0-569f-b877-599c2d32c1af",
+        "status": "blocked",
+        "observedValue": null,
+        "limit": true,
+        "unit": "boolean",
+        "checkedBy": [
+          "enabled browser availability check"
+        ],
+        "failureReason": "No usable machine observation. Safari remote automation is disabled; Firefox and Edge are not connected. GPU memory is unavailable.",
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+      },
+      {
+        "gateIdentifier": "00cf27f0-b591-5d35-a953-8e90fa2cebce",
+        "status": "blocked",
+        "observedValue": null,
+        "limit": true,
+        "unit": "boolean",
+        "checkedBy": [
+          "enabled browser availability check"
+        ],
+        "failureReason": "No usable machine observation. Safari remote automation is disabled; Firefox and Edge are not connected. GPU memory is unavailable.",
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+      },
+      {
+        "gateIdentifier": "9fa2ada1-9286-5121-9886-44f10fe584f2",
+        "status": "blocked",
+        "observedValue": null,
+        "limit": true,
+        "unit": "boolean",
+        "checkedBy": [
+          "enabled browser availability check"
+        ],
+        "failureReason": "No usable machine observation. Safari remote automation is disabled; Firefox and Edge are not connected. GPU memory is unavailable.",
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+      },
+      {
+        "gateIdentifier": "9175a814-0727-546a-888b-a9ebd0e03497",
+        "status": "blocked",
+        "observedValue": null,
+        "limit": true,
+        "unit": "boolean",
+        "checkedBy": [
+          "enabled browser availability check"
+        ],
+        "failureReason": "No usable machine observation. Safari remote automation is disabled; Firefox and Edge are not connected. GPU memory is unavailable.",
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+      },
+      {
+        "gateIdentifier": "4b4827b3-62d2-5367-b5a7-10e21c2776da",
+        "status": "blocked",
+        "observedValue": null,
+        "limit": true,
+        "unit": "boolean",
+        "checkedBy": [
+          "enabled browser availability check"
+        ],
+        "failureReason": "No usable machine observation. Safari remote automation is disabled; Firefox and Edge are not connected. GPU memory is unavailable.",
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+      },
+      {
+        "gateIdentifier": "7ee74b3d-059a-5ea6-b26f-4c5e7383f3c6",
+        "status": "pass",
+        "observedValue": true,
+        "limit": true,
+        "unit": "boolean",
+        "checkedBy": [
+          "Chrome 153.0.8010.36; Performance APIs and actual control interactions; cold local diagnostic profile"
+        ],
+        "failureReason": null,
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+      },
+      {
+        "gateIdentifier": "2ec9706d-6206-5de2-aaf6-542e7f336b63",
+        "status": "pass",
+        "observedValue": 0,
+        "limit": 0,
+        "unit": "violations",
+        "checkedBy": [
+          "actual client module graph",
+          "application source policy",
+          "exported file inventory"
+        ],
+        "failureReason": null,
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+      },
+      {
+        "gateIdentifier": "7cbebf58-9bb0-5346-a350-028a31978c07",
+        "status": "pass",
+        "observedValue": true,
+        "limit": true,
+        "unit": "boolean",
+        "checkedBy": [
+          "Chrome 153.0.8010.36; Performance APIs and actual control interactions; cold local diagnostic profile"
+        ],
+        "failureReason": null,
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+      },
+      {
+        "gateIdentifier": "d63d9265-a8d6-5c44-94b7-2c6259cd6bf6",
+        "status": "pass",
+        "observedValue": true,
+        "limit": true,
+        "unit": "boolean",
+        "checkedBy": [
+          "Chrome 153.0.8010.36; Performance APIs and actual control interactions; cold local diagnostic profile"
+        ],
+        "failureReason": null,
+        "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+        "executionIdentifier": "01a09a30-2170-71c9-bb89-e79cd8f51ef5"
+      }
+    ]
+  },
+  "measurementErrors": []
+}

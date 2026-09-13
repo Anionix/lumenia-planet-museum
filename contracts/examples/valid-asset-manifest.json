@@ -1,0 +1,16 @@
+{
+  "artifactIdentifier": "1c5a7e9b-0d3f-5b62-9d8a-4e7f6b2c1a90",
+  "format": "glb",
+  "usesExtensionMeshopt": true,
+  "usesKhronosMeshopt": false,
+  "usesKtx2": true,
+  "usesWebp": false,
+  "usesDraco": false,
+  "requiresNamedNodes": true,
+  "requiresExtras": true,
+  "keepsNamedNodes": true,
+  "keepsExtras": true,
+  "hasMeshoptDecoder": true,
+  "hasKtx2Loader": true,
+  "hasDracoLoader": false
+}

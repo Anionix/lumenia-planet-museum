@@ -1,0 +1,74 @@
+{
+  "artifactIdentifier": "23a957e5-9f59-5c3b-bc34-893c4fd25630",
+  "claimIdentifiers": [
+    "3994c7e6-6387-590c-9922-3fad04fc482d",
+    "ac27dc88-da25-51f7-8af5-c431e22cd72b",
+    "cf86cf5d-e0c7-58e4-aa77-ae4d0e72bf46"
+  ],
+  "proofTargets": [
+    "Lumenia.transition",
+    "Lumenia.deploymentCapabilityAllowed",
+    "Lumenia.componentPlacementAllowed"
+  ],
+  "sourceRevision": "sha256:9c6383db05ae133dce19772d524b584bc0f1c3b01b9e4c8884ebc52125902ad2",
+  "measurementProfile": {
+    "targetBrowsers": [
+      "chrome",
+      "safari",
+      "firefox",
+      "edge"
+    ],
+    "coreTransferBudgetKibibytes": 200,
+    "htmlBudgetKibibytes": 30,
+    "javascriptBudgetKibibytes": 120,
+    "styleBudgetKibibytes": 20,
+    "fontBudgetKibibytes": 20,
+    "metadataBudgetKibibytes": 10,
+    "largestContentfulPaintMilliseconds": 2500,
+    "firstUsableArtworkMilliseconds": 3000
+  },
+  "executionIdentifier": "01a099c9-f57c-7626-a7bc-f940f1394cee",
+  "createdAt": "2026-09-13T08:04:34.767Z",
+  "status": "pass",
+  "observations": [
+    {
+      "gateIdentifier": "3994c7e6-6387-590c-9922-3fad04fc482d",
+      "status": "pass",
+      "observedValue": 0,
+      "limit": 0,
+      "unit": "mismatches",
+      "checkedBy": [
+        "Wolfram Language evaluator; independent delegated agent Pasteur"
+      ],
+      "failureReason": null,
+      "sourceRevision": "sha256:9c6383db05ae133dce19772d524b584bc0f1c3b01b9e4c8884ebc52125902ad2",
+      "executionIdentifier": "01a099c9-f57c-7626-a7bc-f940f1394cee"
+    },
+    {
+      "gateIdentifier": "ac27dc88-da25-51f7-8af5-c431e22cd72b",
+      "status": "pass",
+      "observedValue": 0,
+      "limit": 0,
+      "unit": "mismatches",
+      "checkedBy": [
+        "Wolfram Language evaluator; independent delegated agent Pasteur"
+      ],
+      "failureReason": null,
+      "sourceRevision": "sha256:9c6383db05ae133dce19772d524b584bc0f1c3b01b9e4c8884ebc52125902ad2",
+      "executionIdentifier": "01a099c9-f57c-7626-a7bc-f940f1394cee"
+    },
+    {
+      "gateIdentifier": "cf86cf5d-e0c7-58e4-aa77-ae4d0e72bf46",
+      "status": "pass",
+      "observedValue": 0,
+      "limit": 0,
+      "unit": "mismatches",
+      "checkedBy": [
+        "Wolfram Language evaluator; independent delegated agent Pasteur"
+      ],
+      "failureReason": null,
+      "sourceRevision": "sha256:9c6383db05ae133dce19772d524b584bc0f1c3b01b9e4c8884ebc52125902ad2",
+      "executionIdentifier": "01a099c9-f57c-7626-a7bc-f940f1394cee"
+    }
+  ]
+}

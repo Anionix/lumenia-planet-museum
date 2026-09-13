@@ -1,0 +1,44 @@
+{
+  "artifactIdentifier": "e67bec4e-cc81-54b8-8de8-e04f06503867",
+  "executionIdentifier": "01a09ab9-d6e6-735e-ad63-6db20639d0a6",
+  "recordedAt": "2026-09-13T12:44:32.377Z",
+  "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
+  "machineContract": {
+    "state": "integrated",
+    "transition": "delegated calculations -> reviewed source -> dependency correction -> current-source verification"
+  },
+  "assignments": [
+    {
+      "responsibility": "Lean dimension definitions and proof draft",
+      "agentIdentifier": "01a09aaf-0c80-7b32-a334-dc21c3cf82bd",
+      "state": "closedAfterIntegrationHandoff",
+      "files": [
+        "formal/ArtPlanetarium/Dimension.lean",
+        "formal/ArtPlanetarium/DimensionProofs.lean",
+        "formal/ArtPlanetarium.lean"
+      ]
+    },
+    {
+      "responsibility": "Independent Wolfram calculations",
+      "agentIdentifier": "01a09aaf-117d-7e12-b74e-9d0b44dfb276",
+      "state": "completedAndClosed",
+      "files": [
+        "verification-dimension.wl"
+      ]
+    }
+  ],
+  "integration": {
+    "responsibility": "Parent coordinator",
+    "changes": [
+      "Connected exact coordinate JSON boundary and CSS placement",
+      "Removed transitive propext dependencies in dimension definitions and proofs",
+      "Reconciled source-backed artist cards and independent calculation rows"
+    ],
+    "evidence": [
+      "lean-language-server-receipt.json",
+      "wolfram-receipt.json",
+      "proof-report.json",
+      "gate-report.json"
+    ]
+  }
+}
