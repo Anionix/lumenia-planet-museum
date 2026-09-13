@@ -5,6 +5,7 @@ import { tmpdir } from 'node:os';
 import path from 'node:path';
 import test from 'node:test';
 import { inspectCharacterAsset } from '../scripts/inspect-character-asset.mjs';
+import { characterRegistration } from '../scripts/character-registration.mjs';
 
 // llm machine contract; claimIdentifier: 8b952955-8da1-53ed-8cc0-87934f160bfa
 // executionIdentifier: each real admission run supplies its own UUIDv7.
@@ -21,15 +22,20 @@ async function fixture(t, mutate = () => {}) {
   await mkdir(path.join(root, 'evidence'), { recursive: true });
   // Deliberately not image content: this test covers receipt admission, not image decoding or visual QA.
   const bytes = Buffer.from('synthetic receipt boundary fixture; not an artwork');
+  const registration = await characterRegistration('william-morris');
   const reports = {
-    'validation-extended.json': { ok: true },
+    'validation-extended.json': { ok: true, imageSha256: digest(bytes), width: 1536, height: 2288, sprite_version_number: 2, errors: [] },
     'chroma-despill-extended.json': { ok: true },
     'direction-blind-validation.json': { ok: true },
     'direction-semantics.json': { directions: directions.map(expected => ({ expected,
-      verdict: 'pass', observed: 'synthetic observation', reason: 'test fixture only' })) },
+      verdict: 'pass', observed: 'synthetic observation', reason: 'test fixture only', horizontalEvidence: 'synthetic horizontal evidence', verticalEvidence: 'synthetic vertical evidence' })) },
     'visual-review.json': { visual_qa: 'pass', reviewerIdentifier: 'synthetic-test-reviewer' },
+    'review.json': { errors: [] },
+    'look-continuity.json': { pairs: directions.map((direction, index) => ({ from: direction, to: directions[(index + 1) % 16] })) },
   };
   const receipt = { status: 'pass', artifactIdentifier: '8b952955-8da1-53ed-8cc0-87934f160bfa',
+    personIdentifier: registration.personIdentifier, profileIdentifier: registration.profileIdentifier,
+    characterSlug: registration.slug, representation: 'fictionalReconstruction',
     executionIdentifier: '01a09af7-f340-76cb-86a7-4075de7842d3', spriteVersionNumber: 2,
     width: 1536, height: 2288, bytes: bytes.length, sha256: digest(bytes) };
   mutate({ receipt, reports });
@@ -54,6 +60,11 @@ test('Character admission rejects sixteen unique but unrecognized direction labe
   assert.equal((await inspectCharacterAsset(directory)).status, 'fail');
 });
 for (const [name, mutate] of [
+  ['wrong person', ({ receipt }) => { receipt.personIdentifier = 'another person'; }],
+  ['unbound decoded image', ({ reports }) => { reports['validation-extended.json'].imageSha256 = '0'.repeat(64); }],
+  ['missing axis evidence', ({ reports }) => { reports['direction-semantics.json'].directions[1].horizontalEvidence = ''; }],
+  ['failed standard inspection', ({ reports }) => { reports['review.json'].errors.push('clipped frame'); }],
+  ['incomplete continuity', ({ reports }) => { reports['look-continuity.json'].pairs.pop(); }],
   ['duplicate direction', ({ reports }) => { reports['direction-semantics.json'].directions[1].expected = directions[0]; }],
   ['missing direction', ({ reports }) => { reports['direction-semantics.json'].directions.pop(); }],
   ['failed direction', ({ reports }) => { reports['direction-semantics.json'].directions[0].verdict = 'fail'; }],

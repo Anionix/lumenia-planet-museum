@@ -5,7 +5,7 @@ Plumeria・React・Next.jsを土台に、資料から着想したCSS作品と、
 ## 今の状態
 
 - 15人分の資料付きMaterial Sphere展示と、ウィリアム・モリス一人分の制作室があります。
-- モリスの人物画像は制作・検査中です。合格した画像が登録されるまで画面へ組み込みません。
+- モリスはCSSの形とアニメーションで表示します。Codex用の画像版は同じ形から書き出し、独立した検査後に登録します。
 - CSS出力は接続済みです。画像・SVG・Canvas・Three.jsには別々の登録口がありますが、変換処理は未接続です。人物画像を球の画像変換と数えません。
 - アプリケーション検査と、全ブラウザー・性能検査は別です。後者や人物検査が未完了なら、接続報告は合格になりません。
 
@@ -21,13 +21,13 @@ node scripts/publish-material-sphere-evidence.mjs
 npm run preview
 ```
 
-`/planetarium/` は作品一覧、`/atelier/william-morris/` は最初の制作室です。ソースを変更したらビルドと検査を更新してください。人物の完成画像は別工程で検査後に登録します。
+`/planetarium/` は作品一覧、`/atelier/william-morris/` は最初の制作室です。ソースを変更したらビルドと検査を更新してください。モリスはCSSで描かれ、挨拶・注目・制作・鑑賞に合わせて動きます。停止と動きを減らす設定に対応します。同じ人物からの画像書き出しは検査後に登録します。
 
 [制作意図](verification/planet-museum-intent.md) → [接続仕様](verification/planet-museum-spec.md) → [数理証明](planetarium/reports/proof-report.md) → [接続報告](reports/material-sphere-integration-report.md) をたどれます。報告は対象ソースの改訂付きで、過去の合格を現在の完成判定へ流用しません。
 
 人物制作へ渡す調査は [15人の人物調査](verification/people-research.md) と [機械可読な人物証跡](verification/people-research.json) に分けています。確認できた事実と、Material Sphereへ翻訳した提案を混ぜません。
 
-制作の担当境界と進行状態は [人物制作キュー](verification/character-production-queue.json) で追跡します。合格前の人物は公開アプリへ登録しません。
+制作の担当境界と進行状態は [人物制作キュー](verification/character-production-queue.json) で追跡します。検査前の人物画像は公開アプリへ登録しません。CSSの人物と画像版の検査状態は区別します。
 
 ## Lumeniaの検算基盤
 

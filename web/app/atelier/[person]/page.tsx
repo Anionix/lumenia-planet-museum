@@ -2,7 +2,7 @@ import '@plumeria/core';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { materialSphereCatalog } from '../../../artwork/material-sphere-catalog';
-import { museumCharacterAvailability } from '../../../artwork/museum-character-availability';
+import { availableStudioSlugs, museumCharacterAvailability } from '../../../artwork/museum-character-availability';
 import { ArtistStudio } from '../../../components/ArtistStudio';
 import { studioStyles } from '../../../components/ArtistStudio.styles';
 import { MaterialSphereArtwork } from '../../../components/MaterialSphere.generated';
@@ -14,7 +14,7 @@ import { sphereStyles } from '../../../components/MaterialSphere.styles';
 // execution UUIDv7: 01a09ad3-4fb7-78b0-bbc0-77a8f7eb5016
 // transition: source-scoped artist -> fictional visit -> primary-source readback and sphere workbench.
 export const dynamicParams = false;
-export function generateStaticParams() { return [{ person: 'william-morris' }]; }
+export function generateStaticParams() { return availableStudioSlugs.map(person => ({ person })); }
 export async function generateMetadata({ params }: { params: Promise<{ person: string }> }): Promise<Metadata> {
   const { person } = await params;
   const profile = materialSphereCatalog.find(item => item.slug === person);
@@ -23,14 +23,15 @@ export async function generateMetadata({ params }: { params: Promise<{ person: s
 export default async function ArtistStudioPage({ params }: { params: Promise<{ person: string }> }) {
   const { person } = await params;
   const profile = materialSphereCatalog.find(item => item.slug === person);
-  if (!profile || person !== 'william-morris') notFound();
+  const character = museumCharacterAvailability.find(item => item.slug === person);
+  if (!profile || !character || !availableStudioSlugs.includes(person)) notFound();
   return <div classStyle={[galleryStyles.shell]}><GalleryHeader />
     <main>
       <div classStyle={[studioStyles.introduction]}><div><h1 classStyle={[studioStyles.title]}>{profile.name}の制作室へ</h1>
         <p classStyle={[studioStyles.period]}>資料の時代：{profile.referencePeriod} / {profile.referenceWork}</p></div>
         <a href="#studio-sources" classStyle={[sphereStyles.source]}>背景・資料を読む</a></div>
       <ArtistStudio name={profile.name} referenceWork={profile.referenceWork} interpretation={profile.interpretation} morris={person === 'william-morris'}
-        characterReady={museumCharacterAvailability.ready}>
+        character={character}>
         <MaterialSphereArtwork profileIdentifier={profile.profileIdentifier} />
       </ArtistStudio>
       <section id="studio-sources" classStyle={[studioStyles.sources]}>

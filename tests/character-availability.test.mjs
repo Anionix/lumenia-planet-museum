@@ -22,5 +22,6 @@ test('Accepted character availability preserves the image digest and evidence ru
 test('The studio reads freshly generated character availability instead of a manual ready flag', async () => {
   assert.equal(await readFile(new URL('../web/artwork/museum-character-availability.ts', import.meta.url), 'utf8'), await characterAvailabilitySource());
   const route = await readFile(new URL('../web/app/atelier/[person]/page.tsx', import.meta.url), 'utf8');
-  assert.match(route, /characterReady=\{museumCharacterAvailability\.ready\}/);
+  assert.match(route, /museumCharacterAvailability\.find\(item => item\.slug === person\)/);
+  assert.match(route, /character=\{character\}/);
 });

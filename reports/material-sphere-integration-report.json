@@ -1,18 +1,18 @@
 {
   "artifactIdentifier": "e67bec4e-cc81-54b8-8de8-e04f06503867",
-  "executionIdentifier": "01a09b39-61ce-7125-a2a9-30d531af2116",
-  "recordedAt": "2026-09-13T14:43:44.525Z",
-  "sourceRevision": "sha256:e71b7270c68cc3ffb60eb1c6ab9adf5a6c1a901c38d80dbc6365b16f3f4f2481",
+  "executionIdentifier": "01a09b8c-8ea3-733c-ad90-5584344f4b50",
+  "recordedAt": "2026-09-13T16:14:35.209Z",
+  "sourceRevision": "sha256:d8637df6f052439c7f48367ef7fc2390be9dad21a581e1e4ad569c7c53a35461",
   "mathematicsSourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
   "status": "blocked",
   "predecessors": [
     {
       "file": "verification/planet-museum-intent.md",
-      "sha256": "05d736470ba3d2722febbf9d91b52425d5f026f56cf8349c716acabd89dc4fe4"
+      "sha256": "27493905e89b2dd3a13d2c2f8ff16d50b65b77da8843fa73879058fa8f0c8b88"
     },
     {
       "file": "verification/planet-museum-spec.md",
-      "sha256": "4d5dfed8b475b9c18014939194cce2c0008d965817b64b2d08792b9c9081cf6f"
+      "sha256": "dc6c79da3e3de87f8d6ab7885505762716c745ed7150c64d2d2f3b6841dd46e4"
     },
     {
       "file": "planetarium/reports/proof-report.json",
@@ -35,7 +35,7 @@
     {
       "gateName": "MathematicalPrerequisites",
       "gateIdentifier": "21b8162e-08a4-585e-abe9-87adda3ff119",
-      "executionIdentifier": "01a09b39-61ce-7125-a2a9-30d531af2116",
+      "executionIdentifier": "01a09b8c-8ea3-733c-ad90-5584344f4b50",
       "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
       "status": "pass",
       "observation": {
@@ -52,8 +52,8 @@
     {
       "gateName": "GeneratedBridgeIntegrity",
       "gateIdentifier": "e10972ca-c5da-5251-88b5-29829f194a5c",
-      "executionIdentifier": "01a09b39-61ce-7125-a2a9-30d531af2116",
-      "sourceRevision": "sha256:e71b7270c68cc3ffb60eb1c6ab9adf5a6c1a901c38d80dbc6365b16f3f4f2481",
+      "executionIdentifier": "01a09b8c-8ea3-733c-ad90-5584344f4b50",
+      "sourceRevision": "sha256:d8637df6f052439c7f48367ef7fc2390be9dad21a581e1e4ad569c7c53a35461",
       "status": "pass",
       "observation": {
         "value": 0,
@@ -68,8 +68,8 @@
     {
       "gateName": "ApplicationBuildAndCodeInspection",
       "gateIdentifier": "810af02d-1589-5bcb-a9b5-1b19a67a586d",
-      "executionIdentifier": "01a09b39-61ce-7125-a2a9-30d531af2116",
-      "sourceRevision": "sha256:e71b7270c68cc3ffb60eb1c6ab9adf5a6c1a901c38d80dbc6365b16f3f4f2481",
+      "executionIdentifier": "01a09b8c-8ea3-733c-ad90-5584344f4b50",
+      "sourceRevision": "sha256:d8637df6f052439c7f48367ef7fc2390be9dad21a581e1e4ad569c7c53a35461",
       "status": "pass",
       "observation": {
         "value": 0,
@@ -86,8 +86,8 @@
     {
       "gateName": "CharacterAdmission",
       "gateIdentifier": "9ee5bb0d-3c4f-5b53-871f-442ec289e4ca",
-      "executionIdentifier": "01a09b39-61ce-7125-a2a9-30d531af2116",
-      "sourceRevision": "sha256:e71b7270c68cc3ffb60eb1c6ab9adf5a6c1a901c38d80dbc6365b16f3f4f2481",
+      "executionIdentifier": "01a09b8c-8ea3-733c-ad90-5584344f4b50",
+      "sourceRevision": "sha256:d8637df6f052439c7f48367ef7fc2390be9dad21a581e1e4ad569c7c53a35461",
       "status": "blocked",
       "observation": {
         "value": null,
@@ -103,8 +103,8 @@
     {
       "gateName": "CurrentBuildBrowserVerification",
       "gateIdentifier": "6238b980-5791-5395-b2f1-94f43a2b475b",
-      "executionIdentifier": "01a09b39-61ce-7125-a2a9-30d531af2116",
-      "sourceRevision": "sha256:e71b7270c68cc3ffb60eb1c6ab9adf5a6c1a901c38d80dbc6365b16f3f4f2481",
+      "executionIdentifier": "01a09b8c-8ea3-733c-ad90-5584344f4b50",
+      "sourceRevision": "sha256:d8637df6f052439c7f48367ef7fc2390be9dad21a581e1e4ad569c7c53a35461",
       "status": "blocked",
       "observation": {
         "value": null,
@@ -119,8 +119,8 @@
     {
       "gateName": "FourBrowserPerformanceVerification",
       "gateIdentifier": "68d5e3f5-8ebd-51cd-95be-01d6c8d10eaa",
-      "executionIdentifier": "01a09b39-61ce-7125-a2a9-30d531af2116",
-      "sourceRevision": "sha256:e71b7270c68cc3ffb60eb1c6ab9adf5a6c1a901c38d80dbc6365b16f3f4f2481",
+      "executionIdentifier": "01a09b8c-8ea3-733c-ad90-5584344f4b50",
+      "sourceRevision": "sha256:d8637df6f052439c7f48367ef7fc2390be9dad21a581e1e4ad569c7c53a35461",
       "status": "blocked",
       "observation": {
         "value": null,

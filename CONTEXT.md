@@ -1,0 +1,13 @@
+# Lumenia Planet Museum
+
+制作中のアトリエを訪ね、資料を手がかりに色とかたちを試すMuseum。
+
+## 言葉
+
+**制作室**：人物の資料をもとに、制作の途中を体験できるように構成した架空の空間。現存する部屋の忠実な復元という意味ではない。
+
+**Museumのキャラクター**：資料から着想して作る案内役。本人そのものや、本人の発言を再現した存在とは区別する。
+
+**Material Sphere**：資料の特徴を色・形・質感の規則へ翻訳して作る球の展示。資料に登場する実作品の複製ではない。
+
+<!-- llm machine contract; claimIdentifier: 4908c1b1-0ebf-55ef-a83f-378e2bfdf4c5; executionIdentifier: 01a09b7c-3f68-756d-bae6-f55806a70d69; transition: agreed museum vocabulary -> shared glossary. -->

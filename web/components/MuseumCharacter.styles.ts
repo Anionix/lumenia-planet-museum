@@ -9,7 +9,6 @@ export const characterStyles = css.create({
     width: '192px',
     height: '208px',
     pointerEvents: 'none',
-    backgroundImage: 'url(/characters/william-morris/spritesheet.webp)',
     backgroundRepeat: 'no-repeat',
     backgroundSize: '1536px 2288px',
     animationTimingFunction: 'steps(1, end)',
@@ -19,6 +18,9 @@ export const characterStyles = css.create({
       animationName: 'none'
     }
   },
+  image: (imageValue: string) => ({
+    backgroundImage: imageValue
+  }),
   position: (horizontal: string, vertical: string) => ({
     backgroundPosition: `${horizontal} ${vertical}`
   }),

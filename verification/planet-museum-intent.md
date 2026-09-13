@@ -23,3 +23,5 @@ Sitesへの表示とGitHubの非公開リポジトリー作成も作業範囲に
 <!-- llm machine contract; claimIdentifier: 8b952955-8da1-53ed-8cc0-87934f160bfa; executionIdentifier: 01a09af7-f340-76cb-86a7-4075de7842d3; transition: static exhibition -> sourced fictional atelier -> individually validated character -> private deployment -->
 
 <!-- llm machine contract; transition: user-directed museum scope -> scoped specification; claim UUIDv5: 63c605f5-9e47-5b49-949f-cad7ce96b4ed; execution UUIDv7: 01a09ad3-4fb7-78b0-bbc0-77a8f7eb5016 -->
+
+追加決定：モリスの姿と動きをCSSで作り、同じ造形からCodex用の画像を出力する。MuseumのCSS表示を先に提供し、画像版の検査状態は別に記録する。

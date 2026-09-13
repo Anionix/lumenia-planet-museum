@@ -1,0 +1,55 @@
+{
+  "executionIdentifier": "01a09b47-ab45-7a15-aadc-61a3761b2209",
+  "claimIdentifier": "4d5a8fb9-c378-55b7-ad70-9b93a1a7432a",
+  "recordedAt": "2026-09-13T14:59:20.517Z",
+  "status": "pass",
+  "scope": "Private publication of the current museum prototype, not whole-project completion",
+  "sourceRevision": "sha256:e71b7270c68cc3ffb60eb1c6ab9adf5a6c1a901c38d80dbc6365b16f3f4f2481",
+  "commit": "f326058d129f8ca1f327adc62cfc0cabe62b4d75",
+  "github": {
+    "url": "https://github.com/Anionix/lumenia-planet-museum",
+    "private": true,
+    "remoteCommitMatches": true
+  },
+  "archive": {
+    "archive_format": "tar",
+    "sediment_file_id": "file_00000000e34c82118187ea1e955146e8",
+    "content_hash": "sha256:b7bcf58c57c0986a9814bcedaadc67762b1c44940e94f79eb88092baa68bac26",
+    "size_bytes": 7034880,
+    "file_count": 170
+  },
+  "deployment": {
+    "id": "appgdep_6aa6ba075ad881918d2fba2242907872",
+    "project_id": "appgprj_6aa6a1d7edc08191b1cfa99c7bdccd26",
+    "title": "Lumenia Planet Museum",
+    "version_id": "appgprj_6aa6a1d7edc08191b1cfa99c7bdccd26~appgver_1858d576e44481918b34e50a4760c4a8",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://lumenia-planet-museum.anionix.chatgpt.site",
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6aa6a1d7edc08191b1cfa99c7bdccd26",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-09-13T14:58:46.804090+00:00"
+  },
+  "observation": {
+    "observedValue": 1,
+    "limit": 1,
+    "unit": "successfulPrivateDeployments",
+    "comparison": "equals",
+    "checkedBy": [
+      "Sites private deployment operation",
+      "Sites deployment status readback"
+    ],
+    "failureReason": null
+  },
+  "limitations": [
+    "Character atlas is still in production and not mounted",
+    "Full browser and performance acceptance is pending",
+    "Other Material Sphere renderers have registered boundaries but no conversion implementation"
+  ],
+  "machineContract": {
+    "state": "privatelyDeployedPrototype",
+    "transition": "source commit -> identical static archive -> saved version -> verified private deployment"
+  }
+}

@@ -5,7 +5,9 @@ import { useEffect, useRef, useState, type PointerEvent, type ReactNode } from '
 import { flushSync } from 'react-dom';
 import { studioStyles } from './ArtistStudio.styles';
 import { MuseumCharacter } from './MuseumCharacter';
-import { characterLookDirection } from '../artwork/museum-character.mjs';
+import { CssMuseumCharacter } from './CssMuseumCharacter';
+import { characterAnimationForStudioStep, characterLookDirection } from '../artwork/museum-character.mjs';
+import type { MuseumCharacterAvailability } from '../artwork/museum-character-availability';
 
 // llm machine contract; claim UUIDv5: 68d2fd0d-a670-583b-88b5-cbed5fa5ef83
 // execution UUIDv7: 01a09ad3-4fb7-78b0-bbc0-77a8f7eb5016
@@ -13,9 +15,12 @@ import { characterLookDirection } from '../artwork/museum-character.mjs';
 // No voice cloning, generated historical quotes, live model calls, or claims of an authentic studio reconstruction.
 const topics = ['お邪魔します', '何を見ればいい？', 'かたちを重ねて', '球にしてみよう'] as const;
 const masks = ['inset(0 100% 0 0)', 'inset(0 70% 0 0)', 'inset(0 35% 0 0)', 'inset(0 0% 0 0)'] as const;
-export function ArtistStudio({ children, name, referenceWork, interpretation, morris, characterReady = false }: {
-  children: ReactNode; name: string; referenceWork: string; interpretation: string; morris: boolean; characterReady?: boolean;
+export function ArtistStudio({ children, name, referenceWork, interpretation, morris, character }: {
+  children: ReactNode; name: string; referenceWork: string; interpretation: string; morris: boolean; character: MuseumCharacterAvailability;
 }) {
+  const characterReady = character.ready && character.imagePath !== null;
+  const [characterPresentation, setCharacterPresentation] = useState<'smooth' | 'frames'>(morris ? 'smooth' : 'frames');
+  const visibleCharacter = morris || characterReady;
   const [step, setStep] = useState(0);
   const [paused, setPaused] = useState(false);
   const [direction, setDirection] = useState<number | null>(null);
@@ -23,7 +28,7 @@ export function ArtistStudio({ children, name, referenceWork, interpretation, mo
   current.current = { step, paused };
   const figure = useRef<HTMLDivElement>(null);
   function followPointer(event: PointerEvent<HTMLDivElement>) {
-    if (!characterReady || paused || event.pointerType !== 'mouse' || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!visibleCharacter || paused || event.pointerType !== 'mouse' || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const bounds = figure.current?.getBoundingClientRect();
     if (bounds) setDirection(characterLookDirection(event.clientX - bounds.left - bounds.width / 2,
       event.clientY - bounds.top - bounds.height * 0.3));
@@ -75,8 +80,11 @@ export function ArtistStudio({ children, name, referenceWork, interpretation, mo
       data-studio-step={step} classStyle={[studioStyles.scene]} onPointerMove={followPointer} onPointerLeave={() => setDirection(null)}>
       <div aria-hidden="true" classStyle={[studioStyles.window]} /><div aria-hidden="true" classStyle={[studioStyles.light]} />
       <div aria-hidden="true" classStyle={[studioStyles.rail]} />
-      {morris && characterReady && <div ref={figure} classStyle={[studioStyles.figure]}>
-        <MuseumCharacter key={step} step={step} paused={paused} direction={direction} />
+      {visibleCharacter && <div ref={figure} classStyle={[studioStyles.figure]} data-character-presentation={characterPresentation}>
+        {morris && characterPresentation === 'smooth'
+          ? <CssMuseumCharacter key={step} state={characterAnimationForStudioStep(step)} paused={paused} lookDirection={direction} />
+          : characterReady && <MuseumCharacter key={step} step={step} paused={paused} direction={direction}
+            artifactIdentifier={character.artifactIdentifier} imagePath={character.imagePath!} />}
       </div>}
       <div aria-hidden="true" classStyle={[studioStyles.worktable]} />
       <div aria-hidden="true" classStyle={[studioStyles.sheet]} /><div aria-hidden="true" classStyle={[studioStyles.brush]} />
@@ -90,7 +98,15 @@ export function ArtistStudio({ children, name, referenceWork, interpretation, mo
           {topics.map((topic, index) => <button key={topic} type="button" aria-pressed={step === index} onClick={() => { setStep(index); setDirection(null); }}
             classStyle={[studioStyles.choice, step === index && studioStyles.chosen]}>{topic}</button>)}
         </div>
-        {characterReady && <button type="button" aria-pressed={paused} onClick={() => { setPaused(!paused); setDirection(null); }}
+        {morris && characterReady && <div role="group" aria-label="人物の動き方" classStyle={[studioStyles.choices]}>
+          <button type="button" aria-pressed={characterPresentation === 'smooth'}
+            onClick={() => { setCharacterPresentation('smooth'); setDirection(null); }}
+            classStyle={[studioStyles.choice, characterPresentation === 'smooth' && studioStyles.chosen]}>なめらかな動き</button>
+          <button type="button" disabled={!characterReady} aria-pressed={characterPresentation === 'frames'}
+            onClick={() => { setCharacterPresentation('frames'); setDirection(null); }}
+            classStyle={[studioStyles.choice, characterPresentation === 'frames' && studioStyles.chosen]}>こま撮りの動き</button>
+        </div>}
+        {visibleCharacter && <button type="button" aria-pressed={paused} onClick={() => { setPaused(!paused); setDirection(null); }}
           classStyle={[studioStyles.motionControl]}>{paused ? '人物を動かす' : '人物の動きを止める'}</button>}
       </div>
     </div>
