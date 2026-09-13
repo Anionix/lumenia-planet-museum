@@ -1,0 +1,87 @@
+{
+  "artifactIdentifier": "1063bcec-0d15-5a94-9c54-6a6b02f53844",
+  "executionIdentifier": "01a09b58-e270-765a-987e-fdc549d2da39",
+  "recordedAt": "2026-09-14",
+  "state": "assigned",
+  "llmMachineContract": {
+    "stateTransition": "assigned -> producing -> independently_reviewed -> admitted -> staged",
+    "stageRule": "A character remains unavailable to the application until its exact package bytes and all required evidence pass the admission inspector.",
+    "ownershipRule": "Each character has one owner and one run directory; another worker may review but may not overwrite that run."
+  },
+  "concurrencyPolicy": {
+    "lead": "Astra Max",
+    "workerModel": "Luna Max",
+    "maximumLunaWorkers": 6,
+    "duplicateGeneration": false
+  },
+  "assignments": [
+    {
+      "assignmentIdentifier": "e19a6ab9-462e-5952-bf1f-c7f17682b63a",
+      "personIdentifier": "4f7cc469-4d4a-5409-95f3-0691a8214497",
+      "canonicalName": "William Morris",
+      "ownerAgentIdentifier": "01a09b1b-0b65-7a02-af68-5516b84b331c",
+      "state": "producing",
+      "runDirectory": "/Users/st/.codex/visualizations/2026/09/13/01a09aad-5c62-7100-b62f-66f787bcc103/william-morris"
+    },
+    {
+      "assignmentIdentifier": "a0a79faf-6ec8-58f2-9e15-e313519c005d",
+      "personIdentifier": "d2ccba89-2c3b-5fe9-b1dc-bd47ef62f6fe",
+      "canonicalName": "Alphonse Mucha",
+      "ownerAgentIdentifier": "01a09b58-7c62-7fe0-8b9a-9167f2f3cd22",
+      "state": "assigned",
+      "runDirectory": null,
+      "sourceEvidence": [
+        "d5f8e8c1-a10b-5a25-a9b1-916ca7c67019",
+        "92551cc2-1ab5-5c2b-ae3c-638e70c13eec"
+      ]
+    },
+    {
+      "assignmentIdentifier": "fc369ec4-bc36-51cb-88b2-89cd86f1289c",
+      "personIdentifier": "f341a7fe-8b14-5fd8-8b31-2b66d5e9446e",
+      "canonicalName": "Charles Rennie Mackintosh",
+      "ownerAgentIdentifier": "01a09b5a-3cfa-7910-ab05-7fe412978b2e",
+      "state": "assigned",
+      "runDirectory": null,
+      "sourceEvidence": [
+        "e0fc0660-1939-59f1-b969-486866aafb31",
+        "1dfd0339-9323-5963-a85c-edbf0243cc0f"
+      ]
+    },
+    {
+      "assignmentIdentifier": "83077d84-eb11-5a54-b3fd-fabbcc25956f",
+      "personIdentifier": "b54052dd-e206-5067-beb8-e19b11154606",
+      "canonicalName": "Piet Mondrian",
+      "ownerAgentIdentifier": "01a09b5a-529c-7f40-9a2b-5a21cbd87031",
+      "state": "assigned",
+      "runDirectory": null,
+      "sourceEvidence": [
+        "48c52cf9-b834-512d-a43b-9779f845176d",
+        "0387ca7e-36cc-5e43-8884-27fe6ba1f6e6"
+      ]
+    },
+    {
+      "assignmentIdentifier": "3ee1314d-f6ca-5eea-aad3-72b840a71c4b",
+      "personIdentifier": "b64f31b6-d52c-5b7a-975d-58b96b4166e6",
+      "canonicalName": "Gerrit Rietveld",
+      "ownerAgentIdentifier": "01a09b5a-4788-7430-adab-07fe1e937c8c",
+      "state": "assigned",
+      "runDirectory": null,
+      "sourceEvidence": [
+        "55c90788-24f4-5a44-866c-be20b6169b44",
+        "a8d89820-5ddd-5296-a2c5-62a52b217913"
+      ]
+    },
+    {
+      "assignmentIdentifier": "83e5edde-ef58-5595-b9ff-566f357f2741",
+      "personIdentifier": "d9d0b5bf-2276-585c-9eb2-15a79103957f",
+      "canonicalName": "Ettore Sottsass",
+      "ownerAgentIdentifier": "01a09b5a-4159-7482-a30d-341a4a241910",
+      "state": "assigned",
+      "runDirectory": null,
+      "sourceEvidence": [
+        "57904f56-6e35-555f-a555-19a0766d420b",
+        "5902a171-5643-5665-953b-01bb8114ca66"
+      ]
+    }
+  ]
+}

@@ -25,6 +25,10 @@ npm run preview
 
 [制作意図](verification/planet-museum-intent.md) → [接続仕様](verification/planet-museum-spec.md) → [数理証明](planetarium/reports/proof-report.md) → [接続報告](reports/material-sphere-integration-report.md) をたどれます。報告は対象ソースの改訂付きで、過去の合格を現在の完成判定へ流用しません。
 
+人物制作へ渡す調査は [15人の人物調査](verification/people-research.md) と [機械可読な人物証跡](verification/people-research.json) に分けています。確認できた事実と、Material Sphereへ翻訳した提案を混ぜません。
+
+制作の担当境界と進行状態は [人物制作キュー](verification/character-production-queue.json) で追跡します。合格前の人物は公開アプリへ登録しません。
+
 ## Lumeniaの検算基盤
 
 [仕様](spec.md) → [証明報告](reports/proof-report.md) → [出荷ゲート報告](reports/gate-report.md) の順に確認できます。

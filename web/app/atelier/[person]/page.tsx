@@ -2,6 +2,7 @@ import '@plumeria/core';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { materialSphereCatalog } from '../../../artwork/material-sphere-catalog';
+import { museumCharacterAvailability } from '../../../artwork/museum-character-availability';
 import { ArtistStudio } from '../../../components/ArtistStudio';
 import { studioStyles } from '../../../components/ArtistStudio.styles';
 import { MaterialSphereArtwork } from '../../../components/MaterialSphere.generated';
@@ -28,7 +29,8 @@ export default async function ArtistStudioPage({ params }: { params: Promise<{ p
       <div classStyle={[studioStyles.introduction]}><div><h1 classStyle={[studioStyles.title]}>{profile.name}の制作室へ</h1>
         <p classStyle={[studioStyles.period]}>資料の時代：{profile.referencePeriod} / {profile.referenceWork}</p></div>
         <a href="#studio-sources" classStyle={[sphereStyles.source]}>背景・資料を読む</a></div>
-      <ArtistStudio name={profile.name} referenceWork={profile.referenceWork} interpretation={profile.interpretation} morris={person === 'william-morris'}>
+      <ArtistStudio name={profile.name} referenceWork={profile.referenceWork} interpretation={profile.interpretation} morris={person === 'william-morris'}
+        characterReady={museumCharacterAvailability.ready}>
         <MaterialSphereArtwork profileIdentifier={profile.profileIdentifier} />
       </ArtistStudio>
       <section id="studio-sources" classStyle={[studioStyles.sources]}>

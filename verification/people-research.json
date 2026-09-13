@@ -1,0 +1,254 @@
+{
+  "artifactIdentifier": "76e13ef1-bb0d-56b9-bfec-0dae5d69c799",
+  "researchExecutionIdentifier": "01a09b52-13e1-77e3-ab55-65bf236fb288",
+  "retrievedAt": "2026-09-14",
+  "retrievalMethod": "Exa web search followed by Exa page fetch",
+  "state": "source_reviewed",
+  "llmMachineContract": {
+    "state": "search_observed -> source_reviewed -> proposed_reconstruction",
+    "transitionRule": "A proposed CSS or dialogue interpretation never upgrades a source fact and never becomes a historical quotation.",
+    "quoteRule": "No direct quotation is used in the character package unless the exact source passage and rights boundary are recorded separately."
+  },
+  "people": [
+    {
+      "profileIdentifier": "e9146e26-704e-5073-8222-11be30c6d0be",
+      "canonicalName": "William Morris",
+      "referenceWork": "Strawberry Thief",
+      "confirmedFacts": [
+        "The V&A records Strawberry Thief as a furnishing fabric designed in 1883, with William Morris as designer and Morris & Co. as maker.",
+        "The pattern was based on thrushes taking strawberries at Kelmscott Manor and was printed by an indigo discharge method at the Merton Abbey factory.",
+        "The V&A presents Morris as a designer whose practice also included interiors, publishing, textiles, and social activism."
+      ],
+      "prototypeInterpretation": "Proposed: repeated botanical leaves, birds, berries, and a dark field rendered as CSS layers on a Material Sphere. This is a new visual study, not a reproduction of the fabric.",
+      "atelierBoundary": "A workshop conversation may discuss hand process and pattern revision as a source-based reconstruction; it must not present the generated character as Morris or turn a museum paraphrase into his recorded speech.",
+      "sources": [
+        { "sourceIdentifier": "effe62cf-7173-5bb0-bce8-c15c459b7b9d", "publisher": "Victoria and Albert Museum", "role": "object record and process", "url": "https://collections.vam.ac.uk/item/O78889/" },
+        { "sourceIdentifier": "63dc3789-dba7-5693-8e38-fc4ddfaa365d", "publisher": "Victoria and Albert Museum", "role": "collection biography and practice", "url": "https://www.vam.ac.uk/collections/william-morris" }
+      ]
+    },
+    {
+      "profileIdentifier": "c622c342-9799-5e44-84e0-bf659ef4ec94",
+      "canonicalName": "Alphonse Mucha",
+      "referenceWork": "Zodiac",
+      "confirmedFacts": [
+        "The Mucha Foundation records Zodiac as Mucha's first work under his contract with printer Champenois and as a calendar design.",
+        "The work places twelve zodiac signs in a halo-like disk and was distributed as a La Plume calendar for 1897; the Foundation records at least nine lithograph variants.",
+        "The Mucha Museum biography records his training and his 1894 Gismonda poster commission, which established an important public phase of his career."
+      ],
+      "prototypeInterpretation": "Proposed: twelve indexed slots, a halo, and ornamental rings using conic and radial CSS gradients. The model does not reproduce the woman, the zodiac figures, or the poster.",
+      "atelierBoundary": "Explain the twelve-part structure as an observed feature of one work and the equal angular spacing as a design choice for this prototype, not as a universal law of Mucha's art.",
+      "sources": [
+        { "sourceIdentifier": "d5f8e8c1-a10b-5a25-a9b1-916ca7c67019", "publisher": "Mucha Foundation", "role": "Zodiac object and composition", "url": "https://www.muchafoundation.org/en/gallery/browse-works/object/242" },
+        { "sourceIdentifier": "92551cc2-1ab5-5c2b-ae3c-638e70c13eec", "publisher": "Mucha Museum", "role": "biography and chronology", "url": "https://www.mucha.cz/en/biography" }
+      ]
+    },
+    {
+      "profileIdentifier": "27ae05bc-5298-51fc-8e02-c16ab93048ce",
+      "canonicalName": "Charles Rennie Mackintosh",
+      "referenceWork": "Late textile design studies",
+      "confirmedFacts": [
+        "Cooper Hewitt describes Mackintosh as an architect, designer, and watercolorist whose furniture was made for particular rooms and settings.",
+        "The V&A records a textile design made around 1918 with curvilinear forms against a trellis background, using pencil and watercolor on paper; the reverse includes an uncompleted pencil design.",
+        "The V&A record therefore provides evidence for process traces and a botanical-geometric relationship, but not for a complete finished textile pattern in this object."
+      ],
+      "prototypeInterpretation": "Proposed: a fine trellis, rounded floral forms, and an intentionally visible unfinished layer made with repeating-linear and radial CSS gradients.",
+      "atelierBoundary": "Show the unfinished reverse as a documented process clue. Do not state that the prototype is a specific Mackintosh drawing or that every floral geometry came from one source object.",
+      "sources": [
+        { "sourceIdentifier": "e0fc0660-1939-59f1-b969-486866aafb31", "publisher": "Cooper Hewitt, Smithsonian Design Museum", "role": "biography and design context", "url": "https://collection.cooperhewitt.org/people/18044987/bio" },
+        { "sourceIdentifier": "1dfd0339-9323-5963-a85c-edbf0243cc0f", "publisher": "Victoria and Albert Museum", "role": "textile design object and material", "url": "https://collections.vam.ac.uk/item/O692570/" }
+      ]
+    },
+    {
+      "profileIdentifier": "2da4bfe7-d11a-5615-ae87-6143a563ab0e",
+      "canonicalName": "Piet Mondrian",
+      "referenceWork": "Composition with Red, Blue, Black, Yellow, and Gray",
+      "confirmedFacts": [
+        "MoMA describes Mondrian's abstraction as a search for equilibrium between the concrete and the universal, with his practice changing through engagement with Cubism.",
+        "The Mondriaan House exhibition text covers his body of work from 1897 to 1944 and the transition from landscapes to later abstract compositions.",
+        "MoMA's artist page records Mondrian as a Dutch modern artist and provides a source for his own stated aims; the quotation boundary remains separate from the reconstructed dialogue."
+      ],
+      "prototypeInterpretation": "Proposed: only horizontal and vertical CSS planes, black separators, and a bounded prototype palette, with sphere shading in a separate layer.",
+      "atelierBoundary": "The room can stage a move from landscape observation to abstraction as an interpretive sequence. It must not claim that a CSS grid proves universal beauty or reproduces a named painting.",
+      "sources": [
+        { "sourceIdentifier": "48c52cf9-b834-512d-a43b-9779f845176d", "publisher": "The Museum of Modern Art", "role": "artist statement and method context", "url": "https://www.moma.org/artists/4057" },
+        { "sourceIdentifier": "0387ca7e-36cc-5e43-8884-27fe6ba1f6e6", "publisher": "Mondriaan House", "role": "chronology and exhibition text", "url": "https://www.mondriaanhuis.nl/wp-content/uploads/Permanent-Exhibition-Texts.pdf" }
+      ]
+    },
+    {
+      "profileIdentifier": "1af32ad1-c8f1-5c0c-a100-d5d9a5f83579",
+      "canonicalName": "Gerrit Rietveld",
+      "referenceWork": "Red Blue Chair",
+      "confirmedFacts": [
+        "MoMA dates the Red Blue Chair to 1918–1923 and describes its rectilinear volumes and interaction of vertical and horizontal planes.",
+        "The chair's primary-color scheme with black was applied around 1923, while the first 1918 specimen was uncoloured stained beechwood according to the Rietveld Foundation.",
+        "MoMA records Rietveld's aim for simple construction using standard lumber sizes and an interest in eventual mass production."
+      ],
+      "prototypeInterpretation": "Proposed: retain separated orthogonal planes, primary color blocks, and a shadow layer so a two-dimensional CSS composition reads as a solid object.",
+      "atelierBoundary": "The character may explain a construction rule inferred from the object record. It must not imply that the CSS sphere is the chair or that a screen-space right angle is a physical right angle.",
+      "sources": [
+        { "sourceIdentifier": "55c90788-24f4-5a44-866c-be20b6169b44", "publisher": "The Museum of Modern Art", "role": "object, date, materials, construction", "url": "https://www.moma.org/collection/works/4044" },
+        { "sourceIdentifier": "a8d89820-5ddd-5296-a2c5-62a52b217913", "publisher": "Rietveld Stichting", "role": "colour history and chronology", "url": "https://gerrit-rietveld.nl/nieuws/de-kleuren-van-de-rood-blauwe-stoel/?lang=en" }
+      ]
+    },
+    {
+      "profileIdentifier": "eff6ec3c-4e67-5e2a-bc11-ed8d12f52a39",
+      "canonicalName": "Ettore Sottsass",
+      "referenceWork": "Carlton room divider",
+      "confirmedFacts": [
+        "The Metropolitan Museum of Art records the Carlton room divider as designed by Ettore Sottsass for Memphis Milano in 1981.",
+        "The object combines a room divider, bookcase, and chest of drawers and uses medium-density fiberboard with plastic laminate.",
+        "The Met describes vivid solids and voids over a logical system of real and implied equilateral triangles; the slanted shelving also addresses books falling in upright shelving."
+      ],
+      "prototypeInterpretation": "Proposed: contrast large color fields with small diagonal pieces and repeated marks; use the triangle relation as a bounded CSS construction rule, not as random decoration.",
+      "atelierBoundary": "The room can discuss the tension between expressive color and a logical support system. Do not recreate the Carlton or treat a visual resemblance as proof of authorship.",
+      "sources": [
+        { "sourceIdentifier": "57904f56-6e35-555f-a555-19a0766d420b", "publisher": "The Metropolitan Museum of Art", "role": "object, materials, geometry, function", "url": "https://www.metmuseum.org/art/collection/search/486989" },
+        { "sourceIdentifier": "5902a171-5643-5665-953b-01bb8114ca66", "publisher": "Milwaukee Art Museum", "role": "object record and date", "url": "https://collection.mam.org/details.php?id=3463" }
+      ]
+    },
+    {
+      "profileIdentifier": "aa8db2eb-17e5-5771-8443-94445af34296",
+      "canonicalName": "Herbert Bayer",
+      "referenceWork": "Universal alphabet studies",
+      "confirmedFacts": [
+        "Harvard Art Museums records Research in Development of Universal Type as a 1927 Herbert Bayer drawing made with black ink and gouache on cream paper.",
+        "The object record preserves Bayer's handwritten notes about an alphabet study and a precise optical effect, which are process evidence rather than a complete type system specification.",
+        "The Bauhaus Archive describes Bauhaus typography through clear text blocks, concise characters, standardized formats, image-type combinations, and strong contrasts of color, size, and position."
+      ],
+      "prototypeInterpretation": "Proposed: construct abstract marks from arcs and bars on a common grid using border-radius and gradients; do not ship a clone of an existing typeface.",
+      "atelierBoundary": "The character may demonstrate a grid study and optical adjustment as reconstruction. Legibility and communication must be tested separately from geometric resemblance.",
+      "sources": [
+        { "sourceIdentifier": "ca367cff-a162-5cc8-9620-314b49075600", "publisher": "Harvard Art Museums", "role": "Universal Type object and medium", "url": "https://harvardartmuseums.org/collections/object/225330" },
+        { "sourceIdentifier": "4ecb28a1-9086-5705-a913-bfa147959093", "publisher": "Bauhaus Archive / Museum of Design", "role": "Bauhaus typography context", "url": "https://www.bauhaus.de/en/research/publications/bauhaus-typography/" }
+      ]
+    },
+    {
+      "profileIdentifier": "200bbbd0-c4d4-5ebf-89e7-7bb100b9d737",
+      "canonicalName": "Josef Müller-Brockmann",
+      "referenceWork": "Beethoven poster",
+      "confirmedFacts": [
+        "Cooper Hewitt records Beethoven as a 1955 lithograph designed by Josef Müller-Brockmann and printed by Lithographie & Cartonnage A.G.",
+        "The museum record preserves the concert information, dimensions, medium, and the designer and printer attribution in the object inscription.",
+        "The Stedelijk Museum independently records the same work and production year, giving a second institutional object record."
+      ],
+      "prototypeInterpretation": "Proposed: align typographic bands, arcs, and open space to a measured grid; the spacing rule is testable, while readability remains a screen test.",
+      "atelierBoundary": "The room can reconstruct a poster-planning table from the object data. Do not assign a fixed artistic value to emptiness or infer an entire career from one poster.",
+      "sources": [
+        { "sourceIdentifier": "5394d6d6-8e8a-5f05-a86a-4484f23122fe", "publisher": "Cooper Hewitt, Smithsonian Design Museum", "role": "Beethoven poster object record", "url": "https://collection.cooperhewitt.org/objects/2318803418/" },
+        { "sourceIdentifier": "07984838-a5d5-52d3-b286-e699e89bd3b4", "publisher": "Stedelijk Museum Amsterdam", "role": "independent object record", "url": "https://stedelijk.nl/en/collection/57028-josef-muller-brockmann-beethoven" }
+      ]
+    },
+    {
+      "profileIdentifier": "fda39095-201d-5703-a75a-072fceac56f4",
+      "canonicalName": "Massimo Vignelli",
+      "referenceWork": "New York Subway Map",
+      "confirmedFacts": [
+        "The Vignelli Center at RIT holds the professional archives of Lella and Massimo Vignelli across graphics, product design, corporate identity, architecture, exhibitions, interiors, clothing, and furniture.",
+        "The archive includes sketches, prototypes, models, technical plans, material samples, correspondence, photographs, videos, and digital files, providing direct evidence for a process-oriented atelier experience.",
+        "The Archives of American Art records a 2011 oral-history interview with Massimo Vignelli lasting 6 hours 52 minutes and covering his education, typography, corporate identity, and design as a broad practice."
+      ],
+      "prototypeInterpretation": "Proposed: a small vocabulary of route lines, station points, and repeated 45-degree segments on the sphere; this is a visual study, not a usable transit map.",
+      "atelierBoundary": "Use archive process materials as evidence of iteration and system thinking. Any dialogue about the subway map must identify the source record and avoid inventing a first-person quotation.",
+      "sources": [
+        { "sourceIdentifier": "bc076231-5a0e-5ecd-bb07-63058d309c20", "publisher": "Vignelli Center for Design Studies, Rochester Institute of Technology", "role": "archive scope and process materials", "url": "https://www.rit.edu/vignellicenter/vignelli-archives" },
+        { "sourceIdentifier": "8d3f1d74-4e1c-5c49-97fd-7794019c93f9", "publisher": "Archives of American Art, Smithsonian Institution", "role": "oral-history scope and career context", "url": "https://www.aaa.si.edu/collections/interviews/oral-history-interview-massimo-vignelli-15958" }
+      ]
+    },
+    {
+      "profileIdentifier": "66355416-1298-53e7-af26-05303e93d7ad",
+      "canonicalName": "Dieter Rams",
+      "referenceWork": "606 Universal Shelving System and design principles",
+      "confirmedFacts": [
+        "The Rams Foundation presents ten principles as the basic considerations behind Rams's design philosophy and explicitly says they are not timelessly incontrovertible rules.",
+        "The Museum Angewandte Kunst's permanent presentation includes important Braun designs and the Universal Shelving System 606, alongside biographical material and a visitor-facing study room.",
+        "The museum describes Rams's approach through functional, visually long-lived, restrained, and highly aesthetic products."
+      ],
+      "prototypeInterpretation": "Proposed: modular neutral parts, aligned points, and restrained shading. No functional or sustainable-design claim is accepted from appearance alone.",
+      "atelierBoundary": "The character can invite the visitor to test whether a control is understandable and useful. The room must show that good-design principles are historical statements, not an automatic CSS score.",
+      "sources": [
+        { "sourceIdentifier": "c2f256e1-d785-5a8b-8137-f29aa42fd1eb", "publisher": "Rams Foundation", "role": "design principles", "url": "https://rams-foundation.org/foundation/design-comprehension/theses/" },
+        { "sourceIdentifier": "c59d1da4-4379-5589-b280-12ed9331d979", "publisher": "Museum Angewandte Kunst", "role": "permanent presentation and works", "url": "https://www.museumangewandtekunst.de/en/visit/exhibitions/permanent-presentation/dieter-rams-a-style-room/" }
+      ]
+    },
+    {
+      "profileIdentifier": "4944ca35-5584-54dd-9b11-d3ab77dacad6",
+      "canonicalName": "Naoto Fukasawa",
+      "referenceWork": "Wall-mounted CD Player",
+      "confirmedFacts": [
+        "The V&A records the wall-mounted CD player as designed in 1999 by Naoto Fukasawa for Muji, with plastic, metal, and electronic components.",
+        "The V&A describes the pull-cord control as borrowing a familiar household action and the visual analogy between a spinning CD and an extractor fan.",
+        "Cooper Hewitt independently records the 1999 design and identifies the 2013 example's materials and manufacturer."
+      ],
+      "prototypeInterpretation": "Proposed: a quiet rounded object whose single visible control toggles movement, with the interaction and the visual state kept together in CSS and WebMCP.",
+      "atelierBoundary": "The museum may let the visitor pull or choose a control and observe the result. The dialogue should describe the source-based reconstruction, not claim access to Fukasawa's private thoughts.",
+      "sources": [
+        { "sourceIdentifier": "90d405d1-3299-5a8d-b937-c137719b4247", "publisher": "Victoria and Albert Museum", "role": "object, interaction, and design approach", "url": "https://collections.vam.ac.uk/item/O1227135/" },
+        { "sourceIdentifier": "98e3eb38-e115-5e45-a4ff-d9160349e66c", "publisher": "Cooper Hewitt, Smithsonian Design Museum", "role": "object, date, and materials", "url": "https://collection.cooperhewitt.org/objects/35520927/" }
+      ]
+    },
+    {
+      "profileIdentifier": "5240f8a5-f200-5127-9fe8-3f8a6e909188",
+      "canonicalName": "Rei Kawakubo",
+      "referenceWork": "Rei Kawakubo / Comme des Garçons: Art of the In-Between",
+      "confirmedFacts": [
+        "The Metropolitan Museum of Art held the 2017 exhibition from May 4 to September 4 and presented approximately 140 Comme des Garçons womenswear examples from the early 1980s to the then-current collection.",
+        "The exhibition organized the work into nine expressions of in-betweenness, including absence/presence, fashion/anti-fashion, and clothes/not clothes.",
+        "The Met publication identifies Kawakubo's Paris debut in 1981 and frames the work as challenging boundaries between art and fashion, body, beauty, and identity."
+      ],
+      "prototypeInterpretation": "Proposed: unequal folds, voids, and dark/light edge layers on a sphere. Asymmetry is a prototype invariant, not a numerical definition of Kawakubo's art.",
+      "atelierBoundary": "The room can be a boundary-testing reconstruction and must label all garment-to-sphere translation as an interpretation. It must not present a generated garment as an archival Comme des Garçons piece.",
+      "sources": [
+        { "sourceIdentifier": "97a2ce75-df70-5882-a39c-a9985f870c39", "publisher": "The Metropolitan Museum of Art", "role": "2017 exhibition scope and themes", "url": "https://www.metmuseum.org/exhibitions/listings/2017/rei-kawakubo" },
+        { "sourceIdentifier": "10eefe64-a30b-5633-85cb-6ff2aa30fa77", "publisher": "The Metropolitan Museum of Art", "role": "publication, chronology, and process context", "url": "https://www.metmuseum.org/met-publications/rei-kawakubo-comme-des-garcons-art-of-the-in-between" }
+      ]
+    },
+    {
+      "profileIdentifier": "ea3de1f9-179b-5bca-89e0-289084190234",
+      "canonicalName": "Charles Eames",
+      "referenceWork": "Lounge Chair and Ottoman",
+      "confirmedFacts": [
+        "MoMA records the Lounge Chair and Ottoman as a 1956 Charles Eames and Ray Eames design manufactured by Herman Miller.",
+        "The MoMA object record identifies molded rosewood, plywood, leather, cast aluminum, rubber shock mounts, and stainless-steel glides.",
+        "The Eames Foundation describes Charles and Ray as partners whose work crossed furniture, architecture, film, exhibitions, education, photography, textiles, and toys, and records their molded-plywood experiments."
+      ],
+      "prototypeInterpretation": "Proposed: separate the sphere into a thin warm shell, a softer inner volume, and a narrow supporting layer to make material contrast legible without claiming physical upholstery.",
+      "atelierBoundary": "Charles must not be isolated from Ray in a joint-work display. Material softness, durability, and comfort require physical or user testing beyond CSS geometry.",
+      "sources": [
+        { "sourceIdentifier": "66876dec-002e-5c5b-97e4-45cc5511493c", "publisher": "The Museum of Modern Art", "role": "Lounge Chair object and materials", "url": "https://www.moma.org/collection/works/3325" },
+        { "sourceIdentifier": "f43e2357-fb30-5066-911b-988b48ae04dc", "publisher": "Charles and Ray Eames Foundation", "role": "partnership and process biography", "url": "https://eamesfoundation.org/charles-ray/biography/" }
+      ]
+    },
+    {
+      "profileIdentifier": "0fcb82c9-fa68-5fb0-bb38-41102237b725",
+      "canonicalName": "Ray Eames",
+      "referenceWork": "House of Cards",
+      "confirmedFacts": [
+        "Cooper Hewitt describes Ray as an abstract-minded artist who studied painting with Hans Hofmann and worked with Charles Eames as a design partner.",
+        "LACMA records House of Cards as a joint Charles Eames and Ray Eames design through the Eames Office, designed in 1952 and manufactured from 1952 to 1961.",
+        "The LACMA record identifies offset lithography on cardboard and cellophane; it does not support assigning the whole object to Ray alone."
+      ],
+      "prototypeInterpretation": "Proposed: repeated diamond-like cells with changing color, warmth, coolness, and value, while keeping joint authorship visible in the label.",
+      "atelierBoundary": "Ray's character should foreground color, structure, and collaboration without erasing Charles or the Eames Office. Do not call the sphere a Ray Eames original work.",
+      "sources": [
+        { "sourceIdentifier": "c900aa68-ee10-51b1-afda-c61194a2ada4", "publisher": "Cooper Hewitt, Smithsonian Design Museum", "role": "Ray biography and partnership", "url": "https://collection.cooperhewitt.org/people/18050087/bio" },
+        { "sourceIdentifier": "e886dcad-d1ae-553a-92c3-364663f1098c", "publisher": "Los Angeles County Museum of Art", "role": "House of Cards object and joint attribution", "url": "https://collections.lacma.org/object/165898" }
+      ]
+    },
+    {
+      "profileIdentifier": "6956222e-f308-5e00-a3d5-d0129505f27e",
+      "canonicalName": "Walter Gropius",
+      "referenceWork": "Bauhaus Building, Dessau",
+      "confirmedFacts": [
+        "The Stiftung Bauhaus Dessau identifies the building as a new school building designed to express Bauhaus ideas in architectural form and records steel, concrete, and glass construction.",
+        "The building is composed of separate functional parts with different sizes and heights, including a glazed workshop wing, a bridge, a north wing, and a studio building; its full arrangement is understood by walking around it rather than from one central view.",
+        "The Bauhaus Archive collection identifies Walter Gropius's correspondence, photographs, and newspaper archive as a major archival source, supporting a process-and-institution context rather than a solitary-author myth."
+      ],
+      "prototypeInterpretation": "Proposed: transparent grids, offset opaque planes, and changing viewpoints expressed through CSS perspective and opacity. A glass-like effect is not a physical simulation.",
+      "atelierBoundary": "The room should show the school, workshop, collaborators, and site as part of the evidence. It must not turn a building designed in an institutional context into a single-person first-person testimony.",
+      "sources": [
+        { "sourceIdentifier": "c26cdf62-81c7-5870-bfa8-1a36e0235241", "publisher": "Stiftung Bauhaus Dessau", "role": "building, materials, spatial organization", "url": "https://bauhaus-dessau.de/en/venues/bauhaus-building/" },
+        { "sourceIdentifier": "c52e02e5-2131-597d-bcd6-5c44f7a3cc54", "publisher": "Bauhaus Archive / Museum of Design", "role": "Gropius archival holdings", "url": "https://open-archive.bauhaus.de/eMP/eMuseumPlus" }
+      ]
+    }
+  ]
+}
