@@ -1,0 +1,104 @@
+{
+  "visual_qa": "pass",
+  "reviewerIdentifier": "/root/morris_final_blind_astra",
+  "method": "Independent labeled contact-sheet, direction, report review. Every frame and duration from all nine GIFs was decoded into an ordered inspection filmstrip, including last-to-first transitions.",
+  "standardRows": [
+    {
+      "state": "idle",
+      "verdict": "pass",
+      "decodedFrames": 6,
+      "durationMilliseconds": 1100,
+      "evidence": "Blink and breathing; stable feet"
+    },
+    {
+      "state": "running-right",
+      "verdict": "pass",
+      "decodedFrames": 8,
+      "durationMilliseconds": 1060,
+      "evidence": "Rightward face and alternating stride"
+    },
+    {
+      "state": "running-left",
+      "verdict": "pass",
+      "decodedFrames": 8,
+      "durationMilliseconds": 1060,
+      "evidence": "Leftward face and corresponding stride"
+    },
+    {
+      "state": "waving",
+      "verdict": "pass",
+      "decodedFrames": 4,
+      "durationMilliseconds": 700,
+      "evidence": "Arm sweeps upward and returns"
+    },
+    {
+      "state": "jumping",
+      "verdict": "pass",
+      "decodedFrames": 5,
+      "durationMilliseconds": 840,
+      "evidence": "Grounded preparation, elevated frames, grounded landing"
+    },
+    {
+      "state": "failed",
+      "verdict": "pass",
+      "decodedFrames": 6,
+      "durationMilliseconds": 1220,
+      "evidence": "Droop and recover; eight source poses become six GIF frames with repeated-pose holds"
+    },
+    {
+      "state": "waiting",
+      "verdict": "pass",
+      "decodedFrames": 6,
+      "durationMilliseconds": 1010,
+      "evidence": "Open-arm shrug"
+    },
+    {
+      "state": "running",
+      "verdict": "pass",
+      "decodedFrames": 6,
+      "durationMilliseconds": 820,
+      "evidence": "Hands gathered in a busy working pose"
+    },
+    {
+      "state": "review",
+      "verdict": "pass",
+      "decodedFrames": 6,
+      "durationMilliseconds": 1030,
+      "evidence": "Hand near chin and thinking motion"
+    }
+  ],
+  "directions": {
+    "cardinals": "pass",
+    "orderedProgression": "pass",
+    "rowBoundarySeam": "pass",
+    "wrapSeam": "pass",
+    "identityAndScale": "pass",
+    "connectivityAndClipping": "pass",
+    "continuityEvidence": "Adjacent centers move at most 0.5 pixels; area changes stay within about 1.13 percent."
+  },
+  "warnings": [
+    {
+      "severity": "minor",
+      "subject": "Near-vertical horizontal clarity",
+      "detail": "Ordered context resolves subtle intermediate offsets; not all sixteen directions are equally clear as standalone poses."
+    },
+    {
+      "severity": "minor",
+      "subject": "Blind pair 6",
+      "detail": "Lowered eyes and beard overlap reduce standalone horizontal certainty; no cardinal reversal."
+    },
+    {
+      "severity": "minor",
+      "subject": "Cadence",
+      "detail": "Long final-frame holds make intentionally stepped puppet movement."
+    },
+    {
+      "severity": "informational",
+      "subject": "State name",
+      "detail": "Generic running means working; directional rows provide locomotion."
+    }
+  ],
+  "repairNotes": [
+    "No blocking repair required."
+  ]
+}

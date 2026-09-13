@@ -1,0 +1,18 @@
+{
+  "claimIdentifier": "4908c1b1-0ebf-55ef-a83f-378e2bfdf4c5",
+  "executionIdentifier": "01a09b8c-3d39-706a-9229-788e8bdf0820",
+  "observedAt": "2026-09-13T16:16:48.535Z",
+  "method": "Standalone CSS character export in Chromium; no Site browser verification",
+  "browser": "151.0.7922.34",
+  "nativeAnimations": {
+    "count": 44,
+    "advancing": true,
+    "paused": true,
+    "reducedMotion": true
+  },
+  "sources": {
+    "web/components/CssMuseumCharacter.tsx": "a844d4e821afe02e35bf8111d5c276eaa91a916ebf77bd89c69a89af73487889",
+    "web/components/CssMuseumCharacter.styles.ts": "b767bd64dbdb7af90851ba5a9bcc71d04d842ab13ee488e4ebc1c5a0a57a2da1"
+  },
+  "spriteAdmission": "pending_independent_review"
+}

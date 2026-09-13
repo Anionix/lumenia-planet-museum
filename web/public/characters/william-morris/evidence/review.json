@@ -1,0 +1,1001 @@
+{
+  "ok": true,
+  "frames_root": "hatch-run/qa/standard-frames",
+  "states": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review"
+  ],
+  "errors": [],
+  "warnings": [
+    "idle used extraction method css-rendered; component extraction is preferred",
+    "running-right used extraction method css-rendered; component extraction is preferred",
+    "running-left used extraction method css-rendered; component extraction is preferred",
+    "waving used extraction method css-rendered; component extraction is preferred",
+    "jumping used extraction method css-rendered; component extraction is preferred",
+    "failed used extraction method css-rendered; component extraction is preferred",
+    "waiting used extraction method css-rendered; component extraction is preferred",
+    "running used extraction method css-rendered; component extraction is preferred",
+    "review used extraction method css-rendered; component extraction is preferred"
+  ],
+  "rows": [
+    {
+      "state": "idle",
+      "expected_frames": 6,
+      "actual_frames": 6,
+      "extraction_method": "css-rendered",
+      "ok": true,
+      "errors": [],
+      "warnings": [
+        "idle used extraction method css-rendered; component extraction is preferred"
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "file": "hatch-run/qa/standard-frames/idle/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10275,
+          "bbox": [
+            52,
+            36,
+            140,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "file": "hatch-run/qa/standard-frames/idle/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10240,
+          "bbox": [
+            52,
+            36,
+            140,
+            198
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "file": "hatch-run/qa/standard-frames/idle/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10176,
+          "bbox": [
+            52,
+            36,
+            140,
+            198
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "file": "hatch-run/qa/standard-frames/idle/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10218,
+          "bbox": [
+            52,
+            36,
+            140,
+            198
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 4,
+          "file": "hatch-run/qa/standard-frames/idle/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10235,
+          "bbox": [
+            52,
+            36,
+            140,
+            198
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 5,
+          "file": "hatch-run/qa/standard-frames/idle/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10280,
+          "bbox": [
+            52,
+            36,
+            139,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
+    },
+    {
+      "state": "running-right",
+      "expected_frames": 8,
+      "actual_frames": 8,
+      "extraction_method": "css-rendered",
+      "ok": true,
+      "errors": [],
+      "warnings": [
+        "running-right used extraction method css-rendered; component extraction is preferred"
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "file": "hatch-run/qa/standard-frames/running-right/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9175,
+          "bbox": [
+            48,
+            36,
+            143,
+            200
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "file": "hatch-run/qa/standard-frames/running-right/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9266,
+          "bbox": [
+            48,
+            34,
+            143,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "file": "hatch-run/qa/standard-frames/running-right/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9700,
+          "bbox": [
+            56,
+            34,
+            143,
+            198
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "file": "hatch-run/qa/standard-frames/running-right/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9989,
+          "bbox": [
+            52,
+            35,
+            145,
+            201
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 4,
+          "file": "hatch-run/qa/standard-frames/running-right/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9973,
+          "bbox": [
+            50,
+            36,
+            147,
+            201
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 5,
+          "file": "hatch-run/qa/standard-frames/running-right/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9841,
+          "bbox": [
+            53,
+            35,
+            144,
+            200
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 6,
+          "file": "hatch-run/qa/standard-frames/running-right/06.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9339,
+          "bbox": [
+            59,
+            34,
+            143,
+            200
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 7,
+          "file": "hatch-run/qa/standard-frames/running-right/07.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9198,
+          "bbox": [
+            51,
+            35,
+            143,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
+    },
+    {
+      "state": "running-left",
+      "expected_frames": 8,
+      "actual_frames": 8,
+      "extraction_method": "css-rendered",
+      "ok": true,
+      "errors": [],
+      "warnings": [
+        "running-left used extraction method css-rendered; component extraction is preferred"
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "file": "hatch-run/qa/standard-frames/running-left/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9169,
+          "bbox": [
+            48,
+            36,
+            146,
+            201
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "file": "hatch-run/qa/standard-frames/running-left/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9264,
+          "bbox": [
+            48,
+            35,
+            142,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "file": "hatch-run/qa/standard-frames/running-left/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9706,
+          "bbox": [
+            48,
+            34,
+            134,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "file": "hatch-run/qa/standard-frames/running-left/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9991,
+          "bbox": [
+            47,
+            36,
+            140,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 4,
+          "file": "hatch-run/qa/standard-frames/running-left/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9989,
+          "bbox": [
+            45,
+            37,
+            142,
+            200
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 5,
+          "file": "hatch-run/qa/standard-frames/running-left/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9838,
+          "bbox": [
+            48,
+            35,
+            139,
+            200
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 6,
+          "file": "hatch-run/qa/standard-frames/running-left/06.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9345,
+          "bbox": [
+            48,
+            34,
+            133,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 7,
+          "file": "hatch-run/qa/standard-frames/running-left/07.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9205,
+          "bbox": [
+            48,
+            36,
+            141,
+            200
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
+    },
+    {
+      "state": "waving",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "extraction_method": "css-rendered",
+      "ok": true,
+      "errors": [],
+      "warnings": [
+        "waving used extraction method css-rendered; component extraction is preferred"
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "file": "hatch-run/qa/standard-frames/waving/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10719,
+          "bbox": [
+            52,
+            37,
+            181,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "file": "hatch-run/qa/standard-frames/waving/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10724,
+          "bbox": [
+            52,
+            37,
+            166,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "file": "hatch-run/qa/standard-frames/waving/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10726,
+          "bbox": [
+            52,
+            37,
+            169,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "file": "hatch-run/qa/standard-frames/waving/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10735,
+          "bbox": [
+            52,
+            37,
+            174,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
+    },
+    {
+      "state": "jumping",
+      "expected_frames": 5,
+      "actual_frames": 5,
+      "extraction_method": "css-rendered",
+      "ok": true,
+      "errors": [],
+      "warnings": [
+        "jumping used extraction method css-rendered; component extraction is preferred"
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "file": "hatch-run/qa/standard-frames/jumping/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10280,
+          "bbox": [
+            52,
+            37,
+            139,
+            200
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "file": "hatch-run/qa/standard-frames/jumping/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10216,
+          "bbox": [
+            52,
+            37,
+            140,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "file": "hatch-run/qa/standard-frames/jumping/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10282,
+          "bbox": [
+            52,
+            28,
+            139,
+            191
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "file": "hatch-run/qa/standard-frames/jumping/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10281,
+          "bbox": [
+            52,
+            28,
+            139,
+            191
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 4,
+          "file": "hatch-run/qa/standard-frames/jumping/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10271,
+          "bbox": [
+            52,
+            37,
+            140,
+            200
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
+    },
+    {
+      "state": "failed",
+      "expected_frames": 8,
+      "actual_frames": 8,
+      "extraction_method": "css-rendered",
+      "ok": true,
+      "errors": [],
+      "warnings": [
+        "failed used extraction method css-rendered; component extraction is preferred"
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "file": "hatch-run/qa/standard-frames/failed/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10226,
+          "bbox": [
+            52,
+            37,
+            140,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "file": "hatch-run/qa/standard-frames/failed/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10170,
+          "bbox": [
+            52,
+            40,
+            140,
+            200
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "file": "hatch-run/qa/standard-frames/failed/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10042,
+          "bbox": [
+            52,
+            44,
+            140,
+            201
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "file": "hatch-run/qa/standard-frames/failed/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10013,
+          "bbox": [
+            52,
+            45,
+            139,
+            202
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 4,
+          "file": "hatch-run/qa/standard-frames/failed/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10013,
+          "bbox": [
+            52,
+            45,
+            139,
+            202
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 5,
+          "file": "hatch-run/qa/standard-frames/failed/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10013,
+          "bbox": [
+            52,
+            45,
+            139,
+            202
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 6,
+          "file": "hatch-run/qa/standard-frames/failed/06.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10038,
+          "bbox": [
+            52,
+            44,
+            140,
+            201
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 7,
+          "file": "hatch-run/qa/standard-frames/failed/07.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10228,
+          "bbox": [
+            52,
+            38,
+            139,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
+    },
+    {
+      "state": "waiting",
+      "expected_frames": 6,
+      "actual_frames": 6,
+      "extraction_method": "css-rendered",
+      "ok": true,
+      "errors": [],
+      "warnings": [
+        "waiting used extraction method css-rendered; component extraction is preferred"
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "file": "hatch-run/qa/standard-frames/waiting/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10914,
+          "bbox": [
+            41,
+            36,
+            170,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "file": "hatch-run/qa/standard-frames/waiting/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10920,
+          "bbox": [
+            36,
+            37,
+            173,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "file": "hatch-run/qa/standard-frames/waiting/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10955,
+          "bbox": [
+            31,
+            36,
+            176,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "file": "hatch-run/qa/standard-frames/waiting/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10948,
+          "bbox": [
+            29,
+            36,
+            176,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 4,
+          "file": "hatch-run/qa/standard-frames/waiting/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10945,
+          "bbox": [
+            32,
+            36,
+            175,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 5,
+          "file": "hatch-run/qa/standard-frames/waiting/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10922,
+          "bbox": [
+            40,
+            36,
+            170,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
+    },
+    {
+      "state": "running",
+      "expected_frames": 6,
+      "actual_frames": 6,
+      "extraction_method": "css-rendered",
+      "ok": true,
+      "errors": [],
+      "warnings": [
+        "running used extraction method css-rendered; component extraction is preferred"
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "file": "hatch-run/qa/standard-frames/running/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9276,
+          "bbox": [
+            57,
+            38,
+            135,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "file": "hatch-run/qa/standard-frames/running/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9246,
+          "bbox": [
+            57,
+            38,
+            135,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "file": "hatch-run/qa/standard-frames/running/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9179,
+          "bbox": [
+            58,
+            39,
+            135,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "file": "hatch-run/qa/standard-frames/running/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9171,
+          "bbox": [
+            58,
+            39,
+            135,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 4,
+          "file": "hatch-run/qa/standard-frames/running/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9182,
+          "bbox": [
+            58,
+            39,
+            135,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 5,
+          "file": "hatch-run/qa/standard-frames/running/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9275,
+          "bbox": [
+            57,
+            38,
+            135,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
+    },
+    {
+      "state": "review",
+      "expected_frames": 6,
+      "actual_frames": 6,
+      "extraction_method": "css-rendered",
+      "ok": true,
+      "errors": [],
+      "warnings": [
+        "review used extraction method css-rendered; component extraction is preferred"
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "file": "hatch-run/qa/standard-frames/review/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9910,
+          "bbox": [
+            58,
+            36,
+            140,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "file": "hatch-run/qa/standard-frames/review/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9894,
+          "bbox": [
+            58,
+            37,
+            140,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "file": "hatch-run/qa/standard-frames/review/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9902,
+          "bbox": [
+            58,
+            36,
+            140,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "file": "hatch-run/qa/standard-frames/review/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9901,
+          "bbox": [
+            58,
+            36,
+            140,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 4,
+          "file": "hatch-run/qa/standard-frames/review/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9909,
+          "bbox": [
+            58,
+            36,
+            140,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 5,
+          "file": "hatch-run/qa/standard-frames/review/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9904,
+          "bbox": [
+            58,
+            36,
+            140,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
+    }
+  ]
+}

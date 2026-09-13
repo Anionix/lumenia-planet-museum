@@ -1,0 +1,137 @@
+{
+  "claimIdentifier": "4908c1b1-0ebf-55ef-a83f-378e2bfdf4c5",
+  "executionIdentifier": "01a09b96-b110-70d2-abcd-6afc5a4bb7dc",
+  "recordedAt": "2026-09-13T16:25:39.344Z",
+  "reviewerIdentifier": "/root",
+  "method": "Labeled final contact sheet ordered clockwise with continuity report; printed CSS puppet eyes remain clipped to their sockets.",
+  "directions": [
+    {
+      "expected": "000 up",
+      "verdict": "pass",
+      "observed": "Centered nose and symmetric ears; Raised chin, visible neck, pupils at upper eyelids",
+      "reason": "Visible head and eye features agree with the direction and adjoining poses.",
+      "horizontalEvidence": "Centered nose and symmetric ears",
+      "verticalEvidence": "Raised chin, visible neck, pupils at upper eyelids"
+    },
+    {
+      "expected": "022.5 up-right",
+      "verdict": "warning",
+      "observed": "Slight face shift right; Raised chin and upper pupils",
+      "reason": "Near-vertical horizontal turn is subtle; coherent ordered progression preserves the intended quadrant.",
+      "horizontalEvidence": "Slight face shift right",
+      "verticalEvidence": "Raised chin and upper pupils"
+    },
+    {
+      "expected": "045 up-right",
+      "verdict": "pass",
+      "observed": "Right ear recedes and nose moves right; Eyes and chin rise",
+      "reason": "Visible head and eye features agree with the direction and adjoining poses.",
+      "horizontalEvidence": "Right ear recedes and nose moves right",
+      "verticalEvidence": "Eyes and chin rise"
+    },
+    {
+      "expected": "067.5 up-right",
+      "verdict": "pass",
+      "observed": "Face turns right; Eyes remain slightly raised",
+      "reason": "Visible head and eye features agree with the direction and adjoining poses.",
+      "horizontalEvidence": "Face turns right",
+      "verticalEvidence": "Eyes remain slightly raised"
+    },
+    {
+      "expected": "090 right",
+      "verdict": "pass",
+      "observed": "Nose projects right and far eye recedes; Head level",
+      "reason": "Visible head and eye features agree with the direction and adjoining poses.",
+      "horizontalEvidence": "Nose projects right and far eye recedes",
+      "verticalEvidence": "Head level"
+    },
+    {
+      "expected": "112.5 down-right",
+      "verdict": "pass",
+      "observed": "Face turns right; Pupils sit lower",
+      "reason": "Visible head and eye features agree with the direction and adjoining poses.",
+      "horizontalEvidence": "Face turns right",
+      "verticalEvidence": "Pupils sit lower"
+    },
+    {
+      "expected": "135 down-right",
+      "verdict": "pass",
+      "observed": "Nose and face project right; More hair crown visible, lowered pupils",
+      "reason": "Visible head and eye features agree with the direction and adjoining poses.",
+      "horizontalEvidence": "Nose and face project right",
+      "verticalEvidence": "More hair crown visible, lowered pupils"
+    },
+    {
+      "expected": "157.5 down-right",
+      "verdict": "warning",
+      "observed": "Small rightward facial offset; Chin and pupils lowered",
+      "reason": "Near-vertical horizontal turn is subtle; coherent ordered progression preserves the intended quadrant.",
+      "horizontalEvidence": "Small rightward facial offset",
+      "verticalEvidence": "Chin and pupils lowered"
+    },
+    {
+      "expected": "180 down",
+      "verdict": "pass",
+      "observed": "Centered nose and symmetric ears; Lowered chin, prominent crown and lower pupils",
+      "reason": "Visible head and eye features agree with the direction and adjoining poses.",
+      "horizontalEvidence": "Centered nose and symmetric ears",
+      "verticalEvidence": "Lowered chin, prominent crown and lower pupils"
+    },
+    {
+      "expected": "202.5 down-left",
+      "verdict": "warning",
+      "observed": "Small leftward facial offset; Lowered eyes and chin",
+      "reason": "Near-vertical horizontal turn is subtle; coherent ordered progression preserves the intended quadrant.",
+      "horizontalEvidence": "Small leftward facial offset",
+      "verticalEvidence": "Lowered eyes and chin"
+    },
+    {
+      "expected": "225 down-left",
+      "verdict": "pass",
+      "observed": "Nose and face project left; More crown visible and lowered eyes",
+      "reason": "Visible head and eye features agree with the direction and adjoining poses.",
+      "horizontalEvidence": "Nose and face project left",
+      "verticalEvidence": "More crown visible and lowered eyes"
+    },
+    {
+      "expected": "247.5 down-left",
+      "verdict": "pass",
+      "observed": "Face turns left; Pupils sit lower",
+      "reason": "Visible head and eye features agree with the direction and adjoining poses.",
+      "horizontalEvidence": "Face turns left",
+      "verticalEvidence": "Pupils sit lower"
+    },
+    {
+      "expected": "270 left",
+      "verdict": "pass",
+      "observed": "Nose projects left and far eye recedes; Head level",
+      "reason": "Visible head and eye features agree with the direction and adjoining poses.",
+      "horizontalEvidence": "Nose projects left and far eye recedes",
+      "verticalEvidence": "Head level"
+    },
+    {
+      "expected": "292.5 up-left",
+      "verdict": "pass",
+      "observed": "Face turns left; Pupils rise slightly",
+      "reason": "Visible head and eye features agree with the direction and adjoining poses.",
+      "horizontalEvidence": "Face turns left",
+      "verticalEvidence": "Pupils rise slightly"
+    },
+    {
+      "expected": "315 up-left",
+      "verdict": "pass",
+      "observed": "Leftward nose and face; Eyes and chin rise",
+      "reason": "Visible head and eye features agree with the direction and adjoining poses.",
+      "horizontalEvidence": "Leftward nose and face",
+      "verticalEvidence": "Eyes and chin rise"
+    },
+    {
+      "expected": "337.5 up-left",
+      "verdict": "warning",
+      "observed": "Small leftward facial offset; Raised chin and upper pupils",
+      "reason": "Near-vertical horizontal turn is subtle; coherent ordered progression preserves the intended quadrant.",
+      "horizontalEvidence": "Small leftward facial offset",
+      "verticalEvidence": "Raised chin and upper pupils"
+    }
+  ]
+}

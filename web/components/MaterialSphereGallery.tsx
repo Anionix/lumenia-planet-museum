@@ -34,8 +34,7 @@ export function MaterialSphereGallery({ slug }: { slug: string }) {
       <div classStyle={[sphereStyles.heading]}>
         <h2 classStyle={[sphereStyles.artistName]}>{profile.name}</h2>
         <p classStyle={[sphereStyles.reference]}>{profile.referenceWork} / {profile.referencePeriod}</p>
-        {profile.slug === 'william-morris' ? <p><a href="/atelier/william-morris/" classStyle={[sphereStyles.source]}>この人物の制作室を訪ねる</a></p>
-          : <p classStyle={[sphereStyles.reference]}>この人物の制作室は、順に準備します。</p>}
+        <p><a href={`/atelier/${profile.slug}/`} classStyle={[sphereStyles.source]}>この人物の制作室を訪ねる</a></p>
       </div>
       <div classStyle={[sphereStyles.exhibit]}>
         <MaterialSphereExperience key={profile.profileIdentifier} artistName={profile.name} profileIdentifier={profile.profileIdentifier} parameters={profile.parameters}>

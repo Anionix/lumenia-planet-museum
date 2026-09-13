@@ -4,8 +4,8 @@ Plumeria・React・Next.jsを土台に、資料から着想したCSS作品と、
 
 ## 今の状態
 
-- 15人分の資料付きMaterial Sphere展示と、ウィリアム・モリス一人分の制作室があります。
-- モリスはCSSの形とアニメーションで表示します。Codex用の画像版は同じ形から書き出し、独立した検査後に登録します。
+- 15人分の資料付きMaterial Sphere展示と、CSSで動く15人の制作室があります。
+- 全員をCSSの形とアニメーションで表示します。モリスは検査済みのCodex用ペットもあり、制作室でなめらかな動きとこま撮りを選べます。
 - CSS出力は接続済みです。画像・SVG・Canvas・Three.jsには別々の登録口がありますが、変換処理は未接続です。人物画像を球の画像変換と数えません。
 - アプリケーション検査と、全ブラウザー・性能検査は別です。後者や人物検査が未完了なら、接続報告は合格になりません。
 
@@ -21,7 +21,7 @@ node scripts/publish-material-sphere-evidence.mjs
 npm run preview
 ```
 
-`/planetarium/` は作品一覧、`/atelier/william-morris/` は最初の制作室です。ソースを変更したらビルドと検査を更新してください。モリスはCSSで描かれ、挨拶・注目・制作・鑑賞に合わせて動きます。停止と動きを減らす設定に対応します。同じ人物からの画像書き出しは検査後に登録します。
+`/planetarium/` は作品一覧、`/atelier/william-morris/` は最初の制作室です。ソースを変更したらビルドと検査を更新してください。モリスはCSSで描かれ、挨拶・注目・制作・鑑賞に合わせて動きます。停止と動きを減らす設定に対応します。モリスの画像版は検査後に登録済みです。残り14人の今回の提供はCSS表示です。
 
 [制作意図](verification/planet-museum-intent.md) → [接続仕様](verification/planet-museum-spec.md) → [数理証明](planetarium/reports/proof-report.md) → [接続報告](reports/material-sphere-integration-report.md) をたどれます。報告は対象ソースの改訂付きで、過去の合格を現在の完成判定へ流用しません。
 

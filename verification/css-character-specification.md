@@ -3,7 +3,7 @@ title: CSSで描くモリスの人物
 type: Specification
 claim_identifier: 4908c1b1-0ebf-55ef-a83f-378e2bfdf4c5
 execution_identifier: 01a09b7c-3f68-756d-bae6-f55806a70d69
-state: native_css_ready_sprite_review_pending
+state: native_characters_verified_morris_sprite_admitted
 ---
 
 # 一つの人物から、二つの表示へ
@@ -31,3 +31,5 @@ hatch-petの通常の画像生成工程に代えて、今回のユーザー指�
 HyperFramesは同じ見た目を展示動画へ展開する候補、HeyGenは創作の案内役が話す映像の候補として扱う。現時点ではこれらの外部サービスへの送信・動画生成は行っていない。[HyperFrames公式](https://hyperframes.heygen.com/introduction)、[HeyGen公式](https://www.heygen.com/tool/ai-talking-avatar)。
 
 <!-- llm machine contract; claimIdentifier: 4908c1b1-0ebf-55ef-a83f-378e2bfdf4c5; executionIdentifier: 01a09b7c-3f68-756d-bae6-f55806a70d69; transition: user-selected CSS authoring -> shared native character -> deterministic sampled frames -> independent review -> registered package. -->
+
+2026年9月14日の追加指示：残り14人もCSSで作る。以後は主担当一人で制作・確認する。15人に共通の動作を使い、髪・ひげ・眼鏡・服・配色を創作として個別に設計した。15人×52姿勢をブラウザーで描画し、範囲・透明背景・再生・停止・動きを減らす設定を検査する。モリスのCodex版は独立検査後に登録済み。残り14人はCSS版として提供する。

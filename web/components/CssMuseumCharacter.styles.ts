@@ -247,6 +247,21 @@ export const characterStyles=css.create({
  },focus:{
    animationName:focusing
  },
+ neck:{
+   position:'absolute',
+   top:'76px',
+   left:'86px',
+   zIndex:1,
+   width:'20px',
+   height:'30px',
+   background:'#d89c63',
+   borderRadius:'8px'
+ },
+ browGaze:(top:string)=>({
+   top
+ }),eyeOpening:(height:string)=>({
+   height
+ }),
  torso:{
    position:'absolute',
    top:'90px',

@@ -2,11 +2,11 @@
 type: Verification Report
 title: Lumenia application-report
 status: pass
-sourceRevision: sha256:d8637df6f052439c7f48367ef7fc2390be9dad21a581e1e4ad569c7c53a35461
-executionIdentifier: 01a09b8c-3d39-706a-9229-788e8bdf0820
+sourceRevision: sha256:38399d2837e0f8e40e96791bc54e8c2b4fe186898043674fba45bce834dae22c
+executionIdentifier: 01a09ba1-3a47-73c4-a803-6dd195bea67b
 generated:
   by: scripts/run-application-check.mjs
-  at: 2026-09-13T16:14:16.683Z
+  at: 2026-09-13T16:37:13.191Z
 ---
 
 [Intent](../intent.md) → [Specification](../spec.md) → [Proof report](proof-report.md) → [Gate report](gate-report.md)
@@ -20,6 +20,6 @@ generated:
 | Lumenia.NextComponentBoundaryGate | pass | 0 | 0 | violations | null |
 | Lumenia.NextStaticExportBoundaryGate | pass | 0 | 0 | violations | null |
 | Lumenia.PlumeriaRuntimeRemovalGate | pass | 0 | 0 | runtime occurrences | null |
-| Lumenia.CssOnlyApplicationGate | pass | 0 | 0 | violations | null |
+| Lumenia.CssArtworkAndCharacterIsolationGate | pass | 0 | 0 | violations | null |
 
 [Machine result](application-report.json) · [Raw tool evidence](application-report-evidence.json)

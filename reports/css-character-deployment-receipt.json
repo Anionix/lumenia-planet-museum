@@ -1,0 +1,17 @@
+{
+  "siteProjectIdentifier": "appgprj_6aa6a1d7edc08191b1cfa99c7bdccd26",
+  "versionIdentifier": "appgprj_6aa6a1d7edc08191b1cfa99c7bdccd26~appgver_d125e01f932881918554805c21c59ddd",
+  "deploymentIdentifier": "appgdep_6aa6cc42ba708191823b66b1aa85dae4",
+  "status": "succeeded",
+  "url": "https://lumenia-planet-museum.anionix.chatgpt.site",
+  "sourceCommit": "82ee1066498296021b3daf155bd49a12cc18c494",
+  "observedAt": "2026-09-13T16:17:16.236Z",
+  "nativeCssCharacter": "available",
+  "codexSprite": "rendered_not_admitted",
+  "checks": {
+    "testsPassed": 75,
+    "applicationGatesPassed": 6,
+    "animatedLayersVerified": 44
+  },
+  "historyReceipt": "version one retained in Git history"
+}

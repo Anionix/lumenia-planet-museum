@@ -1,8 +1,8 @@
 {
   "artifactIdentifier": "e67bec4e-cc81-54b8-8de8-e04f06503867",
-  "executionIdentifier": "01a09b8c-8ea3-733c-ad90-5584344f4b50",
-  "recordedAt": "2026-09-13T16:14:35.209Z",
-  "sourceRevision": "sha256:d8637df6f052439c7f48367ef7fc2390be9dad21a581e1e4ad569c7c53a35461",
+  "executionIdentifier": "01a09ba3-398d-7d8c-b55d-3d7397969bc0",
+  "recordedAt": "2026-09-13T16:39:20.785Z",
+  "sourceRevision": "sha256:38399d2837e0f8e40e96791bc54e8c2b4fe186898043674fba45bce834dae22c",
   "mathematicsSourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
   "status": "blocked",
   "predecessors": [
@@ -35,7 +35,7 @@
     {
       "gateName": "MathematicalPrerequisites",
       "gateIdentifier": "21b8162e-08a4-585e-abe9-87adda3ff119",
-      "executionIdentifier": "01a09b8c-8ea3-733c-ad90-5584344f4b50",
+      "executionIdentifier": "01a09ba3-398d-7d8c-b55d-3d7397969bc0",
       "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
       "status": "pass",
       "observation": {
@@ -52,8 +52,8 @@
     {
       "gateName": "GeneratedBridgeIntegrity",
       "gateIdentifier": "e10972ca-c5da-5251-88b5-29829f194a5c",
-      "executionIdentifier": "01a09b8c-8ea3-733c-ad90-5584344f4b50",
-      "sourceRevision": "sha256:d8637df6f052439c7f48367ef7fc2390be9dad21a581e1e4ad569c7c53a35461",
+      "executionIdentifier": "01a09ba3-398d-7d8c-b55d-3d7397969bc0",
+      "sourceRevision": "sha256:38399d2837e0f8e40e96791bc54e8c2b4fe186898043674fba45bce834dae22c",
       "status": "pass",
       "observation": {
         "value": 0,
@@ -68,8 +68,8 @@
     {
       "gateName": "ApplicationBuildAndCodeInspection",
       "gateIdentifier": "810af02d-1589-5bcb-a9b5-1b19a67a586d",
-      "executionIdentifier": "01a09b8c-8ea3-733c-ad90-5584344f4b50",
-      "sourceRevision": "sha256:d8637df6f052439c7f48367ef7fc2390be9dad21a581e1e4ad569c7c53a35461",
+      "executionIdentifier": "01a09ba3-398d-7d8c-b55d-3d7397969bc0",
+      "sourceRevision": "sha256:38399d2837e0f8e40e96791bc54e8c2b4fe186898043674fba45bce834dae22c",
       "status": "pass",
       "observation": {
         "value": 0,
@@ -86,11 +86,11 @@
     {
       "gateName": "CharacterAdmission",
       "gateIdentifier": "9ee5bb0d-3c4f-5b53-871f-442ec289e4ca",
-      "executionIdentifier": "01a09b8c-8ea3-733c-ad90-5584344f4b50",
-      "sourceRevision": "sha256:d8637df6f052439c7f48367ef7fc2390be9dad21a581e1e4ad569c7c53a35461",
-      "status": "blocked",
+      "executionIdentifier": "01a09ba3-398d-7d8c-b55d-3d7397969bc0",
+      "sourceRevision": "sha256:38399d2837e0f8e40e96791bc54e8c2b4fe186898043674fba45bce834dae22c",
+      "status": "pass",
       "observation": {
-        "value": null,
+        "value": 0,
         "limit": 0,
         "unit": "violations"
       },
@@ -98,13 +98,13 @@
         "character receipt admission",
         "image and evidence digests"
       ],
-      "failureReason": "Character receipt is absent or invalid"
+      "failureReason": null
     },
     {
       "gateName": "CurrentBuildBrowserVerification",
       "gateIdentifier": "6238b980-5791-5395-b2f1-94f43a2b475b",
-      "executionIdentifier": "01a09b8c-8ea3-733c-ad90-5584344f4b50",
-      "sourceRevision": "sha256:d8637df6f052439c7f48367ef7fc2390be9dad21a581e1e4ad569c7c53a35461",
+      "executionIdentifier": "01a09ba3-398d-7d8c-b55d-3d7397969bc0",
+      "sourceRevision": "sha256:38399d2837e0f8e40e96791bc54e8c2b4fe186898043674fba45bce834dae22c",
       "status": "blocked",
       "observation": {
         "value": null,
@@ -119,8 +119,8 @@
     {
       "gateName": "FourBrowserPerformanceVerification",
       "gateIdentifier": "68d5e3f5-8ebd-51cd-95be-01d6c8d10eaa",
-      "executionIdentifier": "01a09b8c-8ea3-733c-ad90-5584344f4b50",
-      "sourceRevision": "sha256:d8637df6f052439c7f48367ef7fc2390be9dad21a581e1e4ad569c7c53a35461",
+      "executionIdentifier": "01a09ba3-398d-7d8c-b55d-3d7397969bc0",
+      "sourceRevision": "sha256:38399d2837e0f8e40e96791bc54e8c2b4fe186898043674fba45bce834dae22c",
       "status": "blocked",
       "observation": {
         "value": null,

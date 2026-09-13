@@ -1,0 +1,51 @@
+{
+  "artifactIdentifier": "8b952955-8da1-53ed-8cc0-87934f160bfa",
+  "personIdentifier": "4f7cc469-4d4a-5409-95f3-0691a8214497",
+  "profileIdentifier": "e9146e26-704e-5073-8222-11be30c6d0be",
+  "characterSlug": "william-morris",
+  "executionIdentifier": "01a09b9a-b6e8-7acd-945f-f8877b4e1caa",
+  "recordedAt": "2026-09-13T16:30:02.984Z",
+  "status": "pass",
+  "name": "William Morris",
+  "representation": "fictionalReconstruction",
+  "spriteVersionNumber": 2,
+  "width": 1536,
+  "height": 2288,
+  "bytes": 575960,
+  "sha256": "b1cabd11511431b4230d21303222b0d8e09169144fa675ee624612c8a7946f67",
+  "evidence": [
+    {
+      "file": "validation-extended.json",
+      "sha256": "f00b3c73e94610018f96f8f4056016ee6b79c9c1cc63f9b02d991d80364a3f6f"
+    },
+    {
+      "file": "chroma-despill-extended.json",
+      "sha256": "8b36034a1952692456cf3fcafec319fcdba6faa9f66711d155b3e53ef375794d"
+    },
+    {
+      "file": "direction-blind-validation.json",
+      "sha256": "48801a6b37764463b7cafecbc922f5b71c550f0e660fbd7ad1dd6ff7491bd821"
+    },
+    {
+      "file": "direction-semantics.json",
+      "sha256": "9df546d086c4c075ff916779398b33948c037b56275082032e14bf45013fa7d7"
+    },
+    {
+      "file": "visual-review.json",
+      "sha256": "a2b967a772badc7e2315fcdc9e68aa125c8dd97e0e969972299500d000dd5c51"
+    },
+    {
+      "file": "review.json",
+      "sha256": "a468782b792ec6e34530c3580a8d561dee84b7bd222a3854f46bb590488f679e"
+    },
+    {
+      "file": "look-continuity.json",
+      "sha256": "b7081ab44eddacc5da752ae56537deaab0e493e20c9b337a93591d85074a46ea"
+    }
+  ],
+  "sources": [
+    "https://collections.vam.ac.uk/item/O78889/",
+    "https://www.vam.ac.uk/articles/willam-morris-textiles/"
+  ],
+  "limitation": "Visual interpretation, not a historical recording. Material Sphere raster conversion is not implemented by this character asset."
+}

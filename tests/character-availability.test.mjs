@@ -3,7 +3,7 @@ import test from 'node:test';
 import { readFile } from 'node:fs/promises';
 import { characterAvailabilityFromInspection, characterAvailabilitySource } from '../scripts/build-character-availability.mjs';
 
-test('Unproduced characters cannot mount; failed or stale evidence stops availability generation', () => {
+test('Unverified raster characters cannot mount; failed or stale evidence stops availability generation', () => {
   const absent = characterAvailabilityFromInspection({ status: 'blocked', receipt: null });
   assert.equal(absent.ready, false);
   assert.equal(absent.evidenceExecutionIdentifier, null);

@@ -6,6 +6,8 @@ import { flushSync } from 'react-dom';
 import { studioStyles } from './ArtistStudio.styles';
 import { MuseumCharacter } from './MuseumCharacter';
 import { CssMuseumCharacter } from './CssMuseumCharacter';
+import { CssArtistCharacter } from './CssArtistCharacter';
+import { cssMuseumPeople } from '../artwork/css-museum-people.mjs';
 import { characterAnimationForStudioStep, characterLookDirection } from '../artwork/museum-character.mjs';
 import type { MuseumCharacterAvailability } from '../artwork/museum-character-availability';
 
@@ -19,8 +21,9 @@ export function ArtistStudio({ children, name, referenceWork, interpretation, mo
   children: ReactNode; name: string; referenceWork: string; interpretation: string; morris: boolean; character: MuseumCharacterAvailability;
 }) {
   const characterReady = character.ready && character.imagePath !== null;
-  const [characterPresentation, setCharacterPresentation] = useState<'smooth' | 'frames'>(morris ? 'smooth' : 'frames');
-  const visibleCharacter = morris || characterReady;
+  const [characterPresentation, setCharacterPresentation] = useState<'smooth' | 'frames'>(character.nativeReady ? 'smooth' : 'frames');
+  const visibleCharacter = character.nativeReady || characterReady;
+  const person = cssMuseumPeople.find(person => person.slug === character.slug);
   const [step, setStep] = useState(0);
   const [paused, setPaused] = useState(false);
   const [direction, setDirection] = useState<number | null>(null);
@@ -71,7 +74,7 @@ export function ArtistStudio({ children, name, referenceWork, interpretation, mo
     'さて、この部屋で見つけた模様を、球にまとわせてみよう。ここから先は新しい表現だ。動かしながら、かたちのつながりを確かめてごらん。',
   ] : [
     `ようこそ。制作の途中だけれど、そばで見ていって。今日は「${referenceWork}」を手がかりに、色とかたちを一緒に眺めてみよう。`,
-    '完成した姿だけではなく、まずはひとつの形に目を向けてほしい。どこを残し、どこを変えると、見え方が変わるだろう。',
+    person?.observation ?? 'まずはひとつの形に目を向けて、残すところと変えるところを探してみよう。',
     `この展示では、こんなふうに組み立てている。${interpretation} 重なりが増えるところを、ゆっくり見てみよう。`,
     'いま見ている球は、原作の複製ではない。この仕事を手がかりに生まれた、新しい展示の試作だ。きみの手で動かしてみてほしい。',
   ];
@@ -81,8 +84,9 @@ export function ArtistStudio({ children, name, referenceWork, interpretation, mo
       <div aria-hidden="true" classStyle={[studioStyles.window]} /><div aria-hidden="true" classStyle={[studioStyles.light]} />
       <div aria-hidden="true" classStyle={[studioStyles.rail]} />
       {visibleCharacter && <div ref={figure} classStyle={[studioStyles.figure]} data-character-presentation={characterPresentation}>
-        {morris && characterPresentation === 'smooth'
-          ? <CssMuseumCharacter key={step} state={characterAnimationForStudioStep(step)} paused={paused} lookDirection={direction} />
+        {character.nativeReady && characterPresentation === 'smooth'
+          ? morris ? <CssMuseumCharacter key={step} state={characterAnimationForStudioStep(step)} paused={paused} lookDirection={direction} />
+            : <CssArtistCharacter key={step} personSlug={character.slug} state={characterAnimationForStudioStep(step)} paused={paused} lookDirection={direction} />
           : characterReady && <MuseumCharacter key={step} step={step} paused={paused} direction={direction}
             artifactIdentifier={character.artifactIdentifier} imagePath={character.imagePath!} />}
       </div>}
@@ -98,7 +102,7 @@ export function ArtistStudio({ children, name, referenceWork, interpretation, mo
           {topics.map((topic, index) => <button key={topic} type="button" aria-pressed={step === index} onClick={() => { setStep(index); setDirection(null); }}
             classStyle={[studioStyles.choice, step === index && studioStyles.chosen]}>{topic}</button>)}
         </div>
-        {morris && characterReady && <div role="group" aria-label="人物の動き方" classStyle={[studioStyles.choices]}>
+        {character.nativeReady && characterReady && <div role="group" aria-label="人物の動き方" classStyle={[studioStyles.choices]}>
           <button type="button" aria-pressed={characterPresentation === 'smooth'}
             onClick={() => { setCharacterPresentation('smooth'); setDirection(null); }}
             classStyle={[studioStyles.choice, characterPresentation === 'smooth' && studioStyles.chosen]}>なめらかな動き</button>
