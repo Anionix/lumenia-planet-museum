@@ -1,0 +1,207 @@
+{
+  "claimIdentifier": "6230481c-5054-5174-9508-fb04cf344789",
+  "executionIdentifier": "01a09ba8-b49a-7bb6-ac13-d5a88ceb1a09",
+  "recordedAt": "2026-09-13T16:45:19.898Z",
+  "sourceRevision": "sha256:38399d2837e0f8e40e96791bc54e8c2b4fe186898043674fba45bce834dae22c",
+  "buildMatchesSource": true,
+  "routes": [
+    {
+      "slug": "william-morris",
+      "exists": true,
+      "nativeCharacter": true,
+      "fictionNotice": true,
+      "sources": 2,
+      "sourceLinksPresent": true,
+      "appearanceIdentifier": "658b0d0e-b87b-5ee4-abb4-bfdc505e5bef",
+      "conversationControlsPresent": true,
+      "stopControlPresent": true
+    },
+    {
+      "slug": "alphonse-mucha",
+      "exists": true,
+      "nativeCharacter": true,
+      "fictionNotice": true,
+      "sources": 2,
+      "sourceLinksPresent": true,
+      "appearanceIdentifier": "61427624-d855-5ec4-bb51-3adb3aae68f5",
+      "conversationControlsPresent": true,
+      "stopControlPresent": true
+    },
+    {
+      "slug": "charles-rennie-mackintosh",
+      "exists": true,
+      "nativeCharacter": true,
+      "fictionNotice": true,
+      "sources": 2,
+      "sourceLinksPresent": true,
+      "appearanceIdentifier": "cf34015c-e6ea-5f4d-b568-a706173875c6",
+      "conversationControlsPresent": true,
+      "stopControlPresent": true
+    },
+    {
+      "slug": "piet-mondrian",
+      "exists": true,
+      "nativeCharacter": true,
+      "fictionNotice": true,
+      "sources": 2,
+      "sourceLinksPresent": true,
+      "appearanceIdentifier": "19f643f7-f393-5931-9fba-41a5c1b39b88",
+      "conversationControlsPresent": true,
+      "stopControlPresent": true
+    },
+    {
+      "slug": "gerrit-rietveld",
+      "exists": true,
+      "nativeCharacter": true,
+      "fictionNotice": true,
+      "sources": 2,
+      "sourceLinksPresent": true,
+      "appearanceIdentifier": "9a21ef43-547d-54f1-8c1c-de9fdc5a9dc5",
+      "conversationControlsPresent": true,
+      "stopControlPresent": true
+    },
+    {
+      "slug": "ettore-sottsass",
+      "exists": true,
+      "nativeCharacter": true,
+      "fictionNotice": true,
+      "sources": 2,
+      "sourceLinksPresent": true,
+      "appearanceIdentifier": "e79266e2-02f8-5016-aac9-9a439421e075",
+      "conversationControlsPresent": true,
+      "stopControlPresent": true
+    },
+    {
+      "slug": "herbert-bayer",
+      "exists": true,
+      "nativeCharacter": true,
+      "fictionNotice": true,
+      "sources": 2,
+      "sourceLinksPresent": true,
+      "appearanceIdentifier": "1e9e172a-c38a-5cd4-8a5d-cb8ee53b8c9b",
+      "conversationControlsPresent": true,
+      "stopControlPresent": true
+    },
+    {
+      "slug": "josef-muller-brockmann",
+      "exists": true,
+      "nativeCharacter": true,
+      "fictionNotice": true,
+      "sources": 2,
+      "sourceLinksPresent": true,
+      "appearanceIdentifier": "b2515411-ec5e-540f-86e4-2382cf280d0a",
+      "conversationControlsPresent": true,
+      "stopControlPresent": true
+    },
+    {
+      "slug": "massimo-vignelli",
+      "exists": true,
+      "nativeCharacter": true,
+      "fictionNotice": true,
+      "sources": 2,
+      "sourceLinksPresent": true,
+      "appearanceIdentifier": "9dfbe19f-9e1e-5750-b83c-cada61cbabf9",
+      "conversationControlsPresent": true,
+      "stopControlPresent": true
+    },
+    {
+      "slug": "dieter-rams",
+      "exists": true,
+      "nativeCharacter": true,
+      "fictionNotice": true,
+      "sources": 2,
+      "sourceLinksPresent": true,
+      "appearanceIdentifier": "ccbdd54e-5dee-5086-b238-08bfbab21d85",
+      "conversationControlsPresent": true,
+      "stopControlPresent": true
+    },
+    {
+      "slug": "naoto-fukasawa",
+      "exists": true,
+      "nativeCharacter": true,
+      "fictionNotice": true,
+      "sources": 2,
+      "sourceLinksPresent": true,
+      "appearanceIdentifier": "91d767c2-7ab8-532f-a3a5-a58c3820c40b",
+      "conversationControlsPresent": true,
+      "stopControlPresent": true
+    },
+    {
+      "slug": "rei-kawakubo",
+      "exists": true,
+      "nativeCharacter": true,
+      "fictionNotice": true,
+      "sources": 2,
+      "sourceLinksPresent": true,
+      "appearanceIdentifier": "508b0a0d-9601-5f62-91d6-7476decab88d",
+      "conversationControlsPresent": true,
+      "stopControlPresent": true
+    },
+    {
+      "slug": "charles-eames",
+      "exists": true,
+      "nativeCharacter": true,
+      "fictionNotice": true,
+      "sources": 2,
+      "sourceLinksPresent": true,
+      "appearanceIdentifier": "708be88e-b5c4-53ef-a7ce-2a65c4a6fde2",
+      "conversationControlsPresent": true,
+      "stopControlPresent": true
+    },
+    {
+      "slug": "ray-eames",
+      "exists": true,
+      "nativeCharacter": true,
+      "fictionNotice": true,
+      "sources": 2,
+      "sourceLinksPresent": true,
+      "appearanceIdentifier": "f99567aa-1584-5206-b534-2a92dbfe50e2",
+      "conversationControlsPresent": true,
+      "stopControlPresent": true
+    },
+    {
+      "slug": "walter-gropius",
+      "exists": true,
+      "nativeCharacter": true,
+      "fictionNotice": true,
+      "sources": 2,
+      "sourceLinksPresent": true,
+      "appearanceIdentifier": "1aa39810-671b-5eae-aafd-fbd21897d513",
+      "conversationControlsPresent": true,
+      "stopControlPresent": true
+    }
+  ],
+  "cssCharactersVerified": true,
+  "poseCount": 780,
+  "morrisSpriteAdmitted": true,
+  "morrisPetInstalled": true,
+  "scope": "Fifteen CSS studio characters and one explicitly requested Codex pet; other fourteen requested as native CSS animation",
+  "limitations": [
+    "Other Material Sphere output formats have registration boundaries; their renderers are not implemented.",
+    "Cross-browser performance certification is separate and remains unmeasured."
+  ],
+  "staticInterfaceElementsVerified": true,
+  "interactionEvidence": "Character state selection unit tests plus 780 standalone pose renders and 45 live CSS animation clocks; Site browser clicking was not performed.",
+  "finalizedAt": "2026-09-13T16:50:12.867484+00:00",
+  "completionExecutionIdentifier": "01a09bad-2d03-7888-9582-f202ff18073f",
+  "deployment": {
+    "status": "succeeded",
+    "sourceCommit": "0d98dd247c74fbce679af11f92de687154cbd80d",
+    "url": "https://lumenia-planet-museum.anionix.chatgpt.site",
+    "receipt": "reports/fifteen-character-deployment-receipt.json"
+  },
+  "repository": {
+    "url": "https://github.com/Anionix/lumenia-planet-museum",
+    "visibility": "private"
+  },
+  "introduction": {
+    "status": "verified",
+    "durationSeconds": 15,
+    "path": "media/museum-character-introduction/renders/lumenia-museum-characters.mp4",
+    "verification": "media/museum-character-introduction/verification.json",
+    "tools": [
+      "HyperFrames",
+      "HeyGen"
+    ]
+  }
+}

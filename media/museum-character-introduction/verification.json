@@ -1,0 +1,61 @@
+{
+  "recordIdentifier": "0f48db97-eb04-5cda-9f6a-7baae0ea635f",
+  "executionIdentifier": "01a09bad-2d03-7888-9582-f202ff18073f",
+  "recordedAt": "2026-09-13T16:50:12.867484+00:00",
+  "stateTransition": {
+    "from": "rendered",
+    "to": "verified",
+    "reason": "Completed composition checks, decoded video review, and audio stream inspection"
+  },
+  "status": "pass",
+  "authoringEngine": "HyperFrames 0.8.36",
+  "narrationProvider": "HeyGen",
+  "narrationRepresentation": "Standard Museum narrator, not a historical person voice clone",
+  "compositionChecks": {
+    "command": "npm run check",
+    "lintErrors": 0,
+    "runtimeErrors": 0,
+    "layoutIssues": 0,
+    "layoutSamples": 9,
+    "motionErrors": 0,
+    "contrastChecksPassed": 83,
+    "contrastChecksTotal": 83
+  },
+  "reviewedWarning": {
+    "code": "composition_heavy_overlay_count_high",
+    "clippedShapes": 41,
+    "resolution": "Four time-distributed frames decoded from the completed movie show all fifteen figures and names. No black-frame failure was observed; the final fade is intentional."
+  },
+  "video": {
+    "path": "renders/lumenia-museum-characters.mp4",
+    "sha256": "ac38714e4dd6ef51f9c815f4bb699250dcdc975d0e5cf2136d407e1978be6c10",
+    "durationSeconds": 15,
+    "width": 1920,
+    "height": 1080,
+    "framesPerSecond": 24,
+    "videoCodec": "h264",
+    "audioCodec": "aac",
+    "bytes": 1973508
+  },
+  "audioVerification": {
+    "decodedSamples": 1441792,
+    "meanDecibels": -26.5,
+    "maximumDecibels": -9.2,
+    "nonSilent": true
+  },
+  "visualReview": {
+    "reviewer": "primary agent",
+    "delegation": false,
+    "contactSheet": "renders/review-contact-sheet.jpg",
+    "allFifteenCharactersPresent": true,
+    "namesAndFictionNoticeVisible": true
+  },
+  "sourceDigests": {
+    "index.html": "4f0070fd2017fb62ffca9315a4fd1ca943466f57ef17113b63997f133ce76b00",
+    "DESIGN.md": "029a14ac79e42970f647535b6f42a03b86edce1d1deefbc7ff35e72269600155",
+    "assets/museum-narration.wav": "8c15848901ac8fd76332b4ce1633ffeb5fd3ae988a15da5c797edcc61d912f46"
+  },
+  "limits": [
+    "This is standalone media verification. No Sites browser inspection was performed."
+  ]
+}

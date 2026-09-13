@@ -1,0 +1,10 @@
+{
+  "provider": "HeyGen",
+  "voiceType": "public standard voice; no voice clone",
+  "voiceId": "3c37498e0f964df483b0e51276f85989",
+  "durationSeconds": 13.949387755102041,
+  "script": "ようこそ、プラネット・ミュージアムへ。ここで出会うのは、資料から生まれた十五人のキャラクター。制作室を訪ねて、色とかたちに触れてみましょう。",
+  "representation": "Museum narration, not the historical people speaking",
+  "recordIdentifier": "bc1be7a6-3e58-507b-b60c-e0214c790e2f",
+  "recordedAt": "2026-09-13T16:50:12.867484+00:00"
+}

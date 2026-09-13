@@ -1,0 +1,20 @@
+{
+  "id": "appgdep_6aa6d2f7244881919483ef2d44667a2a",
+  "project_id": "appgprj_6aa6a1d7edc08191b1cfa99c7bdccd26",
+  "title": "Lumenia Planet Museum",
+  "version_id": "appgprj_6aa6a1d7edc08191b1cfa99c7bdccd26~appgver_502d1ee8b8d88191857d69f857ec7b65",
+  "type": "publish",
+  "status": "succeeded",
+  "url": "https://lumenia-planet-museum.anionix.chatgpt.site",
+  "screenshot_asset_pointer": null,
+  "provider_deployment_id": "site---6aa6a1d7edc08191b1cfa99c7bdccd26",
+  "failure_message": null,
+  "env_set_revision": 0,
+  "updated_at": "2026-09-13T16:45:19.346544+00:00",
+  "sourceCommit": "0d98dd247c74fbce679af11f92de687154cbd80d",
+  "verifiedCssPeople": 15,
+  "verifiedPoses": 780,
+  "repositoryVisibility": "private",
+  "morrisPet": "installed",
+  "observedAt": "2026-09-13T16:46:48.544Z"
+}
