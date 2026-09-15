@@ -1,10 +1,14 @@
 import '@plumeria/core';
+import Link from 'next/link';
 import { materialSphereCatalog, materialSphereEvidence } from '../artwork/material-sphere-catalog';
 import { MaterialSphereArtwork } from './MaterialSphere.generated';
 import { MaterialSphereExperience } from './MaterialSphereExperience';
 import { GalleryHeader } from './Gallery';
 import { galleryStyles } from './Gallery.styles';
 import { sphereStyles } from './MaterialSphere.styles';
+
+// llm machine contract; claim UUIDv5: e9194426-a204-577c-9758-7bfe9644b8fc
+// execution UUIDv7: 01a0a324-741b-715a-be47-5cd2936becb7; transition: internal page selection -> framework navigation with native fallback
 
 // llm machine contract; claim UUIDv5: 63c605f5-9e47-5b49-949f-cad7ce96b4ed
 // related UUIDv5: baf96ced-5d93-520d-aa86-dd2899b7fa53
@@ -27,14 +31,14 @@ export function MaterialSphereGallery({ slug }: { slug: string }) {
         </nav>
       </div>
       <nav aria-label="人物を選ぶ" classStyle={[sphereStyles.people]}>
-        {materialSphereCatalog.map(person => <a key={person.profileIdentifier} href={`/planetarium/${person.slug}/`}
+        {materialSphereCatalog.map(person => <Link prefetch={false} key={person.profileIdentifier} href={`/planetarium/${person.slug}/`}
           aria-current={person.slug === slug ? 'page' : undefined}
-          classStyle={[sphereStyles.person, person.slug === slug && sphereStyles.selectedPerson]}>{person.name}</a>)}
+          classStyle={[sphereStyles.person, person.slug === slug && sphereStyles.selectedPerson]}>{person.name}</Link>)}
       </nav>
       <div classStyle={[sphereStyles.heading]}>
         <h2 classStyle={[sphereStyles.artistName]}>{profile.name}</h2>
         <p classStyle={[sphereStyles.reference]}>{profile.referenceWork} / {profile.referencePeriod}</p>
-        <p><a href={`/atelier/${profile.slug}/`} classStyle={[sphereStyles.source]}>この人物の制作室を訪ねる</a></p>
+        <p><Link prefetch={false} href={`/atelier/${profile.slug}/`} classStyle={[sphereStyles.source]}>この人物の制作室を訪ねる</Link></p>
       </div>
       <div classStyle={[sphereStyles.exhibit]}>
         <MaterialSphereExperience key={profile.profileIdentifier} artistName={profile.name} profileIdentifier={profile.profileIdentifier} parameters={profile.parameters}>
@@ -72,6 +76,6 @@ export function MaterialSphereGallery({ slug }: { slug: string }) {
         </details>
       </div>
     </main>
-    <footer classStyle={[galleryStyles.footer]}><span>Material Sphere / Plumeria CSS</span><a href="/" classStyle={[galleryStyles.evidenceLink]}>Museumへ</a></footer>
+    <footer classStyle={[galleryStyles.footer]}><span>Material Sphere / Plumeria CSS</span><Link prefetch={false} href="/" classStyle={[galleryStyles.evidenceLink]}>Museumへ</Link></footer>
   </div>;
 }
