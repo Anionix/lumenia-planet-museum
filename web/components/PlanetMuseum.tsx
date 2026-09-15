@@ -9,6 +9,7 @@ import { CssArtistCharacter } from './CssArtistCharacter';
 import { portraitStyles } from './CssArtistCharacter.styles';
 import { cssMuseumPeople } from '../artwork/css-museum-people.mjs';
 import { materialSphereCatalog } from '../artwork/material-sphere-catalog';
+import { CosmicExhibition } from './CosmicExhibition';
 
 // llm machine contract; claim UUIDv5: 63c605f5-9e47-5b49-949f-cad7ce96b4ed
 // execution UUIDv7: 01a09ad3-4fb7-78b0-bbc0-77a8f7eb5016
@@ -29,6 +30,7 @@ export function PlanetMuseum() {
   return <div classStyle={[galleryStyles.shell]}>
     <GalleryHeader />
     <main>
+      <CosmicExhibition />
       <section classStyle={[museumStyles.hero]}>
         <div><p classStyle={[sphereStyles.eyebrow]}>LUMENIA</p>
           <h1 classStyle={[museumStyles.title]}>Planet<br />Museum</h1>
