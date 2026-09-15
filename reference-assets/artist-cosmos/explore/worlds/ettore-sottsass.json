@@ -1,0 +1,539 @@
+{
+  "record_type": "exploration_world",
+  "recordIdentifier": "cc6b59e2-1bfe-5a91-9baa-1afbcdeb0457",
+  "referenceRecordedAt": "2026-09-15T14:04:34.114664+00:00",
+  "artistName": "Ettore Sottsass",
+  "artistNameJapanese": "エットレ・ソットサス",
+  "title": "遊ぶ土星",
+  "description": "赤い惑星、黄色い環、青いアーチ。色と幾何学が重なる宇宙を、裏側まで。",
+  "sourceProfileIdentifier": "eff6ec3c-4e67-5e2a-bc11-ed8d12f52a39",
+  "sourceImageIdentifier": "39f2913c-52a5-54ee-b38f-73e55540ce6d",
+  "sourceImageSha256": "62f9f2086ffa001a9b5c326c4a4fb7eeba1ae4857fe9eb93a1f465349161cefa",
+  "image": "../ettore-sottsass.png",
+  "sources": [
+    {
+      "sourceIdentifier": "36d41374-9c40-58f4-987c-d7e3cd8b1d0c",
+      "publisher": "Carlton — Memphis Milano",
+      "url": "https://memphis.it/en/products/carlton/",
+      "observedOn": "2026-09-13"
+    },
+    {
+      "sourceIdentifier": "3b904738-9747-56bb-9110-a2175ad23571",
+      "publisher": "Bacterio — Abet Laminati",
+      "url": "https://abetlaminati.com/en/collections/bacterio-ettore-sottsass/",
+      "observedOn": "2026-09-13"
+    }
+  ],
+  "semanticPosition": {
+    "coordinate_identifier": "15863bb0-a1a7-5239-9d46-32f94d98d1d1",
+    "values": [
+      0.55,
+      -0.65,
+      -0.95
+    ],
+    "unit": "dimensionless"
+  },
+  "reconstruction": "Newly authored geometry inspired by cited materials and a ChatGPT-generated reference picture. Hidden surfaces are designed, not recovered.",
+  "machineContract": {
+    "physicsEnabledByDefault": false,
+    "metresPerSceneUnit": 1,
+    "valuesOrigin": "presentation_setting",
+    "movementLimits": {
+      "maximumSeconds": 0.05,
+      "maximumSpeed": 16,
+      "normalSpeed": 8,
+      "boundary": 400,
+      "observerRadius": 0.4,
+      "contactGap": 0.05,
+      "framesPerSecond": 30,
+      "maximumPixelRatio": 1.5
+    }
+  },
+  "spawn": {
+    "position": [
+      23,
+      12,
+      34
+    ],
+    "target": [
+      0,
+      1,
+      0
+    ]
+  },
+  "passage": {
+    "position": [
+      -17,
+      5,
+      8
+    ],
+    "radius": 3,
+    "tube": 0.5
+  },
+  "landmarks": [
+    {
+      "name": "環の手前へ",
+      "position": [
+        -17,
+        5,
+        16
+      ],
+      "target": [
+        -17,
+        5,
+        0
+      ]
+    },
+    {
+      "name": "惑星のそばへ",
+      "position": [
+        13,
+        2,
+        10
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "着地できる台へ",
+      "position": [
+        -17,
+        5,
+        10
+      ],
+      "target": [
+        -17,
+        0,
+        10
+      ]
+    }
+  ],
+  "background": "#0c0914",
+  "accent": "#efb864",
+  "shapes": [
+    {
+      "recordIdentifier": "a1c5639a-6542-5362-8b34-be323c4fedf2",
+      "kind": "sphere",
+      "parameters": [
+        8
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "color": "#db775f"
+    },
+    {
+      "recordIdentifier": "8df51763-20a9-5129-8a1f-a3ad68eeeef9",
+      "kind": "sphere",
+      "parameters": [
+        7.96
+      ],
+      "position": [
+        0,
+        -0.15,
+        0
+      ],
+      "scale": [
+        1,
+        1.02,
+        1
+      ],
+      "color": "#678d7c"
+    },
+    {
+      "recordIdentifier": "6b121bdc-7cd2-519b-8ac8-522232d187ea",
+      "kind": "annulus",
+      "parameters": [
+        14.2,
+        8.7,
+        0.65
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        1.2,
+        0.2,
+        -0.2
+      ],
+      "color": "#edbb46"
+    },
+    {
+      "recordIdentifier": "6ae9e21c-97b4-508e-846e-5ea8d6f467b7",
+      "kind": "annulus",
+      "parameters": [
+        11.5,
+        8.6,
+        0.8
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0.3,
+        -0.15
+      ],
+      "color": "#4d66ad"
+    },
+    {
+      "recordIdentifier": "f9f7f6ff-4164-58f4-bbaa-870dfd11c471",
+      "kind": "cylinder",
+      "parameters": [
+        0,
+        4,
+        9,
+        3
+      ],
+      "position": [
+        7,
+        2,
+        -4
+      ],
+      "rotation": [
+        0,
+        0,
+        -0.8
+      ],
+      "scale": [
+        1,
+        1,
+        0.22
+      ],
+      "color": "#68a294"
+    },
+    {
+      "recordIdentifier": "acd1157d-191a-54a2-94a7-dbbf53b0103e",
+      "kind": "cylinder",
+      "parameters": [
+        0,
+        4,
+        9,
+        3
+      ],
+      "position": [
+        -6,
+        -3,
+        -2
+      ],
+      "rotation": [
+        0,
+        0,
+        2.5
+      ],
+      "scale": [
+        1,
+        1,
+        0.22
+      ],
+      "color": "#e9987e"
+    },
+    {
+      "recordIdentifier": "5db4b9eb-c910-583a-bc41-c7fced4f103b",
+      "kind": "sphere",
+      "parameters": [
+        2.1
+      ],
+      "position": [
+        -18,
+        -3,
+        -7
+      ],
+      "color": "#d3bd8b"
+    },
+    {
+      "recordIdentifier": "172d7436-b515-5e59-9108-314d74f957be",
+      "kind": "torus",
+      "parameters": [
+        3,
+        0.5
+      ],
+      "position": [
+        -17,
+        5,
+        8
+      ],
+      "color": "#e7b74c"
+    },
+    {
+      "recordIdentifier": "67253499-027d-55c8-bc56-82224876cfe4",
+      "kind": "box",
+      "parameters": [
+        7,
+        0.6,
+        6
+      ],
+      "position": [
+        -17,
+        0,
+        8
+      ],
+      "color": "#516aa8"
+    },
+    {
+      "recordIdentifier": "3a90f60f-1f59-55c7-95f7-8fa00865ec57",
+      "kind": "box",
+      "parameters": [
+        1.7,
+        0.1,
+        1.45
+      ],
+      "position": [
+        -19.6,
+        0.35,
+        5.8
+      ],
+      "color": "#242632",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "f3ec1d58-722e-5b54-845b-5d8d5bdd77ee",
+      "kind": "box",
+      "parameters": [
+        1.7,
+        0.1,
+        1.45
+      ],
+      "position": [
+        -17.85,
+        0.35,
+        5.8
+      ],
+      "color": "#ebdfc8",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "c0279e7b-2f6a-5da1-9a7f-dadf59d26bda",
+      "kind": "box",
+      "parameters": [
+        1.7,
+        0.1,
+        1.45
+      ],
+      "position": [
+        -16.1,
+        0.35,
+        5.8
+      ],
+      "color": "#242632",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "e01f1523-067b-5ce7-8572-32070878972b",
+      "kind": "box",
+      "parameters": [
+        1.7,
+        0.1,
+        1.45
+      ],
+      "position": [
+        -14.350000000000001,
+        0.35,
+        5.8
+      ],
+      "color": "#ebdfc8",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "14d82be7-49a2-54f8-ab52-10b3a04b1cf0",
+      "kind": "box",
+      "parameters": [
+        1.7,
+        0.1,
+        1.45
+      ],
+      "position": [
+        -19.6,
+        0.35,
+        7.3
+      ],
+      "color": "#ebdfc8",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "bdceed5e-aa50-5d81-946b-1b633fa3697d",
+      "kind": "box",
+      "parameters": [
+        1.7,
+        0.1,
+        1.45
+      ],
+      "position": [
+        -17.85,
+        0.35,
+        7.3
+      ],
+      "color": "#242632",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "1b96f750-05db-5f06-a843-0299a6b9e45e",
+      "kind": "box",
+      "parameters": [
+        1.7,
+        0.1,
+        1.45
+      ],
+      "position": [
+        -16.1,
+        0.35,
+        7.3
+      ],
+      "color": "#ebdfc8",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "cd1e8e2d-bf40-5441-868f-3b2bc56329a0",
+      "kind": "box",
+      "parameters": [
+        1.7,
+        0.1,
+        1.45
+      ],
+      "position": [
+        -14.350000000000001,
+        0.35,
+        7.3
+      ],
+      "color": "#242632",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "73ec6ad8-c42a-53fd-9a99-ab94028222ca",
+      "kind": "box",
+      "parameters": [
+        1.7,
+        0.1,
+        1.45
+      ],
+      "position": [
+        -19.6,
+        0.35,
+        8.8
+      ],
+      "color": "#242632",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "b6e8651e-4c15-59e1-be64-22ec8ccd5ebe",
+      "kind": "box",
+      "parameters": [
+        1.7,
+        0.1,
+        1.45
+      ],
+      "position": [
+        -17.85,
+        0.35,
+        8.8
+      ],
+      "color": "#ebdfc8",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "5abb143f-9b41-5f82-a0c7-6eaee788546d",
+      "kind": "box",
+      "parameters": [
+        1.7,
+        0.1,
+        1.45
+      ],
+      "position": [
+        -16.1,
+        0.35,
+        8.8
+      ],
+      "color": "#242632",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "4d87e801-293a-5f03-8ad4-e96c68dc9a01",
+      "kind": "box",
+      "parameters": [
+        1.7,
+        0.1,
+        1.45
+      ],
+      "position": [
+        -14.350000000000001,
+        0.35,
+        8.8
+      ],
+      "color": "#ebdfc8",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "b7fe734a-1efb-5a14-9e76-059234ff9162",
+      "kind": "box",
+      "parameters": [
+        1.7,
+        0.1,
+        1.45
+      ],
+      "position": [
+        -19.6,
+        0.35,
+        10.3
+      ],
+      "color": "#ebdfc8",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "6e2cb368-e42c-598d-bcba-62b5c9fc3367",
+      "kind": "box",
+      "parameters": [
+        1.7,
+        0.1,
+        1.45
+      ],
+      "position": [
+        -17.85,
+        0.35,
+        10.3
+      ],
+      "color": "#242632",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "9fefa971-d973-5648-986f-8a5c7a78f09b",
+      "kind": "box",
+      "parameters": [
+        1.7,
+        0.1,
+        1.45
+      ],
+      "position": [
+        -16.1,
+        0.35,
+        10.3
+      ],
+      "color": "#ebdfc8",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "68823c34-215a-5a6c-be81-438198711f9e",
+      "kind": "box",
+      "parameters": [
+        1.7,
+        0.1,
+        1.45
+      ],
+      "position": [
+        -14.350000000000001,
+        0.35,
+        10.3
+      ],
+      "color": "#242632",
+      "collision": false
+    }
+  ]
+}

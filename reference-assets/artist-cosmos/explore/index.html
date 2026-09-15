@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ja"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark">
+<title>宇宙を、探索する。 | Lumenia</title><link rel="stylesheet" href="./style.css"><script type="module" src="./main.mjs"></script>
+</head><body>
+<main class="universe">
+  <canvas tabindex="0" aria-label="宇宙を探索する。ドラッグで向きを変え、W A S D と Q E で移動。下のボタンでも操作できます。"></canvas>
+  <header><a class="brand" href="../">Lumenia.</a><span>宇宙を、探索する。</span><button type="button" data-action="worlds" aria-expanded="false">別の宇宙へ</button><a href="../">退出 ↗</a></header>
+  <nav class="worlds" aria-label="探索する作家の宇宙" hidden></nav>
+  <section class="world-copy"><p class="eyebrow">参考画像から生まれた、立体の世界</p><h1>宇宙を準備しています。</h1><p class="artist"></p><p class="description"></p>
+    <div class="landmarks" aria-label="見どころへ移動"></div>
+  </section>
+  <div class="loading" role="status">宇宙を読み込んでいます…</div>
+  <div class="fallback" hidden><p>この環境では立体表示を開始できませんでした。</p><a href="../">静止画の一覧を見る</a><button data-action="retry" type="button">もう一度開く</button></div>
+  <section class="controls" aria-label="探索の操作">
+    <p class="hint">ドラッグで見回す · W A S D で移動 · Q E で上下 · Shift で速く</p>
+    <div class="control-row">
+      <div class="flight-buttons" aria-label="移動"><button type="button" data-move="left">← 左へ</button><button type="button" data-move="forward">↑ 前へ</button><button type="button" data-move="right">右へ →</button><button type="button" data-move="down">下へ</button><button type="button" data-move="backward">↓ 後ろへ</button><button type="button" data-move="up">上へ</button></div>
+      <div class="look-buttons" aria-label="見る方向"><button type="button" data-look="left">左を見る</button><button type="button" data-look="right">右を見る</button><button type="button" data-action="reset">入口へ戻る</button></div>
+      <div class="physics-controls"><label><input type="checkbox" name="collision" disabled>壁や地面にぶつかる</label><label class="landing" hidden><input type="checkbox" name="landing">ゆっくり着地する</label></div>
+    </div>
+    <div class="status-row"><span class="navigation-status" role="status">準備中</span><details><summary>作品の手がかり</summary><div class="source-copy"><a class="reference-image" href="../">参考画像を見る ↗</a><p>資料をもとに作った新しい宇宙です。画像にない裏側も造形しています。</p><div class="sources"></div><a href="/records/">美術館の資料と検算記録</a></div></details></div>
+  </section>
+</main><noscript><p>探索にはJavaScriptが必要です。<a href="../">静止画を見る</a></p></noscript>
+</body></html>

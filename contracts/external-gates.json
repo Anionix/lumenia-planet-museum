@@ -250,7 +250,7 @@
       "name": "Lumenia.CosmicExhibitionIsolationGate",
       "limit": 0,
       "unit": "violations",
-      "measurement": "The Next.js client graph limits Three.js to registered exhibition modules and excludes physics. The separate cosmos/interactive page admits source-identical registered scripts and optional Rapier after user activation; its manifest starts with physics disabled. Only digest-registered reference pictures are admitted. Existing CSS artwork and character checks remain enforced.",
+      "measurement": "The Next.js client graph limits Three.js to registered exhibition modules and excludes physics. The separate cosmos/interactive and cosmos/explore pages admit source-identical registered scripts, share the pinned local Three.js library, and load optional Rapier only after user activation. Both catalogues start with physics disabled. Only digest-registered reference pictures are admitted. Existing CSS artwork and character checks remain enforced.",
       "gateIdentifier": "81b0c197-77d0-52c6-b099-e3fc65e6fac2"
     }
   ],
