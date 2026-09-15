@@ -52,6 +52,17 @@ test('code gates accept module-scope Plumeria arrays inside a client boundary', 
     ['web/Client.tsx', `'use client'; import * as css from '@plumeria/core'; import {useState} from 'react'; const styles=css.create({box:{color:'red'}}); export function Client(){const [value,setValue]=useState(0);return <button classStyle={[styles.box]} onClick={()=>setValue(value+1)}>{value}</button>}`]]);
   assert.deepEqual(inspectSources(sources).issues, { plumeriaScope: [], plumeriaComposition: [], staticExport: [], componentBoundary: [] });
 });
+
+// llm machine contract; claim UUIDv5: e9194426-a204-577c-9758-7bfe9644b8fc
+// execution UUIDv7: 01a0a324-741b-715a-be47-5cd2936becb7; transition: framework link -> explicit static application capability
+test('framework links work in server and client pages without admitting unknown framework modules', () => {
+  for (const directive of ['', "'use client';"]) {
+    const source = `${directive} import Link from 'next/link'; export default function Page(){return <Link href='/records/'>Records</Link>}`;
+    const inspect = code => inspectSources(new Map([['web/app/page.tsx', code]])).issues;
+    assert.deepEqual(inspect(source), { plumeriaScope: [], plumeriaComposition: [], staticExport: [], componentBoundary: [] });
+    assert.ok(inspect(source.replace('next/link', 'next/unclassified')).componentBoundary.length);
+  }
+});
 test('code gates distinguish literal object keys from browser access', () => {
   const inspect = code => inspectSources(new Map([['web/app/page.tsx', code]])).issues.componentBoundary;
   assert.deepEqual(inspect('export const styles = { window: { color: "red" }, document: {} };'), []);
