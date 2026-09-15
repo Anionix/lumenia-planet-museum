@@ -1,0 +1,273 @@
+{
+  "record_type": "exploration_world",
+  "recordIdentifier": "1c5eecf4-0edf-5a69-8f73-e359c6a16302",
+  "referenceRecordedAt": "2026-09-15T14:04:34.114664+00:00",
+  "artistName": "Naoto Fukasawa",
+  "artistNameJapanese": "深澤直人",
+  "title": "ひとつ引く、小さな月",
+  "description": "丸みを帯びた白い物体と、浮かぶ紐。日常の形から生まれた小さな宇宙。",
+  "sourceProfileIdentifier": "4944ca35-5584-54dd-9b11-d3ab77dacad6",
+  "sourceImageIdentifier": "6f345b4d-9115-5d33-8d0e-73455d4ce23c",
+  "sourceImageSha256": "c1d81e3a60c2e9859fe9c4c1fabd7fc27dc17d1b053d8cc2bbde8cf409b60f3a",
+  "image": "../naoto-fukasawa.png",
+  "sources": [
+    {
+      "sourceIdentifier": "227d61e8-ad76-5542-835c-bdc8015aad65",
+      "publisher": "Wall mounted CD Player — Naoto Fukasawa Design",
+      "url": "https://naotofukasawa.com/projects/540/",
+      "observedOn": "2026-09-13"
+    },
+    {
+      "sourceIdentifier": "c4cbf3a0-b3fd-5db3-89f6-7add1862a7ea",
+      "publisher": "CD-player — Victoria and Albert Museum",
+      "url": "https://collections.vam.ac.uk/item/O1227135/",
+      "observedOn": "2026-09-13"
+    }
+  ],
+  "semanticPosition": {
+    "coordinate_identifier": "99b0c48e-9248-5e72-9c8c-229fe3245ca8",
+    "values": [
+      0.45,
+      0.65,
+      0.98
+    ],
+    "unit": "dimensionless"
+  },
+  "reconstruction": "Newly authored geometry inspired by cited materials and a ChatGPT-generated reference picture. Hidden surfaces are designed, not recovered.",
+  "machineContract": {
+    "physicsEnabledByDefault": false,
+    "metresPerSceneUnit": 1,
+    "valuesOrigin": "presentation_setting",
+    "movementLimits": {
+      "maximumSeconds": 0.05,
+      "maximumSpeed": 16,
+      "normalSpeed": 8,
+      "boundary": 400,
+      "observerRadius": 0.4,
+      "contactGap": 0.05,
+      "framesPerSecond": 30,
+      "maximumPixelRatio": 1.5
+    }
+  },
+  "spawn": {
+    "position": [
+      25,
+      13,
+      38
+    ],
+    "target": [
+      0,
+      1,
+      0
+    ]
+  },
+  "passage": {
+    "position": [
+      -18,
+      6,
+      12
+    ],
+    "radius": 3,
+    "tube": 0.5,
+    "kind": "circular"
+  },
+  "landmarks": [
+    {
+      "name": "環の手前へ",
+      "position": [
+        -18,
+        6,
+        20
+      ],
+      "target": [
+        -18,
+        6,
+        0
+      ]
+    },
+    {
+      "name": "形のそばへ",
+      "position": [
+        14,
+        4,
+        15
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "着地できる台へ",
+      "position": [
+        -18,
+        5,
+        14
+      ],
+      "target": [
+        -18,
+        0,
+        14
+      ]
+    }
+  ],
+  "background": "#090d16",
+  "accent": "#c6c9be",
+  "shapes": [
+    {
+      "recordIdentifier": "595940f3-659f-5580-8926-da9c086d48a8",
+      "kind": "sphere",
+      "parameters": [
+        26
+      ],
+      "position": [
+        8,
+        -32,
+        -80
+      ],
+      "color": "#567a99",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "31b92459-dad2-5882-8d73-7cbf584a8832",
+      "kind": "roundedBox",
+      "parameters": [
+        12,
+        12,
+        4,
+        1.8
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "color": "#d5d5cb"
+    },
+    {
+      "recordIdentifier": "4f859923-6675-5c73-8b62-3d7baf3d79bc",
+      "kind": "cylinder",
+      "parameters": [
+        3,
+        3,
+        0.12
+      ],
+      "position": [
+        0,
+        0.4,
+        2.03
+      ],
+      "color": "#c1c5bd",
+      "rotation": [
+        1.5707963267948966,
+        0,
+        0
+      ]
+    },
+    {
+      "recordIdentifier": "81be3509-d040-53b7-9e55-f24b96fa91d6",
+      "kind": "torus",
+      "parameters": [
+        3.08,
+        0.06
+      ],
+      "position": [
+        0,
+        0.4,
+        2.1
+      ],
+      "color": "#e3e2d7"
+    },
+    {
+      "recordIdentifier": "f30b7d4e-15cf-55dc-9997-773f41b0715e",
+      "kind": "tube",
+      "parameters": [
+        [
+          [
+            1,
+            -5,
+            0
+          ],
+          [
+            1,
+            -9,
+            0
+          ],
+          [
+            4,
+            -12,
+            1
+          ],
+          [
+            8,
+            -11,
+            3
+          ]
+        ],
+        0.075
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "color": "#d2cbb6"
+    },
+    {
+      "recordIdentifier": "80454855-fef3-525a-8940-538f2beec25b",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        8,
+        -11,
+        3
+      ],
+      "color": "#b79c70"
+    },
+    {
+      "recordIdentifier": "386179ee-3ee4-5f1b-b9d5-b67fe1fe9e75",
+      "kind": "sphere",
+      "parameters": [
+        1.1
+      ],
+      "position": [
+        -15,
+        8,
+        -18
+      ],
+      "color": "#bac6c5"
+    },
+    {
+      "recordIdentifier": "bc60eb04-d44e-59c8-8f5c-e4b70273ed00",
+      "kind": "torus",
+      "parameters": [
+        3,
+        0.5
+      ],
+      "position": [
+        -18,
+        6,
+        12
+      ],
+      "color": "#c6c9be"
+    },
+    {
+      "recordIdentifier": "338387da-c0ec-5348-ade8-f10cae10135a",
+      "kind": "box",
+      "parameters": [
+        7,
+        0.6,
+        7
+      ],
+      "position": [
+        -18,
+        0,
+        12
+      ],
+      "color": "#c6c9be"
+    }
+  ]
+}

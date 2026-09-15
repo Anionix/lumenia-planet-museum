@@ -1,0 +1,539 @@
+{
+  "record_type": "exploration_world",
+  "recordIdentifier": "fdb53a66-8aa6-576a-b088-2302be21e751",
+  "referenceRecordedAt": "2026-09-15T14:04:34.114664+00:00",
+  "artistName": "Piet Mondrian",
+  "artistNameJapanese": "ピート・モンドリアン",
+  "title": "直角でできた宇宙",
+  "description": "直角の面と黒い格子の奥に、別の空間が続く。色面の裏側へ回る。",
+  "sourceProfileIdentifier": "2da4bfe7-d11a-5615-ae87-6143a563ab0e",
+  "sourceImageIdentifier": "9051b730-5a3a-575a-aaa8-b736729d11c5",
+  "sourceImageSha256": "66ab2202b937935af83683534d1a667cc8e291dd5cb40049b29232439f9eb8da",
+  "image": "../piet-mondrian.png",
+  "sources": [
+    {
+      "sourceIdentifier": "0cd2ba89-2413-52e5-8d4c-a139be157574",
+      "publisher": "Composition with Red, Blue, Black, Yellow, and Gray — MoMA",
+      "url": "https://www.moma.org/collection/works/79002",
+      "observedOn": "2026-09-13"
+    },
+    {
+      "sourceIdentifier": "61a02caf-f1a4-5fea-a66a-2061b77e3765",
+      "publisher": "Broadway Boogie Woogie — MoMA",
+      "url": "https://www.moma.org/collection/works/78682",
+      "observedOn": "2026-09-13"
+    }
+  ],
+  "semanticPosition": {
+    "coordinate_identifier": "084f90b6-a70c-5ae1-9639-cea3456efea5",
+    "values": [
+      0.95,
+      0.6,
+      0.65
+    ],
+    "unit": "dimensionless"
+  },
+  "reconstruction": "Newly authored geometry inspired by cited materials and a ChatGPT-generated reference picture. Hidden surfaces are designed, not recovered.",
+  "machineContract": {
+    "physicsEnabledByDefault": false,
+    "metresPerSceneUnit": 1,
+    "valuesOrigin": "presentation_setting",
+    "movementLimits": {
+      "maximumSeconds": 0.05,
+      "maximumSpeed": 16,
+      "normalSpeed": 8,
+      "boundary": 400,
+      "observerRadius": 0.4,
+      "contactGap": 0.05,
+      "framesPerSecond": 30,
+      "maximumPixelRatio": 1.5
+    }
+  },
+  "spawn": {
+    "position": [
+      25,
+      13,
+      38
+    ],
+    "target": [
+      0,
+      1,
+      0
+    ]
+  },
+  "passage": {
+    "position": [
+      -18,
+      6,
+      12
+    ],
+    "radius": 3,
+    "tube": 0.5,
+    "kind": "rectangular"
+  },
+  "landmarks": [
+    {
+      "name": "枠の手前へ",
+      "position": [
+        -18,
+        6,
+        20
+      ],
+      "target": [
+        -18,
+        6,
+        0
+      ]
+    },
+    {
+      "name": "形のそばへ",
+      "position": [
+        14,
+        4,
+        15
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "着地できる台へ",
+      "position": [
+        -18,
+        5,
+        14
+      ],
+      "target": [
+        -18,
+        0,
+        14
+      ]
+    }
+  ],
+  "background": "#090d16",
+  "accent": "#dac163",
+  "shapes": [
+    {
+      "recordIdentifier": "d5806872-798e-5ad8-9ef4-492a25dd0942",
+      "kind": "box",
+      "parameters": [
+        0.28,
+        22,
+        0.3
+      ],
+      "position": [
+        -11,
+        0,
+        -5
+      ],
+      "color": "#1b1b1e"
+    },
+    {
+      "recordIdentifier": "5ffd5f61-3b6b-5340-81b6-0df16d2abc30",
+      "kind": "box",
+      "parameters": [
+        22,
+        0.28,
+        0.3
+      ],
+      "position": [
+        0,
+        -11,
+        -5
+      ],
+      "color": "#1b1b1e"
+    },
+    {
+      "recordIdentifier": "101a79a5-53f9-58e5-b886-87a82f4211d0",
+      "kind": "box",
+      "parameters": [
+        0.28,
+        22,
+        0.3
+      ],
+      "position": [
+        -5,
+        0,
+        -5
+      ],
+      "color": "#1b1b1e"
+    },
+    {
+      "recordIdentifier": "debe554b-f3d7-5ccd-b7eb-3d285ab63f43",
+      "kind": "box",
+      "parameters": [
+        22,
+        0.28,
+        0.3
+      ],
+      "position": [
+        0,
+        -5,
+        -5
+      ],
+      "color": "#1b1b1e"
+    },
+    {
+      "recordIdentifier": "5db43686-6a5f-5aaf-8367-bb463f48ace3",
+      "kind": "box",
+      "parameters": [
+        0.28,
+        22,
+        0.3
+      ],
+      "position": [
+        2,
+        0,
+        -5
+      ],
+      "color": "#1b1b1e"
+    },
+    {
+      "recordIdentifier": "28eaff63-c386-5df4-9b04-79e98bf8c0ee",
+      "kind": "box",
+      "parameters": [
+        22,
+        0.28,
+        0.3
+      ],
+      "position": [
+        0,
+        2,
+        -5
+      ],
+      "color": "#1b1b1e"
+    },
+    {
+      "recordIdentifier": "9f0c9f40-17f7-5b05-a596-bb78c54b695d",
+      "kind": "box",
+      "parameters": [
+        0.28,
+        22,
+        0.3
+      ],
+      "position": [
+        10,
+        0,
+        -5
+      ],
+      "color": "#1b1b1e"
+    },
+    {
+      "recordIdentifier": "5e716af5-7dac-5389-a3c6-053422f49a82",
+      "kind": "box",
+      "parameters": [
+        22,
+        0.28,
+        0.3
+      ],
+      "position": [
+        0,
+        10,
+        -5
+      ],
+      "color": "#1b1b1e"
+    },
+    {
+      "recordIdentifier": "29b8aa8c-eb58-584e-857d-206dd12e092e",
+      "kind": "box",
+      "parameters": [
+        0.28,
+        22,
+        0.3
+      ],
+      "position": [
+        -11,
+        0,
+        5
+      ],
+      "color": "#1b1b1e"
+    },
+    {
+      "recordIdentifier": "e60d43a6-aa7a-546a-891f-1daff371e16c",
+      "kind": "box",
+      "parameters": [
+        22,
+        0.28,
+        0.3
+      ],
+      "position": [
+        0,
+        -11,
+        5
+      ],
+      "color": "#1b1b1e"
+    },
+    {
+      "recordIdentifier": "5dfc4522-2dad-507c-a6ca-e95cb2846b9c",
+      "kind": "box",
+      "parameters": [
+        0.28,
+        22,
+        0.3
+      ],
+      "position": [
+        -5,
+        0,
+        5
+      ],
+      "color": "#1b1b1e"
+    },
+    {
+      "recordIdentifier": "fa7011df-5ed7-5f04-8865-1b5bc680ad1d",
+      "kind": "box",
+      "parameters": [
+        22,
+        0.28,
+        0.3
+      ],
+      "position": [
+        0,
+        -5,
+        5
+      ],
+      "color": "#1b1b1e"
+    },
+    {
+      "recordIdentifier": "36c5faa3-ca02-5990-8a24-b0818b214cf5",
+      "kind": "box",
+      "parameters": [
+        0.28,
+        22,
+        0.3
+      ],
+      "position": [
+        2,
+        0,
+        5
+      ],
+      "color": "#1b1b1e"
+    },
+    {
+      "recordIdentifier": "0dc60f7d-53a2-5c25-9613-31bea39850a3",
+      "kind": "box",
+      "parameters": [
+        22,
+        0.28,
+        0.3
+      ],
+      "position": [
+        0,
+        2,
+        5
+      ],
+      "color": "#1b1b1e"
+    },
+    {
+      "recordIdentifier": "a98d7ba0-b1e5-56c8-9f6c-19e359299bcd",
+      "kind": "box",
+      "parameters": [
+        0.28,
+        22,
+        0.3
+      ],
+      "position": [
+        10,
+        0,
+        5
+      ],
+      "color": "#1b1b1e"
+    },
+    {
+      "recordIdentifier": "c43f92fc-2ce7-59c8-a3c0-7326fd267f3f",
+      "kind": "box",
+      "parameters": [
+        22,
+        0.28,
+        0.3
+      ],
+      "position": [
+        0,
+        10,
+        5
+      ],
+      "color": "#1b1b1e"
+    },
+    {
+      "recordIdentifier": "24f1316c-9fbc-5c45-a5ad-bba767713ab5",
+      "kind": "box",
+      "parameters": [
+        5.4,
+        5.5,
+        0.45
+      ],
+      "position": [
+        -8,
+        6,
+        5
+      ],
+      "color": "#e6dfc9"
+    },
+    {
+      "recordIdentifier": "bebd75cb-6b7c-54ba-bac2-f99fc67e3705",
+      "kind": "box",
+      "parameters": [
+        5.4,
+        5.5,
+        0.45
+      ],
+      "position": [
+        6,
+        6,
+        0
+      ],
+      "color": "#a73932"
+    },
+    {
+      "recordIdentifier": "2dd1ed94-f918-5925-afd4-d2dec88a85f1",
+      "kind": "box",
+      "parameters": [
+        5.4,
+        5.5,
+        0.45
+      ],
+      "position": [
+        -8,
+        -7,
+        -5
+      ],
+      "color": "#d8b343"
+    },
+    {
+      "recordIdentifier": "0714bf4f-65ce-5dcd-b14c-5c3e5842ee11",
+      "kind": "box",
+      "parameters": [
+        5.4,
+        5.5,
+        0.45
+      ],
+      "position": [
+        6,
+        -7,
+        -3
+      ],
+      "color": "#304d86"
+    },
+    {
+      "recordIdentifier": "fa7aaecb-1b0d-5bff-a6de-22c2898dbb96",
+      "kind": "box",
+      "parameters": [
+        5.4,
+        5.5,
+        0.45
+      ],
+      "position": [
+        -1,
+        0,
+        -5
+      ],
+      "color": "#e6dfc9"
+    },
+    {
+      "recordIdentifier": "a881c3c3-e635-5ff3-bc3a-42d14bb30c7f",
+      "kind": "box",
+      "parameters": [
+        0.3,
+        0.3,
+        10
+      ],
+      "position": [
+        -11,
+        10,
+        0
+      ],
+      "color": "#1b1b1e"
+    },
+    {
+      "recordIdentifier": "ff41b87f-34c8-541e-8302-5c43ba10b614",
+      "kind": "box",
+      "parameters": [
+        0.3,
+        0.3,
+        10
+      ],
+      "position": [
+        10,
+        10,
+        0
+      ],
+      "color": "#1b1b1e"
+    },
+    {
+      "recordIdentifier": "f86e8b8e-6835-541a-bd0e-c8cdbc056a98",
+      "kind": "box",
+      "parameters": [
+        1,
+        7,
+        1
+      ],
+      "position": [
+        -21,
+        6,
+        12
+      ],
+      "color": "#dac163"
+    },
+    {
+      "recordIdentifier": "ee43c1a2-d139-57fa-907d-a8296fa90720",
+      "kind": "box",
+      "parameters": [
+        5,
+        1,
+        1
+      ],
+      "position": [
+        -18,
+        3,
+        12
+      ],
+      "color": "#dac163"
+    },
+    {
+      "recordIdentifier": "5704ac3b-3bdf-55ee-8273-7964d689b444",
+      "kind": "box",
+      "parameters": [
+        1,
+        7,
+        1
+      ],
+      "position": [
+        -15,
+        6,
+        12
+      ],
+      "color": "#dac163"
+    },
+    {
+      "recordIdentifier": "1a2d058d-4ff5-5257-b16c-7f13c73f654e",
+      "kind": "box",
+      "parameters": [
+        5,
+        1,
+        1
+      ],
+      "position": [
+        -18,
+        9,
+        12
+      ],
+      "color": "#dac163"
+    },
+    {
+      "recordIdentifier": "6fe1c8ae-0f8e-5de3-a7d6-aa1f1defb39b",
+      "kind": "box",
+      "parameters": [
+        7,
+        0.6,
+        7
+      ],
+      "position": [
+        -18,
+        0,
+        12
+      ],
+      "color": "#dac163"
+    }
+  ]
+}

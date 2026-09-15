@@ -1,0 +1,767 @@
+{
+  "record_type": "exploration_world",
+  "recordIdentifier": "56567625-bde1-59b0-a627-a8025a571c5a",
+  "referenceRecordedAt": "2026-09-15T14:04:34.114664+00:00",
+  "artistName": "Massimo Vignelli",
+  "artistNameJapanese": "マッシモ・ヴィネッリ",
+  "title": "星を結ぶ路線",
+  "description": "五つの色の線と点がつくる架空の星図。線の奥行きと交差をたどる。",
+  "sourceProfileIdentifier": "fda39095-201d-5703-a75a-072fceac56f4",
+  "sourceImageIdentifier": "4c729bba-ac72-5689-aa98-170af0e3426a",
+  "sourceImageSha256": "68c567fa35979197d5652c822492322a995378ec30c20aa0f965db10bc4c7fc7",
+  "image": "../massimo-vignelli.png",
+  "sources": [
+    {
+      "sourceIdentifier": "667442d4-744b-5d54-8a48-343427d81871",
+      "publisher": "New York Subway Map — MoMA",
+      "url": "https://www.moma.org/collection/works/89300",
+      "observedOn": "2026-09-13"
+    },
+    {
+      "sourceIdentifier": "1317d040-f91a-5948-a916-b545d3fdb303",
+      "publisher": "Towards a Better Way: The Vignelli Map at 50 — New York Transit Museum",
+      "url": "https://www.nytransitmuseum.org/vignelli/",
+      "observedOn": "2026-09-13"
+    }
+  ],
+  "semanticPosition": {
+    "coordinate_identifier": "a99dfabf-b74d-575f-9ba2-ee5505414d7c",
+    "values": [
+      0.85,
+      0.7,
+      0.85
+    ],
+    "unit": "dimensionless"
+  },
+  "reconstruction": "Newly authored geometry inspired by cited materials and a ChatGPT-generated reference picture. Hidden surfaces are designed, not recovered.",
+  "machineContract": {
+    "physicsEnabledByDefault": false,
+    "metresPerSceneUnit": 1,
+    "valuesOrigin": "presentation_setting",
+    "movementLimits": {
+      "maximumSeconds": 0.05,
+      "maximumSpeed": 16,
+      "normalSpeed": 8,
+      "boundary": 400,
+      "observerRadius": 0.4,
+      "contactGap": 0.05,
+      "framesPerSecond": 30,
+      "maximumPixelRatio": 1.5
+    }
+  },
+  "spawn": {
+    "position": [
+      25,
+      13,
+      38
+    ],
+    "target": [
+      0,
+      1,
+      0
+    ]
+  },
+  "passage": {
+    "position": [
+      -18,
+      6,
+      12
+    ],
+    "radius": 3,
+    "tube": 0.5,
+    "kind": "rectangular"
+  },
+  "landmarks": [
+    {
+      "name": "枠の手前へ",
+      "position": [
+        -18,
+        6,
+        20
+      ],
+      "target": [
+        -18,
+        6,
+        0
+      ]
+    },
+    {
+      "name": "形のそばへ",
+      "position": [
+        14,
+        4,
+        15
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "着地できる台へ",
+      "position": [
+        -18,
+        5,
+        14
+      ],
+      "target": [
+        -18,
+        0,
+        14
+      ]
+    }
+  ],
+  "background": "#090d16",
+  "accent": "#bd9e72",
+  "shapes": [
+    {
+      "recordIdentifier": "a7140615-9065-547a-8945-84ce446e027c",
+      "kind": "box",
+      "parameters": [
+        8,
+        0.2,
+        0.2
+      ],
+      "position": [
+        -8,
+        -10,
+        -2
+      ],
+      "color": "#ac504b",
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "recordIdentifier": "bfec66e9-130f-581e-b339-0041237cb961",
+      "kind": "box",
+      "parameters": [
+        8.485281374238571,
+        0.2,
+        0.2
+      ],
+      "position": [
+        -1,
+        -7,
+        -2
+      ],
+      "color": "#ac504b",
+      "rotation": [
+        0,
+        0,
+        0.7853981633974483
+      ]
+    },
+    {
+      "recordIdentifier": "53a2287c-d581-54de-a820-a65d628c9301",
+      "kind": "box",
+      "parameters": [
+        10,
+        0.2,
+        0.2
+      ],
+      "position": [
+        7,
+        -4,
+        -2
+      ],
+      "color": "#ac504b",
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "recordIdentifier": "b5630a0f-9678-53a9-a1dc-155730721a47",
+      "kind": "sphere",
+      "parameters": [
+        0.42
+      ],
+      "position": [
+        -12,
+        -10,
+        -2
+      ],
+      "color": "#e0d5bf"
+    },
+    {
+      "recordIdentifier": "76dcc07e-c880-579a-bea2-f5d5d5703854",
+      "kind": "sphere",
+      "parameters": [
+        0.42
+      ],
+      "position": [
+        -4,
+        -10,
+        -2
+      ],
+      "color": "#e0d5bf"
+    },
+    {
+      "recordIdentifier": "895169a6-3091-5b0f-8935-170b6e97cd07",
+      "kind": "sphere",
+      "parameters": [
+        0.42
+      ],
+      "position": [
+        2,
+        -4,
+        -2
+      ],
+      "color": "#e0d5bf"
+    },
+    {
+      "recordIdentifier": "79f05286-80ab-532d-8223-eaf1fa1ce09d",
+      "kind": "sphere",
+      "parameters": [
+        0.42
+      ],
+      "position": [
+        12,
+        -4,
+        -2
+      ],
+      "color": "#e0d5bf"
+    },
+    {
+      "recordIdentifier": "f550671e-c4a6-5866-bc9e-c83ddd6a67a6",
+      "kind": "box",
+      "parameters": [
+        8,
+        0.2,
+        0.2
+      ],
+      "position": [
+        -8,
+        -7,
+        -1
+      ],
+      "color": "#be9a4f",
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "recordIdentifier": "eb4f7461-cf44-515f-af11-49b767f4de07",
+      "kind": "box",
+      "parameters": [
+        8.485281374238571,
+        0.2,
+        0.2
+      ],
+      "position": [
+        -1,
+        -4,
+        -1
+      ],
+      "color": "#be9a4f",
+      "rotation": [
+        0,
+        0,
+        0.7853981633974483
+      ]
+    },
+    {
+      "recordIdentifier": "d5b6cebe-663d-5270-ad4c-80837c25e615",
+      "kind": "box",
+      "parameters": [
+        10,
+        0.2,
+        0.2
+      ],
+      "position": [
+        7,
+        -1,
+        -1
+      ],
+      "color": "#be9a4f",
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "recordIdentifier": "41edc176-609e-5af8-a2b9-5275b30e8fdd",
+      "kind": "sphere",
+      "parameters": [
+        0.42
+      ],
+      "position": [
+        -12,
+        -7,
+        -1
+      ],
+      "color": "#e0d5bf"
+    },
+    {
+      "recordIdentifier": "7f20e4a4-387c-516a-9b8f-1fc9d7ec6504",
+      "kind": "sphere",
+      "parameters": [
+        0.42
+      ],
+      "position": [
+        -4,
+        -7,
+        -1
+      ],
+      "color": "#e0d5bf"
+    },
+    {
+      "recordIdentifier": "427c8dd5-d6b3-5ae7-8856-11218b24f856",
+      "kind": "sphere",
+      "parameters": [
+        0.42
+      ],
+      "position": [
+        2,
+        -1,
+        -1
+      ],
+      "color": "#e0d5bf"
+    },
+    {
+      "recordIdentifier": "b013b1cf-8410-587d-be69-305aed3776f6",
+      "kind": "sphere",
+      "parameters": [
+        0.42
+      ],
+      "position": [
+        12,
+        -1,
+        -1
+      ],
+      "color": "#e0d5bf"
+    },
+    {
+      "recordIdentifier": "6bebb45b-dd5c-5b41-9501-6088f812c00a",
+      "kind": "box",
+      "parameters": [
+        8,
+        0.2,
+        0.2
+      ],
+      "position": [
+        -8,
+        -4,
+        0
+      ],
+      "color": "#6686a0",
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "recordIdentifier": "e3c2abe8-cd4d-5c3f-8525-c0e5d4351833",
+      "kind": "box",
+      "parameters": [
+        8.485281374238571,
+        0.2,
+        0.2
+      ],
+      "position": [
+        -1,
+        -1,
+        0
+      ],
+      "color": "#6686a0",
+      "rotation": [
+        0,
+        0,
+        0.7853981633974483
+      ]
+    },
+    {
+      "recordIdentifier": "e9e61cf4-e23f-5cd0-9dd9-cf270cb4603b",
+      "kind": "box",
+      "parameters": [
+        10,
+        0.2,
+        0.2
+      ],
+      "position": [
+        7,
+        2,
+        0
+      ],
+      "color": "#6686a0",
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "recordIdentifier": "39697706-d8da-57a5-912f-8e371c5c6071",
+      "kind": "sphere",
+      "parameters": [
+        0.42
+      ],
+      "position": [
+        -12,
+        -4,
+        0
+      ],
+      "color": "#e0d5bf"
+    },
+    {
+      "recordIdentifier": "ccf3b20e-66d2-584b-aa9f-71f3a4c67140",
+      "kind": "sphere",
+      "parameters": [
+        0.42
+      ],
+      "position": [
+        -4,
+        -4,
+        0
+      ],
+      "color": "#e0d5bf"
+    },
+    {
+      "recordIdentifier": "da1ede67-49f5-53db-aeb0-58bb2886bc96",
+      "kind": "sphere",
+      "parameters": [
+        0.42
+      ],
+      "position": [
+        2,
+        2,
+        0
+      ],
+      "color": "#e0d5bf"
+    },
+    {
+      "recordIdentifier": "b60bdf00-9c49-513b-adb4-4ea1831afd8f",
+      "kind": "sphere",
+      "parameters": [
+        0.42
+      ],
+      "position": [
+        12,
+        2,
+        0
+      ],
+      "color": "#e0d5bf"
+    },
+    {
+      "recordIdentifier": "ba8b8fff-f5d6-591e-9163-d377d9fd1770",
+      "kind": "box",
+      "parameters": [
+        8,
+        0.2,
+        0.2
+      ],
+      "position": [
+        -8,
+        -1,
+        1
+      ],
+      "color": "#6e9177",
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "recordIdentifier": "d8ebf1a3-6cd0-58d4-9b5e-7c27f083f882",
+      "kind": "box",
+      "parameters": [
+        8.485281374238571,
+        0.2,
+        0.2
+      ],
+      "position": [
+        -1,
+        2,
+        1
+      ],
+      "color": "#6e9177",
+      "rotation": [
+        0,
+        0,
+        0.7853981633974483
+      ]
+    },
+    {
+      "recordIdentifier": "f9ad4834-6bed-51be-86f6-12cec8120d06",
+      "kind": "box",
+      "parameters": [
+        10,
+        0.2,
+        0.2
+      ],
+      "position": [
+        7,
+        5,
+        1
+      ],
+      "color": "#6e9177",
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "recordIdentifier": "a96c4cf7-af92-51d9-a5a7-2406f444f1f2",
+      "kind": "sphere",
+      "parameters": [
+        0.42
+      ],
+      "position": [
+        -12,
+        -1,
+        1
+      ],
+      "color": "#e0d5bf"
+    },
+    {
+      "recordIdentifier": "84a2ea5b-484a-52de-815f-e85116b113e4",
+      "kind": "sphere",
+      "parameters": [
+        0.42
+      ],
+      "position": [
+        -4,
+        -1,
+        1
+      ],
+      "color": "#e0d5bf"
+    },
+    {
+      "recordIdentifier": "b44c4763-83c4-5a6a-967b-e5da9e0da395",
+      "kind": "sphere",
+      "parameters": [
+        0.42
+      ],
+      "position": [
+        2,
+        5,
+        1
+      ],
+      "color": "#e0d5bf"
+    },
+    {
+      "recordIdentifier": "d75e372f-a7ab-5bea-a168-ce69a9cbd386",
+      "kind": "sphere",
+      "parameters": [
+        0.42
+      ],
+      "position": [
+        12,
+        5,
+        1
+      ],
+      "color": "#e0d5bf"
+    },
+    {
+      "recordIdentifier": "3c776853-d465-5e18-a72e-002a110da2e4",
+      "kind": "box",
+      "parameters": [
+        8,
+        0.2,
+        0.2
+      ],
+      "position": [
+        -8,
+        2,
+        2
+      ],
+      "color": "#d7cebc",
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "recordIdentifier": "eec0cedf-d708-50a6-beaf-679ee1705c64",
+      "kind": "box",
+      "parameters": [
+        8.485281374238571,
+        0.2,
+        0.2
+      ],
+      "position": [
+        -1,
+        5,
+        2
+      ],
+      "color": "#d7cebc",
+      "rotation": [
+        0,
+        0,
+        0.7853981633974483
+      ]
+    },
+    {
+      "recordIdentifier": "2ac657fa-3e2c-550f-9185-326d9d97805c",
+      "kind": "box",
+      "parameters": [
+        10,
+        0.2,
+        0.2
+      ],
+      "position": [
+        7,
+        8,
+        2
+      ],
+      "color": "#d7cebc",
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "recordIdentifier": "d49dd971-3469-51b2-9876-497afec12c71",
+      "kind": "sphere",
+      "parameters": [
+        0.42
+      ],
+      "position": [
+        -12,
+        2,
+        2
+      ],
+      "color": "#e0d5bf"
+    },
+    {
+      "recordIdentifier": "8d98cbbd-d202-5442-9342-81acc3543a5d",
+      "kind": "sphere",
+      "parameters": [
+        0.42
+      ],
+      "position": [
+        -4,
+        2,
+        2
+      ],
+      "color": "#e0d5bf"
+    },
+    {
+      "recordIdentifier": "9d47d684-fd71-5473-9d1c-ca339b2047e2",
+      "kind": "sphere",
+      "parameters": [
+        0.42
+      ],
+      "position": [
+        2,
+        8,
+        2
+      ],
+      "color": "#e0d5bf"
+    },
+    {
+      "recordIdentifier": "6f05cccd-5ff2-56db-bf7c-53f3d74e2da8",
+      "kind": "sphere",
+      "parameters": [
+        0.42
+      ],
+      "position": [
+        12,
+        8,
+        2
+      ],
+      "color": "#e0d5bf"
+    },
+    {
+      "recordIdentifier": "3361b66a-68de-53d0-aa61-2655a7fcb6ea",
+      "kind": "sphere",
+      "parameters": [
+        2
+      ],
+      "position": [
+        3,
+        10,
+        -8
+      ],
+      "color": "#aab9c2"
+    },
+    {
+      "recordIdentifier": "2d123049-101a-5d8c-866f-4d8dd6d98373",
+      "kind": "box",
+      "parameters": [
+        1,
+        7,
+        1
+      ],
+      "position": [
+        -21,
+        6,
+        12
+      ],
+      "color": "#bd9e72"
+    },
+    {
+      "recordIdentifier": "45742337-cedf-5974-a0df-adb5042e1996",
+      "kind": "box",
+      "parameters": [
+        5,
+        1,
+        1
+      ],
+      "position": [
+        -18,
+        3,
+        12
+      ],
+      "color": "#bd9e72"
+    },
+    {
+      "recordIdentifier": "a88baefe-1b7a-5fdc-8a1f-a23d2d74b5ed",
+      "kind": "box",
+      "parameters": [
+        1,
+        7,
+        1
+      ],
+      "position": [
+        -15,
+        6,
+        12
+      ],
+      "color": "#bd9e72"
+    },
+    {
+      "recordIdentifier": "7f74aafb-21db-50d9-8064-544f0dec089b",
+      "kind": "box",
+      "parameters": [
+        5,
+        1,
+        1
+      ],
+      "position": [
+        -18,
+        9,
+        12
+      ],
+      "color": "#bd9e72"
+    },
+    {
+      "recordIdentifier": "97b9e188-d29b-5838-bb0e-5d8f50a2c58b",
+      "kind": "box",
+      "parameters": [
+        7,
+        0.6,
+        7
+      ],
+      "position": [
+        -18,
+        0,
+        12
+      ],
+      "color": "#bd9e72"
+    }
+  ]
+}

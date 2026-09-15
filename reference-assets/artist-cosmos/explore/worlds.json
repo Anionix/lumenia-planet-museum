@@ -12,6 +12,146 @@
       "image": "../ettore-sottsass.png",
       "file": "./worlds/ettore-sottsass.json",
       "sha256": "fb3ac97e605e0175961f3c5caa2960ba5cea90d675e74ce7a7192d0bf44b672b"
+    },
+    {
+      "recordIdentifier": "9bdb7953-2aff-556d-9126-07e9904550df",
+      "slug": "william-morris",
+      "artistName": "William Morris",
+      "artistNameJapanese": "ウィリアム・モリス",
+      "title": "織物の惑星",
+      "image": "../william-morris.png",
+      "file": "./worlds/william-morris.json",
+      "sha256": "3e82f60d3d049df3c318d34b4318ebac611692493be4a24d15ab297b89e35dec"
+    },
+    {
+      "recordIdentifier": "57e1b1ed-fefe-557e-94b8-bc4f104bfec9",
+      "slug": "alphonse-mucha",
+      "artistName": "Alphonse Mucha",
+      "artistNameJapanese": "アルフォンス・ミュシャ",
+      "title": "星を抱く花輪",
+      "image": "../alphonse-mucha.png",
+      "file": "./worlds/alphonse-mucha.json",
+      "sha256": "0f83d764f60976289e7fbc0c1dbdb67153766cfdfa646be7d913111b272850b7"
+    },
+    {
+      "recordIdentifier": "8784b8be-7acc-50b7-a68d-78634d28dc66",
+      "slug": "charles-rennie-mackintosh",
+      "artistName": "Charles Rennie Mackintosh",
+      "artistNameJapanese": "チャールズ・レニー・マッキントッシュ",
+      "title": "薔薇の天文室",
+      "image": "../charles-rennie-mackintosh.png",
+      "file": "./worlds/charles-rennie-mackintosh.json",
+      "sha256": "7ff646191074ec3e7ccf8b8eb3e0c4201e7d2ac05e9d6471e6e03b0f0ae4d2ea"
+    },
+    {
+      "recordIdentifier": "fdb53a66-8aa6-576a-b088-2302be21e751",
+      "slug": "piet-mondrian",
+      "artistName": "Piet Mondrian",
+      "artistNameJapanese": "ピート・モンドリアン",
+      "title": "直角でできた宇宙",
+      "image": "../piet-mondrian.png",
+      "file": "./worlds/piet-mondrian.json",
+      "sha256": "7eb0111d5a68e863c3dcd91f6b670f0089c4067d4e94e6fbb96ef4e842596eee"
+    },
+    {
+      "recordIdentifier": "c8490188-8792-5345-883a-be87df0b62a4",
+      "slug": "gerrit-rietveld",
+      "artistName": "Gerrit Rietveld",
+      "artistNameJapanese": "ヘリット・リートフェルト",
+      "title": "軌道上の組み立て",
+      "image": "../gerrit-rietveld.png",
+      "file": "./worlds/gerrit-rietveld.json",
+      "sha256": "830919c67b451684ff5a4979d8ae2b8895a171e2512c554f8b0689181c08c82f"
+    },
+    {
+      "recordIdentifier": "ac1a6a0a-7e21-557d-a1d5-afcb0f4ae63c",
+      "slug": "herbert-bayer",
+      "artistName": "Herbert Bayer",
+      "artistNameJapanese": "ヘルベルト・バイヤー",
+      "title": "宇宙の文字以前",
+      "image": "../herbert-bayer.png",
+      "file": "./worlds/herbert-bayer.json",
+      "sha256": "f8c4532a4adfa846bd96b84f4ee7b69c5cc7d9469fc7fe186db6647dcb56702b"
+    },
+    {
+      "recordIdentifier": "1c11ae55-b9ca-5d93-838f-4eb3fb20b786",
+      "slug": "josef-muller-brockmann",
+      "artistName": "Josef Müller-Brockmann",
+      "artistNameJapanese": "ヨゼフ・ミューラー＝ブロックマン",
+      "title": "軌道の音楽",
+      "image": "../josef-muller-brockmann.png",
+      "file": "./worlds/josef-muller-brockmann.json",
+      "sha256": "c8aa85237a82634db071cf1537798c03e52748242231a31d7ea90a0f29824aca"
+    },
+    {
+      "recordIdentifier": "56567625-bde1-59b0-a627-a8025a571c5a",
+      "slug": "massimo-vignelli",
+      "artistName": "Massimo Vignelli",
+      "artistNameJapanese": "マッシモ・ヴィネッリ",
+      "title": "星を結ぶ路線",
+      "image": "../massimo-vignelli.png",
+      "file": "./worlds/massimo-vignelli.json",
+      "sha256": "8ee1785ab63f4b3d80a14a4caf295f14869af38b51d65ba6d8372c40d785958a"
+    },
+    {
+      "recordIdentifier": "73259200-0eea-57c2-bd4e-7f5328925409",
+      "slug": "dieter-rams",
+      "artistName": "Dieter Rams",
+      "artistNameJapanese": "ディーター・ラムス",
+      "title": "静かな観測衛星",
+      "image": "../dieter-rams.png",
+      "file": "./worlds/dieter-rams.json",
+      "sha256": "6eda4ca02aa1ed636d6d6c8196815c7067d619d33ceed6906592b22c4bfd217e"
+    },
+    {
+      "recordIdentifier": "1c5eecf4-0edf-5a69-8f73-e359c6a16302",
+      "slug": "naoto-fukasawa",
+      "artistName": "Naoto Fukasawa",
+      "artistNameJapanese": "深澤直人",
+      "title": "ひとつ引く、小さな月",
+      "image": "../naoto-fukasawa.png",
+      "file": "./worlds/naoto-fukasawa.json",
+      "sha256": "f93dc6864304ebf47aecb13272e71c80013acf80137ec77405f5822c669102d2"
+    },
+    {
+      "recordIdentifier": "9982b6c3-9ea7-5b67-a505-c6e7fd04bdcc",
+      "slug": "rei-kawakubo",
+      "artistName": "Rei Kawakubo",
+      "artistNameJapanese": "川久保玲",
+      "title": "布のブラックホール",
+      "image": "../rei-kawakubo.png",
+      "file": "./worlds/rei-kawakubo.json",
+      "sha256": "69bb6af25b333be75f5ec25ace0bc821b801f6a92c445d1f2d2fd8d5f3fc2de4"
+    },
+    {
+      "recordIdentifier": "8ba9b165-fbfe-53fe-8e15-0a9c901496ea",
+      "slug": "charles-eames",
+      "artistName": "Charles Eames",
+      "artistNameJapanese": "チャールズ・イームズ",
+      "title": "曲面で包む天体",
+      "image": "../charles-eames.png",
+      "file": "./worlds/charles-eames.json",
+      "sha256": "65ffa39ad47261b6ee9208306ab3944d6f0db7d28060c571f54f9cac0acef827"
+    },
+    {
+      "recordIdentifier": "54fb3ebc-8312-5edb-9007-47bd83dbc990",
+      "slug": "ray-eames",
+      "artistName": "Ray Eames",
+      "artistNameJapanese": "レイ・イームズ",
+      "title": "星座を組み立てる",
+      "image": "../ray-eames.png",
+      "file": "./worlds/ray-eames.json",
+      "sha256": "73adf919c358f6abe24a508fff81070caca45f246b7b8a53f0c537263e8f16fb"
+    },
+    {
+      "recordIdentifier": "8eb56a5b-588a-5570-8647-67259f1f40bc",
+      "slug": "walter-gropius",
+      "artistName": "Walter Gropius",
+      "artistNameJapanese": "ヴァルター・グロピウス",
+      "title": "軌道上の美術館",
+      "image": "../walter-gropius.png",
+      "file": "./worlds/walter-gropius.json",
+      "sha256": "b2cb6370ecc3c6d4262a69223d5b5bc2300419d42b1777cebbc322ab28cc89b1"
     }
   ]
 }

@@ -1,0 +1,786 @@
+{
+  "record_type": "exploration_world",
+  "recordIdentifier": "8784b8be-7acc-50b7-a68d-78634d28dc66",
+  "referenceRecordedAt": "2026-09-15T14:04:34.114664+00:00",
+  "artistName": "Charles Rennie Mackintosh",
+  "artistNameJapanese": "チャールズ・レニー・マッキントッシュ",
+  "title": "薔薇の天文室",
+  "description": "細い格子と薔薇の光が浮かぶ天文室。構造の中から宇宙を眺める。",
+  "sourceProfileIdentifier": "27ae05bc-5298-51fc-8e02-c16ab93048ce",
+  "sourceImageIdentifier": "247e56af-c28b-5ed4-947b-7dae7abbd962",
+  "sourceImageSha256": "81ee0b404ebe5e70465681397f6f2ea7ae82c85a4971f1524fdc7fc3e3be01a8",
+  "image": "../charles-rennie-mackintosh.png",
+  "sources": [
+    {
+      "sourceIdentifier": "d48831e5-058e-5a3b-b3c7-269aa1e21699",
+      "publisher": "Taking a fresh look at Mackintosh — University of Glasgow",
+      "url": "https://www.gla.ac.uk/news/archiveofnews/2008/september/headline_90636_en.html",
+      "observedOn": "2026-09-13"
+    },
+    {
+      "sourceIdentifier": "0feb047c-5ff6-5d39-a984-9a1e87bd4ab7",
+      "publisher": "The Mackintosh House — The Hunterian",
+      "url": "https://www.gla.ac.uk/hunterian/visit/our-venues/mackintosh-house/",
+      "observedOn": "2026-09-13"
+    }
+  ],
+  "semanticPosition": {
+    "coordinate_identifier": "04cca99c-8cd7-573b-8fe2-c91fe40750e7",
+    "values": [
+      0.25,
+      0.2,
+      -0.25
+    ],
+    "unit": "dimensionless"
+  },
+  "reconstruction": "Newly authored geometry inspired by cited materials and a ChatGPT-generated reference picture. Hidden surfaces are designed, not recovered.",
+  "machineContract": {
+    "physicsEnabledByDefault": false,
+    "metresPerSceneUnit": 1,
+    "valuesOrigin": "presentation_setting",
+    "movementLimits": {
+      "maximumSeconds": 0.05,
+      "maximumSpeed": 16,
+      "normalSpeed": 8,
+      "boundary": 400,
+      "observerRadius": 0.4,
+      "contactGap": 0.05,
+      "framesPerSecond": 30,
+      "maximumPixelRatio": 1.5
+    }
+  },
+  "spawn": {
+    "position": [
+      25,
+      13,
+      38
+    ],
+    "target": [
+      0,
+      1,
+      0
+    ]
+  },
+  "passage": {
+    "position": [
+      -18,
+      6,
+      12
+    ],
+    "radius": 3,
+    "tube": 0.5,
+    "kind": "rectangular"
+  },
+  "landmarks": [
+    {
+      "name": "枠の手前へ",
+      "position": [
+        -18,
+        6,
+        20
+      ],
+      "target": [
+        -18,
+        6,
+        0
+      ]
+    },
+    {
+      "name": "形のそばへ",
+      "position": [
+        14,
+        4,
+        15
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "着地できる台へ",
+      "position": [
+        -18,
+        5,
+        14
+      ],
+      "target": [
+        -18,
+        0,
+        14
+      ]
+    }
+  ],
+  "background": "#090d16",
+  "accent": "#c6a0b1",
+  "shapes": [
+    {
+      "recordIdentifier": "099f3646-f94f-5110-803e-7c36cf571307",
+      "kind": "sphere",
+      "parameters": [
+        2.5
+      ],
+      "position": [
+        0,
+        1,
+        0
+      ],
+      "color": "#e8dcc0",
+      "emissive": "#8d795d"
+    },
+    {
+      "recordIdentifier": "db961934-904c-502c-94fc-860fa28f4707",
+      "kind": "box",
+      "parameters": [
+        10,
+        0.35,
+        9
+      ],
+      "position": [
+        0,
+        -9,
+        0
+      ],
+      "color": "#baa17e"
+    },
+    {
+      "recordIdentifier": "cdec6274-7014-5f1d-ae5b-553749409d7f",
+      "kind": "box",
+      "parameters": [
+        10,
+        0.35,
+        9
+      ],
+      "position": [
+        0,
+        11,
+        0
+      ],
+      "color": "#43323c"
+    },
+    {
+      "recordIdentifier": "b4e84e88-165e-5aca-860c-c382a161c6d7",
+      "kind": "box",
+      "parameters": [
+        0.17,
+        20,
+        0.17
+      ],
+      "position": [
+        -4,
+        1,
+        -4
+      ],
+      "color": "#2c252e"
+    },
+    {
+      "recordIdentifier": "27c759b0-dfc7-526b-9e11-874050bda9e1",
+      "kind": "box",
+      "parameters": [
+        0.17,
+        20,
+        0.17
+      ],
+      "position": [
+        -4,
+        1,
+        -4
+      ],
+      "color": "#2c252e"
+    },
+    {
+      "recordIdentifier": "c79f9888-0182-5f2b-9020-38d4b1d3c603",
+      "kind": "box",
+      "parameters": [
+        0.17,
+        20,
+        0.17
+      ],
+      "position": [
+        -2,
+        1,
+        -4
+      ],
+      "color": "#2c252e"
+    },
+    {
+      "recordIdentifier": "8c346043-e0db-5966-91e1-b05475312922",
+      "kind": "box",
+      "parameters": [
+        0.17,
+        20,
+        0.17
+      ],
+      "position": [
+        -4,
+        1,
+        -2
+      ],
+      "color": "#2c252e"
+    },
+    {
+      "recordIdentifier": "adf09046-549c-57e2-97ce-db23c8c58423",
+      "kind": "box",
+      "parameters": [
+        0.17,
+        20,
+        0.17
+      ],
+      "position": [
+        0,
+        1,
+        -4
+      ],
+      "color": "#2c252e"
+    },
+    {
+      "recordIdentifier": "11cd23d9-26b7-5d3b-a71f-dd7c2f8613e2",
+      "kind": "box",
+      "parameters": [
+        0.17,
+        20,
+        0.17
+      ],
+      "position": [
+        -4,
+        1,
+        0
+      ],
+      "color": "#2c252e"
+    },
+    {
+      "recordIdentifier": "4f56f731-6df2-5709-afb9-c27a6edefe16",
+      "kind": "box",
+      "parameters": [
+        0.17,
+        20,
+        0.17
+      ],
+      "position": [
+        2,
+        1,
+        -4
+      ],
+      "color": "#2c252e"
+    },
+    {
+      "recordIdentifier": "f6c78fa4-8149-55e9-a978-f901432341de",
+      "kind": "box",
+      "parameters": [
+        0.17,
+        20,
+        0.17
+      ],
+      "position": [
+        -4,
+        1,
+        2
+      ],
+      "color": "#2c252e"
+    },
+    {
+      "recordIdentifier": "04dd4a53-95d1-54da-9748-ca41e68e3528",
+      "kind": "box",
+      "parameters": [
+        0.17,
+        20,
+        0.17
+      ],
+      "position": [
+        4,
+        1,
+        -4
+      ],
+      "color": "#2c252e"
+    },
+    {
+      "recordIdentifier": "6e3d9b2c-15f7-556c-8bb5-eaae3d702d36",
+      "kind": "box",
+      "parameters": [
+        0.17,
+        20,
+        0.17
+      ],
+      "position": [
+        -4,
+        1,
+        4
+      ],
+      "color": "#2c252e"
+    },
+    {
+      "recordIdentifier": "121cff02-9626-5ef1-a983-0b868c051aa2",
+      "kind": "box",
+      "parameters": [
+        0.17,
+        20,
+        0.17
+      ],
+      "position": [
+        -4,
+        1,
+        4
+      ],
+      "color": "#2c252e"
+    },
+    {
+      "recordIdentifier": "b0778520-9a42-5817-84d8-184c3631c255",
+      "kind": "box",
+      "parameters": [
+        0.17,
+        20,
+        0.17
+      ],
+      "position": [
+        4,
+        1,
+        -4
+      ],
+      "color": "#2c252e"
+    },
+    {
+      "recordIdentifier": "4d0d54b8-2d04-530c-a430-6effd01eb46e",
+      "kind": "box",
+      "parameters": [
+        0.17,
+        20,
+        0.17
+      ],
+      "position": [
+        -2,
+        1,
+        4
+      ],
+      "color": "#2c252e"
+    },
+    {
+      "recordIdentifier": "7fa8173c-e548-5d8b-b6c4-7c7f4a62bbe6",
+      "kind": "box",
+      "parameters": [
+        0.17,
+        20,
+        0.17
+      ],
+      "position": [
+        4,
+        1,
+        -2
+      ],
+      "color": "#2c252e"
+    },
+    {
+      "recordIdentifier": "624e267f-80e2-581b-bca8-67a25a6315f0",
+      "kind": "box",
+      "parameters": [
+        0.17,
+        20,
+        0.17
+      ],
+      "position": [
+        0,
+        1,
+        4
+      ],
+      "color": "#2c252e"
+    },
+    {
+      "recordIdentifier": "eea931eb-e7e1-52e4-865e-510031b48260",
+      "kind": "box",
+      "parameters": [
+        0.17,
+        20,
+        0.17
+      ],
+      "position": [
+        4,
+        1,
+        0
+      ],
+      "color": "#2c252e"
+    },
+    {
+      "recordIdentifier": "6394fe9b-a090-5e98-9487-e239378ad974",
+      "kind": "box",
+      "parameters": [
+        0.17,
+        20,
+        0.17
+      ],
+      "position": [
+        2,
+        1,
+        4
+      ],
+      "color": "#2c252e"
+    },
+    {
+      "recordIdentifier": "fdbc33d9-b013-5ac8-bfb3-2635689d1d96",
+      "kind": "box",
+      "parameters": [
+        0.17,
+        20,
+        0.17
+      ],
+      "position": [
+        4,
+        1,
+        2
+      ],
+      "color": "#2c252e"
+    },
+    {
+      "recordIdentifier": "3cfe4ac4-85ce-5157-ae59-774c2f15b971",
+      "kind": "box",
+      "parameters": [
+        0.17,
+        20,
+        0.17
+      ],
+      "position": [
+        4,
+        1,
+        4
+      ],
+      "color": "#2c252e"
+    },
+    {
+      "recordIdentifier": "9515c637-d6a0-5f28-b208-9434d47f248b",
+      "kind": "box",
+      "parameters": [
+        0.17,
+        20,
+        0.17
+      ],
+      "position": [
+        4,
+        1,
+        4
+      ],
+      "color": "#2c252e"
+    },
+    {
+      "recordIdentifier": "1d55531c-bcce-5b99-9849-b94a3a2be700",
+      "kind": "box",
+      "parameters": [
+        8,
+        0.15,
+        0.15
+      ],
+      "position": [
+        0,
+        -7,
+        -4
+      ],
+      "color": "#b99c78"
+    },
+    {
+      "recordIdentifier": "9e07a82d-2341-5ed0-a5f6-8d0f1c71c370",
+      "kind": "box",
+      "parameters": [
+        8,
+        0.15,
+        0.15
+      ],
+      "position": [
+        0,
+        -7,
+        4
+      ],
+      "color": "#b99c78"
+    },
+    {
+      "recordIdentifier": "e90467a0-8664-5fe0-aebf-485f754d7001",
+      "kind": "box",
+      "parameters": [
+        8,
+        0.15,
+        0.15
+      ],
+      "position": [
+        0,
+        -3,
+        -4
+      ],
+      "color": "#b99c78"
+    },
+    {
+      "recordIdentifier": "123b9249-6a51-5270-a7cc-f2a1c47221d4",
+      "kind": "box",
+      "parameters": [
+        8,
+        0.15,
+        0.15
+      ],
+      "position": [
+        0,
+        -3,
+        4
+      ],
+      "color": "#b99c78"
+    },
+    {
+      "recordIdentifier": "418f919a-f8a4-5cd9-bec5-6859657d7790",
+      "kind": "box",
+      "parameters": [
+        8,
+        0.15,
+        0.15
+      ],
+      "position": [
+        0,
+        3,
+        -4
+      ],
+      "color": "#b99c78"
+    },
+    {
+      "recordIdentifier": "a6a098a2-5c51-5ce8-8356-255ea507b184",
+      "kind": "box",
+      "parameters": [
+        8,
+        0.15,
+        0.15
+      ],
+      "position": [
+        0,
+        3,
+        4
+      ],
+      "color": "#b99c78"
+    },
+    {
+      "recordIdentifier": "c543822e-27ef-59ce-afa4-8be7b9b2d5a3",
+      "kind": "box",
+      "parameters": [
+        8,
+        0.15,
+        0.15
+      ],
+      "position": [
+        0,
+        8,
+        -4
+      ],
+      "color": "#b99c78"
+    },
+    {
+      "recordIdentifier": "2e1c9ac7-29a7-518e-b10e-c78a0fb11c22",
+      "kind": "box",
+      "parameters": [
+        8,
+        0.15,
+        0.15
+      ],
+      "position": [
+        0,
+        8,
+        4
+      ],
+      "color": "#b99c78"
+    },
+    {
+      "recordIdentifier": "829ae610-4e02-5074-87eb-8e99b50a3fa6",
+      "kind": "torus",
+      "parameters": [
+        0.6,
+        0.16
+      ],
+      "position": [
+        -3,
+        6,
+        4
+      ],
+      "color": "#a57187"
+    },
+    {
+      "recordIdentifier": "1caac4f1-6eac-5c6e-a909-7817c25f8a73",
+      "kind": "sphere",
+      "parameters": [
+        0.32
+      ],
+      "position": [
+        -3,
+        6,
+        4
+      ],
+      "color": "#d0a2b7",
+      "scale": [
+        1,
+        1,
+        0.3
+      ]
+    },
+    {
+      "recordIdentifier": "7c78b724-b1e2-583d-bc40-6493169c37a1",
+      "kind": "torus",
+      "parameters": [
+        0.6,
+        0.16
+      ],
+      "position": [
+        3,
+        -1,
+        4
+      ],
+      "color": "#a57187"
+    },
+    {
+      "recordIdentifier": "aa8b9d1c-2b5c-5c6e-8f23-ad4bf4a93b6a",
+      "kind": "sphere",
+      "parameters": [
+        0.32
+      ],
+      "position": [
+        3,
+        -1,
+        4
+      ],
+      "color": "#d0a2b7",
+      "scale": [
+        1,
+        1,
+        0.3
+      ]
+    },
+    {
+      "recordIdentifier": "bc2a6918-d168-5967-b07f-7e99dc1b2bd8",
+      "kind": "torus",
+      "parameters": [
+        0.6,
+        0.16
+      ],
+      "position": [
+        1,
+        8,
+        -4
+      ],
+      "color": "#a57187"
+    },
+    {
+      "recordIdentifier": "5668cf84-b80d-5319-9d95-415169b319a7",
+      "kind": "sphere",
+      "parameters": [
+        0.32
+      ],
+      "position": [
+        1,
+        8,
+        -4
+      ],
+      "color": "#d0a2b7",
+      "scale": [
+        1,
+        1,
+        0.3
+      ]
+    },
+    {
+      "recordIdentifier": "842e98a2-3264-5e0a-851a-03dfaf2fdf83",
+      "kind": "torus",
+      "parameters": [
+        0.6,
+        0.16
+      ],
+      "position": [
+        -1,
+        -5,
+        -4
+      ],
+      "color": "#a57187"
+    },
+    {
+      "recordIdentifier": "23c4d120-aa1c-57cd-bf2f-979355430ddc",
+      "kind": "sphere",
+      "parameters": [
+        0.32
+      ],
+      "position": [
+        -1,
+        -5,
+        -4
+      ],
+      "color": "#d0a2b7",
+      "scale": [
+        1,
+        1,
+        0.3
+      ]
+    },
+    {
+      "recordIdentifier": "2c574160-3bde-5edd-be37-609e0a7df765",
+      "kind": "box",
+      "parameters": [
+        1,
+        7,
+        1
+      ],
+      "position": [
+        -21,
+        6,
+        12
+      ],
+      "color": "#c6a0b1"
+    },
+    {
+      "recordIdentifier": "b67de72d-eef6-5cce-a926-8afcd9895059",
+      "kind": "box",
+      "parameters": [
+        5,
+        1,
+        1
+      ],
+      "position": [
+        -18,
+        3,
+        12
+      ],
+      "color": "#c6a0b1"
+    },
+    {
+      "recordIdentifier": "7ee4aa58-1308-5adb-a47d-ec138218e3d2",
+      "kind": "box",
+      "parameters": [
+        1,
+        7,
+        1
+      ],
+      "position": [
+        -15,
+        6,
+        12
+      ],
+      "color": "#c6a0b1"
+    },
+    {
+      "recordIdentifier": "cd597fc6-9d4d-5fc5-9962-923a7bfc89ec",
+      "kind": "box",
+      "parameters": [
+        5,
+        1,
+        1
+      ],
+      "position": [
+        -18,
+        9,
+        12
+      ],
+      "color": "#c6a0b1"
+    },
+    {
+      "recordIdentifier": "7f647a3b-1876-533b-8ec1-1e6f07bf205e",
+      "kind": "box",
+      "parameters": [
+        7,
+        0.6,
+        7
+      ],
+      "position": [
+        -18,
+        0,
+        12
+      ],
+      "color": "#c6a0b1"
+    }
+  ]
+}

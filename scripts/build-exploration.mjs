@@ -5,6 +5,7 @@ import {createHash} from 'node:crypto';
 import {projectRoot} from './source-revision.mjs';
 import {claimIdentifier} from './identifiers.mjs';
 import {worldRecipes} from './exploration-recipes.mjs';
+import {artistWorldRecipes} from './artist-world-recipes.mjs';
 import {limits,ringClearance} from '../reference-assets/artist-cosmos/explore/navigation.mjs';
 
 export async function buildExploration(destination=path.join(projectRoot,'web/public/cosmos/explore')) {
@@ -13,7 +14,7 @@ export async function buildExploration(destination=path.join(projectRoot,'web/pu
   const catalog=[];
   await mkdir(path.join(source,'worlds'),{recursive:true});
   await mkdir(path.join(destination,'worlds'),{recursive:true});
-  for (const [slug, recipe] of Object.entries(worldRecipes)) {
+  for (const [slug, recipe] of Object.entries({...worldRecipes,...artistWorldRecipes})) {
     const artist=reference.items.find(item=>item.image_url===`../${slug}.png`);
     assert.ok(artist, 'Reference artist missing');
     const shapes=recipe.shapes().map((shape,index)=>({recordIdentifier:claimIdentifier(`exploration/${slug}/shape/${index}`),...shape}));

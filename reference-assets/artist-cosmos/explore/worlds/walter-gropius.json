@@ -1,0 +1,602 @@
+{
+  "record_type": "exploration_world",
+  "recordIdentifier": "8eb56a5b-588a-5570-8647-67259f1f40bc",
+  "referenceRecordedAt": "2026-09-15T14:04:34.114664+00:00",
+  "artistName": "Walter Gropius",
+  "artistNameJapanese": "ヴァルター・グロピウス",
+  "title": "軌道上の美術館",
+  "description": "ガラスの展示室、白い棟、細い橋。開いた正面から中へ入り、宇宙に囲まれる。",
+  "sourceProfileIdentifier": "6956222e-f308-5e00-a3d5-d0129505f27e",
+  "sourceImageIdentifier": "41852fc3-9c13-5961-a023-f2445985467f",
+  "sourceImageSha256": "595059dbe0521bed0cff56afb278d8034344416ceb419f895d5afd6d6b589fb4",
+  "image": "../walter-gropius.png",
+  "sources": [
+    {
+      "sourceIdentifier": "5c5d1525-fe78-53fe-b221-7e805601df18",
+      "publisher": "Bauhaus Building — Bauhaus Dessau Foundation",
+      "url": "https://bauhaus-dessau.de/en/venues/bauhaus-building/",
+      "observedOn": "2026-09-13"
+    },
+    {
+      "sourceIdentifier": "5c4a479b-3b2d-5134-a7c3-24f69132371f",
+      "publisher": "Glass | Concrete | Metal — Bauhaus Dessau Foundation",
+      "url": "https://bauhaus-dessau.de/en/exhibitions/glass-concrete-metal/?dt=20260328",
+      "observedOn": "2026-09-13"
+    }
+  ],
+  "semanticPosition": null,
+  "reconstruction": "Newly authored geometry inspired by cited materials and a ChatGPT-generated reference picture. Hidden surfaces are designed, not recovered.",
+  "machineContract": {
+    "physicsEnabledByDefault": false,
+    "metresPerSceneUnit": 1,
+    "valuesOrigin": "presentation_setting",
+    "movementLimits": {
+      "maximumSeconds": 0.05,
+      "maximumSpeed": 16,
+      "normalSpeed": 8,
+      "boundary": 400,
+      "observerRadius": 0.4,
+      "contactGap": 0.05,
+      "framesPerSecond": 30,
+      "maximumPixelRatio": 1.5
+    }
+  },
+  "spawn": {
+    "position": [
+      25,
+      13,
+      38
+    ],
+    "target": [
+      0,
+      1,
+      0
+    ]
+  },
+  "passage": {
+    "position": [
+      -18,
+      6,
+      12
+    ],
+    "radius": 3,
+    "tube": 0.5,
+    "kind": "rectangular"
+  },
+  "landmarks": [
+    {
+      "name": "枠の手前へ",
+      "position": [
+        -18,
+        6,
+        20
+      ],
+      "target": [
+        -18,
+        6,
+        0
+      ]
+    },
+    {
+      "name": "展示室の入口へ",
+      "position": [
+        0,
+        2,
+        15
+      ],
+      "target": [
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "name": "着地できる台へ",
+      "position": [
+        -18,
+        5,
+        14
+      ],
+      "target": [
+        -18,
+        0,
+        14
+      ]
+    }
+  ],
+  "background": "#090d16",
+  "accent": "#c5b18c",
+  "shapes": [
+    {
+      "recordIdentifier": "0dee6952-374a-50c6-a9d3-ff60186a0a1b",
+      "kind": "sphere",
+      "parameters": [
+        26
+      ],
+      "position": [
+        8,
+        -32,
+        -80
+      ],
+      "color": "#567a99",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "9118d289-7804-5f0e-aaf8-dd55d6991a09",
+      "kind": "box",
+      "parameters": [
+        15,
+        0.5,
+        14
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "color": "#b7b8b0"
+    },
+    {
+      "recordIdentifier": "85cd7ba3-5479-59e2-8dab-38bee06b3ad3",
+      "kind": "box",
+      "parameters": [
+        15,
+        0.4,
+        14
+      ],
+      "position": [
+        0,
+        11,
+        0
+      ],
+      "color": "#c9c8bd"
+    },
+    {
+      "recordIdentifier": "0d09d57c-a678-527e-8f9c-2d428dab07f9",
+      "kind": "box",
+      "parameters": [
+        12,
+        5,
+        7
+      ],
+      "position": [
+        12,
+        2.5,
+        -3
+      ],
+      "color": "#c7c6ba"
+    },
+    {
+      "recordIdentifier": "07aa82e3-1203-570b-aff5-072deb4fca94",
+      "kind": "box",
+      "parameters": [
+        10,
+        7,
+        8
+      ],
+      "position": [
+        -10,
+        3.5,
+        -5
+      ],
+      "color": "#aaaeb0"
+    },
+    {
+      "recordIdentifier": "1abec461-9c20-5a3d-8213-67d8411ded2f",
+      "kind": "box",
+      "parameters": [
+        14,
+        0.4,
+        3
+      ],
+      "position": [
+        0,
+        5,
+        -10
+      ],
+      "color": "#c7c6ba"
+    },
+    {
+      "recordIdentifier": "1412fc9a-2155-5833-b9e7-186e2e535ffd",
+      "kind": "box",
+      "parameters": [
+        0.2,
+        11,
+        0.2
+      ],
+      "position": [
+        -7,
+        5.5,
+        -6.5
+      ],
+      "color": "#424951"
+    },
+    {
+      "recordIdentifier": "544a1d6a-2014-5b74-b57f-3e2b35cf93b5",
+      "kind": "box",
+      "parameters": [
+        0.2,
+        11,
+        0.2
+      ],
+      "position": [
+        -7,
+        5.5,
+        6.5
+      ],
+      "color": "#424951"
+    },
+    {
+      "recordIdentifier": "6d895138-ae6b-553d-bf40-abdc7eea0afb",
+      "kind": "box",
+      "parameters": [
+        0.2,
+        11,
+        0.2
+      ],
+      "position": [
+        -3.5,
+        5.5,
+        -6.5
+      ],
+      "color": "#424951"
+    },
+    {
+      "recordIdentifier": "1c183097-89b7-519e-a062-94cc0bb0f4ee",
+      "kind": "box",
+      "parameters": [
+        0.2,
+        11,
+        0.2
+      ],
+      "position": [
+        -3.5,
+        5.5,
+        6.5
+      ],
+      "color": "#424951"
+    },
+    {
+      "recordIdentifier": "ee21317e-5bd7-5ecd-9a4e-d2c87330c77a",
+      "kind": "box",
+      "parameters": [
+        0.2,
+        11,
+        0.2
+      ],
+      "position": [
+        3.5,
+        5.5,
+        -6.5
+      ],
+      "color": "#424951"
+    },
+    {
+      "recordIdentifier": "2d0638b1-5d15-51aa-a95e-3ce796491934",
+      "kind": "box",
+      "parameters": [
+        0.2,
+        11,
+        0.2
+      ],
+      "position": [
+        3.5,
+        5.5,
+        6.5
+      ],
+      "color": "#424951"
+    },
+    {
+      "recordIdentifier": "5e08f971-ee37-5f31-bc5e-b376bf6962ad",
+      "kind": "box",
+      "parameters": [
+        0.2,
+        11,
+        0.2
+      ],
+      "position": [
+        7,
+        5.5,
+        -6.5
+      ],
+      "color": "#424951"
+    },
+    {
+      "recordIdentifier": "77861c25-5b4f-5d65-ad2e-5af01fd53968",
+      "kind": "box",
+      "parameters": [
+        0.2,
+        11,
+        0.2
+      ],
+      "position": [
+        7,
+        5.5,
+        6.5
+      ],
+      "color": "#424951"
+    },
+    {
+      "recordIdentifier": "d35cfabb-d228-503e-8ac5-6bbc5c1df8a1",
+      "kind": "box",
+      "parameters": [
+        14,
+        0.12,
+        0.15
+      ],
+      "position": [
+        0,
+        3,
+        -6.5
+      ],
+      "color": "#424951"
+    },
+    {
+      "recordIdentifier": "cb5c87ea-fa70-579d-83d8-d200af5fdc32",
+      "kind": "box",
+      "parameters": [
+        14,
+        0.12,
+        0.15
+      ],
+      "position": [
+        0,
+        3,
+        6.5
+      ],
+      "color": "#424951"
+    },
+    {
+      "recordIdentifier": "94fc0f32-6839-56ff-96f1-ba55e17f28aa",
+      "kind": "box",
+      "parameters": [
+        14,
+        0.12,
+        0.15
+      ],
+      "position": [
+        0,
+        6,
+        -6.5
+      ],
+      "color": "#424951"
+    },
+    {
+      "recordIdentifier": "ad44f477-adc2-56af-a4ea-ba01232d05e7",
+      "kind": "box",
+      "parameters": [
+        14,
+        0.12,
+        0.15
+      ],
+      "position": [
+        0,
+        6,
+        6.5
+      ],
+      "color": "#424951"
+    },
+    {
+      "recordIdentifier": "6afd96a5-c70c-5673-b484-2e836967f360",
+      "kind": "box",
+      "parameters": [
+        14,
+        0.12,
+        0.15
+      ],
+      "position": [
+        0,
+        9,
+        -6.5
+      ],
+      "color": "#424951"
+    },
+    {
+      "recordIdentifier": "75ac7747-d6a7-50fe-992e-3cff93233827",
+      "kind": "box",
+      "parameters": [
+        14,
+        0.12,
+        0.15
+      ],
+      "position": [
+        0,
+        9,
+        6.5
+      ],
+      "color": "#424951"
+    },
+    {
+      "recordIdentifier": "0a2de19c-9049-594b-bd89-0c3ef32c2e25",
+      "kind": "box",
+      "parameters": [
+        3.6,
+        10.5,
+        0.12
+      ],
+      "position": [
+        -5,
+        5.5,
+        6.5
+      ],
+      "color": "#8fbbc6",
+      "opacity": 0.22,
+      "collision": true
+    },
+    {
+      "recordIdentifier": "9c289bda-6544-5b0e-a786-9d25e7128d2d",
+      "kind": "box",
+      "parameters": [
+        3.6,
+        10.5,
+        0.12
+      ],
+      "position": [
+        5,
+        5.5,
+        6.5
+      ],
+      "color": "#8fbbc6",
+      "opacity": 0.22,
+      "collision": true
+    },
+    {
+      "recordIdentifier": "67b60312-1e7e-580a-b637-e33981d00b07",
+      "kind": "box",
+      "parameters": [
+        0.12,
+        10.5,
+        13
+      ],
+      "position": [
+        -7,
+        5.5,
+        0
+      ],
+      "color": "#8fbbc6",
+      "opacity": 0.2,
+      "collision": true
+    },
+    {
+      "recordIdentifier": "e76b8e18-130b-53be-aa09-4ce82080d1da",
+      "kind": "box",
+      "parameters": [
+        0.12,
+        10.5,
+        13
+      ],
+      "position": [
+        7,
+        5.5,
+        0
+      ],
+      "color": "#8fbbc6",
+      "opacity": 0.2,
+      "collision": true
+    },
+    {
+      "recordIdentifier": "aafa02f8-6818-5f6e-a071-f0f5f1ec4e21",
+      "kind": "box",
+      "parameters": [
+        14,
+        10.5,
+        0.12
+      ],
+      "position": [
+        0,
+        5.5,
+        -6.5
+      ],
+      "color": "#8fbbc6",
+      "opacity": 0.22,
+      "collision": true
+    },
+    {
+      "recordIdentifier": "dab9fe5c-efa3-5abf-a30a-583a0ecf22ac",
+      "kind": "box",
+      "parameters": [
+        2,
+        1.5,
+        2
+      ],
+      "position": [
+        -4,
+        1,
+        0
+      ],
+      "color": "#ba9262",
+      "emissive": "#6a4223"
+    },
+    {
+      "recordIdentifier": "6230afe2-ea73-5318-afce-61e1dc22422a",
+      "kind": "box",
+      "parameters": [
+        2,
+        1.5,
+        2
+      ],
+      "position": [
+        4,
+        1,
+        0
+      ],
+      "color": "#ba9262",
+      "emissive": "#6a4223"
+    },
+    {
+      "recordIdentifier": "e76f6c83-9e61-589d-ae93-6f6068e38809",
+      "kind": "box",
+      "parameters": [
+        1,
+        7,
+        1
+      ],
+      "position": [
+        -21,
+        6,
+        12
+      ],
+      "color": "#c5b18c"
+    },
+    {
+      "recordIdentifier": "8906d5f2-34c2-5a3e-a2e9-63f57e95f0b3",
+      "kind": "box",
+      "parameters": [
+        5,
+        1,
+        1
+      ],
+      "position": [
+        -18,
+        3,
+        12
+      ],
+      "color": "#c5b18c"
+    },
+    {
+      "recordIdentifier": "7b646749-a6e7-51ce-ae5d-ce805294ed2d",
+      "kind": "box",
+      "parameters": [
+        1,
+        7,
+        1
+      ],
+      "position": [
+        -15,
+        6,
+        12
+      ],
+      "color": "#c5b18c"
+    },
+    {
+      "recordIdentifier": "133978ad-a9c4-5352-bb71-cba62920a9a8",
+      "kind": "box",
+      "parameters": [
+        5,
+        1,
+        1
+      ],
+      "position": [
+        -18,
+        9,
+        12
+      ],
+      "color": "#c5b18c"
+    },
+    {
+      "recordIdentifier": "7d110f00-387b-5a63-9644-87666e423cff",
+      "kind": "box",
+      "parameters": [
+        7,
+        0.6,
+        7
+      ],
+      "position": [
+        -18,
+        0,
+        12
+      ],
+      "color": "#c5b18c"
+    }
+  ]
+}
