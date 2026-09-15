@@ -1,0 +1,77 @@
+{
+  "recordIdentifier": "26c1a73e-a5ed-5a54-93c7-29888e27f48e",
+  "recordedAt": "2026-09-15T16:01:31.021789+00:00",
+  "sourceCommit": "e71aafd5bdeb8ffd498f2c16c54c5a2ba7370c5a",
+  "archiveSha256": "16c3841cac3813088782f9593cea63c4e3f665311d466a5ac1a321e5ddb6ba44",
+  "sourceRevision": "sha256:81baf2dec9fb672eb9c37d13fda9695911748f4408e5fe1673ec241b58d14bab",
+  "sites": {
+    "projectIdentifier": "appgprj_6aa6a1d7edc08191b1cfa99c7bdccd26",
+    "versionNumber": 5,
+    "versionIdentifier": "appgprj_6aa6a1d7edc08191b1cfa99c7bdccd26~appgver_2f7bbc294a5c8191a792640f3feb83bf",
+    "deploymentIdentifier": "appgdep_6aa96b44aa2881918a5b4d3e9e09d889",
+    "status": "succeeded",
+    "url": "https://lumenia-planet-museum.anionix.chatgpt.site",
+    "browserObserved": {
+      "homeLinks": true,
+      "exhibitionReady": true,
+      "contextVersion": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "artistButtons": 15,
+      "loadedImages": 1,
+      "physics": "disabled"
+    }
+  },
+  "vercel": {
+    "deploymentIdentifier": "dpl_8VTQwwtcJjpgKMMWx5i8DMtjJvEz",
+    "state": "READY",
+    "url": "https://lumenia-planet-museum.vercel.app",
+    "checks": [
+      {
+        "path": "index.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "sha256": "878549525d3bbaeef187770bb57f18ee685172a971a4bd0b59c70a10a00e62b3",
+        "matchesOutput": true
+      },
+      {
+        "path": "cosmos/index.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "sha256": "d6b8b2f3e5a60cbee9f449fdb5090013ba63e02812ed0fa8673677fd434f87a2",
+        "matchesOutput": true
+      },
+      {
+        "path": "cosmos/interactive/index.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "sha256": "0a3014a9089b63a11268b8d802074f45fa5b2733ad4a61bbf36f7df274c43fc9",
+        "matchesOutput": true
+      },
+      {
+        "path": "cosmos/interactive/main.mjs",
+        "status": 200,
+        "contentType": "application/javascript; charset=utf-8",
+        "sha256": "62bdfd624708decf015657094c6f70d7853b1c73493bbc973b248c3b927f842f",
+        "matchesOutput": true
+      },
+      {
+        "path": "cosmos/ettore-sottsass.png",
+        "status": 200,
+        "contentType": "image/png",
+        "sha256": "62f9f2086ffa001a9b5c326c4a4fb7eeba1ae4857fe9eb93a1f465349161cefa",
+        "matchesOutput": true
+      },
+      {
+        "path": "records/index.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "sha256": "0cf977ee2ecb3f6bc609aba3541a401de06ac37b821955c70aa3f0ea3a3a13a0",
+        "matchesOutput": true
+      }
+    ]
+  },
+  "pullRequests": [
+    14,
+    15
+  ],
+  "scope": "Current images and flat interactive exhibits. Actual explorable worlds follow in issues 12 and 13."
+}

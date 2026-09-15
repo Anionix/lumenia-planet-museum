@@ -58,7 +58,7 @@
     "Lumenia.category_budget_total_is_204800_bytes",
     "Lumenia.measured_gate_pass_iff"
   ],
-  "sourceRevision": "sha256:0bdf9f362166ae3da7478a7cc969070db351ad1e4a4f5e695abeca9acde4c22a",
+  "sourceRevision": "sha256:81baf2dec9fb672eb9c37d13fda9695911748f4408e5fe1673ec241b58d14bab",
   "measurementProfile": {
     "targetBrowsers": [
       "chrome",
@@ -75,8 +75,8 @@
     "largestContentfulPaintMilliseconds": 2500,
     "firstUsableArtworkMilliseconds": 3000
   },
-  "executionIdentifier": "01a0a49a-9bc1-7c1a-9b62-0c80129e9036",
-  "createdAt": "2026-09-15T10:26:35.427Z",
+  "executionIdentifier": "01a0a5bf-5ba3-703c-8e95-fef2de3592f0",
+  "createdAt": "2026-09-15T15:46:21.634Z",
   "status": "pass",
   "observations": [
     {
@@ -90,8 +90,8 @@
         "@plumeria/eslint-plugin 19.1.4"
       ],
       "failureReason": null,
-      "sourceRevision": "sha256:0bdf9f362166ae3da7478a7cc969070db351ad1e4a4f5e695abeca9acde4c22a",
-      "executionIdentifier": "01a0a49a-9bc1-7c1a-9b62-0c80129e9036"
+      "sourceRevision": "sha256:81baf2dec9fb672eb9c37d13fda9695911748f4408e5fe1673ec241b58d14bab",
+      "executionIdentifier": "01a0a5bf-5ba3-703c-8e95-fef2de3592f0"
     },
     {
       "gateIdentifier": "af18b455-fd9d-5cb0-bb49-97d09c8b8038",
@@ -104,8 +104,8 @@
         "@plumeria/eslint-plugin 19.1.4 with type information"
       ],
       "failureReason": null,
-      "sourceRevision": "sha256:0bdf9f362166ae3da7478a7cc969070db351ad1e4a4f5e695abeca9acde4c22a",
-      "executionIdentifier": "01a0a49a-9bc1-7c1a-9b62-0c80129e9036"
+      "sourceRevision": "sha256:81baf2dec9fb672eb9c37d13fda9695911748f4408e5fe1673ec241b58d14bab",
+      "executionIdentifier": "01a0a5bf-5ba3-703c-8e95-fef2de3592f0"
     },
     {
       "gateIdentifier": "25be1b45-323c-5527-b69d-fc6367ed331d",
@@ -118,8 +118,8 @@
         "closed application capability policy"
       ],
       "failureReason": null,
-      "sourceRevision": "sha256:0bdf9f362166ae3da7478a7cc969070db351ad1e4a4f5e695abeca9acde4c22a",
-      "executionIdentifier": "01a0a49a-9bc1-7c1a-9b62-0c80129e9036"
+      "sourceRevision": "sha256:81baf2dec9fb672eb9c37d13fda9695911748f4408e5fe1673ec241b58d14bab",
+      "executionIdentifier": "01a0a5bf-5ba3-703c-8e95-fef2de3592f0"
     },
     {
       "gateIdentifier": "71c2026b-0e76-5330-bff3-9af4157230ff",
@@ -132,8 +132,8 @@
         "TypeScript syntax tree"
       ],
       "failureReason": null,
-      "sourceRevision": "sha256:0bdf9f362166ae3da7478a7cc969070db351ad1e4a4f5e695abeca9acde4c22a",
-      "executionIdentifier": "01a0a49a-9bc1-7c1a-9b62-0c80129e9036"
+      "sourceRevision": "sha256:81baf2dec9fb672eb9c37d13fda9695911748f4408e5fe1673ec241b58d14bab",
+      "executionIdentifier": "01a0a5bf-5ba3-703c-8e95-fef2de3592f0"
     },
     {
       "gateIdentifier": "23a2895e-534c-5999-9c75-42981efd82d4",
@@ -147,8 +147,8 @@
         "emitted JavaScript syntax and source maps"
       ],
       "failureReason": null,
-      "sourceRevision": "sha256:0bdf9f362166ae3da7478a7cc969070db351ad1e4a4f5e695abeca9acde4c22a",
-      "executionIdentifier": "01a0a49a-9bc1-7c1a-9b62-0c80129e9036"
+      "sourceRevision": "sha256:81baf2dec9fb672eb9c37d13fda9695911748f4408e5fe1673ec241b58d14bab",
+      "executionIdentifier": "01a0a5bf-5ba3-703c-8e95-fef2de3592f0"
     },
     {
       "gateIdentifier": "81b0c197-77d0-52c6-b099-e3fc65e6fac2",
@@ -162,8 +162,8 @@
         "exported file inventory"
       ],
       "failureReason": null,
-      "sourceRevision": "sha256:0bdf9f362166ae3da7478a7cc969070db351ad1e4a4f5e695abeca9acde4c22a",
-      "executionIdentifier": "01a0a49a-9bc1-7c1a-9b62-0c80129e9036"
+      "sourceRevision": "sha256:81baf2dec9fb672eb9c37d13fda9695911748f4408e5fe1673ec241b58d14bab",
+      "executionIdentifier": "01a0a5bf-5ba3-703c-8e95-fef2de3592f0"
     }
   ]
 }

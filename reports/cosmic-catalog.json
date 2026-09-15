@@ -1,6 +1,6 @@
 {
-  "executionIdentifier": "01a0a49a-70e3-7833-99cd-cdec97dc92d6",
-  "recordedAt": "2026-09-15T10:26:20.008Z",
+  "executionIdentifier": "01a0a5bd-cd3b-7c10-81b5-0ca5c7d94c1d",
+  "recordedAt": "2026-09-15T15:44:34.623Z",
   "people": 15,
   "semanticCoordinates": 12,
   "unspecifiedDates": [
@@ -24,8 +24,8 @@
     },
     {
       "path": "planetarium/generated/cosmic-exhibition.jsonl",
-      "sha256": "93e539474a73190a29b73c95553e5f78c06ee53838812051cb232566fb8523c3",
-      "bytes": 56469
+      "sha256": "8ab3f2e2702bc63c4b139cb43c1e4909f3ae5480d368b34e13d3276c97030dd6",
+      "bytes": 56504
     }
   ]
 }

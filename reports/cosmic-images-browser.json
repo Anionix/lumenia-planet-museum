@@ -1,0 +1,49 @@
+{
+  "recordIdentifier": "26c1a73e-a5ed-5a54-93c7-29888e27f48e",
+  "executionIdentifier": "01a0a5c2-755a-76e5-9481-eddbcde116df",
+  "recordedAt": "2026-09-15T15:49:39.802Z",
+  "sourceRevision": "sha256:81baf2dec9fb672eb9c37d13fda9695911748f4408e5fe1673ec241b58d14bab",
+  "localUrl": "http://127.0.0.1:4175/cosmos/interactive/",
+  "contextVersion": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+  "initialLoadedImages": 1,
+  "totalLoadedImages": 15,
+  "selectedArtists": [
+    "William Morris",
+    "Alphonse Mucha",
+    "Charles Rennie Mackintosh",
+    "Piet Mondrian",
+    "Gerrit Rietveld",
+    "Ettore Sottsass",
+    "Herbert Bayer",
+    "Josef Müller-Brockmann",
+    "Massimo Vignelli",
+    "Dieter Rams",
+    "Naoto Fukasawa",
+    "Rei Kawakubo",
+    "Charles Eames",
+    "Ray Eames",
+    "Walter Gropius"
+  ],
+  "allFifteenSelectionsObserved": true,
+  "initialPhysics": "disabled",
+  "enabledPhysicsStepsObserved": 892,
+  "resetPhysics": "disabled",
+  "resetPhysicsSteps": 0,
+  "desktopWidth": 1280,
+  "mobileWidth": 390,
+  "mobileDocumentWidth": 390,
+  "pausedFrameObservations": [
+    3554,
+    3554
+  ],
+  "consoleErrors": [],
+  "clockReview": {
+    "crossed120Seconds": true,
+    "stoppedAtPresentationSeconds": 176.616,
+    "stoppedSliderSeconds": 176.62,
+    "rangeMaximum": 240,
+    "afterHomeValue": 0,
+    "afterHomeRangeMaximum": 240
+  },
+  "scope": "Observed local static build. Physics, selection, pause, responsive layout and clock controls were exercised. This is not a hardware performance benchmark or a public deployment receipt."
+}
