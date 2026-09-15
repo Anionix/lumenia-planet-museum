@@ -1,0 +1,138 @@
+{
+  "recordIdentifier": "04a3a2b0-d498-57b4-85a8-bc943f3a17e4",
+  "executionIdentifier": "01a0a76a-b9d2-7dcf-bf62-91cee342c526",
+  "recordedAt": "2026-09-15T23:33:04.594Z",
+  "status": "pass",
+  "browser": "Chromium in the Codex in-app browser",
+  "contextVersion": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+  "localUrl": "http://127.0.0.1:4175/cosmos/explore/",
+  "observations": {
+    "worldSelection": {
+      "worldSlugs": [
+        "ettore-sottsass",
+        "william-morris",
+        "alphonse-mucha",
+        "charles-rennie-mackintosh",
+        "piet-mondrian",
+        "gerrit-rietveld",
+        "herbert-bayer",
+        "josef-muller-brockmann",
+        "massimo-vignelli",
+        "dieter-rams",
+        "naoto-fukasawa",
+        "rei-kawakubo",
+        "charles-eames",
+        "ray-eames",
+        "walter-gropius"
+      ],
+      "readyCount": 15,
+      "activeWorldsEach": 1,
+      "physicsInitiallyEach": "disabled",
+      "knownSourceCoordinates": 12,
+      "missingSourceCoordinates": 3,
+      "comparisonCommit": "7de9867e9fbd599c5fb351c913d59a1335e8c97b",
+      "scope": "All fifteen worlds were selected before the final shell-normal and update-message fixes."
+    },
+    "initialNetwork": {
+      "selectedWorld": "ettore-sottsass",
+      "worldDataRequests": [
+        "/cosmos/explore/worlds/ettore-sottsass.json"
+      ],
+      "catalogRequest": "/cosmos/explore/worlds.json",
+      "collisionModuleRequested": false,
+      "rapierRequested": false,
+      "eventsTruncated": false
+    },
+    "gropiusDoorway": {
+      "physics": "enabled",
+      "before": [
+        0,
+        2,
+        15
+      ],
+      "after": [
+        0,
+        2,
+        3.8
+      ],
+      "action": "28 presses of the forward button",
+      "insideFrontEntrance": true
+    },
+    "responsiveMovement": {
+      "viewport": [
+        390,
+        844
+      ],
+      "documentWidth": 390,
+      "action": "up button",
+      "before": [
+        25,
+        13,
+        38
+      ],
+      "after": [
+        24.944,
+        13.387,
+        37.915
+      ],
+      "physics": "disabled",
+      "sourceCoordinate": null,
+      "viewportRestored": [
+        1280,
+        720
+      ]
+    },
+    "shellAfterFix": {
+      "artist": "Charles Eames",
+      "ready": true,
+      "physics": "disabled",
+      "sourceCoordinate": null,
+      "outwardSurfaceVisuallyChecked": true
+    },
+    "dataRefresh": {
+      "staleCatalogueRejected": true,
+      "collisionDisabledWhileLoading": true,
+      "reloadRecovered": true
+    }
+  },
+  "finalCheckInputs": [
+    {
+      "path": "reference-assets/artist-cosmos/explore/main.mjs",
+      "sha256": "478cbe80c951cf7ae5ae197f4a62497ec4312d4da99dccab472aec2938592b4c"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/navigation.mjs",
+      "sha256": "99b9a8816885b3b676b92e062f378d753129d036d6139e500cadfc2aa81aa4a5"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/geometry.mjs",
+      "sha256": "cef74914f09f2fba6facf47383761ec1cf521042780527cdf5672e4056684488"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/collision.mjs",
+      "sha256": "13f558e4d8f8c72391471366bcf741b807b75d676ee5f32bb38a3b8dbf8c48be"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/style.css",
+      "sha256": "954e429a5420d7dfee9876fc079f574dc1ac9561d2edf646c80e6f98d193236f"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/index.html",
+      "sha256": "29329433a2fee2d8d0fd83edf729b03d69f1d3bd370f26e46976ac0872e8dcc2"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/worlds.json",
+      "sha256": "68a37e5a703e748a0e741c3defbbdf3e4a620f41dce92c7af7884cf03a79edff"
+    }
+  ],
+  "inputScope": "These hashes bind the final shell and responsive checks. The earlier full selection pass and earlier Sottsass traversal are identified separately.",
+  "limitations": [
+    "Held keyboard movement was not measured with the browser automation interface; on-screen movement was exercised.",
+    "No Safari, Firefox, or physical mobile-device performance result is claimed.",
+    "Formal proofs do not prove browser rendering or the physics implementation."
+  ],
+  "relatedReceipts": [
+    "reports/sottsass-exploration-browser.json",
+    "reports/exploration-verification.json"
+  ]
+}

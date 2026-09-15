@@ -1,6 +1,6 @@
 {
   "manifest": {
-    "sourceRevision": "sha256:81baf2dec9fb672eb9c37d13fda9695911748f4408e5fe1673ec241b58d14bab",
+    "sourceRevision": "sha256:e81a712d0bb4f40024df879541bb7a916324c4bf0920bbcde3a7f98baa5f5e53",
     "files": [
       {
         "path": "CONSTRAINTS.md",
@@ -44,7 +44,7 @@
       },
       {
         "path": "contracts/external-gates.json",
-        "sha256": "b16442543e38def9157e98cd6814cab5a2cce09b6217a95c832c1195b2ed0362"
+        "sha256": "72d221e87cfa69839658e2a29b9cdb383b531104aef17ee027a6313620bb1ecc"
       },
       {
         "path": "contracts/verification-contract.schema.json",
@@ -157,6 +157,114 @@
       {
         "path": "reference-assets/artist-cosmos/ettore-sottsass.png",
         "sha256": "62f9f2086ffa001a9b5c326c4a4fb7eeba1ae4857fe9eb93a1f465349161cefa"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/README.md",
+        "sha256": "f3734efaea1645d9d4c4a5837a11c38719cc6aa4e06e7090c286b020f2f2d409"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/collision.mjs",
+        "sha256": "13f558e4d8f8c72391471366bcf741b807b75d676ee5f32bb38a3b8dbf8c48be"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/geometry.mjs",
+        "sha256": "cef74914f09f2fba6facf47383761ec1cf521042780527cdf5672e4056684488"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/index.html",
+        "sha256": "29329433a2fee2d8d0fd83edf729b03d69f1d3bd370f26e46976ac0872e8dcc2"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/main.mjs",
+        "sha256": "478cbe80c951cf7ae5ae197f4a62497ec4312d4da99dccab472aec2938592b4c"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/navigation.mjs",
+        "sha256": "99b9a8816885b3b676b92e062f378d753129d036d6139e500cadfc2aa81aa4a5"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/style.css",
+        "sha256": "954e429a5420d7dfee9876fc079f574dc1ac9561d2edf646c80e6f98d193236f"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/verification/Exploration.lean",
+        "sha256": "0bd76bc65ba0659f293769103bae3e72ac7c5f2dffe4571a39e0057995316d30"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/verification/lake-manifest.json",
+        "sha256": "b8c57e60b9ac6cecb88dc2e783968d84ac26310ba0c3f13ddbd6b9ff221c6e32"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/verification/lakefile.toml",
+        "sha256": "d780cfc3b5958bda77d9d8963d9a9213fa7934fbde7d84f77d3fb4a3d8ed7d38"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/verification/lean-toolchain",
+        "sha256": "db7bb24b756d745bbde83fe92718b51bd3625dae3701ba0f598d0eedcd3f3028"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/worlds.json",
+        "sha256": "68a37e5a703e748a0e741c3defbbdf3e4a620f41dce92c7af7884cf03a79edff"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/worlds/alphonse-mucha.json",
+        "sha256": "0f83d764f60976289e7fbc0c1dbdb67153766cfdfa646be7d913111b272850b7"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/worlds/charles-eames.json",
+        "sha256": "65ffa39ad47261b6ee9208306ab3944d6f0db7d28060c571f54f9cac0acef827"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/worlds/charles-rennie-mackintosh.json",
+        "sha256": "7ff646191074ec3e7ccf8b8eb3e0c4201e7d2ac05e9d6471e6e03b0f0ae4d2ea"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/worlds/dieter-rams.json",
+        "sha256": "6eda4ca02aa1ed636d6d6c8196815c7067d619d33ceed6906592b22c4bfd217e"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/worlds/ettore-sottsass.json",
+        "sha256": "fb3ac97e605e0175961f3c5caa2960ba5cea90d675e74ce7a7192d0bf44b672b"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/worlds/gerrit-rietveld.json",
+        "sha256": "830919c67b451684ff5a4979d8ae2b8895a171e2512c554f8b0689181c08c82f"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/worlds/herbert-bayer.json",
+        "sha256": "f8c4532a4adfa846bd96b84f4ee7b69c5cc7d9469fc7fe186db6647dcb56702b"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/worlds/josef-muller-brockmann.json",
+        "sha256": "c8aa85237a82634db071cf1537798c03e52748242231a31d7ea90a0f29824aca"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/worlds/massimo-vignelli.json",
+        "sha256": "8ee1785ab63f4b3d80a14a4caf295f14869af38b51d65ba6d8372c40d785958a"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/worlds/naoto-fukasawa.json",
+        "sha256": "f93dc6864304ebf47aecb13272e71c80013acf80137ec77405f5822c669102d2"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/worlds/piet-mondrian.json",
+        "sha256": "7eb0111d5a68e863c3dcd91f6b670f0089c4067d4e94e6fbb96ef4e842596eee"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/worlds/ray-eames.json",
+        "sha256": "73adf919c358f6abe24a508fff81070caca45f246b7b8a53f0c537263e8f16fb"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/worlds/rei-kawakubo.json",
+        "sha256": "69bb6af25b333be75f5ec25ace0bc821b801f6a92c445d1f2d2fd8d5f3fc2de4"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/worlds/walter-gropius.json",
+        "sha256": "b2cb6370ecc3c6d4262a69223d5b5bc2300419d42b1777cebbc322ab28cc89b1"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/worlds/william-morris.json",
+        "sha256": "3e82f60d3d049df3c318d34b4318ebac611692493be4a24d15ab297b89e35dec"
       },
       {
         "path": "reference-assets/artist-cosmos/gerrit-rietveld.png",
@@ -331,6 +439,10 @@
         "sha256": "d7485b0b48ab20c6ef5b369f0206db25137aac82021054cc1b8c8b4fb437d7a0"
       },
       {
+        "path": "scripts/artist-world-recipes.mjs",
+        "sha256": "ef94351ba2fc8e33d2f510136d43ffc9d7784654e88bffaee94da078772d6801"
+      },
+      {
         "path": "scripts/browser-observations.mjs",
         "sha256": "31eddef823b66065b8893ad6da5149712a534af3792c844d913be78fddba9355"
       },
@@ -352,11 +464,15 @@
       },
       {
         "path": "scripts/build-cosmic-images.mjs",
-        "sha256": "41032ea566a1cdaa59859d936e27cc499ac14a5bd13e9d7c765555cdb00bf2b9"
+        "sha256": "18066cf84bf4a18f746c74980363e98b214c08c588079c38400aab3967cb3315"
+      },
+      {
+        "path": "scripts/build-exploration.mjs",
+        "sha256": "5fa07c6aa1d7e093fd785c1e929bb6c911885a1d3e50e425f7e75be90b55a3d7"
       },
       {
         "path": "scripts/build-web.mjs",
-        "sha256": "9c2230175bfe3531e9b84b522892ed53af411971a506fdb44ec749534881ea6e"
+        "sha256": "fad90e381b321260363a8d0175b95420edcc1786c1abb6dc3d63e3da7b783aa8"
       },
       {
         "path": "scripts/character-registration.mjs",
@@ -381,6 +497,10 @@
       {
         "path": "scripts/drawing-asset-policy.mjs",
         "sha256": "57112eba494063e0cd5d1ba6fd154a09a9076758d222ae244e1380e2787e2af2"
+      },
+      {
+        "path": "scripts/exploration-recipes.mjs",
+        "sha256": "ba3ca408a129ece7da812f9c3a743df9a7e04799d3b8238a61011761d1e49e4f"
       },
       {
         "path": "scripts/export-css-character.mjs",
@@ -420,7 +540,7 @@
       },
       {
         "path": "scripts/run-application-check.mjs",
-        "sha256": "d8627cee825e2f4165128989fecbbc95792b25384405151fc09d73a85d6206bf"
+        "sha256": "67168cefa1cd9519f265c3a0088573edf30b8f23cf5be61ba7f523ab9c31a00c"
       },
       {
         "path": "scripts/run-asset-reference-check.mjs",
@@ -463,6 +583,10 @@
         "sha256": "d037ac7a7b7d6693105406a4e1924e8adb6263d241201492ce838947bfd1cf76"
       },
       {
+        "path": "scripts/verify-exploration.mjs",
+        "sha256": "937e44f03e3a11a5587e595b8cbf98803aee8258e8194d1c0236ceae6b7c979e"
+      },
+      {
         "path": "spec.md",
         "sha256": "b293e5c86933bcdd000b85ddc2b1c9942d693f24831d38d34f5c15be3fe8a223"
       },
@@ -497,6 +621,10 @@
       {
         "path": "tests/drawing-asset-policy.test.mjs",
         "sha256": "da5e621afbec765be34bf034a7c569dbcf13fdcdd6bdb4895f26becf47333ba4"
+      },
+      {
+        "path": "tests/exploration.test.mjs",
+        "sha256": "c4dd236737c91da0c827018976ede1f09340abefa53ee72697c99ace0b4029e1"
       },
       {
         "path": "tests/integration-report.test.mjs",
@@ -791,6 +919,98 @@
         "sha256": "62f9f2086ffa001a9b5c326c4a4fb7eeba1ae4857fe9eb93a1f465349161cefa"
       },
       {
+        "path": "web/public/cosmos/explore/README.md",
+        "sha256": "f3734efaea1645d9d4c4a5837a11c38719cc6aa4e06e7090c286b020f2f2d409"
+      },
+      {
+        "path": "web/public/cosmos/explore/collision.mjs",
+        "sha256": "13f558e4d8f8c72391471366bcf741b807b75d676ee5f32bb38a3b8dbf8c48be"
+      },
+      {
+        "path": "web/public/cosmos/explore/geometry.mjs",
+        "sha256": "cef74914f09f2fba6facf47383761ec1cf521042780527cdf5672e4056684488"
+      },
+      {
+        "path": "web/public/cosmos/explore/index.html",
+        "sha256": "29329433a2fee2d8d0fd83edf729b03d69f1d3bd370f26e46976ac0872e8dcc2"
+      },
+      {
+        "path": "web/public/cosmos/explore/main.mjs",
+        "sha256": "478cbe80c951cf7ae5ae197f4a62497ec4312d4da99dccab472aec2938592b4c"
+      },
+      {
+        "path": "web/public/cosmos/explore/navigation.mjs",
+        "sha256": "99b9a8816885b3b676b92e062f378d753129d036d6139e500cadfc2aa81aa4a5"
+      },
+      {
+        "path": "web/public/cosmos/explore/style.css",
+        "sha256": "954e429a5420d7dfee9876fc079f574dc1ac9561d2edf646c80e6f98d193236f"
+      },
+      {
+        "path": "web/public/cosmos/explore/worlds.json",
+        "sha256": "68a37e5a703e748a0e741c3defbbdf3e4a620f41dce92c7af7884cf03a79edff"
+      },
+      {
+        "path": "web/public/cosmos/explore/worlds/alphonse-mucha.json",
+        "sha256": "0f83d764f60976289e7fbc0c1dbdb67153766cfdfa646be7d913111b272850b7"
+      },
+      {
+        "path": "web/public/cosmos/explore/worlds/charles-eames.json",
+        "sha256": "65ffa39ad47261b6ee9208306ab3944d6f0db7d28060c571f54f9cac0acef827"
+      },
+      {
+        "path": "web/public/cosmos/explore/worlds/charles-rennie-mackintosh.json",
+        "sha256": "7ff646191074ec3e7ccf8b8eb3e0c4201e7d2ac05e9d6471e6e03b0f0ae4d2ea"
+      },
+      {
+        "path": "web/public/cosmos/explore/worlds/dieter-rams.json",
+        "sha256": "6eda4ca02aa1ed636d6d6c8196815c7067d619d33ceed6906592b22c4bfd217e"
+      },
+      {
+        "path": "web/public/cosmos/explore/worlds/ettore-sottsass.json",
+        "sha256": "fb3ac97e605e0175961f3c5caa2960ba5cea90d675e74ce7a7192d0bf44b672b"
+      },
+      {
+        "path": "web/public/cosmos/explore/worlds/gerrit-rietveld.json",
+        "sha256": "830919c67b451684ff5a4979d8ae2b8895a171e2512c554f8b0689181c08c82f"
+      },
+      {
+        "path": "web/public/cosmos/explore/worlds/herbert-bayer.json",
+        "sha256": "f8c4532a4adfa846bd96b84f4ee7b69c5cc7d9469fc7fe186db6647dcb56702b"
+      },
+      {
+        "path": "web/public/cosmos/explore/worlds/josef-muller-brockmann.json",
+        "sha256": "c8aa85237a82634db071cf1537798c03e52748242231a31d7ea90a0f29824aca"
+      },
+      {
+        "path": "web/public/cosmos/explore/worlds/massimo-vignelli.json",
+        "sha256": "8ee1785ab63f4b3d80a14a4caf295f14869af38b51d65ba6d8372c40d785958a"
+      },
+      {
+        "path": "web/public/cosmos/explore/worlds/naoto-fukasawa.json",
+        "sha256": "f93dc6864304ebf47aecb13272e71c80013acf80137ec77405f5822c669102d2"
+      },
+      {
+        "path": "web/public/cosmos/explore/worlds/piet-mondrian.json",
+        "sha256": "7eb0111d5a68e863c3dcd91f6b670f0089c4067d4e94e6fbb96ef4e842596eee"
+      },
+      {
+        "path": "web/public/cosmos/explore/worlds/ray-eames.json",
+        "sha256": "73adf919c358f6abe24a508fff81070caca45f246b7b8a53f0c537263e8f16fb"
+      },
+      {
+        "path": "web/public/cosmos/explore/worlds/rei-kawakubo.json",
+        "sha256": "69bb6af25b333be75f5ec25ace0bc821b801f6a92c445d1f2d2fd8d5f3fc2de4"
+      },
+      {
+        "path": "web/public/cosmos/explore/worlds/walter-gropius.json",
+        "sha256": "b2cb6370ecc3c6d4262a69223d5b5bc2300419d42b1777cebbc322ab28cc89b1"
+      },
+      {
+        "path": "web/public/cosmos/explore/worlds/william-morris.json",
+        "sha256": "3e82f60d3d049df3c318d34b4318ebac611692493be4a24d15ab297b89e35dec"
+      },
+      {
         "path": "web/public/cosmos/gerrit-rietveld.png",
         "sha256": "ca4d66b058126ed541e30ea886139ebfd2815740b6db8b538ca26f3c21305fc0"
       },
@@ -804,7 +1024,7 @@
       },
       {
         "path": "web/public/cosmos/index.html",
-        "sha256": "d6b8b2f3e5a60cbee9f449fdb5090013ba63e02812ed0fa8673677fd434f87a2"
+        "sha256": "3f98cb8943756dc2e35f3d1e0999d666dad5f3c158b83a85549b99639c049271"
       },
       {
         "path": "web/public/cosmos/interactive/README.md",
@@ -912,7 +1132,7 @@
       }
     ]
   },
-  "executionIdentifier": "01a0a5bf-3c93-742d-99eb-ee66a3830633",
+  "executionIdentifier": "01a0a762-86fb-7d5a-b097-587c6acebb06",
   "gateNames": {
     "79885f8e-618d-5cd3-9ee7-350d8e279b8b": "Lumenia.LeanProjectBuildGate",
     "46de9356-94a7-5355-a9a6-a6fde3471fcc": "Lumenia.LeanWarningGate",
@@ -942,7 +1162,7 @@
         "--test-reporter=tap"
       ],
       "exitCode": 0,
-      "stdout": "TAP version 13\n# Subtest: initial display keeps 12 source coordinates and 3 unknown values with physics disabled\nok 1 - initial display keeps 12 source coordinates and 3 unknown values with physics disabled\n  ---\n  duration_ms: 25.755542\n  type: 'test'\n  ...\n# Subtest: semantic distance is an immutable snapshot independent of mutable display/input arrays\nok 2 - semantic distance is an immutable snapshot independent of mutable display/input arrays\n  ---\n  duration_ms: 0.504166\n  type: 'test'\n  ...\n# Subtest: fixed steps agree at 60 and 120 frames per second and cap long pauses\nok 3 - fixed steps agree at 60 and 120 frames per second and cap long pauses\n  ---\n  duration_ms: 0.1625\n  type: 'test'\n  ...\n# Subtest: real Rapier bodies collide, remain finite, and do not mutate source coordinates\nok 4 - real Rapier bodies collide, remain finite, and do not mutate source coordinates\n  ---\n  duration_ms: 136.769917\n  type: 'test'\n  ...\n# Subtest: gravity causes a fall and the display floor catches the panel\nok 5 - gravity causes a fall and the display floor catches the panel\n  ---\n  duration_ms: 7.1825\n  type: 'test'\n  ...\n# Subtest: kinematic dragging moves a body then releases it into simulation\nok 6 - kinematic dragging moves a body then releases it into simulation\n  ---\n  duration_ms: 3.997625\n  type: 'test'\n  ...\n# Subtest: actual browser validator agrees with compiled Lean over all 4096 assignments\nok 7 - actual browser validator agrees with compiled Lean over all 4096 assignments\n  ---\n  duration_ms: 273.625583\n  type: 'test'\n  ...\n# Subtest: runtime manifest rejects malformed flags, unvalidated stages, unknown keys and external resources\nok 8 - runtime manifest rejects malformed flags, unvalidated stages, unknown keys and external resources\n  ---\n  duration_ms: 0.625208\n  type: 'test'\n  ...\n# Subtest: decoders activate only for explicit asset flags, including Draco opt-in\nok 9 - decoders activate only for explicit asset flags, including Draco opt-in\n  ---\n  duration_ms: 1.686\n  type: 'test'\n  ...\n# Subtest: actual optimized binary declares Meshopt and passes the browser manifest parser\nok 10 - actual optimized binary declares Meshopt and passes the browser manifest parser\n  ---\n  duration_ms: 13.54075\n  type: 'test'\n  ...\n# Subtest: code gates accept module-scope Plumeria arrays inside a client boundary\nok 11 - code gates accept module-scope Plumeria arrays inside a client boundary\n  ---\n  duration_ms: 10.628833\n  type: 'test'\n  ...\n# Subtest: framework links work in server and client pages without admitting unknown framework modules\nok 12 - framework links work in server and client pages without admitting unknown framework modules\n  ---\n  duration_ms: 1.154542\n  type: 'test'\n  ...\n# Subtest: code gates distinguish literal object keys from browser access\nok 13 - code gates distinguish literal object keys from browser access\n  ---\n  duration_ms: 1.100542\n  type: 'test'\n  ...\n# Subtest: code gates reject nested create, className, nonarray styles, server events and transitive browser access\nok 14 - code gates reject nested create, className, nonarray styles, server events and transitive browser access\n  ---\n  duration_ms: 0.721625\n  type: 'test'\n  ...\n# Subtest: code gates reject request-time server functions and nonliteral imports\nok 15 - code gates reject request-time server functions and nonliteral imports\n  ---\n  duration_ms: 0.451333\n  type: 'test'\n  ...\n# Subtest: Plumeria namespace aliases and opaque JSX props cannot bypass code gates\nok 16 - Plumeria namespace aliases and opaque JSX props cannot bypass code gates\n  ---\n  duration_ms: 0.37425\n  type: 'test'\n  ...\n# Subtest: Plumeria keyframes must be module-level constants just like style declarations\nok 17 - Plumeria keyframes must be module-level constants just like style declarations\n  ---\n  duration_ms: 1.349083\n  type: 'test'\n  ...\n# Subtest: line artwork uses HTML border rings and has no vector or canvas drawing implementation\nok 18 - line artwork uses HTML border rings and has no vector or canvas drawing implementation\n  ---\n  duration_ms: 6.877541\n  type: 'test'\n  ...\n# Subtest: CSS diagonal circles satisfy the torus equation at sampled points\nok 19 - CSS diagonal circles satisfy the torus equation at sampled points\n  ---\n  duration_ms: 0.604958\n  type: 'test'\n  ...\n# Subtest: all artwork kinds use CSS and the solid consists of finite torus panels\nok 20 - all artwork kinds use CSS and the solid consists of finite torus panels\n  ---\n  duration_ms: 0.684625\n  type: 'test'\n  ...\n# Subtest: shared controls have no drawing loop or graphics dependency\nok 21 - shared controls have no drawing loop or graphics dependency\n  ---\n  duration_ms: 0.678125\n  type: 'test'\n  ...\n# Subtest: decoder bytes remain in core; only artwork bytes are excluded\nok 22 - decoder bytes remain in core; only artwork bytes are excluded\n  ---\n  duration_ms: 2.789333\n  type: 'test'\n  ...\n# Subtest: missing stages, cached entries and unknown resource classes cannot pass transfer measurement\nok 23 - missing stages, cached entries and unknown resource classes cannot pass transfer measurement\n  ---\n  duration_ms: 0.801084\n  type: 'test'\n  ...\n# Subtest: successful header checks and subsequent page payloads count toward metadata and core bytes\nok 24 - successful header checks and subsequent page payloads count toward metadata and core bytes\n  ---\n  duration_ms: 0.543416\n  type: 'test'\n  ...\n# Subtest: header classification rejects missing, ambiguous, failed and non-header evidence\nok 25 - header classification rejects missing, ambiguous, failed and non-header evidence\n  ---\n  duration_ms: 2.181458\n  type: 'test'\n  ...\n# Subtest: an aborted header notification is reconciled with a uniquely matched successful response\nok 26 - an aborted header notification is reconciled with a uniquely matched successful response\n  ---\n  duration_ms: 0.998625\n  type: 'test'\n  ...\n# Subtest: actual failures, incomplete evidence and unsuccessful interactions remain nonfunctional\nok 27 - actual failures, incomplete evidence and unsuccessful interactions remain nonfunctional\n  ---\n  duration_ms: 0.505042\n  type: 'test'\n  ...\n# Subtest: Character receipt boundary accepts a complete synthetic record without claiming visual verification\nok 28 - Character receipt boundary accepts a complete synthetic record without claiming visual verification\n  ---\n  duration_ms: 75.699375\n  type: 'test'\n  ...\n# Subtest: Character admission rejects sixteen unique but unrecognized direction labels\nok 29 - Character admission rejects sixteen unique but unrecognized direction labels\n  ---\n  duration_ms: 25.808083\n  type: 'test'\n  ...\n# Subtest: Character admission rejects wrong person\nok 30 - Character admission rejects wrong person\n  ---\n  duration_ms: 27.798583\n  type: 'test'\n  ...\n# Subtest: Character admission rejects unbound decoded image\nok 31 - Character admission rejects unbound decoded image\n  ---\n  duration_ms: 45.620208\n  type: 'test'\n  ...\n# Subtest: Character admission rejects missing axis evidence\nok 32 - Character admission rejects missing axis evidence\n  ---\n  duration_ms: 53.309042\n  type: 'test'\n  ...\n# Subtest: Character admission rejects failed standard inspection\nok 33 - Character admission rejects failed standard inspection\n  ---\n  duration_ms: 31.245042\n  type: 'test'\n  ...\n# Subtest: Character admission rejects incomplete continuity\nok 34 - Character admission rejects incomplete continuity\n  ---\n  duration_ms: 54.906667\n  type: 'test'\n  ...\n# Subtest: Character admission rejects duplicate direction\nok 35 - Character admission rejects duplicate direction\n  ---\n  duration_ms: 79.727958\n  type: 'test'\n  ...\n# Subtest: Character admission rejects missing direction\nok 36 - Character admission rejects missing direction\n  ---\n  duration_ms: 50.657167\n  type: 'test'\n  ...\n# Subtest: Character admission rejects failed direction\nok 37 - Character admission rejects failed direction\n  ---\n  duration_ms: 31.19775\n  type: 'test'\n  ...\n# Subtest: Character admission rejects empty semantic observation\nok 38 - Character admission rejects empty semantic observation\n  ---\n  duration_ms: 18.865208\n  type: 'test'\n  ...\n# Subtest: Character admission rejects non-text semantic reason\nok 39 - Character admission rejects non-text semantic reason\n  ---\n  duration_ms: 24.37725\n  type: 'test'\n  ...\n# Subtest: Character admission rejects failed independent review\nok 40 - Character admission rejects failed independent review\n  ---\n  duration_ms: 30.147792\n  type: 'test'\n  ...\n# Subtest: Character admission rejects failed blind review\nok 41 - Character admission rejects failed blind review\n  ---\n  duration_ms: 85.934625\n  type: 'test'\n  ...\n# Subtest: Character admission rejects intermediate atlas\nok 42 - Character admission rejects intermediate atlas\n  ---\n  duration_ms: 40.473792\n  type: 'test'\n  ...\n# Subtest: Character admission rejects invalid execution identifier\nok 43 - Character admission rejects invalid execution identifier\n  ---\n  duration_ms: 43.279375\n  type: 'test'\n  ...\n# Subtest: Character admission rejects image bytes changed after inspection\nok 44 - Character admission rejects image bytes changed after inspection\n  ---\n  duration_ms: 16.529875\n  type: 'test'\n  ...\n# Subtest: Character admission rejects evidence changed after inspection\nok 45 - Character admission rejects evidence changed after inspection\n  ---\n  duration_ms: 25.977917\n  type: 'test'\n  ...\n# Subtest: Missing character receipt is blocked, not accepted\nok 46 - Missing character receipt is blocked, not accepted\n  ---\n  duration_ms: 4.036291\n  type: 'test'\n  ...\n# Subtest: Unverified raster characters cannot mount; failed or stale evidence stops availability generation\nok 47 - Unverified raster characters cannot mount; failed or stale evidence stops availability generation\n  ---\n  duration_ms: 2.769375\n  type: 'test'\n  ...\n# Subtest: Accepted character availability preserves the image digest and evidence run\nok 48 - Accepted character availability preserves the image digest and evidence run\n  ---\n  duration_ms: 0.218667\n  type: 'test'\n  ...\n# Subtest: The studio reads freshly generated character availability instead of a manual ready flag\nok 49 - The studio reads freshly generated character availability instead of a manual ready flag\n  ---\n  duration_ms: 91.900417\n  type: 'test'\n  ...\n# Subtest: the committed verification request is valid\nok 50 - the committed verification request is valid\n  ---\n  duration_ms: 8.696\n  type: 'test'\n  ...\n# Subtest: the committed verification result is valid and has a pass aggregate\nok 51 - the committed verification result is valid and has a pass aggregate\n  ---\n  duration_ms: 1.2\n  type: 'test'\n  ...\n# Subtest: the committed asset manifest is valid\nok 52 - the committed asset manifest is valid\n  ---\n  duration_ms: 2.401209\n  type: 'test'\n  ...\n# Subtest: the fixed category budgets add up to the core budget\nok 53 - the fixed category budgets add up to the core budget\n  ---\n  duration_ms: 0.141125\n  type: 'test'\n  ...\n# Subtest: dual Meshopt encodings are rejected\nok 54 - dual Meshopt encodings are rejected\n  ---\n  duration_ms: 0.834625\n  type: 'test'\n  ...\n# Subtest: a Meshopt asset without its decoder is rejected\nok 55 - a Meshopt asset without its decoder is rejected\n  ---\n  duration_ms: 1.090375\n  type: 'test'\n  ...\n# Subtest: a KTX2 asset without its loader is rejected\nok 56 - a KTX2 asset without its loader is rejected\n  ---\n  duration_ms: 1.422375\n  type: 'test'\n  ...\n# Subtest: preservation options are required when the asset needs them\nok 57 - preservation options are required when the asset needs them\n  ---\n  duration_ms: 271.127458\n  type: 'test'\n  ...\n# Subtest: a result cannot claim pass when an observation failed\nok 58 - a result cannot claim pass when an observation failed\n  ---\n  duration_ms: 26.624208\n  type: 'test'\n  ...\n# Subtest: unknown properties fail closed\nok 59 - unknown properties fail closed\n  ---\n  duration_ms: 30.630541\n  type: 'test'\n  ...\n# Subtest: a pass with a missing, textual, non-finite or over-limit observation is rejected\nok 60 - a pass with a missing, textual, non-finite or over-limit observation is rejected\n  ---\n  duration_ms: 53.174625\n  type: 'test'\n  ...\n# Subtest: old evidence cannot be promoted to pass\nok 61 - old evidence cannot be promoted to pass\n  ---\n  duration_ms: 3.058666\n  type: 'test'\n  ...\n# Subtest: missing evidence is blocked even if an explanation says it passed\nok 62 - missing evidence is blocked even if an explanation says it passed\n  ---\n  duration_ms: 2.239292\n  type: 'test'\n  ...\n# Subtest: null observations, duplicate gates and an incomplete browser matrix fail closed\nok 63 - null observations, duplicate gates and an incomplete browser matrix fail closed\n  ---\n  duration_ms: 20.066375\n  type: 'test'\n  ...\n# Subtest: 15 unique sourced bodies keep 12 supplied semantic coordinates and all physics disabled\nok 64 - 15 unique sourced bodies keep 12 supplied semantic coordinates and all physics disabled\n  ---\n  duration_ms: 3.849375\n  type: 'test'\n  ...\n# Subtest: presentation movement never changes semantic distance, including missing coordinates\nok 65 - presentation movement never changes semantic distance, including missing coordinates\n  ---\n  duration_ms: 95.039125\n  type: 'test'\n  ...\n# Subtest: chronology keeps interval boundaries, unspecified date and exhibition date distinct\nok 66 - chronology keeps interval boundaries, unspecified date and exhibition date distinct\n  ---\n  duration_ms: 6.905875\n  type: 'test'\n  ...\n# Subtest: pause, reduced motion and visibility freeze the presentation clock; resumed frames stay bounded\nok 67 - pause, reduced motion and visibility freeze the presentation clock; resumed frames stay bounded\n  ---\n  duration_ms: 0.160208\n  type: 'test'\n  ...\n# Subtest: an orbit crosses 120 seconds continuously rather than teleporting\nok 68 - an orbit crosses 120 seconds continuously rather than teleporting\n  ---\n  duration_ms: 0.203625\n  type: 'test'\n  ...\n# Subtest: browser adapters are reproducible copies of the reusable source modules\nok 69 - browser adapters are reproducible copies of the reusable source modules\n  ---\n  duration_ms: 51.72275\n  type: 'test'\n  ...\n# Subtest: the 15 supplied images match their publication registration\nok 70 - the 15 supplied images match their publication registration\n  ---\n  duration_ms: 116.219083\n  type: 'test'\n  ...\n# Subtest: an unregistered, altered, or source-missing image is not admitted\nok 71 - an unregistered, altered, or source-missing image is not admitted\n  ---\n  duration_ms: 0.189125\n  type: 'test'\n  ...\n# Subtest: Only the source-identical tab icon is admitted as interface metadata\nok 72 - Only the source-identical tab icon is admitted as interface metadata\n  ---\n  duration_ms: 0.906708\n  type: 'test'\n  ...\n# Subtest: Integration status never promotes incomplete or stale evidence to pass\nok 73 - Integration status never promotes incomplete or stale evidence to pass\n  ---\n  duration_ms: 1.472292\n  type: 'test'\n  ...\n# Subtest: an inconclusive axiom response cannot become pass merely through a success label\nok 74 - an inconclusive axiom response cannot become pass merely through a success label\n  ---\n  duration_ms: 1.940875\n  type: 'test'\n  ...\n# Subtest: the shared command-line and language-server policy rejects every axiom, including standard axioms\nok 75 - the shared command-line and language-server policy rejects every axiom, including standard axioms\n  ---\n  duration_ms: 0.325042\n  type: 'test'\n  ...\n# Subtest: time-limited diagnostics and unknown goal states are not a clean verification\nok 76 - time-limited diagnostics and unknown goal states are not a clean verification\n  ---\n  duration_ms: 0.181083\n  type: 'test'\n  ...\n# Subtest: hover must resolve the requested declaration rather than a nearby tactic\nok 77 - hover must resolve the requested declaration rather than a nearby tactic\n  ---\n  duration_ms: 0.3505\n  type: 'test'\n  ...\n# Subtest: all 4096 asset assignments agree between the Lean executable and the JSON boundary\nok 78 - all 4096 asset assignments agree between the Lean executable and the JSON boundary\n  ---\n  duration_ms: 421.784833\n  type: 'test'\n  ...\n# Subtest: every Boolean field rejects missing values, strings, numbers, arrays and null in Lean\nok 79 - every Boolean field rejects missing values, strings, numbers, arrays and null in Lean\n  ---\n  duration_ms: 51.286667\n  type: 'test'\n  ...\n# Subtest: mixed assets are accepted when all used formats have their required loaders\nok 80 - mixed assets are accepted when all used formats have their required loaders\n  ---\n  duration_ms: 47.270083\n  type: 'test'\n  ...\n# Subtest: Material Sphere application uses current source-bound mathematical evidence\nok 81 - Material Sphere application uses current source-bound mathematical evidence\n  ---\n  duration_ms: 78.162\n  type: 'test'\n  ...\n# Subtest: Application numerical functions are byte-identical to checked functions\nok 82 - Application numerical functions are byte-identical to checked functions\n  ---\n  duration_ms: 1.797958\n  type: 'test'\n  ...\n# Subtest: All fifteen generated Plumeria schemas equal the current checked recipes\nok 83 - All fifteen generated Plumeria schemas equal the current checked recipes\n  ---\n  duration_ms: 2563.843958\n  type: 'test'\n  ...\n# Subtest: CSS output uses checked one-to-four dimensional projection without treating time as an axis\nok 84 - CSS output uses checked one-to-four dimensional projection without treating time as an axis\n  ---\n  duration_ms: 2.61875\n  type: 'test'\n  ...\n# Subtest: The four unconnected output branches never silently fall back to CSS\nok 85 - The four unconnected output branches never silently fall back to CSS\n  ---\n  duration_ms: 0.2405\n  type: 'test'\n  ...\n# Subtest: A separately registered output receives the same neutral numerical plan\nok 86 - A separately registered output receives the same neutral numerical plan\n  ---\n  duration_ms: 0.252958\n  type: 'test'\n  ...\n# Subtest: Malformed numerical input is rejected before an adapter can execute\nok 87 - Malformed numerical input is rejected before an adapter can execute\n  ---\n  duration_ms: 0.113417\n  type: 'test'\n  ...\n# Subtest: CSS playback and reduced motion use the checked bounded phase\nok 88 - CSS playback and reduced motion use the checked bounded phase\n  ---\n  duration_ms: 0.091542\n  type: 'test'\n  ...\n# Subtest: Page tools have the same integer bounds and step as the visible sliders\nok 89 - Page tools have the same integer bounds and step as the visible sliders\n  ---\n  duration_ms: 0.102166\n  type: 'test'\n  ...\n# Subtest: Museum character follows the complete version two atlas geometry\nok 90 - Museum character follows the complete version two atlas geometry\n  ---\n  duration_ms: 0.984542\n  type: 'test'\n  ...\n# Subtest: All sixteen gaze cells are unique, in bounds, and advance clockwise\nok 91 - All sixteen gaze cells are unique, in bounds, and advance clockwise\n  ---\n  duration_ms: 1.459417\n  type: 'test'\n  ...\n# Subtest: Neutral, invalid pointers and cardinal screen coordinates cannot be confused\nok 92 - Neutral, invalid pointers and cardinal screen coordinates cannot be confused\n  ---\n  duration_ms: 0.333333\n  type: 'test'\n  ...\n# Subtest: Studio interaction selects greetings, attention, making and rest explicitly\nok 93 - Studio interaction selects greetings, attention, making and rest explicitly\n  ---\n  duration_ms: 0.113833\n  type: 'test'\n  ...\n# Subtest: Generated Plumeria keyframes match every declared frame duration\nok 94 - Generated Plumeria keyframes match every declared frame duration\n  ---\n  duration_ms: 2871.932917\n  type: 'test'\n  ...\n# Subtest: the actual dataset yields twelve explicitly positioned recipes and preserves source links\nok 95 - the actual dataset yields twelve explicitly positioned recipes and preserves source links\n  ---\n  duration_ms: 42.159084\n  type: 'test'\n  ...\n# Subtest: three.js serialization reloads all positions, textures, stable resource identities and provenance\nok 96 - three.js serialization reloads all positions, textures, stable resource identities and provenance\n  ---\n  duration_ms: 204.2395\n  type: 'test'\n  ...\n# Subtest: invalid numeric, resource, unit and unsupported-shape inputs fail before object allocation\nok 97 - invalid numeric, resource, unit and unsupported-shape inputs fail before object allocation\n  ---\n  duration_ms: 2.558625\n  type: 'test'\n  ...\n# Subtest: a generic box uses the same portable material contract without artist-dependent rendering logic\nok 98 - a generic box uses the same portable material contract without artist-dependent rendering logic\n  ---\n  duration_ms: 4.082333\n  type: 'test'\n  ...\n# Subtest: every selected pattern produces bounded opaque pixels and color-space assumptions are explicit\nok 99 - every selected pattern produces bounded opaque pixels and color-space assumptions are explicit\n  ---\n  duration_ms: 108.846458\n  type: 'test'\n  ...\n# Subtest: scene disposal releases geometry, material and texture resources\nok 100 - scene disposal releases geometry, material and texture resources\n  ---\n  duration_ms: 5.3155\n  type: 'test'\n  ...\n# Subtest: moving display objects and metadata never changes an existing semantic coordinate index\nok 101 - moving display objects and metadata never changes an existing semantic coordinate index\n  ---\n  duration_ms: 45.720334\n  type: 'test'\n  ...\n# Subtest: disabled physics never connects or steps an engine\nok 102 - disabled physics never connects or steps an engine\n  ---\n  duration_ms: 0.541708\n  type: 'test'\n  ...\n# Subtest: optional physics validates units, origins, source references and coefficients\nok 103 - optional physics validates units, origins, source references and coefficients\n  ---\n  duration_ms: 1.369708\n  type: 'test'\n  ...\n# Subtest: an explicit engine adapter can move display transforms while similarity remains fixed\nok 104 - an explicit engine adapter can move display transforms while similarity remains fixed\n  ---\n  duration_ms: 44.175541\n  type: 'test'\n  ...\n1..104\n# tests 104\n# suites 0\n# pass 104\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 4471.071541\n",
+      "stdout": "TAP version 13\n# Subtest: initial display keeps 12 source coordinates and 3 unknown values with physics disabled\nok 1 - initial display keeps 12 source coordinates and 3 unknown values with physics disabled\n  ---\n  duration_ms: 19.114542\n  type: 'test'\n  ...\n# Subtest: semantic distance is an immutable snapshot independent of mutable display/input arrays\nok 2 - semantic distance is an immutable snapshot independent of mutable display/input arrays\n  ---\n  duration_ms: 0.506292\n  type: 'test'\n  ...\n# Subtest: fixed steps agree at 60 and 120 frames per second and cap long pauses\nok 3 - fixed steps agree at 60 and 120 frames per second and cap long pauses\n  ---\n  duration_ms: 0.169291\n  type: 'test'\n  ...\n# Subtest: real Rapier bodies collide, remain finite, and do not mutate source coordinates\nok 4 - real Rapier bodies collide, remain finite, and do not mutate source coordinates\n  ---\n  duration_ms: 142.027791\n  type: 'test'\n  ...\n# Subtest: gravity causes a fall and the display floor catches the panel\nok 5 - gravity causes a fall and the display floor catches the panel\n  ---\n  duration_ms: 66.860541\n  type: 'test'\n  ...\n# Subtest: kinematic dragging moves a body then releases it into simulation\nok 6 - kinematic dragging moves a body then releases it into simulation\n  ---\n  duration_ms: 23.568042\n  type: 'test'\n  ...\n# Subtest: actual browser validator agrees with compiled Lean over all 4096 assignments\nok 7 - actual browser validator agrees with compiled Lean over all 4096 assignments\n  ---\n  duration_ms: 337.055792\n  type: 'test'\n  ...\n# Subtest: runtime manifest rejects malformed flags, unvalidated stages, unknown keys and external resources\nok 8 - runtime manifest rejects malformed flags, unvalidated stages, unknown keys and external resources\n  ---\n  duration_ms: 0.485916\n  type: 'test'\n  ...\n# Subtest: decoders activate only for explicit asset flags, including Draco opt-in\nok 9 - decoders activate only for explicit asset flags, including Draco opt-in\n  ---\n  duration_ms: 1.001667\n  type: 'test'\n  ...\n# Subtest: actual optimized binary declares Meshopt and passes the browser manifest parser\nok 10 - actual optimized binary declares Meshopt and passes the browser manifest parser\n  ---\n  duration_ms: 8.563625\n  type: 'test'\n  ...\n# Subtest: code gates accept module-scope Plumeria arrays inside a client boundary\nok 11 - code gates accept module-scope Plumeria arrays inside a client boundary\n  ---\n  duration_ms: 8.036125\n  type: 'test'\n  ...\n# Subtest: framework links work in server and client pages without admitting unknown framework modules\nok 12 - framework links work in server and client pages without admitting unknown framework modules\n  ---\n  duration_ms: 1.134708\n  type: 'test'\n  ...\n# Subtest: code gates distinguish literal object keys from browser access\nok 13 - code gates distinguish literal object keys from browser access\n  ---\n  duration_ms: 4.583542\n  type: 'test'\n  ...\n# Subtest: code gates reject nested create, className, nonarray styles, server events and transitive browser access\nok 14 - code gates reject nested create, className, nonarray styles, server events and transitive browser access\n  ---\n  duration_ms: 0.692167\n  type: 'test'\n  ...\n# Subtest: code gates reject request-time server functions and nonliteral imports\nok 15 - code gates reject request-time server functions and nonliteral imports\n  ---\n  duration_ms: 0.478125\n  type: 'test'\n  ...\n# Subtest: Plumeria namespace aliases and opaque JSX props cannot bypass code gates\nok 16 - Plumeria namespace aliases and opaque JSX props cannot bypass code gates\n  ---\n  duration_ms: 3.311167\n  type: 'test'\n  ...\n# Subtest: Plumeria keyframes must be module-level constants just like style declarations\nok 17 - Plumeria keyframes must be module-level constants just like style declarations\n  ---\n  duration_ms: 2.131416\n  type: 'test'\n  ...\n# Subtest: line artwork uses HTML border rings and has no vector or canvas drawing implementation\nok 18 - line artwork uses HTML border rings and has no vector or canvas drawing implementation\n  ---\n  duration_ms: 11.026583\n  type: 'test'\n  ...\n# Subtest: CSS diagonal circles satisfy the torus equation at sampled points\nok 19 - CSS diagonal circles satisfy the torus equation at sampled points\n  ---\n  duration_ms: 4.536917\n  type: 'test'\n  ...\n# Subtest: all artwork kinds use CSS and the solid consists of finite torus panels\nok 20 - all artwork kinds use CSS and the solid consists of finite torus panels\n  ---\n  duration_ms: 3.671959\n  type: 'test'\n  ...\n# Subtest: shared controls have no drawing loop or graphics dependency\nok 21 - shared controls have no drawing loop or graphics dependency\n  ---\n  duration_ms: 3.09725\n  type: 'test'\n  ...\n# Subtest: decoder bytes remain in core; only artwork bytes are excluded\nok 22 - decoder bytes remain in core; only artwork bytes are excluded\n  ---\n  duration_ms: 1.368917\n  type: 'test'\n  ...\n# Subtest: missing stages, cached entries and unknown resource classes cannot pass transfer measurement\nok 23 - missing stages, cached entries and unknown resource classes cannot pass transfer measurement\n  ---\n  duration_ms: 0.33075\n  type: 'test'\n  ...\n# Subtest: successful header checks and subsequent page payloads count toward metadata and core bytes\nok 24 - successful header checks and subsequent page payloads count toward metadata and core bytes\n  ---\n  duration_ms: 0.170625\n  type: 'test'\n  ...\n# Subtest: header classification rejects missing, ambiguous, failed and non-header evidence\nok 25 - header classification rejects missing, ambiguous, failed and non-header evidence\n  ---\n  duration_ms: 2.257\n  type: 'test'\n  ...\n# Subtest: an aborted header notification is reconciled with a uniquely matched successful response\nok 26 - an aborted header notification is reconciled with a uniquely matched successful response\n  ---\n  duration_ms: 0.881416\n  type: 'test'\n  ...\n# Subtest: actual failures, incomplete evidence and unsuccessful interactions remain nonfunctional\nok 27 - actual failures, incomplete evidence and unsuccessful interactions remain nonfunctional\n  ---\n  duration_ms: 0.50825\n  type: 'test'\n  ...\n# Subtest: Character receipt boundary accepts a complete synthetic record without claiming visual verification\nok 28 - Character receipt boundary accepts a complete synthetic record without claiming visual verification\n  ---\n  duration_ms: 45.909375\n  type: 'test'\n  ...\n# Subtest: Character admission rejects sixteen unique but unrecognized direction labels\nok 29 - Character admission rejects sixteen unique but unrecognized direction labels\n  ---\n  duration_ms: 33.704958\n  type: 'test'\n  ...\n# Subtest: Character admission rejects wrong person\nok 30 - Character admission rejects wrong person\n  ---\n  duration_ms: 60.068375\n  type: 'test'\n  ...\n# Subtest: Character admission rejects unbound decoded image\nok 31 - Character admission rejects unbound decoded image\n  ---\n  duration_ms: 30.164583\n  type: 'test'\n  ...\n# Subtest: Character admission rejects missing axis evidence\nok 32 - Character admission rejects missing axis evidence\n  ---\n  duration_ms: 33.391708\n  type: 'test'\n  ...\n# Subtest: Character admission rejects failed standard inspection\nok 33 - Character admission rejects failed standard inspection\n  ---\n  duration_ms: 25.392709\n  type: 'test'\n  ...\n# Subtest: Character admission rejects incomplete continuity\nok 34 - Character admission rejects incomplete continuity\n  ---\n  duration_ms: 78.880666\n  type: 'test'\n  ...\n# Subtest: Character admission rejects duplicate direction\nok 35 - Character admission rejects duplicate direction\n  ---\n  duration_ms: 79.01425\n  type: 'test'\n  ...\n# Subtest: Character admission rejects missing direction\nok 36 - Character admission rejects missing direction\n  ---\n  duration_ms: 52.785667\n  type: 'test'\n  ...\n# Subtest: Character admission rejects failed direction\nok 37 - Character admission rejects failed direction\n  ---\n  duration_ms: 59.090834\n  type: 'test'\n  ...\n# Subtest: Character admission rejects empty semantic observation\nok 38 - Character admission rejects empty semantic observation\n  ---\n  duration_ms: 69.445167\n  type: 'test'\n  ...\n# Subtest: Character admission rejects non-text semantic reason\nok 39 - Character admission rejects non-text semantic reason\n  ---\n  duration_ms: 43.433333\n  type: 'test'\n  ...\n# Subtest: Character admission rejects failed independent review\nok 40 - Character admission rejects failed independent review\n  ---\n  duration_ms: 42.817458\n  type: 'test'\n  ...\n# Subtest: Character admission rejects failed blind review\nok 41 - Character admission rejects failed blind review\n  ---\n  duration_ms: 27.110167\n  type: 'test'\n  ...\n# Subtest: Character admission rejects intermediate atlas\nok 42 - Character admission rejects intermediate atlas\n  ---\n  duration_ms: 29.495584\n  type: 'test'\n  ...\n# Subtest: Character admission rejects invalid execution identifier\nok 43 - Character admission rejects invalid execution identifier\n  ---\n  duration_ms: 46.2235\n  type: 'test'\n  ...\n# Subtest: Character admission rejects image bytes changed after inspection\nok 44 - Character admission rejects image bytes changed after inspection\n  ---\n  duration_ms: 91.248541\n  type: 'test'\n  ...\n# Subtest: Character admission rejects evidence changed after inspection\nok 45 - Character admission rejects evidence changed after inspection\n  ---\n  duration_ms: 40.737959\n  type: 'test'\n  ...\n# Subtest: Missing character receipt is blocked, not accepted\nok 46 - Missing character receipt is blocked, not accepted\n  ---\n  duration_ms: 4.134375\n  type: 'test'\n  ...\n# Subtest: Unverified raster characters cannot mount; failed or stale evidence stops availability generation\nok 47 - Unverified raster characters cannot mount; failed or stale evidence stops availability generation\n  ---\n  duration_ms: 0.996916\n  type: 'test'\n  ...\n# Subtest: Accepted character availability preserves the image digest and evidence run\nok 48 - Accepted character availability preserves the image digest and evidence run\n  ---\n  duration_ms: 0.124667\n  type: 'test'\n  ...\n# Subtest: The studio reads freshly generated character availability instead of a manual ready flag\nok 49 - The studio reads freshly generated character availability instead of a manual ready flag\n  ---\n  duration_ms: 103.193667\n  type: 'test'\n  ...\n# Subtest: the committed verification request is valid\nok 50 - the committed verification request is valid\n  ---\n  duration_ms: 5.680417\n  type: 'test'\n  ...\n# Subtest: the committed verification result is valid and has a pass aggregate\nok 51 - the committed verification result is valid and has a pass aggregate\n  ---\n  duration_ms: 0.777667\n  type: 'test'\n  ...\n# Subtest: the committed asset manifest is valid\nok 52 - the committed asset manifest is valid\n  ---\n  duration_ms: 0.672541\n  type: 'test'\n  ...\n# Subtest: the fixed category budgets add up to the core budget\nok 53 - the fixed category budgets add up to the core budget\n  ---\n  duration_ms: 0.242\n  type: 'test'\n  ...\n# Subtest: dual Meshopt encodings are rejected\nok 54 - dual Meshopt encodings are rejected\n  ---\n  duration_ms: 1.322333\n  type: 'test'\n  ...\n# Subtest: a Meshopt asset without its decoder is rejected\nok 55 - a Meshopt asset without its decoder is rejected\n  ---\n  duration_ms: 0.637709\n  type: 'test'\n  ...\n# Subtest: a KTX2 asset without its loader is rejected\nok 56 - a KTX2 asset without its loader is rejected\n  ---\n  duration_ms: 2.326417\n  type: 'test'\n  ...\n# Subtest: preservation options are required when the asset needs them\nok 57 - preservation options are required when the asset needs them\n  ---\n  duration_ms: 1.284916\n  type: 'test'\n  ...\n# Subtest: a result cannot claim pass when an observation failed\nok 58 - a result cannot claim pass when an observation failed\n  ---\n  duration_ms: 1.051875\n  type: 'test'\n  ...\n# Subtest: unknown properties fail closed\nok 59 - unknown properties fail closed\n  ---\n  duration_ms: 0.372417\n  type: 'test'\n  ...\n# Subtest: a pass with a missing, textual, non-finite or over-limit observation is rejected\nok 60 - a pass with a missing, textual, non-finite or over-limit observation is rejected\n  ---\n  duration_ms: 3.127042\n  type: 'test'\n  ...\n# Subtest: old evidence cannot be promoted to pass\nok 61 - old evidence cannot be promoted to pass\n  ---\n  duration_ms: 0.685708\n  type: 'test'\n  ...\n# Subtest: missing evidence is blocked even if an explanation says it passed\nok 62 - missing evidence is blocked even if an explanation says it passed\n  ---\n  duration_ms: 0.671125\n  type: 'test'\n  ...\n# Subtest: null observations, duplicate gates and an incomplete browser matrix fail closed\nok 63 - null observations, duplicate gates and an incomplete browser matrix fail closed\n  ---\n  duration_ms: 1.077333\n  type: 'test'\n  ...\n# Subtest: 15 unique sourced bodies keep 12 supplied semantic coordinates and all physics disabled\nok 64 - 15 unique sourced bodies keep 12 supplied semantic coordinates and all physics disabled\n  ---\n  duration_ms: 2.309\n  type: 'test'\n  ...\n# Subtest: presentation movement never changes semantic distance, including missing coordinates\nok 65 - presentation movement never changes semantic distance, including missing coordinates\n  ---\n  duration_ms: 205.646917\n  type: 'test'\n  ...\n# Subtest: chronology keeps interval boundaries, unspecified date and exhibition date distinct\nok 66 - chronology keeps interval boundaries, unspecified date and exhibition date distinct\n  ---\n  duration_ms: 0.666959\n  type: 'test'\n  ...\n# Subtest: pause, reduced motion and visibility freeze the presentation clock; resumed frames stay bounded\nok 67 - pause, reduced motion and visibility freeze the presentation clock; resumed frames stay bounded\n  ---\n  duration_ms: 0.11575\n  type: 'test'\n  ...\n# Subtest: an orbit crosses 120 seconds continuously rather than teleporting\nok 68 - an orbit crosses 120 seconds continuously rather than teleporting\n  ---\n  duration_ms: 0.08175\n  type: 'test'\n  ...\n# Subtest: browser adapters are reproducible copies of the reusable source modules\nok 69 - browser adapters are reproducible copies of the reusable source modules\n  ---\n  duration_ms: 30.173625\n  type: 'test'\n  ...\n# Subtest: the 15 supplied images match their publication registration\nok 70 - the 15 supplied images match their publication registration\n  ---\n  duration_ms: 87.108959\n  type: 'test'\n  ...\n# Subtest: an unregistered, altered, or source-missing image is not admitted\nok 71 - an unregistered, altered, or source-missing image is not admitted\n  ---\n  duration_ms: 0.179209\n  type: 'test'\n  ...\n# Subtest: Only the source-identical tab icon is admitted as interface metadata\nok 72 - Only the source-identical tab icon is admitted as interface metadata\n  ---\n  duration_ms: 0.836875\n  type: 'test'\n  ...\n# Subtest: flight has a direction-independent speed and bounds stalled frames\nok 73 - flight has a direction-independent speed and bounds stalled frames\n  ---\n  duration_ms: 2.753792\n  type: 'test'\n  ...\n# Subtest: actual Rapier passes the open ring, stops at the planet and lands on the platform\nok 74 - actual Rapier passes the open ring, stops at the planet and lands on the platform\n  ---\n  duration_ms: 283.555334\n  type: 'test'\n  ...\n# Subtest: free flight is bounded and never rewrites a source coordinate\nok 75 - free flight is bounded and never rewrites a source coordinate\n  ---\n  duration_ms: 0.628\n  type: 'test'\n  ...\n# Subtest: the Sottsass passage leaves space for the observer and contact gap\nok 76 - the Sottsass passage leaves space for the observer and contact gap\n  ---\n  duration_ms: 0.266292\n  type: 'test'\n  ...\n# Subtest: each of the fifteen worlds builds and preserves an open passage and a landing surface\nok 77 - each of the fifteen worlds builds and preserves an open passage and a landing surface\n  ---\n  duration_ms: 421.25275\n  type: 'test'\n  ...\n# Subtest: Integration status never promotes incomplete or stale evidence to pass\nok 78 - Integration status never promotes incomplete or stale evidence to pass\n  ---\n  duration_ms: 4.389875\n  type: 'test'\n  ...\n# Subtest: an inconclusive axiom response cannot become pass merely through a success label\nok 79 - an inconclusive axiom response cannot become pass merely through a success label\n  ---\n  duration_ms: 0.995583\n  type: 'test'\n  ...\n# Subtest: the shared command-line and language-server policy rejects every axiom, including standard axioms\nok 80 - the shared command-line and language-server policy rejects every axiom, including standard axioms\n  ---\n  duration_ms: 0.105791\n  type: 'test'\n  ...\n# Subtest: time-limited diagnostics and unknown goal states are not a clean verification\nok 81 - time-limited diagnostics and unknown goal states are not a clean verification\n  ---\n  duration_ms: 0.067625\n  type: 'test'\n  ...\n# Subtest: hover must resolve the requested declaration rather than a nearby tactic\nok 82 - hover must resolve the requested declaration rather than a nearby tactic\n  ---\n  duration_ms: 0.06425\n  type: 'test'\n  ...\n# Subtest: all 4096 asset assignments agree between the Lean executable and the JSON boundary\nok 83 - all 4096 asset assignments agree between the Lean executable and the JSON boundary\n  ---\n  duration_ms: 451.80775\n  type: 'test'\n  ...\n# Subtest: every Boolean field rejects missing values, strings, numbers, arrays and null in Lean\nok 84 - every Boolean field rejects missing values, strings, numbers, arrays and null in Lean\n  ---\n  duration_ms: 54.992167\n  type: 'test'\n  ...\n# Subtest: mixed assets are accepted when all used formats have their required loaders\nok 85 - mixed assets are accepted when all used formats have their required loaders\n  ---\n  duration_ms: 47.557709\n  type: 'test'\n  ...\n# Subtest: Material Sphere application uses current source-bound mathematical evidence\nok 86 - Material Sphere application uses current source-bound mathematical evidence\n  ---\n  duration_ms: 94.936042\n  type: 'test'\n  ...\n# Subtest: Application numerical functions are byte-identical to checked functions\nok 87 - Application numerical functions are byte-identical to checked functions\n  ---\n  duration_ms: 1.612416\n  type: 'test'\n  ...\n# Subtest: All fifteen generated Plumeria schemas equal the current checked recipes\nok 88 - All fifteen generated Plumeria schemas equal the current checked recipes\n  ---\n  duration_ms: 2339.734583\n  type: 'test'\n  ...\n# Subtest: CSS output uses checked one-to-four dimensional projection without treating time as an axis\nok 89 - CSS output uses checked one-to-four dimensional projection without treating time as an axis\n  ---\n  duration_ms: 4.132084\n  type: 'test'\n  ...\n# Subtest: The four unconnected output branches never silently fall back to CSS\nok 90 - The four unconnected output branches never silently fall back to CSS\n  ---\n  duration_ms: 0.285667\n  type: 'test'\n  ...\n# Subtest: A separately registered output receives the same neutral numerical plan\nok 91 - A separately registered output receives the same neutral numerical plan\n  ---\n  duration_ms: 0.313709\n  type: 'test'\n  ...\n# Subtest: Malformed numerical input is rejected before an adapter can execute\nok 92 - Malformed numerical input is rejected before an adapter can execute\n  ---\n  duration_ms: 0.129625\n  type: 'test'\n  ...\n# Subtest: CSS playback and reduced motion use the checked bounded phase\nok 93 - CSS playback and reduced motion use the checked bounded phase\n  ---\n  duration_ms: 0.094375\n  type: 'test'\n  ...\n# Subtest: Page tools have the same integer bounds and step as the visible sliders\nok 94 - Page tools have the same integer bounds and step as the visible sliders\n  ---\n  duration_ms: 0.115375\n  type: 'test'\n  ...\n# Subtest: Museum character follows the complete version two atlas geometry\nok 95 - Museum character follows the complete version two atlas geometry\n  ---\n  duration_ms: 0.955666\n  type: 'test'\n  ...\n# Subtest: All sixteen gaze cells are unique, in bounds, and advance clockwise\nok 96 - All sixteen gaze cells are unique, in bounds, and advance clockwise\n  ---\n  duration_ms: 1.028583\n  type: 'test'\n  ...\n# Subtest: Neutral, invalid pointers and cardinal screen coordinates cannot be confused\nok 97 - Neutral, invalid pointers and cardinal screen coordinates cannot be confused\n  ---\n  duration_ms: 0.32475\n  type: 'test'\n  ...\n# Subtest: Studio interaction selects greetings, attention, making and rest explicitly\nok 98 - Studio interaction selects greetings, attention, making and rest explicitly\n  ---\n  duration_ms: 0.110083\n  type: 'test'\n  ...\n# Subtest: Generated Plumeria keyframes match every declared frame duration\nok 99 - Generated Plumeria keyframes match every declared frame duration\n  ---\n  duration_ms: 2594.59825\n  type: 'test'\n  ...\n# Subtest: the actual dataset yields twelve explicitly positioned recipes and preserves source links\nok 100 - the actual dataset yields twelve explicitly positioned recipes and preserves source links\n  ---\n  duration_ms: 10.525291\n  type: 'test'\n  ...\n# Subtest: three.js serialization reloads all positions, textures, stable resource identities and provenance\nok 101 - three.js serialization reloads all positions, textures, stable resource identities and provenance\n  ---\n  duration_ms: 165.655666\n  type: 'test'\n  ...\n# Subtest: invalid numeric, resource, unit and unsupported-shape inputs fail before object allocation\nok 102 - invalid numeric, resource, unit and unsupported-shape inputs fail before object allocation\n  ---\n  duration_ms: 2.389084\n  type: 'test'\n  ...\n# Subtest: a generic box uses the same portable material contract without artist-dependent rendering logic\nok 103 - a generic box uses the same portable material contract without artist-dependent rendering logic\n  ---\n  duration_ms: 7.002916\n  type: 'test'\n  ...\n# Subtest: every selected pattern produces bounded opaque pixels and color-space assumptions are explicit\nok 104 - every selected pattern produces bounded opaque pixels and color-space assumptions are explicit\n  ---\n  duration_ms: 118.172167\n  type: 'test'\n  ...\n# Subtest: scene disposal releases geometry, material and texture resources\nok 105 - scene disposal releases geometry, material and texture resources\n  ---\n  duration_ms: 4.320041\n  type: 'test'\n  ...\n# Subtest: moving display objects and metadata never changes an existing semantic coordinate index\nok 106 - moving display objects and metadata never changes an existing semantic coordinate index\n  ---\n  duration_ms: 34.792209\n  type: 'test'\n  ...\n# Subtest: disabled physics never connects or steps an engine\nok 107 - disabled physics never connects or steps an engine\n  ---\n  duration_ms: 0.378708\n  type: 'test'\n  ...\n# Subtest: optional physics validates units, origins, source references and coefficients\nok 108 - optional physics validates units, origins, source references and coefficients\n  ---\n  duration_ms: 0.515125\n  type: 'test'\n  ...\n# Subtest: an explicit engine adapter can move display transforms while similarity remains fixed\nok 109 - an explicit engine adapter can move display transforms while similarity remains fixed\n  ---\n  duration_ms: 37.185416\n  type: 'test'\n  ...\n1..109\n# tests 109\n# suites 0\n# pass 109\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 4104.775833\n",
       "stderr": "",
       "error": null
     },
@@ -1002,7 +1222,7 @@
     "Lumenia.measured_gate_pass_iff": []
   },
   "regressionSummary": {
-    "tests": 104,
+    "tests": 109,
     "failed": 0
   },
   "registryErrors": [],
@@ -1012,7 +1232,7 @@
     "standardAxiomsAllowed": false
   },
   "languageServerReceipt": {
-    "sourceRevision": "sha256:81baf2dec9fb672eb9c37d13fda9695911748f4408e5fe1673ec241b58d14bab",
+    "sourceRevision": "sha256:e81a712d0bb4f40024df879541bb7a916324c4bf0920bbcde3a7f98baa5f5e53",
     "files": [
       {
         "path": "CONSTRAINTS.md",
@@ -1056,7 +1276,7 @@
       },
       {
         "path": "contracts/external-gates.json",
-        "sha256": "b16442543e38def9157e98cd6814cab5a2cce09b6217a95c832c1195b2ed0362"
+        "sha256": "72d221e87cfa69839658e2a29b9cdb383b531104aef17ee027a6313620bb1ecc"
       },
       {
         "path": "contracts/verification-contract.schema.json",
@@ -1169,6 +1389,114 @@
       {
         "path": "reference-assets/artist-cosmos/ettore-sottsass.png",
         "sha256": "62f9f2086ffa001a9b5c326c4a4fb7eeba1ae4857fe9eb93a1f465349161cefa"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/README.md",
+        "sha256": "f3734efaea1645d9d4c4a5837a11c38719cc6aa4e06e7090c286b020f2f2d409"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/collision.mjs",
+        "sha256": "13f558e4d8f8c72391471366bcf741b807b75d676ee5f32bb38a3b8dbf8c48be"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/geometry.mjs",
+        "sha256": "cef74914f09f2fba6facf47383761ec1cf521042780527cdf5672e4056684488"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/index.html",
+        "sha256": "29329433a2fee2d8d0fd83edf729b03d69f1d3bd370f26e46976ac0872e8dcc2"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/main.mjs",
+        "sha256": "478cbe80c951cf7ae5ae197f4a62497ec4312d4da99dccab472aec2938592b4c"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/navigation.mjs",
+        "sha256": "99b9a8816885b3b676b92e062f378d753129d036d6139e500cadfc2aa81aa4a5"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/style.css",
+        "sha256": "954e429a5420d7dfee9876fc079f574dc1ac9561d2edf646c80e6f98d193236f"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/verification/Exploration.lean",
+        "sha256": "0bd76bc65ba0659f293769103bae3e72ac7c5f2dffe4571a39e0057995316d30"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/verification/lake-manifest.json",
+        "sha256": "b8c57e60b9ac6cecb88dc2e783968d84ac26310ba0c3f13ddbd6b9ff221c6e32"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/verification/lakefile.toml",
+        "sha256": "d780cfc3b5958bda77d9d8963d9a9213fa7934fbde7d84f77d3fb4a3d8ed7d38"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/verification/lean-toolchain",
+        "sha256": "db7bb24b756d745bbde83fe92718b51bd3625dae3701ba0f598d0eedcd3f3028"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/worlds.json",
+        "sha256": "68a37e5a703e748a0e741c3defbbdf3e4a620f41dce92c7af7884cf03a79edff"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/worlds/alphonse-mucha.json",
+        "sha256": "0f83d764f60976289e7fbc0c1dbdb67153766cfdfa646be7d913111b272850b7"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/worlds/charles-eames.json",
+        "sha256": "65ffa39ad47261b6ee9208306ab3944d6f0db7d28060c571f54f9cac0acef827"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/worlds/charles-rennie-mackintosh.json",
+        "sha256": "7ff646191074ec3e7ccf8b8eb3e0c4201e7d2ac05e9d6471e6e03b0f0ae4d2ea"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/worlds/dieter-rams.json",
+        "sha256": "6eda4ca02aa1ed636d6d6c8196815c7067d619d33ceed6906592b22c4bfd217e"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/worlds/ettore-sottsass.json",
+        "sha256": "fb3ac97e605e0175961f3c5caa2960ba5cea90d675e74ce7a7192d0bf44b672b"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/worlds/gerrit-rietveld.json",
+        "sha256": "830919c67b451684ff5a4979d8ae2b8895a171e2512c554f8b0689181c08c82f"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/worlds/herbert-bayer.json",
+        "sha256": "f8c4532a4adfa846bd96b84f4ee7b69c5cc7d9469fc7fe186db6647dcb56702b"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/worlds/josef-muller-brockmann.json",
+        "sha256": "c8aa85237a82634db071cf1537798c03e52748242231a31d7ea90a0f29824aca"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/worlds/massimo-vignelli.json",
+        "sha256": "8ee1785ab63f4b3d80a14a4caf295f14869af38b51d65ba6d8372c40d785958a"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/worlds/naoto-fukasawa.json",
+        "sha256": "f93dc6864304ebf47aecb13272e71c80013acf80137ec77405f5822c669102d2"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/worlds/piet-mondrian.json",
+        "sha256": "7eb0111d5a68e863c3dcd91f6b670f0089c4067d4e94e6fbb96ef4e842596eee"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/worlds/ray-eames.json",
+        "sha256": "73adf919c358f6abe24a508fff81070caca45f246b7b8a53f0c537263e8f16fb"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/worlds/rei-kawakubo.json",
+        "sha256": "69bb6af25b333be75f5ec25ace0bc821b801f6a92c445d1f2d2fd8d5f3fc2de4"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/worlds/walter-gropius.json",
+        "sha256": "b2cb6370ecc3c6d4262a69223d5b5bc2300419d42b1777cebbc322ab28cc89b1"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/explore/worlds/william-morris.json",
+        "sha256": "3e82f60d3d049df3c318d34b4318ebac611692493be4a24d15ab297b89e35dec"
       },
       {
         "path": "reference-assets/artist-cosmos/gerrit-rietveld.png",
@@ -1343,6 +1671,10 @@
         "sha256": "d7485b0b48ab20c6ef5b369f0206db25137aac82021054cc1b8c8b4fb437d7a0"
       },
       {
+        "path": "scripts/artist-world-recipes.mjs",
+        "sha256": "ef94351ba2fc8e33d2f510136d43ffc9d7784654e88bffaee94da078772d6801"
+      },
+      {
         "path": "scripts/browser-observations.mjs",
         "sha256": "31eddef823b66065b8893ad6da5149712a534af3792c844d913be78fddba9355"
       },
@@ -1364,11 +1696,15 @@
       },
       {
         "path": "scripts/build-cosmic-images.mjs",
-        "sha256": "41032ea566a1cdaa59859d936e27cc499ac14a5bd13e9d7c765555cdb00bf2b9"
+        "sha256": "18066cf84bf4a18f746c74980363e98b214c08c588079c38400aab3967cb3315"
+      },
+      {
+        "path": "scripts/build-exploration.mjs",
+        "sha256": "5fa07c6aa1d7e093fd785c1e929bb6c911885a1d3e50e425f7e75be90b55a3d7"
       },
       {
         "path": "scripts/build-web.mjs",
-        "sha256": "9c2230175bfe3531e9b84b522892ed53af411971a506fdb44ec749534881ea6e"
+        "sha256": "fad90e381b321260363a8d0175b95420edcc1786c1abb6dc3d63e3da7b783aa8"
       },
       {
         "path": "scripts/character-registration.mjs",
@@ -1393,6 +1729,10 @@
       {
         "path": "scripts/drawing-asset-policy.mjs",
         "sha256": "57112eba494063e0cd5d1ba6fd154a09a9076758d222ae244e1380e2787e2af2"
+      },
+      {
+        "path": "scripts/exploration-recipes.mjs",
+        "sha256": "ba3ca408a129ece7da812f9c3a743df9a7e04799d3b8238a61011761d1e49e4f"
       },
       {
         "path": "scripts/export-css-character.mjs",
@@ -1432,7 +1772,7 @@
       },
       {
         "path": "scripts/run-application-check.mjs",
-        "sha256": "d8627cee825e2f4165128989fecbbc95792b25384405151fc09d73a85d6206bf"
+        "sha256": "67168cefa1cd9519f265c3a0088573edf30b8f23cf5be61ba7f523ab9c31a00c"
       },
       {
         "path": "scripts/run-asset-reference-check.mjs",
@@ -1475,6 +1815,10 @@
         "sha256": "d037ac7a7b7d6693105406a4e1924e8adb6263d241201492ce838947bfd1cf76"
       },
       {
+        "path": "scripts/verify-exploration.mjs",
+        "sha256": "937e44f03e3a11a5587e595b8cbf98803aee8258e8194d1c0236ceae6b7c979e"
+      },
+      {
         "path": "spec.md",
         "sha256": "b293e5c86933bcdd000b85ddc2b1c9942d693f24831d38d34f5c15be3fe8a223"
       },
@@ -1509,6 +1853,10 @@
       {
         "path": "tests/drawing-asset-policy.test.mjs",
         "sha256": "da5e621afbec765be34bf034a7c569dbcf13fdcdd6bdb4895f26becf47333ba4"
+      },
+      {
+        "path": "tests/exploration.test.mjs",
+        "sha256": "c4dd236737c91da0c827018976ede1f09340abefa53ee72697c99ace0b4029e1"
       },
       {
         "path": "tests/integration-report.test.mjs",
@@ -1803,6 +2151,98 @@
         "sha256": "62f9f2086ffa001a9b5c326c4a4fb7eeba1ae4857fe9eb93a1f465349161cefa"
       },
       {
+        "path": "web/public/cosmos/explore/README.md",
+        "sha256": "f3734efaea1645d9d4c4a5837a11c38719cc6aa4e06e7090c286b020f2f2d409"
+      },
+      {
+        "path": "web/public/cosmos/explore/collision.mjs",
+        "sha256": "13f558e4d8f8c72391471366bcf741b807b75d676ee5f32bb38a3b8dbf8c48be"
+      },
+      {
+        "path": "web/public/cosmos/explore/geometry.mjs",
+        "sha256": "cef74914f09f2fba6facf47383761ec1cf521042780527cdf5672e4056684488"
+      },
+      {
+        "path": "web/public/cosmos/explore/index.html",
+        "sha256": "29329433a2fee2d8d0fd83edf729b03d69f1d3bd370f26e46976ac0872e8dcc2"
+      },
+      {
+        "path": "web/public/cosmos/explore/main.mjs",
+        "sha256": "478cbe80c951cf7ae5ae197f4a62497ec4312d4da99dccab472aec2938592b4c"
+      },
+      {
+        "path": "web/public/cosmos/explore/navigation.mjs",
+        "sha256": "99b9a8816885b3b676b92e062f378d753129d036d6139e500cadfc2aa81aa4a5"
+      },
+      {
+        "path": "web/public/cosmos/explore/style.css",
+        "sha256": "954e429a5420d7dfee9876fc079f574dc1ac9561d2edf646c80e6f98d193236f"
+      },
+      {
+        "path": "web/public/cosmos/explore/worlds.json",
+        "sha256": "68a37e5a703e748a0e741c3defbbdf3e4a620f41dce92c7af7884cf03a79edff"
+      },
+      {
+        "path": "web/public/cosmos/explore/worlds/alphonse-mucha.json",
+        "sha256": "0f83d764f60976289e7fbc0c1dbdb67153766cfdfa646be7d913111b272850b7"
+      },
+      {
+        "path": "web/public/cosmos/explore/worlds/charles-eames.json",
+        "sha256": "65ffa39ad47261b6ee9208306ab3944d6f0db7d28060c571f54f9cac0acef827"
+      },
+      {
+        "path": "web/public/cosmos/explore/worlds/charles-rennie-mackintosh.json",
+        "sha256": "7ff646191074ec3e7ccf8b8eb3e0c4201e7d2ac05e9d6471e6e03b0f0ae4d2ea"
+      },
+      {
+        "path": "web/public/cosmos/explore/worlds/dieter-rams.json",
+        "sha256": "6eda4ca02aa1ed636d6d6c8196815c7067d619d33ceed6906592b22c4bfd217e"
+      },
+      {
+        "path": "web/public/cosmos/explore/worlds/ettore-sottsass.json",
+        "sha256": "fb3ac97e605e0175961f3c5caa2960ba5cea90d675e74ce7a7192d0bf44b672b"
+      },
+      {
+        "path": "web/public/cosmos/explore/worlds/gerrit-rietveld.json",
+        "sha256": "830919c67b451684ff5a4979d8ae2b8895a171e2512c554f8b0689181c08c82f"
+      },
+      {
+        "path": "web/public/cosmos/explore/worlds/herbert-bayer.json",
+        "sha256": "f8c4532a4adfa846bd96b84f4ee7b69c5cc7d9469fc7fe186db6647dcb56702b"
+      },
+      {
+        "path": "web/public/cosmos/explore/worlds/josef-muller-brockmann.json",
+        "sha256": "c8aa85237a82634db071cf1537798c03e52748242231a31d7ea90a0f29824aca"
+      },
+      {
+        "path": "web/public/cosmos/explore/worlds/massimo-vignelli.json",
+        "sha256": "8ee1785ab63f4b3d80a14a4caf295f14869af38b51d65ba6d8372c40d785958a"
+      },
+      {
+        "path": "web/public/cosmos/explore/worlds/naoto-fukasawa.json",
+        "sha256": "f93dc6864304ebf47aecb13272e71c80013acf80137ec77405f5822c669102d2"
+      },
+      {
+        "path": "web/public/cosmos/explore/worlds/piet-mondrian.json",
+        "sha256": "7eb0111d5a68e863c3dcd91f6b670f0089c4067d4e94e6fbb96ef4e842596eee"
+      },
+      {
+        "path": "web/public/cosmos/explore/worlds/ray-eames.json",
+        "sha256": "73adf919c358f6abe24a508fff81070caca45f246b7b8a53f0c537263e8f16fb"
+      },
+      {
+        "path": "web/public/cosmos/explore/worlds/rei-kawakubo.json",
+        "sha256": "69bb6af25b333be75f5ec25ace0bc821b801f6a92c445d1f2d2fd8d5f3fc2de4"
+      },
+      {
+        "path": "web/public/cosmos/explore/worlds/walter-gropius.json",
+        "sha256": "b2cb6370ecc3c6d4262a69223d5b5bc2300419d42b1777cebbc322ab28cc89b1"
+      },
+      {
+        "path": "web/public/cosmos/explore/worlds/william-morris.json",
+        "sha256": "3e82f60d3d049df3c318d34b4318ebac611692493be4a24d15ab297b89e35dec"
+      },
+      {
         "path": "web/public/cosmos/gerrit-rietveld.png",
         "sha256": "ca4d66b058126ed541e30ea886139ebfd2815740b6db8b538ca26f3c21305fc0"
       },
@@ -1816,7 +2256,7 @@
       },
       {
         "path": "web/public/cosmos/index.html",
-        "sha256": "d6b8b2f3e5a60cbee9f449fdb5090013ba63e02812ed0fa8673677fd434f87a2"
+        "sha256": "3f98cb8943756dc2e35f3d1e0999d666dad5f3c158b83a85549b99639c049271"
       },
       {
         "path": "web/public/cosmos/interactive/README.md",
@@ -2857,6 +3297,15 @@
       {
         "path": "lean-toolchain",
         "sha256": "db7bb24b756d745bbde83fe92718b51bd3625dae3701ba0f598d0eedcd3f3028"
+      }
+    ],
+    "bindingHistory": [
+      {
+        "executionIdentifier": "01a0a762-856b-70f8-9984-b7801024f20f",
+        "recordedAt": "2026-09-15T23:24:06.891Z",
+        "previousSourceRevision": "sha256:81baf2dec9fb672eb9c37d13fda9695911748f4408e5fe1673ec241b58d14bab",
+        "sourceRevision": "sha256:e81a712d0bb4f40024df879541bb7a916324c4bf0920bbcde3a7f98baa5f5e53",
+        "verifiedInputsUnchanged": true
       }
     ]
   }
