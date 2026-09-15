@@ -94,7 +94,7 @@ export function createCosmicScene({ canvas, onSelect, onState, onTime = () => {}
   function draw(now) {
     frame = 0;
     if (disposed || !visible || document.hidden || !hasSize) { previousTime = 0; return; }
-    const animate = playing && !reducedMotion;
+    const animate = playing && !reducedMotion && seconds < exhibitionLimits.maximumPresentationSeconds;
     const elapsed = previousTime ? (now - previousTime) / 1000 : 0;
     if ((dirty || animate) && now - lastRenderMilliseconds >= 1000 / exhibitionLimits.maximumFramesPerSecond) {
       seconds = advancePresentationClock(seconds, elapsed, animate, visible, reducedMotion);
@@ -161,7 +161,7 @@ export function createCosmicScene({ canvas, onSelect, onState, onTime = () => {}
       previousTime = 0; invalidate();
     },
     setVisible(value) { visible = value; previousTime = 0; if (!visible) { cancelAnimationFrame(frame); frame = 0; } else invalidate(); },
-    setSeconds(value) { if (!Number.isFinite(value) || value < 0 || value > 86400) throw new RangeError('Presentation time outside [0,86400]'); seconds = value; previousTime = 0; onTime(seconds); invalidate(); },
+    setSeconds(value) { if (!Number.isFinite(value) || value < 0 || value > exhibitionLimits.maximumPresentationSeconds) throw new RangeError('Presentation time outside its supported range'); seconds = value; previousTime = 0; onTime(seconds); invalidate(); },
     zoom(factor) { camera.position.sub(controls.target).multiplyScalar(factor).add(controls.target); controls.update(); invalidate(); },
     rotate(radians) { const offset = camera.position.clone().sub(controls.target); offset.applyAxisAngle(new THREE.Vector3(0, 1, 0), radians); camera.position.copy(controls.target).add(offset); controls.update(); invalidate(); },
     semanticDistance(first, second) { return semantics.distanceBetween(first, second); },

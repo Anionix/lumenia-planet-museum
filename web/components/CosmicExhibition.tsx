@@ -3,7 +3,7 @@ import '@plumeria/core';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { cosmicCatalog } from '../artwork/cosmic-catalog.generated.mjs';
-import { intersectsYears } from '../artwork/cosmic-state.mjs';
+import { exhibitionLimits, intersectsYears } from '../artwork/cosmic-state.mjs';
 import { cosmicStyles } from './CosmicExhibition.styles';
 
 // llm machine contract; claim UUIDv5: 190fdb1a-2e41-565d-9aed-9fe5ca2179a6
@@ -22,6 +22,7 @@ export function CosmicExhibition() {
   const [showUnknown, setShowUnknown] = useState(true);
   const [seconds, setSeconds] = useState(0);
   const savedSeconds = useRef(0);
+  const [timeRangeMaximum, setTimeRangeMaximum] = useState(120);
   const [retry, setRetry] = useState(0);
   const [reducedMotion, setReducedMotion] = useState(false);
   const current = useRef({ selected: '', playing: false, startYear: 1880, endYear: 2020, showUnknown: true });
@@ -54,7 +55,11 @@ export function CosmicExhibition() {
         if (cancelled) return;
         const controller = module.createCosmicScene({ canvas: element,
           onSelect: identifier => { setSelected(identifier); setPlaying(false); }, onState: setStatus,
-          onTime: value => { savedSeconds.current = value; setSeconds(value); } });
+          onTime: value => {
+            savedSeconds.current = value; setSeconds(value);
+            setTimeRangeMaximum(previous => Math.min(exhibitionLimits.maximumPresentationSeconds, Math.max(previous, Math.ceil(value / 120) * 120)));
+            if (value >= exhibitionLimits.maximumPresentationSeconds) setPlaying(false);
+          } });
         if (cancelled) { controller.dispose(); return; }
         scene.current = controller;
         controller.setSeconds(savedSeconds.current);
@@ -115,7 +120,7 @@ export function CosmicExhibition() {
       <button type="button" aria-label="天体を拡大" classStyle={[cosmicStyles.button]} disabled={status !== 'ready'} onClick={() => scene.current?.zoom(0.8)}>＋</button>
       <button type="button" aria-label="天体を縮小" classStyle={[cosmicStyles.button]} disabled={status !== 'ready'} onClick={() => scene.current?.zoom(1.2)}>−</button>
       <label classStyle={[cosmicStyles.time]}>動きの位置
-        <input aria-label="展示の経過時間" type="range" min="0" max={Math.min(86400, Math.max(120, Math.ceil(seconds / 120) * 120))} step="0.01" value={seconds} disabled={status !== 'ready'} classStyle={[cosmicStyles.range]}
+        <input aria-label="展示の経過時間" type="range" min="0" max={timeRangeMaximum} step="0.01" value={seconds} disabled={status !== 'ready'} classStyle={[cosmicStyles.range]}
           onChange={event => { const value = Number(event.target.value); savedSeconds.current = value; setSeconds(value); setSelected(''); setPlaying(false); scene.current?.setSeconds(value); }} />
         <span>{Math.floor(seconds)}秒</span>
       </label>
