@@ -97,7 +97,10 @@ export function createNebula() {
       return mix(mix(mix(fract(sin(n)*43758.5),fract(sin(n+1.0)*43758.5),f.x),mix(fract(sin(n+57.0)*43758.5),fract(sin(n+58.0)*43758.5),f.x),f.y),mix(mix(fract(sin(n+113.0)*43758.5),fract(sin(n+114.0)*43758.5),f.x),mix(fract(sin(n+170.0)*43758.5),fract(sin(n+171.0)*43758.5),f.x),f.y),f.z);}
       void main(){vec3 direction=normalize(skyDirection);vec3 p=direction*5.0;float cloud=noise(p)*0.5+noise(p*2.1)*0.25+noise(p*4.3)*0.125+noise(p*8.4)*0.0625;
       float band=exp(-pow((direction.y+direction.x*0.4+0.1)*3.0,2.0));float glow=pow(max(0.0,cloud-0.24),2.0)*band;
-      vec3 color=vec3(0.015,0.012,0.027)+mix(vec3(0.28,0.16,0.42),vec3(0.8,0.34,0.12),smoothstep(-0.2,0.6,direction.x))*glow*1.4;gl_FragColor=vec4(color,1.0);}`});
+      vec3 color=vec3(0.015,0.012,0.027)+mix(vec3(0.28,0.16,0.42),vec3(0.8,0.34,0.12),smoothstep(-0.2,0.6,direction.x))*glow*1.4;gl_FragColor=vec4(color,1.0);
+      #include <tonemapping_fragment>
+      #include <colorspace_fragment>
+      }`});
   const mesh=new THREE.Mesh(geometry,material);mesh.renderOrder=-2;
   return {mesh,dispose(){geometry.dispose();material.dispose();}};
 }

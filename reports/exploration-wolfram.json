@@ -11,8 +11,8 @@
     "isError": false
   },
   "scope": "Real-valued movement and ring clearance, not the floating-point renderer.",
-  "executionIdentifier": "01a0a5e4-62eb-73e2-a448-73b82e592083",
-  "recordedAt": "2026-09-15T16:26:43.307Z",
+  "executionIdentifier": "01a0a5eb-aaf8-743f-a399-9ffd07cdf4c2",
+  "recordedAt": "2026-09-15T16:34:40.504Z",
   "inputs": [
     {
       "path": "reference-assets/artist-cosmos/explore/navigation.mjs",
@@ -20,7 +20,7 @@
     },
     {
       "path": "reference-assets/artist-cosmos/explore/worlds/ettore-sottsass.json",
-      "sha256": "2e9ed5381e7e55f4192548ba916a6560e0b75f654b7dbafeb08e720aaa9bffd7"
+      "sha256": "fb3ac97e605e0175961f3c5caa2960ba5cea90d675e74ce7a7192d0bf44b672b"
     }
   ],
   "evaluatedCodeSha256": "a52a78c26ca6c23b5c94a255c8299bba57a93c9d91bb1c957c22b47c57cf3027",

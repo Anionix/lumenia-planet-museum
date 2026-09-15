@@ -20,7 +20,7 @@ export async function buildExploration(destination=path.join(projectRoot,'web/pu
     assert.ok(shapes.length>5 && shapes.length<=300);
     assert.ok(ringClearance(recipe.passage.radius,recipe.passage.tube)>0);
     const world={record_type:'exploration_world',recordIdentifier:claimIdentifier(`exploration/${slug}`),
-      recordedAt:reference.created_at,artistName:artist.artist_name,artistNameJapanese:artist.artist_name_ja,
+      referenceRecordedAt:reference.created_at,artistName:artist.artist_name,artistNameJapanese:artist.artist_name_ja,
       title:artist.title,description:recipe.description,sourceProfileIdentifier:artist.source_profile_identifier,
       sourceImageIdentifier:artist.artist_reference_identifier,sourceImageSha256:artist.image_sha256,
       image:`../${slug}.png`,sources:artist.sources,semanticPosition:artist.semantic_position,

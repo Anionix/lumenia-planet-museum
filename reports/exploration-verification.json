@@ -1,0 +1,47 @@
+{
+  "recordIdentifier": "be15d308-d6c7-5b93-aca4-32206c14ac81",
+  "executionIdentifier": "01a0a5eb-bc96-78aa-91ab-178114d712ba",
+  "recordedAt": "2026-09-15T16:34:45.014Z",
+  "status": "pass",
+  "worldCount": 1,
+  "theoremCount": 10,
+  "axiomDependencies": [],
+  "wolframConditions": 6,
+  "inputs": [
+    {
+      "path": "reference-assets/artist-cosmos/explore/worlds/ettore-sottsass.json",
+      "sha256": "fb3ac97e605e0175961f3c5caa2960ba5cea90d675e74ce7a7192d0bf44b672b"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/main.mjs",
+      "sha256": "7c7e7f0923987f436466e0ee03a62f20025ab9751dae99f4abaf7b985f4f87e5"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/navigation.mjs",
+      "sha256": "99b9a8816885b3b676b92e062f378d753129d036d6139e500cadfc2aa81aa4a5"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/geometry.mjs",
+      "sha256": "fd019140087de40ab9ea69876a6531810696423e23f5fe3422b4880c4d248016"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/collision.mjs",
+      "sha256": "13f558e4d8f8c72391471366bcf741b807b75d676ee5f32bb38a3b8dbf8c48be"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/index.html",
+      "sha256": "210e9742cfa5d39e6fd6163b7a4475272535ca8df4b322f8605fe0c9e5e2011e"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/style.css",
+      "sha256": "954e429a5420d7dfee9876fc079f574dc1ac9561d2edf646c80e6f98d193236f"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/verification/Exploration.lean",
+      "sha256": "0bd76bc65ba0659f293769103bae3e72ac7c5f2dffe4571a39e0057995316d30"
+    }
+  ],
+  "leanOutput": "'LumeniaExploration.capBound' does not depend on any axioms\n'LumeniaExploration.elapsedTimeBound' does not depend on any axioms\n'LumeniaExploration.displacementBound' does not depend on any axioms\n'LumeniaExploration.observerMagnitudeBound' does not depend on any axioms\n'LumeniaExploration.movementPreservesSource' does not depend on any axioms\n'LumeniaExploration.missingSourceRemainsMissing' does not depend on any axioms\n'LumeniaExploration.collisionStartsDisabled' does not depend on any axioms\n'LumeniaExploration.movementPreservesCollisionChoice' does not depend on any axioms\n'LumeniaExploration.passageClearance' does not depend on any axioms\n'LumeniaExploration.passageHasRoom' does not depend on any axioms\n",
+  "actualRuntimeTests": "✔ flight has a direction-independent speed and bounds stalled frames (1.790959ms)\n✔ actual Rapier passes the open ring, stops at the planet and lands on the platform (171.216125ms)\n✔ free flight is bounded and never rewrites a source coordinate (0.385791ms)\n✔ the Sottsass passage leaves space for the observer and contact gap (0.098875ms)\nℹ tests 4\nℹ suites 0\nℹ pass 4\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 303.595167\n",
+  "scope": "Constructive integer model, real-valued Wolfram calculations, exact reference data, and actual Rapier checks. Browser evidence and publication are separate receipts."
+}

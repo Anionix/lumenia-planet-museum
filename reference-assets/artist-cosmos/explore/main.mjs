@@ -48,7 +48,7 @@ function tick(now){
 function waypoint(point){if(!session)return;clearInput();landingInput.checked=false;positionChanged([...point.position]);camera.lookAt(...point.target);const orientation=new THREE.Euler().setFromQuaternion(camera.quaternion,'YXZ');yaw=orientation.y;pitch=orientation.x;trace.add('camera -> selected viewpoint',{position:point.position});requestFrame();}
 function releaseWorld(){
   clearInput();collisionRequest++;collision?.dispose();collision=null;
-  collisionInput.checked=false;collisionInput.disabled=false;landingInput.checked=false;document.querySelector('.landing').hidden=true;
+  collisionInput.checked=false;collisionInput.disabled=true;landingInput.checked=false;document.querySelector('.landing').hidden=true;
   if(geometry){scene.remove(geometry.group);geometry.dispose();geometry=null;}session=null;activeWorldCount=0;
   if(frame)cancelAnimationFrame(frame);frame=0;canvas.dataset.worldReady='false';canvas.dataset.activeWorlds='0';
 }
@@ -60,7 +60,7 @@ async function enterWorld(entry){
     const bytes=await response.arrayBuffer();const digest=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes)),value=>value.toString(16).padStart(2,'0')).join('');
     if(digest!==entry.sha256)throw new Error('World file does not match its catalogue');
     const next=JSON.parse(new TextDecoder().decode(bytes));if(disposed||token!==requestNumber)return;
-    world=next;session=createWorldSession(world);geometry=createWorldGeometry(world);scene.add(geometry.group);activeWorldCount=1;contactCount=0;
+    world=next;session=createWorldSession(world);geometry=createWorldGeometry(world);scene.add(geometry.group);activeWorldCount=1;contactCount=0;collisionInput.disabled=false;collisionInput.checked=false;
     scene.background=new THREE.Color(world.background);document.documentElement.style.setProperty('--accent',world.accent);
     document.querySelector('h1').textContent=world.title;document.querySelector('.artist').textContent=world.artistName;
     document.querySelector('.description').textContent=world.description;document.querySelector('.reference-image').href=world.image;
