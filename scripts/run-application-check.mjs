@@ -91,6 +91,14 @@ try {
     'Build evidence is missing, changed, or contains Plumeria runtime syntax.',
     ['official @plumeria/turbopack-loader', 'webpack client module graph', 'emitted JavaScript syntax and source maps'], build.sourceRevision);
   const drawingProblems = [];
+  const standaloneManifest = await readJson('web/out/cosmos/interactive/exhibition.json');
+  if (standaloneManifest.physics_enabled_by_default !== false || standaloneManifest.items.length !== 15)
+    drawingProblems.push({ reason: 'Independent image exhibition must contain 15 items and start without physics' });
+  for (const output of outputs.filter(file => /^cosmos\/interactive\/.*\.(html|[cm]?js|css)$/.test(file.path))) {
+    const sourcePath = 'reference-assets/artist-cosmos/interactive/' + output.path.slice('cosmos/interactive/'.length);
+    if (!manifest.files.some(file => file.path === sourcePath && file.sha256 === output.sha256))
+      drawingProblems.push({ file: output.path, reason: 'Independent exhibition script differs from registered source' });
+  }
   evidence.interfaceAssets = outputs.filter(file => isRegisteredInterfaceIcon(file, manifest.files));
   if (character.receipt && character.status !== 'pass') drawingProblems.push({ reason: character.failureReason });
   for (const module of clientModules.modules)

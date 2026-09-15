@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 
 const directory = path.dirname(fileURLToPath(import.meta.url));
 const publicRoot = await realpath(path.resolve(directory,'../..'));
-const entryPath = '/artist-cosmos-2026-09-15/interactive/';
+const entryPath = '/' + path.basename(path.dirname(directory)) + '/interactive/';
 const contentTypes = {'.html':'text/html; charset=utf-8','.mjs':'text/javascript; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.jsonl':'application/x-ndjson; charset=utf-8','.png':'image/png','.md':'text/plain; charset=utf-8','.txt':'text/plain; charset=utf-8'};
 
 // Machine contract: serve generated exhibition artifacts on loopback only; source research stays outside this root.

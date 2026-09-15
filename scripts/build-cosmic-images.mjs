@@ -54,6 +54,18 @@ export async function buildCosmicImages(outputDirectory = path.join(projectRoot,
     await mkdir(path.dirname(destination), { recursive: true });
     await copyFile(path.join(sourceDirectory, 'interactive', file), destination);
   }
+  const documentation = [
+    '# 15枚の宇宙を動かす', '',
+    '作家を選び、視点を回し、画像を浮かべたりつかんだりできます。「物理で遊ぶ」を入れると衝突と落下を利用できます。初期状態では物理を読み込みません。', '',
+    '画像は資料から着想して新しく生成した試作です。本人の作品や実物写真ではありません。特徴座標12件と未設定3件は表示の移動から独立しています。', '',
+    '## ソースと再実行', '',
+    '[操作と実行手順](https://github.com/Anionix/lumenia-planet-museum/tree/codex/publish-cosmic-images/reference-assets/artist-cosmos/interactive)', '',
+    '[この版の Lean と Wolfram の記録](https://github.com/Anionix/lumenia-planet-museum/tree/5153523dcfb9eb99a9770818453348787995a4d4/reference-assets/artist-cosmos/interactive/verification)', '',
+    '検証はリポジトリを取得して行います。この公開ページのフォルダだけでは、開発用コマンドや証明器は動かせません。', '',
+    'Lean は19定理と補助証明の公理依存を監査し、Wolfram は10項目を検算しました。描画と衝突は実行テストで確認する別の対象です。', '',
+    '[Three.js](https://threejs.org/docs/pages/WebGLRenderer.html) / [Rapier](https://rapier.rs/docs/user_guides/javascript/rigid_body_type/)', '',
+  ].join('\n');
+  await writeFile(path.join(outputDirectory, 'interactive/README.md'), documentation);
   return { imageCount: sourceRows.length, physicsEnabledByDefault: false, sourceImagesUnchanged: true };
 }
 if (process.argv[1] === new URL(import.meta.url).pathname) console.log(JSON.stringify(await buildCosmicImages()));
