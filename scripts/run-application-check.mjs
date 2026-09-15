@@ -9,7 +9,7 @@ import { outputManifest } from './build-web.mjs';
 import { uuidVersionSeven } from './identifiers.mjs';
 import { observation, verificationResult, saveReport } from './report.mjs';
 import { inspectCharacterAsset } from './inspect-character-asset.mjs';
-import { isRegisteredInterfaceIcon } from './drawing-asset-policy.mjs';
+import { isRegisteredInterfaceIcon, isRegisteredReferenceImage } from './drawing-asset-policy.mjs';
 import { registeredCosmicDrawing } from './cosmic-drawing-policy.mjs';
 
 // llm machine contract; claim UUIDv5: 07b6fb92-8639-50e0-873d-b43d3d5c28df
@@ -26,6 +26,7 @@ const character = await inspectCharacterAsset(path.join(projectRoot, 'web/out'))
 evidence.characterInspection = character;
 const cosmicContract = await readJson('contracts/cosmic-exhibition.json');
 const cosmicEnabled = cosmicContract.enabled === true;
+const referenceImages = await readJson('contracts/cosmic-reference-images.json');
 const drawingGateName = cosmicEnabled ? 'CosmicExhibitionIsolationGate' : character.receipt ? 'CssArtworkAndCharacterIsolationGate' : 'CssOnlyApplicationGate';
 function add(name, value, reason, tools, revision = context.sourceRevision) {
   const definition = definitions.find(item => item.name === 'Lumenia.' + name);
@@ -99,6 +100,7 @@ try {
   for (const file of outputs)
     if ((/^(artworks|decoders)\/|\.(glb|gltf|ktx2|wasm|png|jpe?g|webp|avif|gif|svg)$/.test(file.path)) &&
       !isRegisteredInterfaceIcon(file, manifest.files) &&
+      !isRegisteredReferenceImage(file, manifest.files, referenceImages) &&
       !(character.status === 'pass' && file.path === character.path))
       drawingProblems.push({ file: file.path, reason: 'Unregistered binary or non-CSS rendering asset in this build profile' });
   for (const file of inspection.clientReached) {

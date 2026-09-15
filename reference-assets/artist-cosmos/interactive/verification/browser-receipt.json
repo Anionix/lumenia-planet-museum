@@ -1,0 +1,74 @@
+{
+  "record_identifier": "812bd57c-a4b2-5b44-a893-e7740a3b032e",
+  "event_identifier": "01a0a581-962c-7100-931c-2936dbc0ad46",
+  "observed_at": "2026-09-15T14:38:48.366Z",
+  "observation_method": "Codex browser accessibility, canvas DOM attributes, screenshots, and real pointer interactions",
+  "url": "http://127.0.0.1:56249/artist-cosmos-2026-09-15/interactive/",
+  "manifest_sha256": "108306a4418dd2b7740e2f7130cdac366adc5352d305722047dc41c1db96d616",
+  "context_version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+  "engine": "three.js r186",
+  "image_count": 15,
+  "selected_artists_in_order": [
+    "William Morris",
+    "Alphonse Mucha",
+    "Charles Rennie Mackintosh",
+    "Piet Mondrian",
+    "Gerrit Rietveld",
+    "Ettore Sottsass",
+    "Herbert Bayer",
+    "Josef Müller-Brockmann",
+    "Massimo Vignelli",
+    "Dieter Rams",
+    "Naoto Fukasawa",
+    "Rei Kawakubo",
+    "Charles Eames",
+    "Ray Eames",
+    "Walter Gropius"
+  ],
+  "observations": {
+    "default_physics_disabled": true,
+    "all_fifteen_images_loaded": true,
+    "all_fifteen_artist_selections_checked": true,
+    "physics_enabled_and_advanced": true,
+    "observed_physics_step_count": 4145,
+    "physics_pause_checked": true,
+    "dragged_panel_changed_position_and_resumed": true,
+    "camera_rotation_and_zoom_visually_checked": true,
+    "nonphysics_floating_checked": true,
+    "floating_rendered_frames": [
+      9738,
+      14597
+    ],
+    "idle_rendered_frames_unchanged": [
+      9605,
+      9605
+    ],
+    "reset_physics_disabled": true,
+    "console_errors": [],
+    "console_warnings": [],
+    "normal_viewport_widths_observed": [
+      1280,
+      553
+    ],
+    "gravity_control_checked": true
+  },
+  "final_view": {
+    "mode": "all",
+    "selected_artist": "William Morris",
+    "physics": "disabled",
+    "playing": false
+  },
+  "scope": "Direct browser observation on this Mac, not a claim about other browsers or frame-rate performance",
+  "application_sha256": {
+    "index.html": "0a3014a9089b63a11268b8d802074f45fa5b2733ad4a61bbf36f7df274c43fc9",
+    "style.css": "1889ad1612d94417e05ca18522232110c3d510c09b3c5841ea5aad17c820b654",
+    "main.mjs": "62bdfd624708decf015657094c6f70d7853b1c73493bbc973b248c3b927f842f",
+    "model.mjs": "ba02dbf2d014e3673fd0033e97056a840d02c1db504987ff577922b94db00395",
+    "physics.mjs": "076dfd0f15f91d278eb51870d842c01e19e7ca3a77431c5d4bed658be6e45503",
+    "vendor/three.module.js": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+    "vendor/three.core.js": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+    "vendor/controls/OrbitControls.js": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+    "vendor/rapier.mjs": "82b65114e949ed17969a5d0a3517b952f430ea524f4a19ce4a31e72fb7757f27",
+    "vendor/reference-physics-contract.mjs": "4d1495820c1b9dcf334accee1892edd4f0ead85f5575e7c91935518903b435ba"
+  }
+}

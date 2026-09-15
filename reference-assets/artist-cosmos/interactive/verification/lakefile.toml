@@ -1,0 +1,6 @@
+name = "lumenia_exhibition_verification"
+version = "0.1.0"
+defaultTargets = ["Exhibition"]
+
+[[lean_lib]]
+name = "Exhibition"
