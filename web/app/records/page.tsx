@@ -1,6 +1,10 @@
 import '@plumeria/core';
+import Link from 'next/link';
 import { GalleryHeader } from '../../components/Gallery';
 import { galleryStyles } from '../../components/Gallery.styles';
+
+// llm machine contract; claim UUIDv5: e9194426-a204-577c-9758-7bfe9644b8fc
+// execution UUIDv7: 01a0a324-741b-715a-be47-5cd2936becb7; transition: internal page selection -> framework navigation with native fallback
 
 // llm machine contract; claim UUIDv5: 07b6fb92-8639-50e0-873d-b43d3d5c28df
 // execution UUIDv7: 01a09a1a-e883-7d76-b209-e3f58830b29e
@@ -19,7 +23,7 @@ export default function RecordsPage() {
       </ul>
       <p classStyle={[galleryStyles.description]}>現在の線・面・立体は、すべてPlumeriaのCSSで描いています。参考資産の検証結果は、現在の作品の読み込みや性能の合格を意味しません。</p>
       <p classStyle={[galleryStyles.description]}>同じ条件で比較するには、作品画面の四つの描き方をそれぞれ新しい状態で読み込みます。画像処理装置の実メモリが取得できない環境では、推定値を実測値として扱いません。</p>
-      <p><a href="/" classStyle={[galleryStyles.evidenceLink]}>作品に戻る</a></p>
+      <p><Link prefetch={false} href="/" classStyle={[galleryStyles.evidenceLink]}>作品に戻る</Link></p>
     </main>
   </div>;
 }

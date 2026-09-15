@@ -1,4 +1,5 @@
 import '@plumeria/core';
+import Link from 'next/link';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { materialSphereCatalog } from '../../../artwork/material-sphere-catalog';
@@ -9,6 +10,9 @@ import { MaterialSphereArtwork } from '../../../components/MaterialSphere.genera
 import { GalleryHeader } from '../../../components/Gallery';
 import { galleryStyles } from '../../../components/Gallery.styles';
 import { sphereStyles } from '../../../components/MaterialSphere.styles';
+
+// llm machine contract; claim UUIDv5: e9194426-a204-577c-9758-7bfe9644b8fc
+// execution UUIDv7: 01a0a324-741b-715a-be47-5cd2936becb7; transition: internal page selection -> framework navigation with native fallback
 
 // llm machine contract; claim UUIDv5: 68d2fd0d-a670-583b-88b5-cbed5fa5ef83
 // execution UUIDv7: 01a09ad3-4fb7-78b0-bbc0-77a8f7eb5016
@@ -43,11 +47,11 @@ export default async function ArtistStudioPage({ params }: { params: Promise<{ p
         </li>)}</ul>
         <p classStyle={[sphereStyles.caption]}>{profile.limitation}</p>
         <nav aria-label="制作室から進む" classStyle={[studioStyles.choices]}>
-          <a href={`/planetarium/${profile.slug}/#artwork`} classStyle={[studioStyles.choice]}>球を鑑賞・操作する</a>
-          <a href="/planetarium/" classStyle={[studioStyles.choice]}>ほかの人物を訪ねる</a>
+          <Link prefetch={false} href={`/planetarium/${profile.slug}/#artwork`} classStyle={[studioStyles.choice]}>球を鑑賞・操作する</Link>
+          <Link prefetch={false} href="/planetarium/" classStyle={[studioStyles.choice]}>ほかの人物を訪ねる</Link>
         </nav>
       </section>
     </main>
-    <footer classStyle={[galleryStyles.footer]}><span>Lumenia Planet Museum</span><a href="/" classStyle={[galleryStyles.evidenceLink]}>Museumへ</a></footer>
+    <footer classStyle={[galleryStyles.footer]}><span>Lumenia Planet Museum</span><Link prefetch={false} href="/" classStyle={[galleryStyles.evidenceLink]}>Museumへ</Link></footer>
   </div>;
 }
