@@ -1,5 +1,6 @@
 'use client';
 import '@plumeria/core';
+import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { cosmicCatalog } from '../artwork/cosmic-catalog.generated.mjs';
 import { intersectsYears } from '../artwork/cosmic-state.mjs';
@@ -20,6 +21,7 @@ export function CosmicExhibition() {
   const [endYear, setEndYear] = useState(2020);
   const [showUnknown, setShowUnknown] = useState(true);
   const [seconds, setSeconds] = useState(0);
+  const savedSeconds = useRef(0);
   const [retry, setRetry] = useState(0);
   const [reducedMotion, setReducedMotion] = useState(false);
   const current = useRef({ selected: '', playing: false, startYear: 1880, endYear: 2020, showUnknown: true });
@@ -51,9 +53,11 @@ export function CosmicExhibition() {
       import('../artwork/cosmic-scene.mjs').then(module => {
         if (cancelled) return;
         const controller = module.createCosmicScene({ canvas: element,
-          onSelect: identifier => { setSelected(identifier); setPlaying(false); }, onState: setStatus });
+          onSelect: identifier => { setSelected(identifier); setPlaying(false); }, onState: setStatus,
+          onTime: value => { savedSeconds.current = value; setSeconds(value); } });
         if (cancelled) { controller.dispose(); return; }
         scene.current = controller;
+        controller.setSeconds(savedSeconds.current);
         controller.apply(current.current);
         controller.setVisible(visible);
       }).catch(() => { if (!cancelled) setStatus('unavailable'); });
@@ -93,7 +97,7 @@ export function CosmicExhibition() {
           <p classStyle={[cosmicStyles.subtitle]}>{person.period.label}</p>
           <p classStyle={[cosmicStyles.body]}>{person.work}</p>
           <p classStyle={[cosmicStyles.body]}>{person.interpretation}</p>
-          <a href={`/atelier/${person.slug}/`} classStyle={[cosmicStyles.source]}>制作室を訪ねる</a>
+          <Link href={`/atelier/${person.slug}/`} prefetch={false} classStyle={[cosmicStyles.source]}>制作室を訪ねる</Link>
           <ul classStyle={[cosmicStyles.sources]}>{person.sources.map(source => <li key={source.identifier}>
             <a href={source.url} target="_blank" rel="noreferrer" classStyle={[cosmicStyles.source]}>{source.title}</a>
           </li>)}</ul>
@@ -101,7 +105,7 @@ export function CosmicExhibition() {
           <h3 classStyle={[cosmicStyles.personTitle]}>気になる天体へ。</h3>
           <p classStyle={[cosmicStyles.body]}>天体か人物名を選ぶと、色や模様の手がかりになった仕事をたどれます。</p>
           <p classStyle={[cosmicStyles.help]}>太陽・軌道・天体の大きさは展示の演出です。人物の影響関係や実際の宇宙を表すものではありません。</p>
-          <a href="/records/" classStyle={[cosmicStyles.source]}>出典と検算記録</a>
+          <Link href="/records/" prefetch={false} classStyle={[cosmicStyles.source]}>出典と検算記録</Link>
         </>}
       </aside>
     </div>
@@ -111,8 +115,9 @@ export function CosmicExhibition() {
       <button type="button" aria-label="天体を拡大" classStyle={[cosmicStyles.button]} disabled={status !== 'ready'} onClick={() => scene.current?.zoom(0.8)}>＋</button>
       <button type="button" aria-label="天体を縮小" classStyle={[cosmicStyles.button]} disabled={status !== 'ready'} onClick={() => scene.current?.zoom(1.2)}>−</button>
       <label classStyle={[cosmicStyles.time]}>動きの位置
-        <input aria-label="展示の経過時間" type="range" min="0" max="120" step="1" value={seconds} disabled={status !== 'ready'} classStyle={[cosmicStyles.range]}
-          onChange={event => { const value = Number(event.target.value); setSeconds(value); setSelected(''); setPlaying(false); scene.current?.setSeconds(value); }} />
+        <input aria-label="展示の経過時間" type="range" min="0" max={Math.min(86400, Math.max(120, Math.ceil(seconds / 120) * 120))} step="0.01" value={seconds} disabled={status !== 'ready'} classStyle={[cosmicStyles.range]}
+          onChange={event => { const value = Number(event.target.value); savedSeconds.current = value; setSeconds(value); setSelected(''); setPlaying(false); scene.current?.setSeconds(value); }} />
+        <span>{Math.floor(seconds)}秒</span>
       </label>
       <p id="cosmic-controls-help" classStyle={[cosmicStyles.help]}>ドラッグで回転 · 指2本で拡大 · 左右キーでも回転</p>
       {reducedMotion && <p classStyle={[cosmicStyles.help]}>端末の「動きを減らす」設定に合わせて静止しています。動きの位置は手動で変えられます。</p>}

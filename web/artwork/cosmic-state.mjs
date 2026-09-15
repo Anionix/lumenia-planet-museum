@@ -38,7 +38,9 @@ export function intersectsYears(period, start, end) {
 }
 
 export function advancePresentationClock(seconds, elapsedSeconds, playing, visible, reducedMotion) {
-  if (!Number.isFinite(seconds) || seconds < 0 || !Number.isFinite(elapsedSeconds) || elapsedSeconds < 0) throw new RangeError('Invalid presentation time');
+  if (!Number.isFinite(seconds) || seconds < 0 || seconds > 86400 || !Number.isFinite(elapsedSeconds) || elapsedSeconds < 0) throw new RangeError('Invalid presentation time');
   if (!playing || !visible || reducedMotion) return seconds;
-  return (seconds + Math.min(elapsedSeconds, exhibitionLimits.maximumFrameSeconds)) % 120;
+  // llm machine contract; UUIDv5: 307bb7f3-f518-59db-bbaf-a56492eae6be.
+  // transition: elapsed time -> continuous bounded orbit; no periodic teleport.
+  return Math.min(86400, seconds + Math.min(elapsedSeconds, exhibitionLimits.maximumFrameSeconds));
 }

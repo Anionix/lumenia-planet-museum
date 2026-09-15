@@ -9,8 +9,8 @@ import { advancePresentationClock, exhibitionLimits, intersectsYears, orbitPosit
 // llm machine contract; claim UUIDv5: 190fdb1a-2e41-565d-9aed-9fe5ca2179a6
 // transition: client intersection -> lazy scene -> interaction or bounded motion -> suspended -> disposed.
 // Rapier is an optional injection point. This exhibition never starts a physics world.
-/** @param {{canvas: HTMLCanvasElement, onSelect: (identifier: string) => void, onState: (state: string) => void}} options */
-export function createCosmicScene({ canvas, onSelect, onState }) {
+/** @param {{canvas: HTMLCanvasElement, onSelect: (identifier: string) => void, onState: (state: string) => void, onTime?: (seconds: number) => void}} options */
+export function createCosmicScene({ canvas, onSelect, onState, onTime = () => {} }) {
   const scene = new THREE.Scene();
   scene.background = new THREE.Color('#080d1c');
   scene.fog = new THREE.FogExp2('#080d1c', 0.009);
@@ -66,6 +66,7 @@ export function createCosmicScene({ canvas, onSelect, onState }) {
   let disposed = false, visible = true, playing = false, reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
   let seconds = 0, frame = 0, previousTime = 0, dirty = true, selected = '', startYear = 1880, endYear = 2020;
   let showUnknown = true, lastFocus = '', hasSize = false;
+  let lastRenderMilliseconds = -Infinity, reportedSecond = -1;
   const pointer = new THREE.Vector2(), raycaster = new THREE.Raycaster();
   const pointerStart = { x: 0, y: 0 };
   const media = matchMedia('(prefers-reduced-motion: reduce)');
@@ -95,11 +96,13 @@ export function createCosmicScene({ canvas, onSelect, onState }) {
     if (disposed || !visible || document.hidden || !hasSize) { previousTime = 0; return; }
     const animate = playing && !reducedMotion;
     const elapsed = previousTime ? (now - previousTime) / 1000 : 0;
-    if (dirty || elapsed >= 1 / exhibitionLimits.maximumFramesPerSecond) {
+    if ((dirty || animate) && now - lastRenderMilliseconds >= 1000 / exhibitionLimits.maximumFramesPerSecond) {
       seconds = advancePresentationClock(seconds, elapsed, animate, visible, reducedMotion);
-      previousTime = now; updateBodies(); renderer.render(scene, camera); telemetry(); dirty = false;
+      previousTime = now; lastRenderMilliseconds = now;
+      updateBodies(); renderer.render(scene, camera); telemetry(); dirty = false;
+      if (Math.floor(seconds) !== reportedSecond) { reportedSecond = Math.floor(seconds); onTime(seconds); }
     }
-    if (animate) frame = requestAnimationFrame(draw);
+    if (animate || dirty) frame = requestAnimationFrame(draw);
   }
   function invalidate() {
     if (disposed) return;
@@ -145,6 +148,7 @@ export function createCosmicScene({ canvas, onSelect, onState }) {
     apply(state) {
       if (disposed) return;
       selected = state.selected; playing = state.playing;
+      if (!playing) onTime(seconds);
       startYear = state.startYear; endYear = state.endYear; showUnknown = state.showUnknown;
       updateBodies();
       if (selected !== lastFocus) {
@@ -157,7 +161,7 @@ export function createCosmicScene({ canvas, onSelect, onState }) {
       previousTime = 0; invalidate();
     },
     setVisible(value) { visible = value; previousTime = 0; if (!visible) { cancelAnimationFrame(frame); frame = 0; } else invalidate(); },
-    setSeconds(value) { if (!Number.isFinite(value) || value < 0 || value > 120) throw new RangeError('Presentation time outside [0,120]'); seconds = value; previousTime = 0; invalidate(); },
+    setSeconds(value) { if (!Number.isFinite(value) || value < 0 || value > 86400) throw new RangeError('Presentation time outside [0,86400]'); seconds = value; previousTime = 0; onTime(seconds); invalidate(); },
     zoom(factor) { camera.position.sub(controls.target).multiplyScalar(factor).add(controls.target); controls.update(); invalidate(); },
     rotate(radians) { const offset = camera.position.clone().sub(controls.target); offset.applyAxisAngle(new THREE.Vector3(0, 1, 0), radians); camera.position.copy(controls.target).add(offset); controls.update(); invalidate(); },
     semanticDistance(first, second) { return semantics.distanceBetween(first, second); },
