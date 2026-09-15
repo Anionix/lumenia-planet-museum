@@ -1,7 +1,7 @@
 {
-  "executionIdentifier": "01a0a487-39c3-7835-95b1-398518084a59",
-  "recordedAt": "2026-09-15T10:05:23.567Z",
-  "sourceRevision": "sha256:2fb2a5420fc35e627b587801628e01159eda24905971233c19891a05a2b4d4ce",
+  "executionIdentifier": "01a0a4a5-3f92-7e0e-917b-da214700d2a2",
+  "recordedAt": "2026-09-15T10:38:09.422Z",
+  "sourceRevision": "sha256:0bdf9f362166ae3da7478a7cc969070db351ad1e4a4f5e695abeca9acde4c22a",
   "status": "pass",
   "people": 15,
   "semanticCoordinates": 12,
@@ -22,7 +22,7 @@
         "tests/threejs-reference-adapter.test.mjs"
       ],
       "exitCode": 0,
-      "stdout": "✔ 15 unique sourced bodies keep 12 supplied semantic coordinates and all physics disabled (2.484208ms)\n✔ presentation movement never changes semantic distance, including missing coordinates (40.509709ms)\n✔ chronology keeps interval boundaries, unspecified date and exhibition date distinct (0.718708ms)\n✔ pause, reduced motion and visibility freeze the presentation clock; resumed frames stay bounded (0.111542ms)\n✔ browser adapters are reproducible copies of the reusable source modules (7.9925ms)\n✔ the actual dataset yields twelve explicitly positioned recipes and preserves source links (12.170916ms)\n✔ three.js serialization reloads all positions, textures, stable resource identities and provenance (136.918667ms)\n✔ invalid numeric, resource, unit and unsupported-shape inputs fail before object allocation (1.604625ms)\n✔ a generic box uses the same portable material contract without artist-dependent rendering logic (4.131291ms)\n✔ every selected pattern produces bounded opaque pixels and color-space assumptions are explicit (108.587625ms)\n✔ scene disposal releases geometry, material and texture resources (2.428792ms)\n✔ moving display objects and metadata never changes an existing semantic coordinate index (29.487833ms)\n✔ disabled physics never connects or steps an engine (0.30625ms)\n✔ optional physics validates units, origins, source references and coefficients (0.45225ms)\n✔ an explicit engine adapter can move display transforms while similarity remains fixed (28.931083ms)\nℹ tests 15\nℹ suites 0\nℹ pass 15\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 486.859167\n",
+      "stdout": "✔ 15 unique sourced bodies keep 12 supplied semantic coordinates and all physics disabled (2.211208ms)\n✔ presentation movement never changes semantic distance, including missing coordinates (39.751417ms)\n✔ chronology keeps interval boundaries, unspecified date and exhibition date distinct (0.560167ms)\n✔ pause, reduced motion and visibility freeze the presentation clock; resumed frames stay bounded (0.106ms)\n✔ browser adapters are reproducible copies of the reusable source modules (7.056083ms)\n✔ the actual dataset yields twelve explicitly positioned recipes and preserves source links (10.09775ms)\n✔ three.js serialization reloads all positions, textures, stable resource identities and provenance (115.897125ms)\n✔ invalid numeric, resource, unit and unsupported-shape inputs fail before object allocation (1.679166ms)\n✔ a generic box uses the same portable material contract without artist-dependent rendering logic (3.627209ms)\n✔ every selected pattern produces bounded opaque pixels and color-space assumptions are explicit (87.398125ms)\n✔ scene disposal releases geometry, material and texture resources (3.149833ms)\n✔ moving display objects and metadata never changes an existing semantic coordinate index (27.033459ms)\n✔ disabled physics never connects or steps an engine (0.17825ms)\n✔ optional physics validates units, origins, source references and coefficients (0.425084ms)\n✔ an explicit engine adapter can move display transforms while similarity remains fixed (23.561458ms)\nℹ tests 15\nℹ suites 0\nℹ pass 15\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 411.326333\n",
       "stderr": ""
     },
     {
