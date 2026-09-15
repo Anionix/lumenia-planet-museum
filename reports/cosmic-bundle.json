@@ -1,0 +1,72 @@
+{
+  "identifier": "190fdb1a-2e41-565d-9aed-9fe5ca2179a6",
+  "executionIdentifier": "01a0a49a-9955-7598-84a2-d045380992d9",
+  "recordedAt": "2026-09-15T10:26:30.357Z",
+  "sourceRevision": "sha256:0bdf9f362166ae3da7478a7cc969070db351ad1e4a4f5e695abeca9acde4c22a",
+  "status": "pass",
+  "checks": {
+    "currentBuild": true,
+    "initialScriptsPresent": true,
+    "sceneFilesPresent": true,
+    "sceneAbsentFromInitialScripts": true,
+    "initialScriptsWithinBudget": true,
+    "lazySceneWithinBudget": true
+  },
+  "initialScriptCompressedBytes": 186300,
+  "lazySceneCompressedBytes": 155405,
+  "initialFiles": [
+    {
+      "file": "_next/static/chunks/77dcdae9-156e9e9b533be39c.js",
+      "bytes": 201106,
+      "compressedBytes": 63247
+    },
+    {
+      "file": "_next/static/chunks/634-3f771d38c6930646.js",
+      "bytes": 241310,
+      "compressedBytes": 65863
+    },
+    {
+      "file": "_next/static/chunks/main-app-13659b4011931f93.js",
+      "bytes": 566,
+      "compressedBytes": 268
+    },
+    {
+      "file": "_next/static/chunks/app/page-a376b909d53a0ac4.js",
+      "bytes": 41817,
+      "compressedBytes": 15707
+    },
+    {
+      "file": "_next/static/chunks/polyfills-42372ed130431b0a.js",
+      "bytes": 112594,
+      "compressedBytes": 39373
+    },
+    {
+      "file": "_next/static/chunks/webpack-4195a0c22675ab38.js",
+      "bytes": 3549,
+      "compressedBytes": 1842
+    }
+  ],
+  "sceneFiles": [
+    {
+      "file": "_next/static/chunks/0.993fe4b9f06ed770.js",
+      "bytes": 19759,
+      "compressedBytes": 4384
+    },
+    {
+      "file": "_next/static/chunks/21566691.69f364acaf3746d2.js",
+      "bytes": 203549,
+      "compressedBytes": 53858
+    },
+    {
+      "file": "_next/static/chunks/27.fd9aee0915beb770.js",
+      "bytes": 44998,
+      "compressedBytes": 12904
+    },
+    {
+      "file": "_next/static/chunks/80213038.4e1a68a530d8702f.js",
+      "bytes": 356631,
+      "compressedBytes": 84259
+    }
+  ],
+  "scope": "Gzip level 9 over built files. Actual network transfer, rendering and interaction performance are not measured."
+}

@@ -1,8 +1,8 @@
 {
-  "executionIdentifier": "01a09b9f-2138-7fd7-94b0-df9b07b5383f",
-  "sourceRevision": "sha256:38399d2837e0f8e40e96791bc54e8c2b4fe186898043674fba45bce834dae22c",
+  "executionIdentifier": "01a0a49a-70f2-7212-90bc-62c435944ee8",
+  "sourceRevision": "sha256:0bdf9f362166ae3da7478a7cc969070db351ad1e4a4f5e695abeca9acde4c22a",
   "manifest": {
-    "sourceRevision": "sha256:38399d2837e0f8e40e96791bc54e8c2b4fe186898043674fba45bce834dae22c",
+    "sourceRevision": "sha256:0bdf9f362166ae3da7478a7cc969070db351ad1e4a4f5e695abeca9acde4c22a",
     "files": [
       {
         "path": "CONSTRAINTS.md",
@@ -15,6 +15,10 @@
       {
         "path": "contracts/claims.json",
         "sha256": "2250c5046c0a3c1a0836267d3b4823b255cce0303b25ff3fa76c8fe9060da087"
+      },
+      {
+        "path": "contracts/cosmic-exhibition.json",
+        "sha256": "8d8886b9b3df3e98a68063ead911e1c2d156550fc8903d267917a29c030ed5ff"
       },
       {
         "path": "contracts/css-artworks.json",
@@ -38,7 +42,7 @@
       },
       {
         "path": "contracts/external-gates.json",
-        "sha256": "002f858e0f86a3621bdc3a3566f286a4482ea3d77e4380c435b6ff528a668e0e"
+        "sha256": "49905119414dcb5d7c8600fd1d5d7d74f0a03fefa7d6a603e4eb916c174d782a"
       },
       {
         "path": "contracts/verification-contract.schema.json",
@@ -50,7 +54,7 @@
       },
       {
         "path": "formal/Lumenia.lean",
-        "sha256": "25d82dde7ad6966f8bd27c35d32bc016ef0e027629db9d9f4d1468a6133038f2"
+        "sha256": "0f9ee325f4c9bf73d42edfeb1b059cb4b66de230ba6983256fbe46bcb26fd779"
       },
       {
         "path": "formal/Lumenia/AxiomAudit.lean",
@@ -59,6 +63,14 @@
       {
         "path": "formal/Lumenia/Boundary.lean",
         "sha256": "41be9e4293f8f54e671150aa2f1afadc27d0393f865af9ebdbdcb6bb8ea363c3"
+      },
+      {
+        "path": "formal/Lumenia/CosmicExhibition.lean",
+        "sha256": "59397a93a57427b38da7a09b275d5164ba64a58136ee7c53d39abcbbfb16aeda"
+      },
+      {
+        "path": "formal/Lumenia/CosmicExhibitionAudit.lean",
+        "sha256": "cc87c7c5abcb146d49ea79e7c638ca3a86911efccb4f66051b0b3c08416650bd"
       },
       {
         "path": "formal/Lumenia/Model.lean",
@@ -133,8 +145,12 @@
         "sha256": "df70415e44ed2830e257b7ed7c6d0bfa71311414b27ae9d404523169686cf6cc"
       },
       {
+        "path": "scripts/build-cosmic-catalog.mjs",
+        "sha256": "84b05e6c303c87bb5d93a9685636882a7f33b5133b6ea0f6e73da7743e0b9aca"
+      },
+      {
         "path": "scripts/build-web.mjs",
-        "sha256": "97521d87dc9c0a78628270816a575b2ff9807868eed3de2a5b8d0f71e0dd7e16"
+        "sha256": "01464c9e27e110fa546084461b3fa52e3a06eb1bf07bba8aa24d94c4a2fd67a5"
       },
       {
         "path": "scripts/character-registration.mjs",
@@ -153,6 +169,10 @@
         "sha256": "96fa1a635a416efb050968b9dd81352610b951b2d40da4df97c56c28e9afcfa0"
       },
       {
+        "path": "scripts/cosmic-drawing-policy.mjs",
+        "sha256": "d024bccc427e0a1fdcefbd1474036f9cc554135a56447d20a1eacae931cf6bee"
+      },
+      {
         "path": "scripts/drawing-asset-policy.mjs",
         "sha256": "267d5ee2db8b529b39542f105973c7d0426b30387bdbad3770b6cdf7c882650f"
       },
@@ -167,6 +187,10 @@
       {
         "path": "scripts/inspect-character-asset.mjs",
         "sha256": "f001b10dde025be2485b16d83434a11a546409647ff3e725031a5edecf25163a"
+      },
+      {
+        "path": "scripts/inspect-cosmic-bundle.mjs",
+        "sha256": "bc50a40208338c917d1cee9a419025709da7c72254b8fce9dd05ef6b601ebacf"
       },
       {
         "path": "scripts/language-server-evidence.mjs",
@@ -190,7 +214,7 @@
       },
       {
         "path": "scripts/run-application-check.mjs",
-        "sha256": "1cb507974835b3f03dfcb02c79964b01cc00ac1d4b827235b6847a29200dbd42"
+        "sha256": "c251eb67cba347500e3c3103e7482ccb9ce58071b30bb1745b53786e18a1dc32"
       },
       {
         "path": "scripts/run-asset-reference-check.mjs",
@@ -225,6 +249,10 @@
         "sha256": "dfaf2d2774cbbea870beed8f384447d11b4b5cca903713544f67dd09a7a97eb2"
       },
       {
+        "path": "scripts/verify-cosmic-exhibition.mjs",
+        "sha256": "1566f2d386e232b506c787a6d125a6ca8cfd61ab4c4d40b49e849c96b8b62dca"
+      },
+      {
         "path": "scripts/verify-css-museum-people.mjs",
         "sha256": "d037ac7a7b7d6693105406a4e1924e8adb6263d241201492ce838947bfd1cf76"
       },
@@ -253,6 +281,10 @@
         "sha256": "46d8e96c1a68093a52b14f9762d50b21c00a96f39f08fb8b6de94f758c9ccc9d"
       },
       {
+        "path": "tests/cosmic-exhibition.test.mjs",
+        "sha256": "c52dabf8eb3b3b863701f4def29b22a5730a2da8bdc26ed59b6c18242ce4af17"
+      },
+      {
         "path": "tests/drawing-asset-policy.test.mjs",
         "sha256": "da5e621afbec765be34bf034a7c569dbcf13fdcdd6bdb4895f26becf47333ba4"
       },
@@ -277,6 +309,18 @@
         "sha256": "327a7a5f3f93221bff98a3e067ef3f1ec46fdad500550f20040b0312351c1f02"
       },
       {
+        "path": "tests/threejs-reference-adapter.test.mjs",
+        "sha256": "bddd1df4330aae164ebe89414bbf9f402d89214fa36d61079cf1b839b2c883b1"
+      },
+      {
+        "path": "web/AGENTS.md",
+        "sha256": "63f2c50380ed6303237cce215ce27af1d620d094c215e28d1b1538a3c070e3bb"
+      },
+      {
+        "path": "web/CLAUDE.md",
+        "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49"
+      },
+      {
         "path": "web/app/atelier/[person]/page.tsx",
         "sha256": "04f13db8fc17d62245e2cb10c98d0a0d0150f292029b4961ee60f017bd86646c"
       },
@@ -294,7 +338,7 @@
       },
       {
         "path": "web/app/page.tsx",
-        "sha256": "8f860f9e3a1f90bc7cbcffd3bd835859864a5cb1dba1da8048f7986f3fc36fbd"
+        "sha256": "6cb03e1ac12a21ee1526dfc636561b3f958c55423869b2619fd37ab392e7835c"
       },
       {
         "path": "web/app/planetarium/[person]/page.tsx",
@@ -317,6 +361,22 @@
         "sha256": "6a759815d7b2bf3e059aed18a85d0a1450959c1bbed16aa8f6c2d8735a215624"
       },
       {
+        "path": "web/artwork/cosmic-catalog.generated.mjs",
+        "sha256": "0195657a356098c9fa7fdb1e0a54a3ab77047b099854efd8c88651cda6c2df8e"
+      },
+      {
+        "path": "web/artwork/cosmic-recipes.generated.mjs",
+        "sha256": "98110a1b10322443d73a3eb6d6496bcfcb91d1c2df4397427c6122041cb7aafc"
+      },
+      {
+        "path": "web/artwork/cosmic-scene.mjs",
+        "sha256": "0df25fa490b50b88780e0c00ccc2f53b776bf2ac224483670935fd3254aff8d4"
+      },
+      {
+        "path": "web/artwork/cosmic-state.mjs",
+        "sha256": "3a357176adde5bd99a7081db3072eea2eece833d3405ab7636e5004089fd75ef"
+      },
+      {
         "path": "web/artwork/css-geometry.ts",
         "sha256": "ca30e7eaeb6e2705f4f867daed770243319715a876507e2392f85240413297fd"
       },
@@ -326,7 +386,7 @@
       },
       {
         "path": "web/artwork/material-sphere-catalog.ts",
-        "sha256": "d5c5231e12fe41180bbdcfb78c6f716a7bca8e9ae76f49a81ddfae118120873b"
+        "sha256": "75240efe3c7ae5e7fc7a2e343117edfb0d67e8ed098a484286f966def2515a4f"
       },
       {
         "path": "web/artwork/material-sphere-computation/dimension.mjs",
@@ -357,6 +417,14 @@
         "sha256": "0756b189fde1688935f2f1b07bfe9136fff69cb76b33f01825f51d6c20381e3b"
       },
       {
+        "path": "web/artwork/reference-physics-contract.mjs",
+        "sha256": "4d1495820c1b9dcf334accee1892edd4f0ead85f5575e7c91935518903b435ba"
+      },
+      {
+        "path": "web/artwork/threejs-reference-adapter.mjs",
+        "sha256": "99e2747a30820f9907a4a685f185dc7edfc3ae6fd5062a1e721bd1904d835941"
+      },
+      {
         "path": "web/components/ArtistStudio.styles.ts",
         "sha256": "2da07e52856623e8e21ee9f6be67325f20985aa4f1f87c47761a45ed01e9c30e"
       },
@@ -367,6 +435,14 @@
       {
         "path": "web/components/ArtworkExperience.tsx",
         "sha256": "87a70790dd0ef3330b31600f7ee0da3fbc311c531f440319273efb7e9faceed1"
+      },
+      {
+        "path": "web/components/CosmicExhibition.styles.ts",
+        "sha256": "5026028dd947301e68795b0edb977a0d6c56f804639d5a6cffb0a90557cfea1b"
+      },
+      {
+        "path": "web/components/CosmicExhibition.tsx",
+        "sha256": "a7859c4c247795e5260c7bc40bab41a8a5d2f86a78acc0042bbf9bfac1b813b3"
       },
       {
         "path": "web/components/CssArtistCharacter.styles.ts",
@@ -402,11 +478,11 @@
       },
       {
         "path": "web/components/MaterialSphere.generated.styles.ts",
-        "sha256": "97f076f57216e28e023e1f4488115db18711319a89fb1e04d5e75633e77ccac5"
+        "sha256": "983d0c677f324a35c098a7b2e1c8d6393078f4f421b7db6e692818267ceb09f3"
       },
       {
         "path": "web/components/MaterialSphere.generated.tsx",
-        "sha256": "f0648185d137d6f8dd3388156c52b0fbd8c2595fd26dac0116720868d2657d0b"
+        "sha256": "9d8f435523dd41cd2852c88b5ad7e8444f802c70742d213bba849318847e6fbf"
       },
       {
         "path": "web/components/MaterialSphere.styles.ts",
@@ -438,7 +514,7 @@
       },
       {
         "path": "web/components/PlanetMuseum.tsx",
-        "sha256": "482e5bbab742f8bc57512939021350a15a1fbf97b1c965ddf8f7b88c5c01fd54"
+        "sha256": "ad337a8c5aa735142ee435c6e1d5bd7c5b57be26360f37b08da3798c4b2e760f"
       },
       {
         "path": "web/next.config.mjs",
@@ -494,193 +570,233 @@
       }
     ]
   },
-  "createdAt": "2026-09-13T16:34:52.344Z",
+  "createdAt": "2026-09-15T10:26:20.018Z",
   "state": "built",
-  "previousBuild": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94/artifacts/previous-builds/01a09b9f-2138-7fd7-94b0-df9b07b5383f",
+  "previousBuild": "/private/tmp/lumenia-cosmic-exhibition/artifacts/previous-builds/01a0a49a-70f2-7212-90bc-62c435944ee8",
   "command": "next build web --webpack",
   "exitCode": 0,
-  "stdout": "▲ Next.js 16.3.5 (webpack)\n✓ Running next.config.mjs took 15ms\n\n  Creating an optimized production build ...\n✓ Compiled successfully in 3.9s\n  Running TypeScript ...\n  Finished TypeScript in 2.1s ...\n  Collecting page data using 7 workers ...\n  Generating static pages using 7 workers (0/39) ...\n  Generating static pages using 7 workers (9/39) \r\n  Generating static pages using 7 workers (19/39) \r\n  Generating static pages using 7 workers (29/39) \r\n✓ Generating static pages using 7 workers (39/39) in 335ms\n  Finalizing page optimization ...\n  Collecting build traces ...\n\nRoute (app)\n┌ ○ /\n├ ○ /_not-found\n├   /atelier/[person]\n│ ├ ● /atelier/william-morris\n│ ├ ● /atelier/alphonse-mucha\n│ ├ ● /atelier/charles-rennie-mackintosh\n│ └ ● [+12 more paths]\n├   /compare/[stage]\n│ ├ ● /compare/empty\n│ ├ ● /compare/css\n│ ├ ● /compare/surface\n│ └ ● /compare/solid\n├ ○ /planetarium\n├   /planetarium/[person]\n│ ├ ● /planetarium/william-morris\n│ ├ ● /planetarium/alphonse-mucha\n│ ├ ● /planetarium/charles-rennie-mackintosh\n│ └ ● [+12 more paths]\n└ ○ /records\n\n\n○  (Static)  prerendered as static content\n●  (SSG)     prerendered as static HTML (uses generateStaticParams)\n\n",
+  "stdout": "▲ Next.js 16.3.5 (webpack)\n✓ Running next.config.mjs took 13ms\n\n  Creating an optimized production build ...\n✓ Compiled successfully in 5.0s\n  Running TypeScript ...\n  Finished TypeScript in 2.8s ...\n  Collecting page data using 7 workers ...\n  Generating static pages using 7 workers (0/39) ...\n  Generating static pages using 7 workers (9/39) \r\n  Generating static pages using 7 workers (19/39) \r\n  Generating static pages using 7 workers (29/39) \r\n✓ Generating static pages using 7 workers (39/39) in 291ms\n  Finalizing page optimization ...\n  Collecting build traces ...\n\nRoute (app)\n┌ ○ /\n├ ○ /_not-found\n├   /atelier/[person]\n│ ├ ● /atelier/william-morris\n│ ├ ● /atelier/alphonse-mucha\n│ ├ ● /atelier/charles-rennie-mackintosh\n│ └ ● [+12 more paths]\n├   /compare/[stage]\n│ ├ ● /compare/empty\n│ ├ ● /compare/css\n│ ├ ● /compare/surface\n│ └ ● /compare/solid\n├ ○ /planetarium\n├   /planetarium/[person]\n│ ├ ● /planetarium/william-morris\n│ ├ ● /planetarium/alphonse-mucha\n│ ├ ● /planetarium/charles-rennie-mackintosh\n│ └ ● [+12 more paths]\n└ ○ /records\n\n\n○  (Static)  prerendered as static content\n●  (SSG)     prerendered as static HTML (uses generateStaticParams)\n\n",
   "stderr": "",
   "outputs": [
     {
       "path": "__next.__PAGE__.txt",
-      "bytes": 126743,
-      "sha256": "994de3bea31c94ee2fcf9699d0c4f1822450efe0a7a8608aafd59d91e12252fd"
+      "bytes": 126845,
+      "sha256": "481362a535fe094eb63894faa4f3022e42f1bba63dfd5cb9a8e65bb7aedfead2"
     },
     {
       "path": "__next._full.txt",
-      "bytes": 127120,
-      "sha256": "92d3d82a230d7db20df4c87df1a867c730169743bc37111175524d6260561335"
+      "bytes": 127222,
+      "sha256": "baccf2732c9ba6a6ad8b9a6631d80a6cf415efd3a06c45abf09a81b56a78f808"
     },
     {
       "path": "__next._tree.txt",
       "bytes": 303,
-      "sha256": "8fd948ee382f9d0bef72ae505d8aaff5f5ceab434f4883f1c21c3d4d163af7d8"
+      "sha256": "f242eea52a4d44e82bfa9bb0431b747ff11ae6bb7174c0a8e58f37fbdcdd087b"
     },
     {
-      "path": "_next/static/chunks/494-f022f64c2e8d2bb2.js",
-      "bytes": 241325,
-      "sha256": "2801e9a20b4035ad95cdca99886853807a0abfcbeee018627b7ad3bd53a8a7f2"
+      "path": "_next/static/chunks/0.993fe4b9f06ed770.js",
+      "bytes": 19759,
+      "sha256": "98bdb70672864cf7256a52c42def64a01e7a8d51eed244b14cc63d21ee5771fa"
     },
     {
-      "path": "_next/static/chunks/494-f022f64c2e8d2bb2.js.map",
-      "bytes": 1345347,
-      "sha256": "f8963c95ad9fed67b5de0f20beee6c684d8046547dcb44c433127af494b9f8ec"
+      "path": "_next/static/chunks/0.993fe4b9f06ed770.js.map",
+      "bytes": 50972,
+      "sha256": "96d183f9a68cb64144d58e70684722bf6ca99441ff7772635d1c508854d25f32"
     },
     {
-      "path": "_next/static/chunks/860-4f1dccd5b0dc4cd9.js",
-      "bytes": 19289,
-      "sha256": "612fa98af8eececdb0bd31cbb76a51e691f43456942c4084d8efa0001295fd0d"
+      "path": "_next/static/chunks/21566691.69f364acaf3746d2.js",
+      "bytes": 203549,
+      "sha256": "ba3c9bea928a2c7d205c311b94e43d530831a59ecc3bee2e5c7ed07b00ea253d"
     },
     {
-      "path": "_next/static/chunks/860-4f1dccd5b0dc4cd9.js.map",
-      "bytes": 61038,
-      "sha256": "d233cb92c7809792c77475d5133d4a65f7ae23e7d5807760bbe4b479976a804a"
+      "path": "_next/static/chunks/21566691.69f364acaf3746d2.js.map",
+      "bytes": 1996063,
+      "sha256": "0d19461032f110f8e3beeb4df018d712591167b2cf2df280d839457e40de2233"
     },
     {
-      "path": "_next/static/chunks/app/_global-error/page-781127486f3c990d.js",
+      "path": "_next/static/chunks/27.fd9aee0915beb770.js",
+      "bytes": 44998,
+      "sha256": "b74f9ab82cab0cc8e0c40ac64c4bef2e521b9cdd779fa789bc8f35b596c51acc"
+    },
+    {
+      "path": "_next/static/chunks/27.fd9aee0915beb770.js.map",
+      "bytes": 104920,
+      "sha256": "469d96b1fa837abe28dbf77d2d7a89517a440113af110abd13914fc1150365fd"
+    },
+    {
+      "path": "_next/static/chunks/443-bfe0351e3fff4a8a.js",
+      "bytes": 19288,
+      "sha256": "671770428ff78f19b9f1adb24485549cb345323fdb7f54983ad2713c66ebdfd2"
+    },
+    {
+      "path": "_next/static/chunks/443-bfe0351e3fff4a8a.js.map",
+      "bytes": 61392,
+      "sha256": "acaecab89cb564fd57a360c36b3c98f12d77220e1d3bac310c58558c127e87da"
+    },
+    {
+      "path": "_next/static/chunks/634-3f771d38c6930646.js",
+      "bytes": 241310,
+      "sha256": "0681f8341268a5099a84803604a82572a82c568b1d36b37210f6116e2b71fb62"
+    },
+    {
+      "path": "_next/static/chunks/634-3f771d38c6930646.js.map",
+      "bytes": 1345930,
+      "sha256": "78c43777af2b6a306a759f024b05e592daf47bde7f5edacc775c5285ff191c89"
+    },
+    {
+      "path": "_next/static/chunks/77dcdae9-156e9e9b533be39c.js",
+      "bytes": 201106,
+      "sha256": "69a1f3129835dfdde0d6470d83ad4960296d58e623b9d58e8eb371a6b7e8f8d6"
+    },
+    {
+      "path": "_next/static/chunks/77dcdae9-156e9e9b533be39c.js.map",
+      "bytes": 739028,
+      "sha256": "496fa472c4b2c071711709d45981d95586a63e0f2bfd2cd443ecf1d0a4c87afe"
+    },
+    {
+      "path": "_next/static/chunks/80213038.4e1a68a530d8702f.js",
+      "bytes": 356631,
+      "sha256": "9a8a2d3cfef1ae0ee438c88bc0aed2678fe9fbc7d49bf58dc7c5f320049bfbe2"
+    },
+    {
+      "path": "_next/static/chunks/80213038.4e1a68a530d8702f.js.map",
+      "bytes": 810879,
+      "sha256": "0546c9a86b23cd17ee91d3abe78259ff19c46231476a3174ef59278d99e98618"
+    },
+    {
+      "path": "_next/static/chunks/app/_global-error/page-bfeaac7d2ed5f796.js",
       "bytes": 147,
-      "sha256": "8b0feef610572ba6708a92530782a68444a4bc0d11124987f3e0e3b957721762"
+      "sha256": "606e3ce90309ed4a657d85a8a676f034f0696a2cfe8d1588a534f51fb310ff0c"
     },
     {
-      "path": "_next/static/chunks/app/_not-found/page-74c30c3b2ef037b9.js",
+      "path": "_next/static/chunks/app/_not-found/page-b4f8dff7e4b774ff.js",
       "bytes": 2717,
-      "sha256": "a85937c1eade8864cfdea5e99428353e6e952ba47242886f0c8d343ae70f50ba"
+      "sha256": "317ebf22fa841b21349bf2b631077526cde0037b22aee3fa9ba0497402bcd803"
     },
     {
-      "path": "_next/static/chunks/app/_not-found/page-74c30c3b2ef037b9.js.map",
-      "bytes": 4666,
-      "sha256": "e8dfae7cc9b9ffae5b39ae4b0ccd961c12a35e399ea78bb9a3b37a87c94b9677"
+      "path": "_next/static/chunks/app/_not-found/page-b4f8dff7e4b774ff.js.map",
+      "bytes": 4747,
+      "sha256": "be114fc601e271cca2d10c1a2db3f0b4f4023042f7572b33672502351ab16b6b"
     },
     {
-      "path": "_next/static/chunks/app/atelier/[person]/page-f41ef9f5d8111000.js",
-      "bytes": 58263,
-      "sha256": "a651b0ed51ecb62661b30127cfd98282981999adf6bd0bdc8307507391afe982"
+      "path": "_next/static/chunks/app/atelier/[person]/page-cbfa85cbb6a14385.js",
+      "bytes": 58262,
+      "sha256": "acc20d4c264d7f6be43dbb2c7337df785311d6aa0e8459051ef809a6964c42b7"
     },
     {
-      "path": "_next/static/chunks/app/atelier/[person]/page-f41ef9f5d8111000.js.map",
-      "bytes": 123680,
-      "sha256": "7f7d0053322f9545f35e0abc16c45e1bd80d2a31a81408206182b81c139e21d6"
+      "path": "_next/static/chunks/app/atelier/[person]/page-cbfa85cbb6a14385.js.map",
+      "bytes": 124187,
+      "sha256": "9d44ba124364ca31078a945a3b69e0e7878ee64c14798d7c13795e4b1a44274d"
     },
     {
-      "path": "_next/static/chunks/app/compare/[stage]/page-15021f8ba0ca2294.js",
-      "bytes": 7258,
-      "sha256": "6546c79cc998bed992c258f516a86606e39b0f9129709f05330168637bc57be1"
+      "path": "_next/static/chunks/app/compare/[stage]/page-38ac6c78b51d74a0.js",
+      "bytes": 7254,
+      "sha256": "d881f2537db4483dc605d0a462d36cf266b869b45a9c54d6446cd954af046f11"
     },
     {
-      "path": "_next/static/chunks/app/compare/[stage]/page-15021f8ba0ca2294.js.map",
-      "bytes": 25006,
-      "sha256": "8ed8cb86be319828b58617464c125a1b204dcaeb065565c778252a637e6bd7c1"
+      "path": "_next/static/chunks/app/compare/[stage]/page-38ac6c78b51d74a0.js.map",
+      "bytes": 25227,
+      "sha256": "177e4e4c479d33815791056539e4ff8100d19dbe7efc38cfc3afc7bb77f66f87"
     },
     {
-      "path": "_next/static/chunks/app/layout-f6d302a1457c9470.js",
-      "bytes": 246,
-      "sha256": "dac49d632884fc590b368c6c239956737963b68c2c9eb8f1548391fa1d3ff71e"
+      "path": "_next/static/chunks/app/layout-b6f55007ab641391.js",
+      "bytes": 247,
+      "sha256": "40deb2aa88e67a3dce6bff6d76f97fac063e71e06a92b76cf0d817e123df081f"
     },
     {
-      "path": "_next/static/chunks/app/layout-f6d302a1457c9470.js.map",
-      "bytes": 400,
-      "sha256": "a33623825c36bb55b18111cfdebfc1ddac1156877ac75dcbd13f98c862a2bc23"
+      "path": "_next/static/chunks/app/layout-b6f55007ab641391.js.map",
+      "bytes": 367,
+      "sha256": "d021dee1b8718b38b0b822d5da1351b7d3ef53f073872f1cb23e55bbb1c2e0b8"
     },
     {
-      "path": "_next/static/chunks/app/page-15021f8ba0ca2294.js",
-      "bytes": 7258,
-      "sha256": "6546c79cc998bed992c258f516a86606e39b0f9129709f05330168637bc57be1"
+      "path": "_next/static/chunks/app/page-a376b909d53a0ac4.js",
+      "bytes": 41817,
+      "sha256": "8e0dd790ff03990ab03072923708f7803f6b0d039ee1b7ee6bdee6dde8e9c67a"
     },
     {
-      "path": "_next/static/chunks/app/page-15021f8ba0ca2294.js.map",
-      "bytes": 24990,
-      "sha256": "315d227e85e765c28b858371b4dde8156d24909b57d1b812976008d869937b49"
+      "path": "_next/static/chunks/app/page-a376b909d53a0ac4.js.map",
+      "bytes": 86685,
+      "sha256": "dc98b0dabc03ce66f171571a3a3f50d40fca53f1f0874be3fdb376705dcefb22"
     },
     {
-      "path": "_next/static/chunks/app/planetarium/[person]/page-472abdd9256f33a2.js",
+      "path": "_next/static/chunks/app/planetarium/[person]/page-d75b3b4188e08f26.js",
       "bytes": 127,
-      "sha256": "bbfe210147c400c3cfdef87be2b33e34d1539ad5080594d2141a7fe3bdb9c876"
+      "sha256": "7cd920332199d177ed8fe24d16898478a12a60ba06da47e4d7a4b9a83679947f"
     },
     {
-      "path": "_next/static/chunks/app/planetarium/page-12c45b0e418600f6.js",
+      "path": "_next/static/chunks/app/planetarium/page-b5b75a295a648c8a.js",
       "bytes": 128,
-      "sha256": "9129f805967b70a9d9b5a18f05c54475e619b726abe51905bb0fdb69b17a343c"
+      "sha256": "c261cfb265a8576e117711a5fb73a00b43278a30650276ddd2e92485bc8889f2"
     },
     {
-      "path": "_next/static/chunks/app/records/page-15021f8ba0ca2294.js",
-      "bytes": 7258,
-      "sha256": "6546c79cc998bed992c258f516a86606e39b0f9129709f05330168637bc57be1"
+      "path": "_next/static/chunks/app/records/page-38ac6c78b51d74a0.js",
+      "bytes": 7254,
+      "sha256": "d881f2537db4483dc605d0a462d36cf266b869b45a9c54d6446cd954af046f11"
     },
     {
-      "path": "_next/static/chunks/app/records/page-15021f8ba0ca2294.js.map",
-      "bytes": 24998,
-      "sha256": "b645b9bd8cef5f8e5efa2e7bba78332605c8fbf54d43738fe35aaaf08888a080"
+      "path": "_next/static/chunks/app/records/page-38ac6c78b51d74a0.js.map",
+      "bytes": 25219,
+      "sha256": "a229dbe8c1428e7193b300abe82a0d03110874b680b78c66bcfa115c562a8611"
     },
     {
-      "path": "_next/static/chunks/c7879cf7-cfd15700c6c63d56.js",
-      "bytes": 201107,
-      "sha256": "26c296dca3d2079c641f724d79b78f5c12a1eb8db8f159b88681f495b9d0c875"
+      "path": "_next/static/chunks/framework-fcbb0ee4efc40d8f.js",
+      "bytes": 218959,
+      "sha256": "a109d2e9eda3755227f64775f8689cf521003bec0d4b6a0fa6284b9cb3c0a27f"
     },
     {
-      "path": "_next/static/chunks/c7879cf7-cfd15700c6c63d56.js.map",
-      "bytes": 738953,
-      "sha256": "9215e0a1a119dd568cb5f22146fcf024920f53ba2ad26a677e1bbc1b1e166c79"
+      "path": "_next/static/chunks/framework-fcbb0ee4efc40d8f.js.map",
+      "bytes": 798807,
+      "sha256": "ec4a1c8a0e957ff45a3543271c36fef2f1e6dc192183f3fdb12c9e867a772de0"
     },
     {
-      "path": "_next/static/chunks/framework-4ea8b8cd63e736d3.js",
-      "bytes": 218961,
-      "sha256": "52949ea6068ed114309a5ff902b257cbc82784eaf4e2afefee11138b68efb5bf"
+      "path": "_next/static/chunks/main-29d2fd5c9ad49cf9.js",
+      "bytes": 139110,
+      "sha256": "3f46905ad66f9044ddc08bf0243cedf68c6746ac81c65e4bf6a6b990203702a1"
     },
     {
-      "path": "_next/static/chunks/framework-4ea8b8cd63e736d3.js.map",
-      "bytes": 797978,
-      "sha256": "0eeb4617ddfeb1c9350a6a46a9d1a4268586d04c1852f6355e5c25b31d85796c"
+      "path": "_next/static/chunks/main-29d2fd5c9ad49cf9.js.map",
+      "bytes": 549973,
+      "sha256": "a37cba49480b520d317b249320079ba916c96fb1bec30e32dce7510b14087fd9"
     },
     {
-      "path": "_next/static/chunks/main-87a2f5d69d2b3e6a.js",
-      "bytes": 139104,
-      "sha256": "5e505e26f90bdcb5ed4fa6ea507b6bac7e8d9d19c5b7dc68a5e929db0ca83d6f"
+      "path": "_next/static/chunks/main-app-13659b4011931f93.js",
+      "bytes": 566,
+      "sha256": "125165541c26e9c794cff561fd0180c017f2b4660058a337e3f6d51734bcc067"
     },
     {
-      "path": "_next/static/chunks/main-87a2f5d69d2b3e6a.js.map",
-      "bytes": 548996,
-      "sha256": "743200d37cace09a443d45cb20d6d74dad61de767722d8d2d399492f2847bccb"
-    },
-    {
-      "path": "_next/static/chunks/main-app-210e09bfe2df2749.js",
-      "bytes": 567,
-      "sha256": "98a49fcbfb42b407d4be80877f30fe9dbe6f9dd7d920092028b1e9b266e4efa6"
-    },
-    {
-      "path": "_next/static/chunks/main-app-210e09bfe2df2749.js.map",
+      "path": "_next/static/chunks/main-app-13659b4011931f93.js.map",
       "bytes": 1934,
-      "sha256": "defdf117e04993cee53e175393e113c72756b2ab3770b20c960139ed7c4efa3a"
+      "sha256": "cfcd6a6923a544fb4ef59011c47442556a437be8f54d82da50192c2d44cf5486"
     },
     {
-      "path": "_next/static/chunks/next/dist/client/components/builtin/app-error-781127486f3c990d.js",
+      "path": "_next/static/chunks/next/dist/client/components/builtin/app-error-bfeaac7d2ed5f796.js",
       "bytes": 147,
-      "sha256": "8b0feef610572ba6708a92530782a68444a4bc0d11124987f3e0e3b957721762"
+      "sha256": "606e3ce90309ed4a657d85a8a676f034f0696a2cfe8d1588a534f51fb310ff0c"
     },
     {
-      "path": "_next/static/chunks/next/dist/client/components/builtin/forbidden-781127486f3c990d.js",
+      "path": "_next/static/chunks/next/dist/client/components/builtin/forbidden-bfeaac7d2ed5f796.js",
       "bytes": 147,
-      "sha256": "8b0feef610572ba6708a92530782a68444a4bc0d11124987f3e0e3b957721762"
+      "sha256": "606e3ce90309ed4a657d85a8a676f034f0696a2cfe8d1588a534f51fb310ff0c"
     },
     {
-      "path": "_next/static/chunks/next/dist/client/components/builtin/global-error-99e7421154951642.js",
+      "path": "_next/static/chunks/next/dist/client/components/builtin/global-error-084f1cebbd83451f.js",
       "bytes": 237,
-      "sha256": "013b289ca86fca9260db8313bb33aac3f0c7879b4010467be4e0018647d5487e"
+      "sha256": "95320534cdf5b3ce0a1e434a5fd5a0304f0841ffb7b2a4c462a77d1e2a7eb76f"
     },
     {
-      "path": "_next/static/chunks/next/dist/client/components/builtin/global-error-99e7421154951642.js.map",
+      "path": "_next/static/chunks/next/dist/client/components/builtin/global-error-084f1cebbd83451f.js.map",
       "bytes": 411,
-      "sha256": "2b5f1a8dcafa124eb4367cb2fdecfdad176abfe4be1daad9a574c06edfcd188a"
+      "sha256": "c72513af9b3147d5e6f22a7045e15f35a6d36ac74bb362b70468898abad88e58"
     },
     {
-      "path": "_next/static/chunks/next/dist/client/components/builtin/not-found-781127486f3c990d.js",
+      "path": "_next/static/chunks/next/dist/client/components/builtin/not-found-bfeaac7d2ed5f796.js",
       "bytes": 147,
-      "sha256": "8b0feef610572ba6708a92530782a68444a4bc0d11124987f3e0e3b957721762"
+      "sha256": "606e3ce90309ed4a657d85a8a676f034f0696a2cfe8d1588a534f51fb310ff0c"
     },
     {
-      "path": "_next/static/chunks/next/dist/client/components/builtin/unauthorized-781127486f3c990d.js",
+      "path": "_next/static/chunks/next/dist/client/components/builtin/unauthorized-bfeaac7d2ed5f796.js",
       "bytes": 147,
-      "sha256": "8b0feef610572ba6708a92530782a68444a4bc0d11124987f3e0e3b957721762"
+      "sha256": "606e3ce90309ed4a657d85a8a676f034f0696a2cfe8d1588a534f51fb310ff0c"
     },
     {
       "path": "_next/static/chunks/polyfills-42372ed130431b0a.js",
@@ -688,14 +804,14 @@
       "sha256": "0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683"
     },
     {
-      "path": "_next/static/chunks/webpack-b3e53992ad1fb5a2.js",
-      "bytes": 3314,
-      "sha256": "c86b7d6d86e8ab0dcec8046616cbdaa426443f6f21e456ced40c81e56ac812ba"
+      "path": "_next/static/chunks/webpack-4195a0c22675ab38.js",
+      "bytes": 3549,
+      "sha256": "2c96fc6115747174109ec2b751daae1e0004dc3a466978f47e5ea6b89c46fb63"
     },
     {
-      "path": "_next/static/chunks/webpack-b3e53992ad1fb5a2.js.map",
-      "bytes": 12775,
-      "sha256": "741e6bb4bb0c7d0a74c4b182be81d214da424d05a18dac04925963e7b1b21c60"
+      "path": "_next/static/chunks/webpack-4195a0c22675ab38.js.map",
+      "bytes": 13428,
+      "sha256": "973f1784ce99e901a1e7fe3ce990e68e38cf654677fd2b0b918b7d5bb7fac133"
     },
     {
       "path": "_next/static/css/23a2006b8a6a1995.css",
@@ -708,434 +824,434 @@
       "sha256": "da1fa4f13d9675d5e3400eb8c8e12a97fa93449c5c98b2f63f7d68a19bde5f7e"
     },
     {
-      "path": "_next/static/css/7831bfa5e087180a.css",
-      "bytes": 36287,
-      "sha256": "3bb404f67111cf25d17161713b133b3ccfa5f29f2956579208589db914aea2e4"
+      "path": "_next/static/css/2767dff42d8c1a4e.css",
+      "bytes": 38854,
+      "sha256": "5b59d28a98c85f15903da7d6385fa286200a4d16ae12233b6c9bab350ae78d5c"
     },
     {
-      "path": "_next/static/css/7831bfa5e087180a.css.map",
-      "bytes": 53656,
-      "sha256": "e4b4e1e8efe3ceb7b2837258ead73cdedb00c5500e00ba350a7f301ef03bd74b"
+      "path": "_next/static/css/2767dff42d8c1a4e.css.map",
+      "bytes": 57473,
+      "sha256": "67c0a757b8e458e3d213c168efb2991ebe3b34ae27d4ad1cdaa40d4f81f0f626"
     },
     {
-      "path": "_next/static/jDBF8fXskMWxzsMjw2reX/_buildManifest.js",
+      "path": "_next/static/s6tMu1Uom0RSmzgC7UFuf/_buildManifest.js",
       "bytes": 630,
       "sha256": "157a81927200fd279876c5827913c2cd75750e5244c1600673033aa12c23b26f"
     },
     {
-      "path": "_next/static/jDBF8fXskMWxzsMjw2reX/_ssgManifest.js",
+      "path": "_next/static/s6tMu1Uom0RSmzgC7UFuf/_ssgManifest.js",
       "bytes": 172,
       "sha256": "d75f0530c424bd397501493846bd97336bbf04c91d75f761c8de68ac2dc9d43c"
     },
     {
       "path": "_not-found/__next._full.txt",
-      "bytes": 3612,
-      "sha256": "0b92353c03ea5530207d80e471488c988a9d4f7d43bcc6d3f6476f125d92dd33"
+      "bytes": 3610,
+      "sha256": "f95b6a488bb95c08e2483c1f0baeeda2f2e6dab11014f1c1ed1720b8a1f57534"
     },
     {
       "path": "_not-found/__next._not-found.__PAGE__.txt",
-      "bytes": 3082,
-      "sha256": "11b447a6bf8451f8f89789b687303ee4bc417d4c03b92c5754a80d61d5736e7d"
+      "bytes": 3080,
+      "sha256": "cc71173e1415dbeb4237c873672114494e7a3bf0819168ae765352ba810c3f1d"
     },
     {
       "path": "_not-found/__next._tree.txt",
       "bytes": 326,
-      "sha256": "44982d82da7e13f69d2f102616220ca95e2fc19182c5e0b06e12a86b7834deef"
+      "sha256": "ad6b14de79a84c7c9c94821605459cf10d7b7ec95d836a59bede645fb654f714"
     },
     {
       "path": "_not-found/index.html",
-      "bytes": 6301,
-      "sha256": "b6f0ce8d9b43bd1dcc46944ea2331dc13a4ba599f2ceace4363da777c4680da2"
+      "bytes": 6299,
+      "sha256": "c6dab04abda13d9bb3ce64c17513794e02a0ca6acf22a4aa7d9081bf068d0608"
     },
     {
       "path": "_not-found/index.txt",
-      "bytes": 3612,
-      "sha256": "0b92353c03ea5530207d80e471488c988a9d4f7d43bcc6d3f6476f125d92dd33"
+      "bytes": 3610,
+      "sha256": "f95b6a488bb95c08e2483c1f0baeeda2f2e6dab11014f1c1ed1720b8a1f57534"
     },
     {
       "path": "404.html",
-      "bytes": 6301,
-      "sha256": "b6f0ce8d9b43bd1dcc46944ea2331dc13a4ba599f2ceace4363da777c4680da2"
+      "bytes": 6299,
+      "sha256": "c6dab04abda13d9bb3ce64c17513794e02a0ca6acf22a4aa7d9081bf068d0608"
     },
     {
       "path": "404/index.html",
-      "bytes": 6301,
-      "sha256": "b6f0ce8d9b43bd1dcc46944ea2331dc13a4ba599f2ceace4363da777c4680da2"
+      "bytes": 6299,
+      "sha256": "c6dab04abda13d9bb3ce64c17513794e02a0ca6acf22a4aa7d9081bf068d0608"
     },
     {
       "path": "atelier/alphonse-mucha/__next._full.txt",
-      "bytes": 11744,
-      "sha256": "de80c0f6fdfd427573f13892a2834e351e69d705fa33786ba0ff216ba434034f"
+      "bytes": 11742,
+      "sha256": "4cea51063f5155113cfac78a5f77db4306b833598c21b3ee8d1b21c78e31e5ab"
     },
     {
       "path": "atelier/alphonse-mucha/__next._tree.txt",
       "bytes": 495,
-      "sha256": "adc83ab43def65c1dab3ab1f3ca315e06dff0e3a48c584d92a41e2968df4187c"
+      "sha256": "1ee97e230ca81dcec9efe9d320ec9d91ece50826317f855fe9b98bd7bacf0226"
     },
     {
       "path": "atelier/alphonse-mucha/__next.atelier.$d$person.__PAGE__.txt",
-      "bytes": 10950,
-      "sha256": "0355775f35236cf16d3b6022d6c49173576a552ca29ac96f85e5eb21ae6cc05b"
+      "bytes": 10948,
+      "sha256": "7793290e4cc73cfaeca7f5eadd3d1468755d1e9b8b94cbeb1edcdbfd1dcb276d"
     },
     {
       "path": "atelier/alphonse-mucha/index.html",
-      "bytes": 28564,
-      "sha256": "dba4174038deb14fa6fff912f4c62c334cb2eec6b97c50d7b8a16198354e4b62"
+      "bytes": 28562,
+      "sha256": "5ae598c1fc799f179ac0122f5a8e8da9f1a34726408d9e65c94d079006088692"
     },
     {
       "path": "atelier/alphonse-mucha/index.txt",
-      "bytes": 11744,
-      "sha256": "de80c0f6fdfd427573f13892a2834e351e69d705fa33786ba0ff216ba434034f"
+      "bytes": 11742,
+      "sha256": "4cea51063f5155113cfac78a5f77db4306b833598c21b3ee8d1b21c78e31e5ab"
     },
     {
       "path": "atelier/charles-eames/__next._full.txt",
-      "bytes": 9760,
-      "sha256": "2d478c2eccf55bd606580f7dd3ed70144c92fcca4183ff3d1eb4eee6bf35f2a2"
+      "bytes": 9758,
+      "sha256": "e917c6c764ff43a289beaf6f5ef56e50020f4627a76d14e11edb47ca4c663198"
     },
     {
       "path": "atelier/charles-eames/__next._tree.txt",
       "bytes": 494,
-      "sha256": "0e4f7da3d47a02d3da5c6b1df71b154747dbf8bcf05137cdc926d01bf179d61f"
+      "sha256": "72d65cc8ece30a4e3f7e15d5564740c9fe757127c92ba8b0f611e967e84b876e"
     },
     {
       "path": "atelier/charles-eames/__next.atelier.$d$person.__PAGE__.txt",
-      "bytes": 9008,
-      "sha256": "3605eb221906f3231028348ce496c52d3cc616f4f08552cf584bf7ac4df26298"
+      "bytes": 9006,
+      "sha256": "13b397e6c1594982bdcb706ba40ebf8a56bfebf46405a828d2f7f6e440a9ce60"
     },
     {
       "path": "atelier/charles-eames/index.html",
-      "bytes": 24267,
-      "sha256": "ecb809b59c1e59da4d62c4756007f29398f58153dde51d9e7d6456f861c8a834"
+      "bytes": 24265,
+      "sha256": "c3cfd976835372b68cafa2e462c72f6212ad3edf8d22298e9ebac27ee9538c10"
     },
     {
       "path": "atelier/charles-eames/index.txt",
-      "bytes": 9760,
-      "sha256": "2d478c2eccf55bd606580f7dd3ed70144c92fcca4183ff3d1eb4eee6bf35f2a2"
+      "bytes": 9758,
+      "sha256": "e917c6c764ff43a289beaf6f5ef56e50020f4627a76d14e11edb47ca4c663198"
     },
     {
       "path": "atelier/charles-rennie-mackintosh/__next._full.txt",
-      "bytes": 12906,
-      "sha256": "a7532e23a643dc3952c0698c2efb46f77ed14db9927defc77bcba71f68b5b0fd"
+      "bytes": 12904,
+      "sha256": "fa1b5065e53d068f45cb57a7b14bd8b1a91029e0d48d4a2a7ef70494e0750281"
     },
     {
       "path": "atelier/charles-rennie-mackintosh/__next._tree.txt",
       "bytes": 506,
-      "sha256": "0aab9e9320264a33b227220b5598e18dddabf9497924b360835cc07fb34cd7f2"
+      "sha256": "5ab729ed9cb2bd736adbb8e56577e20b8fae13cf241c283e32df867ee9202324"
     },
     {
       "path": "atelier/charles-rennie-mackintosh/__next.atelier.$d$person.__PAGE__.txt",
-      "bytes": 12132,
-      "sha256": "b2419cd4ca054a43065f418335ae938eb44016da4ca87b2ee3d74e26dda280a6"
+      "bytes": 12130,
+      "sha256": "f44d5ecfe6837186f69252275e8708ea75df43d00158dff12e89b3ff77f40430"
     },
     {
       "path": "atelier/charles-rennie-mackintosh/index.html",
-      "bytes": 30797,
-      "sha256": "7432ec52d5ee9e7b237cd6a6e8e43784dab4cca49a0be57ad8b35dc06db84f3c"
+      "bytes": 30795,
+      "sha256": "1b4628186fd89514becab047a550c770569edb00e8111a0745ee28d698be2cec"
     },
     {
       "path": "atelier/charles-rennie-mackintosh/index.txt",
-      "bytes": 12906,
-      "sha256": "a7532e23a643dc3952c0698c2efb46f77ed14db9927defc77bcba71f68b5b0fd"
+      "bytes": 12904,
+      "sha256": "fa1b5065e53d068f45cb57a7b14bd8b1a91029e0d48d4a2a7ef70494e0750281"
     },
     {
       "path": "atelier/dieter-rams/__next._full.txt",
-      "bytes": 10815,
-      "sha256": "4bb52c1e1e2ab60c8cae1efb7d30459b6086d00f1df74b1e17d46f6fb696cf31"
+      "bytes": 10813,
+      "sha256": "ab78509da69dab6171779dd0c0a35f3daf7bc6dc8d4855d19caeaa7d73de88cd"
     },
     {
       "path": "atelier/dieter-rams/__next._tree.txt",
       "bytes": 492,
-      "sha256": "58a80f54c46d931bc73f7e44b8466374c91e4601455078283e45682c5e53dcc2"
+      "sha256": "7645c1b2ff95324427af656b3ab9c01ab73573d4f6dda58d3214325a69bf9149"
     },
     {
       "path": "atelier/dieter-rams/__next.atelier.$d$person.__PAGE__.txt",
-      "bytes": 10069,
-      "sha256": "18a25ee465f405f2531ec1f00da26d3243a6e5bcd57a102855429c3fb2cb9bc3"
+      "bytes": 10067,
+      "sha256": "f6ac07155896f468a8f4983dcb2af00ca0118246521ad3343c5d1b4d2404d7fa"
     },
     {
       "path": "atelier/dieter-rams/index.html",
-      "bytes": 26479,
-      "sha256": "34c104e5ce5c46d770b1ee93b3590c5566f979afda1b35d2e4ff8191ae8f622d"
+      "bytes": 26477,
+      "sha256": "79e89e951f7f3a3ceb35637ae9b38c40416fb83b0b94f84680bcf5d7dec6dea7"
     },
     {
       "path": "atelier/dieter-rams/index.txt",
-      "bytes": 10815,
-      "sha256": "4bb52c1e1e2ab60c8cae1efb7d30459b6086d00f1df74b1e17d46f6fb696cf31"
+      "bytes": 10813,
+      "sha256": "ab78509da69dab6171779dd0c0a35f3daf7bc6dc8d4855d19caeaa7d73de88cd"
     },
     {
       "path": "atelier/ettore-sottsass/__next._full.txt",
-      "bytes": 13348,
-      "sha256": "1bbb5f742dac9407495a54c382c1cc429d58fd50d5c0ac15147782e690d15e42"
+      "bytes": 13346,
+      "sha256": "9c3c6e3dadd47866fef25b3c9ab3949698aa97d7b1adfc371ea7bcae38e2b080"
     },
     {
       "path": "atelier/ettore-sottsass/__next._tree.txt",
       "bytes": 496,
-      "sha256": "4f2301c077640d231273d441da72dca7b382e0d30e2655eec2bfa13b0ea4731d"
+      "sha256": "a89d363e2e169386424d07ea506d24ccc7e51d448d8b7a012a9d8c03b4437936"
     },
     {
       "path": "atelier/ettore-sottsass/__next.atelier.$d$person.__PAGE__.txt",
-      "bytes": 12600,
-      "sha256": "e3747cc0e396321d32165c06e5e8b2c8b720213399bf1e1307eeaf131ef11944"
+      "bytes": 12598,
+      "sha256": "ecdfceb5aea197bf893d4a50b5484afaea7e7017668456fcb631787fc266798b"
     },
     {
       "path": "atelier/ettore-sottsass/index.html",
-      "bytes": 32017,
-      "sha256": "c551a9443dce48ea3fcb5dc6edfcac37c6d64fa47c29f9aefad8298109cb6010"
+      "bytes": 32015,
+      "sha256": "95a9d63ef979595315585439b3995de018127d8f08c4a7bd99f64f229156ffd2"
     },
     {
       "path": "atelier/ettore-sottsass/index.txt",
-      "bytes": 13348,
-      "sha256": "1bbb5f742dac9407495a54c382c1cc429d58fd50d5c0ac15147782e690d15e42"
+      "bytes": 13346,
+      "sha256": "9c3c6e3dadd47866fef25b3c9ab3949698aa97d7b1adfc371ea7bcae38e2b080"
     },
     {
       "path": "atelier/gerrit-rietveld/__next._full.txt",
-      "bytes": 10932,
-      "sha256": "30d60f18c1628ef5aa2411354348d8b8eb4b3f2a50cb3d93e3274b868079d5ae"
+      "bytes": 10930,
+      "sha256": "d6ff38a3e86cfacb685e647614da6868da050b3ef104ff52fae72b335b71873c"
     },
     {
       "path": "atelier/gerrit-rietveld/__next._tree.txt",
       "bytes": 496,
-      "sha256": "a3f3ba4761e7ab7bbff583337018d7fd38400b75c043b4f3bfd1353fac246867"
+      "sha256": "375355f8ec5c819d2ede041753e0e3a25f8266575e83533c649209061250e655"
     },
     {
       "path": "atelier/gerrit-rietveld/__next.atelier.$d$person.__PAGE__.txt",
-      "bytes": 10188,
-      "sha256": "3157a2af96a2fcf256cd7c35fb35dc786ef287d3bb456a17ef923dc4a85e2d6d"
+      "bytes": 10186,
+      "sha256": "1149222ced7c24813a2b59fccbe3dae9910f1c9a8d12bfc8bbc10ea741982310"
     },
     {
       "path": "atelier/gerrit-rietveld/index.html",
-      "bytes": 26945,
-      "sha256": "6aacb8e75ec3efa5febc4c7d14921dbdfc9b2e3fa3f1639a8a187cc606d5209f"
+      "bytes": 26943,
+      "sha256": "992b3734cd76db3f6b8bf0aa6e7b4db10a98957bb7a3bdad44897ff1a14a66ea"
     },
     {
       "path": "atelier/gerrit-rietveld/index.txt",
-      "bytes": 10932,
-      "sha256": "30d60f18c1628ef5aa2411354348d8b8eb4b3f2a50cb3d93e3274b868079d5ae"
+      "bytes": 10930,
+      "sha256": "d6ff38a3e86cfacb685e647614da6868da050b3ef104ff52fae72b335b71873c"
     },
     {
       "path": "atelier/herbert-bayer/__next._full.txt",
-      "bytes": 11282,
-      "sha256": "3861eeef6835abddfaa6f600ee3a4e9f43f307501724f6b1a87ceed60ea83895"
+      "bytes": 11280,
+      "sha256": "bc9235c84069e829820bedd0aa8b107110476fb360b95493eecb9f240f602e22"
     },
     {
       "path": "atelier/herbert-bayer/__next._tree.txt",
       "bytes": 494,
-      "sha256": "132743d9bc14d4238fc33589c70e4a4462dbbd7b21e72e422075767673b1615d"
+      "sha256": "26c97357f6b5b282a9ab758bab4d2a356aa6fab2aba7da3e163c1d3ee92bf1d9"
     },
     {
       "path": "atelier/herbert-bayer/__next.atelier.$d$person.__PAGE__.txt",
-      "bytes": 10532,
-      "sha256": "f3ad16d12b246c67ee8d3af1a3a1663fb2c4e36334a53eff6f25f469781d33e9"
+      "bytes": 10530,
+      "sha256": "505f4b61b5c503604a4b489d418612957b563c9313b433663d0193bbce111180"
     },
     {
       "path": "atelier/herbert-bayer/index.html",
-      "bytes": 27394,
-      "sha256": "982a087682fcb0a2329a1062f93732c992f0b870f53df960ecff6404486b299f"
+      "bytes": 27392,
+      "sha256": "0d5fe870779b3a4d61d6ff36a16b7760f580b45da7fbed77a52861b3b77570bd"
     },
     {
       "path": "atelier/herbert-bayer/index.txt",
-      "bytes": 11282,
-      "sha256": "3861eeef6835abddfaa6f600ee3a4e9f43f307501724f6b1a87ceed60ea83895"
+      "bytes": 11280,
+      "sha256": "bc9235c84069e829820bedd0aa8b107110476fb360b95493eecb9f240f602e22"
     },
     {
       "path": "atelier/josef-muller-brockmann/__next._full.txt",
-      "bytes": 11250,
-      "sha256": "fc398bc087b6fc8dcdaa5e5b54cb4de508db3a2c16285e8f89daa0a3cff9493b"
+      "bytes": 11248,
+      "sha256": "625e3498cb542fb8327d94f970d149745855204eab99e6610341d9b47e6d48cc"
     },
     {
       "path": "atelier/josef-muller-brockmann/__next._tree.txt",
       "bytes": 503,
-      "sha256": "4a34fe6c64005fdd362ae222aebfe6d3622f6bf7a7dbc4fd5507a4dd0dda568a"
+      "sha256": "352fba92f9d15043392a96f85a85219dd38202b4de01c5da1b750d8aaf144370"
     },
     {
       "path": "atelier/josef-muller-brockmann/__next.atelier.$d$person.__PAGE__.txt",
-      "bytes": 10482,
-      "sha256": "3458c9c5f741325ca1534ba52633dc8d9b6e98d44de7f1ba0517e98940cd93db"
+      "bytes": 10480,
+      "sha256": "241a4c4bcb34603100089367275e93bf01ce1554b26bd094ecda86cd89c20f88"
     },
     {
       "path": "atelier/josef-muller-brockmann/index.html",
-      "bytes": 27580,
-      "sha256": "a24512bb4cad8a21d4b9f52fe89f326923103e93071777a8f562239756150aa6"
+      "bytes": 27578,
+      "sha256": "ff59187d1c8ab3477aabe12363b2aa3e9082fd85da9fd8a9aa29ea082ed9841b"
     },
     {
       "path": "atelier/josef-muller-brockmann/index.txt",
-      "bytes": 11250,
-      "sha256": "fc398bc087b6fc8dcdaa5e5b54cb4de508db3a2c16285e8f89daa0a3cff9493b"
+      "bytes": 11248,
+      "sha256": "625e3498cb542fb8327d94f970d149745855204eab99e6610341d9b47e6d48cc"
     },
     {
       "path": "atelier/massimo-vignelli/__next._full.txt",
-      "bytes": 12625,
-      "sha256": "11e497027ce5704831a4b69248e9af4dda1a109dfa786f486c98afe122c11639"
+      "bytes": 12623,
+      "sha256": "2d2893a5f1d9e37f4da92de04b485410d684dd4ee16eb2681fd513ffe3e0a5e0"
     },
     {
       "path": "atelier/massimo-vignelli/__next._tree.txt",
       "bytes": 497,
-      "sha256": "c159031033e78e26e3f602fb26c9d30a769027ba7ad9d1d3a761367217a8a408"
+      "sha256": "413de89d8189c336f0e6c6a479124f1b41fc7ba1a990147d1596b537e7f27c13"
     },
     {
       "path": "atelier/massimo-vignelli/__next.atelier.$d$person.__PAGE__.txt",
-      "bytes": 11869,
-      "sha256": "b7eb4705ae81251fc6b6f919f289485fafe18191199e1e7513b4b656a9b6d6df"
+      "bytes": 11867,
+      "sha256": "7901e96da20e583636c3276700ea6a3faf1b9dc00315d310bf2552e97c00b388"
     },
     {
       "path": "atelier/massimo-vignelli/index.html",
-      "bytes": 30243,
-      "sha256": "39d2a43ab07cd7edcfc7cc78dfb8072883eec4edf957a3ddeb12d746034206ef"
+      "bytes": 30241,
+      "sha256": "41679f181ed1434a2285b398b4012f69929e9a177063eadaf030f46d281bbc83"
     },
     {
       "path": "atelier/massimo-vignelli/index.txt",
-      "bytes": 12625,
-      "sha256": "11e497027ce5704831a4b69248e9af4dda1a109dfa786f486c98afe122c11639"
+      "bytes": 12623,
+      "sha256": "2d2893a5f1d9e37f4da92de04b485410d684dd4ee16eb2681fd513ffe3e0a5e0"
     },
     {
       "path": "atelier/naoto-fukasawa/__next._full.txt",
-      "bytes": 9929,
-      "sha256": "9603903ff89d316e605c00cde78b7141d6d921b81a35cbe799c1428774a1360d"
+      "bytes": 9927,
+      "sha256": "7c21f821828c32c7b8bcae1ce804cd890e138422720984b39f5fe02e132e0d33"
     },
     {
       "path": "atelier/naoto-fukasawa/__next._tree.txt",
       "bytes": 495,
-      "sha256": "c8eb60c90dededbd200eff55093095ada799fe64116213687c1f4e779ce4923a"
+      "sha256": "06d12fb8092f0f909527a496ccf7f25e01e0edb862a10dda07a122206305d239"
     },
     {
       "path": "atelier/naoto-fukasawa/__next.atelier.$d$person.__PAGE__.txt",
-      "bytes": 9185,
-      "sha256": "504b57b514b990964b33cca8f0303282e58b14afd55cb8a9d202a78fd9fa83f5"
+      "bytes": 9183,
+      "sha256": "ea8073098406ce92c4a4e9e7b09f28bd3e03782a4786d73c42267dac261ecf87"
     },
     {
       "path": "atelier/naoto-fukasawa/index.html",
-      "bytes": 24555,
-      "sha256": "2796ed2d6603b4ccd966e8ccd97d73b132bcf38843706cb390eb5e056d0821aa"
+      "bytes": 24553,
+      "sha256": "076c70aa0879447dfab9557667afdc474f6d116582ef0c0c6e5d0b92534bd6e1"
     },
     {
       "path": "atelier/naoto-fukasawa/index.txt",
-      "bytes": 9929,
-      "sha256": "9603903ff89d316e605c00cde78b7141d6d921b81a35cbe799c1428774a1360d"
+      "bytes": 9927,
+      "sha256": "7c21f821828c32c7b8bcae1ce804cd890e138422720984b39f5fe02e132e0d33"
     },
     {
       "path": "atelier/piet-mondrian/__next._full.txt",
-      "bytes": 11789,
-      "sha256": "a20d7899675b99f29675d75c34a31f9c09294e4b08aeff86922242d83f4a4bbc"
+      "bytes": 11787,
+      "sha256": "6f13a48cc3c11c22a3989c80ae1ea4f6ce5021e73c1c41380ca86d5134ba69cd"
     },
     {
       "path": "atelier/piet-mondrian/__next._tree.txt",
       "bytes": 494,
-      "sha256": "9788ed5826f26afc1aa3f71a027eefcf5c1145e0284e58070bf49d8fe92eab33"
+      "sha256": "1d9fa8ed5e91e76e1609dc99e60329d5d0dc6c576edd75e7bc3ebe20cc5359ba"
     },
     {
       "path": "atelier/piet-mondrian/__next.atelier.$d$person.__PAGE__.txt",
-      "bytes": 11047,
-      "sha256": "d2b2c398c88c6fa16f89c6a70f965536fcd47c81cc13e1f32886dea1ddf18bc1"
+      "bytes": 11045,
+      "sha256": "79e133ddaa6b73fe51b0bb39764c2589d482b81055457377fa41b0ff4699776c"
     },
     {
       "path": "atelier/piet-mondrian/index.html",
-      "bytes": 28759,
-      "sha256": "766cac9404efe5389cf7af46e974ccfa6ee658fee3cfd58d5e4e06e1fdb5b79a"
+      "bytes": 28757,
+      "sha256": "2113dc9f32e133a36f24ee6dcc4e92aee1be32677546632be653ac386c537444"
     },
     {
       "path": "atelier/piet-mondrian/index.txt",
-      "bytes": 11789,
-      "sha256": "a20d7899675b99f29675d75c34a31f9c09294e4b08aeff86922242d83f4a4bbc"
+      "bytes": 11787,
+      "sha256": "6f13a48cc3c11c22a3989c80ae1ea4f6ce5021e73c1c41380ca86d5134ba69cd"
     },
     {
       "path": "atelier/ray-eames/__next._full.txt",
-      "bytes": 11983,
-      "sha256": "25a6737e442392a8a6b891119cd040f82cb8f341578f90597d2549b7a2ee893b"
+      "bytes": 11981,
+      "sha256": "4361ce8a86df9cbfebe10f00eb2283165308ae2955face633fd5b6c06828569c"
     },
     {
       "path": "atelier/ray-eames/__next._tree.txt",
       "bytes": 490,
-      "sha256": "8cca6f4160ad3eff713e67f1711d0b3834053cdc256968a091326a2c1f694716"
+      "sha256": "d092412dd11999b5108de6c5206fcf67fdd28caa0fa31a7b35ca91a6fa23367c"
     },
     {
       "path": "atelier/ray-eames/__next.atelier.$d$person.__PAGE__.txt",
-      "bytes": 11241,
-      "sha256": "e7e1b1858567701e32db9edcb4ea6757a1e3368a9cee15d02db718e200589b49"
+      "bytes": 11239,
+      "sha256": "35a19758c93ba5ad9ff0afa6368dbddf21ba085ab478934badfecd01b86a929e"
     },
     {
       "path": "atelier/ray-eames/index.html",
-      "bytes": 28955,
-      "sha256": "a7718e862ffbf57645a65e9b7caddf0bf841c2fba06ce8ff6c100f02fe372662"
+      "bytes": 28953,
+      "sha256": "ad049124d79cf5fed14cb92c2c00b0eb7c262c1db94f4f51e8619e46a104ed80"
     },
     {
       "path": "atelier/ray-eames/index.txt",
-      "bytes": 11983,
-      "sha256": "25a6737e442392a8a6b891119cd040f82cb8f341578f90597d2549b7a2ee893b"
+      "bytes": 11981,
+      "sha256": "4361ce8a86df9cbfebe10f00eb2283165308ae2955face633fd5b6c06828569c"
     },
     {
       "path": "atelier/rei-kawakubo/__next._full.txt",
-      "bytes": 12058,
-      "sha256": "82fa47943ade6926fdb43c7f7b591d62808005b1f215615d1c8c79a48e0b2311"
+      "bytes": 12056,
+      "sha256": "02d91b2edf3f22c46fac213645eee249ee8395a62c536ea58251408a4dfec559"
     },
     {
       "path": "atelier/rei-kawakubo/__next._tree.txt",
       "bytes": 493,
-      "sha256": "af4b98193c2a364c02824e585f05ff23d1c82d0e3154b5360b3acbf49d2040e3"
+      "sha256": "85c499f7d2e5137e90c2857356740af983b8d2a260daf5bbb459276ef5e3bde3"
     },
     {
       "path": "atelier/rei-kawakubo/__next.atelier.$d$person.__PAGE__.txt",
-      "bytes": 11308,
-      "sha256": "73ff1d40e6e0621a6cc0099b39004b62506e29ed18f41da96475551f2348f7f7"
+      "bytes": 11306,
+      "sha256": "320512d2d02d421847bdf0559610799aa787c94e3f398a6970030888778a8564"
     },
     {
       "path": "atelier/rei-kawakubo/index.html",
-      "bytes": 28824,
-      "sha256": "912bc0828ad42d5b405914301110f7b4bd32d74ceb6eab1103a4b6e5bb9a4b51"
+      "bytes": 28822,
+      "sha256": "40cb72dc844647dfc9fa752503cc59555ea98bcafadf6ed3293dee8cd9f7052b"
     },
     {
       "path": "atelier/rei-kawakubo/index.txt",
-      "bytes": 12058,
-      "sha256": "82fa47943ade6926fdb43c7f7b591d62808005b1f215615d1c8c79a48e0b2311"
+      "bytes": 12056,
+      "sha256": "02d91b2edf3f22c46fac213645eee249ee8395a62c536ea58251408a4dfec559"
     },
     {
       "path": "atelier/walter-gropius/__next._full.txt",
-      "bytes": 12095,
-      "sha256": "103c4941835781fa9bfd9b7d820e862a94ce2535e998a8c1bba8ac8d43cc8ee0"
+      "bytes": 12093,
+      "sha256": "d56a69bbf6f4f1383299649366f26e0fd4d4c4983e566d33407d19c6f175f1ca"
     },
     {
       "path": "atelier/walter-gropius/__next._tree.txt",
       "bytes": 495,
-      "sha256": "6f645e182ddb8eb7b95888988ef4256704da3181e06dcbad883d77da445feede"
+      "sha256": "1829ae23d1068b6590c3e8219dacd17fa75ea81618bba1d012a9595d84f2ec24"
     },
     {
       "path": "atelier/walter-gropius/__next.atelier.$d$person.__PAGE__.txt",
-      "bytes": 11341,
-      "sha256": "97e0365422eec85bb68f868402ca279496e624d2d7d99b34b8797cd98df06da1"
+      "bytes": 11339,
+      "sha256": "8427b4272b8507dfd33c7bdc83eff8c47d8947e9518c07e235ddb0b92a207508"
     },
     {
       "path": "atelier/walter-gropius/index.html",
-      "bytes": 29166,
-      "sha256": "7d8c732a4c0b7ea53a4718200fd6651a77d0997bfa8135ebcbecb579b7b2d182"
+      "bytes": 29164,
+      "sha256": "85e3c09631ff3f4247dbc9a2a5f06f65027be23e08914d2dfee2d14162040e89"
     },
     {
       "path": "atelier/walter-gropius/index.txt",
-      "bytes": 12095,
-      "sha256": "103c4941835781fa9bfd9b7d820e862a94ce2535e998a8c1bba8ac8d43cc8ee0"
+      "bytes": 12093,
+      "sha256": "d56a69bbf6f4f1383299649366f26e0fd4d4c4983e566d33407d19c6f175f1ca"
     },
     {
       "path": "atelier/william-morris/__next._full.txt",
-      "bytes": 14237,
-      "sha256": "482f7154e212e65763a5f7c20afcf9d978bdb455bd1cbf5acb5595ae85db9117"
+      "bytes": 14235,
+      "sha256": "83ecb517f0f7fd61552368b25a9a1263bc0134c713a17bc59f284d9ca8029743"
     },
     {
       "path": "atelier/william-morris/__next._tree.txt",
       "bytes": 495,
-      "sha256": "c1138e285a08dd718ab2e221c72259e5e4c3028688e92942802eda49b7c56656"
+      "sha256": "acec1cd1621e99386cba84c43c71906dbda7d30f524c4c6948a44416292b4077"
     },
     {
       "path": "atelier/william-morris/__next.atelier.$d$person.__PAGE__.txt",
-      "bytes": 13501,
-      "sha256": "46291d99df10409214a3859bd34435db0180aad83481d4195c31fd668a3f4887"
+      "bytes": 13499,
+      "sha256": "d7f606a6fb03152c852ee58364ebd398c5e87dfbcf3cc7088e9e40ee9e0f92d3"
     },
     {
       "path": "atelier/william-morris/index.html",
-      "bytes": 33423,
-      "sha256": "793a0b51229366af1c19a7479bb10ae842bbe2f2ff079efc77afee61501a3f06"
+      "bytes": 33421,
+      "sha256": "9f2e7b49b7f0cd9d1ff89690862fa5943a7f305f1542aa98022b2b3fcf9f6317"
     },
     {
       "path": "atelier/william-morris/index.txt",
-      "bytes": 14237,
-      "sha256": "482f7154e212e65763a5f7c20afcf9d978bdb455bd1cbf5acb5595ae85db9117"
+      "bytes": 14235,
+      "sha256": "83ecb517f0f7fd61552368b25a9a1263bc0134c713a17bc59f284d9ca8029743"
     },
     {
       "path": "characters/william-morris/evidence/chroma-despill-extended.json",
@@ -1184,103 +1300,103 @@
     },
     {
       "path": "compare/css/__next._full.txt",
-      "bytes": 6729,
-      "sha256": "4e0299be9715e7cece7bd480c7ad01eefdaab9736033f3099d8f3cdcee273047"
+      "bytes": 6727,
+      "sha256": "1b8356ed1a3cff11a76dd66251aa374969ebab5dacd56d2920c1f52ff6ac54a1"
     },
     {
       "path": "compare/css/__next._tree.txt",
       "bytes": 483,
-      "sha256": "7e48ad6e3ef196ece3abe7d6693a9a82447214f9a36761f30f787585c2e220f0"
+      "sha256": "064edaf28dfce6b83c269a85093856a2d3b4e3e48126cfe1a1e4040f74788e57"
     },
     {
       "path": "compare/css/__next.compare.$d$stage.__PAGE__.txt",
-      "bytes": 5859,
-      "sha256": "3b81404f8a33bdbedc4ff2159410debcdb74544979f2b67e5b3638d8d999b86d"
+      "bytes": 5857,
+      "sha256": "5aee6bace4f0466947250c11099a5911667ed7c4f78655f117a0e62785e21427"
     },
     {
       "path": "compare/css/index.html",
-      "bytes": 20892,
-      "sha256": "344a69006aa324bceaed34bbf76fe5344ceb483e42aa69ff9d8cb67d69cf6702"
+      "bytes": 20890,
+      "sha256": "00fd47bf7ffa53cfb510a09035e6e154b4e08c149419d9c4c3b8fbd1d79c5cb9"
     },
     {
       "path": "compare/css/index.txt",
-      "bytes": 6729,
-      "sha256": "4e0299be9715e7cece7bd480c7ad01eefdaab9736033f3099d8f3cdcee273047"
+      "bytes": 6727,
+      "sha256": "1b8356ed1a3cff11a76dd66251aa374969ebab5dacd56d2920c1f52ff6ac54a1"
     },
     {
       "path": "compare/empty/__next._full.txt",
-      "bytes": 6966,
-      "sha256": "682b11783feaee8f16bda029e14c8dc36a3f641a96cd3fba7ad8a0de51372c43"
+      "bytes": 6964,
+      "sha256": "54047000e9c9140c0521f0f17f115a88b99cae171b80bafeaf7c0e1fb7981b7d"
     },
     {
       "path": "compare/empty/__next._tree.txt",
       "bytes": 485,
-      "sha256": "6084a3a25cde6cb20d8640ccb644e2485e94307bfa81a7072ed3b80d214776fa"
+      "sha256": "f263c97bd68f467148cca33510cc14b481362b1cb653cd4c1caa90c75a5ab3a9"
     },
     {
       "path": "compare/empty/__next.compare.$d$stage.__PAGE__.txt",
-      "bytes": 6100,
-      "sha256": "12f22fd676551bd9a651a4c69dca449c92d11b3e2254ef06440dda307995199a"
+      "bytes": 6098,
+      "sha256": "1353473bb689e86ed21594e5890eb44fc1d182681d143bf7b06fc8c8d165e40e"
     },
     {
       "path": "compare/empty/index.html",
-      "bytes": 11283,
-      "sha256": "80e128aaf2cb8c4c8be9a52d9a81d3e97cec89505fe8c182990f1694709666f8"
+      "bytes": 11281,
+      "sha256": "172e8b4658b87e043f875e99598e48907ce2b2bd8dbcc171fa0fefe82d47eb4f"
     },
     {
       "path": "compare/empty/index.txt",
-      "bytes": 6966,
-      "sha256": "682b11783feaee8f16bda029e14c8dc36a3f641a96cd3fba7ad8a0de51372c43"
+      "bytes": 6964,
+      "sha256": "54047000e9c9140c0521f0f17f115a88b99cae171b80bafeaf7c0e1fb7981b7d"
     },
     {
       "path": "compare/solid/__next._full.txt",
-      "bytes": 6738,
-      "sha256": "dd7e9fcb6505080275120a512b186faef1e91b95197c42e386d6d50ed8e88aaf"
+      "bytes": 6736,
+      "sha256": "261da793826638f3ea189e0627f95680d12c869ea937fed1bdaabc6d4098126c"
     },
     {
       "path": "compare/solid/__next._tree.txt",
       "bytes": 485,
-      "sha256": "c00cbb209d24e6611dd5bea1d267308b33d991ee4e5b26187751406039ed51e7"
+      "sha256": "805a1ebf4fbba254fdcc736523a0afbd5882b17bc694102ee193049bdebb3e87"
     },
     {
       "path": "compare/solid/__next.compare.$d$stage.__PAGE__.txt",
-      "bytes": 5864,
-      "sha256": "b2f1711137b84b81ae884ffe9e6fb8b1335d41047cfdbc5ad2cbc474708b6342"
+      "bytes": 5862,
+      "sha256": "0ba8645a86e14f2b67e26ff499bff8dad71351a36b0e837fd91b2bd373b86136"
     },
     {
       "path": "compare/solid/index.html",
-      "bytes": 163978,
-      "sha256": "f0ef2f88e19357786f9d39f94b55e74b9db014b71ea9370070d2f136d2537dde"
+      "bytes": 163976,
+      "sha256": "f1310de3f8cd2cf65a71c949ae8866c90987933fe3bad50fac41f71f3a70705d"
     },
     {
       "path": "compare/solid/index.txt",
-      "bytes": 6738,
-      "sha256": "dd7e9fcb6505080275120a512b186faef1e91b95197c42e386d6d50ed8e88aaf"
+      "bytes": 6736,
+      "sha256": "261da793826638f3ea189e0627f95680d12c869ea937fed1bdaabc6d4098126c"
     },
     {
       "path": "compare/surface/__next._full.txt",
-      "bytes": 6741,
-      "sha256": "d452f4c11964808e8ea837ebe638d64da36dc0ba799340e836aaa27281b50610"
+      "bytes": 6739,
+      "sha256": "47b2aac578342e629d84f4597f40b9369c4aa69b37df1698fd28e74d41341a40"
     },
     {
       "path": "compare/surface/__next._tree.txt",
       "bytes": 487,
-      "sha256": "c991cec9d906a09930cccddb037fffe6b15c7ea21f71c75e12fb2d19535d2078"
+      "sha256": "4f305040fb46a413eb90148b342d21d006d12e62ab9e34c1013a30be3fbcf848"
     },
     {
       "path": "compare/surface/__next.compare.$d$stage.__PAGE__.txt",
-      "bytes": 5863,
-      "sha256": "7246376c2f8e9ebde606bdfe23f163c9c756fd5104ef1ebec2f92f4350e04b65"
+      "bytes": 5861,
+      "sha256": "ee31fc0530075380b7f231e00536888c845f255447b2878cbbfac34941d7de83"
     },
     {
       "path": "compare/surface/index.html",
-      "bytes": 17281,
-      "sha256": "6d14540631849e07fb9580faf563900fae4e869a0d5bfa21e9c637aae6458b61"
+      "bytes": 17279,
+      "sha256": "c50ab773c155bb32b5897cf252098215b2196c408f813b1ca8d181a1aa947e11"
     },
     {
       "path": "compare/surface/index.txt",
-      "bytes": 6741,
-      "sha256": "d452f4c11964808e8ea837ebe638d64da36dc0ba799340e836aaa27281b50610"
+      "bytes": 6739,
+      "sha256": "47b2aac578342e629d84f4597f40b9369c4aa69b37df1698fd28e74d41341a40"
     },
     {
       "path": "favicon.svg",
@@ -1289,438 +1405,438 @@
     },
     {
       "path": "index.html",
-      "bytes": 242223,
-      "sha256": "8e2ca7df78e9b4d8501f8fdf1fc396c95c3fe0e3e987ab887185d72fd228058e"
+      "bytes": 251647,
+      "sha256": "50f887be73d8e2970410a7afc0d5e83a5c5ed50929794986f9c4f98a98af4278"
     },
     {
       "path": "index.txt",
-      "bytes": 127120,
-      "sha256": "92d3d82a230d7db20df4c87df1a867c730169743bc37111175524d6260561335"
+      "bytes": 127222,
+      "sha256": "baccf2732c9ba6a6ad8b9a6631d80a6cf415efd3a06c45abf09a81b56a78f808"
     },
     {
       "path": "planetarium/__next._full.txt",
-      "bytes": 21415,
-      "sha256": "dd35547b1f81be18e43b44be4b511211d908ca74dbaf1104598155b1697a3191"
+      "bytes": 21413,
+      "sha256": "942bf3f6d998c624b2a79babcd8a3b8067423e295e9db810eb9b229f8585635d"
     },
     {
       "path": "planetarium/__next._tree.txt",
       "bytes": 381,
-      "sha256": "1c712b7f1a3129294642dd41c1fd480273fa95886688197670738721f42e8a1d"
+      "sha256": "392fc9bc7e9ff6e530384c5f3842005e1988762237ec0b15a45901df021f0ede"
     },
     {
       "path": "planetarium/__next.planetarium.__PAGE__.txt",
-      "bytes": 20403,
-      "sha256": "932038d3de94f90b363069e28aa61ba20c071a2db4caac85b200505beb7c483e"
+      "bytes": 20401,
+      "sha256": "697dcac4858342df4afc072a3390d104b908299e52a4b7f89e4d240dac9b113e"
     },
     {
       "path": "planetarium/alphonse-mucha/__next._full.txt",
-      "bytes": 19500,
-      "sha256": "c59f016ccda7cfae0a7290efcc147cb4d75ee1b49a30dc48a5fe4131ba126ba7"
+      "bytes": 19498,
+      "sha256": "ad4e99e4887da738be046cac391ffff4831ccd66325760af4e22a85b41ed5011"
     },
     {
       "path": "planetarium/alphonse-mucha/__next._tree.txt",
       "bytes": 499,
-      "sha256": "7c158232428eda935b68cc93e0ecbce87bdd839f2fa45b24e9bdb44f4bc046f0"
+      "sha256": "bb1328683628ba1b5af69e1545598ff860c1bca9174903cc521968cddf00589e"
     },
     {
       "path": "planetarium/alphonse-mucha/__next.planetarium.$d$person.__PAGE__.txt",
-      "bytes": 18338,
-      "sha256": "70ea50d5c9029698ae2dcee21104474705a89d52602cf98491104b85a0bfc1c4"
+      "bytes": 18336,
+      "sha256": "b15c1bfc934ba5106683cf53275e0a9a1f8a27e5e87b0176996257451952ea59"
     },
     {
       "path": "planetarium/alphonse-mucha/index.html",
-      "bytes": 37728,
-      "sha256": "88f502b488df45995c0b7508095d7c1f75fa0f27439e91aa33a9ce1ad6a774ea"
+      "bytes": 37726,
+      "sha256": "818c307bd82e86ab039c91491b62e368a2e7500142c5c0c9ee8d4b9265d741a6"
     },
     {
       "path": "planetarium/alphonse-mucha/index.txt",
-      "bytes": 19500,
-      "sha256": "c59f016ccda7cfae0a7290efcc147cb4d75ee1b49a30dc48a5fe4131ba126ba7"
+      "bytes": 19498,
+      "sha256": "ad4e99e4887da738be046cac391ffff4831ccd66325760af4e22a85b41ed5011"
     },
     {
       "path": "planetarium/charles-eames/__next._full.txt",
-      "bytes": 17302,
-      "sha256": "9d1710cb1dd27c042f20c0038ef0ac9e11a7ae7e661d52d655114b5fa8770969"
+      "bytes": 17300,
+      "sha256": "1cb3f4dd7fe01fc57e7f047fa0632fb21d75fc9c90cb780e1acb01b22728e519"
     },
     {
       "path": "planetarium/charles-eames/__next._tree.txt",
       "bytes": 498,
-      "sha256": "247ee115f7893f08690d6d33a1b06c1942f88218396d2943a2081389dacacac0"
+      "sha256": "403ef4e0e2c1eebc7a528da7a832ab73880aa7cf2d5173cba64c64ef713979bb"
     },
     {
       "path": "planetarium/charles-eames/__next.planetarium.$d$person.__PAGE__.txt",
-      "bytes": 16142,
-      "sha256": "a7b40839c3c4550c1aa5c6320321eaf8282b8c141ad0639d05a120358a469162"
+      "bytes": 16140,
+      "sha256": "bdb81f29159bc2c4b6a2521a67358c450c5d80fc1f85f1a4486d552d0ee3a62f"
     },
     {
       "path": "planetarium/charles-eames/index.html",
-      "bytes": 33531,
-      "sha256": "56b2daebc4b51f58a4543fb5aaafa66089784e2c06c7f109311caa99dc91d1f4"
+      "bytes": 33529,
+      "sha256": "6aef03446ccb48d51ad0314f29eae89a35d1a3b2edc87d48c011ce2d7d0e2994"
     },
     {
       "path": "planetarium/charles-eames/index.txt",
-      "bytes": 17302,
-      "sha256": "9d1710cb1dd27c042f20c0038ef0ac9e11a7ae7e661d52d655114b5fa8770969"
+      "bytes": 17300,
+      "sha256": "1cb3f4dd7fe01fc57e7f047fa0632fb21d75fc9c90cb780e1acb01b22728e519"
     },
     {
       "path": "planetarium/charles-rennie-mackintosh/__next._full.txt",
-      "bytes": 20610,
-      "sha256": "70a92ccae29be890b631bf2897f48eb71e62a15433f709562d7ee9da8f72cd11"
+      "bytes": 20608,
+      "sha256": "b3b62edaa867adf328b244168cc62053bd19029aec72c0564ccaa9bbdf14b83f"
     },
     {
       "path": "planetarium/charles-rennie-mackintosh/__next._tree.txt",
       "bytes": 510,
-      "sha256": "55cd2332232f036aec63332ee02ed21ba1f688f6661e11297ed4124f840386d1"
+      "sha256": "09029486d3f22af553cc44b8d546abfff6adc1fffcfd3719c1594dc4ccd45b18"
     },
     {
       "path": "planetarium/charles-rennie-mackintosh/__next.planetarium.$d$person.__PAGE__.txt",
-      "bytes": 19426,
-      "sha256": "f562e45746a1cda7258cfd4d8ada86b39669195dc5d428da6c4fd728582ce2fc"
+      "bytes": 19424,
+      "sha256": "25ebe761e6b258cdf1d97abaf62611d5ebac89cac0b00a115a0379ba78e5dc8c"
     },
     {
       "path": "planetarium/charles-rennie-mackintosh/index.html",
-      "bytes": 39915,
-      "sha256": "248f36a32a77762dcac2a0182cad4b742539e7ab3f13ab973097fdc77b066aba"
+      "bytes": 39913,
+      "sha256": "a430534a456b5935a1ffde7f5a7a07ec8bb5e2aed56fd9bb573c9a0f0e191780"
     },
     {
       "path": "planetarium/charles-rennie-mackintosh/index.txt",
-      "bytes": 20610,
-      "sha256": "70a92ccae29be890b631bf2897f48eb71e62a15433f709562d7ee9da8f72cd11"
+      "bytes": 20608,
+      "sha256": "b3b62edaa867adf328b244168cc62053bd19029aec72c0564ccaa9bbdf14b83f"
     },
     {
       "path": "planetarium/dieter-rams/__next._full.txt",
-      "bytes": 18322,
-      "sha256": "966755665ee13923de50a01d77867deb697b41580377bab6dad32a90ad80647a"
+      "bytes": 18320,
+      "sha256": "bc05d2aae871067c6fce141b43130812ea0436514cfc89fe9da94ecc8cf53053"
     },
     {
       "path": "planetarium/dieter-rams/__next._tree.txt",
       "bytes": 496,
-      "sha256": "29f9709d53694050d2c756f576ab2dfa31fa8c73eb9148227c659359939d1276"
+      "sha256": "045e19a29ea78dfc1963cb52bb37caef5b0c90e2c70f6bfba8d94355a270e751"
     },
     {
       "path": "planetarium/dieter-rams/__next.planetarium.$d$person.__PAGE__.txt",
-      "bytes": 17166,
-      "sha256": "120d491b24d7e3ed8468fbe149bb09079a12ca48d3858eb3535278f25202759b"
+      "bytes": 17164,
+      "sha256": "b3a1acaa96de42541862c87e7570b65fe63f60dedc6e5996cddcdc4013477511"
     },
     {
       "path": "planetarium/dieter-rams/index.html",
-      "bytes": 35452,
-      "sha256": "977cb1e32f215f046dc01259ae328811355329e423101c969a0b840a7fab6bdd"
+      "bytes": 35450,
+      "sha256": "ab1dddf78b89754bb53c24ff63567a38c3ba72be5a0d1045363fea85b04b5bc3"
     },
     {
       "path": "planetarium/dieter-rams/index.txt",
-      "bytes": 18322,
-      "sha256": "966755665ee13923de50a01d77867deb697b41580377bab6dad32a90ad80647a"
+      "bytes": 18320,
+      "sha256": "bc05d2aae871067c6fce141b43130812ea0436514cfc89fe9da94ecc8cf53053"
     },
     {
       "path": "planetarium/ettore-sottsass/__next._full.txt",
-      "bytes": 21084,
-      "sha256": "cd7dcf05f2a49f97898d508d2d07a84c55e33962e48d5642da05048de40c331e"
+      "bytes": 21082,
+      "sha256": "516bc5fa76eacb2be51f4663bd88a091286b40321e5ca57ce237ad44236ac0c3"
     },
     {
       "path": "planetarium/ettore-sottsass/__next._tree.txt",
       "bytes": 500,
-      "sha256": "7d790e7ebab17e142a1ce27c1bf84e1b019e2549f710c5d4ef7fbf1f6d05da34"
+      "sha256": "429a30accf465b6e5c0f5122cd0d82d64ee38aa465156a9d7969b0e45fdb9531"
     },
     {
       "path": "planetarium/ettore-sottsass/__next.planetarium.$d$person.__PAGE__.txt",
-      "bytes": 19920,
-      "sha256": "9b4a89cb3cf4be305db0d30f94ba44de94f3db81aed1c1d708b3ae32f0d68ebb"
+      "bytes": 19918,
+      "sha256": "65a5121207c1d0b73514d426811b959e879ed78465ab93308c23deb51cac54c7"
     },
     {
       "path": "planetarium/ettore-sottsass/index.html",
-      "bytes": 40943,
-      "sha256": "fa30a47f8be8dd0f6300756dffaf2b5aba2d15340e2b9839d923a00ab04208de"
+      "bytes": 40941,
+      "sha256": "84b9f1515849167f6f470097672a2e1747916757909363137f0f82d821e187ba"
     },
     {
       "path": "planetarium/ettore-sottsass/index.txt",
-      "bytes": 21084,
-      "sha256": "cd7dcf05f2a49f97898d508d2d07a84c55e33962e48d5642da05048de40c331e"
+      "bytes": 21082,
+      "sha256": "516bc5fa76eacb2be51f4663bd88a091286b40321e5ca57ce237ad44236ac0c3"
     },
     {
       "path": "planetarium/gerrit-rietveld/__next._full.txt",
-      "bytes": 18469,
-      "sha256": "582d68155b9d88a2ce6c176f5fd7dd5147844f3ca180012e608130a45f007df4"
+      "bytes": 18467,
+      "sha256": "f5d329d7d5b11f672a68e9083d1ae6d10de7e37c5da5e54935e652c6c8e122af"
     },
     {
       "path": "planetarium/gerrit-rietveld/__next._tree.txt",
       "bytes": 500,
-      "sha256": "6802b1b4e2784203a999c98d6b377e0c04d5b1fe27386209322bbeeb1131f0de"
+      "sha256": "3484c4d8c976978ef5709412cbd96456bfcb7cf367853378655e27f0d4f79906"
     },
     {
       "path": "planetarium/gerrit-rietveld/__next.planetarium.$d$person.__PAGE__.txt",
-      "bytes": 17305,
-      "sha256": "7b82ed94ab739f0d4f48b6bcd1669648e8cb732bf2e30a1c75345a25250b5bf6"
+      "bytes": 17303,
+      "sha256": "a73007c52024ea5b96a65a4c0a9f86f7c39de911214191a191f1b83a5d66cabf"
     },
     {
       "path": "planetarium/gerrit-rietveld/index.html",
-      "bytes": 35742,
-      "sha256": "b768e4ef8b117672d152546512f5294bd73c364573f14b54437473ca1a473d48"
+      "bytes": 35740,
+      "sha256": "9a9b1c8cde4b5ec90ef7f1c000cefc2e73534071e86683ba4e99142849fde218"
     },
     {
       "path": "planetarium/gerrit-rietveld/index.txt",
-      "bytes": 18469,
-      "sha256": "582d68155b9d88a2ce6c176f5fd7dd5147844f3ca180012e608130a45f007df4"
+      "bytes": 18467,
+      "sha256": "f5d329d7d5b11f672a68e9083d1ae6d10de7e37c5da5e54935e652c6c8e122af"
     },
     {
       "path": "planetarium/herbert-bayer/__next._full.txt",
-      "bytes": 18765,
-      "sha256": "3bdd92301c9486dad04f5d3bd119114e181869a684eada6ddead1f80cf0b39c5"
+      "bytes": 18763,
+      "sha256": "aa07b274e96905875c0aef5bb0b998e21b92ea40af01b39ca3fd4cb1aa885a76"
     },
     {
       "path": "planetarium/herbert-bayer/__next._tree.txt",
       "bytes": 498,
-      "sha256": "9e6f504f90bce7a3e0d2fae1fe9d82d8c9dc89d214f6f882a0abd499e639e423"
+      "sha256": "fb34e09d850e84d233961686c4a48b09429be765c77b04e8be1dac02fb0c21ea"
     },
     {
       "path": "planetarium/herbert-bayer/__next.planetarium.$d$person.__PAGE__.txt",
-      "bytes": 17605,
-      "sha256": "1b012195f5b08d607995c24e62a6f2d9b99c7e5d6e9484ee32f49665b51a39e7"
+      "bytes": 17603,
+      "sha256": "19c0445a50e0c6b8e918d611abd719f29a6a3a551ff59a11814ddc6c62aa9bef"
     },
     {
       "path": "planetarium/herbert-bayer/index.html",
-      "bytes": 36335,
-      "sha256": "1e437b619bc9023447a5d9bcb9cca2189d0c05b91a87e02273f24d32d750f144"
+      "bytes": 36333,
+      "sha256": "30054cd2c8acc0af2134f0611ee3cc7ee827b99596783bf3cdba7743f44d153d"
     },
     {
       "path": "planetarium/herbert-bayer/index.txt",
-      "bytes": 18765,
-      "sha256": "3bdd92301c9486dad04f5d3bd119114e181869a684eada6ddead1f80cf0b39c5"
+      "bytes": 18763,
+      "sha256": "aa07b274e96905875c0aef5bb0b998e21b92ea40af01b39ca3fd4cb1aa885a76"
     },
     {
       "path": "planetarium/index.html",
-      "bytes": 41813,
-      "sha256": "e55cf97d435b09d3681ea5dd74e40c6ca4a4ceb6ea1d1d059e5742bc3aa8c2dd"
+      "bytes": 41811,
+      "sha256": "1e55af2888da97f17a3b1395e51e6e2ebb3a02327be58a01804f3cd696e8d02a"
     },
     {
       "path": "planetarium/index.txt",
-      "bytes": 21415,
-      "sha256": "dd35547b1f81be18e43b44be4b511211d908ca74dbaf1104598155b1697a3191"
+      "bytes": 21413,
+      "sha256": "942bf3f6d998c624b2a79babcd8a3b8067423e295e9db810eb9b229f8585635d"
     },
     {
       "path": "planetarium/josef-muller-brockmann/__next._full.txt",
-      "bytes": 18765,
-      "sha256": "45cc83aec1d67ebaa1dc909ae12fec1a37026c747ee44f43d8a623015f437263"
+      "bytes": 18763,
+      "sha256": "0a8d83577369d4e7441531ec89ab53499bc2b3d057d1280f3bf0055f0176bb90"
     },
     {
       "path": "planetarium/josef-muller-brockmann/__next._tree.txt",
       "bytes": 507,
-      "sha256": "d7e83c3778651d1c88a59e285ada2f59533af6dac144f6b0912ee0aa77bfde21"
+      "sha256": "e5451558b65209354613e53be58d7514f17b801d7f084de1c72b4933bba64d0f"
     },
     {
       "path": "planetarium/josef-muller-brockmann/__next.planetarium.$d$person.__PAGE__.txt",
-      "bytes": 17587,
-      "sha256": "f185984ab255b2f6292ad3f5d2f6f3fc4c11528aec549e7d15b8d29633938551"
+      "bytes": 17585,
+      "sha256": "1ac9c784038b47114e304394a0d9d6f706e8f40c8e380fd0513e2da05877923c"
     },
     {
       "path": "planetarium/josef-muller-brockmann/index.html",
-      "bytes": 36328,
-      "sha256": "ce791a3d9a970a8a7297a03a013eaaff94a42eeab8149820c2343a86bfe6091d"
+      "bytes": 36326,
+      "sha256": "aec134db72979cc3eef7d5b635b8e9600e5d024d0279fbff15373fc45c309897"
     },
     {
       "path": "planetarium/josef-muller-brockmann/index.txt",
-      "bytes": 18765,
-      "sha256": "45cc83aec1d67ebaa1dc909ae12fec1a37026c747ee44f43d8a623015f437263"
+      "bytes": 18763,
+      "sha256": "0a8d83577369d4e7441531ec89ab53499bc2b3d057d1280f3bf0055f0176bb90"
     },
     {
       "path": "planetarium/massimo-vignelli/__next._full.txt",
-      "bytes": 20396,
-      "sha256": "0b8dddb254d72df98bd6e477d667e6d800d693b248b6b11f81365977aa3bfda6"
+      "bytes": 20394,
+      "sha256": "4e9fc761e643b60f20ae41a27163c16c0f5f539167dd38287d56f2f9c2a60351"
     },
     {
       "path": "planetarium/massimo-vignelli/__next._tree.txt",
       "bytes": 501,
-      "sha256": "a909eb545f33cb96148994ae18a3ac1b74a876250fd73d914cbf4325cf6863ba"
+      "sha256": "715ce1932cbb4259ad093b1f8b4c3177a72045efbc47657954737dec885fb605"
     },
     {
       "path": "planetarium/massimo-vignelli/__next.planetarium.$d$person.__PAGE__.txt",
-      "bytes": 19230,
-      "sha256": "5c1ed92cec5b6f83f2610755bc25199777f821e133bf4233e3e509758df89077"
+      "bytes": 19228,
+      "sha256": "1cc5d93df182fa9991d8b8bd3c29c28ce17e45a0e7ed0db2bc1c578947267617"
     },
     {
       "path": "planetarium/massimo-vignelli/index.html",
-      "bytes": 39492,
-      "sha256": "7679c7b3f1f9520ee1b641ee801d6a552ef99d99b46d1ffb1a8cf8224ba96dce"
+      "bytes": 39490,
+      "sha256": "2675fd301e4eb43b2eb1906ba2d32b96d21c9f3f9625f0f76100a47e8d5a6dff"
     },
     {
       "path": "planetarium/massimo-vignelli/index.txt",
-      "bytes": 20396,
-      "sha256": "0b8dddb254d72df98bd6e477d667e6d800d693b248b6b11f81365977aa3bfda6"
+      "bytes": 20394,
+      "sha256": "4e9fc761e643b60f20ae41a27163c16c0f5f539167dd38287d56f2f9c2a60351"
     },
     {
       "path": "planetarium/naoto-fukasawa/__next._full.txt",
-      "bytes": 17487,
-      "sha256": "1dac2eb17d85b1c8030d98ebf6f15c37ce672ffd6ead7a21d141a47143a38bae"
+      "bytes": 17485,
+      "sha256": "ac344c622d631cbf8c571ac41da5a96befc30232375495a5c5b3cf3201a20788"
     },
     {
       "path": "planetarium/naoto-fukasawa/__next._tree.txt",
       "bytes": 499,
-      "sha256": "2f43968ce682a3d08df7b4aa6af465ea92bc89c56e35a74a5e6d1579e4785d17"
+      "sha256": "1b952edb77e2494ed753b78083f67b2cd0fd35dd8d9c29ad425289c3b7b68d4f"
     },
     {
       "path": "planetarium/naoto-fukasawa/__next.planetarium.$d$person.__PAGE__.txt",
-      "bytes": 16325,
-      "sha256": "dba6eae36ede2d72c69ca21892a615d2cdfaf608a3ce16bf2a589b9c84b4c704"
+      "bytes": 16323,
+      "sha256": "ae617d9c3d7e1fb3e07eb414090e5d08699f84b63161bf15a61546c8924a1a0e"
     },
     {
       "path": "planetarium/naoto-fukasawa/index.html",
-      "bytes": 33793,
-      "sha256": "9d7e1b1ec9e97f548f24c9eeec7ec31631dcef1db568d97b5ed87451741bd35f"
+      "bytes": 33791,
+      "sha256": "69fa5756d8a1d2309475c72e31fd06d7e2ad23e6d0cdea59264ed893a6349503"
     },
     {
       "path": "planetarium/naoto-fukasawa/index.txt",
-      "bytes": 17487,
-      "sha256": "1dac2eb17d85b1c8030d98ebf6f15c37ce672ffd6ead7a21d141a47143a38bae"
+      "bytes": 17485,
+      "sha256": "ac344c622d631cbf8c571ac41da5a96befc30232375495a5c5b3cf3201a20788"
     },
     {
       "path": "planetarium/piet-mondrian/__next._full.txt",
-      "bytes": 19337,
-      "sha256": "ef2f472020e62aa6c9b9e044d5747f1ab4e03aa7abe0e590cf6ddc54ff50ff41"
+      "bytes": 19335,
+      "sha256": "73a78305f0ea000fd2c1c6247099f2a1e235f87bdb71b5347f72d7149fe339be"
     },
     {
       "path": "planetarium/piet-mondrian/__next._tree.txt",
       "bytes": 498,
-      "sha256": "a629e38abb15363301298201653d0135ce579af21e22cdd35b5b9ded1937b30c"
+      "sha256": "f5d91f6320100aa30ff90f738ce4018365f05cce6899ec1ca05784fe649d3a92"
     },
     {
       "path": "planetarium/piet-mondrian/__next.planetarium.$d$person.__PAGE__.txt",
-      "bytes": 18177,
-      "sha256": "3be540c9e54287cd596a52e3fa4efaa629226a76b0291c82b1b3ecdc6e7fbcd1"
+      "bytes": 18175,
+      "sha256": "b7ab92dd08506a1f9566d1b08ca7fc2b6d174b4f99244efa1eaf87c9a2be1136"
     },
     {
       "path": "planetarium/piet-mondrian/index.html",
-      "bytes": 37463,
-      "sha256": "13285c0916a29175dce5f0a01d6d2b11926cfe364cb64449808013e5690412dc"
+      "bytes": 37461,
+      "sha256": "c284577771eaa84e2afc71cc65abcf2336b4965c13490c2e6c058cc57d2f4e51"
     },
     {
       "path": "planetarium/piet-mondrian/index.txt",
-      "bytes": 19337,
-      "sha256": "ef2f472020e62aa6c9b9e044d5747f1ab4e03aa7abe0e590cf6ddc54ff50ff41"
+      "bytes": 19335,
+      "sha256": "73a78305f0ea000fd2c1c6247099f2a1e235f87bdb71b5347f72d7149fe339be"
     },
     {
       "path": "planetarium/ray-eames/__next._full.txt",
-      "bytes": 19721,
-      "sha256": "64052c340b67a57d3e337811ae6722f9aebf259f4a8bb1d18fd8560e9bbd0d94"
+      "bytes": 19719,
+      "sha256": "ac92115aa78f9c0cb330d8a130fe4bf6c440b2e369bd5c53f83b66e4da2d1499"
     },
     {
       "path": "planetarium/ray-eames/__next._tree.txt",
       "bytes": 494,
-      "sha256": "81ab039d27750d18ebe0215b68dc52632eafd4bce2bec38bdeb6968d2049cab5"
+      "sha256": "d9e1bd6fe5eab0916c65d6f14c521294b6ba66e45c86dda48d13f4023c137bef"
     },
     {
       "path": "planetarium/ray-eames/__next.planetarium.$d$person.__PAGE__.txt",
-      "bytes": 18569,
-      "sha256": "a73e2ee75f0430e22fc7e76279fd5b387d759b6648025733c9e4dec1cd056018"
+      "bytes": 18567,
+      "sha256": "e364a308f1c01dfb81a7304f86c73ddb591afeca0e93edf9738c1549533bb693"
     },
     {
       "path": "planetarium/ray-eames/index.html",
-      "bytes": 38279,
-      "sha256": "b68db3ab83bf7a29a0a529ee984f4d50d83dd4fd04ed8333386014f35ffaec3c"
+      "bytes": 38277,
+      "sha256": "5749178faec92c2ce35bf3ac5969d111c560e7a8ddbb661499f39e7fe68ffa2c"
     },
     {
       "path": "planetarium/ray-eames/index.txt",
-      "bytes": 19721,
-      "sha256": "64052c340b67a57d3e337811ae6722f9aebf259f4a8bb1d18fd8560e9bbd0d94"
+      "bytes": 19719,
+      "sha256": "ac92115aa78f9c0cb330d8a130fe4bf6c440b2e369bd5c53f83b66e4da2d1499"
     },
     {
       "path": "planetarium/rei-kawakubo/__next._full.txt",
-      "bytes": 19556,
-      "sha256": "9596ecfa11b20f945f18b0d3218d13b91c2128b08faf26abafd082bf9269b651"
+      "bytes": 19554,
+      "sha256": "d6e74822e3b9ab66671dc260b6a9f233550ce577fa0dddfb7b2f0170a0d3ec49"
     },
     {
       "path": "planetarium/rei-kawakubo/__next._tree.txt",
       "bytes": 497,
-      "sha256": "ffe0db3373e4112c3afe91afc55a2aac25aadf69726d1d8db5d0b2a112732d85"
+      "sha256": "54d2b019129ac8c481592448cdfbe1a55c6a465f17db43d6c303001ed2e8bde4"
     },
     {
       "path": "planetarium/rei-kawakubo/__next.planetarium.$d$person.__PAGE__.txt",
-      "bytes": 18398,
-      "sha256": "24b3b32b8ebf3ab8388d1e03ecdabdba913f20deb329c7dbf0db0613574588cb"
+      "bytes": 18396,
+      "sha256": "6a944912237e52cec315870debd7f3a78dd89b6c9547d921e987657261b98b83"
     },
     {
       "path": "planetarium/rei-kawakubo/index.html",
-      "bytes": 37923,
-      "sha256": "f077e891c6a880ae5d924af9eb8f6bd1d7630a76a6a21bff366603e09854f172"
+      "bytes": 37921,
+      "sha256": "5ede5db52c0b2f61090e7937530b580b24d7e95ccc9629b9db2b963fe25ccdd7"
     },
     {
       "path": "planetarium/rei-kawakubo/index.txt",
-      "bytes": 19556,
-      "sha256": "9596ecfa11b20f945f18b0d3218d13b91c2128b08faf26abafd082bf9269b651"
+      "bytes": 19554,
+      "sha256": "d6e74822e3b9ab66671dc260b6a9f233550ce577fa0dddfb7b2f0170a0d3ec49"
     },
     {
       "path": "planetarium/walter-gropius/__next._full.txt",
-      "bytes": 19873,
-      "sha256": "cf1deb76bf4b72097c986aa60f3f5d65ae659b8c2b6c4d9f29a435da20f45adb"
+      "bytes": 19871,
+      "sha256": "faa8afb31edcc5bd82505bd1fc006213dcae78e1c5852383890aea717b8bc8b3"
     },
     {
       "path": "planetarium/walter-gropius/__next._tree.txt",
       "bytes": 499,
-      "sha256": "c0b1391d8404106a1ba2897f3e5ff2f89bf69d34674c91ffa1af525982730bdc"
+      "sha256": "ac9d7ed6ad04e5d451f0d0c55289ab3a87364c4ad8b48b03db443ffee713f3cc"
     },
     {
       "path": "planetarium/walter-gropius/__next.planetarium.$d$person.__PAGE__.txt",
-      "bytes": 18711,
-      "sha256": "ad5a8f7fa68d9c3ecf3eb1a68f9cbb6102f863bad014d7ff814852dec3796bc7"
+      "bytes": 18709,
+      "sha256": "dd5f5dd439020ef510478e66c479efc87fa5b1d4a23216825004254cdbd93c4e"
     },
     {
       "path": "planetarium/walter-gropius/index.html",
-      "bytes": 38471,
-      "sha256": "d04f39f908c97f281efcdd750277597139da73f85b67a22caf7e2be57f9b1e36"
+      "bytes": 38469,
+      "sha256": "8121aaeefc24d831523706b79633ca6dbd89fcb5cf5dccd58fa912e1da420fa6"
     },
     {
       "path": "planetarium/walter-gropius/index.txt",
-      "bytes": 19873,
-      "sha256": "cf1deb76bf4b72097c986aa60f3f5d65ae659b8c2b6c4d9f29a435da20f45adb"
+      "bytes": 19871,
+      "sha256": "faa8afb31edcc5bd82505bd1fc006213dcae78e1c5852383890aea717b8bc8b3"
     },
     {
       "path": "planetarium/william-morris/__next._full.txt",
-      "bytes": 21842,
-      "sha256": "98e5a2da6ad1a78dabef718fb0fc50f3bfc7c5d5fffa26625da97eec71421246"
+      "bytes": 21840,
+      "sha256": "9ecdd5e0486e52bb5178347dfbed311bb6b73d22c83ddc5f52360d3fe310b9cd"
     },
     {
       "path": "planetarium/william-morris/__next._tree.txt",
       "bytes": 499,
-      "sha256": "6c30b9e406568229ed929fafc8cc58db25816728e51d0e683949c6fac56eb83f"
+      "sha256": "31e44b77b103cd2f83a18c9753fb1b95d4a6f4514b6282f30e6cbbe6dfa6aa1e"
     },
     {
       "path": "planetarium/william-morris/__next.planetarium.$d$person.__PAGE__.txt",
-      "bytes": 20680,
-      "sha256": "9f31fe9103c7a304a6fb4d05dc6d0a2a6c4d738a2dac812621c2c46347d587fb"
+      "bytes": 20678,
+      "sha256": "3c9f316d22af712e57098137a129ef3fdd52c04a5cf2c8934a15fb3ba4adf8f3"
     },
     {
       "path": "planetarium/william-morris/index.html",
-      "bytes": 42353,
-      "sha256": "2c6e437a75874298697863e6ac863beaa85ea993dce5ada7b0dd4642eb0183ba"
+      "bytes": 42351,
+      "sha256": "c3fa917917398fb2f939dcd89f2b81e07787e55247fd4276bd7d25841d45af27"
     },
     {
       "path": "planetarium/william-morris/index.txt",
-      "bytes": 21842,
-      "sha256": "98e5a2da6ad1a78dabef718fb0fc50f3bfc7c5d5fffa26625da97eec71421246"
+      "bytes": 21840,
+      "sha256": "9ecdd5e0486e52bb5178347dfbed311bb6b73d22c83ddc5f52360d3fe310b9cd"
     },
     {
       "path": "records/__next._full.txt",
-      "bytes": 7195,
-      "sha256": "f5d68f5a51da699048afbf3509efe41c0ae57bcd9acef84959f6cec56fe4465c"
+      "bytes": 7193,
+      "sha256": "dee0de91df39b827e26ac3d449989b8747bce75fe5542c24e94ebc1b8c843805"
     },
     {
       "path": "records/__next._tree.txt",
       "bytes": 377,
-      "sha256": "13341c9af6eab1b17e0b2e168f59a4805b0c047d6328c393eec6ab075ada51bb"
+      "sha256": "932713d1c31830aea87847d2d092475af9fef3a69b4dcb6676714083590487d9"
     },
     {
       "path": "records/__next.records.__PAGE__.txt",
-      "bytes": 6621,
-      "sha256": "686cede09d61a4364659a5df74be1125199b0cddffa46413c5035e9c68e41b12"
+      "bytes": 6619,
+      "sha256": "b5db6a902521e4f7bc7b4edc563e77eaab9ed31d155fdb6faae7003535cd4857"
     },
     {
       "path": "records/index.html",
-      "bytes": 12059,
-      "sha256": "9653d90b68d8106303495dbe8c70f237224d5a742b6a16368cd9069c03425265"
+      "bytes": 12057,
+      "sha256": "0371b1301e4987b41ba3d92c796beca2c1064342348b522f62fa6fdc55c65591"
     },
     {
       "path": "records/index.txt",
-      "bytes": 7195,
-      "sha256": "f5d68f5a51da699048afbf3509efe41c0ae57bcd9acef84959f6cec56fe4465c"
+      "bytes": 7193,
+      "sha256": "dee0de91df39b827e26ac3d449989b8747bce75fe5542c24e94ebc1b8c843805"
     }
   ]
 }
