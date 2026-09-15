@@ -1,8 +1,8 @@
 {
   "artifactIdentifier": "e67bec4e-cc81-54b8-8de8-e04f06503867",
-  "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
-  "executionIdentifier": "01a09acc-4808-7629-b5d4-a4839d16870c",
-  "recordedAt": "2026-09-13T12:44:34.184Z",
+  "sourceRevision": "sha256:9478a5e17024ef21aaf5239ea2f13ffac7885ead15d95ef4607e5be55fd781bd",
+  "executionIdentifier": "01a0a48b-cf79-770e-a05f-eee1d6a3021e",
+  "recordedAt": "2026-09-15T10:10:21.177Z",
   "machineContract": {
     "state": "observed",
     "transition": "source-bound evidence -> proof report -> gate report"
@@ -89,7 +89,7 @@
       "ArtPlanetarium.neutral_only_evidence_cannot_pass",
       "ArtPlanetarium.evidence_pass_requires_support_without_contradiction"
     ],
-    "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
+    "sourceRevision": "sha256:9478a5e17024ef21aaf5239ea2f13ffac7885ead15d95ef4607e5be55fd781bd",
     "measurementProfile": "exactIntegerKernelWithFiniteCrossLanguageChecks"
   },
   "proofs": [
@@ -492,8 +492,8 @@
       "limitValue": 0,
       "unit": "exitCode",
       "tool": "Lean 4.28.0 / Lake",
-      "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
-      "executionIdentifier": "01a09acc-4808-7629-b5d4-a4839d16870c",
+      "sourceRevision": "sha256:9478a5e17024ef21aaf5239ea2f13ffac7885ead15d95ef4607e5be55fd781bd",
+      "executionIdentifier": "01a0a48b-cf79-770e-a05f-eee1d6a3021e",
       "failureReason": null,
       "comparison": "equal"
     },
@@ -505,8 +505,8 @@
       "limitValue": 0,
       "unit": "failedAssertions",
       "tool": "Lean #print axioms",
-      "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
-      "executionIdentifier": "01a09acc-4808-7629-b5d4-a4839d16870c",
+      "sourceRevision": "sha256:9478a5e17024ef21aaf5239ea2f13ffac7885ead15d95ef4607e5be55fd781bd",
+      "executionIdentifier": "01a0a48b-cf79-770e-a05f-eee1d6a3021e",
       "failureReason": null,
       "observation": {
         "theorems": 38,
@@ -522,13 +522,13 @@
       "limitValue": 0,
       "unit": "failedAssertions",
       "tool": "lean-lsp-mcp",
-      "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
-      "executionIdentifier": "01a09acc-4808-7629-b5d4-a4839d16870c",
+      "sourceRevision": "sha256:9478a5e17024ef21aaf5239ea2f13ffac7885ead15d95ef4607e5be55fd781bd",
+      "executionIdentifier": "01a0a48b-cf79-770e-a05f-eee1d6a3021e",
       "failureReason": null,
       "observation": {
         "recordedCalls": 55,
         "inspectedTheorems": 38,
-        "receiptExecutionIdentifier": "01a09ac8-db6e-7ec4-9085-5ad329eb62b5"
+        "receiptExecutionIdentifier": "01a0a47a-f16c-773a-885c-47df7915e1ec"
       },
       "comparison": "equal"
     },
@@ -540,14 +540,14 @@
       "limitValue": 0,
       "unit": "failedAssertions",
       "tool": "Wolfram Language evaluator",
-      "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
-      "executionIdentifier": "01a09acc-4808-7629-b5d4-a4839d16870c",
+      "sourceRevision": "sha256:9478a5e17024ef21aaf5239ea2f13ffac7885ead15d95ef4607e5be55fd781bd",
+      "executionIdentifier": "01a0a48b-cf79-770e-a05f-eee1d6a3021e",
       "failureReason": null,
       "observation": {
         "checks": 13,
         "comparedRows": 156,
         "mismatches": 0,
-        "receiptExecutionIdentifier": "01a09ac8-db6e-7947-93b0-7c398b16f6eb"
+        "receiptExecutionIdentifier": "01a0a47c-40b8-7abb-9f07-b8db28b15691"
       },
       "comparison": "equal"
     },
@@ -555,12 +555,12 @@
       "gateIdentifier": "f6f6b3ca-13f8-53d0-9e61-5fccc5b0a17a",
       "gateName": "SourceRevisionUnchangedDuringVerification",
       "status": "pass",
-      "observedValue": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
-      "limitValue": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
+      "observedValue": "sha256:9478a5e17024ef21aaf5239ea2f13ffac7885ead15d95ef4607e5be55fd781bd",
+      "limitValue": "sha256:9478a5e17024ef21aaf5239ea2f13ffac7885ead15d95ef4607e5be55fd781bd",
       "unit": "sourceRevision",
       "tool": "SHA-256 source manifest",
-      "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
-      "executionIdentifier": "01a09acc-4808-7629-b5d4-a4839d16870c",
+      "sourceRevision": "sha256:9478a5e17024ef21aaf5239ea2f13ffac7885ead15d95ef4607e5be55fd781bd",
+      "executionIdentifier": "01a0a48b-cf79-770e-a05f-eee1d6a3021e",
       "failureReason": null,
       "comparison": "equal"
     }

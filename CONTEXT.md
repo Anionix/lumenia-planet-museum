@@ -10,4 +10,10 @@
 
 **Material Sphere**：資料の特徴を色・形・質感の規則へ翻訳して作る球の展示。資料に登場する実作品の複製ではない。
 
+**宇宙展示**：15人の仕事から構成する架空の太陽系。軌道・大きさ・速度は演出の設定。
+
+**特徴座標**：資料の特徴から求めた検索用の位置。画面の移動から独立して保存する。未提供の値は不明のまま扱う。
+
+**作品の年代**：資料が示す制作年や期間。川久保玲の項目では展覧会の開催年と明記する。人物の生涯や天体の経過時間と混同しない。
+
 <!-- llm machine contract; claimIdentifier: 4908c1b1-0ebf-55ef-a83f-378e2bfdf4c5; executionIdentifier: 01a09b7c-3f68-756d-bae6-f55806a70d69; transition: agreed museum vocabulary -> shared glossary. -->

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>イラスト・デザイン資料の球体サンプル</title>
+  <link rel="icon" href="data:,">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f2f0e9; color: #242720; font-family: system-ui, sans-serif; }
+    header { padding: 24px 32px 16px; border-bottom: 1px solid #dad9d0; }
+    h1 { font-size: 23px; font-weight: 650; margin: 0 0 8px; letter-spacing: .03em; }
+    p { margin: 0; color: #5c6154; line-height: 1.7; font-size: 13px; }
+    .toolbar { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 16px; }
+    button, select { font: inherit; color: inherit; background: #faf9f5; border: 1px solid #a7ac9d; border-radius: 5px; min-height: 40px; padding: 8px 12px; }
+    button { cursor: pointer; }
+    button[aria-pressed="true"] { background: #293d33; color: white; border-color: #293d33; }
+    button:focus-visible, select:focus-visible { outline: 3px solid #8a5937; outline-offset: 3px; }
+    label { font-size: 13px; margin-left: 8px; }
+    #viewport { height: calc(100svh - 230px); min-height: 460px; position: relative; overflow: hidden; }
+    canvas { display: block; width: 100%; height: 100%; }
+    #labels { position: absolute; inset: 0; pointer-events: none; }
+    .name { position: absolute; text-align: center; font-size: 11px; line-height: 1.4; width: 136px; padding: 3px; background: #f2f0e9d9; border-radius: 4px; }
+    footer { padding: 10px 32px 18px; border-top: 1px solid #dad9d0; }
+    #status { color: #293d33; font-weight: 600; }
+    @media (max-width: 700px) { header { padding: 18px; } h1 { font-size: 20px; } label { margin-left: 0; } #viewport { min-height: 560px; } .name { width: 112px; font-size: 10px; } footer { padding: 12px 18px; } }
+  </style>
+  <script type="importmap">{"imports":{"three":"/three.module.js","three/addons/controls/OrbitControls.js":"/OrbitControls.js"}}</script>
+</head>
+<body data-state="loading">
+  <header>
+    <h1>イラスト・デザイン資料の球体サンプル</h1>
+    <p>資料の配色と表面の規則を、触って見られる球体にしました。</p>
+    <div class="toolbar">
+      <button id="gallery" aria-pressed="true">一覧で見る</button>
+      <button id="coordinates" aria-pressed="false">特徴の座標で見る</button>
+      <label for="person">詳しく見る</label><select id="person"><option value="">すべて</option></select>
+    </div>
+  </header>
+  <main id="viewport" aria-label="12人の資料を球体で表示する立体ビュー"><div id="labels"></div></main>
+  <footer><p id="status" role="status" aria-live="polite">読み込んでいます…</p><p id="explanation">ドラッグで回転、スクロールで拡大できます。一覧の並び順は比較用です。</p></footer>
+  <script type="module">
+    import * as THREE from 'three';
+    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+    import { disposeThreeObject } from '/adapter.mjs';
+    const viewport = document.querySelector('#viewport');
+    const status = document.querySelector('#status');
+    const selection = document.querySelector('#person');
+    const explanation = document.querySelector('#explanation');
+    try {
+      const renderer = new THREE.WebGLRenderer({ antialias: true });
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.outputColorSpace = THREE.SRGBColorSpace;
+      renderer.toneMapping = THREE.ACESFilmicToneMapping;
+      renderer.toneMappingExposure = 1;
+      viewport.prepend(renderer.domElement);
+      renderer.domElement.setAttribute('aria-label', '資料の球体。表示対象は上の選択欄で変更できます。');
+      const scene = await new THREE.ObjectLoader().loadAsync('/scene.json');
+      document.body.dataset.exportExecution = scene.userData.executionIdentifier;
+      document.body.dataset.physicsState = scene.userData.physicsState;
+      const camera = new THREE.PerspectiveCamera(35, 1, 0.0001, 100);
+      const controls = new OrbitControls(camera, renderer.domElement);
+      controls.enableDamping = false;
+      controls.minDistance = 0.08;
+      controls.maxDistance = 40;
+      const objects = scene.children.filter(object => object.isMesh);
+      let layout = 'gallery', pendingFrame = false, shaderFailed = false;
+      renderer.debug.onShaderError = () => { shaderFailed = true; document.body.dataset.state = 'error'; status.textContent = '立体表示を初期化できませんでした。'; };
+      const labels = objects.map(object => {
+        const option = document.createElement('option'); option.value = object.uuid; option.textContent = object.name; selection.append(option);
+        const label = document.createElement('span'); label.className = 'name'; label.textContent = object.name; document.querySelector('#labels').append(label);
+        return { object, label };
+      });
+      function render() {
+        pendingFrame = false;
+        scene.updateMatrixWorld(true);
+        renderer.render(scene, camera);
+        const bounds = viewport.getBoundingClientRect();
+        for (const { object, label } of labels) {
+          const point = object.getWorldPosition(new THREE.Vector3());
+          point.y -= object.scale.y * 1.45;
+          point.project(camera);
+          label.hidden = point.z > 1 || point.z < -1 || (selection.value && selection.value !== object.uuid) || (layout === 'coordinates' && !selection.value);
+          label.style.left = `${(point.x + 1) * bounds.width / 2}px`;
+          label.style.top = `${(1 - point.y) * bounds.height / 2}px`;
+          label.style.transform = 'translate(-50%,0)';
+        }
+        if (!shaderFailed && renderer.info.render.triangles > 0) {
+          document.body.dataset.state = 'ready'; document.body.dataset.renderedMeshes = String(objects.length);
+          document.body.dataset.drawCalls = String(renderer.info.render.calls); document.body.dataset.triangles = String(renderer.info.render.triangles);
+        }
+      }
+      function schedule() { if (!pendingFrame) { pendingFrame = true; requestAnimationFrame(render); } }
+      function focus() {
+        const object = objects.find(item => item.uuid === selection.value);
+        if (object) {
+          controls.target.copy(object.position);
+          camera.position.copy(object.position).add(new THREE.Vector3(0, object.scale.y * .3, object.scale.x * 6));
+          status.textContent = `${object.name} の表面を表示`;
+        } else {
+          controls.target.set(0, 0, 0);
+          const narrow = viewport.clientWidth < 700;
+          camera.position.set(0, 0, layout === 'gallery' ? (narrow ? 18 : 13.5) : (narrow ? 7 : 4.8));
+          status.textContent = `${objects.length}人の球体を表示`;
+        }
+        controls.update(); schedule();
+      }
+      function arrange(mode) {
+        layout = mode; document.body.dataset.layout = mode;
+        const columns = viewport.clientWidth < 700 ? 3 : 4;
+        const rowCount = Math.ceil(objects.length / columns);
+        objects.forEach((object, index) => {
+          if (mode === 'gallery') {
+            object.position.set((index % columns - (columns - 1) / 2) * 2.5, ((rowCount - 1) / 2 - Math.floor(index / columns)) * 2.45, 0);
+            object.scale.setScalar(.74);
+          } else { object.position.fromArray(object.userData.sourcePosition); object.scale.fromArray(object.userData.sourceScale); }
+        });
+        document.querySelector('#gallery').setAttribute('aria-pressed', String(mode === 'gallery'));
+        document.querySelector('#coordinates').setAttribute('aria-pressed', String(mode === 'coordinates'));
+        explanation.textContent = mode === 'gallery' ? 'ドラッグで回転、スクロールで拡大できます。一覧の並び順は比較用です。' : '配置は資料の特徴座標です。近さは歴史的な影響関係を示しません。人物を選ぶと表面を拡大できます。';
+        focus();
+      }
+      const resize = new ResizeObserver(() => { const width = viewport.clientWidth, height = viewport.clientHeight;
+        renderer.setSize(width, height); camera.aspect = width / height; camera.updateProjectionMatrix(); arrange(layout); });
+      resize.observe(viewport);
+      controls.addEventListener('change', schedule);
+      selection.addEventListener('change', focus);
+      document.querySelector('#gallery').addEventListener('click', () => arrange('gallery'));
+      document.querySelector('#coordinates').addEventListener('click', () => arrange('coordinates'));
+      arrange('gallery');
+      window.addEventListener('pagehide', () => { resize.disconnect(); controls.dispose(); disposeThreeObject(scene); renderer.dispose(); }, { once: true });
+    } catch (error) { document.body.dataset.state = 'error'; status.textContent = `表示できませんでした: ${error.message}`; }
+  </script>
+</body>
+</html>

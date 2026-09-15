@@ -1,0 +1,18 @@
+{
+  "executionIdentifier": "01a0a466-8ef5-7ceb-9da0-c6195d4d86ab",
+  "tool": "Wolfram Language Evaluator",
+  "claims": [
+    "differenceBound",
+    "orbitRadiusPreserved",
+    "intervalSymmetry",
+    "timelineWidening"
+  ],
+  "result": [
+    {
+      "type": "text",
+      "text": "Out[1]= <|\"differenceBound\" -> True, \"orbitRadiusPreserved\" -> True, \"intervalSymmetry\" -> True, \"timelineWidening\" -> True|>"
+    }
+  ],
+  "scope": "Exact real arithmetic. Does not verify JavaScript floating point evaluation, historical dating or rendered browser performance.",
+  "receiptRecordedAt": "2026-09-15T09:50:46.425Z"
+}

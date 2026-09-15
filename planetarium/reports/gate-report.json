@@ -1,15 +1,15 @@
 {
   "artifactIdentifier": "e67bec4e-cc81-54b8-8de8-e04f06503867",
-  "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
-  "executionIdentifier": "01a09acc-4808-7629-b5d4-a4839d16870c",
-  "recordedAt": "2026-09-13T12:44:34.184Z",
+  "sourceRevision": "sha256:9478a5e17024ef21aaf5239ea2f13ffac7885ead15d95ef4607e5be55fd781bd",
+  "executionIdentifier": "01a0a48b-cf79-770e-a05f-eee1d6a3021e",
+  "recordedAt": "2026-09-15T10:10:21.177Z",
   "machineContract": {
     "state": "observed",
     "transition": "source-bound evidence -> proof report -> gate report"
   },
   "predecessor": {
     "file": "proof-report.json",
-    "digest": "sha256:7b641713c486d8ddb939cd92ae5db5b2b86ca3c9146457b93e51ae2d0d73e532"
+    "digest": "sha256:083816f85660d174f69297932a7e4d25e4a32da4d874be481bc9bf9fa47d0011"
   },
   "summary": {
     "pass": 10,
@@ -26,8 +26,8 @@
       "limitValue": 0,
       "unit": "failedAssertions",
       "tool": "Node.js",
-      "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
-      "executionIdentifier": "01a09acc-4808-7629-b5d4-a4839d16870c",
+      "sourceRevision": "sha256:9478a5e17024ef21aaf5239ea2f13ffac7885ead15d95ef4607e5be55fd781bd",
+      "executionIdentifier": "01a0a48b-cf79-770e-a05f-eee1d6a3021e",
       "failureReason": null,
       "observation": {
         "intentDigest": "sha256:7e583a3b54e4b6b5a0b90bb578eb14c104076e13e368ef82ad8b768cbc54bc5a",
@@ -44,8 +44,8 @@
       "limitValue": 0,
       "unit": "exitCode",
       "tool": "Lean 4.28.0 / Lake",
-      "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
-      "executionIdentifier": "01a09acc-4808-7629-b5d4-a4839d16870c",
+      "sourceRevision": "sha256:9478a5e17024ef21aaf5239ea2f13ffac7885ead15d95ef4607e5be55fd781bd",
+      "executionIdentifier": "01a0a48b-cf79-770e-a05f-eee1d6a3021e",
       "failureReason": null,
       "comparison": "equal"
     },
@@ -57,8 +57,8 @@
       "limitValue": 0,
       "unit": "failedAssertions",
       "tool": "Lean #print axioms",
-      "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
-      "executionIdentifier": "01a09acc-4808-7629-b5d4-a4839d16870c",
+      "sourceRevision": "sha256:9478a5e17024ef21aaf5239ea2f13ffac7885ead15d95ef4607e5be55fd781bd",
+      "executionIdentifier": "01a0a48b-cf79-770e-a05f-eee1d6a3021e",
       "failureReason": null,
       "observation": {
         "theorems": 38,
@@ -74,8 +74,8 @@
       "limitValue": 0,
       "unit": "failedAssertions",
       "tool": "Lean executable + Node.js",
-      "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
-      "executionIdentifier": "01a09acc-4808-7629-b5d4-a4839d16870c",
+      "sourceRevision": "sha256:9478a5e17024ef21aaf5239ea2f13ffac7885ead15d95ef4607e5be55fd781bd",
+      "executionIdentifier": "01a0a48b-cf79-770e-a05f-eee1d6a3021e",
       "failureReason": null,
       "observation": {
         "comparedRequests": 2232,
@@ -94,8 +94,8 @@
       "limitValue": 0,
       "unit": "failedAssertions",
       "tool": "Lean executable + Node.js",
-      "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
-      "executionIdentifier": "01a09acc-4808-7629-b5d4-a4839d16870c",
+      "sourceRevision": "sha256:9478a5e17024ef21aaf5239ea2f13ffac7885ead15d95ef4607e5be55fd781bd",
+      "executionIdentifier": "01a0a48b-cf79-770e-a05f-eee1d6a3021e",
       "failureReason": null,
       "observation": {
         "comparedRequests": 736,
@@ -119,8 +119,8 @@
       "limitValue": 0,
       "unit": "failedAssertions",
       "tool": "Node.js assertions + Exa capture metadata",
-      "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
-      "executionIdentifier": "01a09acc-4808-7629-b5d4-a4839d16870c",
+      "sourceRevision": "sha256:9478a5e17024ef21aaf5239ea2f13ffac7885ead15d95ef4607e5be55fd781bd",
+      "executionIdentifier": "01a0a48b-cf79-770e-a05f-eee1d6a3021e",
       "failureReason": null,
       "observation": {
         "peopleWithProfiles": 15,
@@ -139,8 +139,8 @@
       "limitValue": 0,
       "unit": "exitCode",
       "tool": "TypeScript",
-      "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
-      "executionIdentifier": "01a09acc-4808-7629-b5d4-a4839d16870c",
+      "sourceRevision": "sha256:9478a5e17024ef21aaf5239ea2f13ffac7885ead15d95ef4607e5be55fd781bd",
+      "executionIdentifier": "01a0a48b-cf79-770e-a05f-eee1d6a3021e",
       "failureReason": null,
       "comparison": "equal"
     },
@@ -152,13 +152,13 @@
       "limitValue": 0,
       "unit": "failedAssertions",
       "tool": "lean-lsp-mcp",
-      "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
-      "executionIdentifier": "01a09acc-4808-7629-b5d4-a4839d16870c",
+      "sourceRevision": "sha256:9478a5e17024ef21aaf5239ea2f13ffac7885ead15d95ef4607e5be55fd781bd",
+      "executionIdentifier": "01a0a48b-cf79-770e-a05f-eee1d6a3021e",
       "failureReason": null,
       "observation": {
         "recordedCalls": 55,
         "inspectedTheorems": 38,
-        "receiptExecutionIdentifier": "01a09ac8-db6e-7ec4-9085-5ad329eb62b5"
+        "receiptExecutionIdentifier": "01a0a47a-f16c-773a-885c-47df7915e1ec"
       },
       "comparison": "equal"
     },
@@ -170,14 +170,14 @@
       "limitValue": 0,
       "unit": "failedAssertions",
       "tool": "Wolfram Language evaluator",
-      "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
-      "executionIdentifier": "01a09acc-4808-7629-b5d4-a4839d16870c",
+      "sourceRevision": "sha256:9478a5e17024ef21aaf5239ea2f13ffac7885ead15d95ef4607e5be55fd781bd",
+      "executionIdentifier": "01a0a48b-cf79-770e-a05f-eee1d6a3021e",
       "failureReason": null,
       "observation": {
         "checks": 13,
         "comparedRows": 156,
         "mismatches": 0,
-        "receiptExecutionIdentifier": "01a09ac8-db6e-7947-93b0-7c398b16f6eb"
+        "receiptExecutionIdentifier": "01a0a47c-40b8-7abb-9f07-b8db28b15691"
       },
       "comparison": "equal"
     },
@@ -189,8 +189,8 @@
       "limitValue": 4,
       "unit": "measuredBrowsers",
       "tool": "Chrome / Safari / Firefox / Edge",
-      "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
-      "executionIdentifier": "01a09acc-4808-7629-b5d4-a4839d16870c",
+      "sourceRevision": "sha256:9478a5e17024ef21aaf5239ea2f13ffac7885ead15d95ef4607e5be55fd781bd",
+      "executionIdentifier": "01a0a48b-cf79-770e-a05f-eee1d6a3021e",
       "failureReason": "The new Material Sphere schemas have not been connected to the exhibition application or measured in browsers."
     },
     {
@@ -201,20 +201,20 @@
       "limitValue": 0,
       "unit": "remainingRuntimeCalls",
       "tool": "Plumeria production build",
-      "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
-      "executionIdentifier": "01a09acc-4808-7629-b5d4-a4839d16870c",
+      "sourceRevision": "sha256:9478a5e17024ef21aaf5239ea2f13ffac7885ead15d95ef4607e5be55fd781bd",
+      "executionIdentifier": "01a0a48b-cf79-770e-a05f-eee1d6a3021e",
       "failureReason": "Generated schemas are type-checked; a production Plumeria build for these schemas has not been measured."
     },
     {
       "gateIdentifier": "f6f6b3ca-13f8-53d0-9e61-5fccc5b0a17a",
       "gateName": "SourceRevisionUnchangedDuringVerification",
       "status": "pass",
-      "observedValue": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
-      "limitValue": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
+      "observedValue": "sha256:9478a5e17024ef21aaf5239ea2f13ffac7885ead15d95ef4607e5be55fd781bd",
+      "limitValue": "sha256:9478a5e17024ef21aaf5239ea2f13ffac7885ead15d95ef4607e5be55fd781bd",
       "unit": "sourceRevision",
       "tool": "SHA-256 source manifest",
-      "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
-      "executionIdentifier": "01a09acc-4808-7629-b5d4-a4839d16870c",
+      "sourceRevision": "sha256:9478a5e17024ef21aaf5239ea2f13ffac7885ead15d95ef4607e5be55fd781bd",
+      "executionIdentifier": "01a0a48b-cf79-770e-a05f-eee1d6a3021e",
       "failureReason": null,
       "comparison": "equal"
     }
@@ -258,13 +258,13 @@
     "LeanLanguageServerInspection": {
       "recordedCalls": 55,
       "inspectedTheorems": 38,
-      "receiptExecutionIdentifier": "01a09ac8-db6e-7ec4-9085-5ad329eb62b5"
+      "receiptExecutionIdentifier": "01a0a47a-f16c-773a-885c-47df7915e1ec"
     },
     "WolframIndependentCalculation": {
       "checks": 13,
       "comparedRows": 156,
       "mismatches": 0,
-      "receiptExecutionIdentifier": "01a09ac8-db6e-7947-93b0-7c398b16f6eb"
+      "receiptExecutionIdentifier": "01a0a47c-40b8-7abb-9f07-b8db28b15691"
     }
   }
 }

@@ -3,8 +3,8 @@ type: Material Interpretation
 title: "ウィリアム・モリス — Material Sphere"
 profile_identifier: e9146e26-704e-5073-8222-11be30c6d0be
 person_identifier: 4f7cc469-4d4a-5409-95f3-0691a8214497
-source_revision: sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736
-execution_identifier: 01a09acc-4808-7629-b5d4-a4839d16870c
+source_revision: sha256:9478a5e17024ef21aaf5239ea2f13ffac7885ead15d95ef4607e5be55fd781bd
+execution_identifier: 01a0a48b-cf79-770e-a05f-eee1d6a3021e
 interpretation_status: proposed
 ---
 
@@ -42,4 +42,4 @@ interpretation_status: proposed
 
 画面での見え方・操作・速度は未検査です。[検査報告](../../reports/gate-report.md)で確認範囲を示します。
 
-<!-- llm machine contract; state: proposed interpretation; transition: claim-linked profile -> human review; artifact UUIDv5: e67bec4e-cc81-54b8-8de8-e04f06503867; execution UUIDv7: 01a09acc-4808-7629-b5d4-a4839d16870c -->
+<!-- llm machine contract; state: proposed interpretation; transition: claim-linked profile -> human review; artifact UUIDv5: e67bec4e-cc81-54b8-8de8-e04f06503867; execution UUIDv7: 01a0a48b-cf79-770e-a05f-eee1d6a3021e -->
