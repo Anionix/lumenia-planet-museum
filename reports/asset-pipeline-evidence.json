@@ -1,8 +1,8 @@
 {
-  "executionIdentifier": "01a0a487-37af-7d3b-893d-d2986ffffdbd",
-  "sourceRevision": "sha256:2fb2a5420fc35e627b587801628e01159eda24905971233c19891a05a2b4d4ce",
+  "executionIdentifier": "01a0a5a6-1e06-7bbb-b877-ff0ae9fcc064",
+  "sourceRevision": "sha256:ba2c1331a2289e890d563ba97d8bd49ca2a8d071c8f1e59c722bd0d8047e6c90",
   "inputs": {
-    "sourceRevision": "sha256:2fb2a5420fc35e627b587801628e01159eda24905971233c19891a05a2b4d4ce",
+    "sourceRevision": "sha256:ba2c1331a2289e890d563ba97d8bd49ca2a8d071c8f1e59c722bd0d8047e6c90",
     "files": [
       {
         "path": "CONSTRAINTS.md",
@@ -130,7 +130,7 @@
       },
       {
         "path": "scripts/browser-observations.mjs",
-        "sha256": "e75e81e7853ff9abaaef9d7842fc143e5372d13dbd8e25f61be867aae79df59e"
+        "sha256": "31eddef823b66065b8893ad6da5149712a534af3792c844d913be78fddba9355"
       },
       {
         "path": "scripts/build-artwork.mjs",
@@ -189,6 +189,10 @@
         "sha256": "f001b10dde025be2485b16d83434a11a546409647ff3e725031a5edecf25163a"
       },
       {
+        "path": "scripts/inspect-cosmic-bundle.mjs",
+        "sha256": "bc50a40208338c917d1cee9a419025709da7c72254b8fce9dd05ef6b601ebacf"
+      },
+      {
         "path": "scripts/language-server-evidence.mjs",
         "sha256": "59fdf821773569b9dbd4b62527a64b29bf39adb2f923b345cbcd4fb185784898"
       },
@@ -230,7 +234,7 @@
       },
       {
         "path": "scripts/source-inspection.mjs",
-        "sha256": "cdc9feaef2c5625b68a8ac130786cb3d9982b3b486f9eafac501fc3888e874e2"
+        "sha256": "d1631e5dcc34697d33767bbad9b7077e26df97fe8905d7b6178bdf27317341f7"
       },
       {
         "path": "scripts/source-revision.mjs",
@@ -258,11 +262,11 @@
       },
       {
         "path": "tests/application.test.mjs",
-        "sha256": "71bc1efae4bd093908935423e73135e71c6361514b2d6aebdce5c76647fe011b"
+        "sha256": "58b34595cf2779a3f68419d620fc25e0b7dc25a21dc050ca5d40627b0670e3f8"
       },
       {
         "path": "tests/browser-observations.test.mjs",
-        "sha256": "6f5786316aec0e5987a46c2d6b2de1a06f2008ee269e642a81d5c44de446b6d4"
+        "sha256": "6cb8c19cd493d4321fc6835cb1d8d4810d46482eb376c7d397e0d8b7b8fa80e4"
       },
       {
         "path": "tests/character-admission.test.mjs",
@@ -278,7 +282,7 @@
       },
       {
         "path": "tests/cosmic-exhibition.test.mjs",
-        "sha256": "c52dabf8eb3b3b863701f4def29b22a5730a2da8bdc26ed59b6c18242ce4af17"
+        "sha256": "9f12cc6b5a9fc107094b6f6bdb2f7717c32af71af167d8e0f3da693db804bc10"
       },
       {
         "path": "tests/drawing-asset-policy.test.mjs",
@@ -318,7 +322,7 @@
       },
       {
         "path": "web/app/atelier/[person]/page.tsx",
-        "sha256": "04f13db8fc17d62245e2cb10c98d0a0d0150f292029b4961ee60f017bd86646c"
+        "sha256": "5d7254dcec806d7c05d7dfacf81c15bfd34fcca58fa6ae14d99ad3845ab51416"
       },
       {
         "path": "web/app/compare/[stage]/page.tsx",
@@ -346,7 +350,7 @@
       },
       {
         "path": "web/app/records/page.tsx",
-        "sha256": "7e21477ea1ff8f52d59b26f17ea391b04f3483a56fc3fd619937339e545615de"
+        "sha256": "95ab38a311e147ce738f8bde0a6f2f5c03ce9b8076916d03133a5da35b6bdac5"
       },
       {
         "path": "web/artwork/asset-contract.ts",
@@ -366,11 +370,11 @@
       },
       {
         "path": "web/artwork/cosmic-scene.mjs",
-        "sha256": "0df25fa490b50b88780e0c00ccc2f53b776bf2ac224483670935fd3254aff8d4"
+        "sha256": "692edac83605ed715393acd2b26466d9336f131b28c39b28bf48fd5da71c84e9"
       },
       {
         "path": "web/artwork/cosmic-state.mjs",
-        "sha256": "3a357176adde5bd99a7081db3072eea2eece833d3405ab7636e5004089fd75ef"
+        "sha256": "f9d60b9145ef89c97e43c7d9c83ed7126b206636dd0edae3c2a74ed7ce6eeed2"
       },
       {
         "path": "web/artwork/css-geometry.ts",
@@ -382,7 +386,7 @@
       },
       {
         "path": "web/artwork/material-sphere-catalog.ts",
-        "sha256": "d5c5231e12fe41180bbdcfb78c6f716a7bca8e9ae76f49a81ddfae118120873b"
+        "sha256": "75240efe3c7ae5e7fc7a2e343117edfb0d67e8ed098a484286f966def2515a4f"
       },
       {
         "path": "web/artwork/material-sphere-computation/dimension.mjs",
@@ -434,11 +438,11 @@
       },
       {
         "path": "web/components/CosmicExhibition.styles.ts",
-        "sha256": "6805e9d0508aae8dfae9d2680b442f89f0878106ec2ad835bed651b321c40808"
+        "sha256": "5026028dd947301e68795b0edb977a0d6c56f804639d5a6cffb0a90557cfea1b"
       },
       {
         "path": "web/components/CosmicExhibition.tsx",
-        "sha256": "a7859c4c247795e5260c7bc40bab41a8a5d2f86a78acc0042bbf9bfac1b813b3"
+        "sha256": "917ec540342c67f49c2aa8b7233a1ff7800b28ad5199a841c40ac4a9776253eb"
       },
       {
         "path": "web/components/CssArtistCharacter.styles.ts",
@@ -470,15 +474,15 @@
       },
       {
         "path": "web/components/Gallery.tsx",
-        "sha256": "157587b671a022bba5d18707aeca79c5b59f22b16340fad79ed18958f6d7288c"
+        "sha256": "00f9182f1d2fed67b06f2c7de7682de001109d6ee98c22c6d11c5935692ecda2"
       },
       {
         "path": "web/components/MaterialSphere.generated.styles.ts",
-        "sha256": "97f076f57216e28e023e1f4488115db18711319a89fb1e04d5e75633e77ccac5"
+        "sha256": "983d0c677f324a35c098a7b2e1c8d6393078f4f421b7db6e692818267ceb09f3"
       },
       {
         "path": "web/components/MaterialSphere.generated.tsx",
-        "sha256": "f0648185d137d6f8dd3388156c52b0fbd8c2595fd26dac0116720868d2657d0b"
+        "sha256": "9d8f435523dd41cd2852c88b5ad7e8444f802c70742d213bba849318847e6fbf"
       },
       {
         "path": "web/components/MaterialSphere.styles.ts",
@@ -490,7 +494,7 @@
       },
       {
         "path": "web/components/MaterialSphereGallery.tsx",
-        "sha256": "c5b0029a950d0ba9ce265a7224baaa996cd8a4ed84eb4da6a292228059a0cb17"
+        "sha256": "2d3026d2c3389943b310c2f240d3ff2aa9976dba034ddadc42e931351cf343fc"
       },
       {
         "path": "web/components/MuseumCharacter.generated.styles.ts",
@@ -510,7 +514,7 @@
       },
       {
         "path": "web/components/PlanetMuseum.tsx",
-        "sha256": "ad337a8c5aa735142ee435c6e1d5bd7c5b57be26360f37b08da3798c4b2e760f"
+        "sha256": "240d025f300103ea548310dd78b15268780489ff1ad2fbcb067a2649eb5eaa63"
       },
       {
         "path": "web/next.config.mjs",
@@ -576,20 +580,20 @@
     "optimized",
     "validated"
   ],
-  "createdAt": "2026-09-15T10:05:20.320Z",
+  "createdAt": "2026-09-15T15:18:42.549Z",
   "source": {
-    "path": "/private/tmp/lumenia-cosmic-exhibition/artifacts/source/orbit.glb",
+    "path": "/private/tmp/lumenia-image-exploration/artifacts/source/orbit.glb",
     "sha256": "d7afffa260c87d348300c9b1a7baf48df97752103754433deabbe3e580bb1470",
     "byteLength": 30292
   },
   "optimizer": {
     "command": "/opt/homebrew/Cellar/node/25.9.0_2/bin/node",
     "arguments": [
-      "/private/tmp/lumenia-cosmic-exhibition/node_modules/gltfpack/cli.js",
+      "/private/tmp/lumenia-image-exploration/node_modules/gltfpack/cli.js",
       "-i",
-      "/private/tmp/lumenia-cosmic-exhibition/artifacts/source/orbit.glb",
+      "/private/tmp/lumenia-image-exploration/artifacts/source/orbit.glb",
       "-o",
-      "/private/tmp/lumenia-cosmic-exhibition/artifacts/asset-fixtures/orbit.glb",
+      "/private/tmp/lumenia-image-exploration/artifacts/asset-fixtures/orbit.glb",
       "-cc",
       "-kn",
       "-ke"
@@ -600,7 +604,7 @@
   },
   "state": "validated",
   "output": {
-    "path": "/private/tmp/lumenia-cosmic-exhibition/artifacts/asset-fixtures/orbit.glb",
+    "path": "/private/tmp/lumenia-image-exploration/artifacts/asset-fixtures/orbit.glb",
     "sha256": "c398d4da71e5157ce1cd47b76347ddf274f46c35cc561acde25616aa6ac3a291",
     "byteLength": 7984,
     "extensions": [
@@ -613,7 +617,7 @@
     "uri": "orbit.glb",
     "mimeType": "model/gltf-binary",
     "validatorVersion": "2.0.0-dev.3.10",
-    "validatedAt": "2026-09-15T10:05:20.332Z",
+    "validatedAt": "2026-09-15T15:18:42.563Z",
     "issues": {
       "numErrors": 0,
       "numWarnings": 0,

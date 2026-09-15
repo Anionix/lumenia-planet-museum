@@ -1,0 +1,29 @@
+{
+  "recordIdentifier": "307bb7f3-f518-59db-bbaf-a56492eae6be",
+  "recordedAt": "2026-09-15T15:37:17.179Z",
+  "code": "next[s_,d_] := Min[86400,s+Min[d,1/10]]; checks=<|\"bounded\"->FullSimplify[0<=next[s,d]<=86400,0<=s<=86400&&d>=0],\"monotone\"->FullSimplify[s<=next[s,d],0<=s<=86400&&d>=0],\"step_bounded\"->FullSimplify[next[s,d]-s<=1/10,0<=s<=86400&&d>=0],\"boundary_120\"->(next[11999/100,1/30]>120),\"end_stops\"->(next[86400,1/30]==86400),\"pause_identity\"->(Min[86400,120]==120)|>; continuous=2*(312/25)*Sin[Pi/(171*30)]; oldJump=2*(312/25)*Abs[Sin[Pi*(Mod[11999/100+1/30,120]-11999/100)/171]]; ExportString[<|\"checks\"->checks,\"all_passed\"->And@@Values[checks],\"continuous_distance\"->N[continuous,16],\"old_jump_distance\"->N[oldJump,16],\"radius\"->12.48,\"period_seconds\"->171|>,\"RawJSON\"]",
+  "result": {
+    "checks": {
+      "bounded": true,
+      "monotone": true,
+      "step_bounded": true,
+      "boundary_120": true,
+      "end_stops": true,
+      "pause_identity": true
+    },
+    "all_passed": true,
+    "continuous_distance": 0.01528540891468537,
+    "old_jump_distance": 20.12094582403507,
+    "radius": 12.48,
+    "period_seconds": 171
+  },
+  "toolResponse": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Out[1]= \"{\\n\\t\\\"checks\\\":{\\n\\t\\t\\\"bounded\\\":true,\\n\\t\\t\\\"monotone\\\":true,\\n\\t\\t\\\"step_bounded\\\":true,\\n\\t\\t\\\"boundary_120\\\":true,\\n\\t\\t\\\"end_stops\\\":true,\\n\\t\\t\\\"pause_identity\\\":true\\n\\t},\\n\\t\\\"all_passed\\\":true,\\n\\t\\\"continuous_distance\\\":0.01528540891468537,\\n\\t\\\"old_jump_distance\\\":20.12094582403507,\\n\\t\\\"radius\\\":1.248e1,\\n\\t\\\"period_seconds\\\":171\\n}\""
+      }
+    ],
+    "isError": false
+  }
+}

@@ -1,6 +1,6 @@
 {
   "manifest": {
-    "sourceRevision": "sha256:0bdf9f362166ae3da7478a7cc969070db351ad1e4a4f5e695abeca9acde4c22a",
+    "sourceRevision": "sha256:81baf2dec9fb672eb9c37d13fda9695911748f4408e5fe1673ec241b58d14bab",
     "files": [
       {
         "path": "CONSTRAINTS.md",
@@ -17,6 +17,10 @@
       {
         "path": "contracts/cosmic-exhibition.json",
         "sha256": "8d8886b9b3df3e98a68063ead911e1c2d156550fc8903d267917a29c030ed5ff"
+      },
+      {
+        "path": "contracts/cosmic-reference-images.json",
+        "sha256": "022245e9b6fbfa5f2ddbb31b362b537777ee309d377cd810463b3182abeb7acc"
       },
       {
         "path": "contracts/css-artworks.json",
@@ -40,7 +44,7 @@
       },
       {
         "path": "contracts/external-gates.json",
-        "sha256": "49905119414dcb5d7c8600fd1d5d7d74f0a03fefa7d6a603e4eb916c174d782a"
+        "sha256": "b16442543e38def9157e98cd6814cab5a2cce09b6217a95c832c1195b2ed0362"
       },
       {
         "path": "contracts/verification-contract.schema.json",
@@ -127,8 +131,208 @@
         "sha256": "ceec3257ddc64c87186fb7104e2f8b123b2a2ac3f8df47abe08be4ac8af8ffd2"
       },
       {
+        "path": "reference-assets/artist-cosmos/README.md",
+        "sha256": "671b06fa0fcafbd68c76af9e1a8f66940f6bf2ec45e8972985a994aa83d051ff"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/alphonse-mucha.png",
+        "sha256": "57fe2c034be6dd3340464ab9852a79e8d8f12e8de46ee61b1d1af3f4801b09a0"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/art-direction-briefs.jsonl",
+        "sha256": "e810baa3313677bf837a22aae700e8ac796ea86cea702159a17b4c0d6b339210"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/charles-eames.png",
+        "sha256": "33c97fe0f290497c22f556293b923d7b4b5d5bcacf027b7a1ba34034974e8d37"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/charles-rennie-mackintosh.png",
+        "sha256": "81ee0b404ebe5e70465681397f6f2ea7ae82c85a4971f1524fdc7fc3e3be01a8"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/dieter-rams.png",
+        "sha256": "9b18c578a617c774b195ce2ddea6ef3c3cd2cf9562a60a5031df5b64742ff866"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/ettore-sottsass.png",
+        "sha256": "62f9f2086ffa001a9b5c326c4a4fb7eeba1ae4857fe9eb93a1f465349161cefa"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/gerrit-rietveld.png",
+        "sha256": "ca4d66b058126ed541e30ea886139ebfd2815740b6db8b538ca26f3c21305fc0"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/herbert-bayer.png",
+        "sha256": "1179f76272afc9eac1ac1b7b3ec6fcfcab9194bf000d27bbcd41e85cf25a8c3b"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/index.html",
+        "sha256": "030f01f7a67de32fef6d268c2810d310c5427b6cef8ee31efa04d30118648079"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/README.md",
+        "sha256": "73482be2291063568caab1663b6407c24fb87cf82a7461c54f362da4b0fdd0a8"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/dependencies.json",
+        "sha256": "ec143940f4dd67e1c95f9d94e849c2b177abd484701a51528d8659f63054a141"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/exhibition.json",
+        "sha256": "108306a4418dd2b7740e2f7130cdac366adc5352d305722047dc41c1db96d616"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/index.html",
+        "sha256": "0a3014a9089b63a11268b8d802074f45fa5b2733ad4a61bbf36f7df274c43fc9"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/main.mjs",
+        "sha256": "62bdfd624708decf015657094c6f70d7853b1c73493bbc973b248c3b927f842f"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/model.mjs",
+        "sha256": "ba02dbf2d014e3673fd0033e97056a840d02c1db504987ff577922b94db00395"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/package.json",
+        "sha256": "e15ae6610a16ce9223f55341be75a7ad86adfb09f00775888dfde0cfb1128dbe"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/physics.mjs",
+        "sha256": "076dfd0f15f91d278eb51870d842c01e19e7ca3a77431c5d4bed658be6e45503"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/serve.mjs",
+        "sha256": "3cb45b0670682d9827f6f212097fdd4d777579957093dd3c17af0943a76012ff"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/style.css",
+        "sha256": "1889ad1612d94417e05ca18522232110c3d510c09b3c5841ea5aad17c820b654"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/tests/exhibition.test.mjs",
+        "sha256": "de9004bed080f0a0571f905c25a87b8883a8755bdd0ed59405a714f64ebbd2c0"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/vendor/RAPIER-LICENSE.txt",
+        "sha256": "4c05555705e3efde601fb1252ae48f1d63992af8a8fb8947745b7fa834e8f519"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/vendor/THREE-LICENSE.txt",
+        "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/vendor/controls/OrbitControls.js",
+        "sha256": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/vendor/rapier.mjs",
+        "sha256": "82b65114e949ed17969a5d0a3517b952f430ea524f4a19ce4a31e72fb7757f27"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/vendor/reference-physics-contract.mjs",
+        "sha256": "4d1495820c1b9dcf334accee1892edd4f0ead85f5575e7c91935518903b435ba"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/vendor/three.core.js",
+        "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/vendor/three.module.js",
+        "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/verification/Exhibition.lean",
+        "sha256": "54614a2c5c9461f8e207f947372bb23fb39dcf381202d2fbfcea4e6b1bf5c4fb"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/verification/browser-receipt.json",
+        "sha256": "29eda44c15f14aca04818b6f22a1053c82d0dd661e4196b4994cf48ca8e95b46"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/verification/exact-inputs.json",
+        "sha256": "a678c79803ceefc12490669020c2c5d67148bd7512168c64f6da9f1ee1de2e08"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/verification/lake-manifest.json",
+        "sha256": "3a0155577bbf410840be1e28429836728232b991d62561433eec0b423b97b5e6"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/verification/lakefile.toml",
+        "sha256": "b56bfa054b9ff62738d7328e37f87597b221f445e973d25e5594b1277faee88e"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/verification/lean-axioms.txt",
+        "sha256": "23e29ec6eb25be32394bcb4e94435d7a3b490b5f26c7c930aa66dcfecd4ad95d"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/verification/lean-toolchain",
+        "sha256": "db7bb24b756d745bbde83fe92718b51bd3625dae3701ba0f598d0eedcd3f3028"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/verification/prepare.mjs",
+        "sha256": "9bdcf6d17cd1123570429dd5990ebe67dc9bc5812c172c30308b0c43b68aa7e6"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/verification/runtime-tests.txt",
+        "sha256": "f30df59ac705d220ae1916730c4d3417c0c70a36c8f2e054030786c51ed4cb74"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/verification/verification.json",
+        "sha256": "fdca4cd4eb6a3b9e5b7390e96a3591c183b1b224b99c64cdd1fa1e7b8d80eb72"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/verification/verify.mjs",
+        "sha256": "5ffca77e31ea74b24e6b4461e44c0c257c56de9f474715838f22a9bfa572ae85"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/verification/wolfram-receipt.json",
+        "sha256": "b5adaeae7acafa61c3bf374605fc651faef06d91ccadc5387afaf9e497bfac89"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/verification/wolfram.wl",
+        "sha256": "cd01f3a9a8292af65eb5880c0f0ebd2dcd05cec6516ecb2805d81b688036639d"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/josef-muller-brockmann.png",
+        "sha256": "75a303ac4c65d1608c6ffb3f2f3ce70a2191aacb0980713dccfa4c8ce29a13cd"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/massimo-vignelli.png",
+        "sha256": "68c567fa35979197d5652c822492322a995378ec30c20aa0f965db10bc4c7fc7"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/naoto-fukasawa.png",
+        "sha256": "c1d81e3a60c2e9859fe9c4c1fabd7fc27dc17d1b053d8cc2bbde8cf409b60f3a"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/piet-mondrian.png",
+        "sha256": "66ab2202b937935af83683534d1a667cc8e291dd5cb40049b29232439f9eb8da"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/ray-eames.png",
+        "sha256": "c4933e043eb1931a3bb4f64bb83821fbbca0b081298808c373adc12167c3b3f8"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/references.jsonl",
+        "sha256": "654e0f596b0cedd19fd87ae79a5ee9073d55b4a5808afcdeeb8be9dd7e600331"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/rei-kawakubo.png",
+        "sha256": "d75de875bc814bbc4cf6dbe85f6e1cdaf2a31340aaa06ab54a8c068f4345954b"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/walter-gropius.png",
+        "sha256": "595059dbe0521bed0cff56afb278d8034344416ceb419f895d5afd6d6b589fb4"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/william-morris.png",
+        "sha256": "d7485b0b48ab20c6ef5b369f0206db25137aac82021054cc1b8c8b4fb437d7a0"
+      },
+      {
         "path": "scripts/browser-observations.mjs",
-        "sha256": "e75e81e7853ff9abaaef9d7842fc143e5372d13dbd8e25f61be867aae79df59e"
+        "sha256": "31eddef823b66065b8893ad6da5149712a534af3792c844d913be78fddba9355"
       },
       {
         "path": "scripts/build-artwork.mjs",
@@ -147,8 +351,12 @@
         "sha256": "84b05e6c303c87bb5d93a9685636882a7f33b5133b6ea0f6e73da7743e0b9aca"
       },
       {
+        "path": "scripts/build-cosmic-images.mjs",
+        "sha256": "41032ea566a1cdaa59859d936e27cc499ac14a5bd13e9d7c765555cdb00bf2b9"
+      },
+      {
         "path": "scripts/build-web.mjs",
-        "sha256": "01464c9e27e110fa546084461b3fa52e3a06eb1bf07bba8aa24d94c4a2fd67a5"
+        "sha256": "9c2230175bfe3531e9b84b522892ed53af411971a506fdb44ec749534881ea6e"
       },
       {
         "path": "scripts/character-registration.mjs",
@@ -172,7 +380,7 @@
       },
       {
         "path": "scripts/drawing-asset-policy.mjs",
-        "sha256": "267d5ee2db8b529b39542f105973c7d0426b30387bdbad3770b6cdf7c882650f"
+        "sha256": "57112eba494063e0cd5d1ba6fd154a09a9076758d222ae244e1380e2787e2af2"
       },
       {
         "path": "scripts/export-css-character.mjs",
@@ -212,7 +420,7 @@
       },
       {
         "path": "scripts/run-application-check.mjs",
-        "sha256": "c251eb67cba347500e3c3103e7482ccb9ce58071b30bb1745b53786e18a1dc32"
+        "sha256": "d8627cee825e2f4165128989fecbbc95792b25384405151fc09d73a85d6206bf"
       },
       {
         "path": "scripts/run-asset-reference-check.mjs",
@@ -228,15 +436,15 @@
       },
       {
         "path": "scripts/serve-web.mjs",
-        "sha256": "4fc98fee7ee795ebf7068db998b867e2ffc21a1d850e5ba8e2084fa3e11c74d0"
+        "sha256": "4a297557545bd57a2981909a1064e8d490772cb6473e29b56afa66e7667ee7f2"
       },
       {
         "path": "scripts/source-inspection.mjs",
-        "sha256": "cdc9feaef2c5625b68a8ac130786cb3d9982b3b486f9eafac501fc3888e874e2"
+        "sha256": "d1631e5dcc34697d33767bbad9b7077e26df97fe8905d7b6178bdf27317341f7"
       },
       {
         "path": "scripts/source-revision.mjs",
-        "sha256": "e00d8c5624a04f6c169322611391067ef54badcf52332ab245cbfd23ecaa198d"
+        "sha256": "2bc9a85fae617b28a3201c053652a9c08ee672985c472e8fac4e62001e2be88e"
       },
       {
         "path": "scripts/stage-museum-character.mjs",
@@ -260,11 +468,11 @@
       },
       {
         "path": "tests/application.test.mjs",
-        "sha256": "71bc1efae4bd093908935423e73135e71c6361514b2d6aebdce5c76647fe011b"
+        "sha256": "58b34595cf2779a3f68419d620fc25e0b7dc25a21dc050ca5d40627b0670e3f8"
       },
       {
         "path": "tests/browser-observations.test.mjs",
-        "sha256": "6f5786316aec0e5987a46c2d6b2de1a06f2008ee269e642a81d5c44de446b6d4"
+        "sha256": "6cb8c19cd493d4321fc6835cb1d8d4810d46482eb376c7d397e0d8b7b8fa80e4"
       },
       {
         "path": "tests/character-admission.test.mjs",
@@ -280,7 +488,11 @@
       },
       {
         "path": "tests/cosmic-exhibition.test.mjs",
-        "sha256": "c52dabf8eb3b3b863701f4def29b22a5730a2da8bdc26ed59b6c18242ce4af17"
+        "sha256": "9f12cc6b5a9fc107094b6f6bdb2f7717c32af71af167d8e0f3da693db804bc10"
+      },
+      {
+        "path": "tests/cosmic-image-publication.test.mjs",
+        "sha256": "f8c45287aa0b2ea93f2524c4a38c99c2f0f7c38b5c661fefe18950964386ed13"
       },
       {
         "path": "tests/drawing-asset-policy.test.mjs",
@@ -320,7 +532,7 @@
       },
       {
         "path": "web/app/atelier/[person]/page.tsx",
-        "sha256": "04f13db8fc17d62245e2cb10c98d0a0d0150f292029b4961ee60f017bd86646c"
+        "sha256": "5d7254dcec806d7c05d7dfacf81c15bfd34fcca58fa6ae14d99ad3845ab51416"
       },
       {
         "path": "web/app/compare/[stage]/page.tsx",
@@ -348,7 +560,7 @@
       },
       {
         "path": "web/app/records/page.tsx",
-        "sha256": "7e21477ea1ff8f52d59b26f17ea391b04f3483a56fc3fd619937339e545615de"
+        "sha256": "95ab38a311e147ce738f8bde0a6f2f5c03ce9b8076916d03133a5da35b6bdac5"
       },
       {
         "path": "web/artwork/asset-contract.ts",
@@ -368,11 +580,11 @@
       },
       {
         "path": "web/artwork/cosmic-scene.mjs",
-        "sha256": "0df25fa490b50b88780e0c00ccc2f53b776bf2ac224483670935fd3254aff8d4"
+        "sha256": "2e9b1af1d46fafa9a1ae97d95687399a1183a6f54ab3ba481c68b98a928b4d48"
       },
       {
         "path": "web/artwork/cosmic-state.mjs",
-        "sha256": "3a357176adde5bd99a7081db3072eea2eece833d3405ab7636e5004089fd75ef"
+        "sha256": "69c5fede45085eb479874630a78603e13b5fda5866c48414f545cebdfed5e755"
       },
       {
         "path": "web/artwork/css-geometry.ts",
@@ -440,7 +652,7 @@
       },
       {
         "path": "web/components/CosmicExhibition.tsx",
-        "sha256": "a7859c4c247795e5260c7bc40bab41a8a5d2f86a78acc0042bbf9bfac1b813b3"
+        "sha256": "e7f7042d0946215b1fadbd5434c82694478f20f555a9679552461861cbe55592"
       },
       {
         "path": "web/components/CssArtistCharacter.styles.ts",
@@ -472,7 +684,7 @@
       },
       {
         "path": "web/components/Gallery.tsx",
-        "sha256": "157587b671a022bba5d18707aeca79c5b59f22b16340fad79ed18958f6d7288c"
+        "sha256": "00f9182f1d2fed67b06f2c7de7682de001109d6ee98c22c6d11c5935692ecda2"
       },
       {
         "path": "web/components/MaterialSphere.generated.styles.ts",
@@ -492,7 +704,7 @@
       },
       {
         "path": "web/components/MaterialSphereGallery.tsx",
-        "sha256": "c5b0029a950d0ba9ce265a7224baaa996cd8a4ed84eb4da6a292228059a0cb17"
+        "sha256": "2d3026d2c3389943b310c2f240d3ff2aa9976dba034ddadc42e931351cf343fc"
       },
       {
         "path": "web/components/MuseumCharacter.generated.styles.ts",
@@ -512,7 +724,7 @@
       },
       {
         "path": "web/components/PlanetMuseum.tsx",
-        "sha256": "ad337a8c5aa735142ee435c6e1d5bd7c5b57be26360f37b08da3798c4b2e760f"
+        "sha256": "9be2fe4db25642e83d75e3bfb7adb61b3896a90230c0a28424d10e05d09e7caf"
       },
       {
         "path": "web/next.config.mjs",
@@ -559,6 +771,138 @@
         "sha256": "b1cabd11511431b4230d21303222b0d8e09169144fa675ee624612c8a7946f67"
       },
       {
+        "path": "web/public/cosmos/alphonse-mucha.png",
+        "sha256": "57fe2c034be6dd3340464ab9852a79e8d8f12e8de46ee61b1d1af3f4801b09a0"
+      },
+      {
+        "path": "web/public/cosmos/charles-eames.png",
+        "sha256": "33c97fe0f290497c22f556293b923d7b4b5d5bcacf027b7a1ba34034974e8d37"
+      },
+      {
+        "path": "web/public/cosmos/charles-rennie-mackintosh.png",
+        "sha256": "81ee0b404ebe5e70465681397f6f2ea7ae82c85a4971f1524fdc7fc3e3be01a8"
+      },
+      {
+        "path": "web/public/cosmos/dieter-rams.png",
+        "sha256": "9b18c578a617c774b195ce2ddea6ef3c3cd2cf9562a60a5031df5b64742ff866"
+      },
+      {
+        "path": "web/public/cosmos/ettore-sottsass.png",
+        "sha256": "62f9f2086ffa001a9b5c326c4a4fb7eeba1ae4857fe9eb93a1f465349161cefa"
+      },
+      {
+        "path": "web/public/cosmos/gerrit-rietveld.png",
+        "sha256": "ca4d66b058126ed541e30ea886139ebfd2815740b6db8b538ca26f3c21305fc0"
+      },
+      {
+        "path": "web/public/cosmos/herbert-bayer.png",
+        "sha256": "1179f76272afc9eac1ac1b7b3ec6fcfcab9194bf000d27bbcd41e85cf25a8c3b"
+      },
+      {
+        "path": "web/public/cosmos/illustration-design-reference.jsonl",
+        "sha256": "5ff2c20d1969a6f83edf2520e3a10853e500e12bd87b15de85b0dc7b0f0eab9c"
+      },
+      {
+        "path": "web/public/cosmos/index.html",
+        "sha256": "d6b8b2f3e5a60cbee9f449fdb5090013ba63e02812ed0fa8673677fd434f87a2"
+      },
+      {
+        "path": "web/public/cosmos/interactive/README.md",
+        "sha256": "494ddbf505fdf6bb914061d736c7f3797de174b91d3a37156d6d7937b2ba4e05"
+      },
+      {
+        "path": "web/public/cosmos/interactive/dependencies.json",
+        "sha256": "ec143940f4dd67e1c95f9d94e849c2b177abd484701a51528d8659f63054a141"
+      },
+      {
+        "path": "web/public/cosmos/interactive/exhibition.json",
+        "sha256": "108306a4418dd2b7740e2f7130cdac366adc5352d305722047dc41c1db96d616"
+      },
+      {
+        "path": "web/public/cosmos/interactive/index.html",
+        "sha256": "0a3014a9089b63a11268b8d802074f45fa5b2733ad4a61bbf36f7df274c43fc9"
+      },
+      {
+        "path": "web/public/cosmos/interactive/main.mjs",
+        "sha256": "62bdfd624708decf015657094c6f70d7853b1c73493bbc973b248c3b927f842f"
+      },
+      {
+        "path": "web/public/cosmos/interactive/model.mjs",
+        "sha256": "ba02dbf2d014e3673fd0033e97056a840d02c1db504987ff577922b94db00395"
+      },
+      {
+        "path": "web/public/cosmos/interactive/physics.mjs",
+        "sha256": "076dfd0f15f91d278eb51870d842c01e19e7ca3a77431c5d4bed658be6e45503"
+      },
+      {
+        "path": "web/public/cosmos/interactive/style.css",
+        "sha256": "1889ad1612d94417e05ca18522232110c3d510c09b3c5841ea5aad17c820b654"
+      },
+      {
+        "path": "web/public/cosmos/interactive/vendor/RAPIER-LICENSE.txt",
+        "sha256": "4c05555705e3efde601fb1252ae48f1d63992af8a8fb8947745b7fa834e8f519"
+      },
+      {
+        "path": "web/public/cosmos/interactive/vendor/THREE-LICENSE.txt",
+        "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+      },
+      {
+        "path": "web/public/cosmos/interactive/vendor/controls/OrbitControls.js",
+        "sha256": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b"
+      },
+      {
+        "path": "web/public/cosmos/interactive/vendor/rapier.mjs",
+        "sha256": "82b65114e949ed17969a5d0a3517b952f430ea524f4a19ce4a31e72fb7757f27"
+      },
+      {
+        "path": "web/public/cosmos/interactive/vendor/reference-physics-contract.mjs",
+        "sha256": "4d1495820c1b9dcf334accee1892edd4f0ead85f5575e7c91935518903b435ba"
+      },
+      {
+        "path": "web/public/cosmos/interactive/vendor/three.core.js",
+        "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
+      },
+      {
+        "path": "web/public/cosmos/interactive/vendor/three.module.js",
+        "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+      },
+      {
+        "path": "web/public/cosmos/josef-muller-brockmann.png",
+        "sha256": "75a303ac4c65d1608c6ffb3f2f3ce70a2191aacb0980713dccfa4c8ce29a13cd"
+      },
+      {
+        "path": "web/public/cosmos/massimo-vignelli.png",
+        "sha256": "68c567fa35979197d5652c822492322a995378ec30c20aa0f965db10bc4c7fc7"
+      },
+      {
+        "path": "web/public/cosmos/naoto-fukasawa.png",
+        "sha256": "c1d81e3a60c2e9859fe9c4c1fabd7fc27dc17d1b053d8cc2bbde8cf409b60f3a"
+      },
+      {
+        "path": "web/public/cosmos/piet-mondrian.png",
+        "sha256": "66ab2202b937935af83683534d1a667cc8e291dd5cb40049b29232439f9eb8da"
+      },
+      {
+        "path": "web/public/cosmos/ray-eames.png",
+        "sha256": "c4933e043eb1931a3bb4f64bb83821fbbca0b081298808c373adc12167c3b3f8"
+      },
+      {
+        "path": "web/public/cosmos/references.jsonl",
+        "sha256": "5d4f42946a7bd355d7f2540bafa7b5e4e85bfae93f81f6d0310044a9228b8ace"
+      },
+      {
+        "path": "web/public/cosmos/rei-kawakubo.png",
+        "sha256": "d75de875bc814bbc4cf6dbe85f6e1cdaf2a31340aaa06ab54a8c068f4345954b"
+      },
+      {
+        "path": "web/public/cosmos/walter-gropius.png",
+        "sha256": "595059dbe0521bed0cff56afb278d8034344416ceb419f895d5afd6d6b589fb4"
+      },
+      {
+        "path": "web/public/cosmos/william-morris.png",
+        "sha256": "d7485b0b48ab20c6ef5b369f0206db25137aac82021054cc1b8c8b4fb437d7a0"
+      },
+      {
         "path": "web/public/favicon.svg",
         "sha256": "b2a54a1ce80bfa8b03ccbab7fd6c1e1c57a8f4e3c11c83be25fee5700fe1e744"
       },
@@ -568,7 +912,7 @@
       }
     ]
   },
-  "executionIdentifier": "01a0a4a5-249b-748a-9d45-f40af9198610",
+  "executionIdentifier": "01a0a5bf-3c93-742d-99eb-ee66a3830633",
   "gateNames": {
     "79885f8e-618d-5cd3-9ee7-350d8e279b8b": "Lumenia.LeanProjectBuildGate",
     "46de9356-94a7-5355-a9a6-a6fde3471fcc": "Lumenia.LeanWarningGate",
@@ -598,7 +942,7 @@
         "--test-reporter=tap"
       ],
       "exitCode": 0,
-      "stdout": "TAP version 13\n# Subtest: actual browser validator agrees with compiled Lean over all 4096 assignments\nok 1 - actual browser validator agrees with compiled Lean over all 4096 assignments\n  ---\n  duration_ms: 118.302084\n  type: 'test'\n  ...\n# Subtest: runtime manifest rejects malformed flags, unvalidated stages, unknown keys and external resources\nok 2 - runtime manifest rejects malformed flags, unvalidated stages, unknown keys and external resources\n  ---\n  duration_ms: 1.34\n  type: 'test'\n  ...\n# Subtest: decoders activate only for explicit asset flags, including Draco opt-in\nok 3 - decoders activate only for explicit asset flags, including Draco opt-in\n  ---\n  duration_ms: 1.020459\n  type: 'test'\n  ...\n# Subtest: actual optimized binary declares Meshopt and passes the browser manifest parser\nok 4 - actual optimized binary declares Meshopt and passes the browser manifest parser\n  ---\n  duration_ms: 20.999708\n  type: 'test'\n  ...\n# Subtest: code gates accept module-scope Plumeria arrays inside a client boundary\nok 5 - code gates accept module-scope Plumeria arrays inside a client boundary\n  ---\n  duration_ms: 17.427834\n  type: 'test'\n  ...\n# Subtest: code gates distinguish literal object keys from browser access\nok 6 - code gates distinguish literal object keys from browser access\n  ---\n  duration_ms: 3.344167\n  type: 'test'\n  ...\n# Subtest: code gates reject nested create, className, nonarray styles, server events and transitive browser access\nok 7 - code gates reject nested create, className, nonarray styles, server events and transitive browser access\n  ---\n  duration_ms: 1.199291\n  type: 'test'\n  ...\n# Subtest: code gates reject request-time server functions and nonliteral imports\nok 8 - code gates reject request-time server functions and nonliteral imports\n  ---\n  duration_ms: 1.0265\n  type: 'test'\n  ...\n# Subtest: Plumeria namespace aliases and opaque JSX props cannot bypass code gates\nok 9 - Plumeria namespace aliases and opaque JSX props cannot bypass code gates\n  ---\n  duration_ms: 0.39\n  type: 'test'\n  ...\n# Subtest: Plumeria keyframes must be module-level constants just like style declarations\nok 10 - Plumeria keyframes must be module-level constants just like style declarations\n  ---\n  duration_ms: 0.851625\n  type: 'test'\n  ...\n# Subtest: line artwork uses HTML border rings and has no vector or canvas drawing implementation\nok 11 - line artwork uses HTML border rings and has no vector or canvas drawing implementation\n  ---\n  duration_ms: 13.080041\n  type: 'test'\n  ...\n# Subtest: CSS diagonal circles satisfy the torus equation at sampled points\nok 12 - CSS diagonal circles satisfy the torus equation at sampled points\n  ---\n  duration_ms: 3.504125\n  type: 'test'\n  ...\n# Subtest: all artwork kinds use CSS and the solid consists of finite torus panels\nok 13 - all artwork kinds use CSS and the solid consists of finite torus panels\n  ---\n  duration_ms: 3.198042\n  type: 'test'\n  ...\n# Subtest: shared controls have no drawing loop or graphics dependency\nok 14 - shared controls have no drawing loop or graphics dependency\n  ---\n  duration_ms: 2.187041\n  type: 'test'\n  ...\n# Subtest: decoder bytes remain in core; only artwork bytes are excluded\nok 15 - decoder bytes remain in core; only artwork bytes are excluded\n  ---\n  duration_ms: 1.387\n  type: 'test'\n  ...\n# Subtest: missing stages, cached entries and unknown resource classes cannot pass transfer measurement\nok 16 - missing stages, cached entries and unknown resource classes cannot pass transfer measurement\n  ---\n  duration_ms: 0.301709\n  type: 'test'\n  ...\n# Subtest: Character receipt boundary accepts a complete synthetic record without claiming visual verification\nok 17 - Character receipt boundary accepts a complete synthetic record without claiming visual verification\n  ---\n  duration_ms: 90.007208\n  type: 'test'\n  ...\n# Subtest: Character admission rejects sixteen unique but unrecognized direction labels\nok 18 - Character admission rejects sixteen unique but unrecognized direction labels\n  ---\n  duration_ms: 29.445959\n  type: 'test'\n  ...\n# Subtest: Character admission rejects wrong person\nok 19 - Character admission rejects wrong person\n  ---\n  duration_ms: 21.806709\n  type: 'test'\n  ...\n# Subtest: Character admission rejects unbound decoded image\nok 20 - Character admission rejects unbound decoded image\n  ---\n  duration_ms: 19.847375\n  type: 'test'\n  ...\n# Subtest: Character admission rejects missing axis evidence\nok 21 - Character admission rejects missing axis evidence\n  ---\n  duration_ms: 29.499917\n  type: 'test'\n  ...\n# Subtest: Character admission rejects failed standard inspection\nok 22 - Character admission rejects failed standard inspection\n  ---\n  duration_ms: 23.47075\n  type: 'test'\n  ...\n# Subtest: Character admission rejects incomplete continuity\nok 23 - Character admission rejects incomplete continuity\n  ---\n  duration_ms: 23.880625\n  type: 'test'\n  ...\n# Subtest: Character admission rejects duplicate direction\nok 24 - Character admission rejects duplicate direction\n  ---\n  duration_ms: 28.49725\n  type: 'test'\n  ...\n# Subtest: Character admission rejects missing direction\nok 25 - Character admission rejects missing direction\n  ---\n  duration_ms: 55.361542\n  type: 'test'\n  ...\n# Subtest: Character admission rejects failed direction\nok 26 - Character admission rejects failed direction\n  ---\n  duration_ms: 37.689208\n  type: 'test'\n  ...\n# Subtest: Character admission rejects empty semantic observation\nok 27 - Character admission rejects empty semantic observation\n  ---\n  duration_ms: 39.406375\n  type: 'test'\n  ...\n# Subtest: Character admission rejects non-text semantic reason\nok 28 - Character admission rejects non-text semantic reason\n  ---\n  duration_ms: 69.112375\n  type: 'test'\n  ...\n# Subtest: Character admission rejects failed independent review\nok 29 - Character admission rejects failed independent review\n  ---\n  duration_ms: 31.4525\n  type: 'test'\n  ...\n# Subtest: Character admission rejects failed blind review\nok 30 - Character admission rejects failed blind review\n  ---\n  duration_ms: 24.383875\n  type: 'test'\n  ...\n# Subtest: Character admission rejects intermediate atlas\nok 31 - Character admission rejects intermediate atlas\n  ---\n  duration_ms: 23.060125\n  type: 'test'\n  ...\n# Subtest: Character admission rejects invalid execution identifier\nok 32 - Character admission rejects invalid execution identifier\n  ---\n  duration_ms: 27.751042\n  type: 'test'\n  ...\n# Subtest: Character admission rejects image bytes changed after inspection\nok 33 - Character admission rejects image bytes changed after inspection\n  ---\n  duration_ms: 32.174333\n  type: 'test'\n  ...\n# Subtest: Character admission rejects evidence changed after inspection\nok 34 - Character admission rejects evidence changed after inspection\n  ---\n  duration_ms: 71.248584\n  type: 'test'\n  ...\n# Subtest: Missing character receipt is blocked, not accepted\nok 35 - Missing character receipt is blocked, not accepted\n  ---\n  duration_ms: 12.732583\n  type: 'test'\n  ...\n# Subtest: Unverified raster characters cannot mount; failed or stale evidence stops availability generation\nok 36 - Unverified raster characters cannot mount; failed or stale evidence stops availability generation\n  ---\n  duration_ms: 2.868833\n  type: 'test'\n  ...\n# Subtest: Accepted character availability preserves the image digest and evidence run\nok 37 - Accepted character availability preserves the image digest and evidence run\n  ---\n  duration_ms: 0.266125\n  type: 'test'\n  ...\n# Subtest: The studio reads freshly generated character availability instead of a manual ready flag\nok 38 - The studio reads freshly generated character availability instead of a manual ready flag\n  ---\n  duration_ms: 101.163417\n  type: 'test'\n  ...\n# Subtest: the committed verification request is valid\nok 39 - the committed verification request is valid\n  ---\n  duration_ms: 13.794959\n  type: 'test'\n  ...\n# Subtest: the committed verification result is valid and has a pass aggregate\nok 40 - the committed verification result is valid and has a pass aggregate\n  ---\n  duration_ms: 4.353\n  type: 'test'\n  ...\n# Subtest: the committed asset manifest is valid\nok 41 - the committed asset manifest is valid\n  ---\n  duration_ms: 1.637792\n  type: 'test'\n  ...\n# Subtest: the fixed category budgets add up to the core budget\nok 42 - the fixed category budgets add up to the core budget\n  ---\n  duration_ms: 0.18875\n  type: 'test'\n  ...\n# Subtest: dual Meshopt encodings are rejected\nok 43 - dual Meshopt encodings are rejected\n  ---\n  duration_ms: 1.194083\n  type: 'test'\n  ...\n# Subtest: a Meshopt asset without its decoder is rejected\nok 44 - a Meshopt asset without its decoder is rejected\n  ---\n  duration_ms: 3.803333\n  type: 'test'\n  ...\n# Subtest: a KTX2 asset without its loader is rejected\nok 45 - a KTX2 asset without its loader is rejected\n  ---\n  duration_ms: 2.485791\n  type: 'test'\n  ...\n# Subtest: preservation options are required when the asset needs them\nok 46 - preservation options are required when the asset needs them\n  ---\n  duration_ms: 2.858042\n  type: 'test'\n  ...\n# Subtest: a result cannot claim pass when an observation failed\nok 47 - a result cannot claim pass when an observation failed\n  ---\n  duration_ms: 2.608333\n  type: 'test'\n  ...\n# Subtest: unknown properties fail closed\nok 48 - unknown properties fail closed\n  ---\n  duration_ms: 2.096917\n  type: 'test'\n  ...\n# Subtest: a pass with a missing, textual, non-finite or over-limit observation is rejected\nok 49 - a pass with a missing, textual, non-finite or over-limit observation is rejected\n  ---\n  duration_ms: 9.540458\n  type: 'test'\n  ...\n# Subtest: old evidence cannot be promoted to pass\nok 50 - old evidence cannot be promoted to pass\n  ---\n  duration_ms: 0.678792\n  type: 'test'\n  ...\n# Subtest: missing evidence is blocked even if an explanation says it passed\nok 51 - missing evidence is blocked even if an explanation says it passed\n  ---\n  duration_ms: 1.069625\n  type: 'test'\n  ...\n# Subtest: null observations, duplicate gates and an incomplete browser matrix fail closed\nok 52 - null observations, duplicate gates and an incomplete browser matrix fail closed\n  ---\n  duration_ms: 2.3295\n  type: 'test'\n  ...\n# Subtest: 15 unique sourced bodies keep 12 supplied semantic coordinates and all physics disabled\nok 53 - 15 unique sourced bodies keep 12 supplied semantic coordinates and all physics disabled\n  ---\n  duration_ms: 2.248958\n  type: 'test'\n  ...\n# Subtest: presentation movement never changes semantic distance, including missing coordinates\nok 54 - presentation movement never changes semantic distance, including missing coordinates\n  ---\n  duration_ms: 87.660792\n  type: 'test'\n  ...\n# Subtest: chronology keeps interval boundaries, unspecified date and exhibition date distinct\nok 55 - chronology keeps interval boundaries, unspecified date and exhibition date distinct\n  ---\n  duration_ms: 0.715125\n  type: 'test'\n  ...\n# Subtest: pause, reduced motion and visibility freeze the presentation clock; resumed frames stay bounded\nok 56 - pause, reduced motion and visibility freeze the presentation clock; resumed frames stay bounded\n  ---\n  duration_ms: 0.113084\n  type: 'test'\n  ...\n# Subtest: browser adapters are reproducible copies of the reusable source modules\nok 57 - browser adapters are reproducible copies of the reusable source modules\n  ---\n  duration_ms: 10.630458\n  type: 'test'\n  ...\n# Subtest: Only the source-identical tab icon is admitted as interface metadata\nok 58 - Only the source-identical tab icon is admitted as interface metadata\n  ---\n  duration_ms: 2.724583\n  type: 'test'\n  ...\n# Subtest: Integration status never promotes incomplete or stale evidence to pass\nok 59 - Integration status never promotes incomplete or stale evidence to pass\n  ---\n  duration_ms: 4.294666\n  type: 'test'\n  ...\n# Subtest: an inconclusive axiom response cannot become pass merely through a success label\nok 60 - an inconclusive axiom response cannot become pass merely through a success label\n  ---\n  duration_ms: 1.128084\n  type: 'test'\n  ...\n# Subtest: the shared command-line and language-server policy rejects every axiom, including standard axioms\nok 61 - the shared command-line and language-server policy rejects every axiom, including standard axioms\n  ---\n  duration_ms: 0.105417\n  type: 'test'\n  ...\n# Subtest: time-limited diagnostics and unknown goal states are not a clean verification\nok 62 - time-limited diagnostics and unknown goal states are not a clean verification\n  ---\n  duration_ms: 0.074875\n  type: 'test'\n  ...\n# Subtest: hover must resolve the requested declaration rather than a nearby tactic\nok 63 - hover must resolve the requested declaration rather than a nearby tactic\n  ---\n  duration_ms: 0.063292\n  type: 'test'\n  ...\n# Subtest: all 4096 asset assignments agree between the Lean executable and the JSON boundary\nok 64 - all 4096 asset assignments agree between the Lean executable and the JSON boundary\n  ---\n  duration_ms: 420.023208\n  type: 'test'\n  ...\n# Subtest: every Boolean field rejects missing values, strings, numbers, arrays and null in Lean\nok 65 - every Boolean field rejects missing values, strings, numbers, arrays and null in Lean\n  ---\n  duration_ms: 57.38075\n  type: 'test'\n  ...\n# Subtest: mixed assets are accepted when all used formats have their required loaders\nok 66 - mixed assets are accepted when all used formats have their required loaders\n  ---\n  duration_ms: 48.818375\n  type: 'test'\n  ...\n# Subtest: Material Sphere application uses current source-bound mathematical evidence\nok 67 - Material Sphere application uses current source-bound mathematical evidence\n  ---\n  duration_ms: 119.986083\n  type: 'test'\n  ...\n# Subtest: Application numerical functions are byte-identical to checked functions\nok 68 - Application numerical functions are byte-identical to checked functions\n  ---\n  duration_ms: 23.743208\n  type: 'test'\n  ...\n# Subtest: All fifteen generated Plumeria schemas equal the current checked recipes\nok 69 - All fifteen generated Plumeria schemas equal the current checked recipes\n  ---\n  duration_ms: 2451.550375\n  type: 'test'\n  ...\n# Subtest: CSS output uses checked one-to-four dimensional projection without treating time as an axis\nok 70 - CSS output uses checked one-to-four dimensional projection without treating time as an axis\n  ---\n  duration_ms: 2.125583\n  type: 'test'\n  ...\n# Subtest: The four unconnected output branches never silently fall back to CSS\nok 71 - The four unconnected output branches never silently fall back to CSS\n  ---\n  duration_ms: 0.402375\n  type: 'test'\n  ...\n# Subtest: A separately registered output receives the same neutral numerical plan\nok 72 - A separately registered output receives the same neutral numerical plan\n  ---\n  duration_ms: 0.336709\n  type: 'test'\n  ...\n# Subtest: Malformed numerical input is rejected before an adapter can execute\nok 73 - Malformed numerical input is rejected before an adapter can execute\n  ---\n  duration_ms: 0.283667\n  type: 'test'\n  ...\n# Subtest: CSS playback and reduced motion use the checked bounded phase\nok 74 - CSS playback and reduced motion use the checked bounded phase\n  ---\n  duration_ms: 0.108084\n  type: 'test'\n  ...\n# Subtest: Page tools have the same integer bounds and step as the visible sliders\nok 75 - Page tools have the same integer bounds and step as the visible sliders\n  ---\n  duration_ms: 0.246083\n  type: 'test'\n  ...\n# Subtest: Museum character follows the complete version two atlas geometry\nok 76 - Museum character follows the complete version two atlas geometry\n  ---\n  duration_ms: 1.93625\n  type: 'test'\n  ...\n# Subtest: All sixteen gaze cells are unique, in bounds, and advance clockwise\nok 77 - All sixteen gaze cells are unique, in bounds, and advance clockwise\n  ---\n  duration_ms: 1.055333\n  type: 'test'\n  ...\n# Subtest: Neutral, invalid pointers and cardinal screen coordinates cannot be confused\nok 78 - Neutral, invalid pointers and cardinal screen coordinates cannot be confused\n  ---\n  duration_ms: 0.091\n  type: 'test'\n  ...\n# Subtest: Studio interaction selects greetings, attention, making and rest explicitly\nok 79 - Studio interaction selects greetings, attention, making and rest explicitly\n  ---\n  duration_ms: 0.074958\n  type: 'test'\n  ...\n# Subtest: Generated Plumeria keyframes match every declared frame duration\nok 80 - Generated Plumeria keyframes match every declared frame duration\n  ---\n  duration_ms: 2621.822541\n  type: 'test'\n  ...\n# Subtest: the actual dataset yields twelve explicitly positioned recipes and preserves source links\nok 81 - the actual dataset yields twelve explicitly positioned recipes and preserves source links\n  ---\n  duration_ms: 19.297\n  type: 'test'\n  ...\n# Subtest: three.js serialization reloads all positions, textures, stable resource identities and provenance\nok 82 - three.js serialization reloads all positions, textures, stable resource identities and provenance\n  ---\n  duration_ms: 246.500084\n  type: 'test'\n  ...\n# Subtest: invalid numeric, resource, unit and unsupported-shape inputs fail before object allocation\nok 83 - invalid numeric, resource, unit and unsupported-shape inputs fail before object allocation\n  ---\n  duration_ms: 2.605\n  type: 'test'\n  ...\n# Subtest: a generic box uses the same portable material contract without artist-dependent rendering logic\nok 84 - a generic box uses the same portable material contract without artist-dependent rendering logic\n  ---\n  duration_ms: 8.372292\n  type: 'test'\n  ...\n# Subtest: every selected pattern produces bounded opaque pixels and color-space assumptions are explicit\nok 85 - every selected pattern produces bounded opaque pixels and color-space assumptions are explicit\n  ---\n  duration_ms: 133.513042\n  type: 'test'\n  ...\n# Subtest: scene disposal releases geometry, material and texture resources\nok 86 - scene disposal releases geometry, material and texture resources\n  ---\n  duration_ms: 4.929791\n  type: 'test'\n  ...\n# Subtest: moving display objects and metadata never changes an existing semantic coordinate index\nok 87 - moving display objects and metadata never changes an existing semantic coordinate index\n  ---\n  duration_ms: 35.693083\n  type: 'test'\n  ...\n# Subtest: disabled physics never connects or steps an engine\nok 88 - disabled physics never connects or steps an engine\n  ---\n  duration_ms: 0.202459\n  type: 'test'\n  ...\n# Subtest: optional physics validates units, origins, source references and coefficients\nok 89 - optional physics validates units, origins, source references and coefficients\n  ---\n  duration_ms: 0.510167\n  type: 'test'\n  ...\n# Subtest: an explicit engine adapter can move display transforms while similarity remains fixed\nok 90 - an explicit engine adapter can move display transforms while similarity remains fixed\n  ---\n  duration_ms: 27.576917\n  type: 'test'\n  ...\n1..90\n# tests 90\n# suites 0\n# pass 90\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 3752.431834\n",
+      "stdout": "TAP version 13\n# Subtest: initial display keeps 12 source coordinates and 3 unknown values with physics disabled\nok 1 - initial display keeps 12 source coordinates and 3 unknown values with physics disabled\n  ---\n  duration_ms: 25.755542\n  type: 'test'\n  ...\n# Subtest: semantic distance is an immutable snapshot independent of mutable display/input arrays\nok 2 - semantic distance is an immutable snapshot independent of mutable display/input arrays\n  ---\n  duration_ms: 0.504166\n  type: 'test'\n  ...\n# Subtest: fixed steps agree at 60 and 120 frames per second and cap long pauses\nok 3 - fixed steps agree at 60 and 120 frames per second and cap long pauses\n  ---\n  duration_ms: 0.1625\n  type: 'test'\n  ...\n# Subtest: real Rapier bodies collide, remain finite, and do not mutate source coordinates\nok 4 - real Rapier bodies collide, remain finite, and do not mutate source coordinates\n  ---\n  duration_ms: 136.769917\n  type: 'test'\n  ...\n# Subtest: gravity causes a fall and the display floor catches the panel\nok 5 - gravity causes a fall and the display floor catches the panel\n  ---\n  duration_ms: 7.1825\n  type: 'test'\n  ...\n# Subtest: kinematic dragging moves a body then releases it into simulation\nok 6 - kinematic dragging moves a body then releases it into simulation\n  ---\n  duration_ms: 3.997625\n  type: 'test'\n  ...\n# Subtest: actual browser validator agrees with compiled Lean over all 4096 assignments\nok 7 - actual browser validator agrees with compiled Lean over all 4096 assignments\n  ---\n  duration_ms: 273.625583\n  type: 'test'\n  ...\n# Subtest: runtime manifest rejects malformed flags, unvalidated stages, unknown keys and external resources\nok 8 - runtime manifest rejects malformed flags, unvalidated stages, unknown keys and external resources\n  ---\n  duration_ms: 0.625208\n  type: 'test'\n  ...\n# Subtest: decoders activate only for explicit asset flags, including Draco opt-in\nok 9 - decoders activate only for explicit asset flags, including Draco opt-in\n  ---\n  duration_ms: 1.686\n  type: 'test'\n  ...\n# Subtest: actual optimized binary declares Meshopt and passes the browser manifest parser\nok 10 - actual optimized binary declares Meshopt and passes the browser manifest parser\n  ---\n  duration_ms: 13.54075\n  type: 'test'\n  ...\n# Subtest: code gates accept module-scope Plumeria arrays inside a client boundary\nok 11 - code gates accept module-scope Plumeria arrays inside a client boundary\n  ---\n  duration_ms: 10.628833\n  type: 'test'\n  ...\n# Subtest: framework links work in server and client pages without admitting unknown framework modules\nok 12 - framework links work in server and client pages without admitting unknown framework modules\n  ---\n  duration_ms: 1.154542\n  type: 'test'\n  ...\n# Subtest: code gates distinguish literal object keys from browser access\nok 13 - code gates distinguish literal object keys from browser access\n  ---\n  duration_ms: 1.100542\n  type: 'test'\n  ...\n# Subtest: code gates reject nested create, className, nonarray styles, server events and transitive browser access\nok 14 - code gates reject nested create, className, nonarray styles, server events and transitive browser access\n  ---\n  duration_ms: 0.721625\n  type: 'test'\n  ...\n# Subtest: code gates reject request-time server functions and nonliteral imports\nok 15 - code gates reject request-time server functions and nonliteral imports\n  ---\n  duration_ms: 0.451333\n  type: 'test'\n  ...\n# Subtest: Plumeria namespace aliases and opaque JSX props cannot bypass code gates\nok 16 - Plumeria namespace aliases and opaque JSX props cannot bypass code gates\n  ---\n  duration_ms: 0.37425\n  type: 'test'\n  ...\n# Subtest: Plumeria keyframes must be module-level constants just like style declarations\nok 17 - Plumeria keyframes must be module-level constants just like style declarations\n  ---\n  duration_ms: 1.349083\n  type: 'test'\n  ...\n# Subtest: line artwork uses HTML border rings and has no vector or canvas drawing implementation\nok 18 - line artwork uses HTML border rings and has no vector or canvas drawing implementation\n  ---\n  duration_ms: 6.877541\n  type: 'test'\n  ...\n# Subtest: CSS diagonal circles satisfy the torus equation at sampled points\nok 19 - CSS diagonal circles satisfy the torus equation at sampled points\n  ---\n  duration_ms: 0.604958\n  type: 'test'\n  ...\n# Subtest: all artwork kinds use CSS and the solid consists of finite torus panels\nok 20 - all artwork kinds use CSS and the solid consists of finite torus panels\n  ---\n  duration_ms: 0.684625\n  type: 'test'\n  ...\n# Subtest: shared controls have no drawing loop or graphics dependency\nok 21 - shared controls have no drawing loop or graphics dependency\n  ---\n  duration_ms: 0.678125\n  type: 'test'\n  ...\n# Subtest: decoder bytes remain in core; only artwork bytes are excluded\nok 22 - decoder bytes remain in core; only artwork bytes are excluded\n  ---\n  duration_ms: 2.789333\n  type: 'test'\n  ...\n# Subtest: missing stages, cached entries and unknown resource classes cannot pass transfer measurement\nok 23 - missing stages, cached entries and unknown resource classes cannot pass transfer measurement\n  ---\n  duration_ms: 0.801084\n  type: 'test'\n  ...\n# Subtest: successful header checks and subsequent page payloads count toward metadata and core bytes\nok 24 - successful header checks and subsequent page payloads count toward metadata and core bytes\n  ---\n  duration_ms: 0.543416\n  type: 'test'\n  ...\n# Subtest: header classification rejects missing, ambiguous, failed and non-header evidence\nok 25 - header classification rejects missing, ambiguous, failed and non-header evidence\n  ---\n  duration_ms: 2.181458\n  type: 'test'\n  ...\n# Subtest: an aborted header notification is reconciled with a uniquely matched successful response\nok 26 - an aborted header notification is reconciled with a uniquely matched successful response\n  ---\n  duration_ms: 0.998625\n  type: 'test'\n  ...\n# Subtest: actual failures, incomplete evidence and unsuccessful interactions remain nonfunctional\nok 27 - actual failures, incomplete evidence and unsuccessful interactions remain nonfunctional\n  ---\n  duration_ms: 0.505042\n  type: 'test'\n  ...\n# Subtest: Character receipt boundary accepts a complete synthetic record without claiming visual verification\nok 28 - Character receipt boundary accepts a complete synthetic record without claiming visual verification\n  ---\n  duration_ms: 75.699375\n  type: 'test'\n  ...\n# Subtest: Character admission rejects sixteen unique but unrecognized direction labels\nok 29 - Character admission rejects sixteen unique but unrecognized direction labels\n  ---\n  duration_ms: 25.808083\n  type: 'test'\n  ...\n# Subtest: Character admission rejects wrong person\nok 30 - Character admission rejects wrong person\n  ---\n  duration_ms: 27.798583\n  type: 'test'\n  ...\n# Subtest: Character admission rejects unbound decoded image\nok 31 - Character admission rejects unbound decoded image\n  ---\n  duration_ms: 45.620208\n  type: 'test'\n  ...\n# Subtest: Character admission rejects missing axis evidence\nok 32 - Character admission rejects missing axis evidence\n  ---\n  duration_ms: 53.309042\n  type: 'test'\n  ...\n# Subtest: Character admission rejects failed standard inspection\nok 33 - Character admission rejects failed standard inspection\n  ---\n  duration_ms: 31.245042\n  type: 'test'\n  ...\n# Subtest: Character admission rejects incomplete continuity\nok 34 - Character admission rejects incomplete continuity\n  ---\n  duration_ms: 54.906667\n  type: 'test'\n  ...\n# Subtest: Character admission rejects duplicate direction\nok 35 - Character admission rejects duplicate direction\n  ---\n  duration_ms: 79.727958\n  type: 'test'\n  ...\n# Subtest: Character admission rejects missing direction\nok 36 - Character admission rejects missing direction\n  ---\n  duration_ms: 50.657167\n  type: 'test'\n  ...\n# Subtest: Character admission rejects failed direction\nok 37 - Character admission rejects failed direction\n  ---\n  duration_ms: 31.19775\n  type: 'test'\n  ...\n# Subtest: Character admission rejects empty semantic observation\nok 38 - Character admission rejects empty semantic observation\n  ---\n  duration_ms: 18.865208\n  type: 'test'\n  ...\n# Subtest: Character admission rejects non-text semantic reason\nok 39 - Character admission rejects non-text semantic reason\n  ---\n  duration_ms: 24.37725\n  type: 'test'\n  ...\n# Subtest: Character admission rejects failed independent review\nok 40 - Character admission rejects failed independent review\n  ---\n  duration_ms: 30.147792\n  type: 'test'\n  ...\n# Subtest: Character admission rejects failed blind review\nok 41 - Character admission rejects failed blind review\n  ---\n  duration_ms: 85.934625\n  type: 'test'\n  ...\n# Subtest: Character admission rejects intermediate atlas\nok 42 - Character admission rejects intermediate atlas\n  ---\n  duration_ms: 40.473792\n  type: 'test'\n  ...\n# Subtest: Character admission rejects invalid execution identifier\nok 43 - Character admission rejects invalid execution identifier\n  ---\n  duration_ms: 43.279375\n  type: 'test'\n  ...\n# Subtest: Character admission rejects image bytes changed after inspection\nok 44 - Character admission rejects image bytes changed after inspection\n  ---\n  duration_ms: 16.529875\n  type: 'test'\n  ...\n# Subtest: Character admission rejects evidence changed after inspection\nok 45 - Character admission rejects evidence changed after inspection\n  ---\n  duration_ms: 25.977917\n  type: 'test'\n  ...\n# Subtest: Missing character receipt is blocked, not accepted\nok 46 - Missing character receipt is blocked, not accepted\n  ---\n  duration_ms: 4.036291\n  type: 'test'\n  ...\n# Subtest: Unverified raster characters cannot mount; failed or stale evidence stops availability generation\nok 47 - Unverified raster characters cannot mount; failed or stale evidence stops availability generation\n  ---\n  duration_ms: 2.769375\n  type: 'test'\n  ...\n# Subtest: Accepted character availability preserves the image digest and evidence run\nok 48 - Accepted character availability preserves the image digest and evidence run\n  ---\n  duration_ms: 0.218667\n  type: 'test'\n  ...\n# Subtest: The studio reads freshly generated character availability instead of a manual ready flag\nok 49 - The studio reads freshly generated character availability instead of a manual ready flag\n  ---\n  duration_ms: 91.900417\n  type: 'test'\n  ...\n# Subtest: the committed verification request is valid\nok 50 - the committed verification request is valid\n  ---\n  duration_ms: 8.696\n  type: 'test'\n  ...\n# Subtest: the committed verification result is valid and has a pass aggregate\nok 51 - the committed verification result is valid and has a pass aggregate\n  ---\n  duration_ms: 1.2\n  type: 'test'\n  ...\n# Subtest: the committed asset manifest is valid\nok 52 - the committed asset manifest is valid\n  ---\n  duration_ms: 2.401209\n  type: 'test'\n  ...\n# Subtest: the fixed category budgets add up to the core budget\nok 53 - the fixed category budgets add up to the core budget\n  ---\n  duration_ms: 0.141125\n  type: 'test'\n  ...\n# Subtest: dual Meshopt encodings are rejected\nok 54 - dual Meshopt encodings are rejected\n  ---\n  duration_ms: 0.834625\n  type: 'test'\n  ...\n# Subtest: a Meshopt asset without its decoder is rejected\nok 55 - a Meshopt asset without its decoder is rejected\n  ---\n  duration_ms: 1.090375\n  type: 'test'\n  ...\n# Subtest: a KTX2 asset without its loader is rejected\nok 56 - a KTX2 asset without its loader is rejected\n  ---\n  duration_ms: 1.422375\n  type: 'test'\n  ...\n# Subtest: preservation options are required when the asset needs them\nok 57 - preservation options are required when the asset needs them\n  ---\n  duration_ms: 271.127458\n  type: 'test'\n  ...\n# Subtest: a result cannot claim pass when an observation failed\nok 58 - a result cannot claim pass when an observation failed\n  ---\n  duration_ms: 26.624208\n  type: 'test'\n  ...\n# Subtest: unknown properties fail closed\nok 59 - unknown properties fail closed\n  ---\n  duration_ms: 30.630541\n  type: 'test'\n  ...\n# Subtest: a pass with a missing, textual, non-finite or over-limit observation is rejected\nok 60 - a pass with a missing, textual, non-finite or over-limit observation is rejected\n  ---\n  duration_ms: 53.174625\n  type: 'test'\n  ...\n# Subtest: old evidence cannot be promoted to pass\nok 61 - old evidence cannot be promoted to pass\n  ---\n  duration_ms: 3.058666\n  type: 'test'\n  ...\n# Subtest: missing evidence is blocked even if an explanation says it passed\nok 62 - missing evidence is blocked even if an explanation says it passed\n  ---\n  duration_ms: 2.239292\n  type: 'test'\n  ...\n# Subtest: null observations, duplicate gates and an incomplete browser matrix fail closed\nok 63 - null observations, duplicate gates and an incomplete browser matrix fail closed\n  ---\n  duration_ms: 20.066375\n  type: 'test'\n  ...\n# Subtest: 15 unique sourced bodies keep 12 supplied semantic coordinates and all physics disabled\nok 64 - 15 unique sourced bodies keep 12 supplied semantic coordinates and all physics disabled\n  ---\n  duration_ms: 3.849375\n  type: 'test'\n  ...\n# Subtest: presentation movement never changes semantic distance, including missing coordinates\nok 65 - presentation movement never changes semantic distance, including missing coordinates\n  ---\n  duration_ms: 95.039125\n  type: 'test'\n  ...\n# Subtest: chronology keeps interval boundaries, unspecified date and exhibition date distinct\nok 66 - chronology keeps interval boundaries, unspecified date and exhibition date distinct\n  ---\n  duration_ms: 6.905875\n  type: 'test'\n  ...\n# Subtest: pause, reduced motion and visibility freeze the presentation clock; resumed frames stay bounded\nok 67 - pause, reduced motion and visibility freeze the presentation clock; resumed frames stay bounded\n  ---\n  duration_ms: 0.160208\n  type: 'test'\n  ...\n# Subtest: an orbit crosses 120 seconds continuously rather than teleporting\nok 68 - an orbit crosses 120 seconds continuously rather than teleporting\n  ---\n  duration_ms: 0.203625\n  type: 'test'\n  ...\n# Subtest: browser adapters are reproducible copies of the reusable source modules\nok 69 - browser adapters are reproducible copies of the reusable source modules\n  ---\n  duration_ms: 51.72275\n  type: 'test'\n  ...\n# Subtest: the 15 supplied images match their publication registration\nok 70 - the 15 supplied images match their publication registration\n  ---\n  duration_ms: 116.219083\n  type: 'test'\n  ...\n# Subtest: an unregistered, altered, or source-missing image is not admitted\nok 71 - an unregistered, altered, or source-missing image is not admitted\n  ---\n  duration_ms: 0.189125\n  type: 'test'\n  ...\n# Subtest: Only the source-identical tab icon is admitted as interface metadata\nok 72 - Only the source-identical tab icon is admitted as interface metadata\n  ---\n  duration_ms: 0.906708\n  type: 'test'\n  ...\n# Subtest: Integration status never promotes incomplete or stale evidence to pass\nok 73 - Integration status never promotes incomplete or stale evidence to pass\n  ---\n  duration_ms: 1.472292\n  type: 'test'\n  ...\n# Subtest: an inconclusive axiom response cannot become pass merely through a success label\nok 74 - an inconclusive axiom response cannot become pass merely through a success label\n  ---\n  duration_ms: 1.940875\n  type: 'test'\n  ...\n# Subtest: the shared command-line and language-server policy rejects every axiom, including standard axioms\nok 75 - the shared command-line and language-server policy rejects every axiom, including standard axioms\n  ---\n  duration_ms: 0.325042\n  type: 'test'\n  ...\n# Subtest: time-limited diagnostics and unknown goal states are not a clean verification\nok 76 - time-limited diagnostics and unknown goal states are not a clean verification\n  ---\n  duration_ms: 0.181083\n  type: 'test'\n  ...\n# Subtest: hover must resolve the requested declaration rather than a nearby tactic\nok 77 - hover must resolve the requested declaration rather than a nearby tactic\n  ---\n  duration_ms: 0.3505\n  type: 'test'\n  ...\n# Subtest: all 4096 asset assignments agree between the Lean executable and the JSON boundary\nok 78 - all 4096 asset assignments agree between the Lean executable and the JSON boundary\n  ---\n  duration_ms: 421.784833\n  type: 'test'\n  ...\n# Subtest: every Boolean field rejects missing values, strings, numbers, arrays and null in Lean\nok 79 - every Boolean field rejects missing values, strings, numbers, arrays and null in Lean\n  ---\n  duration_ms: 51.286667\n  type: 'test'\n  ...\n# Subtest: mixed assets are accepted when all used formats have their required loaders\nok 80 - mixed assets are accepted when all used formats have their required loaders\n  ---\n  duration_ms: 47.270083\n  type: 'test'\n  ...\n# Subtest: Material Sphere application uses current source-bound mathematical evidence\nok 81 - Material Sphere application uses current source-bound mathematical evidence\n  ---\n  duration_ms: 78.162\n  type: 'test'\n  ...\n# Subtest: Application numerical functions are byte-identical to checked functions\nok 82 - Application numerical functions are byte-identical to checked functions\n  ---\n  duration_ms: 1.797958\n  type: 'test'\n  ...\n# Subtest: All fifteen generated Plumeria schemas equal the current checked recipes\nok 83 - All fifteen generated Plumeria schemas equal the current checked recipes\n  ---\n  duration_ms: 2563.843958\n  type: 'test'\n  ...\n# Subtest: CSS output uses checked one-to-four dimensional projection without treating time as an axis\nok 84 - CSS output uses checked one-to-four dimensional projection without treating time as an axis\n  ---\n  duration_ms: 2.61875\n  type: 'test'\n  ...\n# Subtest: The four unconnected output branches never silently fall back to CSS\nok 85 - The four unconnected output branches never silently fall back to CSS\n  ---\n  duration_ms: 0.2405\n  type: 'test'\n  ...\n# Subtest: A separately registered output receives the same neutral numerical plan\nok 86 - A separately registered output receives the same neutral numerical plan\n  ---\n  duration_ms: 0.252958\n  type: 'test'\n  ...\n# Subtest: Malformed numerical input is rejected before an adapter can execute\nok 87 - Malformed numerical input is rejected before an adapter can execute\n  ---\n  duration_ms: 0.113417\n  type: 'test'\n  ...\n# Subtest: CSS playback and reduced motion use the checked bounded phase\nok 88 - CSS playback and reduced motion use the checked bounded phase\n  ---\n  duration_ms: 0.091542\n  type: 'test'\n  ...\n# Subtest: Page tools have the same integer bounds and step as the visible sliders\nok 89 - Page tools have the same integer bounds and step as the visible sliders\n  ---\n  duration_ms: 0.102166\n  type: 'test'\n  ...\n# Subtest: Museum character follows the complete version two atlas geometry\nok 90 - Museum character follows the complete version two atlas geometry\n  ---\n  duration_ms: 0.984542\n  type: 'test'\n  ...\n# Subtest: All sixteen gaze cells are unique, in bounds, and advance clockwise\nok 91 - All sixteen gaze cells are unique, in bounds, and advance clockwise\n  ---\n  duration_ms: 1.459417\n  type: 'test'\n  ...\n# Subtest: Neutral, invalid pointers and cardinal screen coordinates cannot be confused\nok 92 - Neutral, invalid pointers and cardinal screen coordinates cannot be confused\n  ---\n  duration_ms: 0.333333\n  type: 'test'\n  ...\n# Subtest: Studio interaction selects greetings, attention, making and rest explicitly\nok 93 - Studio interaction selects greetings, attention, making and rest explicitly\n  ---\n  duration_ms: 0.113833\n  type: 'test'\n  ...\n# Subtest: Generated Plumeria keyframes match every declared frame duration\nok 94 - Generated Plumeria keyframes match every declared frame duration\n  ---\n  duration_ms: 2871.932917\n  type: 'test'\n  ...\n# Subtest: the actual dataset yields twelve explicitly positioned recipes and preserves source links\nok 95 - the actual dataset yields twelve explicitly positioned recipes and preserves source links\n  ---\n  duration_ms: 42.159084\n  type: 'test'\n  ...\n# Subtest: three.js serialization reloads all positions, textures, stable resource identities and provenance\nok 96 - three.js serialization reloads all positions, textures, stable resource identities and provenance\n  ---\n  duration_ms: 204.2395\n  type: 'test'\n  ...\n# Subtest: invalid numeric, resource, unit and unsupported-shape inputs fail before object allocation\nok 97 - invalid numeric, resource, unit and unsupported-shape inputs fail before object allocation\n  ---\n  duration_ms: 2.558625\n  type: 'test'\n  ...\n# Subtest: a generic box uses the same portable material contract without artist-dependent rendering logic\nok 98 - a generic box uses the same portable material contract without artist-dependent rendering logic\n  ---\n  duration_ms: 4.082333\n  type: 'test'\n  ...\n# Subtest: every selected pattern produces bounded opaque pixels and color-space assumptions are explicit\nok 99 - every selected pattern produces bounded opaque pixels and color-space assumptions are explicit\n  ---\n  duration_ms: 108.846458\n  type: 'test'\n  ...\n# Subtest: scene disposal releases geometry, material and texture resources\nok 100 - scene disposal releases geometry, material and texture resources\n  ---\n  duration_ms: 5.3155\n  type: 'test'\n  ...\n# Subtest: moving display objects and metadata never changes an existing semantic coordinate index\nok 101 - moving display objects and metadata never changes an existing semantic coordinate index\n  ---\n  duration_ms: 45.720334\n  type: 'test'\n  ...\n# Subtest: disabled physics never connects or steps an engine\nok 102 - disabled physics never connects or steps an engine\n  ---\n  duration_ms: 0.541708\n  type: 'test'\n  ...\n# Subtest: optional physics validates units, origins, source references and coefficients\nok 103 - optional physics validates units, origins, source references and coefficients\n  ---\n  duration_ms: 1.369708\n  type: 'test'\n  ...\n# Subtest: an explicit engine adapter can move display transforms while similarity remains fixed\nok 104 - an explicit engine adapter can move display transforms while similarity remains fixed\n  ---\n  duration_ms: 44.175541\n  type: 'test'\n  ...\n1..104\n# tests 104\n# suites 0\n# pass 104\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 4471.071541\n",
       "stderr": "",
       "error": null
     },
@@ -658,7 +1002,7 @@
     "Lumenia.measured_gate_pass_iff": []
   },
   "regressionSummary": {
-    "tests": 90,
+    "tests": 104,
     "failed": 0
   },
   "registryErrors": [],
@@ -668,7 +1012,7 @@
     "standardAxiomsAllowed": false
   },
   "languageServerReceipt": {
-    "sourceRevision": "sha256:0bdf9f362166ae3da7478a7cc969070db351ad1e4a4f5e695abeca9acde4c22a",
+    "sourceRevision": "sha256:81baf2dec9fb672eb9c37d13fda9695911748f4408e5fe1673ec241b58d14bab",
     "files": [
       {
         "path": "CONSTRAINTS.md",
@@ -685,6 +1029,10 @@
       {
         "path": "contracts/cosmic-exhibition.json",
         "sha256": "8d8886b9b3df3e98a68063ead911e1c2d156550fc8903d267917a29c030ed5ff"
+      },
+      {
+        "path": "contracts/cosmic-reference-images.json",
+        "sha256": "022245e9b6fbfa5f2ddbb31b362b537777ee309d377cd810463b3182abeb7acc"
       },
       {
         "path": "contracts/css-artworks.json",
@@ -708,7 +1056,7 @@
       },
       {
         "path": "contracts/external-gates.json",
-        "sha256": "49905119414dcb5d7c8600fd1d5d7d74f0a03fefa7d6a603e4eb916c174d782a"
+        "sha256": "b16442543e38def9157e98cd6814cab5a2cce09b6217a95c832c1195b2ed0362"
       },
       {
         "path": "contracts/verification-contract.schema.json",
@@ -795,8 +1143,208 @@
         "sha256": "ceec3257ddc64c87186fb7104e2f8b123b2a2ac3f8df47abe08be4ac8af8ffd2"
       },
       {
+        "path": "reference-assets/artist-cosmos/README.md",
+        "sha256": "671b06fa0fcafbd68c76af9e1a8f66940f6bf2ec45e8972985a994aa83d051ff"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/alphonse-mucha.png",
+        "sha256": "57fe2c034be6dd3340464ab9852a79e8d8f12e8de46ee61b1d1af3f4801b09a0"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/art-direction-briefs.jsonl",
+        "sha256": "e810baa3313677bf837a22aae700e8ac796ea86cea702159a17b4c0d6b339210"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/charles-eames.png",
+        "sha256": "33c97fe0f290497c22f556293b923d7b4b5d5bcacf027b7a1ba34034974e8d37"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/charles-rennie-mackintosh.png",
+        "sha256": "81ee0b404ebe5e70465681397f6f2ea7ae82c85a4971f1524fdc7fc3e3be01a8"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/dieter-rams.png",
+        "sha256": "9b18c578a617c774b195ce2ddea6ef3c3cd2cf9562a60a5031df5b64742ff866"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/ettore-sottsass.png",
+        "sha256": "62f9f2086ffa001a9b5c326c4a4fb7eeba1ae4857fe9eb93a1f465349161cefa"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/gerrit-rietveld.png",
+        "sha256": "ca4d66b058126ed541e30ea886139ebfd2815740b6db8b538ca26f3c21305fc0"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/herbert-bayer.png",
+        "sha256": "1179f76272afc9eac1ac1b7b3ec6fcfcab9194bf000d27bbcd41e85cf25a8c3b"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/index.html",
+        "sha256": "030f01f7a67de32fef6d268c2810d310c5427b6cef8ee31efa04d30118648079"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/README.md",
+        "sha256": "73482be2291063568caab1663b6407c24fb87cf82a7461c54f362da4b0fdd0a8"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/dependencies.json",
+        "sha256": "ec143940f4dd67e1c95f9d94e849c2b177abd484701a51528d8659f63054a141"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/exhibition.json",
+        "sha256": "108306a4418dd2b7740e2f7130cdac366adc5352d305722047dc41c1db96d616"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/index.html",
+        "sha256": "0a3014a9089b63a11268b8d802074f45fa5b2733ad4a61bbf36f7df274c43fc9"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/main.mjs",
+        "sha256": "62bdfd624708decf015657094c6f70d7853b1c73493bbc973b248c3b927f842f"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/model.mjs",
+        "sha256": "ba02dbf2d014e3673fd0033e97056a840d02c1db504987ff577922b94db00395"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/package.json",
+        "sha256": "e15ae6610a16ce9223f55341be75a7ad86adfb09f00775888dfde0cfb1128dbe"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/physics.mjs",
+        "sha256": "076dfd0f15f91d278eb51870d842c01e19e7ca3a77431c5d4bed658be6e45503"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/serve.mjs",
+        "sha256": "3cb45b0670682d9827f6f212097fdd4d777579957093dd3c17af0943a76012ff"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/style.css",
+        "sha256": "1889ad1612d94417e05ca18522232110c3d510c09b3c5841ea5aad17c820b654"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/tests/exhibition.test.mjs",
+        "sha256": "de9004bed080f0a0571f905c25a87b8883a8755bdd0ed59405a714f64ebbd2c0"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/vendor/RAPIER-LICENSE.txt",
+        "sha256": "4c05555705e3efde601fb1252ae48f1d63992af8a8fb8947745b7fa834e8f519"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/vendor/THREE-LICENSE.txt",
+        "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/vendor/controls/OrbitControls.js",
+        "sha256": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/vendor/rapier.mjs",
+        "sha256": "82b65114e949ed17969a5d0a3517b952f430ea524f4a19ce4a31e72fb7757f27"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/vendor/reference-physics-contract.mjs",
+        "sha256": "4d1495820c1b9dcf334accee1892edd4f0ead85f5575e7c91935518903b435ba"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/vendor/three.core.js",
+        "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/vendor/three.module.js",
+        "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/verification/Exhibition.lean",
+        "sha256": "54614a2c5c9461f8e207f947372bb23fb39dcf381202d2fbfcea4e6b1bf5c4fb"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/verification/browser-receipt.json",
+        "sha256": "29eda44c15f14aca04818b6f22a1053c82d0dd661e4196b4994cf48ca8e95b46"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/verification/exact-inputs.json",
+        "sha256": "a678c79803ceefc12490669020c2c5d67148bd7512168c64f6da9f1ee1de2e08"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/verification/lake-manifest.json",
+        "sha256": "3a0155577bbf410840be1e28429836728232b991d62561433eec0b423b97b5e6"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/verification/lakefile.toml",
+        "sha256": "b56bfa054b9ff62738d7328e37f87597b221f445e973d25e5594b1277faee88e"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/verification/lean-axioms.txt",
+        "sha256": "23e29ec6eb25be32394bcb4e94435d7a3b490b5f26c7c930aa66dcfecd4ad95d"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/verification/lean-toolchain",
+        "sha256": "db7bb24b756d745bbde83fe92718b51bd3625dae3701ba0f598d0eedcd3f3028"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/verification/prepare.mjs",
+        "sha256": "9bdcf6d17cd1123570429dd5990ebe67dc9bc5812c172c30308b0c43b68aa7e6"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/verification/runtime-tests.txt",
+        "sha256": "f30df59ac705d220ae1916730c4d3417c0c70a36c8f2e054030786c51ed4cb74"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/verification/verification.json",
+        "sha256": "fdca4cd4eb6a3b9e5b7390e96a3591c183b1b224b99c64cdd1fa1e7b8d80eb72"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/verification/verify.mjs",
+        "sha256": "5ffca77e31ea74b24e6b4461e44c0c257c56de9f474715838f22a9bfa572ae85"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/verification/wolfram-receipt.json",
+        "sha256": "b5adaeae7acafa61c3bf374605fc651faef06d91ccadc5387afaf9e497bfac89"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/verification/wolfram.wl",
+        "sha256": "cd01f3a9a8292af65eb5880c0f0ebd2dcd05cec6516ecb2805d81b688036639d"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/josef-muller-brockmann.png",
+        "sha256": "75a303ac4c65d1608c6ffb3f2f3ce70a2191aacb0980713dccfa4c8ce29a13cd"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/massimo-vignelli.png",
+        "sha256": "68c567fa35979197d5652c822492322a995378ec30c20aa0f965db10bc4c7fc7"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/naoto-fukasawa.png",
+        "sha256": "c1d81e3a60c2e9859fe9c4c1fabd7fc27dc17d1b053d8cc2bbde8cf409b60f3a"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/piet-mondrian.png",
+        "sha256": "66ab2202b937935af83683534d1a667cc8e291dd5cb40049b29232439f9eb8da"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/ray-eames.png",
+        "sha256": "c4933e043eb1931a3bb4f64bb83821fbbca0b081298808c373adc12167c3b3f8"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/references.jsonl",
+        "sha256": "654e0f596b0cedd19fd87ae79a5ee9073d55b4a5808afcdeeb8be9dd7e600331"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/rei-kawakubo.png",
+        "sha256": "d75de875bc814bbc4cf6dbe85f6e1cdaf2a31340aaa06ab54a8c068f4345954b"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/walter-gropius.png",
+        "sha256": "595059dbe0521bed0cff56afb278d8034344416ceb419f895d5afd6d6b589fb4"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/william-morris.png",
+        "sha256": "d7485b0b48ab20c6ef5b369f0206db25137aac82021054cc1b8c8b4fb437d7a0"
+      },
+      {
         "path": "scripts/browser-observations.mjs",
-        "sha256": "e75e81e7853ff9abaaef9d7842fc143e5372d13dbd8e25f61be867aae79df59e"
+        "sha256": "31eddef823b66065b8893ad6da5149712a534af3792c844d913be78fddba9355"
       },
       {
         "path": "scripts/build-artwork.mjs",
@@ -815,8 +1363,12 @@
         "sha256": "84b05e6c303c87bb5d93a9685636882a7f33b5133b6ea0f6e73da7743e0b9aca"
       },
       {
+        "path": "scripts/build-cosmic-images.mjs",
+        "sha256": "41032ea566a1cdaa59859d936e27cc499ac14a5bd13e9d7c765555cdb00bf2b9"
+      },
+      {
         "path": "scripts/build-web.mjs",
-        "sha256": "01464c9e27e110fa546084461b3fa52e3a06eb1bf07bba8aa24d94c4a2fd67a5"
+        "sha256": "9c2230175bfe3531e9b84b522892ed53af411971a506fdb44ec749534881ea6e"
       },
       {
         "path": "scripts/character-registration.mjs",
@@ -840,7 +1392,7 @@
       },
       {
         "path": "scripts/drawing-asset-policy.mjs",
-        "sha256": "267d5ee2db8b529b39542f105973c7d0426b30387bdbad3770b6cdf7c882650f"
+        "sha256": "57112eba494063e0cd5d1ba6fd154a09a9076758d222ae244e1380e2787e2af2"
       },
       {
         "path": "scripts/export-css-character.mjs",
@@ -880,7 +1432,7 @@
       },
       {
         "path": "scripts/run-application-check.mjs",
-        "sha256": "c251eb67cba347500e3c3103e7482ccb9ce58071b30bb1745b53786e18a1dc32"
+        "sha256": "d8627cee825e2f4165128989fecbbc95792b25384405151fc09d73a85d6206bf"
       },
       {
         "path": "scripts/run-asset-reference-check.mjs",
@@ -896,15 +1448,15 @@
       },
       {
         "path": "scripts/serve-web.mjs",
-        "sha256": "4fc98fee7ee795ebf7068db998b867e2ffc21a1d850e5ba8e2084fa3e11c74d0"
+        "sha256": "4a297557545bd57a2981909a1064e8d490772cb6473e29b56afa66e7667ee7f2"
       },
       {
         "path": "scripts/source-inspection.mjs",
-        "sha256": "cdc9feaef2c5625b68a8ac130786cb3d9982b3b486f9eafac501fc3888e874e2"
+        "sha256": "d1631e5dcc34697d33767bbad9b7077e26df97fe8905d7b6178bdf27317341f7"
       },
       {
         "path": "scripts/source-revision.mjs",
-        "sha256": "e00d8c5624a04f6c169322611391067ef54badcf52332ab245cbfd23ecaa198d"
+        "sha256": "2bc9a85fae617b28a3201c053652a9c08ee672985c472e8fac4e62001e2be88e"
       },
       {
         "path": "scripts/stage-museum-character.mjs",
@@ -928,11 +1480,11 @@
       },
       {
         "path": "tests/application.test.mjs",
-        "sha256": "71bc1efae4bd093908935423e73135e71c6361514b2d6aebdce5c76647fe011b"
+        "sha256": "58b34595cf2779a3f68419d620fc25e0b7dc25a21dc050ca5d40627b0670e3f8"
       },
       {
         "path": "tests/browser-observations.test.mjs",
-        "sha256": "6f5786316aec0e5987a46c2d6b2de1a06f2008ee269e642a81d5c44de446b6d4"
+        "sha256": "6cb8c19cd493d4321fc6835cb1d8d4810d46482eb376c7d397e0d8b7b8fa80e4"
       },
       {
         "path": "tests/character-admission.test.mjs",
@@ -948,7 +1500,11 @@
       },
       {
         "path": "tests/cosmic-exhibition.test.mjs",
-        "sha256": "c52dabf8eb3b3b863701f4def29b22a5730a2da8bdc26ed59b6c18242ce4af17"
+        "sha256": "9f12cc6b5a9fc107094b6f6bdb2f7717c32af71af167d8e0f3da693db804bc10"
+      },
+      {
+        "path": "tests/cosmic-image-publication.test.mjs",
+        "sha256": "f8c45287aa0b2ea93f2524c4a38c99c2f0f7c38b5c661fefe18950964386ed13"
       },
       {
         "path": "tests/drawing-asset-policy.test.mjs",
@@ -988,7 +1544,7 @@
       },
       {
         "path": "web/app/atelier/[person]/page.tsx",
-        "sha256": "04f13db8fc17d62245e2cb10c98d0a0d0150f292029b4961ee60f017bd86646c"
+        "sha256": "5d7254dcec806d7c05d7dfacf81c15bfd34fcca58fa6ae14d99ad3845ab51416"
       },
       {
         "path": "web/app/compare/[stage]/page.tsx",
@@ -1016,7 +1572,7 @@
       },
       {
         "path": "web/app/records/page.tsx",
-        "sha256": "7e21477ea1ff8f52d59b26f17ea391b04f3483a56fc3fd619937339e545615de"
+        "sha256": "95ab38a311e147ce738f8bde0a6f2f5c03ce9b8076916d03133a5da35b6bdac5"
       },
       {
         "path": "web/artwork/asset-contract.ts",
@@ -1036,11 +1592,11 @@
       },
       {
         "path": "web/artwork/cosmic-scene.mjs",
-        "sha256": "0df25fa490b50b88780e0c00ccc2f53b776bf2ac224483670935fd3254aff8d4"
+        "sha256": "2e9b1af1d46fafa9a1ae97d95687399a1183a6f54ab3ba481c68b98a928b4d48"
       },
       {
         "path": "web/artwork/cosmic-state.mjs",
-        "sha256": "3a357176adde5bd99a7081db3072eea2eece833d3405ab7636e5004089fd75ef"
+        "sha256": "69c5fede45085eb479874630a78603e13b5fda5866c48414f545cebdfed5e755"
       },
       {
         "path": "web/artwork/css-geometry.ts",
@@ -1108,7 +1664,7 @@
       },
       {
         "path": "web/components/CosmicExhibition.tsx",
-        "sha256": "a7859c4c247795e5260c7bc40bab41a8a5d2f86a78acc0042bbf9bfac1b813b3"
+        "sha256": "e7f7042d0946215b1fadbd5434c82694478f20f555a9679552461861cbe55592"
       },
       {
         "path": "web/components/CssArtistCharacter.styles.ts",
@@ -1140,7 +1696,7 @@
       },
       {
         "path": "web/components/Gallery.tsx",
-        "sha256": "157587b671a022bba5d18707aeca79c5b59f22b16340fad79ed18958f6d7288c"
+        "sha256": "00f9182f1d2fed67b06f2c7de7682de001109d6ee98c22c6d11c5935692ecda2"
       },
       {
         "path": "web/components/MaterialSphere.generated.styles.ts",
@@ -1160,7 +1716,7 @@
       },
       {
         "path": "web/components/MaterialSphereGallery.tsx",
-        "sha256": "c5b0029a950d0ba9ce265a7224baaa996cd8a4ed84eb4da6a292228059a0cb17"
+        "sha256": "2d3026d2c3389943b310c2f240d3ff2aa9976dba034ddadc42e931351cf343fc"
       },
       {
         "path": "web/components/MuseumCharacter.generated.styles.ts",
@@ -1180,7 +1736,7 @@
       },
       {
         "path": "web/components/PlanetMuseum.tsx",
-        "sha256": "ad337a8c5aa735142ee435c6e1d5bd7c5b57be26360f37b08da3798c4b2e760f"
+        "sha256": "9be2fe4db25642e83d75e3bfb7adb61b3896a90230c0a28424d10e05d09e7caf"
       },
       {
         "path": "web/next.config.mjs",
@@ -1227,6 +1783,138 @@
         "sha256": "b1cabd11511431b4230d21303222b0d8e09169144fa675ee624612c8a7946f67"
       },
       {
+        "path": "web/public/cosmos/alphonse-mucha.png",
+        "sha256": "57fe2c034be6dd3340464ab9852a79e8d8f12e8de46ee61b1d1af3f4801b09a0"
+      },
+      {
+        "path": "web/public/cosmos/charles-eames.png",
+        "sha256": "33c97fe0f290497c22f556293b923d7b4b5d5bcacf027b7a1ba34034974e8d37"
+      },
+      {
+        "path": "web/public/cosmos/charles-rennie-mackintosh.png",
+        "sha256": "81ee0b404ebe5e70465681397f6f2ea7ae82c85a4971f1524fdc7fc3e3be01a8"
+      },
+      {
+        "path": "web/public/cosmos/dieter-rams.png",
+        "sha256": "9b18c578a617c774b195ce2ddea6ef3c3cd2cf9562a60a5031df5b64742ff866"
+      },
+      {
+        "path": "web/public/cosmos/ettore-sottsass.png",
+        "sha256": "62f9f2086ffa001a9b5c326c4a4fb7eeba1ae4857fe9eb93a1f465349161cefa"
+      },
+      {
+        "path": "web/public/cosmos/gerrit-rietveld.png",
+        "sha256": "ca4d66b058126ed541e30ea886139ebfd2815740b6db8b538ca26f3c21305fc0"
+      },
+      {
+        "path": "web/public/cosmos/herbert-bayer.png",
+        "sha256": "1179f76272afc9eac1ac1b7b3ec6fcfcab9194bf000d27bbcd41e85cf25a8c3b"
+      },
+      {
+        "path": "web/public/cosmos/illustration-design-reference.jsonl",
+        "sha256": "5ff2c20d1969a6f83edf2520e3a10853e500e12bd87b15de85b0dc7b0f0eab9c"
+      },
+      {
+        "path": "web/public/cosmos/index.html",
+        "sha256": "d6b8b2f3e5a60cbee9f449fdb5090013ba63e02812ed0fa8673677fd434f87a2"
+      },
+      {
+        "path": "web/public/cosmos/interactive/README.md",
+        "sha256": "494ddbf505fdf6bb914061d736c7f3797de174b91d3a37156d6d7937b2ba4e05"
+      },
+      {
+        "path": "web/public/cosmos/interactive/dependencies.json",
+        "sha256": "ec143940f4dd67e1c95f9d94e849c2b177abd484701a51528d8659f63054a141"
+      },
+      {
+        "path": "web/public/cosmos/interactive/exhibition.json",
+        "sha256": "108306a4418dd2b7740e2f7130cdac366adc5352d305722047dc41c1db96d616"
+      },
+      {
+        "path": "web/public/cosmos/interactive/index.html",
+        "sha256": "0a3014a9089b63a11268b8d802074f45fa5b2733ad4a61bbf36f7df274c43fc9"
+      },
+      {
+        "path": "web/public/cosmos/interactive/main.mjs",
+        "sha256": "62bdfd624708decf015657094c6f70d7853b1c73493bbc973b248c3b927f842f"
+      },
+      {
+        "path": "web/public/cosmos/interactive/model.mjs",
+        "sha256": "ba02dbf2d014e3673fd0033e97056a840d02c1db504987ff577922b94db00395"
+      },
+      {
+        "path": "web/public/cosmos/interactive/physics.mjs",
+        "sha256": "076dfd0f15f91d278eb51870d842c01e19e7ca3a77431c5d4bed658be6e45503"
+      },
+      {
+        "path": "web/public/cosmos/interactive/style.css",
+        "sha256": "1889ad1612d94417e05ca18522232110c3d510c09b3c5841ea5aad17c820b654"
+      },
+      {
+        "path": "web/public/cosmos/interactive/vendor/RAPIER-LICENSE.txt",
+        "sha256": "4c05555705e3efde601fb1252ae48f1d63992af8a8fb8947745b7fa834e8f519"
+      },
+      {
+        "path": "web/public/cosmos/interactive/vendor/THREE-LICENSE.txt",
+        "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+      },
+      {
+        "path": "web/public/cosmos/interactive/vendor/controls/OrbitControls.js",
+        "sha256": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b"
+      },
+      {
+        "path": "web/public/cosmos/interactive/vendor/rapier.mjs",
+        "sha256": "82b65114e949ed17969a5d0a3517b952f430ea524f4a19ce4a31e72fb7757f27"
+      },
+      {
+        "path": "web/public/cosmos/interactive/vendor/reference-physics-contract.mjs",
+        "sha256": "4d1495820c1b9dcf334accee1892edd4f0ead85f5575e7c91935518903b435ba"
+      },
+      {
+        "path": "web/public/cosmos/interactive/vendor/three.core.js",
+        "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
+      },
+      {
+        "path": "web/public/cosmos/interactive/vendor/three.module.js",
+        "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+      },
+      {
+        "path": "web/public/cosmos/josef-muller-brockmann.png",
+        "sha256": "75a303ac4c65d1608c6ffb3f2f3ce70a2191aacb0980713dccfa4c8ce29a13cd"
+      },
+      {
+        "path": "web/public/cosmos/massimo-vignelli.png",
+        "sha256": "68c567fa35979197d5652c822492322a995378ec30c20aa0f965db10bc4c7fc7"
+      },
+      {
+        "path": "web/public/cosmos/naoto-fukasawa.png",
+        "sha256": "c1d81e3a60c2e9859fe9c4c1fabd7fc27dc17d1b053d8cc2bbde8cf409b60f3a"
+      },
+      {
+        "path": "web/public/cosmos/piet-mondrian.png",
+        "sha256": "66ab2202b937935af83683534d1a667cc8e291dd5cb40049b29232439f9eb8da"
+      },
+      {
+        "path": "web/public/cosmos/ray-eames.png",
+        "sha256": "c4933e043eb1931a3bb4f64bb83821fbbca0b081298808c373adc12167c3b3f8"
+      },
+      {
+        "path": "web/public/cosmos/references.jsonl",
+        "sha256": "5d4f42946a7bd355d7f2540bafa7b5e4e85bfae93f81f6d0310044a9228b8ace"
+      },
+      {
+        "path": "web/public/cosmos/rei-kawakubo.png",
+        "sha256": "d75de875bc814bbc4cf6dbe85f6e1cdaf2a31340aaa06ab54a8c068f4345954b"
+      },
+      {
+        "path": "web/public/cosmos/walter-gropius.png",
+        "sha256": "595059dbe0521bed0cff56afb278d8034344416ceb419f895d5afd6d6b589fb4"
+      },
+      {
+        "path": "web/public/cosmos/william-morris.png",
+        "sha256": "d7485b0b48ab20c6ef5b369f0206db25137aac82021054cc1b8c8b4fb437d7a0"
+      },
+      {
         "path": "web/public/favicon.svg",
         "sha256": "b2a54a1ce80bfa8b03ccbab7fd6c1e1c57a8f4e3c11c83be25fee5700fe1e744"
       },
@@ -1235,28 +1923,22 @@
         "sha256": "c77757068271adb58670f7d2de2d253ef2ffe2918809f8460b6d624496293d19"
       }
     ],
-    "executionIdentifier": "01a0a49d-e71e-77d6-a96a-963d95f76bff",
-    "createdAt": "2026-09-15T10:30:06.878Z",
-    "afterSourceRevision": "sha256:0bdf9f362166ae3da7478a7cc969070db351ad1e4a4f5e695abeca9acde4c22a",
-    "completedAt": "2026-09-15T10:33:40.037Z",
+    "executionIdentifier": "01a0a5bf-3b40-7143-81e8-42d3046c45fa",
+    "recordedAt": "2026-09-15T15:46:08.321Z",
     "checks": [
       {
         "tool": "lean_build",
-        "target": "Lumenia",
-        "args": {
-          "lean_project_path": "/private/tmp/lumenia-cosmic-exhibition",
-          "output_lines": 30
-        },
+        "target": "project",
         "response": {
           "content": [
             {
               "type": "text",
-              "text": "{\n  \"success\": true,\n  \"output\": \"✔ [12/13] Built Lumenia (2.3s)\\nBuild completed successfully (13 jobs).\",\n  \"errors\": []\n}"
+              "text": "{\n  \"success\": true,\n  \"output\": \"Build completed successfully (13 jobs).\",\n  \"errors\": []\n}"
             }
           ],
           "structuredContent": {
             "success": true,
-            "output": "✔ [12/13] Built Lumenia (2.3s)\nBuild completed successfully (13 jobs).",
+            "output": "Build completed successfully (13 jobs).",
             "errors": []
           },
           "isError": false
@@ -1264,10 +1946,7 @@
       },
       {
         "tool": "lean_diagnostic_messages",
-        "target": "formal/Lumenia/Model.lean",
-        "args": {
-          "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/Model.lean"
-        },
+        "target": "Lumenia.asset_checks_iff_requirements",
         "response": {
           "content": [
             {
@@ -1282,190 +1961,18 @@
               "items": [],
               "failed_dependencies": []
             }
-          },
-          "isError": false
-        }
-      },
-      {
-        "tool": "lean_diagnostic_messages",
-        "target": "formal/Lumenia/Proofs.lean",
-        "args": {
-          "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/Proofs.lean"
-        },
-        "response": {
-          "content": [
-            {
-              "type": "text",
-              "text": "{\n  \"success\": true,\n  \"timed_out\": false,\n  \"items\": [],\n  \"failed_dependencies\": []\n}"
-            }
-          ],
-          "structuredContent": {
-            "result": {
-              "success": true,
-              "timed_out": false,
-              "items": [],
-              "failed_dependencies": []
-            }
-          },
-          "isError": false
-        }
-      },
-      {
-        "tool": "lean_diagnostic_messages",
-        "target": "formal/Lumenia/Tests.lean",
-        "args": {
-          "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/Tests.lean"
-        },
-        "response": {
-          "content": [
-            {
-              "type": "text",
-              "text": "{\n  \"success\": true,\n  \"timed_out\": false,\n  \"items\": [],\n  \"failed_dependencies\": []\n}"
-            }
-          ],
-          "structuredContent": {
-            "result": {
-              "success": true,
-              "timed_out": false,
-              "items": [],
-              "failed_dependencies": []
-            }
-          },
-          "isError": false
-        }
-      },
-      {
-        "tool": "lean_diagnostic_messages",
-        "target": "formal/Lumenia/Boundary.lean",
-        "args": {
-          "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/Boundary.lean"
-        },
-        "response": {
-          "content": [
-            {
-              "type": "text",
-              "text": "{\n  \"success\": true,\n  \"timed_out\": false,\n  \"items\": [],\n  \"failed_dependencies\": []\n}"
-            }
-          ],
-          "structuredContent": {
-            "result": {
-              "success": true,
-              "timed_out": false,
-              "items": [],
-              "failed_dependencies": []
-            }
-          },
-          "isError": false
-        }
-      },
-      {
-        "tool": "lean_diagnostic_messages",
-        "target": "formal/Lumenia.lean",
-        "args": {
-          "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia.lean"
-        },
-        "response": {
-          "content": [
-            {
-              "type": "text",
-              "text": "{\n  \"success\": true,\n  \"timed_out\": false,\n  \"items\": [],\n  \"failed_dependencies\": []\n}"
-            }
-          ],
-          "structuredContent": {
-            "result": {
-              "success": true,
-              "timed_out": false,
-              "items": [],
-              "failed_dependencies": []
-            }
-          },
-          "isError": false
-        }
-      },
-      {
-        "tool": "lean_diagnostic_messages",
-        "target": "formal/Main.lean",
-        "args": {
-          "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Main.lean"
-        },
-        "response": {
-          "content": [
-            {
-              "type": "text",
-              "text": "{\n  \"success\": true,\n  \"timed_out\": false,\n  \"items\": [],\n  \"failed_dependencies\": []\n}"
-            }
-          ],
-          "structuredContent": {
-            "result": {
-              "success": true,
-              "timed_out": false,
-              "items": [],
-              "failed_dependencies": []
-            }
-          },
-          "isError": false
-        }
-      },
-      {
-        "tool": "lean_goal",
-        "target": "Lumenia.validate_raw_asset_accepts_iff",
-        "args": {
-          "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/Proofs.lean",
-          "line": 73
-        },
-        "response": {
-          "content": [
-            {
-              "type": "text",
-              "text": "{\n  \"line_context\": \"    exact ⟨⟨flags, options, passed⟩, dif_pos passed⟩\",\n  \"goals\": null,\n  \"goals_before\": [\n    \"case mpr\\nflags : RawAssetFlags\\noptions : AssetPipelineOptions\\nrequirements : AssetRequirementsSatisfied flags options\\npassed : assetChecks flags options = true\\n⊢ ∃ asset, validateRawAsset flags options = some asset\"\n  ],\n  \"goals_after\": []\n}"
-            }
-          ],
-          "structuredContent": {
-            "line_context": "    exact ⟨⟨flags, options, passed⟩, dif_pos passed⟩",
-            "goals": null,
-            "goals_before": [
-              "case mpr\nflags : RawAssetFlags\noptions : AssetPipelineOptions\nrequirements : AssetRequirementsSatisfied flags options\npassed : assetChecks flags options = true\n⊢ ∃ asset, validateRawAsset flags options = some asset"
-            ],
-            "goals_after": []
-          },
-          "isError": false
-        }
-      },
-      {
-        "tool": "lean_hover_info",
-        "target": "Lumenia.validate_raw_asset_accepts_iff",
-        "args": {
-          "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/Proofs.lean",
-          "line": 60,
-          "column": 9
-        },
-        "response": {
-          "content": [
-            {
-              "type": "text",
-              "text": "{\n  \"symbol\": \"validate_raw_asset_accepts_iff\",\n  \"info\": \"Lumenia.validate_raw_asset_accepts_iff (flags : RawAssetFlags) (options : AssetPipelineOptions) :\\n  (∃ asset, validateRawAsset flags options = some asset) ↔ AssetRequirementsSatisfied flags options\",\n  \"diagnostics\": []\n}"
-            }
-          ],
-          "structuredContent": {
-            "symbol": "validate_raw_asset_accepts_iff",
-            "info": "Lumenia.validate_raw_asset_accepts_iff (flags : RawAssetFlags) (options : AssetPipelineOptions) :\n  (∃ asset, validateRawAsset flags options = some asset) ↔ AssetRequirementsSatisfied flags options",
-            "diagnostics": []
           },
           "isError": false
         }
       },
       {
         "tool": "lean_file_outline",
-        "target": "formal/Lumenia/Proofs.lean",
-        "args": {
-          "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/Proofs.lean",
-          "max_declarations": 100
-        },
+        "target": "Lumenia.asset_checks_iff_requirements",
         "response": {
           "content": [
             {
               "type": "text",
-              "text": "{\n  \"imports\": [\n    \"Lumenia.Model\"\n  ],\n  \"declarations\": [\n    {\n      \"name\": \"Lumenia\",\n      \"kind\": \"Ns\",\n      \"start_line\": 3,\n      \"end_line\": 395,\n      \"type_signature\": null,\n      \"children\": []\n    },\n    {\n      \"name\": \"boolean_conjunction\",\n      \"kind\": \"Thm\",\n      \"start_line\": 13,\n      \"end_line\": 15,\n      \"type_signature\": \"∀ (first second : Bool),\\n        (first && second) = true ↔ first = true ∧ second = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"boolean_disjunction\",\n      \"kind\": \"Thm\",\n      \"start_line\": 17,\n      \"end_line\": 19,\n      \"type_signature\": \"∀ (first second : Bool),\\n        (first || second) = true ↔ first = true ∨ second = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"boolean_implication\",\n      \"kind\": \"Thm\",\n      \"start_line\": 21,\n      \"end_line\": 23,\n      \"type_signature\": \"∀ (required available : Bool),\\n        (!required || available) = true ↔ required = true → available = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"boolean_exclusion\",\n      \"kind\": \"Thm\",\n      \"start_line\": 25,\n      \"end_line\": 27,\n      \"type_signature\": \"∀ (first second : Bool),\\n        (!(first && second)) = true ↔ ¬(first = true ∧ second = true)\",\n      \"children\": []\n    },\n    {\n      \"name\": \"asset_checks_iff_requirements\",\n      \"kind\": \"Thm\",\n      \"start_line\": 30,\n      \"end_line\": 57,\n      \"type_signature\": \"∀ (flags : RawAssetFlags)\\n        (options : AssetPipelineOptions),\\n        assetChecks flags options = true ↔ AssetRequirementsSatisfied flags options\",\n      \"children\": []\n    },\n    {\n      \"name\": \"validate_raw_asset_accepts_iff\",\n      \"kind\": \"Thm\",\n      \"start_line\": 60,\n      \"end_line\": 73,\n      \"type_signature\": \"∀ (flags : RawAssetFlags)\\n        (options : AssetPipelineOptions),\\n        (∃ asset, validateRawAsset flags options = some asset) ↔\\n          AssetRequirementsSatisfied flags options\",\n      \"children\": []\n    },\n    {\n      \"name\": \"validate_raw_asset_rejects_iff\",\n      \"kind\": \"Thm\",\n      \"start_line\": 76,\n      \"end_line\": 87,\n      \"type_signature\": \"∀ (flags : RawAssetFlags)\\n        (options : AssetPipelineOptions),\\n        validateRawAsset flags options = none ↔ ¬AssetRequirementsSatisfied flags options\",\n      \"children\": []\n    },\n    {\n      \"name\": \"validate_raw_asset_preserves_input\",\n      \"kind\": \"Thm\",\n      \"start_line\": 90,\n      \"end_line\": 98,\n      \"type_signature\": \"∀ (flags : RawAssetFlags)\\n        (options : AssetPipelineOptions) (asset : ValidatedAsset),\\n        validateRawAsset flags options = some asset →\\n          asset.sourceFlags = flags ∧ asset.pipelineOptions = options\",\n      \"children\": []\n    },\n    {\n      \"name\": \"validate_raw_asset_sound\",\n      \"kind\": \"Thm\",\n      \"start_line\": 101,\n      \"end_line\": 105,\n      \"type_signature\": \"∀ (flags : RawAssetFlags) (options : AssetPipelineOptions)\\n        (asset : ValidatedAsset),\\n        validateRawAsset flags options = some asset → AssetRequirementsSatisfied flags options\",\n      \"children\": []\n    },\n    {\n      \"name\": \"validated_asset_satisfies_requirements\",\n      \"kind\": \"Thm\",\n      \"start_line\": 108,\n      \"end_line\": 110,\n      \"type_signature\": \"∀ (asset : ValidatedAsset),\\n        AssetRequirementsSatisfied asset.sourceFlags asset.pipelineOptions\",\n      \"children\": []\n    },\n    {\n      \"name\": \"meshopt_variants_are_exclusive\",\n      \"kind\": \"Thm\",\n      \"start_line\": 113,\n      \"end_line\": 117,\n      \"type_signature\": \"∀ (flags : RawAssetFlags)\\n        (options : AssetPipelineOptions) (asset : ValidatedAsset),\\n        validateRawAsset flags options = some asset →\\n          ¬(flags.usesExtensionMeshopt = true ∧ flags.usesKhronosMeshopt = true)\",\n      \"children\": []\n    },\n    {\n      \"name\": \"extension_meshopt_requires_decoder\",\n      \"kind\": \"Thm\",\n      \"start_line\": 120,\n      \"end_line\": 125,\n      \"type_signature\": \"∀ (flags : RawAssetFlags)\\n        (options : AssetPipelineOptions) (asset : ValidatedAsset),\\n        validateRawAsset flags options = some asset →\\n          flags.usesExtensionMeshopt = true → options.hasMeshoptDecoder = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"khronos_meshopt_requires_decoder\",\n      \"kind\": \"Thm\",\n      \"start_line\": 128,\n      \"end_line\": 133,\n      \"type_signature\": \"∀ (flags : RawAssetFlags)\\n        (options : AssetPipelineOptions) (asset : ValidatedAsset),\\n        validateRawAsset flags options = some asset →\\n          flags.usesKhronosMeshopt = true → options.hasMeshoptDecoder = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"ktx2_requires_loader\",\n      \"kind\": \"Thm\",\n      \"start_line\": 136,\n      \"end_line\": 141,\n      \"type_signature\": \"∀ (flags : RawAssetFlags) (options : AssetPipelineOptions)\\n        (asset : ValidatedAsset),\\n        validateRawAsset flags options = some asset →\\n          flags.usesKtx2 = true → options.hasKtx2Loader = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"draco_requires_loader\",\n      \"kind\": \"Thm\",\n      \"start_line\": 144,\n      \"end_line\": 150,\n      \"type_signature\": \"∀ (flags : RawAssetFlags) (options : AssetPipelineOptions)\\n        (asset : ValidatedAsset),\\n        validateRawAsset flags options = some asset →\\n          (selectAssetLoaders flags).dracoEnabled = true →\\n            flags.usesDraco = true ∧ options.hasDracoLoader = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"draco_is_enabled_iff_explicit\",\n      \"kind\": \"Thm\",\n      \"start_line\": 153,\n      \"end_line\": 155,\n      \"type_signature\": \"∀ (flags : RawAssetFlags),\\n        (selectAssetLoaders flags).dracoEnabled = true ↔ flags.usesDraco = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"named_nodes_require_preservation\",\n      \"kind\": \"Thm\",\n      \"start_line\": 158,\n      \"end_line\": 163,\n      \"type_signature\": \"∀ (flags : RawAssetFlags)\\n        (options : AssetPipelineOptions) (asset : ValidatedAsset),\\n        validateRawAsset flags options = some asset →\\n          flags.requiresNamedNodes = true → options.keepsNamedNodes = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"extras_require_preservation\",\n      \"kind\": \"Thm\",\n      \"start_line\": 166,\n      \"end_line\": 171,\n      \"type_signature\": \"∀ (flags : RawAssetFlags) (options : AssetPipelineOptions)\\n        (asset : ValidatedAsset),\\n        validateRawAsset flags options = some asset →\\n          flags.requiresExtras = true → options.keepsExtras = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"both_meshopt_flags_reject\",\n      \"kind\": \"Thm\",\n      \"start_line\": 174,\n      \"end_line\": 180,\n      \"type_signature\": \"∀ (flags : RawAssetFlags) (options : AssetPipelineOptions),\\n        flags.usesExtensionMeshopt = true →\\n          flags.usesKhronosMeshopt = true → validateRawAsset flags options = none\",\n      \"children\": []\n    },\n    {\n      \"name\": \"missing_meshopt_decoder_rejects\",\n      \"kind\": \"Thm\",\n      \"start_line\": 183,\n      \"end_line\": 191,\n      \"type_signature\": \"∀ (flags : RawAssetFlags)\\n        (options : AssetPipelineOptions),\\n        flags.usesExtensionMeshopt = true ∨ flags.usesKhronosMeshopt = true →\\n          options.hasMeshoptDecoder = false → validateRawAsset flags options = none\",\n      \"children\": []\n    },\n    {\n      \"name\": \"shipped_requires_validation\",\n      \"kind\": \"Thm\",\n      \"start_line\": 194,\n      \"end_line\": 196,\n      \"type_signature\": \"∀ (stage : ArtifactStage) (event : ArtifactEvent),\\n        transition stage event = some ArtifactStage.shipped ↔\\n          stage = ArtifactStage.validated ∧ event = ArtifactEvent.ship\",\n      \"children\": []\n    },\n    {\n      \"name\": \"rejected_never_reaches_shipped\",\n      \"kind\": \"Thm\",\n      \"start_line\": 198,\n      \"end_line\": 203,\n      \"type_signature\": \"∀ (events : List ArtifactEvent),\\n        runTransitions ArtifactStage.rejected events ≠ some ArtifactStage.shipped\",\n      \"children\": []\n    },\n    {\n      \"name\": \"shipped_trace_is_empty\",\n      \"kind\": \"Thm\",\n      \"start_line\": 205,\n      \"end_line\": 214,\n      \"type_signature\": \"∀ (events : List ArtifactEvent),\\n        runTransitions ArtifactStage.shipped events = some ArtifactStage.shipped ↔ events = []\",\n      \"children\": []\n    },\n    {\n      \"name\": \"validated_trace_is_ship\",\n      \"kind\": \"Thm\",\n      \"start_line\": 216,\n      \"end_line\": 233,\n      \"type_signature\": \"∀ (events : List ArtifactEvent),\\n        runTransitions ArtifactStage.validated events = some ArtifactStage.shipped ↔\\n          events = [ArtifactEvent.ship]\",\n      \"children\": []\n    },\n    {\n      \"name\": \"optimized_trace_is_validate_ship\",\n      \"kind\": \"Thm\",\n      \"start_line\": 235,\n      \"end_line\": 252,\n      \"type_signature\": \"∀ (events : List ArtifactEvent),\\n        runTransitions ArtifactStage.optimized events = some ArtifactStage.shipped ↔\\n          events = [ArtifactEvent.validate, ArtifactEvent.ship]\",\n      \"children\": []\n    },\n    {\n      \"name\": \"shipment_trace_is_exactly_optimize_validate_ship\",\n      \"kind\": \"Thm\",\n      \"start_line\": 255,\n      \"end_line\": 273,\n      \"type_signature\": \"∀ (events : List ArtifactEvent),\\n        runTransitions ArtifactStage.source events = some ArtifactStage.shipped ↔\\n          events = [ArtifactEvent.optimize, ArtifactEvent.validate, ArtifactEvent.ship]\",\n      \"children\": []\n    },\n    {\n      \"name\": \"shipped_history_requires_asset_requirements\",\n      \"kind\": \"Thm\",\n      \"start_line\": 276,\n      \"end_line\": 283,\n      \"type_signature\": \"∀ {identity : ArtifactIdentity}\\n        {flags : RawAssetFlags} {options : AssetPipelineOptions}\\n        (history : ArtifactHistory identity flags options ArtifactStage.shipped),\\n        AssetRequirementsSatisfied flags options\",\n      \"children\": []\n    },\n    {\n      \"name\": \"invalid_asset_has_no_shipped_history\",\n      \"kind\": \"Thm\",\n      \"start_line\": 286,\n      \"end_line\": 291,\n      \"type_signature\": \"∀ {identity : ArtifactIdentity}\\n        {flags : RawAssetFlags} {options : AssetPipelineOptions},\\n        ¬AssetRequirementsSatisfied flags options →\\n          ¬Nonempty (ArtifactHistory identity flags options ArtifactStage.shipped)\",\n      \"children\": []\n    },\n    {\n      \"name\": \"browser_capability_requires_client_component\",\n      \"kind\": \"Thm\",\n      \"start_line\": 294,\n      \"end_line\": 300,\n      \"type_signature\": \"∀ (capability : RuntimeCapability)\\n        (placement : ComponentPlacement),\\n        capabilityRequiresClient capability = true →\\n          componentPlacementAllowed placement capability = true →\\n            placement = ComponentPlacement.client\",\n      \"children\": []\n    },\n    {\n      \"name\": \"all_checked_at_member\",\n      \"kind\": \"Thm\",\n      \"start_line\": 302,\n      \"end_line\": 312,\n      \"type_signature\": \"∀ {Element : Type} (predicate : Element → Bool)\\n        {values : List Element} {value : Element},\\n        values.all predicate = true → value ∈ values → predicate value = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"static_export_cannot_require_server_only\",\n      \"kind\": \"Thm\",\n      \"start_line\": 315,\n      \"end_line\": 322,\n      \"type_signature\": \"∀ (placement : ComponentPlacement)\\n        (requirements : List RuntimeCapability),\\n        componentRequirementsAllowed DeploymentMode.staticExport placement requirements = true →\\n          ¬RuntimeCapability.serverOnly ∈ requirements\",\n      \"children\": []\n    },\n    {\n      \"name\": \"accepted_component_places_browser_requirements_on_client\",\n      \"kind\": \"Thm\",\n      \"start_line\": 325,\n      \"end_line\": 334,\n      \"type_signature\": \"∀ (mode : DeploymentMode)\\n        (placement : ComponentPlacement) (requirements : List RuntimeCapability) (capability : RuntimeCapability),\\n        capability ∈ requirements →\\n          capabilityRequiresClient capability = true →\\n            componentRequirementsAllowed mode placement requirements = true →\\n              placement = ComponentPlacement.client\",\n      \"children\": []\n    },\n    {\n      \"name\": \"client_component_cannot_require_server_only\",\n      \"kind\": \"Thm\",\n      \"start_line\": 337,\n      \"end_line\": 344,\n      \"type_signature\": \"∀ (mode : DeploymentMode)\\n        (requirements : List RuntimeCapability),\\n        componentRequirementsAllowed mode ComponentPlacement.client requirements = true →\\n          ¬RuntimeCapability.serverOnly ∈ requirements\",\n      \"children\": []\n    },\n    {\n      \"name\": \"core_transfer_total_within_budget\",\n      \"kind\": \"Thm\",\n      \"start_line\": 347,\n      \"end_line\": 352,\n      \"type_signature\": \"∀ (transfer : CoreTransfer),\\n        transfer.withinBudget → transfer.total ≤ coreTransferBudget\",\n      \"children\": []\n    },\n    {\n      \"name\": \"category_budget_total_is_204800_bytes\",\n      \"kind\": \"Thm\",\n      \"start_line\": 355,\n      \"end_line\": 359,\n      \"type_signature\": \"30 * kibibyte + 120 * kibibyte + 20 * kibibyte +\\n              20 * kibibyte +\\n            10 * kibibyte =\\n          coreTransferBudget ∧\\n        coreTransferBudget = 204800\",\n      \"children\": []\n    },\n    {\n      \"name\": \"measured_gate_pass_iff\",\n      \"kind\": \"Thm\",\n      \"start_line\": 362,\n      \"end_line\": 393,\n      \"type_signature\": \"∀ (gate : MeasuredGate),\\n        evaluateMeasuredGate gate = VerificationStatus.pass ↔\\n          gate.measuredRevision = gate.requiredRevision ∧\\n            ∃ value, gate.observedValue = some value ∧ value ≤ gate.upperBound\",\n      \"children\": []\n    },\n    {\n      \"name\": \"asset_checks_iff_requirements\",\n      \"kind\": \"Thm\",\n      \"start_line\": 30,\n      \"end_line\": 30,\n      \"type_signature\": \"(flags : RawAssetFlags) (options : AssetPipelineOptions) : assetChecks flags options = true ↔ AssetRequirementsSatisfied flags options\",\n      \"children\": []\n    },\n    {\n      \"name\": \"validate_raw_asset_accepts_iff\",\n      \"kind\": \"Thm\",\n      \"start_line\": 60,\n      \"end_line\": 60,\n      \"type_signature\": \"(flags : RawAssetFlags) (options : AssetPipelineOptions) : (∃ asset, validateRawAsset flags options = some asset) ↔ AssetRequirementsSatisfied flags options\",\n      \"children\": []\n    },\n    {\n      \"name\": \"validate_raw_asset_rejects_iff\",\n      \"kind\": \"Thm\",\n      \"start_line\": 76,\n      \"end_line\": 76,\n      \"type_signature\": \"(flags : RawAssetFlags) (options : AssetPipelineOptions) : validateRawAsset flags options = none ↔ ¬ AssetRequirementsSatisfied flags options\",\n      \"children\": []\n    },\n    {\n      \"name\": \"validate_raw_asset_preserves_input\",\n      \"kind\": \"Thm\",\n      \"start_line\": 90,\n      \"end_line\": 90,\n      \"type_signature\": \"(flags : RawAssetFlags) (options : AssetPipelineOptions) (asset : ValidatedAsset) (accepted : validateRawAsset flags options = some asset) : asset.sourceFlags = flags ∧ asset.pipelineOptions = options\",\n      \"children\": []\n    },\n    {\n      \"name\": \"validate_raw_asset_sound\",\n      \"kind\": \"Thm\",\n      \"start_line\": 101,\n      \"end_line\": 101,\n      \"type_signature\": \"(flags : RawAssetFlags) (options : AssetPipelineOptions) (asset : ValidatedAsset) (accepted : validateRawAsset flags options = some asset) : AssetRequirementsSatisfied flags options\",\n      \"children\": []\n    },\n    {\n      \"name\": \"validated_asset_satisfies_requirements\",\n      \"kind\": \"Thm\",\n      \"start_line\": 108,\n      \"end_line\": 108,\n      \"type_signature\": \"(asset : ValidatedAsset) : AssetRequirementsSatisfied asset.sourceFlags asset.pipelineOptions\",\n      \"children\": []\n    },\n    {\n      \"name\": \"meshopt_variants_are_exclusive\",\n      \"kind\": \"Thm\",\n      \"start_line\": 113,\n      \"end_line\": 113,\n      \"type_signature\": \"(flags : RawAssetFlags) (options : AssetPipelineOptions) (asset : ValidatedAsset) (accepted : validateRawAsset flags options = some asset) : ¬ (flags.usesExtensionMeshopt = true ∧ flags.usesKhronosMeshopt = true)\",\n      \"children\": []\n    },\n    {\n      \"name\": \"extension_meshopt_requires_decoder\",\n      \"kind\": \"Thm\",\n      \"start_line\": 120,\n      \"end_line\": 120,\n      \"type_signature\": \"(flags : RawAssetFlags) (options : AssetPipelineOptions) (asset : ValidatedAsset) (accepted : validateRawAsset flags options = some asset) (required : flags.usesExtensionMeshopt = true) : options.hasMeshoptDecoder = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"khronos_meshopt_requires_decoder\",\n      \"kind\": \"Thm\",\n      \"start_line\": 128,\n      \"end_line\": 128,\n      \"type_signature\": \"(flags : RawAssetFlags) (options : AssetPipelineOptions) (asset : ValidatedAsset) (accepted : validateRawAsset flags options = some asset) (required : flags.usesKhronosMeshopt = true) : options.hasMeshoptDecoder = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"ktx2_requires_loader\",\n      \"kind\": \"Thm\",\n      \"start_line\": 136,\n      \"end_line\": 136,\n      \"type_signature\": \"(flags : RawAssetFlags) (options : AssetPipelineOptions) (asset : ValidatedAsset) (accepted : validateRawAsset flags options = some asset) (required : flags.usesKtx2 = true) : options.hasKtx2Loader = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"draco_requires_loader\",\n      \"kind\": \"Thm\",\n      \"start_line\": 144,\n      \"end_line\": 144,\n      \"type_signature\": \"(flags : RawAssetFlags) (options : AssetPipelineOptions) (asset : ValidatedAsset) (accepted : validateRawAsset flags options = some asset) (required : (selectAssetLoaders flags).dracoEnabled = true) : flags.usesDraco = true ∧ options.hasDracoLoader = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"draco_is_enabled_iff_explicit\",\n      \"kind\": \"Thm\",\n      \"start_line\": 153,\n      \"end_line\": 153,\n      \"type_signature\": \"(flags : RawAssetFlags) : (selectAssetLoaders flags).dracoEnabled = true ↔ flags.usesDraco = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"named_nodes_require_preservation\",\n      \"kind\": \"Thm\",\n      \"start_line\": 158,\n      \"end_line\": 158,\n      \"type_signature\": \"(flags : RawAssetFlags) (options : AssetPipelineOptions) (asset : ValidatedAsset) (accepted : validateRawAsset flags options = some asset) (required : flags.requiresNamedNodes = true) : options.keepsNamedNodes = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"extras_require_preservation\",\n      \"kind\": \"Thm\",\n      \"start_line\": 166,\n      \"end_line\": 166,\n      \"type_signature\": \"(flags : RawAssetFlags) (options : AssetPipelineOptions) (asset : ValidatedAsset) (accepted : validateRawAsset flags options = some asset) (required : flags.requiresExtras = true) : options.keepsExtras = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"both_meshopt_flags_reject\",\n      \"kind\": \"Thm\",\n      \"start_line\": 174,\n      \"end_line\": 174,\n      \"type_signature\": \"(flags : RawAssetFlags) (options : AssetPipelineOptions) (extension : flags.usesExtensionMeshopt = true) (khronos : flags.usesKhronosMeshopt = true) : validateRawAsset flags options = none\",\n      \"children\": []\n    },\n    {\n      \"name\": \"missing_meshopt_decoder_rejects\",\n      \"kind\": \"Thm\",\n      \"start_line\": 183,\n      \"end_line\": 183,\n      \"type_signature\": \"(flags : RawAssetFlags) (options : AssetPipelineOptions) (required : flags.usesExtensionMeshopt = true ∨ flags.usesKhronosMeshopt = true) (missing : options.hasMeshoptDecoder = false) : validateRawAsset flags options = none\",\n      \"children\": []\n    },\n    {\n      \"name\": \"shipped_requires_validation\",\n      \"kind\": \"Thm\",\n      \"start_line\": 194,\n      \"end_line\": 194,\n      \"type_signature\": \"(stage : ArtifactStage) (event : ArtifactEvent) : transition stage event = some .shipped ↔ stage = .validated ∧ event = .ship\",\n      \"children\": []\n    },\n    {\n      \"name\": \"shipment_trace_is_exactly_optimize_validate_ship\",\n      \"kind\": \"Thm\",\n      \"start_line\": 255,\n      \"end_line\": 255,\n      \"type_signature\": \"(events : List ArtifactEvent) : runTransitions .source events = some .shipped ↔ events = [.optimize, .validate, .ship]\",\n      \"children\": []\n    },\n    {\n      \"name\": \"shipped_history_requires_asset_requirements\",\n      \"kind\": \"Thm\",\n      \"start_line\": 276,\n      \"end_line\": 276,\n      \"type_signature\": \"{identity : ArtifactIdentity} {flags : RawAssetFlags} {options : AssetPipelineOptions} (history : ArtifactHistory identity flags options .shipped) : AssetRequirementsSatisfied flags options\",\n      \"children\": []\n    },\n    {\n      \"name\": \"invalid_asset_has_no_shipped_history\",\n      \"kind\": \"Thm\",\n      \"start_line\": 286,\n      \"end_line\": 286,\n      \"type_signature\": \"{identity : ArtifactIdentity} {flags : RawAssetFlags} {options : AssetPipelineOptions} (invalid : ¬ AssetRequirementsSatisfied flags options) : ¬ Nonempty (ArtifactHistory identity flags options .shipped)\",\n      \"children\": []\n    },\n    {\n      \"name\": \"browser_capability_requires_client_component\",\n      \"kind\": \"Thm\",\n      \"start_line\": 294,\n      \"end_line\": 294,\n      \"type_signature\": \"(capability : RuntimeCapability) (placement : ComponentPlacement) (required : capabilityRequiresClient capability = true) (allowed : componentPlacementAllowed placement capability = true) : placement = .client\",\n      \"children\": []\n    },\n    {\n      \"name\": \"static_export_cannot_require_server_only\",\n      \"kind\": \"Thm\",\n      \"start_line\": 315,\n      \"end_line\": 315,\n      \"type_signature\": \"(placement : ComponentPlacement) (requirements : List RuntimeCapability) (allowed : componentRequirementsAllowed .staticExport placement requirements = true) : RuntimeCapability.serverOnly ∉ requirements\",\n      \"children\": []\n    },\n    {\n      \"name\": \"accepted_component_places_browser_requirements_on_client\",\n      \"kind\": \"Thm\",\n      \"start_line\": 325,\n      \"end_line\": 325,\n      \"type_signature\": \"(mode : DeploymentMode) (placement : ComponentPlacement) (requirements : List RuntimeCapability) (capability : RuntimeCapability) (member : capability ∈ requirements) (required : capabilityRequiresClient capability = true) (allowed : componentRequirementsAllowed mode placement requirements = true) : placement = .client\",\n      \"children\": []\n    },\n    {\n      \"name\": \"client_component_cannot_require_server_only\",\n      \"kind\": \"Thm\",\n      \"start_line\": 337,\n      \"end_line\": 337,\n      \"type_signature\": \"(mode : DeploymentMode) (requirements : List RuntimeCapability) (allowed : componentRequirementsAllowed mode .client requirements = true) : RuntimeCapability.serverOnly ∉ requirements\",\n      \"children\": []\n    },\n    {\n      \"name\": \"core_transfer_total_within_budget\",\n      \"kind\": \"Thm\",\n      \"start_line\": 347,\n      \"end_line\": 347,\n      \"type_signature\": \"(transfer : CoreTransfer) (bounded : transfer.withinBudget) : transfer.total ≤ coreTransferBudget\",\n      \"children\": []\n    },\n    {\n      \"name\": \"category_budget_total_is_204800_bytes\",\n      \"kind\": \"Thm\",\n      \"start_line\": 355,\n      \"end_line\": 355,\n      \"type_signature\": \": 30 * kibibyte + 120 * kibibyte + 20 * kibibyte + 20 * kibibyte + 10 * kibibyte = coreTransferBudget ∧ coreTransferBudget = 204800\",\n      \"children\": []\n    },\n    {\n      \"name\": \"measured_gate_pass_iff\",\n      \"kind\": \"Thm\",\n      \"start_line\": 362,\n      \"end_line\": 362,\n      \"type_signature\": \"(gate : MeasuredGate) : evaluateMeasuredGate gate = .pass ↔ gate.measuredRevision = gate.requiredRevision ∧ ∃ value, gate.observedValue = some value ∧ value ≤ gate.upperBound\",\n      \"children\": []\n    }\n  ],\n  \"total_declarations\": null\n}"
+              "text": "{\n  \"imports\": [\n    \"Lumenia.Model\"\n  ],\n  \"declarations\": [\n    {\n      \"name\": \"Lumenia\",\n      \"kind\": \"Ns\",\n      \"start_line\": 3,\n      \"end_line\": 395,\n      \"type_signature\": null,\n      \"children\": []\n    },\n    {\n      \"name\": \"boolean_conjunction\",\n      \"kind\": \"Thm\",\n      \"start_line\": 13,\n      \"end_line\": 15,\n      \"type_signature\": \"∀ (first second : Bool),\\n        (first && second) = true ↔ first = true ∧ second = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"boolean_disjunction\",\n      \"kind\": \"Thm\",\n      \"start_line\": 17,\n      \"end_line\": 19,\n      \"type_signature\": \"∀ (first second : Bool),\\n        (first || second) = true ↔ first = true ∨ second = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"boolean_implication\",\n      \"kind\": \"Thm\",\n      \"start_line\": 21,\n      \"end_line\": 23,\n      \"type_signature\": \"∀ (required available : Bool),\\n        (!required || available) = true ↔ required = true → available = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"boolean_exclusion\",\n      \"kind\": \"Thm\",\n      \"start_line\": 25,\n      \"end_line\": 27,\n      \"type_signature\": \"∀ (first second : Bool),\\n        (!(first && second)) = true ↔ ¬(first = true ∧ second = true)\",\n      \"children\": []\n    },\n    {\n      \"name\": \"asset_checks_iff_requirements\",\n      \"kind\": \"Thm\",\n      \"start_line\": 30,\n      \"end_line\": 57,\n      \"type_signature\": \"∀ (flags : RawAssetFlags)\\n        (options : AssetPipelineOptions),\\n        assetChecks flags options = true ↔ AssetRequirementsSatisfied flags options\",\n      \"children\": []\n    },\n    {\n      \"name\": \"validate_raw_asset_accepts_iff\",\n      \"kind\": \"Thm\",\n      \"start_line\": 60,\n      \"end_line\": 73,\n      \"type_signature\": \"∀ (flags : RawAssetFlags)\\n        (options : AssetPipelineOptions),\\n        (∃ asset, validateRawAsset flags options = some asset) ↔\\n          AssetRequirementsSatisfied flags options\",\n      \"children\": []\n    },\n    {\n      \"name\": \"validate_raw_asset_rejects_iff\",\n      \"kind\": \"Thm\",\n      \"start_line\": 76,\n      \"end_line\": 87,\n      \"type_signature\": \"∀ (flags : RawAssetFlags)\\n        (options : AssetPipelineOptions),\\n        validateRawAsset flags options = none ↔ ¬AssetRequirementsSatisfied flags options\",\n      \"children\": []\n    },\n    {\n      \"name\": \"validate_raw_asset_preserves_input\",\n      \"kind\": \"Thm\",\n      \"start_line\": 90,\n      \"end_line\": 98,\n      \"type_signature\": \"∀ (flags : RawAssetFlags)\\n        (options : AssetPipelineOptions) (asset : ValidatedAsset),\\n        validateRawAsset flags options = some asset →\\n          asset.sourceFlags = flags ∧ asset.pipelineOptions = options\",\n      \"children\": []\n    },\n    {\n      \"name\": \"validate_raw_asset_sound\",\n      \"kind\": \"Thm\",\n      \"start_line\": 101,\n      \"end_line\": 105,\n      \"type_signature\": \"∀ (flags : RawAssetFlags) (options : AssetPipelineOptions)\\n        (asset : ValidatedAsset),\\n        validateRawAsset flags options = some asset → AssetRequirementsSatisfied flags options\",\n      \"children\": []\n    },\n    {\n      \"name\": \"validated_asset_satisfies_requirements\",\n      \"kind\": \"Thm\",\n      \"start_line\": 108,\n      \"end_line\": 110,\n      \"type_signature\": \"∀ (asset : ValidatedAsset),\\n        AssetRequirementsSatisfied asset.sourceFlags asset.pipelineOptions\",\n      \"children\": []\n    },\n    {\n      \"name\": \"meshopt_variants_are_exclusive\",\n      \"kind\": \"Thm\",\n      \"start_line\": 113,\n      \"end_line\": 117,\n      \"type_signature\": \"∀ (flags : RawAssetFlags)\\n        (options : AssetPipelineOptions) (asset : ValidatedAsset),\\n        validateRawAsset flags options = some asset →\\n          ¬(flags.usesExtensionMeshopt = true ∧ flags.usesKhronosMeshopt = true)\",\n      \"children\": []\n    },\n    {\n      \"name\": \"extension_meshopt_requires_decoder\",\n      \"kind\": \"Thm\",\n      \"start_line\": 120,\n      \"end_line\": 125,\n      \"type_signature\": \"∀ (flags : RawAssetFlags)\\n        (options : AssetPipelineOptions) (asset : ValidatedAsset),\\n        validateRawAsset flags options = some asset →\\n          flags.usesExtensionMeshopt = true → options.hasMeshoptDecoder = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"khronos_meshopt_requires_decoder\",\n      \"kind\": \"Thm\",\n      \"start_line\": 128,\n      \"end_line\": 133,\n      \"type_signature\": \"∀ (flags : RawAssetFlags)\\n        (options : AssetPipelineOptions) (asset : ValidatedAsset),\\n        validateRawAsset flags options = some asset →\\n          flags.usesKhronosMeshopt = true → options.hasMeshoptDecoder = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"ktx2_requires_loader\",\n      \"kind\": \"Thm\",\n      \"start_line\": 136,\n      \"end_line\": 141,\n      \"type_signature\": \"∀ (flags : RawAssetFlags) (options : AssetPipelineOptions)\\n        (asset : ValidatedAsset),\\n        validateRawAsset flags options = some asset →\\n          flags.usesKtx2 = true → options.hasKtx2Loader = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"draco_requires_loader\",\n      \"kind\": \"Thm\",\n      \"start_line\": 144,\n      \"end_line\": 150,\n      \"type_signature\": \"∀ (flags : RawAssetFlags) (options : AssetPipelineOptions)\\n        (asset : ValidatedAsset),\\n        validateRawAsset flags options = some asset →\\n          (selectAssetLoaders flags).dracoEnabled = true →\\n            flags.usesDraco = true ∧ options.hasDracoLoader = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"draco_is_enabled_iff_explicit\",\n      \"kind\": \"Thm\",\n      \"start_line\": 153,\n      \"end_line\": 155,\n      \"type_signature\": \"∀ (flags : RawAssetFlags),\\n        (selectAssetLoaders flags).dracoEnabled = true ↔ flags.usesDraco = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"named_nodes_require_preservation\",\n      \"kind\": \"Thm\",\n      \"start_line\": 158,\n      \"end_line\": 163,\n      \"type_signature\": \"∀ (flags : RawAssetFlags)\\n        (options : AssetPipelineOptions) (asset : ValidatedAsset),\\n        validateRawAsset flags options = some asset →\\n          flags.requiresNamedNodes = true → options.keepsNamedNodes = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"extras_require_preservation\",\n      \"kind\": \"Thm\",\n      \"start_line\": 166,\n      \"end_line\": 171,\n      \"type_signature\": \"∀ (flags : RawAssetFlags) (options : AssetPipelineOptions)\\n        (asset : ValidatedAsset),\\n        validateRawAsset flags options = some asset →\\n          flags.requiresExtras = true → options.keepsExtras = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"both_meshopt_flags_reject\",\n      \"kind\": \"Thm\",\n      \"start_line\": 174,\n      \"end_line\": 180,\n      \"type_signature\": \"∀ (flags : RawAssetFlags) (options : AssetPipelineOptions),\\n        flags.usesExtensionMeshopt = true →\\n          flags.usesKhronosMeshopt = true → validateRawAsset flags options = none\",\n      \"children\": []\n    },\n    {\n      \"name\": \"missing_meshopt_decoder_rejects\",\n      \"kind\": \"Thm\",\n      \"start_line\": 183,\n      \"end_line\": 191,\n      \"type_signature\": \"∀ (flags : RawAssetFlags)\\n        (options : AssetPipelineOptions),\\n        flags.usesExtensionMeshopt = true ∨ flags.usesKhronosMeshopt = true →\\n          options.hasMeshoptDecoder = false → validateRawAsset flags options = none\",\n      \"children\": []\n    },\n    {\n      \"name\": \"shipped_requires_validation\",\n      \"kind\": \"Thm\",\n      \"start_line\": 194,\n      \"end_line\": 196,\n      \"type_signature\": \"∀ (stage : ArtifactStage) (event : ArtifactEvent),\\n        transition stage event = some ArtifactStage.shipped ↔\\n          stage = ArtifactStage.validated ∧ event = ArtifactEvent.ship\",\n      \"children\": []\n    },\n    {\n      \"name\": \"rejected_never_reaches_shipped\",\n      \"kind\": \"Thm\",\n      \"start_line\": 198,\n      \"end_line\": 203,\n      \"type_signature\": \"∀ (events : List ArtifactEvent),\\n        runTransitions ArtifactStage.rejected events ≠ some ArtifactStage.shipped\",\n      \"children\": []\n    },\n    {\n      \"name\": \"shipped_trace_is_empty\",\n      \"kind\": \"Thm\",\n      \"start_line\": 205,\n      \"end_line\": 214,\n      \"type_signature\": \"∀ (events : List ArtifactEvent),\\n        runTransitions ArtifactStage.shipped events = some ArtifactStage.shipped ↔ events = []\",\n      \"children\": []\n    },\n    {\n      \"name\": \"validated_trace_is_ship\",\n      \"kind\": \"Thm\",\n      \"start_line\": 216,\n      \"end_line\": 233,\n      \"type_signature\": \"∀ (events : List ArtifactEvent),\\n        runTransitions ArtifactStage.validated events = some ArtifactStage.shipped ↔\\n          events = [ArtifactEvent.ship]\",\n      \"children\": []\n    },\n    {\n      \"name\": \"optimized_trace_is_validate_ship\",\n      \"kind\": \"Thm\",\n      \"start_line\": 235,\n      \"end_line\": 252,\n      \"type_signature\": \"∀ (events : List ArtifactEvent),\\n        runTransitions ArtifactStage.optimized events = some ArtifactStage.shipped ↔\\n          events = [ArtifactEvent.validate, ArtifactEvent.ship]\",\n      \"children\": []\n    },\n    {\n      \"name\": \"shipment_trace_is_exactly_optimize_validate_ship\",\n      \"kind\": \"Thm\",\n      \"start_line\": 255,\n      \"end_line\": 273,\n      \"type_signature\": \"∀ (events : List ArtifactEvent),\\n        runTransitions ArtifactStage.source events = some ArtifactStage.shipped ↔\\n          events = [ArtifactEvent.optimize, ArtifactEvent.validate, ArtifactEvent.ship]\",\n      \"children\": []\n    },\n    {\n      \"name\": \"shipped_history_requires_asset_requirements\",\n      \"kind\": \"Thm\",\n      \"start_line\": 276,\n      \"end_line\": 283,\n      \"type_signature\": \"∀ {identity : ArtifactIdentity}\\n        {flags : RawAssetFlags} {options : AssetPipelineOptions}\\n        (history : ArtifactHistory identity flags options ArtifactStage.shipped),\\n        AssetRequirementsSatisfied flags options\",\n      \"children\": []\n    },\n    {\n      \"name\": \"invalid_asset_has_no_shipped_history\",\n      \"kind\": \"Thm\",\n      \"start_line\": 286,\n      \"end_line\": 291,\n      \"type_signature\": \"∀ {identity : ArtifactIdentity}\\n        {flags : RawAssetFlags} {options : AssetPipelineOptions},\\n        ¬AssetRequirementsSatisfied flags options →\\n          ¬Nonempty (ArtifactHistory identity flags options ArtifactStage.shipped)\",\n      \"children\": []\n    },\n    {\n      \"name\": \"browser_capability_requires_client_component\",\n      \"kind\": \"Thm\",\n      \"start_line\": 294,\n      \"end_line\": 300,\n      \"type_signature\": \"∀ (capability : RuntimeCapability)\\n        (placement : ComponentPlacement),\\n        capabilityRequiresClient capability = true →\\n          componentPlacementAllowed placement capability = true →\\n            placement = ComponentPlacement.client\",\n      \"children\": []\n    },\n    {\n      \"name\": \"all_checked_at_member\",\n      \"kind\": \"Thm\",\n      \"start_line\": 302,\n      \"end_line\": 312,\n      \"type_signature\": \"∀ {Element : Type} (predicate : Element → Bool)\\n        {values : List Element} {value : Element},\\n        values.all predicate = true → value ∈ values → predicate value = true\",\n      \"children\": []\n    },\n    {\n      \"name\": \"static_export_cannot_require_server_only\",\n      \"kind\": \"Thm\",\n      \"start_line\": 315,\n      \"end_line\": 322,\n      \"type_signature\": \"∀ (placement : ComponentPlacement)\\n        (requirements : List RuntimeCapability),\\n        componentRequirementsAllowed DeploymentMode.staticExport placement requirements = true →\\n          ¬RuntimeCapability.serverOnly ∈ requirements\",\n      \"children\": []\n    },\n    {\n      \"name\": \"accepted_component_places_browser_requirements_on_client\",\n      \"kind\": \"Thm\",\n      \"start_line\": 325,\n      \"end_line\": 334,\n      \"type_signature\": \"∀ (mode : DeploymentMode)\\n        (placement : ComponentPlacement) (requirements : List RuntimeCapability) (capability : RuntimeCapability),\\n        capability ∈ requirements →\\n          capabilityRequiresClient capability = true →\\n            componentRequirementsAllowed mode placement requirements = true →\\n              placement = ComponentPlacement.client\",\n      \"children\": []\n    },\n    {\n      \"name\": \"client_component_cannot_require_server_only\",\n      \"kind\": \"Thm\",\n      \"start_line\": 337,\n      \"end_line\": 344,\n      \"type_signature\": \"∀ (mode : DeploymentMode)\\n        (requirements : List RuntimeCapability),\\n        componentRequirementsAllowed mode ComponentPlacement.client requirements = true →\\n          ¬RuntimeCapability.serverOnly ∈ requirements\",\n      \"children\": []\n    },\n    {\n      \"name\": \"core_transfer_total_within_budget\",\n      \"kind\": \"Thm\",\n      \"start_line\": 347,\n      \"end_line\": 352,\n      \"type_signature\": \"∀ (transfer : CoreTransfer),\\n        transfer.withinBudget → transfer.total ≤ coreTransferBudget\",\n      \"children\": []\n    },\n    {\n      \"name\": \"category_budget_total_is_204800_bytes\",\n      \"kind\": \"Thm\",\n      \"start_line\": 355,\n      \"end_line\": 359,\n      \"type_signature\": \"30 * kibibyte + 120 * kibibyte + 20 * kibibyte +\\n              20 * kibibyte +\\n            10 * kibibyte =\\n          coreTransferBudget ∧\\n        coreTransferBudget = 204800\",\n      \"children\": []\n    },\n    {\n      \"name\": \"measured_gate_pass_iff\",\n      \"kind\": \"Thm\",\n      \"start_line\": 362,\n      \"end_line\": 393,\n      \"type_signature\": \"∀ (gate : MeasuredGate),\\n        evaluateMeasuredGate gate = VerificationStatus.pass ↔\\n          gate.measuredRevision = gate.requiredRevision ∧\\n            ∃ value, gate.observedValue = some value ∧ value ≤ gate.upperBound\",\n      \"children\": []\n    },\n    {\n      \"name\": \"asset_checks_iff_requirements\",\n      \"kind\": \"Thm\",\n      \"start_line\": 30,\n      \"end_line\": 30,\n      \"type_signature\": \"(flags : RawAssetFlags) (options : AssetPipelineOptions) : assetChecks flags options = true ↔ AssetRequirementsSatisfied flags options\",\n      \"children\": []\n    },\n    {\n      \"name\": \"validate_raw_asset_accepts_iff\",\n      \"kind\": \"Thm\",\n      \"start_line\": 60,\n      \"end_line\": 60,\n      \"type_signature\": \"(flags : RawAssetFlags) (options : AssetPipelineOptions) : (∃ asset, validateRawAsset flags options = some asset) ↔ AssetRequirementsSatisfied flags options\",\n      \"children\": []\n    },\n    {\n      \"name\": \"validate_raw_asset_rejects_iff\",\n      \"kind\": \"Thm\",\n      \"start_line\": 76,\n      \"end_line\": 76,\n      \"type_signature\": \"(flags : RawAssetFlags) (options : AssetPipelineOptions) : validateRawAsset flags options = none ↔ ¬ AssetRequirementsSatisfied flags options\",\n      \"children\": []\n    }\n  ],\n  \"total_declarations\": 64\n}"
             }
           ],
           "structuredContent": {
@@ -1792,201 +2299,46 @@
                 "end_line": 76,
                 "type_signature": "(flags : RawAssetFlags) (options : AssetPipelineOptions) : validateRawAsset flags options = none ↔ ¬ AssetRequirementsSatisfied flags options",
                 "children": []
-              },
-              {
-                "name": "validate_raw_asset_preserves_input",
-                "kind": "Thm",
-                "start_line": 90,
-                "end_line": 90,
-                "type_signature": "(flags : RawAssetFlags) (options : AssetPipelineOptions) (asset : ValidatedAsset) (accepted : validateRawAsset flags options = some asset) : asset.sourceFlags = flags ∧ asset.pipelineOptions = options",
-                "children": []
-              },
-              {
-                "name": "validate_raw_asset_sound",
-                "kind": "Thm",
-                "start_line": 101,
-                "end_line": 101,
-                "type_signature": "(flags : RawAssetFlags) (options : AssetPipelineOptions) (asset : ValidatedAsset) (accepted : validateRawAsset flags options = some asset) : AssetRequirementsSatisfied flags options",
-                "children": []
-              },
-              {
-                "name": "validated_asset_satisfies_requirements",
-                "kind": "Thm",
-                "start_line": 108,
-                "end_line": 108,
-                "type_signature": "(asset : ValidatedAsset) : AssetRequirementsSatisfied asset.sourceFlags asset.pipelineOptions",
-                "children": []
-              },
-              {
-                "name": "meshopt_variants_are_exclusive",
-                "kind": "Thm",
-                "start_line": 113,
-                "end_line": 113,
-                "type_signature": "(flags : RawAssetFlags) (options : AssetPipelineOptions) (asset : ValidatedAsset) (accepted : validateRawAsset flags options = some asset) : ¬ (flags.usesExtensionMeshopt = true ∧ flags.usesKhronosMeshopt = true)",
-                "children": []
-              },
-              {
-                "name": "extension_meshopt_requires_decoder",
-                "kind": "Thm",
-                "start_line": 120,
-                "end_line": 120,
-                "type_signature": "(flags : RawAssetFlags) (options : AssetPipelineOptions) (asset : ValidatedAsset) (accepted : validateRawAsset flags options = some asset) (required : flags.usesExtensionMeshopt = true) : options.hasMeshoptDecoder = true",
-                "children": []
-              },
-              {
-                "name": "khronos_meshopt_requires_decoder",
-                "kind": "Thm",
-                "start_line": 128,
-                "end_line": 128,
-                "type_signature": "(flags : RawAssetFlags) (options : AssetPipelineOptions) (asset : ValidatedAsset) (accepted : validateRawAsset flags options = some asset) (required : flags.usesKhronosMeshopt = true) : options.hasMeshoptDecoder = true",
-                "children": []
-              },
-              {
-                "name": "ktx2_requires_loader",
-                "kind": "Thm",
-                "start_line": 136,
-                "end_line": 136,
-                "type_signature": "(flags : RawAssetFlags) (options : AssetPipelineOptions) (asset : ValidatedAsset) (accepted : validateRawAsset flags options = some asset) (required : flags.usesKtx2 = true) : options.hasKtx2Loader = true",
-                "children": []
-              },
-              {
-                "name": "draco_requires_loader",
-                "kind": "Thm",
-                "start_line": 144,
-                "end_line": 144,
-                "type_signature": "(flags : RawAssetFlags) (options : AssetPipelineOptions) (asset : ValidatedAsset) (accepted : validateRawAsset flags options = some asset) (required : (selectAssetLoaders flags).dracoEnabled = true) : flags.usesDraco = true ∧ options.hasDracoLoader = true",
-                "children": []
-              },
-              {
-                "name": "draco_is_enabled_iff_explicit",
-                "kind": "Thm",
-                "start_line": 153,
-                "end_line": 153,
-                "type_signature": "(flags : RawAssetFlags) : (selectAssetLoaders flags).dracoEnabled = true ↔ flags.usesDraco = true",
-                "children": []
-              },
-              {
-                "name": "named_nodes_require_preservation",
-                "kind": "Thm",
-                "start_line": 158,
-                "end_line": 158,
-                "type_signature": "(flags : RawAssetFlags) (options : AssetPipelineOptions) (asset : ValidatedAsset) (accepted : validateRawAsset flags options = some asset) (required : flags.requiresNamedNodes = true) : options.keepsNamedNodes = true",
-                "children": []
-              },
-              {
-                "name": "extras_require_preservation",
-                "kind": "Thm",
-                "start_line": 166,
-                "end_line": 166,
-                "type_signature": "(flags : RawAssetFlags) (options : AssetPipelineOptions) (asset : ValidatedAsset) (accepted : validateRawAsset flags options = some asset) (required : flags.requiresExtras = true) : options.keepsExtras = true",
-                "children": []
-              },
-              {
-                "name": "both_meshopt_flags_reject",
-                "kind": "Thm",
-                "start_line": 174,
-                "end_line": 174,
-                "type_signature": "(flags : RawAssetFlags) (options : AssetPipelineOptions) (extension : flags.usesExtensionMeshopt = true) (khronos : flags.usesKhronosMeshopt = true) : validateRawAsset flags options = none",
-                "children": []
-              },
-              {
-                "name": "missing_meshopt_decoder_rejects",
-                "kind": "Thm",
-                "start_line": 183,
-                "end_line": 183,
-                "type_signature": "(flags : RawAssetFlags) (options : AssetPipelineOptions) (required : flags.usesExtensionMeshopt = true ∨ flags.usesKhronosMeshopt = true) (missing : options.hasMeshoptDecoder = false) : validateRawAsset flags options = none",
-                "children": []
-              },
-              {
-                "name": "shipped_requires_validation",
-                "kind": "Thm",
-                "start_line": 194,
-                "end_line": 194,
-                "type_signature": "(stage : ArtifactStage) (event : ArtifactEvent) : transition stage event = some .shipped ↔ stage = .validated ∧ event = .ship",
-                "children": []
-              },
-              {
-                "name": "shipment_trace_is_exactly_optimize_validate_ship",
-                "kind": "Thm",
-                "start_line": 255,
-                "end_line": 255,
-                "type_signature": "(events : List ArtifactEvent) : runTransitions .source events = some .shipped ↔ events = [.optimize, .validate, .ship]",
-                "children": []
-              },
-              {
-                "name": "shipped_history_requires_asset_requirements",
-                "kind": "Thm",
-                "start_line": 276,
-                "end_line": 276,
-                "type_signature": "{identity : ArtifactIdentity} {flags : RawAssetFlags} {options : AssetPipelineOptions} (history : ArtifactHistory identity flags options .shipped) : AssetRequirementsSatisfied flags options",
-                "children": []
-              },
-              {
-                "name": "invalid_asset_has_no_shipped_history",
-                "kind": "Thm",
-                "start_line": 286,
-                "end_line": 286,
-                "type_signature": "{identity : ArtifactIdentity} {flags : RawAssetFlags} {options : AssetPipelineOptions} (invalid : ¬ AssetRequirementsSatisfied flags options) : ¬ Nonempty (ArtifactHistory identity flags options .shipped)",
-                "children": []
-              },
-              {
-                "name": "browser_capability_requires_client_component",
-                "kind": "Thm",
-                "start_line": 294,
-                "end_line": 294,
-                "type_signature": "(capability : RuntimeCapability) (placement : ComponentPlacement) (required : capabilityRequiresClient capability = true) (allowed : componentPlacementAllowed placement capability = true) : placement = .client",
-                "children": []
-              },
-              {
-                "name": "static_export_cannot_require_server_only",
-                "kind": "Thm",
-                "start_line": 315,
-                "end_line": 315,
-                "type_signature": "(placement : ComponentPlacement) (requirements : List RuntimeCapability) (allowed : componentRequirementsAllowed .staticExport placement requirements = true) : RuntimeCapability.serverOnly ∉ requirements",
-                "children": []
-              },
-              {
-                "name": "accepted_component_places_browser_requirements_on_client",
-                "kind": "Thm",
-                "start_line": 325,
-                "end_line": 325,
-                "type_signature": "(mode : DeploymentMode) (placement : ComponentPlacement) (requirements : List RuntimeCapability) (capability : RuntimeCapability) (member : capability ∈ requirements) (required : capabilityRequiresClient capability = true) (allowed : componentRequirementsAllowed mode placement requirements = true) : placement = .client",
-                "children": []
-              },
-              {
-                "name": "client_component_cannot_require_server_only",
-                "kind": "Thm",
-                "start_line": 337,
-                "end_line": 337,
-                "type_signature": "(mode : DeploymentMode) (requirements : List RuntimeCapability) (allowed : componentRequirementsAllowed mode .client requirements = true) : RuntimeCapability.serverOnly ∉ requirements",
-                "children": []
-              },
-              {
-                "name": "core_transfer_total_within_budget",
-                "kind": "Thm",
-                "start_line": 347,
-                "end_line": 347,
-                "type_signature": "(transfer : CoreTransfer) (bounded : transfer.withinBudget) : transfer.total ≤ coreTransferBudget",
-                "children": []
-              },
-              {
-                "name": "category_budget_total_is_204800_bytes",
-                "kind": "Thm",
-                "start_line": 355,
-                "end_line": 355,
-                "type_signature": ": 30 * kibibyte + 120 * kibibyte + 20 * kibibyte + 20 * kibibyte + 10 * kibibyte = coreTransferBudget ∧ coreTransferBudget = 204800",
-                "children": []
-              },
-              {
-                "name": "measured_gate_pass_iff",
-                "kind": "Thm",
-                "start_line": 362,
-                "end_line": 362,
-                "type_signature": "(gate : MeasuredGate) : evaluateMeasuredGate gate = .pass ↔ gate.measuredRevision = gate.requiredRevision ∧ ∃ value, gate.observedValue = some value ∧ value ≤ gate.upperBound",
-                "children": []
               }
             ],
-            "total_declarations": null
+            "total_declarations": 64
+          },
+          "isError": false
+        }
+      },
+      {
+        "tool": "lean_hover_info",
+        "target": "Lumenia.asset_checks_iff_requirements",
+        "response": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"symbol\": \"asset_checks_iff_requirements\",\n  \"info\": \"Lumenia.asset_checks_iff_requirements (flags : RawAssetFlags) (options : AssetPipelineOptions) :\\n  assetChecks flags options = true ↔ AssetRequirementsSatisfied flags options\",\n  \"diagnostics\": []\n}"
+            }
+          ],
+          "structuredContent": {
+            "symbol": "asset_checks_iff_requirements",
+            "info": "Lumenia.asset_checks_iff_requirements (flags : RawAssetFlags) (options : AssetPipelineOptions) :\n  assetChecks flags options = true ↔ AssetRequirementsSatisfied flags options",
+            "diagnostics": []
+          },
+          "isError": false
+        }
+      },
+      {
+        "tool": "lean_goal",
+        "target": "Lumenia.asset_checks_iff_requirements",
+        "response": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"line_context\": \"      ⟨firstFive, (boolean_implication _ _).mpr extras⟩\",\n  \"goals\": null,\n  \"goals_before\": [],\n  \"goals_after\": []\n}"
+            }
+          ],
+          "structuredContent": {
+            "line_context": "      ⟨firstFive, (boolean_implication _ _).mpr extras⟩",
+            "goals": null,
+            "goals_before": [],
+            "goals_after": []
           },
           "isError": false
         }
@@ -1994,11 +2346,6 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.asset_checks_iff_requirements",
-        "args": {
-          "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/Proofs.lean",
-          "theorem_name": "Lumenia.asset_checks_iff_requirements",
-          "scan_source": true
-        },
         "response": {
           "content": [
             {
@@ -2016,11 +2363,6 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.validate_raw_asset_accepts_iff",
-        "args": {
-          "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/Proofs.lean",
-          "theorem_name": "Lumenia.validate_raw_asset_accepts_iff",
-          "scan_source": true
-        },
         "response": {
           "content": [
             {
@@ -2038,11 +2380,6 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.validate_raw_asset_rejects_iff",
-        "args": {
-          "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/Proofs.lean",
-          "theorem_name": "Lumenia.validate_raw_asset_rejects_iff",
-          "scan_source": true
-        },
         "response": {
           "content": [
             {
@@ -2060,11 +2397,6 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.validate_raw_asset_preserves_input",
-        "args": {
-          "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/Proofs.lean",
-          "theorem_name": "Lumenia.validate_raw_asset_preserves_input",
-          "scan_source": true
-        },
         "response": {
           "content": [
             {
@@ -2082,11 +2414,6 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.validate_raw_asset_sound",
-        "args": {
-          "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/Proofs.lean",
-          "theorem_name": "Lumenia.validate_raw_asset_sound",
-          "scan_source": true
-        },
         "response": {
           "content": [
             {
@@ -2104,11 +2431,6 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.validated_asset_satisfies_requirements",
-        "args": {
-          "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/Proofs.lean",
-          "theorem_name": "Lumenia.validated_asset_satisfies_requirements",
-          "scan_source": true
-        },
         "response": {
           "content": [
             {
@@ -2126,11 +2448,6 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.meshopt_variants_are_exclusive",
-        "args": {
-          "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/Proofs.lean",
-          "theorem_name": "Lumenia.meshopt_variants_are_exclusive",
-          "scan_source": true
-        },
         "response": {
           "content": [
             {
@@ -2148,11 +2465,6 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.extension_meshopt_requires_decoder",
-        "args": {
-          "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/Proofs.lean",
-          "theorem_name": "Lumenia.extension_meshopt_requires_decoder",
-          "scan_source": true
-        },
         "response": {
           "content": [
             {
@@ -2170,11 +2482,6 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.khronos_meshopt_requires_decoder",
-        "args": {
-          "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/Proofs.lean",
-          "theorem_name": "Lumenia.khronos_meshopt_requires_decoder",
-          "scan_source": true
-        },
         "response": {
           "content": [
             {
@@ -2192,11 +2499,6 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.ktx2_requires_loader",
-        "args": {
-          "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/Proofs.lean",
-          "theorem_name": "Lumenia.ktx2_requires_loader",
-          "scan_source": true
-        },
         "response": {
           "content": [
             {
@@ -2214,11 +2516,6 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.draco_requires_loader",
-        "args": {
-          "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/Proofs.lean",
-          "theorem_name": "Lumenia.draco_requires_loader",
-          "scan_source": true
-        },
         "response": {
           "content": [
             {
@@ -2236,11 +2533,6 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.draco_is_enabled_iff_explicit",
-        "args": {
-          "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/Proofs.lean",
-          "theorem_name": "Lumenia.draco_is_enabled_iff_explicit",
-          "scan_source": true
-        },
         "response": {
           "content": [
             {
@@ -2258,11 +2550,6 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.named_nodes_require_preservation",
-        "args": {
-          "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/Proofs.lean",
-          "theorem_name": "Lumenia.named_nodes_require_preservation",
-          "scan_source": true
-        },
         "response": {
           "content": [
             {
@@ -2280,11 +2567,6 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.extras_require_preservation",
-        "args": {
-          "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/Proofs.lean",
-          "theorem_name": "Lumenia.extras_require_preservation",
-          "scan_source": true
-        },
         "response": {
           "content": [
             {
@@ -2302,11 +2584,6 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.both_meshopt_flags_reject",
-        "args": {
-          "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/Proofs.lean",
-          "theorem_name": "Lumenia.both_meshopt_flags_reject",
-          "scan_source": true
-        },
         "response": {
           "content": [
             {
@@ -2324,11 +2601,6 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.missing_meshopt_decoder_rejects",
-        "args": {
-          "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/Proofs.lean",
-          "theorem_name": "Lumenia.missing_meshopt_decoder_rejects",
-          "scan_source": true
-        },
         "response": {
           "content": [
             {
@@ -2346,11 +2618,6 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.shipped_requires_validation",
-        "args": {
-          "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/Proofs.lean",
-          "theorem_name": "Lumenia.shipped_requires_validation",
-          "scan_source": true
-        },
         "response": {
           "content": [
             {
@@ -2368,11 +2635,6 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.shipment_trace_is_exactly_optimize_validate_ship",
-        "args": {
-          "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/Proofs.lean",
-          "theorem_name": "Lumenia.shipment_trace_is_exactly_optimize_validate_ship",
-          "scan_source": true
-        },
         "response": {
           "content": [
             {
@@ -2390,11 +2652,6 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.shipped_history_requires_asset_requirements",
-        "args": {
-          "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/Proofs.lean",
-          "theorem_name": "Lumenia.shipped_history_requires_asset_requirements",
-          "scan_source": true
-        },
         "response": {
           "content": [
             {
@@ -2412,11 +2669,6 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.invalid_asset_has_no_shipped_history",
-        "args": {
-          "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/Proofs.lean",
-          "theorem_name": "Lumenia.invalid_asset_has_no_shipped_history",
-          "scan_source": true
-        },
         "response": {
           "content": [
             {
@@ -2434,11 +2686,6 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.browser_capability_requires_client_component",
-        "args": {
-          "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/Proofs.lean",
-          "theorem_name": "Lumenia.browser_capability_requires_client_component",
-          "scan_source": true
-        },
         "response": {
           "content": [
             {
@@ -2456,11 +2703,6 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.static_export_cannot_require_server_only",
-        "args": {
-          "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/Proofs.lean",
-          "theorem_name": "Lumenia.static_export_cannot_require_server_only",
-          "scan_source": true
-        },
         "response": {
           "content": [
             {
@@ -2478,11 +2720,6 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.accepted_component_places_browser_requirements_on_client",
-        "args": {
-          "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/Proofs.lean",
-          "theorem_name": "Lumenia.accepted_component_places_browser_requirements_on_client",
-          "scan_source": true
-        },
         "response": {
           "content": [
             {
@@ -2500,11 +2737,6 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.client_component_cannot_require_server_only",
-        "args": {
-          "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/Proofs.lean",
-          "theorem_name": "Lumenia.client_component_cannot_require_server_only",
-          "scan_source": true
-        },
         "response": {
           "content": [
             {
@@ -2522,11 +2754,6 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.core_transfer_total_within_budget",
-        "args": {
-          "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/Proofs.lean",
-          "theorem_name": "Lumenia.core_transfer_total_within_budget",
-          "scan_source": true
-        },
         "response": {
           "content": [
             {
@@ -2544,11 +2771,6 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.category_budget_total_is_204800_bytes",
-        "args": {
-          "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/Proofs.lean",
-          "theorem_name": "Lumenia.category_budget_total_is_204800_bytes",
-          "scan_source": true
-        },
         "response": {
           "content": [
             {
@@ -2566,11 +2788,6 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.measured_gate_pass_iff",
-        "args": {
-          "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/Proofs.lean",
-          "theorem_name": "Lumenia.measured_gate_pass_iff",
-          "scan_source": true
-        },
         "response": {
           "content": [
             {
@@ -2584,6 +2801,62 @@
           },
           "isError": false
         }
+      }
+    ],
+    "verifiedInputScope": "Root Lean modules, toolchain, Lake configuration and theorem registry; byte-identical before and after the checks. UI and image publication changes are independently tested.",
+    "checkStartedAtSourceRevision": "sha256:abbc6a923a028deddb37b5bcebe433e1c9ae170ace10016800cb23ad2dfb99f9",
+    "verifiedInputs": [
+      {
+        "path": "contracts/claims.json",
+        "sha256": "2250c5046c0a3c1a0836267d3b4823b255cce0303b25ff3fa76c8fe9060da087"
+      },
+      {
+        "path": "formal/Lumenia.lean",
+        "sha256": "0f9ee325f4c9bf73d42edfeb1b059cb4b66de230ba6983256fbe46bcb26fd779"
+      },
+      {
+        "path": "formal/Lumenia/AxiomAudit.lean",
+        "sha256": "a2ac9deab960ba87a619b4d76866e2dea1699c610d049ba0e54b0379eb8daf00"
+      },
+      {
+        "path": "formal/Lumenia/Boundary.lean",
+        "sha256": "41be9e4293f8f54e671150aa2f1afadc27d0393f865af9ebdbdcb6bb8ea363c3"
+      },
+      {
+        "path": "formal/Lumenia/CosmicExhibition.lean",
+        "sha256": "59397a93a57427b38da7a09b275d5164ba64a58136ee7c53d39abcbbfb16aeda"
+      },
+      {
+        "path": "formal/Lumenia/CosmicExhibitionAudit.lean",
+        "sha256": "cc87c7c5abcb146d49ea79e7c638ca3a86911efccb4f66051b0b3c08416650bd"
+      },
+      {
+        "path": "formal/Lumenia/Model.lean",
+        "sha256": "0f528929e0243d7f922a9d7f9603eed43e8c0e13c6f44a86922f06dad82a0b06"
+      },
+      {
+        "path": "formal/Lumenia/Proofs.lean",
+        "sha256": "dc185dc0b11ffc1471061e7301249def8111ef69707876e0cf4ebb3ea05afb04"
+      },
+      {
+        "path": "formal/Lumenia/Tests.lean",
+        "sha256": "329500e65c6d3c601e25d95d91de28d904ecf197b8b5a3ec1e95753b62a52995"
+      },
+      {
+        "path": "formal/Main.lean",
+        "sha256": "8b3eeea5ac3bcfb89963c5064a1307da6cb975ca5a89eb109319f2bce377e715"
+      },
+      {
+        "path": "lake-manifest.json",
+        "sha256": "4273a8dd6528dfcfc627997ee3f06313b97d795918cfc09b5ae65821723e54fb"
+      },
+      {
+        "path": "lakefile.toml",
+        "sha256": "450866fae5ba7ab3c9d0b025436f30ea29e39124837b035b428bd40233048c62"
+      },
+      {
+        "path": "lean-toolchain",
+        "sha256": "db7bb24b756d745bbde83fe92718b51bd3625dae3701ba0f598d0eedcd3f3028"
       }
     ]
   }
