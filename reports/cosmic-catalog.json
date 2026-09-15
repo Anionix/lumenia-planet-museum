@@ -1,0 +1,31 @@
+{
+  "executionIdentifier": "01a0a46e-0ffd-7668-b9af-252e996b2118",
+  "recordedAt": "2026-09-15T09:37:51.655Z",
+  "people": 15,
+  "semanticCoordinates": 12,
+  "unspecifiedDates": [
+    "Charles Rennie Mackintosh"
+  ],
+  "datedExhibitions": [
+    "Rei Kawakubo"
+  ],
+  "physicsEnabled": false,
+  "sourcesPreserved": true,
+  "outputs": [
+    {
+      "path": "web/artwork/cosmic-catalog.generated.mjs",
+      "sha256": "0195657a356098c9fa7fdb1e0a54a3ab77047b099854efd8c88651cda6c2df8e",
+      "bytes": 24369
+    },
+    {
+      "path": "web/artwork/cosmic-recipes.generated.mjs",
+      "sha256": "98110a1b10322443d73a3eb6d6496bcfcb91d1c2df4397427c6122041cb7aafc",
+      "bytes": 30729
+    },
+    {
+      "path": "planetarium/generated/cosmic-exhibition.jsonl",
+      "sha256": "93e539474a73190a29b73c95553e5f78c06ee53838812051cb232566fb8523c3",
+      "bytes": 56469
+    }
+  ]
+}

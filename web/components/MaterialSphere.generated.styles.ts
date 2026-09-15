@@ -1,7 +1,7 @@
 // llm machine contract
 // artifact UUIDv5: e67bec4e-cc81-54b8-8de8-e04f06503867
-// execution UUIDv7: 01a09acc-4808-7629-b5d4-a4839d16870c
-// source revision: sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736
+// execution UUIDv7: 01a0a48b-cf79-770e-a05f-eee1d6a3021e
+// source revision: sha256:9478a5e17024ef21aaf5239ea2f13ffac7885ead15d95ef4607e5be55fd781bd
 // state: generated static schemas; transition: checked profiles -> Plumeria build -> browser gate required
 import * as css from '@plumeria/core';
 

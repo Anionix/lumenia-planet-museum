@@ -1,0 +1,36 @@
+{
+  "report_type": "threejs_reference_browser_review",
+  "record_id": "01a0a45e-5fcd-7565-8303-92564f4e35c1",
+  "observed_at": "2026-09-15T09:20:43.469Z",
+  "export_execution_identifier": "01a0a45b-fc7b-77a1-a9b9-dc3d9aa798e0",
+  "tool": "mcp__cua_repl.js",
+  "url": "http://127.0.0.1:4187/",
+  "result": "basic_rendering_passed",
+  "observations": {
+    "state": "ready",
+    "rendered_meshes": 12,
+    "draw_calls": 12,
+    "triangles": 26496,
+    "gallery_view": "passed",
+    "coordinate_view": "passed",
+    "individual_focus": "Alphonse Mucha selected and displayed",
+    "returned_to_gallery": true,
+    "physics_state": "disabled",
+    "console_errors_and_warnings": []
+  },
+  "local_test_result": {
+    "test_file": "tests/threejs-reference-adapter.test.mjs",
+    "passed": 10,
+    "failed": 0
+  },
+  "asset_sha256": {
+    "planetarium/illustration-design-reference.jsonl": "5ff2c20d1969a6f83edf2520e3a10853e500e12bd87b15de85b0dc7b0f0eab9c",
+    "planetarium/generated/render-recipes.jsonl": "04d9c378ef78395511fc2ee3eeed4555b501e017dcfebb3cabe301c9677c0b2b",
+    "planetarium/generated/threejs-reference-scene.json": "79c52a2357d5c5f0c61f3754e4e0cb50bd340f5b1d9688f3f6a330cbc37844b4",
+    "planetarium/examples/threejs-reference.html": "318d06dc77af8c94ad3bf22b244f55ef485b8437cb1b4a379e25093deb2ba892",
+    "planetarium/lib/threejs-reference-adapter.mjs": "99e2747a30820f9907a4a685f185dc7edfc3ae6fd5062a1e721bd1904d835941",
+    "planetarium/lib/reference-physics-contract.mjs": "4d1495820c1b9dcf334accee1892edd4f0ead85f5575e7c91935518903b435ba",
+    "tests/threejs-reference-adapter.test.mjs": "bddd1df4330aae164ebe89414bbf9f402d89214fa36d61079cf1b839b2c883b1"
+  },
+  "scope": "Desktop smoke review and data-boundary tests. Artistic fidelity, physical material calibration and real physics-engine simulation are outside this receipt."
+}
