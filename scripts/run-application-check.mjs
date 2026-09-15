@@ -99,6 +99,14 @@ try {
     if (!manifest.files.some(file => file.path === sourcePath && file.sha256 === output.sha256))
       drawingProblems.push({ file: output.path, reason: 'Independent exhibition script differs from registered source' });
   }
+  const explorationCatalog = await readJson('web/out/cosmos/explore/worlds.json');
+  if (explorationCatalog.physicsEnabledByDefault !== false || !explorationCatalog.worlds.length)
+    drawingProblems.push({ reason: 'Exploration must start without physics and contain a world' });
+  for (const output of outputs.filter(file => /^cosmos\/explore\/.*\.(html|[cm]?js|css|json)$/.test(file.path))) {
+    const sourcePath = 'reference-assets/artist-cosmos/explore/' + output.path.slice('cosmos/explore/'.length);
+    if (!manifest.files.some(file => file.path === sourcePath && file.sha256 === output.sha256))
+      drawingProblems.push({ file: output.path, reason: 'Exploration output differs from its source' });
+  }
   evidence.interfaceAssets = outputs.filter(file => isRegisteredInterfaceIcon(file, manifest.files));
   if (character.receipt && character.status !== 'pass') drawingProblems.push({ reason: character.failureReason });
   for (const module of clientModules.modules)

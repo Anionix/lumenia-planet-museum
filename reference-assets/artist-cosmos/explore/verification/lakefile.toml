@@ -1,0 +1,6 @@
+name = "lumenia_exploration_verification"
+version = "0.1.0"
+defaultTargets = ["Exploration"]
+
+[[lean_lib]]
+name = "Exploration"

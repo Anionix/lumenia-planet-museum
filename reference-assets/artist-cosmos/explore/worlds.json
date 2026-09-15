@@ -1,0 +1,17 @@
+{
+  "record_type": "exploration_catalog",
+  "recordIdentifier": "cda72443-5769-5aeb-b6ec-48faa23abfee",
+  "physicsEnabledByDefault": false,
+  "worlds": [
+    {
+      "recordIdentifier": "cc6b59e2-1bfe-5a91-9baa-1afbcdeb0457",
+      "slug": "ettore-sottsass",
+      "artistName": "Ettore Sottsass",
+      "artistNameJapanese": "エットレ・ソットサス",
+      "title": "遊ぶ土星",
+      "image": "../ettore-sottsass.png",
+      "file": "./worlds/ettore-sottsass.json",
+      "sha256": "2e9ed5381e7e55f4192548ba916a6560e0b75f654b7dbafeb08e720aaa9bffd7"
+    }
+  ]
+}
