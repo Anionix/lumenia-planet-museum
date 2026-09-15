@@ -9,7 +9,7 @@ import { outputManifest } from './build-web.mjs';
 import { uuidVersionSeven } from './identifiers.mjs';
 import { observation, verificationResult, saveReport } from './report.mjs';
 import { inspectCharacterAsset } from './inspect-character-asset.mjs';
-import { isRegisteredInterfaceIcon } from './drawing-asset-policy.mjs';
+import { isRegisteredInterfaceIcon, isRegisteredReferenceImage } from './drawing-asset-policy.mjs';
 import { registeredCosmicDrawing } from './cosmic-drawing-policy.mjs';
 
 // llm machine contract; claim UUIDv5: 07b6fb92-8639-50e0-873d-b43d3d5c28df
@@ -26,6 +26,7 @@ const character = await inspectCharacterAsset(path.join(projectRoot, 'web/out'))
 evidence.characterInspection = character;
 const cosmicContract = await readJson('contracts/cosmic-exhibition.json');
 const cosmicEnabled = cosmicContract.enabled === true;
+const referenceImages = await readJson('contracts/cosmic-reference-images.json');
 const drawingGateName = cosmicEnabled ? 'CosmicExhibitionIsolationGate' : character.receipt ? 'CssArtworkAndCharacterIsolationGate' : 'CssOnlyApplicationGate';
 function add(name, value, reason, tools, revision = context.sourceRevision) {
   const definition = definitions.find(item => item.name === 'Lumenia.' + name);
@@ -90,6 +91,14 @@ try {
     'Build evidence is missing, changed, or contains Plumeria runtime syntax.',
     ['official @plumeria/turbopack-loader', 'webpack client module graph', 'emitted JavaScript syntax and source maps'], build.sourceRevision);
   const drawingProblems = [];
+  const standaloneManifest = await readJson('web/out/cosmos/interactive/exhibition.json');
+  if (standaloneManifest.physics_enabled_by_default !== false || standaloneManifest.items.length !== 15)
+    drawingProblems.push({ reason: 'Independent image exhibition must contain 15 items and start without physics' });
+  for (const output of outputs.filter(file => /^cosmos\/interactive\/.*\.(html|[cm]?js|css)$/.test(file.path))) {
+    const sourcePath = 'reference-assets/artist-cosmos/interactive/' + output.path.slice('cosmos/interactive/'.length);
+    if (!manifest.files.some(file => file.path === sourcePath && file.sha256 === output.sha256))
+      drawingProblems.push({ file: output.path, reason: 'Independent exhibition script differs from registered source' });
+  }
   evidence.interfaceAssets = outputs.filter(file => isRegisteredInterfaceIcon(file, manifest.files));
   if (character.receipt && character.status !== 'pass') drawingProblems.push({ reason: character.failureReason });
   for (const module of clientModules.modules)
@@ -99,6 +108,7 @@ try {
   for (const file of outputs)
     if ((/^(artworks|decoders)\/|\.(glb|gltf|ktx2|wasm|png|jpe?g|webp|avif|gif|svg)$/.test(file.path)) &&
       !isRegisteredInterfaceIcon(file, manifest.files) &&
+      !isRegisteredReferenceImage(file, manifest.files, referenceImages) &&
       !(character.status === 'pass' && file.path === character.path))
       drawingProblems.push({ file: file.path, reason: 'Unregistered binary or non-CSS rendering asset in this build profile' });
   for (const file of inspection.clientReached) {

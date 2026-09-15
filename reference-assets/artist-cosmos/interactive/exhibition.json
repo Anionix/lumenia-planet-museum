@@ -1,0 +1,1284 @@
+{
+  "record_id": "812bd57c-a4b2-5b44-a893-e7740a3b032e",
+  "created_at": "2026-09-15T14:04:34.114664+00:00",
+  "title": "15の宇宙を、動かす。",
+  "renderer": "WebGL2",
+  "three_version": "0.186.0",
+  "rapier_version": "0.12.0",
+  "physics_enabled_by_default": false,
+  "physics_adapter_identifier": "6edc83c2-1389-5922-af41-42b1f22dae8b",
+  "scene_units": "metre",
+  "physical_values_origin": "presentation_setting",
+  "semantic_position_usage": "immutable source reference only; display motion never changes similarity",
+  "image_representation": "textured planar exhibits; no reconstruction of objects within images",
+  "fixed_time_step_seconds": 0.016666666666666666,
+  "maximum_steps_per_frame": 5,
+  "maximum_device_pixel_ratio": 1.5,
+  "sources": [
+    {
+      "title": "Three.js WebGLRenderer",
+      "url": "https://threejs.org/docs/pages/WebGLRenderer.html"
+    },
+    {
+      "title": "Three.js OrbitControls",
+      "url": "https://threejs.org/docs/pages/OrbitControls.html"
+    },
+    {
+      "title": "Rapier rigid bodies",
+      "url": "https://rapier.rs/docs/user_guides/javascript/rigid_bodies/"
+    }
+  ],
+  "items": [
+    {
+      "record_id": "4d06480c-9e64-5d9a-bc4a-4d88d9c53888",
+      "artist_reference_identifier": "dabb2607-8305-5c0c-b04e-fbc2a4a0b552",
+      "artist_name": "William Morris",
+      "artist_name_ja": "ウィリアム・モリス",
+      "title": "織物の惑星",
+      "description": "植物の反復 × 星雲と惑星",
+      "image_url": "../william-morris.png",
+      "image_sha256": "d7485b0b48ab20c6ef5b369f0206db25137aac82021054cc1b8c8b4fb437d7a0",
+      "source_profile_identifier": "e9146e26-704e-5073-8222-11be30c6d0be",
+      "sources": [
+        {
+          "sourceIdentifier": "86cb342f-c0d4-5b25-bbb3-c89689f7c270",
+          "publisher": "Strawberry Thief — Victoria and Albert Museum",
+          "url": "https://collections.vam.ac.uk/item/O78889/",
+          "observedOn": "2026-09-13"
+        },
+        {
+          "sourceIdentifier": "0dd5a9c7-6077-510a-aa75-52ca0a452dc5",
+          "publisher": "William Morris textiles — Victoria and Albert Museum",
+          "url": "https://www.vam.ac.uk/articles/willam-morris-textiles/",
+          "observedOn": "2026-09-13"
+        }
+      ],
+      "semantic_position": {
+        "coordinate_identifier": "9d75669a-24ea-5b6d-8363-70c47b559eae",
+        "values": [
+          -0.7,
+          0.05,
+          -0.85
+        ],
+        "unit": "dimensionless"
+      },
+      "presentation_position": [
+        -14.6,
+        5.2,
+        0
+      ],
+      "texture_identifier": "de288fa9-6b66-5f30-b9c5-8d7e844ba005",
+      "material_identifier": "9ad83555-247f-5fd3-a972-72cff4b8a50a",
+      "physics": {
+        "enabled": false,
+        "engine_adapter_identifier": "6edc83c2-1389-5922-af41-42b1f22dae8b",
+        "specification": {
+          "body_type": "dynamic",
+          "collider": {
+            "kind": "box",
+            "half_extents": {
+              "value": [
+                3,
+                2,
+                0.06
+              ],
+              "unit": "metre",
+              "value_origin": "presentation_setting",
+              "source_identifier": null
+            }
+          },
+          "mass": {
+            "value": 1,
+            "unit": "kilogram",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "friction": {
+            "value": 0.32,
+            "unit": "dimensionless",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "restitution": {
+            "value": 0.58,
+            "unit": "dimensionless",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "metres_per_scene_unit": {
+            "value": 1,
+            "unit": "metre_per_scene_unit",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          }
+        }
+      }
+    },
+    {
+      "record_id": "2c1baaec-3850-5503-a3a2-e9a710e95161",
+      "artist_reference_identifier": "831ef2e7-ed9d-553c-87a8-315128e9a133",
+      "artist_name": "Alphonse Mucha",
+      "artist_name_ja": "アルフォンス・ミュシャ",
+      "title": "星を抱く花輪",
+      "description": "流れる輪郭 × 天体の環と彗星",
+      "image_url": "../alphonse-mucha.png",
+      "image_sha256": "57fe2c034be6dd3340464ab9852a79e8d8f12e8de46ee61b1d1af3f4801b09a0",
+      "source_profile_identifier": "c622c342-9799-5e44-84e0-bf659ef4ec94",
+      "sources": [
+        {
+          "sourceIdentifier": "0bc5195f-fed6-5097-b948-bfc639358c16",
+          "publisher": "Zodiac — Mucha Foundation",
+          "url": "https://www.muchafoundation.org/en/gallery/browse-works/object/242",
+          "observedOn": "2026-09-13"
+        },
+        {
+          "sourceIdentifier": "7e6de424-1ec8-53c0-83e1-95f5b9e8ede0",
+          "publisher": "Alphonse Mucha Timeline — Mucha Foundation",
+          "url": "https://muchafoundation.org/en/timeline",
+          "observedOn": "2026-09-13"
+        }
+      ],
+      "semantic_position": {
+        "coordinate_identifier": "f7f331ca-1d9d-5f03-81bd-5cd3abce325a",
+        "values": [
+          -0.7,
+          -0.45,
+          -0.95
+        ],
+        "unit": "dimensionless"
+      },
+      "presentation_position": [
+        -7.3,
+        5.2,
+        0
+      ],
+      "texture_identifier": "b84fac5b-6f7f-5d6b-b20a-917ef1e2515a",
+      "material_identifier": "0643773e-20cf-58c8-932d-4a7e02e1e083",
+      "physics": {
+        "enabled": false,
+        "engine_adapter_identifier": "6edc83c2-1389-5922-af41-42b1f22dae8b",
+        "specification": {
+          "body_type": "dynamic",
+          "collider": {
+            "kind": "box",
+            "half_extents": {
+              "value": [
+                3,
+                2,
+                0.06
+              ],
+              "unit": "metre",
+              "value_origin": "presentation_setting",
+              "source_identifier": null
+            }
+          },
+          "mass": {
+            "value": 1,
+            "unit": "kilogram",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "friction": {
+            "value": 0.32,
+            "unit": "dimensionless",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "restitution": {
+            "value": 0.58,
+            "unit": "dimensionless",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "metres_per_scene_unit": {
+            "value": 1,
+            "unit": "metre_per_scene_unit",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          }
+        }
+      }
+    },
+    {
+      "record_id": "e8e4eaff-48fd-5117-af94-2e7737e27a64",
+      "artist_reference_identifier": "247e56af-c28b-5ed4-947b-7dae7abbd962",
+      "artist_name": "Charles Rennie Mackintosh",
+      "artist_name_ja": "チャールズ・レニー・マッキントッシュ",
+      "title": "薔薇の天文室",
+      "description": "細い格子と花形 × 宇宙に浮かぶ観測室",
+      "image_url": "../charles-rennie-mackintosh.png",
+      "image_sha256": "81ee0b404ebe5e70465681397f6f2ea7ae82c85a4971f1524fdc7fc3e3be01a8",
+      "source_profile_identifier": "27ae05bc-5298-51fc-8e02-c16ab93048ce",
+      "sources": [
+        {
+          "sourceIdentifier": "d48831e5-058e-5a3b-b3c7-269aa1e21699",
+          "publisher": "Taking a fresh look at Mackintosh — University of Glasgow",
+          "url": "https://www.gla.ac.uk/news/archiveofnews/2008/september/headline_90636_en.html",
+          "observedOn": "2026-09-13"
+        },
+        {
+          "sourceIdentifier": "0feb047c-5ff6-5d39-a984-9a1e87bd4ab7",
+          "publisher": "The Mackintosh House — The Hunterian",
+          "url": "https://www.gla.ac.uk/hunterian/visit/our-venues/mackintosh-house/",
+          "observedOn": "2026-09-13"
+        }
+      ],
+      "semantic_position": {
+        "coordinate_identifier": "04cca99c-8cd7-573b-8fe2-c91fe40750e7",
+        "values": [
+          0.25,
+          0.2,
+          -0.25
+        ],
+        "unit": "dimensionless"
+      },
+      "presentation_position": [
+        0.0,
+        5.2,
+        0
+      ],
+      "texture_identifier": "f3b2150e-4e8d-597c-a878-bb060cfff81a",
+      "material_identifier": "429aa02a-a3e1-5a0e-b068-69ed5ad8a330",
+      "physics": {
+        "enabled": false,
+        "engine_adapter_identifier": "6edc83c2-1389-5922-af41-42b1f22dae8b",
+        "specification": {
+          "body_type": "dynamic",
+          "collider": {
+            "kind": "box",
+            "half_extents": {
+              "value": [
+                3,
+                2,
+                0.06
+              ],
+              "unit": "metre",
+              "value_origin": "presentation_setting",
+              "source_identifier": null
+            }
+          },
+          "mass": {
+            "value": 1,
+            "unit": "kilogram",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "friction": {
+            "value": 0.32,
+            "unit": "dimensionless",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "restitution": {
+            "value": 0.58,
+            "unit": "dimensionless",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "metres_per_scene_unit": {
+            "value": 1,
+            "unit": "metre_per_scene_unit",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          }
+        }
+      }
+    },
+    {
+      "record_id": "0b25d64c-503b-5a89-b8ce-3615ad6d2cbf",
+      "artist_reference_identifier": "9051b730-5a3a-575a-aaa8-b736729d11c5",
+      "artist_name": "Piet Mondrian",
+      "artist_name_ja": "ピート・モンドリアン",
+      "title": "直角でできた宇宙",
+      "description": "水平と垂直の色面 × 星雲の窓",
+      "image_url": "../piet-mondrian.png",
+      "image_sha256": "66ab2202b937935af83683534d1a667cc8e291dd5cb40049b29232439f9eb8da",
+      "source_profile_identifier": "2da4bfe7-d11a-5615-ae87-6143a563ab0e",
+      "sources": [
+        {
+          "sourceIdentifier": "0cd2ba89-2413-52e5-8d4c-a139be157574",
+          "publisher": "Composition with Red, Blue, Black, Yellow, and Gray — MoMA",
+          "url": "https://www.moma.org/collection/works/79002",
+          "observedOn": "2026-09-13"
+        },
+        {
+          "sourceIdentifier": "61a02caf-f1a4-5fea-a66a-2061b77e3765",
+          "publisher": "Broadway Boogie Woogie — MoMA",
+          "url": "https://www.moma.org/collection/works/78682",
+          "observedOn": "2026-09-13"
+        }
+      ],
+      "semantic_position": {
+        "coordinate_identifier": "084f90b6-a70c-5ae1-9639-cea3456efea5",
+        "values": [
+          0.95,
+          0.6,
+          0.65
+        ],
+        "unit": "dimensionless"
+      },
+      "presentation_position": [
+        7.3,
+        5.2,
+        0
+      ],
+      "texture_identifier": "526f3c5c-b918-5d0b-af4a-3cd0ce160ec8",
+      "material_identifier": "61081584-fecd-5cfb-8c00-77804f1deccb",
+      "physics": {
+        "enabled": false,
+        "engine_adapter_identifier": "6edc83c2-1389-5922-af41-42b1f22dae8b",
+        "specification": {
+          "body_type": "dynamic",
+          "collider": {
+            "kind": "box",
+            "half_extents": {
+              "value": [
+                3,
+                2,
+                0.06
+              ],
+              "unit": "metre",
+              "value_origin": "presentation_setting",
+              "source_identifier": null
+            }
+          },
+          "mass": {
+            "value": 1,
+            "unit": "kilogram",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "friction": {
+            "value": 0.32,
+            "unit": "dimensionless",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "restitution": {
+            "value": 0.58,
+            "unit": "dimensionless",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "metres_per_scene_unit": {
+            "value": 1,
+            "unit": "metre_per_scene_unit",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          }
+        }
+      }
+    },
+    {
+      "record_id": "f5fe4c3b-b22b-5fdb-a1be-dc1d4e9fa950",
+      "artist_reference_identifier": "93830cc1-636a-5049-b696-087e78835532",
+      "artist_name": "Gerrit Rietveld",
+      "artist_name_ja": "ヘリット・リートフェルト",
+      "title": "軌道上の組み立て",
+      "description": "独立した板と棒 × 軌道上の構造物",
+      "image_url": "../gerrit-rietveld.png",
+      "image_sha256": "ca4d66b058126ed541e30ea886139ebfd2815740b6db8b538ca26f3c21305fc0",
+      "source_profile_identifier": "1af32ad1-c8f1-5c0c-a100-d5d9a5f83579",
+      "sources": [
+        {
+          "sourceIdentifier": "b57e508a-f0aa-57ef-a447-409a455721fc",
+          "publisher": "Red Blue Chair — MoMA",
+          "url": "https://www.moma.org/collection/works/4044",
+          "observedOn": "2026-09-13"
+        },
+        {
+          "sourceIdentifier": "51ae5866-40a3-52f7-93e3-f3c41b0963f1",
+          "publisher": "Rood-blauwe stoel — Stedelijk Museum",
+          "url": "https://www.stedelijk.nl/en/collection/4720-gerrit-rietveld-rood-blauwe-stoel",
+          "observedOn": "2026-09-13"
+        }
+      ],
+      "semantic_position": {
+        "coordinate_identifier": "d541a9dc-5cae-5e58-b0c6-59d81f953ebd",
+        "values": [
+          0.95,
+          0.5,
+          0.5
+        ],
+        "unit": "dimensionless"
+      },
+      "presentation_position": [
+        14.6,
+        5.2,
+        0
+      ],
+      "texture_identifier": "b6bc816c-0b7a-5d99-83b7-15cb43923a27",
+      "material_identifier": "ddb0b4e6-2827-5471-8d88-5b2975a142bf",
+      "physics": {
+        "enabled": false,
+        "engine_adapter_identifier": "6edc83c2-1389-5922-af41-42b1f22dae8b",
+        "specification": {
+          "body_type": "dynamic",
+          "collider": {
+            "kind": "box",
+            "half_extents": {
+              "value": [
+                3,
+                2,
+                0.06
+              ],
+              "unit": "metre",
+              "value_origin": "presentation_setting",
+              "source_identifier": null
+            }
+          },
+          "mass": {
+            "value": 1,
+            "unit": "kilogram",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "friction": {
+            "value": 0.32,
+            "unit": "dimensionless",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "restitution": {
+            "value": 0.58,
+            "unit": "dimensionless",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "metres_per_scene_unit": {
+            "value": 1,
+            "unit": "metre_per_scene_unit",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          }
+        }
+      }
+    },
+    {
+      "record_id": "3cd9061a-a70c-5b5f-9175-d731e4d995e8",
+      "artist_reference_identifier": "39f2913c-52a5-54ee-b38f-73e55540ce6d",
+      "artist_name": "Ettore Sottsass",
+      "artist_name_ja": "エットレ・ソットサス",
+      "title": "遊ぶ土星",
+      "description": "積層材と大胆な色 × 惑星の環",
+      "image_url": "../ettore-sottsass.png",
+      "image_sha256": "62f9f2086ffa001a9b5c326c4a4fb7eeba1ae4857fe9eb93a1f465349161cefa",
+      "source_profile_identifier": "eff6ec3c-4e67-5e2a-bc11-ed8d12f52a39",
+      "sources": [
+        {
+          "sourceIdentifier": "36d41374-9c40-58f4-987c-d7e3cd8b1d0c",
+          "publisher": "Carlton — Memphis Milano",
+          "url": "https://memphis.it/en/products/carlton/",
+          "observedOn": "2026-09-13"
+        },
+        {
+          "sourceIdentifier": "3b904738-9747-56bb-9110-a2175ad23571",
+          "publisher": "Bacterio — Abet Laminati",
+          "url": "https://abetlaminati.com/en/collections/bacterio-ettore-sottsass/",
+          "observedOn": "2026-09-13"
+        }
+      ],
+      "semantic_position": {
+        "coordinate_identifier": "15863bb0-a1a7-5239-9d46-32f94d98d1d1",
+        "values": [
+          0.55,
+          -0.65,
+          -0.95
+        ],
+        "unit": "dimensionless"
+      },
+      "presentation_position": [
+        -14.6,
+        0.0,
+        0
+      ],
+      "texture_identifier": "36a4626d-22d3-5ef0-ab97-49c8e50f4d4d",
+      "material_identifier": "0947382f-d298-5436-a1e2-0738c142a698",
+      "physics": {
+        "enabled": false,
+        "engine_adapter_identifier": "6edc83c2-1389-5922-af41-42b1f22dae8b",
+        "specification": {
+          "body_type": "dynamic",
+          "collider": {
+            "kind": "box",
+            "half_extents": {
+              "value": [
+                3,
+                2,
+                0.06
+              ],
+              "unit": "metre",
+              "value_origin": "presentation_setting",
+              "source_identifier": null
+            }
+          },
+          "mass": {
+            "value": 1,
+            "unit": "kilogram",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "friction": {
+            "value": 0.32,
+            "unit": "dimensionless",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "restitution": {
+            "value": 0.58,
+            "unit": "dimensionless",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "metres_per_scene_unit": {
+            "value": 1,
+            "unit": "metre_per_scene_unit",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          }
+        }
+      }
+    },
+    {
+      "record_id": "f3245d7d-2f04-5167-b67e-be85b2a47314",
+      "artist_reference_identifier": "303ee789-ddb1-5826-97c0-0fc1e18f8f1a",
+      "artist_name": "Herbert Bayer",
+      "artist_name_ja": "ヘルベルト・バイヤー",
+      "title": "宇宙の文字以前",
+      "description": "円弧・棒・大小の対比 × 食と星図",
+      "image_url": "../herbert-bayer.png",
+      "image_sha256": "1179f76272afc9eac1ac1b7b3ec6fcfcab9194bf000d27bbcd41e85cf25a8c3b",
+      "source_profile_identifier": "aa8db2eb-17e5-5771-8443-94445af34296",
+      "sources": [
+        {
+          "sourceIdentifier": "dcbba08f-9fae-5fc6-9a7f-75eff86fbe7a",
+          "publisher": "Herbert Bayer biography — Cooper Hewitt",
+          "url": "https://collection.cooperhewitt.org/people/18059359/bio",
+          "observedOn": "2026-09-13"
+        },
+        {
+          "sourceIdentifier": "b3055c4e-856c-5978-9a3e-1bf19be39145",
+          "publisher": "Herbert Bayer — MoMA",
+          "url": "https://www.moma.org/collection/artists/399",
+          "observedOn": "2026-09-13"
+        }
+      ],
+      "semantic_position": {
+        "coordinate_identifier": "218048f4-6318-52d9-9dd6-6baf46ab8caf",
+        "values": [
+          0.85,
+          0.5,
+          0.55
+        ],
+        "unit": "dimensionless"
+      },
+      "presentation_position": [
+        -7.3,
+        0.0,
+        0
+      ],
+      "texture_identifier": "1dee069c-ea1f-5537-b754-cc1e8d336dda",
+      "material_identifier": "2bda941e-af40-56cd-b12a-c556bdebc280",
+      "physics": {
+        "enabled": false,
+        "engine_adapter_identifier": "6edc83c2-1389-5922-af41-42b1f22dae8b",
+        "specification": {
+          "body_type": "dynamic",
+          "collider": {
+            "kind": "box",
+            "half_extents": {
+              "value": [
+                3,
+                2,
+                0.06
+              ],
+              "unit": "metre",
+              "value_origin": "presentation_setting",
+              "source_identifier": null
+            }
+          },
+          "mass": {
+            "value": 1,
+            "unit": "kilogram",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "friction": {
+            "value": 0.32,
+            "unit": "dimensionless",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "restitution": {
+            "value": 0.58,
+            "unit": "dimensionless",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "metres_per_scene_unit": {
+            "value": 1,
+            "unit": "metre_per_scene_unit",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          }
+        }
+      }
+    },
+    {
+      "record_id": "e4d3cfb4-8482-56d0-b697-df4f9e22b1eb",
+      "artist_reference_identifier": "750a89da-4faf-5927-8711-597c65b62e6d",
+      "artist_name": "Josef Müller-Brockmann",
+      "artist_name_ja": "ヨゼフ・ミューラー＝ブロックマン",
+      "title": "軌道の音楽",
+      "description": "測ったような間隔と円弧 × 食と軌道",
+      "image_url": "../josef-muller-brockmann.png",
+      "image_sha256": "75a303ac4c65d1608c6ffb3f2f3ce70a2191aacb0980713dccfa4c8ce29a13cd",
+      "source_profile_identifier": "200bbbd0-c4d4-5ebf-89e7-7bb100b9d737",
+      "sources": [
+        {
+          "sourceIdentifier": "4b93d51d-6fad-5769-adf9-7f3fd5d7d339",
+          "publisher": "Poster, Beethoven — Cooper Hewitt",
+          "url": "https://collection.cooperhewitt.org/objects/2318803418/",
+          "observedOn": "2026-09-13"
+        },
+        {
+          "sourceIdentifier": "f6fd7cb6-0111-57fd-ba4e-fd472bde34ed",
+          "publisher": "Josef Müller-Brockmann — Shizuko Yoshikawa and Josef Müller-Brockmann Foundation",
+          "url": "https://syjmb.foundation/en/josef-mueller-brockmann/",
+          "observedOn": "2026-09-13"
+        }
+      ],
+      "semantic_position": {
+        "coordinate_identifier": "f4fdc4c4-a4de-5f27-9ce9-ce6324a39525",
+        "values": [
+          0.9,
+          0.65,
+          0.85
+        ],
+        "unit": "dimensionless"
+      },
+      "presentation_position": [
+        0.0,
+        0.0,
+        0
+      ],
+      "texture_identifier": "1905d495-b36a-5760-81fc-635d0d5d2931",
+      "material_identifier": "707e3585-0754-5b9b-80f3-da062434cfda",
+      "physics": {
+        "enabled": false,
+        "engine_adapter_identifier": "6edc83c2-1389-5922-af41-42b1f22dae8b",
+        "specification": {
+          "body_type": "dynamic",
+          "collider": {
+            "kind": "box",
+            "half_extents": {
+              "value": [
+                3,
+                2,
+                0.06
+              ],
+              "unit": "metre",
+              "value_origin": "presentation_setting",
+              "source_identifier": null
+            }
+          },
+          "mass": {
+            "value": 1,
+            "unit": "kilogram",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "friction": {
+            "value": 0.32,
+            "unit": "dimensionless",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "restitution": {
+            "value": 0.58,
+            "unit": "dimensionless",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "metres_per_scene_unit": {
+            "value": 1,
+            "unit": "metre_per_scene_unit",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          }
+        }
+      }
+    },
+    {
+      "record_id": "74cae71c-8aca-5d9f-a87c-e519c725f3b4",
+      "artist_reference_identifier": "4c729bba-ac72-5689-aa98-170af0e3426a",
+      "artist_name": "Massimo Vignelli",
+      "artist_name_ja": "マッシモ・ヴィネッリ",
+      "title": "星を結ぶ路線",
+      "description": "経路と節点 × 星々のつながり",
+      "image_url": "../massimo-vignelli.png",
+      "image_sha256": "68c567fa35979197d5652c822492322a995378ec30c20aa0f965db10bc4c7fc7",
+      "source_profile_identifier": "fda39095-201d-5703-a75a-072fceac56f4",
+      "sources": [
+        {
+          "sourceIdentifier": "667442d4-744b-5d54-8a48-343427d81871",
+          "publisher": "New York Subway Map — MoMA",
+          "url": "https://www.moma.org/collection/works/89300",
+          "observedOn": "2026-09-13"
+        },
+        {
+          "sourceIdentifier": "1317d040-f91a-5948-a916-b545d3fdb303",
+          "publisher": "Towards a Better Way: The Vignelli Map at 50 — New York Transit Museum",
+          "url": "https://www.nytransitmuseum.org/vignelli/",
+          "observedOn": "2026-09-13"
+        }
+      ],
+      "semantic_position": {
+        "coordinate_identifier": "a99dfabf-b74d-575f-9ba2-ee5505414d7c",
+        "values": [
+          0.85,
+          0.7,
+          0.85
+        ],
+        "unit": "dimensionless"
+      },
+      "presentation_position": [
+        7.3,
+        0.0,
+        0
+      ],
+      "texture_identifier": "dcd4ed71-973e-554f-85c3-f4522f9d8617",
+      "material_identifier": "7d048147-db25-5af9-9b09-4c97cc576b31",
+      "physics": {
+        "enabled": false,
+        "engine_adapter_identifier": "6edc83c2-1389-5922-af41-42b1f22dae8b",
+        "specification": {
+          "body_type": "dynamic",
+          "collider": {
+            "kind": "box",
+            "half_extents": {
+              "value": [
+                3,
+                2,
+                0.06
+              ],
+              "unit": "metre",
+              "value_origin": "presentation_setting",
+              "source_identifier": null
+            }
+          },
+          "mass": {
+            "value": 1,
+            "unit": "kilogram",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "friction": {
+            "value": 0.32,
+            "unit": "dimensionless",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "restitution": {
+            "value": 0.58,
+            "unit": "dimensionless",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "metres_per_scene_unit": {
+            "value": 1,
+            "unit": "metre_per_scene_unit",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          }
+        }
+      }
+    },
+    {
+      "record_id": "05e30a57-fcde-5445-ac89-e549a50c1a0e",
+      "artist_reference_identifier": "e3a71fb6-541f-5994-ae75-a2bec6228364",
+      "artist_name": "Dieter Rams",
+      "artist_name_ja": "ディーター・ラムス",
+      "title": "静かな観測衛星",
+      "description": "中性色・精密な操作部 × 軌道上の観測",
+      "image_url": "../dieter-rams.png",
+      "image_sha256": "9b18c578a617c774b195ce2ddea6ef3c3cd2cf9562a60a5031df5b64742ff866",
+      "source_profile_identifier": "66355416-1298-53e7-af26-05303e93d7ad",
+      "sources": [
+        {
+          "sourceIdentifier": "fb4e80f5-43ea-558a-acba-911e86ef8626",
+          "publisher": "Dieter Rams — Vitsœ",
+          "url": "https://www.vitsoe.com/us/about/dieter-rams",
+          "observedOn": "2026-09-13"
+        },
+        {
+          "sourceIdentifier": "cf2255f2-63b9-57e7-a243-fb2b3c771453",
+          "publisher": "Design by Vitsœ: 1976 speech by Dieter Rams",
+          "url": "https://www.vitsoe.com/us/voice/design-by-vitsoe?",
+          "observedOn": "2026-09-13"
+        }
+      ],
+      "semantic_position": {
+        "coordinate_identifier": "2cffd42e-a9ac-585e-83a2-dee48925af3f",
+        "values": [
+          0.75,
+          0.8,
+          0.98
+        ],
+        "unit": "dimensionless"
+      },
+      "presentation_position": [
+        14.6,
+        0.0,
+        0
+      ],
+      "texture_identifier": "25eec6a1-6cd7-54ce-87fe-04fb1da802a3",
+      "material_identifier": "973d5787-f446-5dff-a786-6ed6cbe656ee",
+      "physics": {
+        "enabled": false,
+        "engine_adapter_identifier": "6edc83c2-1389-5922-af41-42b1f22dae8b",
+        "specification": {
+          "body_type": "dynamic",
+          "collider": {
+            "kind": "box",
+            "half_extents": {
+              "value": [
+                3,
+                2,
+                0.06
+              ],
+              "unit": "metre",
+              "value_origin": "presentation_setting",
+              "source_identifier": null
+            }
+          },
+          "mass": {
+            "value": 1,
+            "unit": "kilogram",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "friction": {
+            "value": 0.32,
+            "unit": "dimensionless",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "restitution": {
+            "value": 0.58,
+            "unit": "dimensionless",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "metres_per_scene_unit": {
+            "value": 1,
+            "unit": "metre_per_scene_unit",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          }
+        }
+      }
+    },
+    {
+      "record_id": "574ba36e-1505-5e7f-a7e8-c144e78d836b",
+      "artist_reference_identifier": "6f345b4d-9115-5d33-8d0e-73455d4ce23c",
+      "artist_name": "Naoto Fukasawa",
+      "artist_name_ja": "深澤直人",
+      "title": "ひとつ引く、小さな月",
+      "description": "柔らかな白い器と操作 × 無重力と月",
+      "image_url": "../naoto-fukasawa.png",
+      "image_sha256": "c1d81e3a60c2e9859fe9c4c1fabd7fc27dc17d1b053d8cc2bbde8cf409b60f3a",
+      "source_profile_identifier": "4944ca35-5584-54dd-9b11-d3ab77dacad6",
+      "sources": [
+        {
+          "sourceIdentifier": "227d61e8-ad76-5542-835c-bdc8015aad65",
+          "publisher": "Wall mounted CD Player — Naoto Fukasawa Design",
+          "url": "https://naotofukasawa.com/projects/540/",
+          "observedOn": "2026-09-13"
+        },
+        {
+          "sourceIdentifier": "c4cbf3a0-b3fd-5db3-89f6-7add1862a7ea",
+          "publisher": "CD-player — Victoria and Albert Museum",
+          "url": "https://collections.vam.ac.uk/item/O1227135/",
+          "observedOn": "2026-09-13"
+        }
+      ],
+      "semantic_position": {
+        "coordinate_identifier": "99b0c48e-9248-5e72-9c8c-229fe3245ca8",
+        "values": [
+          0.45,
+          0.65,
+          0.98
+        ],
+        "unit": "dimensionless"
+      },
+      "presentation_position": [
+        -14.6,
+        -5.2,
+        0
+      ],
+      "texture_identifier": "7c4153b9-6674-5fda-8c0f-4e0017ca24e3",
+      "material_identifier": "bac3c15b-951a-5e70-8138-05b46746054e",
+      "physics": {
+        "enabled": false,
+        "engine_adapter_identifier": "6edc83c2-1389-5922-af41-42b1f22dae8b",
+        "specification": {
+          "body_type": "dynamic",
+          "collider": {
+            "kind": "box",
+            "half_extents": {
+              "value": [
+                3,
+                2,
+                0.06
+              ],
+              "unit": "metre",
+              "value_origin": "presentation_setting",
+              "source_identifier": null
+            }
+          },
+          "mass": {
+            "value": 1,
+            "unit": "kilogram",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "friction": {
+            "value": 0.32,
+            "unit": "dimensionless",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "restitution": {
+            "value": 0.58,
+            "unit": "dimensionless",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "metres_per_scene_unit": {
+            "value": 1,
+            "unit": "metre_per_scene_unit",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          }
+        }
+      }
+    },
+    {
+      "record_id": "4cd3b671-9de3-52d9-9ed4-a0f3f3a60c09",
+      "artist_reference_identifier": "c21a5e26-6ffc-59d7-8dcf-22648d1a9659",
+      "artist_name": "Rei Kawakubo",
+      "artist_name_ja": "川久保玲",
+      "title": "布のブラックホール",
+      "description": "非対称の布と空洞 × 暗い天体と曲がる光",
+      "image_url": "../rei-kawakubo.png",
+      "image_sha256": "d75de875bc814bbc4cf6dbe85f6e1cdaf2a31340aaa06ab54a8c068f4345954b",
+      "source_profile_identifier": "5240f8a5-f200-5127-9fe8-3f8a6e909188",
+      "sources": [
+        {
+          "sourceIdentifier": "153b1c48-6930-5ed6-a8c9-8a21982d4d0a",
+          "publisher": "Rei Kawakubo/Comme des Garçons: Art of the In-Between — The Met",
+          "url": "https://www.metmuseum.org/exhibitions/listings/2017/rei-kawakubo",
+          "observedOn": "2026-09-13"
+        },
+        {
+          "sourceIdentifier": "760027c4-80b8-5422-8e2a-9c1849f60c10",
+          "publisher": "Exhibition Galleries — The Met",
+          "url": "https://www.metmuseum.org/exhibitions/listings/2017/rei-kawakubo/exhibition-galleries",
+          "observedOn": "2026-09-13"
+        }
+      ],
+      "semantic_position": {
+        "coordinate_identifier": "bffefb98-97d0-5913-b880-308f4d6eb0d6",
+        "values": [
+          -0.35,
+          -0.75,
+          -0.1
+        ],
+        "unit": "dimensionless"
+      },
+      "presentation_position": [
+        -7.3,
+        -5.2,
+        0
+      ],
+      "texture_identifier": "c5125b29-01a7-5550-b803-41f13e44e779",
+      "material_identifier": "6c8f3334-187e-56f4-8d53-7d015a6884cc",
+      "physics": {
+        "enabled": false,
+        "engine_adapter_identifier": "6edc83c2-1389-5922-af41-42b1f22dae8b",
+        "specification": {
+          "body_type": "dynamic",
+          "collider": {
+            "kind": "box",
+            "half_extents": {
+              "value": [
+                3,
+                2,
+                0.06
+              ],
+              "unit": "metre",
+              "value_origin": "presentation_setting",
+              "source_identifier": null
+            }
+          },
+          "mass": {
+            "value": 1,
+            "unit": "kilogram",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "friction": {
+            "value": 0.32,
+            "unit": "dimensionless",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "restitution": {
+            "value": 0.58,
+            "unit": "dimensionless",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "metres_per_scene_unit": {
+            "value": 1,
+            "unit": "metre_per_scene_unit",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          }
+        }
+      }
+    },
+    {
+      "record_id": "2e3ed0d6-cffe-5ae3-b1f6-ca5ee7283ec6",
+      "artist_reference_identifier": "1dc6dc46-d527-520c-bf5b-2c8642eafa75",
+      "artist_name": "Charles Eames",
+      "artist_name_ja": "チャールズ・イームズ",
+      "title": "曲面で包む天体",
+      "description": "成形合板の外殻と支持部 × 入れ子の軌道",
+      "image_url": "../charles-eames.png",
+      "image_sha256": "33c97fe0f290497c22f556293b923d7b4b5d5bcacf027b7a1ba34034974e8d37",
+      "source_profile_identifier": "ea3de1f9-179b-5bca-89e0-289084190234",
+      "sources": [
+        {
+          "sourceIdentifier": "20065102-a071-5360-a709-f51b1d9ff83d",
+          "publisher": "Charles and Ray biography — Eames Office",
+          "url": "https://www.eamesoffice.com/about/biography/",
+          "observedOn": "2026-09-13"
+        },
+        {
+          "sourceIdentifier": "fe8ce6fa-89fd-51a8-8ee8-fb963ab06e1a",
+          "publisher": "Lounge Chair and Ottoman — Eames Foundation",
+          "url": "https://eamesfoundation.org/work/lounge-chair-and-ottoman/",
+          "observedOn": "2026-09-13"
+        }
+      ],
+      "semantic_position": null,
+      "presentation_position": [
+        0.0,
+        -5.2,
+        0
+      ],
+      "texture_identifier": "9d0f5fe2-a948-54ea-b344-dea72386190f",
+      "material_identifier": "be457d87-6c44-589d-b6ec-8ed49c93acb6",
+      "physics": {
+        "enabled": false,
+        "engine_adapter_identifier": "6edc83c2-1389-5922-af41-42b1f22dae8b",
+        "specification": {
+          "body_type": "dynamic",
+          "collider": {
+            "kind": "box",
+            "half_extents": {
+              "value": [
+                3,
+                2,
+                0.06
+              ],
+              "unit": "metre",
+              "value_origin": "presentation_setting",
+              "source_identifier": null
+            }
+          },
+          "mass": {
+            "value": 1,
+            "unit": "kilogram",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "friction": {
+            "value": 0.32,
+            "unit": "dimensionless",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "restitution": {
+            "value": 0.58,
+            "unit": "dimensionless",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "metres_per_scene_unit": {
+            "value": 1,
+            "unit": "metre_per_scene_unit",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          }
+        }
+      }
+    },
+    {
+      "record_id": "3a67a9dd-9f8a-530c-9256-246613348dd0",
+      "artist_reference_identifier": "dab6c340-64db-5084-bd33-2da609519164",
+      "artist_name": "Ray Eames",
+      "artist_name_ja": "レイ・イームズ",
+      "title": "星座を組み立てる",
+      "description": "色のコラージュと紙の構成 × 星座と浮遊",
+      "image_url": "../ray-eames.png",
+      "image_sha256": "c4933e043eb1931a3bb4f64bb83821fbbca0b081298808c373adc12167c3b3f8",
+      "source_profile_identifier": "0fcb82c9-fa68-5fb0-bb38-41102237b725",
+      "sources": [
+        {
+          "sourceIdentifier": "1ad6f2f1-5819-5492-b3f2-04a4e0f8ef8e",
+          "publisher": "House of Cards Mock-up Process — Eames Institute",
+          "url": "https://www.eamesinstitute.org/collection/artifacts/house-of-cards-mock-up-process-diamond-cards/",
+          "observedOn": "2026-09-13"
+        },
+        {
+          "sourceIdentifier": "7dd2584e-d9c6-51a6-ad1e-be3ad79314b0",
+          "publisher": "Small House of Cards — Eames Office",
+          "url": "https://www.eamesoffice.com/product/small-house-of-cards/",
+          "observedOn": "2026-09-13"
+        }
+      ],
+      "semantic_position": null,
+      "presentation_position": [
+        7.3,
+        -5.2,
+        0
+      ],
+      "texture_identifier": "c8b1eeba-8ddf-50cd-a820-7cbc8234f414",
+      "material_identifier": "703c2706-5927-5ef3-9096-414a0fd0b95f",
+      "physics": {
+        "enabled": false,
+        "engine_adapter_identifier": "6edc83c2-1389-5922-af41-42b1f22dae8b",
+        "specification": {
+          "body_type": "dynamic",
+          "collider": {
+            "kind": "box",
+            "half_extents": {
+              "value": [
+                3,
+                2,
+                0.06
+              ],
+              "unit": "metre",
+              "value_origin": "presentation_setting",
+              "source_identifier": null
+            }
+          },
+          "mass": {
+            "value": 1,
+            "unit": "kilogram",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "friction": {
+            "value": 0.32,
+            "unit": "dimensionless",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "restitution": {
+            "value": 0.58,
+            "unit": "dimensionless",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "metres_per_scene_unit": {
+            "value": 1,
+            "unit": "metre_per_scene_unit",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          }
+        }
+      }
+    },
+    {
+      "record_id": "7d619d01-9752-5b7c-a783-8388d2d5e5de",
+      "artist_reference_identifier": "41852fc3-9c13-5961-a023-f2445985467f",
+      "artist_name": "Walter Gropius",
+      "artist_name_ja": "ヴァルター・グロピウス",
+      "title": "軌道上の美術館",
+      "description": "透明な格子と分かれた棟 × 宇宙建築",
+      "image_url": "../walter-gropius.png",
+      "image_sha256": "595059dbe0521bed0cff56afb278d8034344416ceb419f895d5afd6d6b589fb4",
+      "source_profile_identifier": "6956222e-f308-5e00-a3d5-d0129505f27e",
+      "sources": [
+        {
+          "sourceIdentifier": "5c5d1525-fe78-53fe-b221-7e805601df18",
+          "publisher": "Bauhaus Building — Bauhaus Dessau Foundation",
+          "url": "https://bauhaus-dessau.de/en/venues/bauhaus-building/",
+          "observedOn": "2026-09-13"
+        },
+        {
+          "sourceIdentifier": "5c4a479b-3b2d-5134-a7c3-24f69132371f",
+          "publisher": "Glass | Concrete | Metal — Bauhaus Dessau Foundation",
+          "url": "https://bauhaus-dessau.de/en/exhibitions/glass-concrete-metal/?dt=20260328",
+          "observedOn": "2026-09-13"
+        }
+      ],
+      "semantic_position": null,
+      "presentation_position": [
+        14.6,
+        -5.2,
+        0
+      ],
+      "texture_identifier": "62692978-9bff-588a-bf2b-4c00460d1972",
+      "material_identifier": "47791e71-ad49-5a03-a69b-511793115dd2",
+      "physics": {
+        "enabled": false,
+        "engine_adapter_identifier": "6edc83c2-1389-5922-af41-42b1f22dae8b",
+        "specification": {
+          "body_type": "dynamic",
+          "collider": {
+            "kind": "box",
+            "half_extents": {
+              "value": [
+                3,
+                2,
+                0.06
+              ],
+              "unit": "metre",
+              "value_origin": "presentation_setting",
+              "source_identifier": null
+            }
+          },
+          "mass": {
+            "value": 1,
+            "unit": "kilogram",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "friction": {
+            "value": 0.32,
+            "unit": "dimensionless",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "restitution": {
+            "value": 0.58,
+            "unit": "dimensionless",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          },
+          "metres_per_scene_unit": {
+            "value": 1,
+            "unit": "metre_per_scene_unit",
+            "value_origin": "presentation_setting",
+            "source_identifier": null
+          }
+        }
+      }
+    }
+  ]
+}

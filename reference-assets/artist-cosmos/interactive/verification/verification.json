@@ -1,0 +1,22 @@
+{
+  "record_identifier": "812bd57c-a4b2-5b44-a893-e7740a3b032e",
+  "event_identifier": "01a0a5a5-7f45-75f2-9b63-4b92f26853ed",
+  "observed_at": "2026-09-15T15:18:01.798Z",
+  "state": "verified",
+  "manifest_sha256": "108306a4418dd2b7740e2f7130cdac366adc5352d305722047dc41c1db96d616",
+  "lean_source_sha256": "54614a2c5c9461f8e207f947372bb23fb39dcf381202d2fbfcea4e6b1bf5c4fb",
+  "wolfram_code_sha256": "cd01f3a9a8292af65eb5880c0f0ebd2dcd05cec6516ecb2805d81b688036639d",
+  "lean_version": "4.28.0",
+  "theorem_count": 19,
+  "all_axiom_sets_empty": true,
+  "unproved_shortcuts": false,
+  "wolfram_checks": 10,
+  "exact_pair_comparisons": 66,
+  "maximum_squared_distance_error": 1.7763568394002505e-15,
+  "original_image_count": 15,
+  "original_images_unchanged": true,
+  "runtime_tests": 6,
+  "browser_verified": true,
+  "browser_verification_observed_at": "2026-09-15T14:38:48.366Z",
+  "scope": "Exact integer source coordinates and squared distances; display/source separation; initial panel spacing; ideal fixed-step cap. Runtime collision and rendering are checked by tests and browser observation, not proved by Lean."
+}

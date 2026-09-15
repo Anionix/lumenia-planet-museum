@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark">
+  <title>15の宇宙を、動かす。 | Lumenia</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js","three/addons/":"./vendor/"}}</script>
+  <script type="module" src="./main.mjs"></script>
+</head>
+<body>
+  <div class="application">
+    <header>
+      <div class="identity"><a href="../index.html" class="wordmark">Lumenia.</a><h1>15の宇宙を、動かす。</h1></div>
+      <div class="view-controls" aria-label="見せ方">
+        <button type="button" data-view="single" aria-pressed="true">一枚ずつ</button>
+        <button type="button" data-view="all" aria-pressed="false">15枚を並べる</button>
+      </div>
+    </header>
+    <main class="stage" aria-label="画像を動かす展示">
+      <canvas aria-label="画像を貼った立体の展示。下の作家ボタンから選択できます。" tabindex="0"></canvas>
+      <div class="loading" role="status">最初の宇宙を読み込んでいます…</div>
+      <div class="fallback" hidden><p>この画面では立体表示を開始できませんでした。</p><a href="../index.html">15枚の画像を見る</a><button type="button" data-action="reload">再読み込み</button></div>
+      <p class="gesture-hint">ドラッグで視点を回す · ホイールで拡大</p>
+      <div class="motion-controls" aria-label="動かし方">
+        <button type="button" data-action="play" aria-pressed="false">浮かべる</button>
+        <button type="button" data-action="drag" aria-pressed="false">画像をつかむ</button>
+        <button type="button" data-action="reset">配置を戻す</button>
+        <span class="divider" aria-hidden="true"></span>
+        <label class="physics-toggle"><input type="checkbox" name="physics"><span>物理で遊ぶ</span></label>
+        <label class="gravity-control" hidden><span>重力</span><select name="gravity"><option value="off">無重力</option><option value="on">落下させる</option></select></label>
+        <button type="button" data-action="kick" hidden>ふわっと押す</button>
+      </div>
+    </main>
+    <section class="selection" aria-label="選んだ作家">
+      <button type="button" data-action="previous" aria-label="前の作家">←</button>
+      <div class="selection-copy"><p class="artist-name">William Morris</p><h2>織物の惑星</h2><p class="description">植物の反復 × 星雲と惑星</p></div>
+      <button type="button" data-action="next" aria-label="次の作家">→</button>
+      <a class="original" href="../william-morris.png" target="_blank" rel="noopener">元画像を開く ↗</a>
+    </section>
+    <nav class="artist-strip" aria-label="15人の作家"></nav>
+    <footer><span class="engine-status" role="status">描画を準備しています</span><span class="interaction-status" aria-live="polite"></span><a href="./README.md">操作と仕組み</a><a href="../index.html">静止画の一覧</a></footer>
+  </div>
+  <noscript>立体の操作にはJavaScriptが必要です。<a href="../index.html">静止画の一覧を開く</a>。</noscript>
+</body></html>

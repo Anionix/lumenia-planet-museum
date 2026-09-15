@@ -11,14 +11,14 @@ export async function sourceManifest(root = projectRoot) {
   async function visit(directory) {
     for (const entry of await readdir(path.join(root, directory), { withFileTypes: true })) {
       const relative = directory + '/' + entry.name;
-      if (['.next', 'out', 'node_modules'].includes(entry.name) || entry.name.endsWith('.tsbuildinfo') ||
+      if (['.next', '.lake', 'out', 'node_modules'].includes(entry.name) || entry.name.endsWith('.tsbuildinfo') ||
           relative === 'web/next-env.d.ts' || ['web/public/artworks', 'web/public/decoders'].includes(relative)) continue;
       if (entry.isDirectory()) await visit(relative);
       else if (entry.isFile()) inputs.push(relative);
       else throw new Error('Source inputs must be regular files: ' + relative);
     }
   }
-  for (const directory of ['formal', 'contracts', 'scripts', 'tests', 'mcp', 'web']) await visit(directory);
+  for (const directory of ['formal', 'contracts', 'scripts', 'tests', 'mcp', 'web', 'reference-assets']) await visit(directory);
   inputs.sort();
   const files = await Promise.all(inputs.map(async (relative) => ({
     path: relative,

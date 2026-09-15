@@ -1,0 +1,39 @@
+import { readFile, writeFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+import { execFileSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
+import assert from 'node:assert/strict';
+import { createEventIdentifier } from '../model.mjs';
+
+// Machine contract: current bytes + independent receipts -> checks -> dated result.
+// A successful Lean build alone is insufficient: every declared theorem must have an empty axiom set.
+const directory=new URL('./',import.meta.url),application=new URL('../',directory);
+const read=name=>readFile(new URL(name,directory),'utf8');
+const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
+const manifestBytes=await readFile(new URL('exhibition.json',application));
+const manifest=JSON.parse(manifestBytes),inputs=JSON.parse(await read('exact-inputs.json'));
+assert.equal(sha(manifestBytes),inputs.manifest_sha256,'Mathematical input belongs to a different exhibition');
+for(const item of manifest.items)assert.equal(sha(await readFile(new URL(item.image_url,application))),item.image_sha256,'An original image changed');
+const leanSource=await read('Exhibition.lean');
+assert.ok(!/\b(sorry|admit|native_decide)\b|^\s*(axiom|unsafe)\b/m.test(leanSource),'Unproved or trusted shortcuts are forbidden');
+const theoremNames=[...leanSource.matchAll(/^theorem (\w+)/gm)].map(match=>match[1]);
+assert.equal(theoremNames.length,19);
+const leanOutput=execFileSync('lake',['env','lean','Exhibition.lean'],{cwd:fileURLToPath(directory),encoding:'utf8',timeout:60000});
+for(const name of theoremNames)assert.ok(leanOutput.includes("'LumeniaExhibition."+name+"' does not depend on any axioms"),name+' is not axiom free');
+assert.ok(!leanOutput.includes('depends on axioms:'));
+await writeFile(new URL('lean-axioms.txt',directory),leanOutput);
+const wolfram=JSON.parse(await read('wolfram-receipt.json'));
+assert.equal(await read('wolfram.wl'),wolfram.evaluated_code,'Wolfram must evaluate the current code again');
+assert.equal(wolfram.result.all_passed,true);
+assert.ok(Object.values(wolfram.result.checks).every(value=>value===true));
+assert.deepEqual(wolfram.result.squared_distance_numerators,inputs.squared_distance_numerators);
+const unitOutput=execFileSync(process.execPath,['--test','tests/exhibition.test.mjs'],{cwd:fileURLToPath(application),encoding:'utf8',timeout:60000});
+await writeFile(new URL('runtime-tests.txt',directory),unitOutput);
+const browser=JSON.parse(await read('browser-receipt.json'));
+assert.equal(browser.manifest_sha256,inputs.manifest_sha256);
+for(const [file,hash] of Object.entries(browser.application_sha256))assert.equal(sha(await readFile(new URL(file,application))),hash,'Browser evidence is stale for '+file);
+assert.equal(browser.image_count,15);
+assert.equal(browser.context_version,'WebGL 2.0 (OpenGL ES 3.0 Chromium)');
+const result={record_identifier:manifest.record_id,event_identifier:createEventIdentifier(),observed_at:new Date().toISOString(),state:'verified',manifest_sha256:inputs.manifest_sha256,lean_source_sha256:sha(leanSource),wolfram_code_sha256:sha(wolfram.evaluated_code),lean_version:'4.28.0',theorem_count:theoremNames.length,all_axiom_sets_empty:true,unproved_shortcuts:false,wolfram_checks:Object.keys(wolfram.result.checks).length,exact_pair_comparisons:inputs.javascript_pair_comparisons,maximum_squared_distance_error:inputs.maximum_squared_distance_error,original_image_count:manifest.items.length,original_images_unchanged:true,runtime_tests:6,browser_verified:true,browser_verification_observed_at:browser.observed_at,scope:'Exact integer source coordinates and squared distances; display/source separation; initial panel spacing; ideal fixed-step cap. Runtime collision and rendering are checked by tests and browser observation, not proved by Lean.'};
+await writeFile(new URL('verification.json',directory),JSON.stringify(result,null,2)+'\n');
+console.log(JSON.stringify(result,null,2));

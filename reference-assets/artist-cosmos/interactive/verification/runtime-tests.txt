@@ -1,0 +1,14 @@
+✔ initial display keeps 12 source coordinates and 3 unknown values with physics disabled (5.78ms)
+✔ semantic distance is an immutable snapshot independent of mutable display/input arrays (0.596584ms)
+✔ fixed steps agree at 60 and 120 frames per second and cap long pauses (0.174167ms)
+✔ real Rapier bodies collide, remain finite, and do not mutate source coordinates (62.750791ms)
+✔ gravity causes a fall and the display floor catches the panel (10.393666ms)
+✔ kinematic dragging moves a body then releases it into simulation (2.724042ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 270.371
