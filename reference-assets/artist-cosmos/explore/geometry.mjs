@@ -35,7 +35,7 @@ export function createWorldGeometry(recipe) {
           const profile=[],radius=parameters[0],thickness=parameters[1];
           for(let step=0;step<=24;step++){const angle=step/24*Math.PI*0.65;profile.push(new THREE.Vector2(Math.sin(angle)*radius,Math.cos(angle)*radius));}
           for(let step=24;step>=0;step--){const angle=step/24*Math.PI*0.65;profile.push(new THREE.Vector2(Math.sin(angle)*(radius-thickness),Math.cos(angle)*(radius-thickness)));}
-          return new THREE.LatheGeometry(profile,56);
+          return new THREE.LatheGeometry(profile.reverse(),56);
         },
         cylinder: () => new THREE.CylinderGeometry(parameters[0], parameters[1], parameters[2], parameters[3] ?? 40),
         tube: () => new THREE.TubeGeometry(new THREE.CatmullRomCurve3(parameters[0].map(point => new THREE.Vector3(...point))), 64, parameters[1], 8, false),

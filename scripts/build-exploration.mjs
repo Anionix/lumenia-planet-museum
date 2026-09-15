@@ -37,7 +37,7 @@ export async function buildExploration(destination=path.join(projectRoot,'web/pu
   const catalogBytes=JSON.stringify({record_type:'exploration_catalog',recordIdentifier:claimIdentifier('exploration/catalog'),physicsEnabledByDefault:false,worlds:catalog},null,2)+'\n';
   await writeFile(path.join(source,'worlds.json'),catalogBytes);
   await writeFile(path.join(destination,'worlds.json'),catalogBytes);
-  for (const file of ['index.html','style.css','main.mjs','navigation.mjs','geometry.mjs','collision.mjs']) await copyFile(path.join(source,file),path.join(destination,file));
+  for (const file of ['index.html','style.css','main.mjs','navigation.mjs','geometry.mjs','collision.mjs','README.md']) await copyFile(path.join(source,file),path.join(destination,file));
   return {worldCount:catalog.length,physicsEnabledByDefault:false};
 }
 if(process.argv[1]===new URL(import.meta.url).pathname) console.log(JSON.stringify(await buildExploration()));

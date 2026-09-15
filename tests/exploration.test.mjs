@@ -66,6 +66,16 @@ test('each of the fifteen worlds builds and preserves an open passage and a land
     try{
       for(const mesh of geometry.solids){
         assert.ok([...mesh.geometry.attributes.position.array].every(Number.isFinite),entry.slug+' has non-finite vertices');
+        if(mesh.geometry.type==='LatheGeometry'){
+          const vertices=mesh.geometry.attributes.position.array,indices=mesh.geometry.index.array;let volume=0;
+          for(let triangle=0;triangle<indices.length;triangle+=3){
+            const first=indices[triangle]*3,second=indices[triangle+1]*3,third=indices[triangle+2]*3;
+            volume+=(vertices[first]*(vertices[second+1]*vertices[third+2]-vertices[second+2]*vertices[third+1])
+              +vertices[first+1]*(vertices[second+2]*vertices[third]-vertices[second]*vertices[third+2])
+              +vertices[first+2]*(vertices[second]*vertices[third+1]-vertices[second+1]*vertices[third]))/6;
+          }
+          assert.ok(volume>0,'Closed plywood shells must face outward');
+        }
       }
       let position=[...recipe.landmarks[0].position];
       for(let frame=0;frame<40;frame++)position=physics.move(position,[0,0,-.4]);
