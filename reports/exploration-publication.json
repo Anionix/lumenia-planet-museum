@@ -1,0 +1,275 @@
+{
+  "recordIdentifier": "412e8b73-734a-5d4c-84f7-29d8a7dd91d2",
+  "executionIdentifier": "01a0a771-a511-73cb-80f3-d4d6ce1b6c02",
+  "recordedAt": "2026-09-15T23:40:38.033Z",
+  "sourceCommit": "781938bf2cfef86d1309c08484e2242cf8934533",
+  "sourceRevision": "sha256:e81a712d0bb4f40024df879541bb7a916324c4bf0920bbcde3a7f98baa5f5e53",
+  "archiveSha256": "c8d485742346508a46dfd675d7d752d92fed9651b3d81b66825fd69f8319176a",
+  "sites": {
+    "projectIdentifier": "appgprj_6aa6a1d7edc08191b1cfa99c7bdccd26",
+    "versionNumber": 6,
+    "versionIdentifier": "appgprj_6aa6a1d7edc08191b1cfa99c7bdccd26~appgver_663249fd8f4081919eba20212640d22a",
+    "deploymentIdentifier": "appgdep_6aa9d686672c819181f2c90862def3f1",
+    "status": "succeeded",
+    "url": "https://lumenia-planet-museum.anionix.chatgpt.site",
+    "browserObserved": {
+      "galleryEntranceLinks": 15,
+      "readyArtists": [
+        "Ettore Sottsass",
+        "Charles Eames"
+      ],
+      "contextVersion": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "activeWorlds": 1,
+      "physics": "disabled",
+      "forwardBefore": [
+        23,
+        12,
+        34
+      ],
+      "forwardAfter": [
+        22.784,
+        11.896,
+        33.68
+      ],
+      "sourceCoordinateUnchanged": [
+        0.55,
+        -0.65,
+        -0.95
+      ],
+      "missingCharlesCoordinate": null,
+      "consoleErrors": 0
+    }
+  },
+  "vercel": {
+    "projectIdentifier": "prj_4h9ObQFRXdRWPEhGGrJAzmtw0PCi",
+    "deploymentIdentifier": "dpl_2zonwBW8KWj98JGsJGrWnAir3BDF",
+    "state": "READY",
+    "url": "https://lumenia-planet-museum.vercel.app",
+    "sourceCommit": "781938bf2cfef86d1309c08484e2242cf8934533",
+    "checks": [
+      {
+        "path": "index.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "sha256": "21712571b47f006517becbb7f4fbee2dd1aeb0d38a49ce9cdeba4a3e2aa7b7db",
+        "matchesOutput": true
+      },
+      {
+        "path": "cosmos/index.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "sha256": "3f98cb8943756dc2e35f3d1e0999d666dad5f3c158b83a85549b99639c049271",
+        "matchesOutput": true
+      },
+      {
+        "path": "cosmos/explore/index.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "sha256": "29329433a2fee2d8d0fd83edf729b03d69f1d3bd370f26e46976ac0872e8dcc2",
+        "matchesOutput": true
+      },
+      {
+        "path": "cosmos/explore/main.mjs",
+        "status": 200,
+        "contentType": "application/javascript; charset=utf-8",
+        "sha256": "478cbe80c951cf7ae5ae197f4a62497ec4312d4da99dccab472aec2938592b4c",
+        "matchesOutput": true
+      },
+      {
+        "path": "cosmos/explore/navigation.mjs",
+        "status": 200,
+        "contentType": "application/javascript; charset=utf-8",
+        "sha256": "99b9a8816885b3b676b92e062f378d753129d036d6139e500cadfc2aa81aa4a5",
+        "matchesOutput": true
+      },
+      {
+        "path": "cosmos/explore/geometry.mjs",
+        "status": 200,
+        "contentType": "application/javascript; charset=utf-8",
+        "sha256": "cef74914f09f2fba6facf47383761ec1cf521042780527cdf5672e4056684488",
+        "matchesOutput": true
+      },
+      {
+        "path": "cosmos/explore/collision.mjs",
+        "status": 200,
+        "contentType": "application/javascript; charset=utf-8",
+        "sha256": "13f558e4d8f8c72391471366bcf741b807b75d676ee5f32bb38a3b8dbf8c48be",
+        "matchesOutput": true
+      },
+      {
+        "path": "cosmos/explore/README.md",
+        "status": 200,
+        "contentType": "text/markdown; charset=utf-8",
+        "sha256": "f3734efaea1645d9d4c4a5837a11c38719cc6aa4e06e7090c286b020f2f2d409",
+        "matchesOutput": true
+      },
+      {
+        "path": "cosmos/explore/worlds.json",
+        "status": 200,
+        "contentType": "application/json; charset=utf-8",
+        "sha256": "68a37e5a703e748a0e741c3defbbdf3e4a620f41dce92c7af7884cf03a79edff",
+        "matchesOutput": true
+      },
+      {
+        "path": "cosmos/ettore-sottsass.png",
+        "status": 200,
+        "contentType": "image/png",
+        "sha256": "62f9f2086ffa001a9b5c326c4a4fb7eeba1ae4857fe9eb93a1f465349161cefa",
+        "matchesOutput": true
+      },
+      {
+        "path": "cosmos/interactive/index.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "sha256": "0a3014a9089b63a11268b8d802074f45fa5b2733ad4a61bbf36f7df274c43fc9",
+        "matchesOutput": true
+      },
+      {
+        "path": "records/index.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "sha256": "2531c44c36ee927abc39d2f3a666252beec2a077eb90b102f8907919c3480c9d",
+        "matchesOutput": true
+      },
+      {
+        "path": "cosmos/explore/worlds/alphonse-mucha.json",
+        "status": 200,
+        "contentType": "application/json; charset=utf-8",
+        "sha256": "0f83d764f60976289e7fbc0c1dbdb67153766cfdfa646be7d913111b272850b7",
+        "matchesOutput": true
+      },
+      {
+        "path": "cosmos/explore/worlds/charles-eames.json",
+        "status": 200,
+        "contentType": "application/json; charset=utf-8",
+        "sha256": "65ffa39ad47261b6ee9208306ab3944d6f0db7d28060c571f54f9cac0acef827",
+        "matchesOutput": true
+      },
+      {
+        "path": "cosmos/explore/worlds/charles-rennie-mackintosh.json",
+        "status": 200,
+        "contentType": "application/json; charset=utf-8",
+        "sha256": "7ff646191074ec3e7ccf8b8eb3e0c4201e7d2ac05e9d6471e6e03b0f0ae4d2ea",
+        "matchesOutput": true
+      },
+      {
+        "path": "cosmos/explore/worlds/dieter-rams.json",
+        "status": 200,
+        "contentType": "application/json; charset=utf-8",
+        "sha256": "6eda4ca02aa1ed636d6d6c8196815c7067d619d33ceed6906592b22c4bfd217e",
+        "matchesOutput": true
+      },
+      {
+        "path": "cosmos/explore/worlds/ettore-sottsass.json",
+        "status": 200,
+        "contentType": "application/json; charset=utf-8",
+        "sha256": "fb3ac97e605e0175961f3c5caa2960ba5cea90d675e74ce7a7192d0bf44b672b",
+        "matchesOutput": true
+      },
+      {
+        "path": "cosmos/explore/worlds/gerrit-rietveld.json",
+        "status": 200,
+        "contentType": "application/json; charset=utf-8",
+        "sha256": "830919c67b451684ff5a4979d8ae2b8895a171e2512c554f8b0689181c08c82f",
+        "matchesOutput": true
+      },
+      {
+        "path": "cosmos/explore/worlds/herbert-bayer.json",
+        "status": 200,
+        "contentType": "application/json; charset=utf-8",
+        "sha256": "f8c4532a4adfa846bd96b84f4ee7b69c5cc7d9469fc7fe186db6647dcb56702b",
+        "matchesOutput": true
+      },
+      {
+        "path": "cosmos/explore/worlds/josef-muller-brockmann.json",
+        "status": 200,
+        "contentType": "application/json; charset=utf-8",
+        "sha256": "c8aa85237a82634db071cf1537798c03e52748242231a31d7ea90a0f29824aca",
+        "matchesOutput": true
+      },
+      {
+        "path": "cosmos/explore/worlds/massimo-vignelli.json",
+        "status": 200,
+        "contentType": "application/json; charset=utf-8",
+        "sha256": "8ee1785ab63f4b3d80a14a4caf295f14869af38b51d65ba6d8372c40d785958a",
+        "matchesOutput": true
+      },
+      {
+        "path": "cosmos/explore/worlds/naoto-fukasawa.json",
+        "status": 200,
+        "contentType": "application/json; charset=utf-8",
+        "sha256": "f93dc6864304ebf47aecb13272e71c80013acf80137ec77405f5822c669102d2",
+        "matchesOutput": true
+      },
+      {
+        "path": "cosmos/explore/worlds/piet-mondrian.json",
+        "status": 200,
+        "contentType": "application/json; charset=utf-8",
+        "sha256": "7eb0111d5a68e863c3dcd91f6b670f0089c4067d4e94e6fbb96ef4e842596eee",
+        "matchesOutput": true
+      },
+      {
+        "path": "cosmos/explore/worlds/ray-eames.json",
+        "status": 200,
+        "contentType": "application/json; charset=utf-8",
+        "sha256": "73adf919c358f6abe24a508fff81070caca45f246b7b8a53f0c537263e8f16fb",
+        "matchesOutput": true
+      },
+      {
+        "path": "cosmos/explore/worlds/rei-kawakubo.json",
+        "status": 200,
+        "contentType": "application/json; charset=utf-8",
+        "sha256": "69bb6af25b333be75f5ec25ace0bc821b801f6a92c445d1f2d2fd8d5f3fc2de4",
+        "matchesOutput": true
+      },
+      {
+        "path": "cosmos/explore/worlds/walter-gropius.json",
+        "status": 200,
+        "contentType": "application/json; charset=utf-8",
+        "sha256": "b2cb6370ecc3c6d4262a69223d5b5bc2300419d42b1777cebbc322ab28cc89b1",
+        "matchesOutput": true
+      },
+      {
+        "path": "cosmos/explore/worlds/william-morris.json",
+        "status": 200,
+        "contentType": "application/json; charset=utf-8",
+        "sha256": "3e82f60d3d049df3c318d34b4318ebac611692493be4a24d15ab297b89e35dec",
+        "matchesOutput": true
+      }
+    ]
+  },
+  "verification": {
+    "automatedTests": 109,
+    "applicationChecks": 6,
+    "explorationTheorems": 10,
+    "explorationAxiomDependencies": [],
+    "wolframConditions": 6,
+    "rootRegisteredTheorems": 27,
+    "rootLanguageServerScope": "Earlier language-server execution reused only after all 13 formal input hashes were rechecked unchanged.",
+    "browserReceipt": "reports/fifteen-worlds-browser.json"
+  },
+  "implementationPullRequests": [
+    14,
+    15,
+    17,
+    18
+  ],
+  "scope": "Fifteen newly constructed explorable worlds inspired by the reference images. Source-coordinate and mathematical checks are separate from actual browser and collision observations.",
+  "limitations": [
+    "No claim of exact three-dimensional recovery from a single image.",
+    "Cross-browser and physical mobile-device performance remain unmeasured."
+  ],
+  "publicationStateTransitions": [
+    {
+      "from": "validated local output",
+      "to": "existing public Sites and Vercel deployments",
+      "sourceCommit": "781938bf2cfef86d1309c08484e2242cf8934533"
+    },
+    {
+      "from": "deployed",
+      "to": "public page and output readback confirmed",
+      "matchingVercelFiles": 27
+    }
+  ],
+  "receiptScope": "This receipt is committed after publication. It does not imply that its own later commit was deployed."
+}
