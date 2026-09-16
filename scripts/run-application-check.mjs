@@ -147,8 +147,7 @@ try {
   add('PlumeriaRuntimeRemovalGate', null, error.message, ['production evidence availability']);
   add(drawingGateName, null, error.message, ['production evidence availability']);
 }
-const after = await sourceManifest();
-if (after.sourceRevision !== manifest.sourceRevision) throw new Error('Source changed during application inspection');
+if ((await sourceManifest()).sourceRevision !== manifest.sourceRevision) throw new Error('Source changed during application inspection');
 const result = verificationResult(registry, context.sourceRevision, executionIdentifier, observations);
 await saveReport('application-report', result, evidence);
 console.log(JSON.stringify({ status: result.status, gates: observations.length, diagnostics: diagnostics.length, issues: inspection.issues }));

@@ -53,8 +53,7 @@ export async function buildWeb() {
   evidence.command = 'next build web --webpack'; evidence.exitCode = result.status;
   evidence.stdout = result.stdout; evidence.stderr = result.stderr;
   process.stdout.write(result.stdout ?? ''); process.stderr.write(result.stderr ?? '');
-  const after = await sourceManifest();
-  if (result.status === 0 && after.sourceRevision === manifest.sourceRevision) {
+  if ((await sourceManifest()).sourceRevision === manifest.sourceRevision && result.status === 0) {
     evidence.outputs = await outputManifest(); evidence.state = 'built';
   }
   await writeFile(path.join(projectRoot, 'reports/web-build-evidence.json'), JSON.stringify(evidence, null, 2) + '\n');
