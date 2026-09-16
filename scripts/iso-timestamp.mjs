@@ -7,24 +7,17 @@ transition: untrusted timestamp -> finite instant or rejection
 */
 
 const timestampPattern =
-  /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})(?:\.(\d{1,6}))?(Z|[+-]\d{2}:\d{2})$/;
-
-function daysInMonth(year, month) {
-  if (month === 2) {
-    const leap = year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
-    return leap ? 29 : 28;
-  }
-  return [4, 6, 9, 11].includes(month) ? 30 : 31;
-}
+  /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})(?:\.(\d+))?(Z|[+-]\d{2}:\d{2})$/;
 
 export function parseIsoTimestamp(value) {
   if (typeof value !== 'string') return Number.NaN;
   const match = timestampPattern.exec(value);
   if (!match) return Number.NaN;
-  const [, yearText, monthText, dayText, hourText, minuteText, secondText, fraction, zone] = match;
-  const year = Number(yearText), month = Number(monthText), day = Number(dayText);
-  const hour = Number(hourText), minute = Number(minuteText), second = Number(secondText);
-  if (month < 1 || month > 12 || day < 1 || day > daysInMonth(year, month) ||
+  const [year, month, day, hour, minute, second] = match.slice(1, 7).map(Number);
+  const [fraction, zone] = match.slice(7);
+  const date = new Date(0);
+  date.setUTCFullYear(year, month - 1, day);
+  if (date.toISOString().slice(0, 10) !== value.slice(0, 10) ||
       hour > 23 || minute > 59 || second > 59) return Number.NaN;
   let offsetMinutes = 0;
   if (zone !== 'Z') {
@@ -32,13 +25,10 @@ export function parseIsoTimestamp(value) {
     if (offsetHours > 23 || offsetMinute > 59) return Number.NaN;
     offsetMinutes = (zone[0] === '+' ? 1 : -1) * (offsetHours * 60 + offsetMinute);
   }
-  const date = new Date(0);
-  date.setUTCFullYear(year, month - 1, day);
   date.setUTCHours(hour, minute, second, 0);
-  const fractionMilliseconds = fraction === undefined ? 0 :
-    Number(fraction) / 10 ** fraction.length * 1000;
-  const timestamp = date.getTime() + fractionMilliseconds - offsetMinutes * 60 * 1000;
-  return Number.isFinite(timestamp) ? timestamp : Number.NaN;
+  // Fractional milliseconds use Number precision; the original timestamp text is preserved by callers.
+  const fractionMilliseconds = Number('0.' + (fraction ?? '0')) * 1000;
+  return date.getTime() + fractionMilliseconds - offsetMinutes * 60 * 1000;
 }
 
 export const isIsoTimestamp = value => Number.isFinite(parseIsoTimestamp(value));
