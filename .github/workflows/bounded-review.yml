@@ -15,7 +15,7 @@ jobs:
         env:
           CHANGE_BASE: ${{ github.event.pull_request.base.sha }}
           CHANGE_HEAD: ${{ github.event.pull_request.head.sha }}
-      - run: npm ci && npm run lint && npx --no-install eslint scripts
+      - run: npm ci && npm run lint && npx --no-install eslint scripts tests
       - run: node scripts/connect-planetarium.mjs
       - run: node --test --test-name-pattern='code gates|framework links|Plumeria' tests/application.test.mjs
       - run: node --test tests/json-lines.test.mjs tests/iso-timestamp.test.mjs tests/audit-record-consistency.test.mjs tests/exploration.test.mjs tests/review-verification.test.mjs tests/contract.test.mjs
