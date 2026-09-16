@@ -3,6 +3,15 @@ import assert from 'node:assert/strict';
 import { readAuditRecords, verifyAuditRecords } from '../scripts/audit-record-consistency.mjs';
 
 const records = await readAuditRecords();
+const encodeResult = program => program.response.content[0].text = 'Out[1]= ' + JSON.stringify(JSON.stringify(program.decoded));
+for (const name of ['material', 'images', 'exploration', 'clock', 'review']) test('accepts reordered ' + name + ' check names', () => {
+  const changed = structuredClone(records), program = changed.wolfram.programs.find(program => program.name === name);
+  const reverse = value => Object.fromEntries(Object.entries(value).reverse());
+  if (name === 'exploration') program.decoded = reverse(program.decoded);
+  else program.decoded.checks = reverse(program.decoded.checks);
+  encodeResult(program);
+  assert.equal(verifyAuditRecords(changed).status, 'pass');
+});
 test('all sixteen summary obligation combinations match the Boolean proof model', () => {
   for (let combination = 0; combination < 16; combination++) {
     const changed = structuredClone(records);
@@ -39,22 +48,21 @@ for (const [label, mutate] of Object.entries({
 })) test('rejects ' + label, () => {
   const changed = structuredClone(records);
   mutate(changed);
-  if (label === 'duplicate material input') {
-    const program = changed.wolfram.programs.find(item => item.name === 'material');
-    program.response.content[0].text = 'Out[1]= ' + JSON.stringify(JSON.stringify(program.decoded));
-  }
-  assert.throws(() => verifyAuditRecords(changed));
+  changed.wolfram.programs.forEach(encodeResult);
+  const message = label === 'root total count' ? /Root total inputs/ : label.startsWith('root') ? /Root comparison inputs/ :
+    label === 'duplicate material input' ? /Material input coverage/ : /check names/;
+  assert.throws(() => verifyAuditRecords(changed), message);
 });
 const replaceRootResult = (records, mutate, name = 'root') => {
   const root = records.wolfram.programs.find(program => program.name === name);
   mutate(root.decoded);
-  root.response.content[0].text = 'Out[1]= ' + JSON.stringify(JSON.stringify(root.decoded));
+  encodeResult(root);
 };
 for (const [name, field] of [['material', 'calculationChecksPass'], ['images', 'all_passed'], ['clock', 'all_passed'], ['review', 'all_passed']])
   for (const outcome of [false, undefined]) test(`rejects ${name} aggregate ${outcome}`, () => {
     const changed = structuredClone(records), program = changed.wolfram.programs.find(program => program.name === name);
-    program.decoded[field] = outcome;
-    program.response.content[0].text = 'Out[1]= ' + JSON.stringify(JSON.stringify(program.decoded));
+    if (outcome === undefined) delete program.decoded[field]; else program.decoded[field] = outcome;
+    encodeResult(program);
     assert.throws(() => verifyAuditRecords(changed));
   });
 for (const [name, mutate] of Object.entries({
@@ -108,7 +116,7 @@ for (const [summaryField, resultField] of [['statePairs', 'state_pair_count'], [
     changed.summary.wolfram[summaryField] = invalid;
     assert.throws(() => verifyAuditRecords(changed));
     if (invalid !== 999) {
-      replaceRootResult(changed, result => result[resultField] = invalid, 'review');
-      assert.throws(() => verifyAuditRecords(changed));
+      replaceRootResult(changed, result => { if (invalid === undefined) delete result[resultField]; else result[resultField] = invalid; }, 'review');
+      assert.throws(() => verifyAuditRecords(changed), /Invalid calculation metric/);
     }
   });

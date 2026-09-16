@@ -72,10 +72,13 @@ test('format exceptions require a reasoned standard-JSON row and unique paths', 
   for (const row of [
     { ...valid, record_type: 'wrong_type' }, { ...valid, reason: '' }, { ...valid, scope: '   ' },
     { ...valid, recordIdentifier: undefined }, { ...valid, reason: undefined }, { ...valid, scope: 1 },
+    { ...valid, recordIdentifier: [valid.recordIdentifier] }, { ...valid, recordIdentifier: [[valid.recordIdentifier]] },
     { ...valid, path: '../config.json' }, { ...valid, path: '/tmp/config.json' },
   ]) await assert.rejects(inspectDataFormats(['config.json'], root, [row]));
   assert.throws(() => exceptionPaths([valid, { ...valid, recordIdentifier: 'f53a1ddb-d675-5099-8bb5-15a8156d0d1a' }]));
   assert.throws(() => exceptionPaths([valid, { ...valid, path: 'other.json' }]));
+  assert.deepEqual(exceptionPaths([{ ...valid, recordIdentifier: valid.recordIdentifier.toUpperCase() }]), new Set(['config.json']));
+  assert.throws(() => exceptionPaths([valid, { ...valid, path: 'other.json', recordIdentifier: valid.recordIdentifier.toUpperCase() }]));
 });
 
 test('file readers and the format gate reject malformed bytes without changing valid text', async context => {

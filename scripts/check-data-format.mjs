@@ -36,11 +36,11 @@ export function exceptionPaths(rows) {
     for (const field of ['reason', 'scope']) {
       if (!nonEmptyString(row[field])) throw new Error(`JSON Lines exception ${index + 1} requires a non-empty ${field}.`);
     }
-    if (!uuidV5Pattern.test(row.recordIdentifier ?? ''))
+    if (typeof row.recordIdentifier !== 'string' || !uuidV5Pattern.test(row.recordIdentifier))
       throw new Error(`JSON Lines exception ${index + 1} has an invalid recordIdentifier.`);
-    if (identifiers.has(row.recordIdentifier))
+    if (identifiers.has(row.recordIdentifier.toLowerCase()))
       throw new Error(`JSON Lines exception ${index + 1} duplicates a recordIdentifier.`);
-    identifiers.add(row.recordIdentifier);
+    identifiers.add(row.recordIdentifier.toLowerCase());
     if (paths.has(row.path)) throw new Error(`JSON Lines exception ${index + 1} duplicates a path.`);
     paths.add(row.path);
   });
