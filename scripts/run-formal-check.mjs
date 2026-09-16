@@ -13,6 +13,7 @@ import { sourceManifest, projectRoot } from './source-revision.mjs';
 import { observation, verificationResult, saveReport } from './report.mjs';
 import { evaluateObservation } from './contract.mjs';
 import { axiomDependenciesAreEmpty, languageServerCheckSucceeded, languageServerReceiptMatchesSource } from './language-server-evidence.mjs';
+import { captureLanguageServerReceipt } from './capture-language-server.mjs';
 
 const manifest = await sourceManifest();
 const executionIdentifier = uuidVersionSeven();
@@ -104,7 +105,7 @@ add('Lumenia.TheoremAxiomDependencyGate', audit.exitCode === 0 ? auditErrors.len
   'Zero axioms required; nonempty dependencies or missing output: ' + auditErrors.join(', '));
 
 try {
-  const receipt = JSON.parse(await readFile(path.join(projectRoot, 'reports/lean-lsp-evidence.json'), 'utf8'));
+  const receipt = await captureLanguageServerReceipt();
   evidence.languageServerReceipt = receipt;
   const requiredTools = ['lean_build', 'lean_diagnostic_messages', 'lean_goal',
     'lean_hover_info', 'lean_verify', 'lean_file_outline'];
