@@ -11,7 +11,7 @@ export async function inspectDataFormats(files, root, exceptions) {
   const issues = [];
   for (const file of files.filter(file => /\.jsonl?$/.test(file))) {
     let text;
-    try { text = await readFile(path.join(root, file), 'utf8'); }
+    try { text = await readFile(path.join(root, file)); }
     catch (error) { if (error.code === 'ENOENT') continue; throw error; }
     if (file.endsWith('.json')) {
       if (!exceptions.has(file)) issues.push({ file, reason: 'Independent data must use .jsonl.' });

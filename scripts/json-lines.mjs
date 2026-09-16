@@ -3,6 +3,8 @@ import { readFile, writeFile } from 'node:fs/promises';
 // machine contract: UTF-8 records -> one JSON value per line; invalid lines -> rejected.
 // Source: https://jsonlines.org/ . Protocol messages and required tool settings keep their own formats.
 export function parseJsonLines(text) {
+  if (text instanceof Uint8Array) text = new TextDecoder('utf-8', { fatal: true, ignoreBOM: true }).decode(text);
+  if (typeof text !== 'string') throw new TypeError('JSON Lines requires text or UTF-8 bytes.');
   if (text.startsWith('\uFEFF')) throw new Error('JSON Lines must not contain a byte order mark.');
   if (!text) return [];
   const lines = text.replace(/\n$/, '').split('\n');
@@ -18,5 +20,5 @@ export function serializeJsonLines(records) {
     return text + '\n';
   }).join('');
 }
-export const readJsonLines = async file => parseJsonLines(await readFile(file, 'utf8'));
+export const readJsonLines = async file => parseJsonLines(await readFile(file));
 export const writeJsonLines = (file, records) => writeFile(file, serializeJsonLines(records));
