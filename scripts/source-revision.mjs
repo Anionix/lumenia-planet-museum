@@ -12,6 +12,7 @@ export async function sourceManifest(root = projectRoot, { includePlanetarium = 
   const inputs = ['intent.md', 'spec.md', 'CONSTRAINTS.md', 'lean-toolchain',
     'lakefile.toml', 'lake-manifest.json', 'package.json', 'package-lock.json', 'eslint.config.mjs'];
   if ((await readdir(root)).includes('vercel.json')) inputs.push('vercel.json');
+  if (!includePlanetarium) inputs.push('planetarium/lib/reference-physics-contract.mjs');
   async function visit(directory) {
     for (const entry of await readdir(path.join(root, directory), { withFileTypes: true })) {
       const relative = directory + '/' + entry.name;
