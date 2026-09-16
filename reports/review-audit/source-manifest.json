@@ -1,9 +1,9 @@
 {
-  "executionIdentifier": "01a0a9c6-c101-794e-b225-4b01c529c05f",
-  "recordedAt": "2026-09-16T10:39:15.534Z",
-  "sourceRevisionBefore": "sha256:87ed8dc07a6cf314667c9e4f158ea72255a3130c220ca3192f1266e238231c76",
-  "sourceRevisionAfter": "sha256:87ed8dc07a6cf314667c9e4f158ea72255a3130c220ca3192f1266e238231c76",
-  "sourceRevision": "sha256:87ed8dc07a6cf314667c9e4f158ea72255a3130c220ca3192f1266e238231c76",
+  "executionIdentifier": "01a0aa33-cc00-7a0f-a691-0a14f659ede2",
+  "recordedAt": "2026-09-16T12:31:56.416Z",
+  "sourceRevisionBefore": "sha256:e2848a5d3243b0f7f5b56ca16b9132acf4c0612c4c0adee33566482f1cf4e973",
+  "sourceRevisionAfter": "sha256:e2848a5d3243b0f7f5b56ca16b9132acf4c0612c4c0adee33566482f1cf4e973",
+  "sourceRevision": "sha256:e2848a5d3243b0f7f5b56ca16b9132acf4c0612c4c0adee33566482f1cf4e973",
   "files": [
     {
       "path": "CONSTRAINTS.md",
@@ -527,7 +527,7 @@
     },
     {
       "path": "scripts/audit-review-kernel.mjs",
-      "sha256": "e69699d14caaba0a914d7a4c0ca40fdf870c20fd1f6ce658c55d9eddbd35c7c3"
+      "sha256": "2c22c0c9a24800b5bb591886e10afac7fdb4a89b42306cdde829bed250f25412"
     },
     {
       "path": "scripts/browser-observations.mjs",
@@ -655,7 +655,7 @@
     },
     {
       "path": "scripts/source-revision.mjs",
-      "sha256": "0bc29e99a721a9e660f2941faeb5f058b14be99770871c2a9981e19b252daff5"
+      "sha256": "51b9ac76898ac7e2630456ce8b860ffc1fd4e5768ba3c440e140debb65a428a0"
     },
     {
       "path": "scripts/stage-museum-character.mjs",
@@ -747,7 +747,7 @@
     },
     {
       "path": "tests/review-verification.test.mjs",
-      "sha256": "b8268b99346f0e9d64181c967262911b25b3eec5f54ece7a1c8d136a45c25407"
+      "sha256": "8c805d899f4ce61069f9feab1c0f415a2d9b906ac424583c909929e0b9939f97"
     },
     {
       "path": "tests/threejs-reference-adapter.test.mjs",
@@ -1013,6 +1013,5 @@
       "path": "web/tsconfig.json",
       "sha256": "c77757068271adb58670f7d2de2d253ef2ffe2918809f8460b6d624496293d19"
     }
-  ],
-  "recordIdentifier": "1b6ff9b9-c071-5f0f-81ce-535a53e2ee66"
+  ]
 }
