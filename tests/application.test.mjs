@@ -63,6 +63,25 @@ test('code gates accept module-scope Plumeria arrays inside a client boundary', 
   assert.deepEqual(inspectSources(sources).issues, { plumeriaScope: [], plumeriaComposition: [], staticExport: [], componentBoundary: [] });
 });
 
+test('code gates trace star and named re-exports through client dependencies', () => {
+  const sources = new Map([
+    ['web/app/page.tsx', `import {Client} from '../Client'; export default function Page(){return <Client/>}`],
+    ['web/Client.tsx', `'use client'; export * from './artwork/entry'`],
+    ['web/artwork/entry.ts', `export {value} from './shared'`],
+    ['web/artwork/shared.ts', 'export const value = window.requestAnimationFrame;'],
+  ]);
+  const inspection = inspectSources(sources);
+  assert.deepEqual(inspection.graph.find(module => module.filename === 'web/Client.tsx').dependencies, ['web/artwork/entry.ts']);
+  assert.deepEqual(inspection.graph.find(module => module.filename === 'web/artwork/entry.ts').dependencies, ['web/artwork/shared.ts']);
+  assert.deepEqual(inspection.clientReached.sort(), ['web/Client.tsx', 'web/artwork/entry.ts', 'web/artwork/shared.ts']);
+  assert.deepEqual(inspection.issues.componentBoundary, []);
+});
+
+test('code gates ignore local export declarations without a module specifier', () => {
+  assert.deepEqual(inspectSources(new Map([['web/app/page.tsx', 'const value = 1; export {value};']])).issues,
+    { plumeriaScope: [], plumeriaComposition: [], staticExport: [], componentBoundary: [] });
+});
+
 // llm machine contract; claim UUIDv5: e9194426-a204-577c-9758-7bfe9644b8fc
 // execution UUIDv7: 01a0a324-741b-715a-be47-5cd2936becb7; transition: framework link -> explicit static application capability
 test('framework links work in server and client pages without admitting unknown framework modules', () => {
