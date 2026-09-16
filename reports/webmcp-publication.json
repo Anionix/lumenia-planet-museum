@@ -1,0 +1,133 @@
+{
+  "recordIdentifier": "d47e7c62-fef4-5d73-954f-7a82f7c72c5a",
+  "executionIdentifier": "01a0a999-1420-7218-a1ae-bfa976304ffc",
+  "recordedAt": "2026-09-16T09:42:56.800Z",
+  "status": "pass",
+  "sourceCommit": "5459100f2c88a63f480003120681e7b44dac5eab",
+  "sourceRevision": "sha256:fa371b84fa47949a1c010e29b9545cb3671b586f9700f4df604d117be0605a2a",
+  "sites": {
+    "projectIdentifier": "appgprj_6aa6a1d7edc08191b1cfa99c7bdccd26",
+    "versionIdentifier": "appgprj_6aa6a1d7edc08191b1cfa99c7bdccd26~appgver_01421fe790bc81919818d13ec5c0e65e",
+    "versionNumber": 7,
+    "deploymentIdentifier": "appgdep_6aaa6306ff3c819192f2ab3dfc9ff709",
+    "status": "succeeded",
+    "updatedAt": "2026-09-16T09:37:01.555151+00:00",
+    "url": "https://lumenia-planet-museum.anionix.chatgpt.site",
+    "accessMode": "public",
+    "accessModeChanged": false,
+    "archiveSha256": "c2cc9babf510a43cb008cc846562d9dee36246dc71ecbf9fa96358d18c667955"
+  },
+  "vercel": {
+    "deploymentIdentifier": "dpl_DtRBJfsa8kZS8QLQiYazZWtBuX5A",
+    "status": "READY",
+    "url": "https://lumenia-planet-museum.vercel.app",
+    "sourceCommit": "5459100f2c88a63f480003120681e7b44dac5eab",
+    "fileChecks": [
+      {
+        "path": "cosmos/interactive/webmcp.mjs",
+        "status": 200,
+        "sha256": "9f825821aec1e5abcafb0e57c3f82a4ee104998a3024ca13d5d69872555bb015",
+        "matchesBuild": true
+      },
+      {
+        "path": "cosmos/interactive/main.mjs",
+        "status": 200,
+        "sha256": "b22762da2169554fa5ebef0079a7dcb189a7b9e846517354d8a6c1862acf5c8b",
+        "matchesBuild": true
+      },
+      {
+        "path": "cosmos/interactive/index.html",
+        "status": 200,
+        "sha256": "7fdcd4301499ff70f6eead1fbbb55489df4822988f44674db5a50c50b0eeaf53",
+        "matchesBuild": true
+      },
+      {
+        "path": "cosmos/explore/main.mjs",
+        "status": 200,
+        "sha256": "0d4471dedf1b05074c71e85f98de67210bc51cafbd88b1fb60db59f7a2404c7c",
+        "matchesBuild": true
+      },
+      {
+        "path": "cosmos/explore/index.html",
+        "status": 200,
+        "sha256": "f7389559b538b733be0ba2f36e377095945d21c5e4ef243baaefa187152a1bfd",
+        "matchesBuild": true
+      }
+    ]
+  },
+  "nativeBrowserChecks": [
+    {
+      "page": "https://lumenia-planet-museum.anionix.chatgpt.site/cosmos/explore/?world=ettore-sottsass",
+      "registeredTools": 4,
+      "tool": "navigate_exploration",
+      "recordIdentifier": "67967a29-8717-53da-9574-733e7e9a388e",
+      "executionIdentifier": "01a0a995-82e1-7475-a61d-bab3cd6156ce",
+      "completedAt": "2026-09-16T09:39:03.015Z",
+      "input": {
+        "viewpoint": "passage",
+        "movement": [
+          0,
+          0,
+          -1
+        ],
+        "steps": 24
+      },
+      "status": "complete",
+      "cameraPosition": [
+        -17,
+        5,
+        6.3999999999999915
+      ],
+      "sourceCoordinate": [
+        0.55,
+        -0.65,
+        -0.95
+      ],
+      "physics": "disabled",
+      "renderedFrames": 2,
+      "visibleText": "自由に飛行 · 現在地 -17.0 / 5.0 / 6.4 m"
+    },
+    {
+      "page": "https://lumenia-planet-museum.anionix.chatgpt.site/cosmos/interactive/",
+      "registeredTools": 4,
+      "tool": "configure_image_exhibition",
+      "recordIdentifier": "7512e65e-466a-501a-aa88-01dd5d93e414",
+      "executionIdentifier": "01a0a997-cab7-7692-8264-6e49dbbadeab",
+      "completedAt": "2026-09-16T09:41:35.539Z",
+      "input": {
+        "artist_identifier": "3cd9061a-a70c-5b5f-9175-d731e4d995e8",
+        "view": "single",
+        "playing": false,
+        "physics_enabled": false
+      },
+      "status": "complete",
+      "artist": "Ettore Sottsass",
+      "view": "single",
+      "sourceCoordinate": [
+        0.55,
+        -0.65,
+        -0.95
+      ],
+      "loadedImages": 2,
+      "physics": "disabled",
+      "playing": false,
+      "renderedFrames": 22,
+      "visibleText": "WebGL 2 · 2 / 15枚 物理：切"
+    }
+  ],
+  "review": {
+    "url": "https://github.com/Anionix/lumenia-planet-museum/pull/21",
+    "baseBranch": "codex/exploration-publication-evidence",
+    "mergeable": true,
+    "merged": false
+  },
+  "community": {
+    "welcomeUrl": "https://github.com/Anionix/lumenia-planet-museum/discussions/20",
+    "pinned": true,
+    "pinConfirmation": "Discussion has successfully been pinned.",
+    "wikiUrl": "https://github.com/Anionix/lumenia-planet-museum/wiki",
+    "sidebarCreated": true,
+    "reciprocalLinksVerified": true
+  },
+  "scope": "Publication source is the commit above. This receipt is a later documentation-only commit. Native browser execution was verified on Sites; public file equality was verified on Vercel."
+}

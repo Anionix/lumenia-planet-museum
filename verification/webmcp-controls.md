@@ -46,3 +46,7 @@
 - [Google Chrome LabsのWebMCP開発用ツール](https://github.com/GoogleChromeLabs/webmcp-tools/)：操作の発見と実行。
 - [GitHubのWiki編集案内](https://docs.github.com/en/communities/documenting-your-project-with-wikis/adding-or-editing-wiki-pages)：資料ページの管理。
 - [GitHub Discussionsの案内](https://docs.github.com/en/discussions/quickstart)：相談場所の管理。
+
+## 公開後の確認
+
+Sitesの第7版とVercelに、同じソース `5459100f2c88a63f480003120681e7b44dac5eab` を公開した。Sitesの公開画面から移動と作家切り替えを実行し、画面表示と返却値の一致を確認した。Vercelでは変更した5ファイルが検証済みビルドと一致した。記録は `reports/webmcp-publication.json`。この記録の追加は公開したプログラムを変更しない。
