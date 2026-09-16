@@ -9,12 +9,35 @@ import {fileURLToPath} from 'node:url';
 import {sourceManifest} from '../scripts/source-revision.mjs';
 import {evidenceDigest,languageServerReceiptMatchesSource,languageServerTargetMatchesInvocation} from '../scripts/language-server-evidence.mjs';
 import {captureLanguageServerReceipt} from '../scripts/capture-language-server.mjs';
+import {checkChangeSize} from '../scripts/check-change-size.mjs';
 
 test('generated server configuration keeps the project root outside the checkout',()=>{
   const script=fileURLToPath(new URL('../scripts/capture-language-server.mjs',import.meta.url));
   const configuration=JSON.parse(execFileSync(process.execPath,[script,'--configuration'],{cwd:tmpdir(),encoding:'utf8'}));
   assert.deepEqual(configuration.mcpServers['lean-lsp'].args.slice(-2),['--lean-project-path',fileURLToPath(new URL('../',import.meta.url))]);
   assert.throws(()=>execFileSync(process.execPath,[script,'--unknown'],{cwd:tmpdir(),stdio:'pipe'}));
+});
+
+// machine contract; record_identifier=4d229b49-b126-530d-bce4-d30a1b38f3c0.
+// transition: Git attributes force text diff -> blob content still rejects binary add, edit and delete.
+test('change size check reads blobs independently of Git attributes',async()=>{
+  const root=await mkdtemp(path.join(tmpdir(),'lumenia-change-size-test-'));
+  const git=(...arguments_)=>execFileSync('git',arguments_,{cwd:root,encoding:'utf8'}).trim();
+  const commit=message=>{git('add','-A');git('-c','commit.gpgSign=false','-c','core.hooksPath=/dev/null','commit','--quiet','-m',message);};
+  try{
+    git('init','--quiet');git('config','user.name','Lumenia Test');git('config','user.email','test@example.invalid');
+    await writeFile(path.join(root,'note.txt'),'one\n');commit('base');const base=git('rev-parse','HEAD');
+    await writeFile(path.join(root,'.gitattributes'),'*.bin diff\n');
+    await writeFile(path.join(root,'payload.bin'),Buffer.from([97,0,98]));commit('add binary');
+    assert.match(git('diff','--numstat',base,'HEAD'),/1\t0\tpayload\.bin/);
+    assert.equal(checkChangeSize(base,'HEAD',root).status,'fail');const added=git('rev-parse','HEAD');
+    await writeFile(path.join(root,'payload.bin'),Buffer.from([99,0,100]));commit('edit binary');
+    assert.equal(checkChangeSize(added,'HEAD',root).status,'fail');const edited=git('rev-parse','HEAD');
+    await rm(path.join(root,'payload.bin'));commit('delete binary');
+    assert.equal(checkChangeSize(edited,'HEAD',root).status,'fail');const deleted=git('rev-parse','HEAD');
+    await writeFile(path.join(root,'note.txt'),'two\n');commit('edit text');
+    assert.equal(checkChangeSize(deleted,'HEAD',root).status,'pass');
+  }finally{await rm(root,{recursive:true,force:true});}
 });
 
 // machine contract; record_identifier=d93d88e9-8679-522b-a756-0b60472c9e5f.
