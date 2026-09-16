@@ -8,8 +8,6 @@
     "build": "node scripts/build-web.mjs",
     "preview": "node scripts/serve-web.mjs",
     "lint": "eslint web/app web/components web/artwork",
-    "lint:structure": "npx --yes --package @ast-grep/cli@0.45.3 ast-grep scan --json=stream scripts tests",
-    "test:structure": "npx --yes --package @ast-grep/cli@0.45.3 ast-grep test --skip-snapshot-tests",
     "typecheck": "tsc --project web/tsconfig.json --noEmit",
     "build:artwork": "node scripts/build-artwork.mjs",
     "test": "node --test",
