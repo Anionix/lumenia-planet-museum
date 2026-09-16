@@ -24,8 +24,9 @@ test('image targets include implied physics transitions and preserve unspecified
   assert.deepEqual(imageConfigurationTarget(current,{physics_enabled:true}),{...current,view:'all',playing:true,physics:'enabled'});
   assert.deepEqual(imageConfigurationTarget(current,{physics_enabled:true,playing:false,gravity_enabled:true}),{...current,view:'all',physics:'enabled',gravity:true});
   const active={...current,view:'all',playing:true,physics:'enabled',gravity:true};
-  assert.deepEqual(imageConfigurationTarget(active,{view:'single'}),{...active,view:'single',physics:'disabled',gravity:false});
+  assert.deepEqual(imageConfigurationTarget(active,{view:'single'}),{...active,view:'single',playing:false,physics:'disabled',gravity:false});
   assert.deepEqual(imageConfigurationTarget(active,{physics_enabled:true}),active);
+  assert.deepEqual(imageConfigurationTarget(active,{physics_enabled:false}),{...active,playing:false,physics:'disabled',gravity:false});
   const expected=imageConfigurationTarget(current,{view:'all',playing:false});
   current.playing=true;
   assert.equal(expected.playing,false,'Target must be captured before an asynchronous load');

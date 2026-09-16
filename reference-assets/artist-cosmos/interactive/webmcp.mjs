@@ -55,9 +55,10 @@ export function assertPresentedState(expected,observed){
 export function imageConfigurationTarget(current,input){
   const physics=input.physics_enabled??(input.view==='single'?false:current.physics==='enabled');
   const starting=physics&&current.physics!=='enabled';
+  const stopping=input.physics_enabled===false||input.view==='single';
   return {artistIdentifier:input.artist_identifier??current.artistIdentifier,
     view:starting?'all':input.view??current.view,
-    playing:input.playing??(starting?true:current.playing),
+    playing:input.playing??(starting?true:stopping?false:current.playing),
     physics:physics?'enabled':'disabled',
     gravity:input.gravity_enabled??(starting||!physics?false:current.gravity)};
 }
