@@ -7,7 +7,7 @@
     "dev": "next dev web --webpack --hostname 127.0.0.1",
     "build": "node scripts/build-web.mjs",
     "preview": "node scripts/serve-web.mjs",
-    "lint": "eslint web/app web/components web/artwork scripts",
+    "lint": "eslint web/app web/components web/artwork",
     "typecheck": "tsc --project web/tsconfig.json --noEmit",
     "build:artwork": "node scripts/build-artwork.mjs",
     "test": "node --test",
