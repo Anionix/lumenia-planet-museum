@@ -64,6 +64,7 @@ export function verifyAuditRecords({ wolfram, summary, coverage }) {
     same(row.sourceRevision, wolfram.sourceRevisionAfter, 'Reference source');
   }
   for (const row of coverage) {
+    same(row.executionIdentifier, summary.executionIdentifier, 'Coverage belongs to another reconciliation');
     same(row.wolframExecutionIdentifier, wolfram.executionIdentifier, 'Coverage execution reference');
     same(row.wolframCheckCount, counts.get(row.wolframProgram), 'Coverage check count');
   }

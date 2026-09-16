@@ -18,6 +18,7 @@ for (const [name, mutate] of Object.entries({
   'older coverage': value => value.coverage[0].recordedAt = '2020-01-01T00:00:00Z',
   'invalid time': value => value.summary.recordedAt = 'invalid',
   'wrong referenced run': value => value.coverage[0].wolframExecutionIdentifier = value.summary.executionIdentifier,
+  'mixed reconciliation runs': value => value.coverage[0].executionIdentifier = value.wolfram.executionIdentifier,
   'wrong source': value => value.coverage[0].sourceRevision = 'sha256:wrong',
   'altered decoded value': value => value.wolfram.programs[0].decoded.totalInputCount++,
   'tool failure': value => value.wolfram.programs[0].response.isError = true,
