@@ -17,8 +17,7 @@ import {
 } from '../scripts/contract.mjs';
 
 async function readExample(name) {
-  const url = new URL('../contracts/examples/' + name, import.meta.url);
-  return JSON.parse(await readFile(url, 'utf8'));
+  return JSON.parse(await readFile(new URL('../contracts/examples/' + name, import.meta.url), 'utf8'));
 }
 
 test('the committed verification request is valid', async () => {
@@ -40,13 +39,11 @@ test('the committed asset manifest is valid', async () => {
 
 test('the fixed category budgets add up to the core budget', () => {
   const profile = expectedMeasurementProfile;
-  const categoryTotal =
-    profile.htmlBudgetKibibytes +
+  assert.equal(profile.htmlBudgetKibibytes +
     profile.javascriptBudgetKibibytes +
     profile.styleBudgetKibibytes +
     profile.fontBudgetKibibytes +
-    profile.metadataBudgetKibibytes;
-  assert.equal(categoryTotal, profile.coreTransferBudgetKibibytes);
+    profile.metadataBudgetKibibytes, profile.coreTransferBudgetKibibytes);
 });
 
 for (const [name, field, value, message] of [

@@ -35,8 +35,7 @@ test('the actual dataset yields twelve explicitly positioned recipes and preserv
     assert.equal(recipe.historical_object, false);
   }
   assert.ok(compiled.radius * 2 < compiled.closestDistance, 'source-position spheres must not intersect');
-  const again = compileReferenceRecipes(parseReferenceJsonl(input));
-  assert.deepEqual(again.recipes, compiled.recipes, 'recipe and resource identities must be stable');
+  assert.deepEqual(compileReferenceRecipes(parseReferenceJsonl(input)).recipes, compiled.recipes, 'recipe and resource identities must be stable');
 });
 
 test('three.js serialization reloads all positions, textures, stable resource identities and provenance', () => {

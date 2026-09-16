@@ -52,8 +52,7 @@ test('actual optimized binary passes the browser parser without publishing test 
     { cwd: projectRoot, encoding: 'utf8', timeout: 60000 });
   assert.deepEqual(await readFile(reportPath), previousReport, 'Tests must preserve committed evidence.');
   assert.equal(fixture.status, 0, fixture.error?.message ?? fixture.stderr + fixture.stdout);
-  const value = JSON.parse(await readFile(path.join(directory, 'artifacts/asset-fixtures/orbit.manifest.json'), 'utf8'));
-  assert.ok(validateArtworkManifest(value));
+  assert.ok(validateArtworkManifest(JSON.parse(await readFile(path.join(directory, 'artifacts/asset-fixtures/orbit.manifest.json'), 'utf8'))));
   const bytes = await readFile(path.join(directory, 'artifacts/asset-fixtures/orbit.glb'));
   assert.equal(inspectGlb(bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength)).flags.usesExtensionMeshopt, true);
 });
@@ -131,8 +130,7 @@ test('Plumeria keyframes must be module-level constants just like style declarat
 test('line artwork uses HTML border rings and has no vector or canvas drawing implementation', async () => {
   const component = await readFile(new URL('../web/components/CssArtwork.tsx', import.meta.url), 'utf8');
   const styles = await readFile(new URL('../web/components/CssArtwork.styles.ts', import.meta.url), 'utf8');
-  const contract = JSON.parse(await readFile(new URL('../contracts/css-line-artwork.json', import.meta.url), 'utf8'));
-  assert.equal(contract.ringCount, 48);
+  assert.equal(JSON.parse(await readFile(new URL('../contracts/css-line-artwork.json', import.meta.url), 'utf8')).ringCount, 48);
   assert.match(styles, /css\.keyframes\(/); assert.match(styles, /borderRadius: '50%'/);
   assert.doesNotMatch(component, /<(svg|canvas|img)\b|orbitPaths|orbitCoordinates|setInterval\(|setTimeout\(/);
   assert.equal((component.match(/requestAnimationFrame\(/g) ?? []).length, 2);
@@ -171,6 +169,5 @@ test('all artwork kinds use CSS and the solid consists of finite torus panels', 
 });
 
 test('shared controls have no drawing loop or graphics dependency', async () => {
-  const controls = await readFile(new URL('../web/components/ArtworkExperience.tsx', import.meta.url), 'utf8');
-  assert.doesNotMatch(controls, /requestAnimationFrame|setInterval|setTimeout|three-artwork|orbitCoordinates|<canvas|<svg/);
+  assert.doesNotMatch(await readFile(new URL('../web/components/ArtworkExperience.tsx', import.meta.url), 'utf8'), /requestAnimationFrame|setInterval|setTimeout|three-artwork|orbitCoordinates|<canvas|<svg/);
 });

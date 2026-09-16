@@ -37,8 +37,7 @@ test('WebMCP is optional and partial registration rolls back without breaking th
   assert.equal(await unsupported.ready,false);assert.deepEqual(states,['unsupported']);
   const context=registry();const register=context.registerTool;
   context.registerTool=(tool,options)=>{if(tool.name==='navigate_exploration')throw new Error('registration refused');return register(tool,options);};
-  const failed=registerPageTools(context,explorationTools(controller()));
-  assert.equal(await failed.ready,false);assert.equal(context.tools.size,0);
+  assert.equal(await registerPageTools(context,explorationTools(controller())).ready,false);assert.equal(context.tools.size,0);
 });
 
 test('registered tools reject malformed and oversized input before an application action',async()=>{
@@ -92,7 +91,6 @@ test('batched flight reuses the bounded movement model and preserves the origina
     for(let step=0;step<input.steps;step++)session.position=moveCamera(session.position,movement(input.movement,0,0,limits.maximumSeconds,limits.normalSpeed));
     return {position:session.position,coordinate:session.semanticPosition};
   }})));await registration.ready;
-  const result=await context.tools.get('navigate_exploration').execute({movement:[1,1,-1],steps:60});
-  assert.equal(result.status,'complete');assert.ok(Math.hypot(...session.position.map((value,index)=>value-before[index]))<=24+1e-10);
+  assert.equal((await context.tools.get('navigate_exploration').execute({movement:[1,1,-1],steps:60})).status,'complete');assert.ok(Math.hypot(...session.position.map((value,index)=>value-before[index]))<=24+1e-10);
   assert.deepEqual(session.semanticPosition,original);assert.equal(session.physics,'disabled');registration.dispose();
 });
