@@ -86,6 +86,7 @@ test('receipt integrity rejects changed files, relabelled requests and missing p
       value=>{value.checks[0].arguments.file_path='/outside/Proof.lean';},
       value=>{value.checks[0].sourceFileBinding.path='../outside.lean';},
       value=>{value.checks[0].sequence=1;},value=>{value.checks[0].completedAt='2026-09-17T00:00:00Z';},
+      value=>{value.checks[0].startedAt='2026-09-31T00:00:00Z';},value=>{value.startedAt='2026-09-31T00:00:00Z';},
     ]){
       const changed=structuredClone(receipt); mutation(changed);
       assert.equal(languageServerReceiptMatchesSource(changed,manifest,root),false);

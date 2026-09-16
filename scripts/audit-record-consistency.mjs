@@ -3,6 +3,7 @@ import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { claimIdentifier, uuidVersionSeven } from './identifiers.mjs';
 import { wolframChecks } from '../planetarium/checks/wolfram-check.mjs';
+import { parseIsoTimestamp } from './iso-timestamp.mjs';
 
 // machine contract: recorded calculation -> later reference; mismatches -> rejected.
 // Replays archived material inputs; does not certify freshness or authenticity of a new calculation.
@@ -10,9 +11,9 @@ const programNames = ['root', 'material', 'images', 'exploration', 'clock', 'rev
 const executionPattern = /^[0-9a-f]{8}-[0-9a-f]{4}-7[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/;
 const same = (actual, expected, field) => assert.deepEqual(actual, expected, field);
 function ordered(earlier, later) {
-  assert.ok(typeof earlier === 'string' && typeof later === 'string' &&
-    Number.isFinite(Date.parse(earlier)) && Number.isFinite(Date.parse(later)) &&
-    Date.parse(earlier) <= Date.parse(later), 'Reference predates its calculation');
+  const earlierTimestamp = parseIsoTimestamp(earlier), laterTimestamp = parseIsoTimestamp(later);
+  assert.ok(Number.isFinite(earlierTimestamp) && Number.isFinite(laterTimestamp) &&
+    earlierTimestamp <= laterTimestamp, 'Reference predates its calculation');
 }
 function checkCount(program) {
   const value = program.decoded;
