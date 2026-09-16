@@ -1,4 +1,5 @@
 import { readFile, writeFile } from 'node:fs/promises';
+import { isDeepStrictEqual } from 'node:util';
 
 // machine contract: UTF-8 records -> one JSON value per line; invalid lines -> rejected.
 // Source: https://jsonlines.org/ . Protocol messages and required tool settings keep their own formats.
@@ -13,10 +14,13 @@ export function parseJsonLines(text) {
     catch { throw new Error(`Invalid JSON Lines record at line ${index + 1}.`); }
   });
 }
+
 export function serializeJsonLines(records) {
-  return records.map(record => {
+  if (!Array.isArray(records)) throw new TypeError('JSON Lines records must be an array.');
+  return Array.from(records, record => {
     const text = JSON.stringify(record);
-    if (text === undefined) throw new Error('A record must be a JSON value.');
+    if (text === undefined || !isDeepStrictEqual(JSON.parse(text), record))
+      throw new TypeError('A record must retain its value and structure as JSON.');
     return text + '\n';
   }).join('');
 }
