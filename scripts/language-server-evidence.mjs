@@ -30,20 +30,51 @@ export function languageServerCheckBindingDigest(check, executionIdentifier, sou
 }
 
 const uuidV7 = /^[0-9a-f]{8}-[0-9a-f]{4}-7[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+const transportBrand = Symbol('trusted-lean-lsp-transport');
+const transportProofs = new WeakSet();
 
-// Capture owns the invocation boundary. The caller supplies a function that performs
-// exactly one MCP call; this function never relabels a completed response.
+// The MCP client is the only transport boundary. Its response must echo the
+// per-request challenge; a cached response from an earlier request cannot pass.
+export function createLanguageServerMcpTransport(call) {
+  if (typeof call !== 'function') throw new TypeError('An MCP transport function is required');
+  return Object.freeze({
+    [transportBrand]: true,
+    transportIdentifier: 'mcp__lean_lsp',
+    async request(request) {
+      const result = await call(request);
+      if (!result || typeof result !== 'object' || !('response' in result) || result.challenge !== request.challenge) {
+        throw new TypeError('The MCP transport must return the current request challenge');
+      }
+      const proof = Object.freeze({transportIdentifier: 'mcp__lean_lsp', invocationIdentifier: request.invocationIdentifier,
+        challenge: request.challenge, requestDigest: digest(request), responseDigest: digest(result.response)});
+      transportProofs.add(proof);
+      return {response: result.response, transportProof: proof};
+    },
+  });
+}
+
+// Capture owns the invocation boundary. Raw callbacks and completed responses are
+// rejected; only the branded MCP transport can create a current proof.
 export async function captureLanguageServerCheck({ executionIdentifier, sourceRevision, sequence,
-  tool, target, arguments: args, invoke }) {
-  if (!executionIdentifier || !sourceRevision || !Number.isInteger(sequence) || sequence < 0 || typeof invoke !== 'function') {
-    throw new TypeError('A run identity, sequence and invocation function are required');
+  tool, target, arguments: args, transport }) {
+  if (!executionIdentifier || !sourceRevision || !Number.isInteger(sequence) || sequence < 0 ||
+      !transport || transport[transportBrand] !== true || typeof transport.request !== 'function') {
+    throw new TypeError('A run identity, sequence and trusted MCP transport are required');
   }
-  const invocationIdentifier = uuidVersionSeven(), startedAt = new Date().toISOString();
-  const response = await invoke();
+  const invocationIdentifier = uuidVersionSeven(), challenge = uuidVersionSeven(), startedAt = new Date().toISOString();
+  const request = {executionIdentifier, sourceRevision, sequence, invocationIdentifier, challenge,
+    tool, target, arguments: args ?? null};
+  const result = await transport.request(request), response = result.response, proof = result.transportProof;
   const completedAt = new Date().toISOString();
+  if (!transportProofs.has(proof) || proof.transportIdentifier !== transport.transportIdentifier ||
+      proof.invocationIdentifier !== invocationIdentifier || proof.challenge !== challenge ||
+      proof.requestDigest !== digest(request) || proof.responseDigest !== digest(response)) {
+    throw new TypeError('The MCP transport proof is missing or does not bind this invocation');
+  }
   const captureProof = { format: 'lean-lsp-invocation/v1', executionIdentifier, sourceRevision,
     sequence, invocationIdentifier,
-    startedAt, completedAt, argumentsDigest: digest(args ?? null), responseDigest: digest(response) };
+    startedAt, completedAt, argumentsDigest: digest(args ?? null), responseDigest: digest(response),
+    transportIdentifier: transport.transportIdentifier, challenge, requestDigest: proof.requestDigest };
   return { tool, target, ...(args === undefined ? {} : { arguments: args }), response,
     executionIdentifier, sourceRevision, captureProof };
 }
@@ -92,11 +123,11 @@ export function languageServerReceiptMatchesSource(receipt, manifest) {
   const digestMatches = capture.checksDigest === digest(checks.map((check, index) => ({ index, bindingDigest: check.bindingDigest }))) &&
     capture.invocationsDigest === digest(checks.map((check) => check.captureProof));
   const invocationIdentifiers = new Set();
-  return digestMatches && checks.every((check) => {
+  return digestMatches && checks.every((check, index) => {
     return check.captureProof?.format === 'lean-lsp-invocation/v1' &&
       check.captureProof.executionIdentifier === receipt.executionIdentifier && check.captureProof.sourceRevision === manifest.sourceRevision &&
       Number.isInteger(check.captureProof.sequence) &&
-      check.captureProof.sequence >= 0 && check.captureProof.sequence < checks.length &&
+      check.captureProof.sequence === index &&
       uuidV7.test(check.captureProof.invocationIdentifier ?? '') && !invocationIdentifiers.has(check.captureProof.invocationIdentifier) &&
       invocationIdentifiers.add(check.captureProof.invocationIdentifier) &&
       check.captureProof.argumentsDigest === digest(check.arguments ?? null) &&
