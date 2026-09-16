@@ -42,6 +42,10 @@ test('decoders activate only for explicit asset flags, including Draco opt-in', 
   }
 });
 test('actual optimized binary declares Meshopt and passes the browser manifest parser', async () => {
+  // Rebuild with the existing optimizer/validator instead of relying on ignored local output.
+  const fixture = spawnSync(process.execPath, ['scripts/build-artwork.mjs'],
+    { cwd: projectRoot, encoding: 'utf8', timeout: 60000 });
+  assert.equal(fixture.status, 0, fixture.error?.message ?? fixture.stderr + fixture.stdout);
   const value = JSON.parse(await readFile(new URL('../artifacts/asset-fixtures/orbit.manifest.json', import.meta.url), 'utf8'));
   assert.ok(validateArtworkManifest(value));
   const bytes = await readFile(new URL('../artifacts/asset-fixtures/orbit.glb', import.meta.url));
