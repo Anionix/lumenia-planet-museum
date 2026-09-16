@@ -1,3 +1,5 @@
+import { createHash } from 'node:crypto';
+
 // llm machine contract
 // claim identifier (UUIDv5): 35302202-9761-5b5d-ac14-01302e53c2bc
 // execution identifier (UUIDv7): 01a099bb-225c-7772-8fb8-869e4d9f9eec
@@ -6,16 +8,68 @@ export function axiomDependenciesAreEmpty(axioms) {
   return Array.isArray(axioms) && axioms.length === 0;
 }
 
+function canonical(value) {
+  if (value === undefined) return 'null';
+  if (value === null || typeof value !== 'object') return JSON.stringify(value);
+  if (Array.isArray(value)) return '[' + value.map(canonical).join(',') + ']';
+  return '{' + Object.keys(value).sort().map((key) => JSON.stringify(key) + ':' + canonical(value[key])).join(',') + '}';
+}
+
+function digest(value) {
+  return 'sha256:' + createHash('sha256').update(canonical(value)).digest('hex');
+}
+
+function checkPayload(check) {
+  return { tool: check?.tool ?? null, target: check?.target ?? null,
+    arguments: check?.arguments ?? null, response: check?.response ?? null };
+}
+
+export function languageServerCheckBindingDigest(check, executionIdentifier, sourceRevision) {
+  return digest({ executionIdentifier, sourceRevision, check: checkPayload(check) });
+}
+
 // machine contract; record_identifier=5c51405c-2fe3-5546-8621-278af8174a55.
-// transition: fresh captured inputs -> exact before/after comparison -> admissible receipt.
-// A manually rebound earlier execution is not a fresh run, even if selected inputs match.
+// transition: one atomic capture -> per-response binding -> exact source comparison.
+// A copied response cannot be relabelled without failing its content binding.
+export function captureLanguageServerReceipt({ manifest, executionIdentifier, checks, startedAt, recordedAt }) {
+  if (!manifest?.sourceRevision || !Array.isArray(manifest.files) || !Array.isArray(checks)) {
+    throw new TypeError('A source manifest and captured checks are required');
+  }
+  const capturedChecks = checks.map((check) => {
+    const payload = checkPayload(check);
+    return { ...check, executionIdentifier, sourceRevision: manifest.sourceRevision,
+      argumentsDigest: digest(payload.arguments), responseDigest: digest(payload.response),
+      bindingDigest: languageServerCheckBindingDigest(check, executionIdentifier, manifest.sourceRevision) };
+  });
+  return {
+    sourceRevision: manifest.sourceRevision,
+    sourceRevisionBefore: manifest.sourceRevision,
+    sourceRevisionAfter: manifest.sourceRevision,
+    checkStartedAtSourceRevision: manifest.sourceRevision,
+    files: structuredClone(manifest.files), executionIdentifier, startedAt, recordedAt,
+    checks: capturedChecks,
+    capture: { format: 'lean-lsp-capture/v1', atomic: true, executionIdentifier,
+      sourceRevision: manifest.sourceRevision, checkCount: capturedChecks.length,
+      checksDigest: digest(capturedChecks.map((check, index) => ({ index, bindingDigest: check.bindingDigest }))) },
+  };
+}
+
 export function languageServerReceiptMatchesSource(receipt, manifest) {
-  return receipt?.sourceRevision === manifest.sourceRevision &&
-    receipt.sourceRevisionBefore === manifest.sourceRevision &&
-    receipt.sourceRevisionAfter === manifest.sourceRevision &&
-    receipt.checkStartedAtSourceRevision === manifest.sourceRevision &&
-    (!receipt.bindingHistory || Array.isArray(receipt.bindingHistory) && receipt.bindingHistory.length === 0) &&
-    JSON.stringify(receipt.files) === JSON.stringify(manifest.files);
+  const checks = receipt?.checks, capture = receipt?.capture;
+  if (!receipt || !manifest || !Array.isArray(checks) || !capture || capture.atomic !== true ||
+      capture.format !== 'lean-lsp-capture/v1' || capture.executionIdentifier !== receipt.executionIdentifier ||
+      capture.sourceRevision !== manifest.sourceRevision || capture.checkCount !== checks.length ||
+      receipt.sourceRevision !== manifest.sourceRevision || receipt.sourceRevisionBefore !== manifest.sourceRevision ||
+      receipt.sourceRevisionAfter !== manifest.sourceRevision || receipt.checkStartedAtSourceRevision !== manifest.sourceRevision ||
+      (receipt.bindingHistory !== undefined && (!Array.isArray(receipt.bindingHistory) || receipt.bindingHistory.length !== 0)) ||
+      canonical(receipt.files) !== canonical(manifest.files)) return false;
+  const digestMatches = capture.checksDigest === digest(checks.map((check, index) => ({ index, bindingDigest: check.bindingDigest })));
+  return digestMatches && checks.every((check) => {
+    const payload = checkPayload(check);
+    return check.executionIdentifier === receipt.executionIdentifier && check.sourceRevision === manifest.sourceRevision &&
+      check.argumentsDigest === digest(payload.arguments) && check.responseDigest === digest(payload.response) &&
+      check.bindingDigest === languageServerCheckBindingDigest(check, receipt.executionIdentifier, manifest.sourceRevision);
+  });
 }
 
 export function languageServerCheckSucceeded(check) {

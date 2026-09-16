@@ -4,7 +4,7 @@ import {mkdtemp, mkdir, writeFile, rm} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import path from 'node:path';
 import {sourceManifest} from '../scripts/source-revision.mjs';
-import {languageServerReceiptMatchesSource} from '../scripts/language-server-evidence.mjs';
+import {captureLanguageServerReceipt,languageServerReceiptMatchesSource} from '../scripts/language-server-evidence.mjs';
 
 // machine contract; record_identifier=d93d88e9-8679-522b-a756-0b60472c9e5f.
 // transition: clean inputs -> generated output -> same source revision; real input edits must change it.
@@ -42,12 +42,16 @@ test('complete audit identity includes planetarium source but excludes its repor
 // transition: earlier receipt -> attempted rebinding -> rejection; complete fresh capture -> acceptance.
 test('freshness validation rejects relabelled, incomplete and changed input receipts',()=>{
   const manifest={sourceRevision:'sha256:current',files:[{path:'formal/Proof.lean',sha256:'current'}]};
-  const fresh={...structuredClone(manifest),sourceRevisionBefore:manifest.sourceRevision,sourceRevisionAfter:manifest.sourceRevision,checkStartedAtSourceRevision:manifest.sourceRevision};
+  const fresh=captureLanguageServerReceipt({manifest,executionIdentifier:'01a0aa00-0000-7000-8000-000000000001',
+    checks:[{tool:'lean_verify',target:'Lumenia.Proof',arguments:{file_path:'formal/Proof.lean',theorem_name:'Lumenia.Proof',scan_source:true},
+      response:{structuredContent:{axioms:[],warnings:[]},isError:false}}],startedAt:'2026-09-16T00:00:00.000Z',recordedAt:'2026-09-16T00:00:01.000Z'});
   assert.equal(languageServerReceiptMatchesSource(fresh,manifest),true);
   for(const overrides of [
     {sourceRevisionBefore:'sha256:old'}, {sourceRevisionAfter:'sha256:old'},
     {checkStartedAtSourceRevision:'sha256:old'}, {sourceRevisionBefore:undefined},
     {files:[]}, {files:[{path:'formal/Proof.lean',sha256:'old'}]},
-    {bindingHistory:[{verifiedInputsUnchanged:true}]},
+    {bindingHistory:[{verifiedInputsUnchanged:true}]}, {capture:{...fresh.capture,sourceRevision:'sha256:old'}},
   ])assert.equal(languageServerReceiptMatchesSource({...fresh,...overrides},manifest),false);
+  const altered=structuredClone(fresh); altered.checks[0].response.structuredContent.axioms=['propext'];
+  assert.equal(languageServerReceiptMatchesSource(altered,manifest),false);
 });
