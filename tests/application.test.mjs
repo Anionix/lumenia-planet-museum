@@ -9,16 +9,15 @@ import { projectRoot } from '../scripts/source-revision.mjs';
 import path from 'node:path';
 import { solidPanels, majorSegments, minorSegments, radiusRatio } from '../web/artwork/css-geometry.ts';
 import { artworkStages, artworkPieceCounts } from '../web/artwork/catalog.ts';
+import { booleanAssignments, leanVerdicts } from './support/lean-boundary.mjs';
 
 // llm machine contract; claim UUIDv5: 6c16261b-86c7-54d4-9712-99528cd7ca89
 // execution UUIDv7 assigned by the report runner; transition: hostile or valid fixture -> checked verdict
 test('actual browser validator agrees with compiled Lean over all 4096 assignments', () => {
   const fields = [...flagNames, ...optionNames];
-  const inputs = Array.from({ length: 4096 }, (_, bits) => Object.fromEntries(fields.map((name, index) => [name, Boolean(bits & 1 << index)])));
-  const result = spawnSync(path.join(projectRoot, '.lake/build/bin/lumenia_boundary'), [],
-    { input: inputs.map(value => JSON.stringify(value)).join('\n') + '\n', encoding: 'utf8', maxBuffer: 4 * 1024 * 1024 });
-  assert.equal(result.status, 0, result.stderr);
-  const answers = result.stdout.trim().split('\n').map(JSON.parse); assert.equal(answers.length, 4096);
+  assert.equal(fields.length, 12);
+  const inputs = booleanAssignments(fields);
+  const answers = leanVerdicts(inputs);
   inputs.forEach((input, index) => assert.equal(assetRulesSatisfied(input, input), answers[index].accepted, String(index)));
 });
 const validManifest = () => ({ artifactIdentifier: '6c16261b-86c7-54d4-9712-99528cd7ca89', resource: '/artworks/orbit.glb',
