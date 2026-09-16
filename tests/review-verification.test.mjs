@@ -5,17 +5,26 @@ import {mkdtemp, mkdir, readFile, writeFile, rm} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import path from 'node:path';
 import {execFileSync} from 'node:child_process';
-import {fileURLToPath} from 'node:url';
+import {fileURLToPath,pathToFileURL} from 'node:url';
 import {sourceManifest} from '../scripts/source-revision.mjs';
 import {evidenceDigest,languageServerReceiptMatchesSource,languageServerTargetMatchesInvocation} from '../scripts/language-server-evidence.mjs';
 import {captureLanguageServerReceipt} from '../scripts/capture-language-server.mjs';
 import {checkChangeSize} from '../scripts/check-change-size.mjs';
-import {verifyCorrespondenceLinks} from '../scripts/audit-record-consistency.mjs';
+import {readAuditRecords,verifyCorrespondenceLinks} from '../scripts/audit-record-consistency.mjs';
 
 const inTemporaryDirectory=async(name,run)=>{
   const root=await mkdtemp(path.join(tmpdir(),name));
   try{return await run(root);}finally{await rm(root,{recursive:true,force:true});}
 };
+
+// machine contract; record_identifier=5162a2d5-5f0a-5537-a337-40f1d832757c; malformed bytes -> rejected before audit.
+test('audit readers reject malformed JSON Lines bytes',()=>inTemporaryDirectory('lumenia-audit-lines-',async root=>{
+  for(const name of ['wolfram.json','summary.json'])await writeFile(path.join(root,name),'{}');
+  for(const bytes of ['{}\n\n','\uFEFF{}\n',Buffer.from([34,255,34,10])]){
+    await writeFile(path.join(root,'coverage.jsonl'),bytes);
+    await assert.rejects(readAuditRecords(pathToFileURL(root+path.sep)));
+  }
+}));
 
 test('generated server configuration keeps the project root outside the checkout',()=>{
   const script=fileURLToPath(new URL('../scripts/capture-language-server.mjs',import.meta.url));

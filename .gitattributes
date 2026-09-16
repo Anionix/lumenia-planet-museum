@@ -19,6 +19,7 @@ reports/review-audit/wolfram.json text eol=lf
 scripts/audit-record-consistency.mjs text eol=lf
 scripts/identifiers.mjs text eol=lf
 scripts/iso-timestamp.mjs text eol=lf
+scripts/json-lines.mjs text eol=lf
 scripts/source-revision.mjs text eol=lf
 tests/audit-record-consistency.test.mjs text eol=lf
 tests/review-verification.test.mjs text eol=lf
