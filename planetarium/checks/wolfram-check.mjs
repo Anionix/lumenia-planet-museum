@@ -93,7 +93,10 @@ export function wolframChecks(rawResponse) {
     for (const row of rows(table)) assert.equal(sampleRequest(makeRequest(parameters, { index: row.index }))[field], row.angleDegrees);
   }
   const channels = rows('channelMix');
-  assert.equal(channels.length, 80);
+  const expectedChannelInputs = [0, 1, 254, 255].flatMap(first =>
+    [0, 1, 254, 255].flatMap(second => [0, 1, 50, 99, 100].map(weight => `${first}:${second}:${weight}`)));
+  const actualChannelInputs = channels.map(row => `${row.firstChannel}:${row.secondChannel}:${row.weightPercent}`);
+  assert.deepEqual(actualChannelInputs.sort(), expectedChannelInputs.sort(), 'Material input coverage');
   for (const row of channels) {
     assert.equal(sampleRequest(makeRequest({ ...parameters, opacityPercent: row.weightPercent }, {
       firstChannel: row.firstChannel, secondChannel: row.secondChannel })).channelMixNumerator, row.numerator);
