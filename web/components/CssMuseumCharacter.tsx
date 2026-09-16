@@ -1,20 +1,12 @@
 import '@plumeria/core';
 import { characterStyles as s } from './CssMuseumCharacter.styles';
+import { characterMotion } from './character-motion';
 // machine contract UUIDv5: 4908c1b1-0ebf-55ef-a83f-378e2bfdf4c5
 // execution UUIDv7: 01a09b7c-3f68-756d-bae6-f55806a70d69
 // transition: semantic props -> CSS variables -> synchronized animation; null gaze is neutral.
 type Props = { state?: string; lookDirection?: number | null; paused?: boolean; sampledTimeMilliseconds?: number };
-const durations: Record<string, number> = { idle:1100, 'running-right':1060, 'running-left':1060, waving:700, jumping:840, failed:1220, waiting:1010, running:820, review:1030 };
 export function CssMuseumCharacter({state='idle',lookDirection=null,paused=false,sampledTimeMilliseconds}:Props) {
-  const current=Object.hasOwn(durations,state)?state:'idle';
-  const direction=Number.isInteger(lookDirection)?((lookDirection!%16)+16)%16:null;
-  const right=current==='running-right', left=current==='running-left', traveling=right||left;
-  const horizontal=direction===null?(right?1:left?-1:0):Math.sin(direction*Math.PI/8);
-  const vertical=direction===null?0:-Math.cos(direction*Math.PI/8);
-  const duration=durations[current];
-  const sampled=Number.isFinite(sampledTimeMilliseconds);
-  const delay=sampled?-(((sampledTimeMilliseconds!%duration)+duration)%duration):0;
-  const frozen=paused||sampled||direction!==null;
+  const {current,direction,right,left,traveling,horizontal,vertical,duration,delay,frozen}=characterMotion(state,lookDirection,paused,sampledTimeMilliseconds);
   return <div data-css-museum-character="true" data-character-state={current} data-look-direction={direction??'neutral'} classStyle={[s.root,s.clock(`${duration}ms`,`${delay}ms`,frozen?'paused':'running')]}>
     <div classStyle={[s.figure,s.motion,current==='idle'&&s.breathe,traveling&&s.bounce,current==='jumping'&&s.jump,current==='failed'&&s.sigh]}>
       <div classStyle={[s.stance,s.orientation(right?'7deg':left?'-7deg':'0deg')]}>
