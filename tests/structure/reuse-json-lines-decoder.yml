@@ -1,0 +1,16 @@
+id: 2a88f7e1-43c3-5690-ba8a-97d99f738e8c
+valid:
+  - parseJsonLines(text)
+  - text.split(',').map(JSON.parse)
+  - text.split('\n').map(line => line.trim())
+  - text.split('\\n').map(JSON.parse)
+invalid:
+  - text.split('\n').map(JSON.parse)
+  - text . split("\n") . map(JSON.parse)
+  - text.split('\n').map(line => JSON.parse(line))
+  - text.split('\n').map((line) => JSON.parse(line))
+  - text.split('\n').filter(Boolean).map(JSON.parse)
+  - |
+    text
+      .split('\n')
+      .map(JSON.parse)
