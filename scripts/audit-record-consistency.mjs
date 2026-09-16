@@ -22,6 +22,8 @@ const expectedChecks = {
   clock: 'bounded monotone step_bounded boundary_120 end_stops pause_identity'.split(' '),
   review: 'score_difference_bound projection_rank_three projection_retains_eight_unseen_dimensions nonnegative_normalized_recipe_bound normal_step_metres sixty_step_distance_metres bounded_batch turn_range_radians full_state_equality_rejects_every_partial_match artist_only_gate_has_counterexamples complete_valid_states only_fresh_complete_same_revision_receipt_passes busy_writer_is_rejected aborted_actions_are_rejected trace_length_bound clock_day_bound clock_crosses_two_minutes_without_wrapping'.split(' '),
 };
+const expectedMaterialInputs = [0, 1, 254, 255].flatMap(first =>
+  [0, 1, 254, 255].flatMap(second => [0, 1, 50, 99, 100].map(weight => `${first}:${second}:${weight}`))).sort();
 function ordered(earlier, later) {
   const earlierTimestamp = parseIsoTimestamp(earlier), laterTimestamp = parseIsoTimestamp(later);
   assert.ok(Number.isFinite(earlierTimestamp) && Number.isFinite(laterTimestamp) &&
@@ -46,6 +48,7 @@ function checkCount(program) {
   }
   const names = program.name === 'exploration' ? Object.entries(value).filter(([, item]) => typeof item === 'boolean').map(([name]) => name) : Object.keys(value.checks);
   same(names, expectedChecks[program.name], program.name + ' check names');
+  if (program.name === 'material') same(value.channelMix.rows.map(row => row.slice(0, 3).join(':')).sort(), expectedMaterialInputs, 'Material input coverage');
   const checks = program.name === 'exploration' ? names.map(name => value[name]) : Object.values(value.checks);
   assert.ok(checks.length > 0 && checks.every(value => value === true), 'Calculation checks');
   return checks.length;
