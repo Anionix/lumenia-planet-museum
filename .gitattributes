@@ -1,3 +1,5 @@
 reference-assets/artist-cosmos/interactive/vendor/** linguist-vendored
 reference-assets/artist-cosmos/interactive/verification/exact-inputs.json linguist-generated
 reference-assets/artist-cosmos/explore/worlds/*.json linguist-generated
+reports/bounded-review/formal-correspondence.jsonl text eol=lf
+reports/bounded-review/formal-correspondence-inputs.jsonl text eol=lf
