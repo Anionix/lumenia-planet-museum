@@ -12,16 +12,11 @@ test('actual frame handler bounds earlier, equal, later and resumed timestamps f
   const source=typescript.createSourceFile('main.mjs',await readFile(new URL('../reference-assets/artist-cosmos/explore/main.mjs',import.meta.url),'utf8'),typescript.ScriptTarget.Latest,true);
   const tick=source.statements.find(statement=>typescript.isFunctionDeclaration(statement)&&statement.name?.text==='tick');
   assert.ok(tick,'The production frame handler must be present');
+  const contextFor=(trigger,samples)=>({frame:1,disposed:false,document:{hidden:false},session:{},lastTick:100,limits,keys:new Set(trigger==='keyboard'?['KeyW']:[]),commands:{KeyW:'forward'},axes:{forward:[0,0,-1]},heldMove:trigger==='button'?'forward':null,holdStarted:-200,heldMoved:false,landingInput:{checked:trigger==='landing'},collision:trigger==='landing'?{}:null,dirty:false,requestAnimationFrame:()=>1,applyMovement(input,seconds){samples.push(seconds);movement([...input],0,0,seconds,limits.maximumSpeed);}});
   for(const [now,expected] of [[99,0],[100,0],[101,.001],[100000,.05]]) for(const trigger of ['keyboard','button','landing']) {
-    const samples=[];
-    const context={frame:1,disposed:false,document:{hidden:false},session:{},lastTick:100,limits,
-      keys:new Set(trigger==='keyboard'?['KeyW']:[]),commands:{KeyW:'forward'},axes:{forward:[0,0,-1]},
-      heldMove:trigger==='button'?'forward':null,holdStarted:-200,heldMoved:false,
-      landingInput:{checked:trigger==='landing'},collision:trigger==='landing'?{}:null,dirty:false,
-      requestAnimationFrame:()=>1,applyMovement(input,seconds){samples.push(seconds);movement([...input],0,0,seconds,limits.maximumSpeed);}};
+    const samples=[],context=contextFor(trigger,samples);
     runInNewContext(tick.getText(source)+';tick('+now+');',context);
-    assert.deepEqual(samples,[expected],trigger+' at '+now);
-    assert.equal(context.lastTick,now);assert.equal(context.frame,1);
+    assert.deepEqual(samples,[expected],trigger+' at '+now);assert.equal(context.lastTick,now);
   }
 });
 

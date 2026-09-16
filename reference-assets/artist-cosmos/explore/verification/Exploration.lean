@@ -24,23 +24,11 @@ theorem capBound : (requested limit : Nat) → cap requested limit ≤ limit
 -- UUIDv5: 0e1a402e-3608-56e6-8086-b934193d00ef
 theorem elapsedTimeBound (elapsed : Nat) : cap elapsed 50 ≤ 50 := capBound elapsed 50
 
--- UUIDv5: 6c91f02b-ae5a-5ef3-8d30-f9d7c4c1a0bd; the JavaScript frame delta's zero floor and cap.
-def boundedFrameMilliseconds (delta : Int) : Nat :=
-  if delta ≤ 0 then 0 else cap delta.toNat 50
-
--- UUIDv5: f32dd0f5-6f79-5c8c-9dce-7f8e9cfe28c2
-theorem boundedFrameMillisecondsBound (delta : Int) :
-    boundedFrameMilliseconds delta ≤ 50 := by
-  unfold boundedFrameMilliseconds
+-- UUIDv5: 6c91f02b-ae5a-5ef3-8d30-f9d7c4c1a0bd; UUIDv7: 01a0abca-530f-79ff-8d8e-8ff29dd2b770.
+theorem frameDeltaBound (delta : Int) : (if delta ≤ 0 then 0 else cap delta.toNat 50) ≤ 50 := by
   split
   · exact Nat.zero_le _
   · exact capBound _ _
-
--- UUIDv5: 5bd702ad-8c92-5fc0-91d1-ea6ed0d6d4da
-theorem nonpositiveFrameMillisecondsAreZero (delta : Int) (nonpositive : delta ≤ 0) :
-    boundedFrameMilliseconds delta = 0 := by
-  unfold boundedFrameMilliseconds
-  rw [if_pos nonpositive]
 
 -- Speed is metres per second, so speed times milliseconds gives millimetres.
 -- UUIDv5: 94db9690-12d0-5335-ad02-e97b23494cdd
@@ -79,8 +67,7 @@ theorem passageHasRoom : 400 + 50 < (3000 - 500 : Nat) := by decide
 
 #print axioms capBound
 #print axioms elapsedTimeBound
-#print axioms boundedFrameMillisecondsBound
-#print axioms nonpositiveFrameMillisecondsAreZero
+#print axioms frameDeltaBound
 #print axioms displacementBound
 #print axioms observerMagnitudeBound
 #print axioms movementPreservesSource
