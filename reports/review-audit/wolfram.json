@@ -1,6 +1,6 @@
 {
-  "executionIdentifier": "01a0aa62-1972-7375-8461-ab39e3f524ae",
-  "recordedAt": "2026-09-16T13:22:30.785Z",
+  "executionIdentifier": "01a0aad9-833e-731e-a79c-dffd2363f6fa",
+  "recordedAt": "2026-09-16T15:35:51.720Z",
   "sourceRevisionBefore": "sha256:e56813b1ed4b504e78fb90e57be76a4ca318278c6e6a41e4309482112fee9f32",
   "sourceRevisionAfter": "sha256:e56813b1ed4b504e78fb90e57be76a4ca318278c6e6a41e4309482112fee9f32",
   "status": "pass",
@@ -10,20 +10,20 @@
   "programs": [
     {
       "name": "root",
-      "code": "(* Run UUIDv7: 01a0a9c6-c101-794e-b225-4b01c529c05f.\n   Machine contract: sourceRead -> requirementsCompared -> resultReturned.\n   No filesystem operations. Lean some .stage maps to \"stage\"; none to \"none\". *)\nClearAll[\"Global`*\"];\nrunIdentifier = \"01a0a9c6-c101-794e-b225-4b01c529c05f\";\nutcTime[] := DateString[{\"ISODate\", \"T\", \"Hour\", \":\", \"Minute\", \":\", \"Second\", \"Z\"}, TimeZone -> 0];\nstartedAtUtc = utcTime[];\nstages = {\"source\", \"optimized\", \"validated\", \"shipped\", \"rejected\"};\nevents = {\"optimize\", \"validate\", \"ship\", \"reject\"};\nmodes = {\"staticExport\", \"serverRuntime\"};\nplacements = {\"server\", \"client\"};\ncapabilities = {\"pureRendering\", \"serverOnly\", \"browserApi\", \"state\", \"eventHandler\", \"threeDimensionalRendering\"};\n\n(* Current Model.lean lines 131-145, 195-200, 210-218: literal branch translations. *)\ntransitionImplementation[stage_, event_] := Switch[stage,\n  \"source\", Switch[event, \"optimize\", \"optimized\", \"reject\", \"rejected\", \"validate\" | \"ship\", \"none\"],\n  \"optimized\", Switch[event, \"validate\", \"validated\", \"reject\", \"rejected\", \"optimize\" | \"ship\", \"none\"],\n  \"validated\", Switch[event, \"ship\", \"shipped\", \"reject\", \"rejected\", \"optimize\" | \"validate\", \"none\"],\n  \"shipped\" | \"rejected\", \"none\"];\ndeploymentImplementation[mode_, capability_] := Switch[mode,\n  \"staticExport\", Switch[capability, \"serverOnly\", False,\n    \"pureRendering\" | \"browserApi\" | \"state\" | \"eventHandler\" | \"threeDimensionalRendering\", True],\n  \"serverRuntime\", True];\nplacementImplementation[placement_, capability_] := Switch[capability,\n  \"pureRendering\", True,\n  \"serverOnly\", Switch[placement, \"server\", True, \"client\", False],\n  \"browserApi\" | \"state\" | \"eventHandler\" | \"threeDimensionalRendering\",\n    Switch[placement, \"server\", False, \"client\", True]];\n\n(* Independent requirements: spec.md lines 53-68.\n   Tests.lean lines 64-70 additionally specify rejection from each unfinished stage.\n   Ordered progress permits exactly the event at the current stage index.\n   Shipped and rejected are terminal; all other nonprogress events are invalid. *)\nstageIndex = AssociationThread[stages -> Range[0, 4]];\neventIndex = AssociationThread[events -> Range[0, 3]];\ntransitionRequirement[stage_, event_] := Which[\n  MemberQ[{\"shipped\", \"rejected\"}, stage], \"none\",\n  event === \"reject\", \"rejected\",\n  Lookup[stageIndex, stage] === Lookup[eventIndex, event],\n    stages[[Lookup[stageIndex, stage] + 2]],\n  True, \"none\"];\n(* Static export forbids request-time server features.\n   Pure rendering is allowed on either side. Server-only features require server;\n   browser access, state, handlers and three-dimensional rendering require client. *)\ndeploymentRequirement[mode_, capability_] :=\n  Not[mode === \"staticExport\" && capability === \"serverOnly\"];\nrequiredPlacement = <|\"pureRendering\" -> {\"server\", \"client\"}, \"serverOnly\" -> {\"server\"},\n  \"browserApi\" -> {\"client\"}, \"state\" -> {\"client\"}, \"eventHandler\" -> {\"client\"},\n  \"threeDimensionalRendering\" -> {\"client\"}|>;\nplacementRequirement[placement_, capability_] :=\n  MemberQ[Lookup[requiredPlacement, capability], placement];\n\n(* Golden tables freshly read from current Tests.lean lines 64-80. *)\ntransitionGolden = {{\"optimized\", \"none\", \"none\", \"rejected\"},\n  {\"none\", \"validated\", \"none\", \"rejected\"}, {\"none\", \"none\", \"shipped\", \"rejected\"},\n  {\"none\", \"none\", \"none\", \"none\"}, {\"none\", \"none\", \"none\", \"none\"}};\ndeploymentGolden = {{True, False, True, True, True, True}, {True, True, True, True, True, True}};\nplacementGolden = {{True, True, False, False, False, False}, {True, False, True, True, True, True}};\n\ncompareEveryInput[name_, claimIdentifier_, rowDomain_, columnDomain_, implementation_, requirement_, golden_] :=\n Module[{inputs, actual, required, expected, records},\n  inputs = Tuples[{rowDomain, columnDomain}];\n  actual = (implementation @@ # &) /@ inputs;\n  required = (requirement @@ # &) /@ inputs;\n  expected = Flatten[golden];\n  records = MapThread[\n    <|\"input\" -> #1, \"implementation\" -> #2, \"requirement\" -> #3, \"golden\" -> #4,\n      \"implementationMatchesRequirement\" -> SameQ[#2, #3],\n      \"implementationMatchesGolden\" -> SameQ[#2, #4],\n      \"goldenMatchesRequirement\" -> SameQ[#4, #3]|> &,\n    {inputs, actual, required, expected}];\n  <|\"function\" -> name, \"claimIdentifier\" -> claimIdentifier,\n    \"inputCount\" -> Length[inputs], \"uniqueInputCount\" -> Length[DeleteDuplicates[inputs]],\n    \"goldenDimensionsMatch\" -> SameQ[Dimensions[golden], {Length[rowDomain], Length[columnDomain]}],\n    \"implementationVersusRequirementsMismatchCount\" ->\n      Count[Lookup[records, \"implementationMatchesRequirement\"], False],\n    \"implementationVersusGoldenMismatchCount\" -> Count[Lookup[records, \"implementationMatchesGolden\"], False],\n    \"goldenVersusRequirementsMismatchCount\" -> Count[Lookup[records, \"goldenMatchesRequirement\"], False],\n    \"mismatches\" -> Select[records, Not[#[\"implementationMatchesRequirement\"] &&\n      #[\"implementationMatchesGolden\"] && #[\"goldenMatchesRequirement\"]] &],\n    \"actualOutputs\" -> Partition[actual, Length[columnDomain]]|>\n ];\ncomparisons = {\n  compareEveryInput[\"transition\", \"3994c7e6-6387-590c-9922-3fad04fc482d\",\n    stages, events, transitionImplementation, transitionRequirement, transitionGolden],\n  compareEveryInput[\"deploymentCapabilityAllowed\", \"ac27dc88-da25-51f7-8af5-c431e22cd72b\",\n    modes, capabilities, deploymentImplementation, deploymentRequirement, deploymentGolden],\n  compareEveryInput[\"componentPlacementAllowed\", \"cf86cf5d-e0c7-58e4-aa77-ae4d0e72bf46\",\n    placements, capabilities, placementImplementation, placementRequirement, placementGolden]};\nExportString[<|\"runIdentifier\" -> runIdentifier, \"startedAtUtc\" -> startedAtUtc,\n  \"completedAtUtc\" -> utcTime[], \"comparisonCount\" -> Length[comparisons],\n  \"totalInputCount\" -> Total[Lookup[comparisons, \"inputCount\"]], \"comparisons\" -> comparisons|>,\n  \"RawJSON\", \"Compact\" -> True]",
+      "code": "(* Run UUIDv7: 01a0aad9-833e-731e-a79c-dffd2363f6fa.\n   Machine contract: sourceRead -> requirementsCompared -> resultReturned.\n   No filesystem operations. Lean some .stage maps to \"stage\"; none to \"none\". *)\nClearAll[\"Global`*\"];\nrunIdentifier = \"01a0aad9-833e-731e-a79c-dffd2363f6fa\";\nutcTime[] := DateString[{\"ISODate\", \"T\", \"Hour\", \":\", \"Minute\", \":\", \"Second\", \"Z\"}, TimeZone -> 0];\nstartedAtUtc = utcTime[];\nstages = {\"source\", \"optimized\", \"validated\", \"shipped\", \"rejected\"};\nevents = {\"optimize\", \"validate\", \"ship\", \"reject\"};\nmodes = {\"staticExport\", \"serverRuntime\"};\nplacements = {\"server\", \"client\"};\ncapabilities = {\"pureRendering\", \"serverOnly\", \"browserApi\", \"state\", \"eventHandler\", \"threeDimensionalRendering\"};\n\n(* Current Model.lean lines 131-145, 195-200, 210-218: literal branch translations. *)\ntransitionImplementation[stage_, event_] := Switch[stage,\n  \"source\", Switch[event, \"optimize\", \"optimized\", \"reject\", \"rejected\", \"validate\" | \"ship\", \"none\"],\n  \"optimized\", Switch[event, \"validate\", \"validated\", \"reject\", \"rejected\", \"optimize\" | \"ship\", \"none\"],\n  \"validated\", Switch[event, \"ship\", \"shipped\", \"reject\", \"rejected\", \"optimize\" | \"validate\", \"none\"],\n  \"shipped\" | \"rejected\", \"none\"];\ndeploymentImplementation[mode_, capability_] := Switch[mode,\n  \"staticExport\", Switch[capability, \"serverOnly\", False,\n    \"pureRendering\" | \"browserApi\" | \"state\" | \"eventHandler\" | \"threeDimensionalRendering\", True],\n  \"serverRuntime\", True];\nplacementImplementation[placement_, capability_] := Switch[capability,\n  \"pureRendering\", True,\n  \"serverOnly\", Switch[placement, \"server\", True, \"client\", False],\n  \"browserApi\" | \"state\" | \"eventHandler\" | \"threeDimensionalRendering\",\n    Switch[placement, \"server\", False, \"client\", True]];\n\n(* Independent requirements: spec.md lines 53-68.\n   Tests.lean lines 64-70 additionally specify rejection from each unfinished stage.\n   Ordered progress permits exactly the event at the current stage index.\n   Shipped and rejected are terminal; all other nonprogress events are invalid. *)\nstageIndex = AssociationThread[stages -> Range[0, 4]];\neventIndex = AssociationThread[events -> Range[0, 3]];\ntransitionRequirement[stage_, event_] := Which[\n  MemberQ[{\"shipped\", \"rejected\"}, stage], \"none\",\n  event === \"reject\", \"rejected\",\n  Lookup[stageIndex, stage] === Lookup[eventIndex, event],\n    stages[[Lookup[stageIndex, stage] + 2]],\n  True, \"none\"];\n(* Static export forbids request-time server features.\n   Pure rendering is allowed on either side. Server-only features require server;\n   browser access, state, handlers and three-dimensional rendering require client. *)\ndeploymentRequirement[mode_, capability_] :=\n  Not[mode === \"staticExport\" && capability === \"serverOnly\"];\nrequiredPlacement = <|\"pureRendering\" -> {\"server\", \"client\"}, \"serverOnly\" -> {\"server\"},\n  \"browserApi\" -> {\"client\"}, \"state\" -> {\"client\"}, \"eventHandler\" -> {\"client\"},\n  \"threeDimensionalRendering\" -> {\"client\"}|>;\nplacementRequirement[placement_, capability_] :=\n  MemberQ[Lookup[requiredPlacement, capability], placement];\n\n(* Golden tables freshly read from current Tests.lean lines 64-80. *)\ntransitionGolden = {{\"optimized\", \"none\", \"none\", \"rejected\"},\n  {\"none\", \"validated\", \"none\", \"rejected\"}, {\"none\", \"none\", \"shipped\", \"rejected\"},\n  {\"none\", \"none\", \"none\", \"none\"}, {\"none\", \"none\", \"none\", \"none\"}};\ndeploymentGolden = {{True, False, True, True, True, True}, {True, True, True, True, True, True}};\nplacementGolden = {{True, True, False, False, False, False}, {True, False, True, True, True, True}};\n\ncompareEveryInput[name_, claimIdentifier_, rowDomain_, columnDomain_, implementation_, requirement_, golden_] :=\n Module[{inputs, actual, required, expected, records},\n  inputs = Tuples[{rowDomain, columnDomain}];\n  actual = (implementation @@ # &) /@ inputs;\n  required = (requirement @@ # &) /@ inputs;\n  expected = Flatten[golden];\n  records = MapThread[\n    <|\"input\" -> #1, \"implementation\" -> #2, \"requirement\" -> #3, \"golden\" -> #4,\n      \"implementationMatchesRequirement\" -> SameQ[#2, #3],\n      \"implementationMatchesGolden\" -> SameQ[#2, #4],\n      \"goldenMatchesRequirement\" -> SameQ[#4, #3]|> &,\n    {inputs, actual, required, expected}];\n  <|\"function\" -> name, \"claimIdentifier\" -> claimIdentifier,\n    \"inputCount\" -> Length[inputs], \"uniqueInputCount\" -> Length[DeleteDuplicates[inputs]],\n    \"goldenDimensionsMatch\" -> SameQ[Dimensions[golden], {Length[rowDomain], Length[columnDomain]}],\n    \"implementationVersusRequirementsMismatchCount\" ->\n      Count[Lookup[records, \"implementationMatchesRequirement\"], False],\n    \"implementationVersusGoldenMismatchCount\" -> Count[Lookup[records, \"implementationMatchesGolden\"], False],\n    \"goldenVersusRequirementsMismatchCount\" -> Count[Lookup[records, \"goldenMatchesRequirement\"], False],\n    \"mismatches\" -> Select[records, Not[#[\"implementationMatchesRequirement\"] &&\n      #[\"implementationMatchesGolden\"] && #[\"goldenMatchesRequirement\"]] &],\n    \"actualOutputs\" -> Partition[actual, Length[columnDomain]]|>\n ];\ncomparisons = {\n  compareEveryInput[\"transition\", \"3994c7e6-6387-590c-9922-3fad04fc482d\",\n    stages, events, transitionImplementation, transitionRequirement, transitionGolden],\n  compareEveryInput[\"deploymentCapabilityAllowed\", \"ac27dc88-da25-51f7-8af5-c431e22cd72b\",\n    modes, capabilities, deploymentImplementation, deploymentRequirement, deploymentGolden],\n  compareEveryInput[\"componentPlacementAllowed\", \"cf86cf5d-e0c7-58e4-aa77-ae4d0e72bf46\",\n    placements, capabilities, placementImplementation, placementRequirement, placementGolden]};\nExportString[<|\"runIdentifier\" -> runIdentifier, \"startedAtUtc\" -> startedAtUtc,\n  \"completedAtUtc\" -> utcTime[], \"comparisonCount\" -> Length[comparisons],\n  \"totalInputCount\" -> Total[Lookup[comparisons, \"inputCount\"]], \"comparisons\" -> comparisons|>,\n  \"RawJSON\", \"Compact\" -> True]",
       "response": {
         "content": [
           {
             "type": "text",
-            "text": "Out[1]= \"{\\\"runIdentifier\\\":\\\"01a0a9c6-c101-794e-b225-4b01c529c05f\\\",\\\"startedAtUtc\\\":\\\"2026-09-16T13:18:55Z\\\",\\\"completedAtUtc\\\":\\\"2026-09-16T13:18:55Z\\\",\\\"comparisonCount\\\":3,\\\"totalInputCount\\\":44,\\\"comparisons\\\":[{\\\"function\\\":\\\"transition\\\",\\\"claimIdentifier\\\":\\\"3994c7e6-6387-590c-9922-3fad04fc482d\\\",\\\"inputCount\\\":20,\\\"uniqueInputCount\\\":20,\\\"goldenDimensionsMatch\\\":true,\\\"implementationVersusRequirementsMismatchCount\\\":0,\\\"implementationVersusGoldenMismatchCount\\\":0,\\\"goldenVersusRequirementsMismatchCount\\\":0,\\\"mismatches\\\":[],\\\"actualOutputs\\\":[[\\\"optimized\\\",\\\"none\\\",\\\"none\\\",\\\"rejected\\\"],[\\\"none\\\",\\\"validated\\\",\\\"none\\\",\\\"rejected\\\"],[\\\"none\\\",\\\"none\\\",\\\"shipped\\\",\\\"rejected\\\"],[\\\"none\\\",\\\"none\\\",\\\"none\\\",\\\"none\\\"],[\\\"none\\\",\\\"none\\\",\\\"none\\\",\\\"none\\\"]]},{\\\"function\\\":\\\"deploymentCapabilityAllowed\\\",\\\"claimIdentifier\\\":\\\"ac27dc88-da25-51f7-8af5-c431e22cd72b\\\",\\\"inputCount\\\":12,\\\"uniqueInputCount\\\":12,\\\"goldenDimensionsMatch\\\":true,\\\"implementationVersusRequirementsMismatchCount\\\":0,\\\"implementationVersusGoldenMismatchCount\\\":0,\\\"goldenVersusRequirementsMismatchCount\\\":0,\\\"mismatches\\\":[],\\\"actualOutputs\\\":[[true,false,true,true,true,true],[true,true,true,true,true,true]]},{\\\"function\\\":\\\"componentPlacementAllowed\\\",\\\"claimIdentifier\\\":\\\"cf86cf5d-e0c7-58e4-aa77-ae4d0e72bf46\\\",\\\"inputCount\\\":12,\\\"uniqueInputCount\\\":12,\\\"goldenDimensionsMatch\\\":true,\\\"implementationVersusRequirementsMismatchCount\\\":0,\\\"implementationVersusGoldenMismatchCount\\\":0,\\\"goldenVersusRequirementsMismatchCount\\\":0,\\\"mismatches\\\":[],\\\"actualOutputs\\\":[[true,true,false,false,false,false],[true,false,true,true,true,true]]}]}\""
+            "text": "Out[1]= \"{\\\"runIdentifier\\\":\\\"01a0aad9-833e-731e-a79c-dffd2363f6fa\\\",\\\"startedAtUtc\\\":\\\"2026-09-16T15:33:24Z\\\",\\\"completedAtUtc\\\":\\\"2026-09-16T15:33:24Z\\\",\\\"comparisonCount\\\":3,\\\"totalInputCount\\\":44,\\\"comparisons\\\":[{\\\"function\\\":\\\"transition\\\",\\\"claimIdentifier\\\":\\\"3994c7e6-6387-590c-9922-3fad04fc482d\\\",\\\"inputCount\\\":20,\\\"uniqueInputCount\\\":20,\\\"goldenDimensionsMatch\\\":true,\\\"implementationVersusRequirementsMismatchCount\\\":0,\\\"implementationVersusGoldenMismatchCount\\\":0,\\\"goldenVersusRequirementsMismatchCount\\\":0,\\\"mismatches\\\":[],\\\"actualOutputs\\\":[[\\\"optimized\\\",\\\"none\\\",\\\"none\\\",\\\"rejected\\\"],[\\\"none\\\",\\\"validated\\\",\\\"none\\\",\\\"rejected\\\"],[\\\"none\\\",\\\"none\\\",\\\"shipped\\\",\\\"rejected\\\"],[\\\"none\\\",\\\"none\\\",\\\"none\\\",\\\"none\\\"],[\\\"none\\\",\\\"none\\\",\\\"none\\\",\\\"none\\\"]]},{\\\"function\\\":\\\"deploymentCapabilityAllowed\\\",\\\"claimIdentifier\\\":\\\"ac27dc88-da25-51f7-8af5-c431e22cd72b\\\",\\\"inputCount\\\":12,\\\"uniqueInputCount\\\":12,\\\"goldenDimensionsMatch\\\":true,\\\"implementationVersusRequirementsMismatchCount\\\":0,\\\"implementationVersusGoldenMismatchCount\\\":0,\\\"goldenVersusRequirementsMismatchCount\\\":0,\\\"mismatches\\\":[],\\\"actualOutputs\\\":[[true,false,true,true,true,true],[true,true,true,true,true,true]]},{\\\"function\\\":\\\"componentPlacementAllowed\\\",\\\"claimIdentifier\\\":\\\"cf86cf5d-e0c7-58e4-aa77-ae4d0e72bf46\\\",\\\"inputCount\\\":12,\\\"uniqueInputCount\\\":12,\\\"goldenDimensionsMatch\\\":true,\\\"implementationVersusRequirementsMismatchCount\\\":0,\\\"implementationVersusGoldenMismatchCount\\\":0,\\\"goldenVersusRequirementsMismatchCount\\\":0,\\\"mismatches\\\":[],\\\"actualOutputs\\\":[[true,true,false,false,false,false],[true,false,true,true,true,true]]}]}\""
           }
         ],
         "isError": false
       },
       "decoded": {
-        "runIdentifier": "01a0a9c6-c101-794e-b225-4b01c529c05f",
-        "startedAtUtc": "2026-09-16T13:18:55Z",
-        "completedAtUtc": "2026-09-16T13:18:55Z",
+        "runIdentifier": "01a0aad9-833e-731e-a79c-dffd2363f6fa",
+        "startedAtUtc": "2026-09-16T15:33:24Z",
+        "completedAtUtc": "2026-09-16T15:33:24Z",
         "comparisonCount": 3,
         "totalInputCount": 44,
         "comparisons": [
@@ -129,12 +129,7 @@
             ]
           }
         ]
-      },
-      "receivedAt": "2026-09-16T13:22:30.785Z",
-      "checkCount": 3,
-      "status": "pass",
-      "recordIdentifier": "2f3d33c5-9567-5c41-8385-9ae267b06721",
-      "codeSha256": "31389405532952159ea0a18bf0ea653e0c7c6d51974c68a7e5623efd2f8babc6"
+      }
     },
     {
       "name": "material",
@@ -1765,12 +1760,7 @@
           ],
           "pass": true
         }
-      },
-      "receivedAt": "2026-09-16T13:22:30.785Z",
-      "checkCount": 13,
-      "status": "pass",
-      "recordIdentifier": "f41a2b19-b64a-5763-9275-b7a73c91bad7",
-      "codeSha256": "a5fd26ab0975c074a9703a8fa0467ac44bd19f5ee611d33a34c93018e4de9ea5"
+      }
     },
     {
       "name": "images",
@@ -1975,12 +1965,7 @@
         "maximum_observed_distance": 2.71843705095,
         "step_seconds": 0.0166666666667,
         "maximum_frame_seconds": 0.0833333333333
-      },
-      "receivedAt": "2026-09-16T13:22:30.785Z",
-      "checkCount": 10,
-      "status": "pass",
-      "recordIdentifier": "21b8f361-70e4-5407-aed1-de9bf17f9a0b",
-      "codeSha256": "cd01f3a9a8292af65eb5880c0f0ebd2dcd05cec6516ecb2805d81b688036639d"
+      }
     },
     {
       "name": "exploration",
@@ -2003,12 +1988,7 @@
         "ring_clearance_metres": 2.05,
         "ring_passage_positive": true,
         "render_interval_seconds": 0.03333333333333333
-      },
-      "receivedAt": "2026-09-16T13:22:30.785Z",
-      "checkCount": 6,
-      "status": "pass",
-      "recordIdentifier": "41018a33-77a2-5c02-bd1f-cb6e674541da",
-      "codeSha256": "a52a78c26ca6c23b5c94a255c8299bba57a93c9d91bb1c957c22b47c57cf3027"
+      }
     },
     {
       "name": "clock",
@@ -2036,12 +2016,7 @@
         "old_jump_distance": 20.12094582403507,
         "radius": 12.48,
         "period_seconds": 171
-      },
-      "receivedAt": "2026-09-16T13:22:30.785Z",
-      "checkCount": 6,
-      "status": "pass",
-      "recordIdentifier": "95c64d2a-bc93-57d4-9e11-d33fc8d0b0f7",
-      "codeSha256": "61e184aef02fa74ccda7e429e525b1792f490ee0da1f81a267a86f7e4dc1ed65"
+      }
     },
     {
       "name": "review",
@@ -2097,12 +2072,7 @@
         ],
         "truth_table_rows": 8,
         "scope": "Mathematical models and finite state obligations, not a proof of browser timing or historical influence."
-      },
-      "receivedAt": "2026-09-16T13:22:30.785Z",
-      "checkCount": 17,
-      "status": "pass",
-      "recordIdentifier": "6fc4dfed-5cf3-5c1a-94a2-ec7a0901b299",
-      "codeSha256": "1e15364241033accac6305dc5abadeca6475004372353043bacb8b235970d531"
+      }
     }
   ],
   "recordIdentifier": "3bc7f915-7f5f-53da-9b2d-8ce37e584f8c",
@@ -2189,5 +2159,6 @@
         "checkedAt": "2026-09-16T13:22:30.785Z"
       }
     ]
-  }
+  },
+  "startedAt": "2026-09-16T15:32:56.766Z"
 }
