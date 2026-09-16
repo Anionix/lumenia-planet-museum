@@ -32,6 +32,8 @@ function checkCount(program) {
 }
 export function verifyAuditRecords({ wolfram, summary, coverage }) {
   assert.match(wolfram.executionIdentifier, executionPattern);
+  for (const revision of [wolfram.sourceRevisionBefore, wolfram.sourceRevisionAfter, summary.sourceRevision, ...coverage.map(row => row.sourceRevision)])
+    assert.match(revision, /^sha256:[0-9a-f]{64}$/, 'A source revision must be present and well formed');
   same(wolfram.sourceRevisionBefore, wolfram.sourceRevisionAfter, 'Calculation source changed');
   ordered(wolfram.startedAt, wolfram.recordedAt);
   assert.ok(!Object.hasOwn(wolfram, 'revalidation'), 'Obsolete revalidation block');

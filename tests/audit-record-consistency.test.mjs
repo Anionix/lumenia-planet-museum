@@ -20,6 +20,8 @@ for (const [name, mutate] of Object.entries({
   'wrong referenced run': value => value.coverage[0].wolframExecutionIdentifier = value.summary.executionIdentifier,
   'mixed reconciliation runs': value => value.coverage[0].executionIdentifier = value.wolfram.executionIdentifier,
   'wrong source': value => value.coverage[0].sourceRevision = 'sha256:wrong',
+  'missing source bindings': value => { delete value.wolfram.sourceRevisionBefore; delete value.wolfram.sourceRevisionAfter; delete value.summary.sourceRevision; value.coverage.forEach(row => delete row.sourceRevision); },
+  'matching invalid source bindings': value => { value.wolfram.sourceRevisionBefore = value.wolfram.sourceRevisionAfter = value.summary.sourceRevision = 'invalid'; value.coverage.forEach(row => row.sourceRevision = 'invalid'); },
   'altered decoded value': value => value.wolfram.programs[0].decoded.totalInputCount++,
   'tool failure': value => value.wolfram.programs[0].response.isError = true,
   'missing coverage': value => value.coverage.pop(),
