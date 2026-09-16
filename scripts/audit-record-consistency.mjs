@@ -31,10 +31,15 @@ function checkCount(program) {
   return checks.length;
 }
 export function verifyAuditRecords({ wolfram, summary, coverage }) {
+  same(wolfram.status, 'pass', 'Calculation did not succeed');
   assert.match(wolfram.executionIdentifier, executionPattern);
-  for (const revision of [wolfram.sourceRevisionBefore, wolfram.sourceRevisionAfter, summary.sourceRevision, ...coverage.map(row => row.sourceRevision)])
+  for (const revisions of [
+    [wolfram.sourceRevisionBefore, wolfram.sourceRevisionAfter, summary.sourceRevision, summary.reconciliation?.sourceRevision, ...coverage.map(row => row.sourceRevision)],
+    [wolfram.rootSourceRevision, summary.rootSourceRevision, summary.reconciliation?.rootSourceRevision],
+  ]) for (const revision of revisions) {
     assert.match(revision, /^sha256:[0-9a-f]{64}$/, 'A source revision must be present and well formed');
-  same(wolfram.sourceRevisionBefore, wolfram.sourceRevisionAfter, 'Calculation source changed');
+    same(revision, revisions[0], 'Conflicting source revisions');
+  }
   ordered(wolfram.startedAt, wolfram.recordedAt);
   assert.ok(!Object.hasOwn(wolfram, 'revalidation'), 'Obsolete revalidation block');
   same(wolfram.programs.map(p => p.name).sort(), [...programNames].sort(), 'Calculation coverage');
@@ -63,7 +68,6 @@ export function verifyAuditRecords({ wolfram, summary, coverage }) {
   for (const row of [summary, ...coverage]) {
     assert.match(row.executionIdentifier, executionPattern);
     ordered(wolfram.recordedAt, row.recordedAt);
-    same(row.sourceRevision, wolfram.sourceRevisionAfter, 'Reference source');
   }
   for (const row of coverage) {
     same(row.executionIdentifier, summary.executionIdentifier, 'Coverage belongs to another reconciliation');
