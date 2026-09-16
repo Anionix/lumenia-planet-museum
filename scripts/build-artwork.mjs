@@ -99,8 +99,7 @@ const manifest = validateArtworkManifest({ artifactIdentifier: claimIdentifier('
 const lean = manifest ? spawnSync(path.join(projectRoot, '.lake/build/bin/lumenia_boundary'), [],
   { input: JSON.stringify({ ...manifest.flags, ...manifest.options }) + '\n', encoding: 'utf8', timeout: 10000 }) : null;
 evidence.leanBoundary = lean && { exitCode: lean.status, stdout: lean.stdout, stderr: lean.stderr };
-const leanAccepted = lean?.status === 0 && JSON.parse(lean.stdout.trim()).accepted === true;
-evidence.state = validation.issues.numErrors === 0 && nodesPreserved && manifest && leanAccepted ? 'validated' : 'rejected';
+evidence.state = (lean?.status === 0 && JSON.parse(lean.stdout.trim()).accepted === true) && validation.issues.numErrors === 0 && nodesPreserved && manifest ? 'validated' : 'rejected';
 evidence.transitions.push(evidence.state);
 await publishEvidence(evidence);
 if (evidence.state !== 'validated') throw new Error('Validator, preservation, runtime schema or Lean boundary rejected the asset.');
