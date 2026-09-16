@@ -7,7 +7,7 @@ import {createCollisionWorld} from '../reference-assets/artist-cosmos/explore/co
 import typescript from 'typescript';
 import {runInNewContext} from 'node:vm';
 
-// recordIdentifier=960d3219-91ec-5fb8-9ead-c82bd64b8922; transition=frame timestamp -> bounded flight input.
+// recordIdentifier=81ca0bef-abaf-543e-a655-632cc55172c9; executionIdentifier=01a0abbe-d765-7a3b-9b79-d72bc7e25cb2; relatedIssueRecordIdentifier=960d3219-91ec-5fb8-9ead-c82bd64b8922; transition=frame timestamp -> bounded flight input.
 test('actual frame handler bounds earlier, equal, later and resumed timestamps for every movement trigger', async () => {
   const source=typescript.createSourceFile('main.mjs',await readFile(new URL('../reference-assets/artist-cosmos/explore/main.mjs',import.meta.url),'utf8'),typescript.ScriptTarget.Latest,true);
   const tick=source.statements.find(statement=>typescript.isFunctionDeclaration(statement)&&statement.name?.text==='tick');
