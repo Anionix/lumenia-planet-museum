@@ -29,17 +29,20 @@ test('change size check reads blobs independently of Git attributes',()=>inTempo
   const git=(...arguments_)=>execFileSync('git',arguments_,{cwd:root,encoding:'utf8'}).trim();
   const commit=message=>{git('add','-A');git('-c','commit.gpgSign=false','-c','core.hooksPath=/dev/null','commit','--quiet','-m',message);};
     git('init','--quiet');git('config','user.name','Lumenia Test');git('config','user.email','test@example.invalid');
-    await writeFile(path.join(root,'note.txt'),'one\n');commit('base');const base=git('rev-parse','HEAD');
-    await writeFile(path.join(root,'.gitattributes'),'*.bin diff\n');
-    await writeFile(path.join(root,'payload.bin'),Buffer.from([97,0,98]));commit('add binary');
-    assert.match(git('diff','--numstat',base,'HEAD'),/1\t0\tpayload\.bin/);
-    assert.equal(checkChangeSize(base,'HEAD',root).status,'fail');const added=git('rev-parse','HEAD');
-    await writeFile(path.join(root,'payload.bin'),Buffer.from([99,0,100]));commit('edit binary');
-    assert.equal(checkChangeSize(added,'HEAD',root).status,'fail');const edited=git('rev-parse','HEAD');
-    await rm(path.join(root,'payload.bin'));commit('delete binary');
-    assert.equal(checkChangeSize(edited,'HEAD',root).status,'fail');const deleted=git('rev-parse','HEAD');
-    await writeFile(path.join(root,'note.txt'),'two\n');commit('edit text');
-    assert.equal(checkChangeSize(deleted,'HEAD',root).status,'pass');
+    await writeFile(path.join(root,'note.txt'),'one\n');await writeFile(path.join(root,'.gitattributes'),'*.bin diff\n');commit('base');
+    const large='x'.repeat(2*1024*1024)+'\n';
+    for(const [file,value,status] of [
+      ['payload.bin',large,'pass'],['payload.bin','z'+large,'pass'],
+      ['payload.bin',large+'\0','fail'],['payload.bin',Buffer.from([0]),'fail'],
+      ['payload.bin',null,'fail'],['note.txt','two\n','pass'],
+    ]) {
+      const base=git('rev-parse','HEAD');
+      if(value===null)await rm(path.join(root,file));else await writeFile(path.join(root,file),value);
+      commit('update '+file);
+      const result=await checkChangeSize(base,'HEAD',root);
+      assert.equal(result.status,status);
+      if(status==='fail')assert.equal(result.changedLines,null);
+    }
 }));
 
 // machine contract; record_identifier=d93d88e9-8679-522b-a756-0b60472c9e5f.
