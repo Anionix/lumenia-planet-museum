@@ -1,5 +1,5 @@
 {
-  "sourceRevision": "sha256:e81a712d0bb4f40024df879541bb7a916324c4bf0920bbcde3a7f98baa5f5e53",
+  "sourceRevision": "sha256:fa371b84fa47949a1c010e29b9545cb3671b586f9700f4df604d117be0605a2a",
   "files": [
     {
       "path": "CONSTRAINTS.md",
@@ -171,11 +171,11 @@
     },
     {
       "path": "reference-assets/artist-cosmos/explore/index.html",
-      "sha256": "29329433a2fee2d8d0fd83edf729b03d69f1d3bd370f26e46976ac0872e8dcc2"
+      "sha256": "f7389559b538b733be0ba2f36e377095945d21c5e4ef243baaefa187152a1bfd"
     },
     {
       "path": "reference-assets/artist-cosmos/explore/main.mjs",
-      "sha256": "478cbe80c951cf7ae5ae197f4a62497ec4312d4da99dccab472aec2938592b4c"
+      "sha256": "0d4471dedf1b05074c71e85f98de67210bc51cafbd88b1fb60db59f7a2404c7c"
     },
     {
       "path": "reference-assets/artist-cosmos/explore/navigation.mjs",
@@ -291,11 +291,11 @@
     },
     {
       "path": "reference-assets/artist-cosmos/interactive/index.html",
-      "sha256": "0a3014a9089b63a11268b8d802074f45fa5b2733ad4a61bbf36f7df274c43fc9"
+      "sha256": "7fdcd4301499ff70f6eead1fbbb55489df4822988f44674db5a50c50b0eeaf53"
     },
     {
       "path": "reference-assets/artist-cosmos/interactive/main.mjs",
-      "sha256": "62bdfd624708decf015657094c6f70d7853b1c73493bbc973b248c3b927f842f"
+      "sha256": "b22762da2169554fa5ebef0079a7dcb189a7b9e846517354d8a6c1862acf5c8b"
     },
     {
       "path": "reference-assets/artist-cosmos/interactive/model.mjs",
@@ -402,6 +402,10 @@
       "sha256": "cd01f3a9a8292af65eb5880c0f0ebd2dcd05cec6516ecb2805d81b688036639d"
     },
     {
+      "path": "reference-assets/artist-cosmos/interactive/webmcp.mjs",
+      "sha256": "9f825821aec1e5abcafb0e57c3f82a4ee104998a3024ca13d5d69872555bb015"
+    },
+    {
       "path": "reference-assets/artist-cosmos/josef-muller-brockmann.png",
       "sha256": "75a303ac4c65d1608c6ffb3f2f3ce70a2191aacb0980713dccfa4c8ce29a13cd"
     },
@@ -463,7 +467,7 @@
     },
     {
       "path": "scripts/build-cosmic-images.mjs",
-      "sha256": "18066cf84bf4a18f746c74980363e98b214c08c588079c38400aab3967cb3315"
+      "sha256": "1f32dd06900e7c8fb874f490360e9b4b3b6a2e93297de3cee78348851ef0f0a0"
     },
     {
       "path": "scripts/build-exploration.mjs",
@@ -648,6 +652,10 @@
     {
       "path": "tests/threejs-reference-adapter.test.mjs",
       "sha256": "bddd1df4330aae164ebe89414bbf9f402d89214fa36d61079cf1b839b2c883b1"
+    },
+    {
+      "path": "tests/webmcp.test.mjs",
+      "sha256": "0e79dce1cbef477dccc10780ed148c0335e6751867e200fcd837049dd0ae02fb"
     },
     {
       "path": "web/AGENTS.md",
@@ -931,11 +939,11 @@
     },
     {
       "path": "web/public/cosmos/explore/index.html",
-      "sha256": "29329433a2fee2d8d0fd83edf729b03d69f1d3bd370f26e46976ac0872e8dcc2"
+      "sha256": "f7389559b538b733be0ba2f36e377095945d21c5e4ef243baaefa187152a1bfd"
     },
     {
       "path": "web/public/cosmos/explore/main.mjs",
-      "sha256": "478cbe80c951cf7ae5ae197f4a62497ec4312d4da99dccab472aec2938592b4c"
+      "sha256": "0d4471dedf1b05074c71e85f98de67210bc51cafbd88b1fb60db59f7a2404c7c"
     },
     {
       "path": "web/public/cosmos/explore/navigation.mjs",
@@ -1039,11 +1047,11 @@
     },
     {
       "path": "web/public/cosmos/interactive/index.html",
-      "sha256": "0a3014a9089b63a11268b8d802074f45fa5b2733ad4a61bbf36f7df274c43fc9"
+      "sha256": "7fdcd4301499ff70f6eead1fbbb55489df4822988f44674db5a50c50b0eeaf53"
     },
     {
       "path": "web/public/cosmos/interactive/main.mjs",
-      "sha256": "62bdfd624708decf015657094c6f70d7853b1c73493bbc973b248c3b927f842f"
+      "sha256": "b22762da2169554fa5ebef0079a7dcb189a7b9e846517354d8a6c1862acf5c8b"
     },
     {
       "path": "web/public/cosmos/interactive/model.mjs",
@@ -1084,6 +1092,10 @@
     {
       "path": "web/public/cosmos/interactive/vendor/three.module.js",
       "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+    },
+    {
+      "path": "web/public/cosmos/interactive/webmcp.mjs",
+      "sha256": "9f825821aec1e5abcafb0e57c3f82a4ee104998a3024ca13d5d69872555bb015"
     },
     {
       "path": "web/public/cosmos/josef-muller-brockmann.png",
@@ -2073,6 +2085,14 @@
       "previousSourceRevision": "sha256:81baf2dec9fb672eb9c37d13fda9695911748f4408e5fe1673ec241b58d14bab",
       "sourceRevision": "sha256:e81a712d0bb4f40024df879541bb7a916324c4bf0920bbcde3a7f98baa5f5e53",
       "verifiedInputsUnchanged": true
+    },
+    {
+      "executionIdentifier": "01a0a98a-19dc-753e-8d52-62b30574dfda",
+      "recordedAt": "2026-09-16T09:26:35.228Z",
+      "previousSourceRevision": "sha256:e81a712d0bb4f40024df879541bb7a916324c4bf0920bbcde3a7f98baa5f5e53",
+      "sourceRevision": "sha256:fa371b84fa47949a1c010e29b9545cb3671b586f9700f4df604d117be0605a2a",
+      "verifiedInputsUnchanged": true,
+      "reason": "Reused existing language-server observations after exact comparison of all 13 verified proof inputs. WebMCP behavior is tested separately."
     }
   ]
 }
