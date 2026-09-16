@@ -19,7 +19,8 @@
   "pullRequests": [
     28,
     29,
-    30
+    30,
+    31
   ],
   "lean": {
     "theorems": 133,
@@ -47,5 +48,6 @@
     "https://lean-lang.org/theorem_proving_in_lean4/Axioms-and-Computation/",
     "https://reference.wolfram.com/language/ref/Reduce.html",
     "https://webmachinelearning.github.io/webmcp/"
-  ]
+  ],
+  "gitArchiveCheck": "git-archive.json"
 }
