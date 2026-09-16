@@ -10,6 +10,7 @@ import {sourceManifest} from '../scripts/source-revision.mjs';
 import {evidenceDigest,languageServerReceiptMatchesSource,languageServerTargetMatchesInvocation} from '../scripts/language-server-evidence.mjs';
 import {captureLanguageServerReceipt} from '../scripts/capture-language-server.mjs';
 import {checkChangeSize} from '../scripts/check-change-size.mjs';
+import {verifyCorrespondenceLinks} from '../scripts/audit-record-consistency.mjs';
 
 const inTemporaryDirectory=async(name,run)=>{
   const root=await mkdtemp(path.join(tmpdir(),name));
@@ -48,7 +49,23 @@ test('change size check reads blobs independently of Git attributes',()=>inTempo
 // machine contract; record_identifier=d93d88e9-8679-522b-a756-0b60472c9e5f.
 // transition: clean inputs -> generated output -> same source revision; real input edits must change it.
 test('source identity binds formal evidence and changes with source edits',()=>inTemporaryDirectory('lumenia-revision-test-',async root=>{
-    const correspondence=JSON.parse((await readFile(new URL('../reports/bounded-review/formal-correspondence-inputs.jsonl',import.meta.url),'utf8')).trim().split('\n').at(-1));
+    const readLines=async name=>(await readFile(new URL('../reports/bounded-review/'+name+'.jsonl',import.meta.url),'utf8')).trimEnd().split('\n');
+    const calculations=await readLines('formal-correspondence'), bindings=await readLines('formal-correspondence-inputs');
+    verifyCorrespondenceLinks(calculations,bindings);
+    for(const mutate of [
+      value=>value.previousExecutionIdentifier='missing', value=>value.previousRecordSha256='0'.repeat(64),
+      value=>value.previousRecordedAt='2020-01-01T00:00:00Z', value=>value.calculationExecutionIdentifier=value.previousExecutionIdentifier,
+      value=>value.wolfram.codeSha256='0'.repeat(64), value=>value.wolfram.responseSha256='0'.repeat(64),
+      value=>value.executionIdentifier=value.previousExecutionIdentifier, value=>value.recordedAt='2020-01-01T00:00:00Z',
+      value=>value.recordIdentifier='another claim', value=>value.calculationRecordedAt='2020-01-01T00:00:00Z',
+    ]) {
+      const changed=JSON.parse(bindings.at(-1));mutate(changed);
+      assert.throws(()=>verifyCorrespondenceLinks(calculations,[...bindings.slice(0,-1),JSON.stringify(changed)]));
+    }
+    for(const lines of [[],calculations.map(line=>line.replace('Permutations[names]','Reverse[names]'))])
+      assert.throws(()=>verifyCorrespondenceLinks(lines,bindings));
+    assert.throws(()=>verifyCorrespondenceLinks(calculations,[]));
+    const correspondence=JSON.parse(bindings.at(-1));
     for(const input of correspondence.inputs) assert.equal(createHash('sha256').update(await readFile(new URL('../'+input.path,import.meta.url))).digest('hex'),input.sha256);
     for(const directory of ['formal','contracts','scripts','tests','mcp','web','reference-assets'])await mkdir(path.join(root,directory));
     for(const file of ['intent.md','spec.md','CONSTRAINTS.md','lean-toolchain','lakefile.toml','lake-manifest.json','package.json','package-lock.json','eslint.config.mjs'])await writeFile(path.join(root,file),'fixture');

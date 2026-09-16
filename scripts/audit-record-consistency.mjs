@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { claimIdentifier, uuidVersionSeven } from './identifiers.mjs';
@@ -113,6 +114,31 @@ export function verifyAuditRecords({ wolfram, summary, coverage }) {
     executionIdentifier: uuidVersionSeven(), recordedAt: new Date().toISOString(), status: 'pass',
     calculationExecutionIdentifier: wolfram.executionIdentifier, checkCount: wolfram.checkCount,
     scope: 'Historical references only; current-source verification is separate.' };
+}
+export function verifyCorrespondenceLinks(calculationLines, bindingLines) {
+  const digest = text => createHash('sha256').update(text).digest('hex'), records = new Map();
+  assert.ok(calculationLines.length && bindingLines.length, 'Missing correspondence records');
+  for (const [lines, binding] of [[calculationLines, false], [bindingLines, true]]) for (const line of lines) {
+    const record = JSON.parse(line);
+    same(record.record_type, binding ? 'formal_correspondence_input_binding' : 'formal_correspondence', 'Record type');
+    assert.match(record.executionIdentifier, executionPattern);
+    assert.ok(!records.has(record.executionIdentifier), 'Duplicate execution');
+    if (binding) {
+      const previous = records.get(record.previousExecutionIdentifier);
+      assert.ok(previous, 'Missing predecessor');
+      same(record.previousRecordSha256, digest(previous.line), 'Predecessor hash');
+      same(record.previousRecordedAt, previous.record.recordedAt, 'Predecessor time');
+      same(record.recordIdentifier, previous.record.recordIdentifier, 'Predecessor claim');
+      ordered(previous.record.recordedAt, record.recordedAt);
+      const calculation = records.get(record.calculationExecutionIdentifier ?? record.previousExecutionIdentifier)?.record;
+      same(calculation?.record_type, 'formal_correspondence', 'Calculation reference');
+      same(record.recordIdentifier, calculation.recordIdentifier, 'Calculation claim');
+      same(record.calculationRecordedAt ?? record.previousRecordedAt, calculation.recordedAt, 'Calculation time');
+      for (const field of ['code', 'response']) same(record.wolfram[field + 'Sha256'],
+        digest(field === 'code' ? calculation.wolfram.code : JSON.stringify(calculation.wolfram.response)), 'Wolfram ' + field);
+    }
+    records.set(record.executionIdentifier, { record, line });
+  }
 }
 export async function readAuditRecords(directory = new URL('../reports/review-audit/', import.meta.url)) {
   const read = name => readFile(new URL(name, directory), 'utf8');
