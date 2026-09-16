@@ -59,6 +59,10 @@ test('freshness validation rejects relabelled, incomplete and changed input rece
   ])assert.equal(languageServerReceiptMatchesSource({...fresh,...overrides},manifest),false);
   const altered=structuredClone(fresh); altered.checks[0].response.structuredContent.axioms=['propext'];
   assert.equal(languageServerReceiptMatchesSource(altered,manifest),false);
+  const missingTransport=structuredClone(fresh); delete missingTransport.checks[0].captureProof.transportIdentifier;
+  assert.equal(languageServerReceiptMatchesSource(missingTransport,manifest),false);
+  const alteredChallenge=structuredClone(fresh); alteredChallenge.checks[0].captureProof.challenge=executionIdentifier;
+  assert.equal(languageServerReceiptMatchesSource(alteredChallenge,manifest),false);
   await assert.rejects(() => captureLanguageServerCheck({executionIdentifier,sourceRevision:manifest.sourceRevision,sequence:0,
     tool:'lean_verify',target:'Lumenia.Proof',transport:createLanguageServerMcpTransport(async()=>({
       response:{structuredContent:{axioms:[],warnings:[]},isError:false},challenge:'cached'}))}));

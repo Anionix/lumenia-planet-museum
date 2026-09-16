@@ -30,8 +30,25 @@ export function languageServerCheckBindingDigest(check, executionIdentifier, sou
 }
 
 const uuidV7 = /^[0-9a-f]{8}-[0-9a-f]{4}-7[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+const digestV1 = /^sha256:[0-9a-f]{64}$/i;
 const transportBrand = Symbol('trusted-lean-lsp-transport');
 const transportProofs = new WeakSet();
+
+function captureProofMatchesCheck(check, index, executionIdentifier, sourceRevision) {
+  const proof = check?.captureProof;
+  if (!proof || proof.format !== 'lean-lsp-invocation/v1' ||
+      proof.executionIdentifier !== executionIdentifier || proof.sourceRevision !== sourceRevision ||
+      proof.sequence !== index || !uuidV7.test(proof.invocationIdentifier ?? '') ||
+      proof.transportIdentifier !== 'mcp__lean_lsp' || !uuidV7.test(proof.challenge ?? '') ||
+      !digestV1.test(proof.requestDigest ?? '') || proof.requestDigest !== digest({
+        executionIdentifier, sourceRevision, sequence: index,
+        invocationIdentifier: proof.invocationIdentifier, challenge: proof.challenge,
+        tool: check.tool, target: check.target, arguments: check.arguments ?? null
+      }) || !digestV1.test(proof.argumentsDigest ?? '') ||
+      proof.argumentsDigest !== digest(check.arguments ?? null) || !digestV1.test(proof.responseDigest ?? '') ||
+      proof.responseDigest !== digest(check.response)) return false;
+  return true;
+}
 
 // The MCP client is the only transport boundary. Its response must echo the
 // per-request challenge; a cached response from an earlier request cannot pass.
@@ -87,11 +104,7 @@ export function captureLanguageServerReceipt({ manifest, executionIdentifier, ch
     throw new TypeError('A source manifest and captured checks are required');
   }
   const capturedChecks = checks.map((check, index) => {
-    if (check.captureProof?.format !== 'lean-lsp-invocation/v1' || check.captureProof.executionIdentifier !== executionIdentifier ||
-        check.captureProof.sourceRevision !== manifest.sourceRevision || check.captureProof.sequence !== index ||
-        !uuidV7.test(check.captureProof.invocationIdentifier ?? '') ||
-        check.captureProof.argumentsDigest !== digest(check.arguments ?? null) ||
-        check.captureProof.responseDigest !== digest(check.response)) {
+    if (!captureProofMatchesCheck(check, index, executionIdentifier, manifest.sourceRevision)) {
       throw new TypeError('Every check must come from the current invocation capture');
     }
     return { ...check,
@@ -124,14 +137,9 @@ export function languageServerReceiptMatchesSource(receipt, manifest) {
     capture.invocationsDigest === digest(checks.map((check) => check.captureProof));
   const invocationIdentifiers = new Set();
   return digestMatches && checks.every((check, index) => {
-    return check.captureProof?.format === 'lean-lsp-invocation/v1' &&
-      check.captureProof.executionIdentifier === receipt.executionIdentifier && check.captureProof.sourceRevision === manifest.sourceRevision &&
-      Number.isInteger(check.captureProof.sequence) &&
-      check.captureProof.sequence === index &&
-      uuidV7.test(check.captureProof.invocationIdentifier ?? '') && !invocationIdentifiers.has(check.captureProof.invocationIdentifier) &&
+    return captureProofMatchesCheck(check, index, receipt.executionIdentifier, manifest.sourceRevision) &&
+      !invocationIdentifiers.has(check.captureProof.invocationIdentifier) &&
       invocationIdentifiers.add(check.captureProof.invocationIdentifier) &&
-      check.captureProof.argumentsDigest === digest(check.arguments ?? null) &&
-      check.captureProof.responseDigest === digest(check.response) &&
       check.bindingDigest === languageServerCheckBindingDigest(check, receipt.executionIdentifier, manifest.sourceRevision);
   });
 }

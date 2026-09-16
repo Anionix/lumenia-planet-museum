@@ -1,8 +1,8 @@
 {
-  "sourceRevision": "sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772",
-  "sourceRevisionBefore": "sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772",
-  "sourceRevisionAfter": "sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772",
-  "checkStartedAtSourceRevision": "sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772",
+  "sourceRevision": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
+  "sourceRevisionBefore": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
+  "sourceRevisionAfter": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
+  "checkStartedAtSourceRevision": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
   "files": [
     {
       "path": "CONSTRAINTS.md",
@@ -610,7 +610,7 @@
     },
     {
       "path": "scripts/language-server-evidence.mjs",
-      "sha256": "ddc8185f2286ce76e14abc782dcc2e685dfc55bc5e3f3b8aebc392629b5dbf88"
+      "sha256": "06f22ae723f5fe760d82fc488e9301d5638173771d4657d56055300209495c14"
     },
     {
       "path": "scripts/measurement-context.mjs",
@@ -746,7 +746,7 @@
     },
     {
       "path": "tests/review-verification.test.mjs",
-      "sha256": "92c45d4ac17b91a75f4e11fc12da34ed5db227912cb3dd95a9837462d89d7143"
+      "sha256": "1771f9137feb6589a6200af652029ed86174f3470c9f41ce4c8599fdcf4c0c9f"
     },
     {
       "path": "tests/threejs-reference-adapter.test.mjs",
@@ -1013,24 +1013,25 @@
       "sha256": "c77757068271adb58670f7d2de2d253ef2ffe2918809f8460b6d624496293d19"
     }
   ],
-  "executionIdentifier": "01a0aa53-58a6-7a8e-a7e9-7ac37d14e70b",
-  "startedAt": "2026-09-16T12:57:05.115Z",
-  "recordedAt": "2026-09-16T13:06:24.042Z",
+  "executionIdentifier": "01a0aa71-079c-7333-b426-22c994a33a12",
+  "startedAt": "2026-09-16T13:38:49.372Z",
+  "recordedAt": "2026-09-16T13:38:49.383Z",
   "capture": {
     "format": "lean-lsp-capture/v1",
     "atomic": true,
-    "executionIdentifier": "01a0aa53-58a6-7a8e-a7e9-7ac37d14e70b",
-    "sourceRevision": "sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772",
+    "executionIdentifier": "01a0aa71-079c-7333-b426-22c994a33a12",
+    "sourceRevision": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
     "checkCount": 32,
-    "checksDigest": "sha256:bced6516389700a67bfc4a77bbda68f5f3ced866c95f9b3ff0d420eee02aa39c",
-    "invocationsDigest": "sha256:b10491c605479502a1f39006f3887c93ae2f959ec5367f2341172862e8ad733e"
+    "checksDigest": "sha256:2644189b34d6efdb8a36de1c7ef0ae0e3dc2fec1b64a04b0013ccaf3f46fc8c0",
+    "invocationsDigest": "sha256:47e94887d569445ec282aec715cb898bb861cd8ece2dfccd2df127f28801e6e2",
+    "transportIdentifier": "mcp__lean_lsp",
+    "actualMcpResponseCount": 32,
+    "recordedAt": "2026-09-16T13:38:49.383Z"
   },
   "checks": [
     {
       "tool": "lean_build",
       "target": "project",
-      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa53-58a6-7a8e-a7e9-7ac37d14e70b","sourceRevision":"sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772","sequence":0,"invocationIdentifier":"01a0aa53-58a6-7e27-99e3-b12daf536710","startedAt":"2026-09-16T12:57:05.119Z","completedAt":"2026-09-16T12:57:45.325Z","argumentsDigest":"sha256:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b","responseDigest":"sha256:b0dd457b61f2c280e3f03e875dd7ed96e7826aa836b098fbbdbadabfca7b95e0"},
-      "bindingDigest": "sha256:fc0fb16167712374ce85ffd40bcd007e82de768254f32a475b021f4e0cbceb1c",
       "response": {
         "content": [
           {
@@ -1044,13 +1045,15 @@
           "errors": []
         },
         "isError": false
-      }
+      },
+      "executionIdentifier": "01a0aa71-079c-7333-b426-22c994a33a12",
+      "sourceRevision": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa71-079c-7333-b426-22c994a33a12","sourceRevision":"sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba","sequence":0,"invocationIdentifier":"01a0aa71-07a3-7b35-b345-9b47449d4160","startedAt":"2026-09-16T13:38:49.379Z","completedAt":"2026-09-16T13:38:49.380Z","argumentsDigest":"sha256:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b","responseDigest":"sha256:b0dd457b61f2c280e3f03e875dd7ed96e7826aa836b098fbbdbadabfca7b95e0","transportIdentifier":"mcp__lean_lsp","challenge":"01a0aa71-07a3-72f2-ae25-8e96a481a69f","requestDigest":"sha256:ebf207b26ce0c9b0b6189586f2b5fe622dca5e51fca9d2ad0dca357e0b65afeb"},
+      "bindingDigest": "sha256:6ce02a03e1bfc7e02b253abd53be2aae0c156dd952b3d559c88b11c4910c127f"
     },
     {
       "tool": "lean_diagnostic_messages",
       "target": "Lumenia.asset_checks_iff_requirements",
-      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa53-58a6-7a8e-a7e9-7ac37d14e70b","sourceRevision":"sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772","sequence":1,"invocationIdentifier":"01a0aa53-58a6-79d7-8cea-5575b222b57d","startedAt":"2026-09-16T12:57:05.119Z","completedAt":"2026-09-16T12:57:55.980Z","argumentsDigest":"sha256:6f006fa31559d01251df1aadc7c7892628573d104497050d5bb83527be5b0837","responseDigest":"sha256:c89d82221fbe8f9030d09d5f30ecc4be44a7a17d4e099a0873b3af4b3802416f"},
-      "bindingDigest": "sha256:2a02de3fa47a5cc13499c57c9e8627f5dd012b6e8aa982cd2fb4a92fb77a8bde",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean"
       },
@@ -1070,13 +1073,15 @@
           }
         },
         "isError": false
-      }
+      },
+      "executionIdentifier": "01a0aa71-079c-7333-b426-22c994a33a12",
+      "sourceRevision": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa71-079c-7333-b426-22c994a33a12","sourceRevision":"sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba","sequence":1,"invocationIdentifier":"01a0aa71-07a4-7339-86ea-d585a0599427","startedAt":"2026-09-16T13:38:49.380Z","completedAt":"2026-09-16T13:38:49.380Z","argumentsDigest":"sha256:6f006fa31559d01251df1aadc7c7892628573d104497050d5bb83527be5b0837","responseDigest":"sha256:c89d82221fbe8f9030d09d5f30ecc4be44a7a17d4e099a0873b3af4b3802416f","transportIdentifier":"mcp__lean_lsp","challenge":"01a0aa71-07a4-79e8-abcc-e52482058994","requestDigest":"sha256:b6cd5a8bf20dd4060379733a044bfca94efb3b6ecb08435d252961e676556b73"},
+      "bindingDigest": "sha256:5fdf64d841cce247b65412874891b726b1885d5a2ee61f17672d618e89eebbfb"
     },
     {
       "tool": "lean_file_outline",
       "target": "Lumenia.asset_checks_iff_requirements",
-      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa53-58a6-7a8e-a7e9-7ac37d14e70b","sourceRevision":"sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772","sequence":2,"invocationIdentifier":"01a0aa53-58a6-7bcf-952d-db71e6b489b0","startedAt":"2026-09-16T12:57:05.119Z","completedAt":"2026-09-16T12:57:53.677Z","argumentsDigest":"sha256:f5fe6b553ca43863ade7026a9b1a331f48b6795a8dc5708fe863050d0566d324","responseDigest":"sha256:f7f4b720fba3b5a57b95f7ca07a1e494630e14afc8384cc3d3c69da622400cf2"},
-      "bindingDigest": "sha256:68f42d7847ce0336b337a1ac95585359ad7acba88ff357219372cfb96e1c2c70",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "max_declarations": 40
@@ -1417,13 +1422,15 @@
           "total_declarations": 64
         },
         "isError": false
-      }
+      },
+      "executionIdentifier": "01a0aa71-079c-7333-b426-22c994a33a12",
+      "sourceRevision": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa71-079c-7333-b426-22c994a33a12","sourceRevision":"sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba","sequence":2,"invocationIdentifier":"01a0aa71-07a4-7e65-aae7-341e0c3585c2","startedAt":"2026-09-16T13:38:49.380Z","completedAt":"2026-09-16T13:38:49.380Z","argumentsDigest":"sha256:f5fe6b553ca43863ade7026a9b1a331f48b6795a8dc5708fe863050d0566d324","responseDigest":"sha256:f7f4b720fba3b5a57b95f7ca07a1e494630e14afc8384cc3d3c69da622400cf2","transportIdentifier":"mcp__lean_lsp","challenge":"01a0aa71-07a4-71c1-9cc1-607a5b6cbf72","requestDigest":"sha256:773ff0036df3edea3066810895a1a3acb4e5a942c24b994e7dbab0cf85364759"},
+      "bindingDigest": "sha256:9aecad3043e1542574d2cae218d00b34dd7f36dd67c751bec3e5752639680008"
     },
     {
       "tool": "lean_hover_info",
       "target": "Lumenia.asset_checks_iff_requirements",
-      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa53-58a6-7a8e-a7e9-7ac37d14e70b","sourceRevision":"sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772","sequence":3,"invocationIdentifier":"01a0aa53-58a7-74f9-adb4-eef7913e9a06","startedAt":"2026-09-16T12:57:05.119Z","completedAt":"2026-09-16T12:57:55.984Z","argumentsDigest":"sha256:4f82867a328d094dccd48201eb2e1315d71a497777f26ac851cadead9ff98f4b","responseDigest":"sha256:70f0484252e1f75903b96755a1dffb486bf060c10550cc98e3def7a647d4b41a"},
-      "bindingDigest": "sha256:3b9e387818ae047a73cc02501044f87408a6d7e43cf940dba76796ab02c9daf3",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "line": 30,
@@ -1442,13 +1449,15 @@
           "diagnostics": []
         },
         "isError": false
-      }
+      },
+      "executionIdentifier": "01a0aa71-079c-7333-b426-22c994a33a12",
+      "sourceRevision": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa71-079c-7333-b426-22c994a33a12","sourceRevision":"sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba","sequence":3,"invocationIdentifier":"01a0aa71-07a5-764b-8d3b-15b5b457b3a5","startedAt":"2026-09-16T13:38:49.381Z","completedAt":"2026-09-16T13:38:49.381Z","argumentsDigest":"sha256:4f82867a328d094dccd48201eb2e1315d71a497777f26ac851cadead9ff98f4b","responseDigest":"sha256:70f0484252e1f75903b96755a1dffb486bf060c10550cc98e3def7a647d4b41a","transportIdentifier":"mcp__lean_lsp","challenge":"01a0aa71-07a5-7dfa-862e-7f296b44c94f","requestDigest":"sha256:a3ca40d9d4d53af4b08933e3bdf2c0c8dee2b4e1e23fd3b680c0392f244b21de"},
+      "bindingDigest": "sha256:0a6061ea65362c68f2251e8a5a33aaf0c8693f2efc7ecbecd8ddc3920fa60708"
     },
     {
       "tool": "lean_goal",
       "target": "Lumenia.asset_checks_iff_requirements",
-      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa53-58a6-7a8e-a7e9-7ac37d14e70b","sourceRevision":"sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772","sequence":4,"invocationIdentifier":"01a0aa53-58a7-7b1a-9cf4-4ae64060181f","startedAt":"2026-09-16T12:57:05.119Z","completedAt":"2026-09-16T12:57:05.345Z","argumentsDigest":"sha256:a1dd5a66215bb837d8a79cf505b4b4c540be516ea8d315a892371f132ca25fe2","responseDigest":"sha256:248ad19b573b6edc58549462f674360391abdf805561627365aebbda0fd74161"},
-      "bindingDigest": "sha256:03f6db705e468ccad680b382cb493632d8cafd33baf6f9d923a644fe517c7634",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "line": 57
@@ -1467,13 +1476,15 @@
           "goals_after": []
         },
         "isError": false
-      }
+      },
+      "executionIdentifier": "01a0aa71-079c-7333-b426-22c994a33a12",
+      "sourceRevision": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa71-079c-7333-b426-22c994a33a12","sourceRevision":"sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba","sequence":4,"invocationIdentifier":"01a0aa71-07a5-796a-8339-2602464be4bf","startedAt":"2026-09-16T13:38:49.381Z","completedAt":"2026-09-16T13:38:49.381Z","argumentsDigest":"sha256:a1dd5a66215bb837d8a79cf505b4b4c540be516ea8d315a892371f132ca25fe2","responseDigest":"sha256:248ad19b573b6edc58549462f674360391abdf805561627365aebbda0fd74161","transportIdentifier":"mcp__lean_lsp","challenge":"01a0aa71-07a5-7294-9012-b185fedde2be","requestDigest":"sha256:85e372335f14c402ef2320a3a0423c72333424443f23a7b5892baad805e13397"},
+      "bindingDigest": "sha256:301da743c5d35b0bf1c0f3734c75f5d49cafef9e2ed0220954b31cdba7df1625"
     },
     {
       "tool": "lean_verify",
       "target": "Lumenia.asset_checks_iff_requirements",
-      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa53-58a6-7a8e-a7e9-7ac37d14e70b","sourceRevision":"sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772","sequence":5,"invocationIdentifier":"01a0aa53-58a7-79b5-922e-87065843d7b0","startedAt":"2026-09-16T12:57:05.119Z","completedAt":"2026-09-16T12:58:02.733Z","argumentsDigest":"sha256:c2c0261436f6d2ccdee5ed2d0563f77739d9d24fc786dfb253d9e6d2dbd53895","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
-      "bindingDigest": "sha256:2f14fbe38f8fa1a7281fb578655f0c60f5ce16a3330eb33b1acfbeb00790de47",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.asset_checks_iff_requirements",
@@ -1491,13 +1502,15 @@
           "warnings": []
         },
         "isError": false
-      }
+      },
+      "executionIdentifier": "01a0aa71-079c-7333-b426-22c994a33a12",
+      "sourceRevision": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa71-079c-7333-b426-22c994a33a12","sourceRevision":"sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba","sequence":5,"invocationIdentifier":"01a0aa71-07a5-76a2-a518-39bd317f46ef","startedAt":"2026-09-16T13:38:49.381Z","completedAt":"2026-09-16T13:38:49.381Z","argumentsDigest":"sha256:c2c0261436f6d2ccdee5ed2d0563f77739d9d24fc786dfb253d9e6d2dbd53895","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66","transportIdentifier":"mcp__lean_lsp","challenge":"01a0aa71-07a5-78be-abcd-c0b3166b53fd","requestDigest":"sha256:c1cc028aac0129c226035d50a1b6bdfc165e8cbef5ca3143fb719d72fd7e8aad"},
+      "bindingDigest": "sha256:b9bf12d52699a3b41fb24220f8dc9b63df46f4f08fe7806a49d5a11af5a812ab"
     },
     {
       "tool": "lean_verify",
       "target": "Lumenia.validate_raw_asset_accepts_iff",
-      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa53-58a6-7a8e-a7e9-7ac37d14e70b","sourceRevision":"sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772","sequence":6,"invocationIdentifier":"01a0aa53-58a7-7d4d-9f05-60d5e43a3d4f","startedAt":"2026-09-16T12:57:05.119Z","completedAt":"2026-09-16T12:58:10.031Z","argumentsDigest":"sha256:14bd3dbb11158cf582e7a703ec4450cd136302c2214f0e22b5ec507ef901964a","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
-      "bindingDigest": "sha256:c330ff4dd8ccb278b25b8deefaf7cbb9dcab426c7342d3768e5a3d40bf8c734c",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.validate_raw_asset_accepts_iff",
@@ -1515,13 +1528,15 @@
           "warnings": []
         },
         "isError": false
-      }
+      },
+      "executionIdentifier": "01a0aa71-079c-7333-b426-22c994a33a12",
+      "sourceRevision": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa71-079c-7333-b426-22c994a33a12","sourceRevision":"sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba","sequence":6,"invocationIdentifier":"01a0aa71-07a5-7787-a067-768ad55774be","startedAt":"2026-09-16T13:38:49.381Z","completedAt":"2026-09-16T13:38:49.381Z","argumentsDigest":"sha256:14bd3dbb11158cf582e7a703ec4450cd136302c2214f0e22b5ec507ef901964a","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66","transportIdentifier":"mcp__lean_lsp","challenge":"01a0aa71-07a5-7113-8918-2cb821cd4c06","requestDigest":"sha256:40252799f0e58164df3941aa982fdfa2e3691d705052e2e89aa62fd873b1ba70"},
+      "bindingDigest": "sha256:e7474317a7b900cd6ff665fcb38f136ce3ac6003dc7694679155ec51641eb8cb"
     },
     {
       "tool": "lean_verify",
       "target": "Lumenia.validate_raw_asset_rejects_iff",
-      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa53-58a6-7a8e-a7e9-7ac37d14e70b","sourceRevision":"sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772","sequence":7,"invocationIdentifier":"01a0aa53-58a9-7a97-833a-ddfff3d94c0d","startedAt":"2026-09-16T12:57:05.119Z","completedAt":"2026-09-16T12:58:16.006Z","argumentsDigest":"sha256:b7b0b2c8e934b6059cc5daadfe488a69cc16d78d9633cbdc4c0e4fe0fd8c88ff","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
-      "bindingDigest": "sha256:7ad0452bc5ab670af831d575b20526ee3c2aedf072b142f8575b328c37758e81",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.validate_raw_asset_rejects_iff",
@@ -1539,13 +1554,15 @@
           "warnings": []
         },
         "isError": false
-      }
+      },
+      "executionIdentifier": "01a0aa71-079c-7333-b426-22c994a33a12",
+      "sourceRevision": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa71-079c-7333-b426-22c994a33a12","sourceRevision":"sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba","sequence":7,"invocationIdentifier":"01a0aa71-07a5-72af-bb61-876dce9b2aa6","startedAt":"2026-09-16T13:38:49.381Z","completedAt":"2026-09-16T13:38:49.381Z","argumentsDigest":"sha256:b7b0b2c8e934b6059cc5daadfe488a69cc16d78d9633cbdc4c0e4fe0fd8c88ff","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66","transportIdentifier":"mcp__lean_lsp","challenge":"01a0aa71-07a5-7077-a327-858f72967052","requestDigest":"sha256:5317661a5a8784bdd73583b84f2f7a7a155c6a9a7227983d10a4a20ed24bbe08"},
+      "bindingDigest": "sha256:6d0ca13f98a1a98a81df98bd207bbe2d5ca48626acabe60c9a998fc3c3b4aebd"
     },
     {
       "tool": "lean_verify",
       "target": "Lumenia.validate_raw_asset_preserves_input",
-      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa53-58a6-7a8e-a7e9-7ac37d14e70b","sourceRevision":"sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772","sequence":8,"invocationIdentifier":"01a0aa53-58a9-7706-a890-168dfa290d67","startedAt":"2026-09-16T12:57:05.119Z","completedAt":"2026-09-16T12:58:27.138Z","argumentsDigest":"sha256:727659186b4429aa2dc4b718e2e97a7efc974d646a7b5211a6c6658da59737c2","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
-      "bindingDigest": "sha256:d2f6669b217beffb801405b730dddd6c431772a8cdc8a3ccca13ec6a47ee5fd8",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.validate_raw_asset_preserves_input",
@@ -1563,13 +1580,15 @@
           "warnings": []
         },
         "isError": false
-      }
+      },
+      "executionIdentifier": "01a0aa71-079c-7333-b426-22c994a33a12",
+      "sourceRevision": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa71-079c-7333-b426-22c994a33a12","sourceRevision":"sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba","sequence":8,"invocationIdentifier":"01a0aa71-07a5-7d19-b19d-e6f6e3651124","startedAt":"2026-09-16T13:38:49.381Z","completedAt":"2026-09-16T13:38:49.381Z","argumentsDigest":"sha256:727659186b4429aa2dc4b718e2e97a7efc974d646a7b5211a6c6658da59737c2","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66","transportIdentifier":"mcp__lean_lsp","challenge":"01a0aa71-07a5-7bf3-a3b4-4a61b7c01315","requestDigest":"sha256:149b8758e68527db4b814250a6f6ef6091e91773ff0bc3bf63d5347ca43d7941"},
+      "bindingDigest": "sha256:1facd06e69024fc8ec740057adbcc5c604af80ea20dc939ad55182964785bf2e"
     },
     {
       "tool": "lean_verify",
       "target": "Lumenia.validate_raw_asset_sound",
-      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa53-58a6-7a8e-a7e9-7ac37d14e70b","sourceRevision":"sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772","sequence":9,"invocationIdentifier":"01a0aa53-58a9-7bac-92be-15c600748c06","startedAt":"2026-09-16T12:57:05.119Z","completedAt":"2026-09-16T12:58:21.649Z","argumentsDigest":"sha256:016565a725df14a7cd20eabb4bc22da8c6ce8cc8f1861f16d07b67176b3eb426","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
-      "bindingDigest": "sha256:f13cc09726b5509824dbeb72a3e3f707911600be806417958994519bce91991d",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.validate_raw_asset_sound",
@@ -1587,13 +1606,15 @@
           "warnings": []
         },
         "isError": false
-      }
+      },
+      "executionIdentifier": "01a0aa71-079c-7333-b426-22c994a33a12",
+      "sourceRevision": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa71-079c-7333-b426-22c994a33a12","sourceRevision":"sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba","sequence":9,"invocationIdentifier":"01a0aa71-07a5-74af-9275-5fade28a69db","startedAt":"2026-09-16T13:38:49.381Z","completedAt":"2026-09-16T13:38:49.381Z","argumentsDigest":"sha256:016565a725df14a7cd20eabb4bc22da8c6ce8cc8f1861f16d07b67176b3eb426","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66","transportIdentifier":"mcp__lean_lsp","challenge":"01a0aa71-07a5-7259-8797-87bfd52dc340","requestDigest":"sha256:845d2d900f24f6f8a36ae00ee5c9566bf1b30163c36ccbaa794be4a98e2d1d1d"},
+      "bindingDigest": "sha256:b0c718306e6e9feebf650c67c34f6919be93e8cfb777ae5f78b79e2a742bafeb"
     },
     {
       "tool": "lean_verify",
       "target": "Lumenia.validated_asset_satisfies_requirements",
-      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa53-58a6-7a8e-a7e9-7ac37d14e70b","sourceRevision":"sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772","sequence":10,"invocationIdentifier":"01a0aa53-58a9-7711-9c68-dc121d092140","startedAt":"2026-09-16T12:57:05.119Z","completedAt":"2026-09-16T12:58:44.244Z","argumentsDigest":"sha256:11ed267e0e4800accffde5966415b78cd1c7277f8551b0996e274edea8f6b7ff","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
-      "bindingDigest": "sha256:c83d18a6a5aec7079fb20d898010b7df45535df59da2b04c94018452fedca894",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.validated_asset_satisfies_requirements",
@@ -1611,13 +1632,15 @@
           "warnings": []
         },
         "isError": false
-      }
+      },
+      "executionIdentifier": "01a0aa71-079c-7333-b426-22c994a33a12",
+      "sourceRevision": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa71-079c-7333-b426-22c994a33a12","sourceRevision":"sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba","sequence":10,"invocationIdentifier":"01a0aa71-07a5-78bc-b1d0-98fe2324c91a","startedAt":"2026-09-16T13:38:49.381Z","completedAt":"2026-09-16T13:38:49.381Z","argumentsDigest":"sha256:11ed267e0e4800accffde5966415b78cd1c7277f8551b0996e274edea8f6b7ff","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66","transportIdentifier":"mcp__lean_lsp","challenge":"01a0aa71-07a5-775c-b351-f7cb95d6dfa7","requestDigest":"sha256:e9b61fd7fbae6b987dda4cb9227dfe02209b3d1cc7231e8cd8285378828c6498"},
+      "bindingDigest": "sha256:21b5295958a0289c85d1dcbf7c18d3ff5e32079011ec3f16bcd549076ee6fd99"
     },
     {
       "tool": "lean_verify",
       "target": "Lumenia.meshopt_variants_are_exclusive",
-      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa53-58a6-7a8e-a7e9-7ac37d14e70b","sourceRevision":"sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772","sequence":11,"invocationIdentifier":"01a0aa53-58a9-7249-93d0-85b77c2a76e5","startedAt":"2026-09-16T12:57:05.119Z","completedAt":"2026-09-16T12:58:58.568Z","argumentsDigest":"sha256:86e0bcc2b20d82b2ee085f9cd8789307af114bd4757b29a6f97598e2e383237f","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
-      "bindingDigest": "sha256:5dfb0eb3e16a7d4f50d89d4882ea22ce422968df6eab20560b7bed46dd4dc27d",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.meshopt_variants_are_exclusive",
@@ -1635,13 +1658,15 @@
           "warnings": []
         },
         "isError": false
-      }
+      },
+      "executionIdentifier": "01a0aa71-079c-7333-b426-22c994a33a12",
+      "sourceRevision": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa71-079c-7333-b426-22c994a33a12","sourceRevision":"sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba","sequence":11,"invocationIdentifier":"01a0aa71-07a6-72d7-9447-19b65bb56bbe","startedAt":"2026-09-16T13:38:49.382Z","completedAt":"2026-09-16T13:38:49.382Z","argumentsDigest":"sha256:86e0bcc2b20d82b2ee085f9cd8789307af114bd4757b29a6f97598e2e383237f","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66","transportIdentifier":"mcp__lean_lsp","challenge":"01a0aa71-07a6-7074-b007-e77565ffc5c5","requestDigest":"sha256:2449cb971afe35920adb8fd637aee1d89e9fb7cdd91121b74f42dcf12c8e74a7"},
+      "bindingDigest": "sha256:eaac051530b77a355642fc27a184904c872bbc2c76a07c4f8e886cb546b60d50"
     },
     {
       "tool": "lean_verify",
       "target": "Lumenia.extension_meshopt_requires_decoder",
-      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa53-58a6-7a8e-a7e9-7ac37d14e70b","sourceRevision":"sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772","sequence":12,"invocationIdentifier":"01a0aa53-58a9-7403-a606-771bb015802b","startedAt":"2026-09-16T12:57:05.119Z","completedAt":"2026-09-16T12:59:24.552Z","argumentsDigest":"sha256:be98a8c7877fb95c957213d0bc36c6590893ac8b6a89cb203eb00066e2ac1d19","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
-      "bindingDigest": "sha256:7d1d4963139dc4e15bf2917994c21ad94f8a217f49aedeeb155311bdbe3f911d",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.extension_meshopt_requires_decoder",
@@ -1659,13 +1684,15 @@
           "warnings": []
         },
         "isError": false
-      }
+      },
+      "executionIdentifier": "01a0aa71-079c-7333-b426-22c994a33a12",
+      "sourceRevision": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa71-079c-7333-b426-22c994a33a12","sourceRevision":"sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba","sequence":12,"invocationIdentifier":"01a0aa71-07a6-7447-bdea-ef0575d2c983","startedAt":"2026-09-16T13:38:49.382Z","completedAt":"2026-09-16T13:38:49.382Z","argumentsDigest":"sha256:be98a8c7877fb95c957213d0bc36c6590893ac8b6a89cb203eb00066e2ac1d19","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66","transportIdentifier":"mcp__lean_lsp","challenge":"01a0aa71-07a6-7958-869a-108941e5fd51","requestDigest":"sha256:22f5c102255b7d31cffbdafb5c8285e1ce721616e309c8ff676ade0e9bfd923c"},
+      "bindingDigest": "sha256:bdf25839e304747a16ccd0f89b70b73b0d69e82fa281194a8429d7a4a048e9db"
     },
     {
       "tool": "lean_verify",
       "target": "Lumenia.khronos_meshopt_requires_decoder",
-      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa53-58a6-7a8e-a7e9-7ac37d14e70b","sourceRevision":"sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772","sequence":13,"invocationIdentifier":"01a0aa53-58a9-7e3e-a366-9ddae4178f80","startedAt":"2026-09-16T12:57:05.119Z","completedAt":"2026-09-16T12:58:32.736Z","argumentsDigest":"sha256:ead5f3db5b6f5acf499244fc09de6f27f14435bf3667605a0b026219c8f105d6","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
-      "bindingDigest": "sha256:357ab07bcb2708aa6035ae04410e1350131afadba6d9816c71959e8d3c7f1f8f",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.khronos_meshopt_requires_decoder",
@@ -1683,13 +1710,15 @@
           "warnings": []
         },
         "isError": false
-      }
+      },
+      "executionIdentifier": "01a0aa71-079c-7333-b426-22c994a33a12",
+      "sourceRevision": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa71-079c-7333-b426-22c994a33a12","sourceRevision":"sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba","sequence":13,"invocationIdentifier":"01a0aa71-07a6-79d5-8910-f745234c8f01","startedAt":"2026-09-16T13:38:49.382Z","completedAt":"2026-09-16T13:38:49.382Z","argumentsDigest":"sha256:ead5f3db5b6f5acf499244fc09de6f27f14435bf3667605a0b026219c8f105d6","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66","transportIdentifier":"mcp__lean_lsp","challenge":"01a0aa71-07a6-7245-87d3-c4a5ce0bfb7b","requestDigest":"sha256:cb1f8e8ae94d480bc3b5d5c91b1f0791533fa15266aa685f2fc28890d03e1d46"},
+      "bindingDigest": "sha256:638aca8e27c5193b8a2a24d332c79fdf11422dfa0e03055e7351bd1f2f963cc8"
     },
     {
       "tool": "lean_verify",
       "target": "Lumenia.ktx2_requires_loader",
-      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa53-58a6-7a8e-a7e9-7ac37d14e70b","sourceRevision":"sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772","sequence":14,"invocationIdentifier":"01a0aa53-58a9-7bbf-9dfe-61dacf5a8ad7","startedAt":"2026-09-16T12:57:05.119Z","completedAt":"2026-09-16T12:58:38.433Z","argumentsDigest":"sha256:1959bc2f313fa20639e3170b58a78d08b42f88e8e78d8dca73a609d226169c64","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
-      "bindingDigest": "sha256:dd828ef4a5d7f9bb0c56a876953a77e77a790f3f0a9549380e67dfd7ede499af",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.ktx2_requires_loader",
@@ -1707,13 +1736,15 @@
           "warnings": []
         },
         "isError": false
-      }
+      },
+      "executionIdentifier": "01a0aa71-079c-7333-b426-22c994a33a12",
+      "sourceRevision": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa71-079c-7333-b426-22c994a33a12","sourceRevision":"sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba","sequence":14,"invocationIdentifier":"01a0aa71-07a6-7ae9-8f4c-cc96c2f7bbc4","startedAt":"2026-09-16T13:38:49.382Z","completedAt":"2026-09-16T13:38:49.382Z","argumentsDigest":"sha256:1959bc2f313fa20639e3170b58a78d08b42f88e8e78d8dca73a609d226169c64","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66","transportIdentifier":"mcp__lean_lsp","challenge":"01a0aa71-07a6-7a60-86e2-f5b6709db552","requestDigest":"sha256:5e79895c11d94461aa10497072a9b4fbb8ae160b28ffc472274927c115e38672"},
+      "bindingDigest": "sha256:9df9552643b76f3b3a3ddc6dfc4a79b3416224840f7725568f0d3e490700478b"
     },
     {
       "tool": "lean_verify",
       "target": "Lumenia.draco_requires_loader",
-      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa53-58a6-7a8e-a7e9-7ac37d14e70b","sourceRevision":"sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772","sequence":15,"invocationIdentifier":"01a0aa53-58a9-73f7-9200-6ac46a30d5f2","startedAt":"2026-09-16T12:57:05.119Z","completedAt":"2026-09-16T12:58:53.571Z","argumentsDigest":"sha256:11991a5484c007c6e0ef5de0c022fd0158103f4744da761618d93b572aede866","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
-      "bindingDigest": "sha256:fc1739471808e0bfaa09840181cf82fbce6c70fa9ec6685da2f0950762b5f30b",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.draco_requires_loader",
@@ -1731,13 +1762,15 @@
           "warnings": []
         },
         "isError": false
-      }
+      },
+      "executionIdentifier": "01a0aa71-079c-7333-b426-22c994a33a12",
+      "sourceRevision": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa71-079c-7333-b426-22c994a33a12","sourceRevision":"sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba","sequence":15,"invocationIdentifier":"01a0aa71-07a6-7aae-ad0e-0572d7d7f33e","startedAt":"2026-09-16T13:38:49.382Z","completedAt":"2026-09-16T13:38:49.382Z","argumentsDigest":"sha256:11991a5484c007c6e0ef5de0c022fd0158103f4744da761618d93b572aede866","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66","transportIdentifier":"mcp__lean_lsp","challenge":"01a0aa71-07a6-7e7b-b64e-5515ffd614eb","requestDigest":"sha256:6b004ec6bc36c611f97fb9f5255f309e5f3ff763083a295e6ae2cdb6e85d1c4f"},
+      "bindingDigest": "sha256:678439a3dbff580d8d038b2c384f364a1b00cef93c398367efa5711a747ac373"
     },
     {
       "tool": "lean_verify",
       "target": "Lumenia.draco_is_enabled_iff_explicit",
-      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa53-58a6-7a8e-a7e9-7ac37d14e70b","sourceRevision":"sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772","sequence":16,"invocationIdentifier":"01a0aa53-58a9-765c-bdb2-77adeb48fcf5","startedAt":"2026-09-16T12:57:05.119Z","completedAt":"2026-09-16T12:59:20.108Z","argumentsDigest":"sha256:515416908098316526dc680ca53ad9cecd1a50904c62ed52033587c758f5663e","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
-      "bindingDigest": "sha256:dbc14d2a175be6d75aadf47375abb117eed7e8346b5bd0bb326fa4c656074585",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.draco_is_enabled_iff_explicit",
@@ -1755,13 +1788,15 @@
           "warnings": []
         },
         "isError": false
-      }
+      },
+      "executionIdentifier": "01a0aa71-079c-7333-b426-22c994a33a12",
+      "sourceRevision": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa71-079c-7333-b426-22c994a33a12","sourceRevision":"sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba","sequence":16,"invocationIdentifier":"01a0aa71-07a6-7550-ac58-8fc966eb9bd1","startedAt":"2026-09-16T13:38:49.382Z","completedAt":"2026-09-16T13:38:49.382Z","argumentsDigest":"sha256:515416908098316526dc680ca53ad9cecd1a50904c62ed52033587c758f5663e","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66","transportIdentifier":"mcp__lean_lsp","challenge":"01a0aa71-07a6-764e-a6eb-3cb8ebe778bb","requestDigest":"sha256:59a062e2ec81383ff5ed015938733d2376137981f123f0b8013315d9f1ba487b"},
+      "bindingDigest": "sha256:c31e440b7c95a2bf332e39fb655e160c4f183db81547e2af5c2bb45e8f16e2fd"
     },
     {
       "tool": "lean_verify",
       "target": "Lumenia.named_nodes_require_preservation",
-      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa53-58a6-7a8e-a7e9-7ac37d14e70b","sourceRevision":"sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772","sequence":17,"invocationIdentifier":"01a0aa53-58a9-77d2-834a-205f5b27d936","startedAt":"2026-09-16T12:57:05.119Z","completedAt":"2026-09-16T12:58:48.811Z","argumentsDigest":"sha256:2136a90812bb44986f4b9b45b8958880b93ffc9dd675330a2a2caa1402c0207a","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
-      "bindingDigest": "sha256:42f907ee09c437d4ca07ae28248c56b3b8fcf1c9d13da47397d3e18ce55c4590",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.named_nodes_require_preservation",
@@ -1779,13 +1814,15 @@
           "warnings": []
         },
         "isError": false
-      }
+      },
+      "executionIdentifier": "01a0aa71-079c-7333-b426-22c994a33a12",
+      "sourceRevision": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa71-079c-7333-b426-22c994a33a12","sourceRevision":"sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba","sequence":17,"invocationIdentifier":"01a0aa71-07a6-73da-846c-130e14185f03","startedAt":"2026-09-16T13:38:49.382Z","completedAt":"2026-09-16T13:38:49.382Z","argumentsDigest":"sha256:2136a90812bb44986f4b9b45b8958880b93ffc9dd675330a2a2caa1402c0207a","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66","transportIdentifier":"mcp__lean_lsp","challenge":"01a0aa71-07a6-78f7-b621-7382309f3cdf","requestDigest":"sha256:80307d3c09fbf0a486aba522e92d925103e98bcd1ccb1a0daf08c9102ad984fa"},
+      "bindingDigest": "sha256:ef46299d086f0276e4e0def25d792114710925419d5afdd541cfa19f8e65183f"
     },
     {
       "tool": "lean_verify",
       "target": "Lumenia.extras_require_preservation",
-      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa53-58a6-7a8e-a7e9-7ac37d14e70b","sourceRevision":"sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772","sequence":18,"invocationIdentifier":"01a0aa53-58a9-7873-8414-758faa710a10","startedAt":"2026-09-16T12:57:05.119Z","completedAt":"2026-09-16T12:59:13.431Z","argumentsDigest":"sha256:6052aa8ea817ff44201f4fcf22ea2ce86c026d5afa227252b8bef4d2d217310a","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
-      "bindingDigest": "sha256:6e324187340a84223a74ada1d2dc487c8fdd578337cc192b06ce25b031b24f74",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.extras_require_preservation",
@@ -1803,13 +1840,15 @@
           "warnings": []
         },
         "isError": false
-      }
+      },
+      "executionIdentifier": "01a0aa71-079c-7333-b426-22c994a33a12",
+      "sourceRevision": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa71-079c-7333-b426-22c994a33a12","sourceRevision":"sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba","sequence":18,"invocationIdentifier":"01a0aa71-07a6-76f2-89ac-ce44554b7064","startedAt":"2026-09-16T13:38:49.382Z","completedAt":"2026-09-16T13:38:49.382Z","argumentsDigest":"sha256:6052aa8ea817ff44201f4fcf22ea2ce86c026d5afa227252b8bef4d2d217310a","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66","transportIdentifier":"mcp__lean_lsp","challenge":"01a0aa71-07a6-74c8-8b6c-81ac6f868023","requestDigest":"sha256:d23cd2f5bdedfba66820f227321997827fc3a71aecb997d43a3ce9f26d54d0be"},
+      "bindingDigest": "sha256:16376f5481bd5c119b892212d2bd9d34f41ec89bd3f59eef49010354cf5ca6bb"
     },
     {
       "tool": "lean_verify",
       "target": "Lumenia.both_meshopt_flags_reject",
-      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa53-58a6-7a8e-a7e9-7ac37d14e70b","sourceRevision":"sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772","sequence":19,"invocationIdentifier":"01a0aa53-58a9-7673-a127-fc850b8de60f","startedAt":"2026-09-16T12:57:05.119Z","completedAt":"2026-09-16T12:59:07.782Z","argumentsDigest":"sha256:64ff065b4b2963f7065e6b896f4799b3444a52a6df436bd486d51185b45fba4e","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
-      "bindingDigest": "sha256:5c0b7c0336b3f5b81cdb34805e4db2a25a4a2bbbdd8d8400b3ae87d63ab257d7",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.both_meshopt_flags_reject",
@@ -1827,13 +1866,15 @@
           "warnings": []
         },
         "isError": false
-      }
+      },
+      "executionIdentifier": "01a0aa71-079c-7333-b426-22c994a33a12",
+      "sourceRevision": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa71-079c-7333-b426-22c994a33a12","sourceRevision":"sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba","sequence":19,"invocationIdentifier":"01a0aa71-07a6-76a7-9e94-727d7b54b2c4","startedAt":"2026-09-16T13:38:49.382Z","completedAt":"2026-09-16T13:38:49.382Z","argumentsDigest":"sha256:64ff065b4b2963f7065e6b896f4799b3444a52a6df436bd486d51185b45fba4e","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66","transportIdentifier":"mcp__lean_lsp","challenge":"01a0aa71-07a6-7761-a8d3-3c66b99aa61b","requestDigest":"sha256:afe95049d1e7c2b310466505ee50ac45f9b7d8b1bf173fd2097a48d0ad0bcd22"},
+      "bindingDigest": "sha256:6f9a3273bde7b249339d28dbbf8f5eb6f14d85fa01791fafd7129d6bbb40e36d"
     },
     {
       "tool": "lean_verify",
       "target": "Lumenia.missing_meshopt_decoder_rejects",
-      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa53-58a6-7a8e-a7e9-7ac37d14e70b","sourceRevision":"sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772","sequence":20,"invocationIdentifier":"01a0aa53-58a9-78d3-b65d-f11fd0b0fef1","startedAt":"2026-09-16T12:57:05.119Z","completedAt":"2026-09-16T12:59:03.027Z","argumentsDigest":"sha256:b4357110724fe39c7555d333a8b8323af254b4eb4e099970ef9a0b1b9d3237d1","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
-      "bindingDigest": "sha256:386017392793d3653c180d7da9475bee70ce5e64a947bbd441681abf0ff8b44b",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.missing_meshopt_decoder_rejects",
@@ -1851,13 +1892,15 @@
           "warnings": []
         },
         "isError": false
-      }
+      },
+      "executionIdentifier": "01a0aa71-079c-7333-b426-22c994a33a12",
+      "sourceRevision": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa71-079c-7333-b426-22c994a33a12","sourceRevision":"sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba","sequence":20,"invocationIdentifier":"01a0aa71-07a6-7020-ab7e-18d60ed2eaa9","startedAt":"2026-09-16T13:38:49.382Z","completedAt":"2026-09-16T13:38:49.382Z","argumentsDigest":"sha256:b4357110724fe39c7555d333a8b8323af254b4eb4e099970ef9a0b1b9d3237d1","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66","transportIdentifier":"mcp__lean_lsp","challenge":"01a0aa71-07a6-78ea-9679-d5369a6d80a6","requestDigest":"sha256:2c5e987b31cd31aec7df56409e18fd075508fe6b6f2b562832700e6d1c5f80dd"},
+      "bindingDigest": "sha256:87250c8c7ee501ef59d65e24c7ea30923b80c8cca2ce1cdb3cebab090a7443dd"
     },
     {
       "tool": "lean_verify",
       "target": "Lumenia.shipped_history_requires_asset_requirements",
-      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa53-58a6-7a8e-a7e9-7ac37d14e70b","sourceRevision":"sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772","sequence":21,"invocationIdentifier":"01a0aa53-58a9-70ba-a830-6c2771df7792","startedAt":"2026-09-16T12:57:05.119Z","completedAt":"2026-09-16T13:00:08.527Z","argumentsDigest":"sha256:708ee12dd28cf39fe605adc78126895706d17176fcd2c6e8f5ec71f78c57f392","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
-      "bindingDigest": "sha256:58fd0c5e3a8038b41652eb0c9a97e7925dd265052e2531da327463e766dd5282",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.shipped_history_requires_asset_requirements",
@@ -1875,13 +1918,15 @@
           "warnings": []
         },
         "isError": false
-      }
+      },
+      "executionIdentifier": "01a0aa71-079c-7333-b426-22c994a33a12",
+      "sourceRevision": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa71-079c-7333-b426-22c994a33a12","sourceRevision":"sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba","sequence":21,"invocationIdentifier":"01a0aa71-07a6-7f8a-88af-899d2f7b7a90","startedAt":"2026-09-16T13:38:49.382Z","completedAt":"2026-09-16T13:38:49.382Z","argumentsDigest":"sha256:708ee12dd28cf39fe605adc78126895706d17176fcd2c6e8f5ec71f78c57f392","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66","transportIdentifier":"mcp__lean_lsp","challenge":"01a0aa71-07a6-7c46-8ffb-47fc4c5e3973","requestDigest":"sha256:a4304c54c09376cb18b8de82285c3a444c6f4a6f1bcf61b1e26f87d59e0821df"},
+      "bindingDigest": "sha256:bbce2872bfdfb366108810db5064a936e7aae24cc789aa31a7abcb3db844f20b"
     },
     {
       "tool": "lean_verify",
       "target": "Lumenia.shipped_requires_validation",
-      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa53-58a6-7a8e-a7e9-7ac37d14e70b","sourceRevision":"sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772","sequence":22,"invocationIdentifier":"01a0aa53-58a9-7605-a96b-51c9bfeecb41","startedAt":"2026-09-16T12:57:05.119Z","completedAt":"2026-09-16T12:59:57.508Z","argumentsDigest":"sha256:5b489872563f5c65647cda39765c3ea786555aed17732bab9b500b6f98e8fd55","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
-      "bindingDigest": "sha256:8ac2bd0145c8c7d306d8c70cc45912947eafaaf8c5defd7ae482e30c9c4da4b4",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.shipped_requires_validation",
@@ -1899,13 +1944,15 @@
           "warnings": []
         },
         "isError": false
-      }
+      },
+      "executionIdentifier": "01a0aa71-079c-7333-b426-22c994a33a12",
+      "sourceRevision": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa71-079c-7333-b426-22c994a33a12","sourceRevision":"sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba","sequence":22,"invocationIdentifier":"01a0aa71-07a6-78d7-8e79-ecae51249a1d","startedAt":"2026-09-16T13:38:49.382Z","completedAt":"2026-09-16T13:38:49.382Z","argumentsDigest":"sha256:5b489872563f5c65647cda39765c3ea786555aed17732bab9b500b6f98e8fd55","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66","transportIdentifier":"mcp__lean_lsp","challenge":"01a0aa71-07a6-7d57-93cf-6b690cf6bc67","requestDigest":"sha256:6fd48dab458515fa676ea7ff8ed258015c27da5650504f8320af103029a428b4"},
+      "bindingDigest": "sha256:5267094b7cb1b9974d5621dd8c58320f2aa8cce1430eebaf38e55823f245eef9"
     },
     {
       "tool": "lean_verify",
       "target": "Lumenia.invalid_asset_has_no_shipped_history",
-      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa53-58a6-7a8e-a7e9-7ac37d14e70b","sourceRevision":"sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772","sequence":23,"invocationIdentifier":"01a0aa53-58a9-757c-afba-254864d3b8fc","startedAt":"2026-09-16T12:57:05.119Z","completedAt":"2026-09-16T12:59:48.179Z","argumentsDigest":"sha256:84a678b6537cc3c1b1a316b1e8d15211d9710c07228f9c0eee70dee01ff8042e","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
-      "bindingDigest": "sha256:cd3ad358e1b9c5e506196195d8e72cc780c80c1faf4b9fb8f034a5a18642914e",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.invalid_asset_has_no_shipped_history",
@@ -1923,13 +1970,15 @@
           "warnings": []
         },
         "isError": false
-      }
+      },
+      "executionIdentifier": "01a0aa71-079c-7333-b426-22c994a33a12",
+      "sourceRevision": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa71-079c-7333-b426-22c994a33a12","sourceRevision":"sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba","sequence":23,"invocationIdentifier":"01a0aa71-07a6-7d7b-9756-4d935a6d0f85","startedAt":"2026-09-16T13:38:49.382Z","completedAt":"2026-09-16T13:38:49.382Z","argumentsDigest":"sha256:84a678b6537cc3c1b1a316b1e8d15211d9710c07228f9c0eee70dee01ff8042e","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66","transportIdentifier":"mcp__lean_lsp","challenge":"01a0aa71-07a6-7abd-bdbc-a29ccbf340a1","requestDigest":"sha256:a9f328502063e76e5aeefb8812f9674a4d3a9a8ac42a2e09b4c0349367f3747f"},
+      "bindingDigest": "sha256:97d6647471e09cfdc3a7a22f2d595dfef4b9a9e2ca0d481d728546702acf72cd"
     },
     {
       "tool": "lean_verify",
       "target": "Lumenia.shipment_trace_is_exactly_optimize_validate_ship",
-      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa53-58a6-7a8e-a7e9-7ac37d14e70b","sourceRevision":"sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772","sequence":24,"invocationIdentifier":"01a0aa53-58aa-7c22-98e8-06c1d3abe34c","startedAt":"2026-09-16T12:57:05.119Z","completedAt":"2026-09-16T12:59:39.347Z","argumentsDigest":"sha256:9c2bbdce5684ca221e536f1dff5ebac2d354610e34af94ef0e9a44cf74473136","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
-      "bindingDigest": "sha256:3bf4fcb713a6da6259bce2e1f545acc412913838008af0c93c91288a6c430379",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.shipment_trace_is_exactly_optimize_validate_ship",
@@ -1947,13 +1996,15 @@
           "warnings": []
         },
         "isError": false
-      }
+      },
+      "executionIdentifier": "01a0aa71-079c-7333-b426-22c994a33a12",
+      "sourceRevision": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa71-079c-7333-b426-22c994a33a12","sourceRevision":"sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba","sequence":24,"invocationIdentifier":"01a0aa71-07a6-729a-9d36-9c09ead5d73f","startedAt":"2026-09-16T13:38:49.382Z","completedAt":"2026-09-16T13:38:49.383Z","argumentsDigest":"sha256:9c2bbdce5684ca221e536f1dff5ebac2d354610e34af94ef0e9a44cf74473136","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66","transportIdentifier":"mcp__lean_lsp","challenge":"01a0aa71-07a6-7cf5-9f57-299e4f9730a6","requestDigest":"sha256:965e3e4e8f261da9ff4966491b4cccd634e1a3fe121bd805039351c15eb6a096"},
+      "bindingDigest": "sha256:b529fadb69ca075606f67f1620ae1891a98754d4af260fd9811eb98f3e326337"
     },
     {
       "tool": "lean_verify",
       "target": "Lumenia.browser_capability_requires_client_component",
-      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa53-58a6-7a8e-a7e9-7ac37d14e70b","sourceRevision":"sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772","sequence":25,"invocationIdentifier":"01a0aa53-58aa-7b24-a5a8-6b73be24b696","startedAt":"2026-09-16T12:57:05.119Z","completedAt":"2026-09-16T12:59:33.808Z","argumentsDigest":"sha256:b82c3f21b0d4f43f7149c1d362dd038b45a4c3ea5bf9c18dd8f374f3606797ae","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
-      "bindingDigest": "sha256:f18b519314fd71f3d9ce6994524126c989f722ccb5bd89dd95d8544b765e2cca",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.browser_capability_requires_client_component",
@@ -1971,13 +2022,15 @@
           "warnings": []
         },
         "isError": false
-      }
+      },
+      "executionIdentifier": "01a0aa71-079c-7333-b426-22c994a33a12",
+      "sourceRevision": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa71-079c-7333-b426-22c994a33a12","sourceRevision":"sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba","sequence":25,"invocationIdentifier":"01a0aa71-07a7-739e-a2f5-836f42d06b4d","startedAt":"2026-09-16T13:38:49.383Z","completedAt":"2026-09-16T13:38:49.383Z","argumentsDigest":"sha256:b82c3f21b0d4f43f7149c1d362dd038b45a4c3ea5bf9c18dd8f374f3606797ae","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66","transportIdentifier":"mcp__lean_lsp","challenge":"01a0aa71-07a7-7912-98bd-e955dfca9ea0","requestDigest":"sha256:8ec1796bf5f7910bb74c68c209df35c629f853ce1a11340d4b0b3bd1d24dd196"},
+      "bindingDigest": "sha256:e2c07a155bc7e1f9cf7f58c70498ee4bb99074e00751348d263e6bb807f957a7"
     },
     {
       "tool": "lean_verify",
       "target": "Lumenia.static_export_cannot_require_server_only",
-      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa53-58a6-7a8e-a7e9-7ac37d14e70b","sourceRevision":"sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772","sequence":26,"invocationIdentifier":"01a0aa53-58aa-7121-9e7a-9b27bd685332","startedAt":"2026-09-16T12:57:05.119Z","completedAt":"2026-09-16T12:59:53.211Z","argumentsDigest":"sha256:43b5fc89e706d90bd2e0b1d1ac427032037b6a3b08b41e232c1707979fd45ef0","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
-      "bindingDigest": "sha256:37b7c163e0e8682688285f50318fd1352f48965f34d0e4ea74dcc23c0a65fcda",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.static_export_cannot_require_server_only",
@@ -1995,13 +2048,15 @@
           "warnings": []
         },
         "isError": false
-      }
+      },
+      "executionIdentifier": "01a0aa71-079c-7333-b426-22c994a33a12",
+      "sourceRevision": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa71-079c-7333-b426-22c994a33a12","sourceRevision":"sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba","sequence":26,"invocationIdentifier":"01a0aa71-07a7-7e5b-920a-ca2cff220696","startedAt":"2026-09-16T13:38:49.383Z","completedAt":"2026-09-16T13:38:49.383Z","argumentsDigest":"sha256:43b5fc89e706d90bd2e0b1d1ac427032037b6a3b08b41e232c1707979fd45ef0","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66","transportIdentifier":"mcp__lean_lsp","challenge":"01a0aa71-07a7-7b8f-abc8-60dba8a9f86f","requestDigest":"sha256:a9262211c105e65107ff3ebdde586901b4f9401518666cd165c184a256cb1cc5"},
+      "bindingDigest": "sha256:0fcaa7c392a8891836b66ef5f7ec8a5e8df0528748a3f3de985bb94f9443f3b5"
     },
     {
       "tool": "lean_verify",
       "target": "Lumenia.accepted_component_places_browser_requirements_on_client",
-      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa53-58a6-7a8e-a7e9-7ac37d14e70b","sourceRevision":"sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772","sequence":27,"invocationIdentifier":"01a0aa53-58aa-7a41-94f9-6a59f184cb6f","startedAt":"2026-09-16T12:57:05.119Z","completedAt":"2026-09-16T12:59:29.414Z","argumentsDigest":"sha256:07d3c91ae10b6f4333185df6a7e1740adb70ea64fc85cdcab94d0d45c7cdddbe","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
-      "bindingDigest": "sha256:93d52c8716c998160d64e65f965df7878623246d7f18a8a3c132f695b0f8dabc",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.accepted_component_places_browser_requirements_on_client",
@@ -2019,13 +2074,15 @@
           "warnings": []
         },
         "isError": false
-      }
+      },
+      "executionIdentifier": "01a0aa71-079c-7333-b426-22c994a33a12",
+      "sourceRevision": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa71-079c-7333-b426-22c994a33a12","sourceRevision":"sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba","sequence":27,"invocationIdentifier":"01a0aa71-07a7-7ff9-a70f-d5c1d679f478","startedAt":"2026-09-16T13:38:49.383Z","completedAt":"2026-09-16T13:38:49.383Z","argumentsDigest":"sha256:07d3c91ae10b6f4333185df6a7e1740adb70ea64fc85cdcab94d0d45c7cdddbe","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66","transportIdentifier":"mcp__lean_lsp","challenge":"01a0aa71-07a7-76d6-8b47-6548b72d4127","requestDigest":"sha256:65a88d874f4b4e26f478500ea22b736b4df7d06c1de6af598d785e8e73bacd6c"},
+      "bindingDigest": "sha256:10725a5360cf921dc238d31c36f881bb76a8671b2a37c1a4c3d44975b09efeac"
     },
     {
       "tool": "lean_verify",
       "target": "Lumenia.client_component_cannot_require_server_only",
-      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa53-58a6-7a8e-a7e9-7ac37d14e70b","sourceRevision":"sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772","sequence":28,"invocationIdentifier":"01a0aa53-58aa-7222-ab7b-f38d9818eca4","startedAt":"2026-09-16T12:57:05.119Z","completedAt":"2026-09-16T12:59:43.964Z","argumentsDigest":"sha256:ca13f3b2f3732e67b5c701a45cfa96fd4886820cebecb86c2cef35c69e3964fd","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
-      "bindingDigest": "sha256:9efc5e3f461a43efeb5db98459ebfc2ed1aca7524a890629c2ae8e1c01c7b65f",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.client_component_cannot_require_server_only",
@@ -2043,13 +2100,15 @@
           "warnings": []
         },
         "isError": false
-      }
+      },
+      "executionIdentifier": "01a0aa71-079c-7333-b426-22c994a33a12",
+      "sourceRevision": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa71-079c-7333-b426-22c994a33a12","sourceRevision":"sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba","sequence":28,"invocationIdentifier":"01a0aa71-07a7-7123-b030-3fc9304d78e5","startedAt":"2026-09-16T13:38:49.383Z","completedAt":"2026-09-16T13:38:49.383Z","argumentsDigest":"sha256:ca13f3b2f3732e67b5c701a45cfa96fd4886820cebecb86c2cef35c69e3964fd","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66","transportIdentifier":"mcp__lean_lsp","challenge":"01a0aa71-07a7-7e00-9583-c4b611492f47","requestDigest":"sha256:501a91cd14c7e96ed6f6e9a321e5a43e2e9484923bb3e39b7e204d24a95c7cd6"},
+      "bindingDigest": "sha256:bbcef893e7fc2108eb1d7a6f2bb68aeaae31f3d897801ba9c0487e09190f37e4"
     },
     {
       "tool": "lean_verify",
       "target": "Lumenia.core_transfer_total_within_budget",
-      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa53-58a6-7a8e-a7e9-7ac37d14e70b","sourceRevision":"sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772","sequence":29,"invocationIdentifier":"01a0aa53-58aa-7bd8-acac-95e09018c229","startedAt":"2026-09-16T12:57:05.119Z","completedAt":"2026-09-16T13:00:20.069Z","argumentsDigest":"sha256:9f046ec1dad4ed219b662c2d16c6e56f525a4abb9ce563053e59193c90c66521","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
-      "bindingDigest": "sha256:d3155a07cb399ab2c95577cc476a9ac1f77ac6a1d20c6dc9c54cfd994dda5725",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.core_transfer_total_within_budget",
@@ -2067,13 +2126,15 @@
           "warnings": []
         },
         "isError": false
-      }
+      },
+      "executionIdentifier": "01a0aa71-079c-7333-b426-22c994a33a12",
+      "sourceRevision": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa71-079c-7333-b426-22c994a33a12","sourceRevision":"sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba","sequence":29,"invocationIdentifier":"01a0aa71-07a7-7ded-899e-d2304371adb7","startedAt":"2026-09-16T13:38:49.383Z","completedAt":"2026-09-16T13:38:49.383Z","argumentsDigest":"sha256:9f046ec1dad4ed219b662c2d16c6e56f525a4abb9ce563053e59193c90c66521","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66","transportIdentifier":"mcp__lean_lsp","challenge":"01a0aa71-07a7-751c-9bdd-b9d3a7e3e20f","requestDigest":"sha256:c2e0b327d99cda42dbb10ee20edbe3c21792483f2319c297f986d54a3c188bb4"},
+      "bindingDigest": "sha256:fec552659f98a88c2cd6edb2d5f16ea9442eea764c01678c1bb5d52a05161c3c"
     },
     {
       "tool": "lean_verify",
       "target": "Lumenia.category_budget_total_is_204800_bytes",
-      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa53-58a6-7a8e-a7e9-7ac37d14e70b","sourceRevision":"sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772","sequence":30,"invocationIdentifier":"01a0aa53-58aa-76ef-834d-b40d560ab931","startedAt":"2026-09-16T12:57:05.119Z","completedAt":"2026-09-16T13:00:04.078Z","argumentsDigest":"sha256:adde7f5a8781188c7e20ae3c98a256a3f5672c146c66d795fac636f12ce84303","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
-      "bindingDigest": "sha256:eec1e149941106217ae5bc569dc57f7bd40a5fcf66ef08b94b3d631c82f36f39",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.category_budget_total_is_204800_bytes",
@@ -2091,13 +2152,15 @@
           "warnings": []
         },
         "isError": false
-      }
+      },
+      "executionIdentifier": "01a0aa71-079c-7333-b426-22c994a33a12",
+      "sourceRevision": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa71-079c-7333-b426-22c994a33a12","sourceRevision":"sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba","sequence":30,"invocationIdentifier":"01a0aa71-07a7-7868-b7d5-5a4d65582baa","startedAt":"2026-09-16T13:38:49.383Z","completedAt":"2026-09-16T13:38:49.383Z","argumentsDigest":"sha256:adde7f5a8781188c7e20ae3c98a256a3f5672c146c66d795fac636f12ce84303","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66","transportIdentifier":"mcp__lean_lsp","challenge":"01a0aa71-07a7-7465-9ad2-f8cc2c2b06ba","requestDigest":"sha256:cf5fc2533903357aea598f47770ca2dd4f0bf5405155eef5c4b68af135dd22a4"},
+      "bindingDigest": "sha256:01f3f39b359c38627d4d4162dbc408d79b489d8b66aebab259b0422b0aa4c40c"
     },
     {
       "tool": "lean_verify",
       "target": "Lumenia.measured_gate_pass_iff",
-      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa53-58a6-7a8e-a7e9-7ac37d14e70b","sourceRevision":"sha256:9977c7787832134541899a352a0f6f9d0a37d86a3d39d7a12ef17b58bbb13772","sequence":31,"invocationIdentifier":"01a0aa53-58aa-7797-ba90-71b1ca44ab5d","startedAt":"2026-09-16T12:57:05.119Z","completedAt":"2026-09-16T13:00:15.574Z","argumentsDigest":"sha256:cf0b1d0cf3a724d0c368a8bbfe5124403efeba77e7080eadaa421c7da725b997","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
-      "bindingDigest": "sha256:eaf7d36aa28e54c0a6df9d9495c6ceb7ccbefe20dbd677c6eff5524d39b280f1",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.measured_gate_pass_iff",
@@ -2115,7 +2178,14 @@
           "warnings": []
         },
         "isError": false
-      }
+      },
+      "executionIdentifier": "01a0aa71-079c-7333-b426-22c994a33a12",
+      "sourceRevision": "sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa71-079c-7333-b426-22c994a33a12","sourceRevision":"sha256:8418d8e3e1d67bc5bda53df7b62eb46309f30d90d7be4bb9ec7a7e07dc4d7fba","sequence":31,"invocationIdentifier":"01a0aa71-07a7-7580-aa26-dd609bbc4abf","startedAt":"2026-09-16T13:38:49.383Z","completedAt":"2026-09-16T13:38:49.383Z","argumentsDigest":"sha256:cf0b1d0cf3a724d0c368a8bbfe5124403efeba77e7080eadaa421c7da725b997","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66","transportIdentifier":"mcp__lean_lsp","challenge":"01a0aa71-07a7-7d54-bcd6-5be11c05ab38","requestDigest":"sha256:4244eb0fe9496ebe5b4ffa0965d4a60fb8f7530a102f4fa6e72b2126c9d407a4"},
+      "bindingDigest": "sha256:a6c6c7e49b97af5f778c68e8bcbaaf41c2170f5050851b3c064a58910d9eec43"
     }
-  ]
+  ],
+  "status": "pass",
+  "checkCount": 32,
+  "transportIdentifier": "mcp__lean_lsp"
 }
