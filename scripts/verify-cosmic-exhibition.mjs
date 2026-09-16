@@ -28,7 +28,7 @@ for (const declaration of contract.declarations) assert.ok(audit.stdout.includes
 assert.ok(!audit.stdout.includes('depends on axioms:'));
 const language = JSON.parse(await readFile(path.join(projectRoot, 'reports/cosmic-lean-language-server.json'), 'utf8'));
 assert.equal(language.sourceDigest, createHash('sha256').update(await readFile(path.join(projectRoot, language.sourceFile))).digest('hex'));
-for (const record of language.records) assert.ok(languageServerCheckSucceeded({ tool: record.tool, target: record.input.theorem_name ?? 'overlap_is_symmetric', response: record.result }), record.tool);
+for (const record of language.records) assert.ok(languageServerCheckSucceeded({ tool: record.tool, target: record.input.theorem_name ?? 'overlap_is_symmetric', arguments: record.input, response: record.result }), record.tool);
 for (const declaration of contract.declarations) assert.ok(language.records.some(record => record.tool === 'lean_verify' && record.input.theorem_name === declaration.name));
 assert.equal(cosmicCatalog.length, contract.requiredPeople);
 assert.equal(cosmicRecipes.filter(recipe => recipe.semantic_position).length, contract.requiredSemanticCoordinates);
