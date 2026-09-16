@@ -2,9 +2,10 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { claimIdentifier, uuidVersionSeven } from './identifiers.mjs';
+import { wolframChecks } from '../planetarium/checks/wolfram-check.mjs';
 
 // machine contract: recorded calculation -> later reference; mismatches -> rejected.
-// Validates historical record consistency, not freshness or authenticity of a new calculation.
+// Replays archived material inputs; does not certify freshness or authenticity of a new calculation.
 const programNames = ['root', 'material', 'images', 'exploration', 'clock', 'review'];
 const executionPattern = /^[0-9a-f]{8}-[0-9a-f]{4}-7[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/;
 const same = (actual, expected, field) => assert.deepEqual(actual, expected, field);
@@ -15,11 +16,7 @@ function ordered(earlier, later) {
 }
 function checkCount(program) {
   const value = program.decoded;
-  if (program.name === 'material') {
-    same(value.status, 'blocked', 'Material receipt binding status');
-    same(value.statusReason, 'parent-receipt-must-bind-execution-uuid-and-source-revision', 'Material receipt binding reason');
-    same(value.calculationChecksPass, true, 'Material calculation result');
-  } else if (['images', 'clock', 'review'].includes(program.name)) same(value.all_passed, true, 'Aggregate calculation result');
+  if (['images', 'clock', 'review'].includes(program.name)) same(value.all_passed, true, 'Aggregate calculation result');
   if (program.name === 'root') {
     assert.ok(value.comparisons.length > 0);
     same(value.comparisonCount, value.comparisons.length, 'Comparison count');
@@ -37,6 +34,7 @@ function checkCount(program) {
 }
 export function verifyAuditRecords({ wolfram, summary, coverage }) {
   same(wolfram.status, 'pass', 'Calculation did not succeed');
+  same(summary.status, 'verified_with_explicit_scope', 'Summary did not succeed');
   assert.match(wolfram.executionIdentifier, executionPattern);
   for (const revisions of [
     [wolfram.sourceRevisionBefore, wolfram.sourceRevisionAfter, summary.sourceRevision, summary.reconciliation?.sourceRevision, ...coverage.map(row => row.sourceRevision)],
@@ -57,6 +55,12 @@ export function verifyAuditRecords({ wolfram, summary, coverage }) {
     const decoded = JSON.parse(JSON.parse(blocks[0].text.replace(/^Out\[\d+\]=\s*/, '')));
     same(program.decoded, decoded, 'Stored response differs from decoded result');
     counts.set(program.name, checkCount(program));
+    if (program.name === 'material') same(wolfram.materialRuntimeComparison, wolframChecks(program.response), 'Material implementation comparison');
+    if (program.name === 'review')
+      for (const [field, source] of [['statePairs', 'state_pair_count'], ['partialMatchCounterexamples', 'partial_match_counterexample_count']]) {
+        assert.ok(Number.isSafeInteger(decoded[source]) && decoded[source] >= 0, 'Invalid calculation metric');
+        same(summary.wolfram[field], decoded[source], 'Summary ' + field);
+      }
     if (program.name === 'root') {
       same(decoded.runIdentifier, wolfram.executionIdentifier, 'Root execution');
       ordered(wolfram.startedAt, decoded.startedAtUtc);
@@ -72,6 +76,10 @@ export function verifyAuditRecords({ wolfram, summary, coverage }) {
   same(coverage.map(row => row.wolframProgram).sort(), [...programNames].sort(), 'Reference coverage');
   for (const row of [summary, ...coverage]) {
     assert.match(row.executionIdentifier, executionPattern);
+    assert.match(row.previousExecutionIdentifier, executionPattern, 'Missing or invalid predecessor');
+    same(row.previousExecutionIdentifier, summary.previousExecutionIdentifier, 'Conflicting predecessors');
+    assert.notEqual(row.previousExecutionIdentifier, summary.executionIdentifier, 'Self-referencing reconciliation');
+    assert.notEqual(row.previousExecutionIdentifier, wolfram.executionIdentifier, 'Calculation is not a predecessor reconciliation');
     ordered(wolfram.recordedAt, row.recordedAt);
   }
   for (const row of coverage) {

@@ -3,13 +3,24 @@ import assert from 'node:assert/strict';
 import { readAuditRecords, verifyAuditRecords } from '../scripts/audit-record-consistency.mjs';
 
 const records = await readAuditRecords();
+test('all sixteen summary obligation combinations match the Boolean proof model', () => {
+  for (let combination = 0; combination < 16; combination++) {
+    const changed = structuredClone(records);
+    if (!(combination & 8)) changed.summary.status = 'fail';
+    if (!(combination & 4)) changed.coverage[0].previousExecutionIdentifier = changed.wolfram.executionIdentifier;
+    if (!(combination & 2)) changed.summary.wolfram.statePairs++;
+    if (!(combination & 1)) changed.wolfram.materialRuntimeComparison.mismatches++;
+    if (combination === 15) assert.equal(verifyAuditRecords(changed).status, 'pass');
+    else assert.throws(() => verifyAuditRecords(changed));
+  }
+});
 test('six historical calculation records agree with their JSON Lines references', () => {
   const result = verifyAuditRecords(records);
   assert.equal(result.status, 'pass');
   assert.equal(result.checkCount, 55);
 });
-const replaceRootResult = (records, mutate) => {
-  const root = records.wolfram.programs.find(program => program.name === 'root');
+const replaceRootResult = (records, mutate, name = 'root') => {
+  const root = records.wolfram.programs.find(program => program.name === name);
   mutate(root.decoded);
   root.response.content[0].text = 'Out[1]= ' + JSON.stringify(JSON.stringify(root.decoded));
 };
@@ -35,6 +46,21 @@ for (const [name, mutate] of Object.entries({
   'missing calculation status': value => delete value.wolfram.status,
   'wrong nested source': value => value.summary.reconciliation.sourceRevision = value.wolfram.rootSourceRevision,
   'wrong summary root source': value => value.summary.rootSourceRevision = value.summary.sourceRevision,
+  'failed summary': value => value.summary.status = 'fail',
+  'pending summary': value => value.summary.status = 'pending',
+  'unknown summary': value => value.summary.status = 'unexpected',
+  'missing summary status': value => delete value.summary.status,
+  'different predecessor': value => value.coverage[0].previousExecutionIdentifier = value.wolfram.executionIdentifier,
+  'self predecessor': value => { for (const row of [value.summary, ...value.coverage]) row.previousExecutionIdentifier = value.summary.executionIdentifier; },
+  'missing predecessors': value => { for (const row of [value.summary, ...value.coverage]) delete row.previousExecutionIdentifier; },
+  'matching invalid predecessors': value => { for (const row of [value.summary, ...value.coverage]) row.previousExecutionIdentifier = 'invalid'; },
+  'calculation as predecessor': value => { for (const row of [value.summary, ...value.coverage]) row.previousExecutionIdentifier = value.wolfram.executionIdentifier; },
+  'missing material comparison': value => delete value.wolfram.materialRuntimeComparison,
+  'material mismatch': value => value.wolfram.materialRuntimeComparison.mismatches = 1,
+  'wrong material row count': value => value.wolfram.materialRuntimeComparison.comparedRows--,
+  'wrong material check count': value => value.wolfram.materialRuntimeComparison.checks--,
+  'text material row count': value => value.wolfram.materialRuntimeComparison.comparedRows = '156',
+  'missing material rows': value => replaceRootResult(value, result => result.channelMix.rows.pop(), 'material'),
   'wrong nested root source': value => value.summary.reconciliation.rootSourceRevision = value.summary.sourceRevision,
   'missing reconciliation': value => delete value.summary.reconciliation,
   'missing root sources': value => { delete value.wolfram.rootSourceRevision; delete value.summary.rootSourceRevision; delete value.summary.reconciliation.rootSourceRevision; },
@@ -50,3 +76,13 @@ for (const [name, mutate] of Object.entries({
   mutate(changed);
   assert.throws(() => verifyAuditRecords(changed));
 });
+for (const [summaryField, resultField] of [['statePairs', 'state_pair_count'], ['partialMatchCounterexamples', 'partial_match_counterexample_count']])
+  for (const invalid of [undefined, '256', -1, 0.5, 999]) test(`rejects invalid summary metric ${summaryField}: ${invalid}`, () => {
+    const changed = structuredClone(records);
+    changed.summary.wolfram[summaryField] = invalid;
+    assert.throws(() => verifyAuditRecords(changed));
+    if (invalid !== 999) {
+      replaceRootResult(changed, result => result[resultField] = invalid, 'review');
+      assert.throws(() => verifyAuditRecords(changed));
+    }
+  });
