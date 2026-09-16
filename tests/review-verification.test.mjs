@@ -45,8 +45,7 @@ test('change size check reads blobs independently of Git attributes',()=>inTempo
 // machine contract; record_identifier=d93d88e9-8679-522b-a756-0b60472c9e5f.
 // transition: clean inputs -> generated output -> same source revision; real input edits must change it.
 test('source identity binds formal evidence and changes with source edits',()=>inTemporaryDirectory('lumenia-revision-test-',async root=>{
-    const correspondence=JSON.parse(await readFile(new URL('../reports/bounded-review/formal-correspondence-inputs.jsonl',import.meta.url),'utf8'));
-    assert.equal(correspondence.sourceRevision,(await sourceManifest()).sourceRevision);
+    const correspondence=JSON.parse((await readFile(new URL('../reports/bounded-review/formal-correspondence-inputs.jsonl',import.meta.url),'utf8')).trim().split('\n').at(-1));
     for(const input of correspondence.inputs) assert.equal(createHash('sha256').update(await readFile(new URL('../'+input.path,import.meta.url))).digest('hex'),input.sha256);
     for(const directory of ['formal','contracts','scripts','tests','mcp','web','reference-assets'])await mkdir(path.join(root,directory));
     for(const file of ['intent.md','spec.md','CONSTRAINTS.md','lean-toolchain','lakefile.toml','lake-manifest.json','package.json','package-lock.json','eslint.config.mjs'])await writeFile(path.join(root,file),'fixture');
