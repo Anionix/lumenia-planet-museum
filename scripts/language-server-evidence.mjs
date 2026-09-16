@@ -99,10 +99,17 @@ export async function captureLanguageServerCheck({ executionIdentifier, sourceRe
 // machine contract; record_identifier=5c51405c-2fe3-5546-8621-278af8174a55.
 // transition: one atomic capture -> per-response binding -> exact source comparison.
 // A copied response cannot be relabelled without failing its content binding.
-export function captureLanguageServerReceipt({ manifest, executionIdentifier, checks, startedAt, recordedAt }) {
-  if (!manifest?.sourceRevision || !Array.isArray(manifest.files) || !Array.isArray(checks)) {
-    throw new TypeError('A source manifest and captured checks are required');
+export function captureLanguageServerReceipt({ manifestBefore, manifestAfter, executionIdentifier, checks, startedAt, recordedAt }) {
+  if (!manifestBefore?.sourceRevision || !Array.isArray(manifestBefore.files) ||
+      !manifestAfter?.sourceRevision || !Array.isArray(manifestAfter.files) ||
+      manifestBefore === manifestAfter || !Array.isArray(checks)) {
+    throw new TypeError('Independent pre- and post-capture source manifests are required');
   }
+  if (manifestBefore.sourceRevision !== manifestAfter.sourceRevision ||
+      canonical(manifestBefore.files) !== canonical(manifestAfter.files)) {
+    throw new TypeError('Source changed during language-server capture');
+  }
+  const manifest = manifestAfter;
   const capturedChecks = checks.map((check, index) => {
     if (!captureProofMatchesCheck(check, index, executionIdentifier, manifest.sourceRevision)) {
       throw new TypeError('Every check must come from the current invocation capture');
@@ -112,13 +119,16 @@ export function captureLanguageServerReceipt({ manifest, executionIdentifier, ch
   });
   return {
     sourceRevision: manifest.sourceRevision,
-    sourceRevisionBefore: manifest.sourceRevision,
-    sourceRevisionAfter: manifest.sourceRevision,
+    sourceRevisionBefore: manifestBefore.sourceRevision,
+    sourceRevisionAfter: manifestAfter.sourceRevision,
     checkStartedAtSourceRevision: manifest.sourceRevision,
     files: structuredClone(manifest.files), executionIdentifier, startedAt, recordedAt,
     checks: capturedChecks,
     capture: { format: 'lean-lsp-capture/v1', atomic: true, executionIdentifier,
-      sourceRevision: manifest.sourceRevision, checkCount: capturedChecks.length,
+      sourceRevision: manifest.sourceRevision, sourceRevisionBefore: manifestBefore.sourceRevision,
+      sourceRevisionAfter: manifestAfter.sourceRevision,
+      sourceFilesBeforeDigest: digest(manifestBefore.files), sourceFilesAfterDigest: digest(manifestAfter.files),
+      checkCount: capturedChecks.length,
       checksDigest: digest(capturedChecks.map((check, index) => ({ index, bindingDigest: check.bindingDigest }))),
       invocationsDigest: digest(capturedChecks.map((check) => check.captureProof)) },
   };
@@ -128,7 +138,9 @@ export function languageServerReceiptMatchesSource(receipt, manifest) {
   const checks = receipt?.checks, capture = receipt?.capture;
   if (!receipt || !manifest || !Array.isArray(checks) || !capture || capture.atomic !== true ||
       capture.format !== 'lean-lsp-capture/v1' || capture.executionIdentifier !== receipt.executionIdentifier ||
-      capture.sourceRevision !== manifest.sourceRevision || capture.checkCount !== checks.length ||
+      capture.sourceRevision !== manifest.sourceRevision || capture.sourceRevisionBefore !== manifest.sourceRevision ||
+      capture.sourceRevisionAfter !== manifest.sourceRevision || capture.sourceFilesBeforeDigest !== digest(manifest.files) ||
+      capture.sourceFilesAfterDigest !== digest(manifest.files) || capture.checkCount !== checks.length ||
       receipt.sourceRevision !== manifest.sourceRevision || receipt.sourceRevisionBefore !== manifest.sourceRevision ||
       receipt.sourceRevisionAfter !== manifest.sourceRevision || receipt.checkStartedAtSourceRevision !== manifest.sourceRevision ||
       (receipt.bindingHistory !== undefined && (!Array.isArray(receipt.bindingHistory) || receipt.bindingHistory.length !== 0)) ||
