@@ -36,29 +36,21 @@ function isRecord(value) {
   return value !== null && typeof value === 'object' && !Array.isArray(value);
 }
 
-function hasOnlyKeys(value, allowedKeys, path, errors) {
-  for (const key of Object.keys(value)) {
-    if (!allowedKeys.has(key)) {
-      errors.push(path + '.' + key + ': unknown property');
-    }
-  }
-}
-
-function requireKeys(value, requiredKeys, path, errors) {
-  for (const key of requiredKeys) {
-    if (!(key in value)) {
-      errors.push(path + '.' + key + ': required property is missing');
-    }
-  }
-}
-
 function requireObject(value, allowedKeys, path, errors, requiredKeys = allowedKeys) {
   if (!isRecord(value)) {
     errors.push(path + ': expected an object');
     return false;
   }
-  hasOnlyKeys(value, allowedKeys, path, errors);
-  requireKeys(value, requiredKeys, path, errors);
+  for (const key of Object.keys(value)) {
+    if (!allowedKeys.has(key)) {
+      errors.push(path + '.' + key + ': unknown property');
+    }
+  }
+  for (const key of requiredKeys) {
+    if (!(key in value)) {
+      errors.push(path + '.' + key + ': required property is missing');
+    }
+  }
   return true;
 }
 
