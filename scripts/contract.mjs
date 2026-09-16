@@ -150,12 +150,6 @@ function validateVerificationFields(value, path, errors) {
   validateMeasurementProfile(value.measurementProfile, path + '.measurementProfile', errors);
 }
 
-function validateVerificationRequest(value, errors) {
-  const path = 'verificationRequest';
-  if (!requireObject(value, verificationKeys, path, errors)) return;
-  validateVerificationFields(value, path, errors);
-}
-
 function validateObservation(value, path, errors) {
   const allowedKeys = new Set([
     'gateIdentifier',
@@ -282,29 +276,21 @@ function validateAssetManifest(value, errors) {
   if (value.usesExtensionMeshopt && value.usesKhronosMeshopt) {
     errors.push(path + ': extensionMeshopt and khronosMeshopt are mutually exclusive');
   }
-  if ((value.usesExtensionMeshopt || value.usesKhronosMeshopt) && !value.hasMeshoptDecoder) {
-    errors.push(path + ': Meshopt decoder is required');
-  }
-  if (value.usesKtx2 && !value.hasKtx2Loader) {
-    errors.push(path + ': KTX2 loader is required');
-  }
-  if (value.usesDraco && !value.hasDracoLoader) {
-    errors.push(path + ': Draco loader is required');
-  }
-  if (value.requiresNamedNodes && !value.keepsNamedNodes) {
-    errors.push(path + ': named-node preservation is required');
-  }
-  if (value.requiresExtras && !value.keepsExtras) {
-    errors.push(path + ': extras preservation is required');
-  }
+  for (const [required, available, description] of [
+    [value.usesExtensionMeshopt || value.usesKhronosMeshopt, value.hasMeshoptDecoder, 'Meshopt decoder'],
+    [value.usesKtx2, value.hasKtx2Loader, 'KTX2 loader'],
+    [value.usesDraco, value.hasDracoLoader, 'Draco loader'],
+    [value.requiresNamedNodes, value.keepsNamedNodes, 'named-node preservation'],
+    [value.requiresExtras, value.keepsExtras, 'extras preservation'],
+  ]) if (required && !available) errors.push(path + ': ' + description + ' is required');
 }
 
 export function validateVerificationDocument(value) {
   const errors = [];
   if (isRecord(value) && 'executionIdentifier' in value) {
     validateVerificationResult(value, errors);
-  } else {
-    validateVerificationRequest(value, errors);
+  } else if (requireObject(value, verificationKeys, 'verificationRequest', errors)) {
+    validateVerificationFields(value, 'verificationRequest', errors);
   }
   return { valid: errors.length === 0, errors };
 }
