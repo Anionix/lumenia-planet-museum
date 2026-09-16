@@ -54,8 +54,11 @@ export function languageServerTargetMatchesInvocation(check) {
   return typeof check.target === 'string' && check.target === check.arguments[argumentName];
 }
 
-function resolveManifestFileBinding(check, manifest, sourceRoot) {
-  const requestedPath = check?.arguments?.file_path;
+function resolveManifestFileBinding(check, manifest, sourceRoot, useRecordedPath = false) {
+  const requestedPath = useRecordedPath ? check?.sourceFileBinding?.path : check?.arguments?.file_path;
+  if (useRecordedPath && requestedPath === undefined && check?.arguments?.file_path !== undefined) {
+    return { valid: false, binding: null };
+  }
   if (requestedPath === undefined) return { valid: true, binding: null };
   if (typeof requestedPath !== 'string' || !requestedPath ||
       !manifest || !Array.isArray(manifest.files)) return { valid: false, binding: null };
@@ -83,8 +86,8 @@ function resolveManifestFileBinding(check, manifest, sourceRoot) {
   return { valid: true, binding: { path: relative, sha256: entry.sha256 } };
 }
 
-function sourceFileBindingMatchesCheck(check, manifest, sourceRoot, requireBinding = true) {
-  const resolved = resolveManifestFileBinding(check, manifest, sourceRoot);
+function sourceFileBindingMatchesCheck(check, manifest, sourceRoot, requireBinding = true, useRecordedPath = false) {
+  const resolved = resolveManifestFileBinding(check, manifest, sourceRoot, useRecordedPath);
   if (!resolved.valid) return false;
   return resolved.binding === null
     ? !requireBinding || check?.sourceFileBinding === undefined || check.sourceFileBinding === null
@@ -216,7 +219,7 @@ export function languageServerReceiptMatchesSource(receipt, manifest, sourceRoot
     capture.invocationsDigest === digest(checks.map((check) => check.captureProof));
   const invocationIdentifiers = new Set();
   return digestMatches && checks.every((check, index) => {
-    return sourceFileBindingMatchesCheck(check, manifest, sourceRoot) &&
+    return sourceFileBindingMatchesCheck(check, manifest, sourceRoot, true, true) &&
       captureProofMatchesCheck(check, index, receipt.executionIdentifier, manifest.sourceRevision) &&
       !invocationIdentifiers.has(check.captureProof.invocationIdentifier) &&
       invocationIdentifiers.add(check.captureProof.invocationIdentifier) &&

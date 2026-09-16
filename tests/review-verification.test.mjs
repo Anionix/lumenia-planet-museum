@@ -59,6 +59,8 @@ test('freshness validation rejects relabelled, incomplete and changed input rece
       sourceRoot:root,startedAt:'2026-09-16T00:00:00.000Z',recordedAt:'2026-09-16T00:00:01.000Z'});
     assert.deepEqual(fresh.checks[0].sourceFileBinding,{path:'formal/Proof.lean',sha256:proofDigest});
     assert.equal(languageServerReceiptMatchesSource(fresh,manifestAfter,root),true);
+    const portable=structuredClone(fresh); portable.sourceRoot='/old/creator/checkout';
+    assert.equal(languageServerReceiptMatchesSource(portable,manifestAfter,root),true);
     for(const overrides of [
       {sourceRevisionBefore:'sha256:old'}, {sourceRevisionAfter:'sha256:old'},
       {checkStartedAtSourceRevision:'sha256:old'}, {sourceRevisionBefore:undefined},
