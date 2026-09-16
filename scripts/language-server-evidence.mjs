@@ -1,5 +1,8 @@
 import { createHash } from 'node:crypto';
+import { readFileSync, realpathSync } from 'node:fs';
+import path from 'node:path';
 import { uuidVersionSeven } from './identifiers.mjs';
+import { projectRoot } from './source-revision.mjs';
 
 // llm machine contract
 // claim identifier (UUIDv5): 35302202-9761-5b5d-ac14-01302e53c2bc
@@ -22,7 +25,8 @@ function digest(value) {
 
 function checkPayload(check) {
   return { tool: check?.tool ?? null, target: check?.target ?? null,
-    arguments: check?.arguments ?? null, response: check?.response ?? null };
+    arguments: check?.arguments ?? null, response: check?.response ?? null,
+    sourceFileBinding: check?.sourceFileBinding ?? null };
 }
 
 export function languageServerCheckBindingDigest(check, executionIdentifier, sourceRevision) {
@@ -31,14 +35,68 @@ export function languageServerCheckBindingDigest(check, executionIdentifier, sou
 
 const uuidV7 = /^[0-9a-f]{8}-[0-9a-f]{4}-7[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 const digestV1 = /^sha256:[0-9a-f]{64}$/i;
+const fileDigest = /^[0-9a-f]{64}$/i;
 const transportBrand = Symbol('trusted-lean-lsp-transport');
 const transportProofs = new WeakSet();
+
+// A target is metadata only when the tool has no declaration argument. When a
+// tool does carry one, the two names must be identical before the result can
+// contribute to coverage.
+export function languageServerTargetMatchesInvocation(check) {
+  const argumentName = {
+    lean_verify: 'theorem_name',
+    lean_hover_info: 'symbol',
+    lean_goal: 'declaration_name',
+    lean_diagnostic_messages: 'declaration_name',
+    lean_file_outline: 'declaration_name',
+  }[check?.tool];
+  if (!argumentName || check?.arguments?.[argumentName] === undefined) return true;
+  return typeof check.target === 'string' && check.target === check.arguments[argumentName];
+}
+
+function resolveManifestFileBinding(check, manifest, sourceRoot) {
+  const requestedPath = check?.arguments?.file_path;
+  if (requestedPath === undefined) return { valid: true, binding: null };
+  if (typeof requestedPath !== 'string' || !requestedPath ||
+      !manifest || !Array.isArray(manifest.files)) return { valid: false, binding: null };
+  let root;
+  let resolved;
+  try {
+    root = realpathSync(path.resolve(sourceRoot));
+    resolved = realpathSync(path.resolve(root, requestedPath));
+  } catch {
+    return { valid: false, binding: null };
+  }
+  const relative = path.relative(root, resolved).split(path.sep).join('/');
+  if (!relative || relative === '..' || relative.startsWith('../') || path.isAbsolute(relative)) {
+    return { valid: false, binding: null };
+  }
+  const entry = manifest.files.find((item) => item?.path === relative && fileDigest.test(item.sha256 ?? ''));
+  if (!entry) return { valid: false, binding: null };
+  let actual;
+  try {
+    actual = createHash('sha256').update(readFileSync(resolved)).digest('hex');
+  } catch {
+    return { valid: false, binding: null };
+  }
+  if (actual !== entry.sha256) return { valid: false, binding: null };
+  return { valid: true, binding: { path: relative, sha256: entry.sha256 } };
+}
+
+function sourceFileBindingMatchesCheck(check, manifest, sourceRoot, requireBinding = true) {
+  const resolved = resolveManifestFileBinding(check, manifest, sourceRoot);
+  if (!resolved.valid) return false;
+  return resolved.binding === null
+    ? !requireBinding || check?.sourceFileBinding === undefined || check.sourceFileBinding === null
+    : canonical(check?.sourceFileBinding) === canonical(resolved.binding);
+}
 
 function captureProofMatchesCheck(check, index, executionIdentifier, sourceRevision) {
   const proof = check?.captureProof;
   if (!proof || proof.format !== 'lean-lsp-invocation/v1' ||
       proof.executionIdentifier !== executionIdentifier || proof.sourceRevision !== sourceRevision ||
       proof.sequence !== index || !uuidV7.test(proof.invocationIdentifier ?? '') ||
+      !languageServerTargetMatchesInvocation(check) ||
       proof.transportIdentifier !== 'mcp__lean_lsp' || !uuidV7.test(proof.challenge ?? '') ||
       !digestV1.test(proof.requestDigest ?? '') || proof.requestDigest !== digest({
         executionIdentifier, sourceRevision, sequence: index,
@@ -99,7 +157,8 @@ export async function captureLanguageServerCheck({ executionIdentifier, sourceRe
 // machine contract; record_identifier=5c51405c-2fe3-5546-8621-278af8174a55.
 // transition: one atomic capture -> per-response binding -> exact source comparison.
 // A copied response cannot be relabelled without failing its content binding.
-export function captureLanguageServerReceipt({ manifestBefore, manifestAfter, executionIdentifier, checks, startedAt, recordedAt }) {
+export function captureLanguageServerReceipt({ manifestBefore, manifestAfter, executionIdentifier, checks, startedAt, recordedAt,
+  sourceRoot = projectRoot }) {
   if (!manifestBefore?.sourceRevision || !Array.isArray(manifestBefore.files) ||
       !manifestAfter?.sourceRevision || !Array.isArray(manifestAfter.files) ||
       manifestBefore === manifestAfter || !Array.isArray(checks)) {
@@ -111,11 +170,18 @@ export function captureLanguageServerReceipt({ manifestBefore, manifestAfter, ex
   }
   const manifest = manifestAfter;
   const capturedChecks = checks.map((check, index) => {
-    if (!captureProofMatchesCheck(check, index, executionIdentifier, manifest.sourceRevision)) {
+    const resolvedBinding = resolveManifestFileBinding(check, manifest, sourceRoot);
+    if (!resolvedBinding.valid ||
+        (resolvedBinding.binding !== null && check?.sourceFileBinding !== undefined && check?.sourceFileBinding !== null &&
+          canonical(check.sourceFileBinding) !== canonical(resolvedBinding.binding)) ||
+        (resolvedBinding.binding === null && check?.sourceFileBinding !== undefined && check.sourceFileBinding !== null) ||
+        !captureProofMatchesCheck(check, index, executionIdentifier, manifest.sourceRevision)) {
       throw new TypeError('Every check must come from the current invocation capture');
     }
-    return { ...check,
-      bindingDigest: languageServerCheckBindingDigest(check, executionIdentifier, manifest.sourceRevision) };
+    const boundCheck = { ...check,
+      ...(resolvedBinding.binding === null ? {} : { sourceFileBinding: resolvedBinding.binding }) };
+    return { ...boundCheck,
+      bindingDigest: languageServerCheckBindingDigest(boundCheck, executionIdentifier, manifest.sourceRevision) };
   });
   return {
     sourceRevision: manifest.sourceRevision,
@@ -123,6 +189,7 @@ export function captureLanguageServerReceipt({ manifestBefore, manifestAfter, ex
     sourceRevisionAfter: manifestAfter.sourceRevision,
     checkStartedAtSourceRevision: manifest.sourceRevision,
     files: structuredClone(manifest.files), executionIdentifier, startedAt, recordedAt,
+    sourceRoot: path.resolve(sourceRoot),
     checks: capturedChecks,
     capture: { format: 'lean-lsp-capture/v1', atomic: true, executionIdentifier,
       sourceRevision: manifest.sourceRevision, sourceRevisionBefore: manifestBefore.sourceRevision,
@@ -134,7 +201,7 @@ export function captureLanguageServerReceipt({ manifestBefore, manifestAfter, ex
   };
 }
 
-export function languageServerReceiptMatchesSource(receipt, manifest) {
+export function languageServerReceiptMatchesSource(receipt, manifest, sourceRoot = receipt?.sourceRoot ?? projectRoot) {
   const checks = receipt?.checks, capture = receipt?.capture;
   if (!receipt || !manifest || !Array.isArray(checks) || !capture || capture.atomic !== true ||
       capture.format !== 'lean-lsp-capture/v1' || capture.executionIdentifier !== receipt.executionIdentifier ||
@@ -149,7 +216,8 @@ export function languageServerReceiptMatchesSource(receipt, manifest) {
     capture.invocationsDigest === digest(checks.map((check) => check.captureProof));
   const invocationIdentifiers = new Set();
   return digestMatches && checks.every((check, index) => {
-    return captureProofMatchesCheck(check, index, receipt.executionIdentifier, manifest.sourceRevision) &&
+    return sourceFileBindingMatchesCheck(check, manifest, sourceRoot) &&
+      captureProofMatchesCheck(check, index, receipt.executionIdentifier, manifest.sourceRevision) &&
       !invocationIdentifiers.has(check.captureProof.invocationIdentifier) &&
       invocationIdentifiers.add(check.captureProof.invocationIdentifier) &&
       check.bindingDigest === languageServerCheckBindingDigest(check, receipt.executionIdentifier, manifest.sourceRevision);
@@ -157,7 +225,7 @@ export function languageServerReceiptMatchesSource(receipt, manifest) {
 }
 
 export function languageServerCheckSucceeded(check) {
-  if (check.response?.isError) return false;
+  if (!languageServerTargetMatchesInvocation(check) || check.response?.isError) return false;
   let data = check.response?.structuredContent;
   if (!data) {
     try { data = JSON.parse(check.response?.content?.find((item) => item.type === 'text')?.text); }
