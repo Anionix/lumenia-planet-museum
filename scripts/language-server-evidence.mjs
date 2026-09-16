@@ -36,9 +36,7 @@ export function captureLanguageServerReceipt({ manifest, executionIdentifier, ch
     throw new TypeError('A source manifest and captured checks are required');
   }
   const capturedChecks = checks.map((check) => {
-    const payload = checkPayload(check);
-    return { ...check, executionIdentifier, sourceRevision: manifest.sourceRevision,
-      argumentsDigest: digest(payload.arguments), responseDigest: digest(payload.response),
+    return { ...check, executionIdentifier,
       bindingDigest: languageServerCheckBindingDigest(check, executionIdentifier, manifest.sourceRevision) };
   });
   return {
@@ -65,9 +63,7 @@ export function languageServerReceiptMatchesSource(receipt, manifest) {
       canonical(receipt.files) !== canonical(manifest.files)) return false;
   const digestMatches = capture.checksDigest === digest(checks.map((check, index) => ({ index, bindingDigest: check.bindingDigest })));
   return digestMatches && checks.every((check) => {
-    const payload = checkPayload(check);
-    return check.executionIdentifier === receipt.executionIdentifier && check.sourceRevision === manifest.sourceRevision &&
-      check.argumentsDigest === digest(payload.arguments) && check.responseDigest === digest(payload.response) &&
+    return check.executionIdentifier === receipt.executionIdentifier &&
       check.bindingDigest === languageServerCheckBindingDigest(check, receipt.executionIdentifier, manifest.sourceRevision);
   });
 }
