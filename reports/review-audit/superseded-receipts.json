@@ -1,0 +1,43 @@
+{
+  "recordIdentifier": "85a13247-fd1a-588c-adc3-772bf36ba5ce",
+  "executionIdentifier": "01a0a9c6-c101-794e-b225-4b01c529c05f",
+  "recordedAt": "2026-09-16T10:41:33.662Z",
+  "records": [
+    {
+      "path": "reports/sottsass-exploration-browser.json",
+      "status": "historical",
+      "issue": 24,
+      "currentReceipt": "reports/review-audit/browser.json",
+      "limitations": "Old captured hashes are not promoted to this revision. New receipt covers current startup and controls, not every earlier visual assertion.",
+      "changed": [
+        {
+          "path": "reference-assets/artist-cosmos/explore/main.mjs",
+          "previous": "74511e8bb1af2bfc833bb923a1517a1b88ec0828511199ec7e0d7b3791bcb5c1",
+          "current": "847e4110cc04ccaf711d85279c98bd44066c3e63d11dff5c81c88deb23544510"
+        },
+        {
+          "path": "reference-assets/artist-cosmos/explore/geometry.mjs",
+          "previous": "a9f89716cfc793df0457d6904c42321d253c6688ac3d7bf57025bebb6fb6add0",
+          "current": "cef74914f09f2fba6facf47383761ec1cf521042780527cdf5672e4056684488"
+        },
+        {
+          "path": "reference-assets/artist-cosmos/explore/worlds/ettore-sottsass.json",
+          "previous": "2e9ed5381e7e55f4192548ba916a6560e0b75f654b7dbafeb08e720aaa9bffd7",
+          "current": "fb3ac97e605e0175961f3c5caa2960ba5cea90d675e74ce7a7192d0bf44b672b"
+        }
+      ]
+    },
+    {
+      "path": "reports/lean-lsp-evidence.json",
+      "status": "fresh_replacement",
+      "issue": 23,
+      "previousReceipt": "reports/review-audit/previous-language-server-evidence.json"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/verification/browser-receipt.json",
+      "status": "historical",
+      "currentReceipt": "reports/review-audit/browser.json",
+      "limitations": "The original combined historical verification command still rejects this receipt after application changes. No historical hash has been relabelled."
+    }
+  ]
+}

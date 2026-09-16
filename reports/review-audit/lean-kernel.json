@@ -1,0 +1,1364 @@
+{
+  "recordIdentifier": "3ad1c2a0-9a67-5eb1-9214-a19ea2323f78",
+  "executionIdentifier": "01a0a9c7-3178-70cc-9e76-3302422b3580",
+  "recordedAt": "2026-09-16T10:33:33.469Z",
+  "sourceRevision": "sha256:87ed8dc07a6cf314667c9e4f158ea72255a3130c220ca3192f1266e238231c76",
+  "status": "pass",
+  "theoremCount": 133,
+  "privateHelperCount": 14,
+  "axioms": [],
+  "inputs": [
+    {
+      "path": "formal/Lumenia.lean",
+      "sha256": "0f9ee325f4c9bf73d42edfeb1b059cb4b66de230ba6983256fbe46bcb26fd779"
+    },
+    {
+      "path": "formal/Lumenia/AxiomAudit.lean",
+      "sha256": "a2ac9deab960ba87a619b4d76866e2dea1699c610d049ba0e54b0379eb8daf00"
+    },
+    {
+      "path": "formal/Lumenia/Boundary.lean",
+      "sha256": "41be9e4293f8f54e671150aa2f1afadc27d0393f865af9ebdbdcb6bb8ea363c3"
+    },
+    {
+      "path": "formal/Lumenia/CosmicExhibition.lean",
+      "sha256": "59397a93a57427b38da7a09b275d5164ba64a58136ee7c53d39abcbbfb16aeda"
+    },
+    {
+      "path": "formal/Lumenia/CosmicExhibitionAudit.lean",
+      "sha256": "cc87c7c5abcb146d49ea79e7c638ca3a86911efccb4f66051b0b3c08416650bd"
+    },
+    {
+      "path": "formal/Lumenia/Model.lean",
+      "sha256": "0f528929e0243d7f922a9d7f9603eed43e8c0e13c6f44a86922f06dad82a0b06"
+    },
+    {
+      "path": "formal/Lumenia/Proofs.lean",
+      "sha256": "dc185dc0b11ffc1471061e7301249def8111ef69707876e0cf4ebb3ea05afb04"
+    },
+    {
+      "path": "formal/Lumenia/ReviewChecks.lean",
+      "sha256": "8c5a35d41c247e0260a2e01a6d55f13d23619b4b0dd74d4ddb01227c6ccccaef"
+    },
+    {
+      "path": "formal/Lumenia/Tests.lean",
+      "sha256": "329500e65c6d3c601e25d95d91de28d904ecf197b8b5a3ec1e95753b62a52995"
+    },
+    {
+      "path": "formal/Main.lean",
+      "sha256": "8b3eeea5ac3bcfb89963c5064a1307da6cb975ca5a89eb109319f2bce377e715"
+    },
+    {
+      "path": "lean-toolchain",
+      "sha256": "db7bb24b756d745bbde83fe92718b51bd3625dae3701ba0f598d0eedcd3f3028"
+    },
+    {
+      "path": "lakefile.toml",
+      "sha256": "450866fae5ba7ab3c9d0b025436f30ea29e39124837b035b428bd40233048c62"
+    },
+    {
+      "path": "lake-manifest.json",
+      "sha256": "4273a8dd6528dfcfc627997ee3f06313b97d795918cfc09b5ae65821723e54fb"
+    },
+    {
+      "path": "planetarium/formal/ArtPlanetarium.lean",
+      "sha256": "7db2035a5da5c36eaca6cc94e0c1cf70ab27ee380ba913a574506bcb8f4b6512"
+    },
+    {
+      "path": "planetarium/formal/ArtPlanetarium/AxiomAudit.lean",
+      "sha256": "9f1474a8060749798243577a11b80199565ca2aa51274dc2b813ee8b16aa4c5d"
+    },
+    {
+      "path": "planetarium/formal/ArtPlanetarium/ConstructiveArithmetic.lean",
+      "sha256": "2d8de699a50ec329f39af004208e13db68052ce0be4b30d0f7893f1a31195ad8"
+    },
+    {
+      "path": "planetarium/formal/ArtPlanetarium/Dimension.lean",
+      "sha256": "f8e865ff1824353c3af01f04b00f7f262c098e08c01cc7fc251784caa98eb116"
+    },
+    {
+      "path": "planetarium/formal/ArtPlanetarium/DimensionProofs.lean",
+      "sha256": "c7f9fb2b3ceaea0278a7f732aa2b9c560ff595f0ea8a3936e2ef2977f39488b6"
+    },
+    {
+      "path": "planetarium/formal/ArtPlanetarium/Model.lean",
+      "sha256": "c50d9f31335adf6d8cd7530f2e59c894cca52d6988cae30fc2bfbf43feaebdd6"
+    },
+    {
+      "path": "planetarium/formal/ArtPlanetarium/Proofs.lean",
+      "sha256": "cb6973e554a54df774c6dbf9a370249e6be8589fcb785f3c2b8da1797b5ba9e1"
+    },
+    {
+      "path": "planetarium/formal/Main.lean",
+      "sha256": "18f9415985f98a2ff340f98ecbe0144e4e3525a4b7308c6b0956656e86862f6f"
+    },
+    {
+      "path": "planetarium/lean-toolchain",
+      "sha256": "db7bb24b756d745bbde83fe92718b51bd3625dae3701ba0f598d0eedcd3f3028"
+    },
+    {
+      "path": "planetarium/lakefile.toml",
+      "sha256": "d19b8bf85d91b1abb8752935273eb824a4dd1dd127816fd51c4936a2e189d98e"
+    },
+    {
+      "path": "planetarium/lake-manifest.json",
+      "sha256": "3244800c29fc7264e6e253d0b0b758a83b7e6951f24b8f11fad337901cad9a90"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/verification/Exhibition.lean",
+      "sha256": "54614a2c5c9461f8e207f947372bb23fb39dcf381202d2fbfcea4e6b1bf5c4fb"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/verification/lean-toolchain",
+      "sha256": "db7bb24b756d745bbde83fe92718b51bd3625dae3701ba0f598d0eedcd3f3028"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/verification/lakefile.toml",
+      "sha256": "b56bfa054b9ff62738d7328e37f87597b221f445e973d25e5594b1277faee88e"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/verification/lake-manifest.json",
+      "sha256": "3a0155577bbf410840be1e28429836728232b991d62561433eec0b423b97b5e6"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/verification/Exploration.lean",
+      "sha256": "0bd76bc65ba0659f293769103bae3e72ac7c5f2dffe4571a39e0057995316d30"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/verification/lean-toolchain",
+      "sha256": "db7bb24b756d745bbde83fe92718b51bd3625dae3701ba0f598d0eedcd3f3028"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/verification/lakefile.toml",
+      "sha256": "d780cfc3b5958bda77d9d8963d9a9213fa7934fbde7d84f77d3fb4a3d8ed7d38"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/verification/lake-manifest.json",
+      "sha256": "b8c57e60b9ac6cecb88dc2e783968d84ac26310ba0c3f13ddbd6b9ff221c6e32"
+    }
+  ],
+  "declarations": [
+    {
+      "name": "Lumenia.CosmicExhibition.display_motion_preserves_semantics",
+      "private": false,
+      "line": 25,
+      "path": "formal/Lumenia/CosmicExhibition.lean",
+      "recordIdentifier": "c0367b69-6031-554f-bf67-9117c026aebe",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.CosmicExhibition.display_motion_preserves_physics_setting",
+      "private": false,
+      "line": 29,
+      "path": "formal/Lumenia/CosmicExhibition.lean",
+      "recordIdentifier": "aef00b01-ac1f-5eab-839b-d1ec3dc9b86e",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.CosmicExhibition.missing_semantics_stay_missing",
+      "private": false,
+      "line": 33,
+      "path": "formal/Lumenia/CosmicExhibition.lean",
+      "recordIdentifier": "f7a5f56d-e88c-5f9d-9ce5-0710f0d51703",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.CosmicExhibition.default_physics_is_disabled",
+      "private": false,
+      "line": 37,
+      "path": "formal/Lumenia/CosmicExhibition.lean",
+      "recordIdentifier": "3d4a7b4e-6916-5715-a7ed-adf59fb98603",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.CosmicExhibition.score_difference_parts_bound",
+      "private": false,
+      "line": 41,
+      "path": "formal/Lumenia/CosmicExhibition.lean",
+      "recordIdentifier": "aae351a9-b097-595c-bb1f-7d9a8ed51cb9",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.CosmicExhibition.overlap_is_symmetric",
+      "private": false,
+      "line": 51,
+      "path": "formal/Lumenia/CosmicExhibition.lean",
+      "recordIdentifier": "54fcbba8-4d50-548b-a7ab-8f57a372e284",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.CosmicExhibition.widening_range_preserves_overlap",
+      "private": false,
+      "line": 57,
+      "path": "formal/Lumenia/CosmicExhibition.lean",
+      "recordIdentifier": "e63728e6-d47b-54e5-be0d-32e18f54fbca",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.boolean_conjunction",
+      "private": true,
+      "line": 13,
+      "path": "formal/Lumenia/Proofs.lean",
+      "recordIdentifier": "1c5a2567-e6b5-5675-b716-f1a0799659d3",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.boolean_disjunction",
+      "private": true,
+      "line": 17,
+      "path": "formal/Lumenia/Proofs.lean",
+      "recordIdentifier": "cfa71d97-80ec-5952-9f0c-8b2b86a7ccfa",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.boolean_implication",
+      "private": true,
+      "line": 21,
+      "path": "formal/Lumenia/Proofs.lean",
+      "recordIdentifier": "a8abb868-5907-5ec7-a7e0-c098505aa723",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.boolean_exclusion",
+      "private": true,
+      "line": 25,
+      "path": "formal/Lumenia/Proofs.lean",
+      "recordIdentifier": "7d0d0bc9-afdf-555f-97c9-466675b66699",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.asset_checks_iff_requirements",
+      "private": false,
+      "line": 30,
+      "path": "formal/Lumenia/Proofs.lean",
+      "recordIdentifier": "543e95a7-25d9-53eb-addf-1eca7283be44",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.validate_raw_asset_accepts_iff",
+      "private": false,
+      "line": 60,
+      "path": "formal/Lumenia/Proofs.lean",
+      "recordIdentifier": "a0e5e544-3a28-588f-a04a-ecef28a75a68",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.validate_raw_asset_rejects_iff",
+      "private": false,
+      "line": 76,
+      "path": "formal/Lumenia/Proofs.lean",
+      "recordIdentifier": "884dc2e4-94c4-5622-904e-789dd2186b47",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.validate_raw_asset_preserves_input",
+      "private": false,
+      "line": 90,
+      "path": "formal/Lumenia/Proofs.lean",
+      "recordIdentifier": "2914c7f0-ea38-5cec-9c53-715cf16e3f2c",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.validate_raw_asset_sound",
+      "private": false,
+      "line": 101,
+      "path": "formal/Lumenia/Proofs.lean",
+      "recordIdentifier": "9ed18638-7432-544f-8710-0cde084b9195",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.validated_asset_satisfies_requirements",
+      "private": false,
+      "line": 108,
+      "path": "formal/Lumenia/Proofs.lean",
+      "recordIdentifier": "b3467681-81a2-5183-929d-9afc9aaf60f0",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.meshopt_variants_are_exclusive",
+      "private": false,
+      "line": 113,
+      "path": "formal/Lumenia/Proofs.lean",
+      "recordIdentifier": "3e92b122-d2fe-5890-8c24-aafcd8fc5e33",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.extension_meshopt_requires_decoder",
+      "private": false,
+      "line": 120,
+      "path": "formal/Lumenia/Proofs.lean",
+      "recordIdentifier": "90c7faa1-9721-596d-a8db-5b581572be33",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.khronos_meshopt_requires_decoder",
+      "private": false,
+      "line": 128,
+      "path": "formal/Lumenia/Proofs.lean",
+      "recordIdentifier": "e76f697b-718a-5cbb-b937-3695710767a3",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.ktx2_requires_loader",
+      "private": false,
+      "line": 136,
+      "path": "formal/Lumenia/Proofs.lean",
+      "recordIdentifier": "35ba9d6b-abfe-5438-bdcf-960f8eb0158f",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.draco_requires_loader",
+      "private": false,
+      "line": 144,
+      "path": "formal/Lumenia/Proofs.lean",
+      "recordIdentifier": "935c5368-7869-56ac-9346-a3719e4c4a62",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.draco_is_enabled_iff_explicit",
+      "private": false,
+      "line": 153,
+      "path": "formal/Lumenia/Proofs.lean",
+      "recordIdentifier": "7ba57ba1-7481-5f8b-bb84-1e94930879d9",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.named_nodes_require_preservation",
+      "private": false,
+      "line": 158,
+      "path": "formal/Lumenia/Proofs.lean",
+      "recordIdentifier": "13c791ec-40a2-5749-986c-7816c521b2ff",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.extras_require_preservation",
+      "private": false,
+      "line": 166,
+      "path": "formal/Lumenia/Proofs.lean",
+      "recordIdentifier": "12ebcc33-1640-5e81-b5a2-f400102331f1",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.both_meshopt_flags_reject",
+      "private": false,
+      "line": 174,
+      "path": "formal/Lumenia/Proofs.lean",
+      "recordIdentifier": "947ff2cf-29cd-5a00-bb98-ef9e37ff7408",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.missing_meshopt_decoder_rejects",
+      "private": false,
+      "line": 183,
+      "path": "formal/Lumenia/Proofs.lean",
+      "recordIdentifier": "04f36807-d7c2-527f-b22c-dacbdd0aded0",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.shipped_requires_validation",
+      "private": false,
+      "line": 194,
+      "path": "formal/Lumenia/Proofs.lean",
+      "recordIdentifier": "92cfff56-17f5-5995-b0f2-00254f41e0af",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.rejected_never_reaches_shipped",
+      "private": true,
+      "line": 198,
+      "path": "formal/Lumenia/Proofs.lean",
+      "recordIdentifier": "e22a1b5b-a35f-5da3-aea6-2fa00ddeb8c9",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.shipped_trace_is_empty",
+      "private": true,
+      "line": 205,
+      "path": "formal/Lumenia/Proofs.lean",
+      "recordIdentifier": "93a0caba-9d76-5fd4-ac9c-436baaae3e33",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.validated_trace_is_ship",
+      "private": true,
+      "line": 216,
+      "path": "formal/Lumenia/Proofs.lean",
+      "recordIdentifier": "81e2c926-f7d5-5c23-b673-94b852c700a7",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.optimized_trace_is_validate_ship",
+      "private": true,
+      "line": 235,
+      "path": "formal/Lumenia/Proofs.lean",
+      "recordIdentifier": "a8290a19-e66d-5c3f-ad2b-1d781350cf0d",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.shipment_trace_is_exactly_optimize_validate_ship",
+      "private": false,
+      "line": 255,
+      "path": "formal/Lumenia/Proofs.lean",
+      "recordIdentifier": "a968cd0f-8c5d-5953-906c-e40769388abd",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.shipped_history_requires_asset_requirements",
+      "private": false,
+      "line": 276,
+      "path": "formal/Lumenia/Proofs.lean",
+      "recordIdentifier": "f781bfd5-a32e-534e-ac60-9ea5a9e9288a",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.invalid_asset_has_no_shipped_history",
+      "private": false,
+      "line": 286,
+      "path": "formal/Lumenia/Proofs.lean",
+      "recordIdentifier": "b4f27f24-d941-5e95-80fb-e70b2bb3eea9",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.browser_capability_requires_client_component",
+      "private": false,
+      "line": 294,
+      "path": "formal/Lumenia/Proofs.lean",
+      "recordIdentifier": "bc433078-b2a0-5ce6-9fc1-4eab157d6651",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.all_checked_at_member",
+      "private": true,
+      "line": 302,
+      "path": "formal/Lumenia/Proofs.lean",
+      "recordIdentifier": "988c4925-0a6f-5df3-9599-bef7e7eef5cb",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.static_export_cannot_require_server_only",
+      "private": false,
+      "line": 315,
+      "path": "formal/Lumenia/Proofs.lean",
+      "recordIdentifier": "21c3fceb-8154-5259-a619-ccfab976b7ee",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.accepted_component_places_browser_requirements_on_client",
+      "private": false,
+      "line": 325,
+      "path": "formal/Lumenia/Proofs.lean",
+      "recordIdentifier": "f248748f-077d-55e1-bda4-cff8afc69b06",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.client_component_cannot_require_server_only",
+      "private": false,
+      "line": 337,
+      "path": "formal/Lumenia/Proofs.lean",
+      "recordIdentifier": "0aa200fe-8e88-529c-a69e-88c174a6df03",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.core_transfer_total_within_budget",
+      "private": false,
+      "line": 347,
+      "path": "formal/Lumenia/Proofs.lean",
+      "recordIdentifier": "bb538e9e-fbbb-5ca6-8ec2-1e1fb756eeb2",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.category_budget_total_is_204800_bytes",
+      "private": false,
+      "line": 355,
+      "path": "formal/Lumenia/Proofs.lean",
+      "recordIdentifier": "03b95321-0d34-58a2-9486-a88ac41889a5",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.measured_gate_pass_iff",
+      "private": false,
+      "line": 362,
+      "path": "formal/Lumenia/Proofs.lean",
+      "recordIdentifier": "f5b5cea2-0aae-5d44-b5d6-4a1b36e192c5",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.ReviewChecks.bounded_at_most_limit",
+      "private": false,
+      "line": 15,
+      "path": "formal/Lumenia/ReviewChecks.lean",
+      "recordIdentifier": "5d0cdcb0-51d5-5ec5-85ed-59f9486bf6a2",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.ReviewChecks.batch_flight_at_most_twenty_four_metres",
+      "private": false,
+      "line": 22,
+      "path": "formal/Lumenia/ReviewChecks.lean",
+      "recordIdentifier": "190bfbba-0571-546f-822d-25a158dfe6f4",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.ReviewChecks.normal_step_is_four_hundred_millimetres",
+      "private": false,
+      "line": 29,
+      "path": "formal/Lumenia/ReviewChecks.lean",
+      "recordIdentifier": "3fb8acd1-1204-5dd0-a31a-7052bd2a2456",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.ReviewChecks.weighted_sum_is_bounded",
+      "private": false,
+      "line": 42,
+      "path": "formal/Lumenia/ReviewChecks.lean",
+      "recordIdentifier": "7f50fc44-7057-508b-9a17-12a745b5e8ba",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.ReviewChecks.normalized_recipe_stays_inside_score_range",
+      "private": false,
+      "line": 57,
+      "path": "formal/Lumenia/ReviewChecks.lean",
+      "recordIdentifier": "909cba90-8ffc-5834-b776-4d8167238256",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.ReviewChecks.clock_remains_inside_day",
+      "private": false,
+      "line": 68,
+      "path": "formal/Lumenia/ReviewChecks.lean",
+      "recordIdentifier": "b6052e32-9cb9-5f1d-89e8-bec10f89f1c1",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.ReviewChecks.paused_clock_is_unchanged",
+      "private": false,
+      "line": 75,
+      "path": "formal/Lumenia/ReviewChecks.lean",
+      "recordIdentifier": "a47d447a-dcdb-5b4e-90ce-1eaf3b08e902",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.ReviewChecks.clock_crosses_old_boundary_without_wrapping",
+      "private": false,
+      "line": 79,
+      "path": "formal/Lumenia/ReviewChecks.lean",
+      "recordIdentifier": "a6c197fa-891f-570c-9b59-dc0b7166dbdd",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.ReviewChecks.trace_retention_is_bounded",
+      "private": false,
+      "line": 83,
+      "path": "formal/Lumenia/ReviewChecks.lean",
+      "recordIdentifier": "3be095c0-740c-564a-87b9-38397aa6cbf1",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.ReviewChecks.successful_completion_requires_all_fields",
+      "private": false,
+      "line": 101,
+      "path": "formal/Lumenia/ReviewChecks.lean",
+      "recordIdentifier": "95d5f99e-439a-56cf-bfb8-ec58d45f2f9d",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.ReviewChecks.identical_state_completes",
+      "private": false,
+      "line": 106,
+      "path": "formal/Lumenia/ReviewChecks.lean",
+      "recordIdentifier": "37d62cbd-970f-55bf-9182-9fddba392fd1",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.ReviewChecks.artist_only_check_misses_playback_change",
+      "private": false,
+      "line": 110,
+      "path": "formal/Lumenia/ReviewChecks.lean",
+      "recordIdentifier": "8c127af7-301c-5352-9a70-60764b02c4f5",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.ReviewChecks.aborted_registration_cannot_execute",
+      "private": false,
+      "line": 118,
+      "path": "formal/Lumenia/ReviewChecks.lean",
+      "recordIdentifier": "44d629d0-1d78-5a74-9bae-bfbbf2c753ff",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.ReviewChecks.busy_writer_cannot_execute",
+      "private": false,
+      "line": 122,
+      "path": "formal/Lumenia/ReviewChecks.lean",
+      "recordIdentifier": "b65c34b2-f2d3-5184-a971-f97a74d11044",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.ReviewChecks.reader_can_observe_busy_writer",
+      "private": false,
+      "line": 124,
+      "path": "formal/Lumenia/ReviewChecks.lean",
+      "recordIdentifier": "a9c9db3a-d289-57ce-8e02-0a35e1a07021",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.ReviewChecks.changed_revision_cannot_pass",
+      "private": false,
+      "line": 131,
+      "path": "formal/Lumenia/ReviewChecks.lean",
+      "recordIdentifier": "75800f06-aca3-5026-b054-9f4b179c5e3c",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.ReviewChecks.rebound_old_execution_cannot_pass",
+      "private": false,
+      "line": 135,
+      "path": "formal/Lumenia/ReviewChecks.lean",
+      "recordIdentifier": "c7eb4aec-776a-564f-b501-94be7f5b3743",
+      "axioms": []
+    },
+    {
+      "name": "Lumenia.ReviewChecks.missing_inputs_cannot_pass",
+      "private": false,
+      "line": 139,
+      "path": "formal/Lumenia/ReviewChecks.lean",
+      "recordIdentifier": "7475fd1e-ff88-5570-aca5-f8cac8fd14ad",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.ConstructiveArithmetic.cancelAddedRight",
+      "private": false,
+      "line": 17,
+      "path": "planetarium/formal/ArtPlanetarium/ConstructiveArithmetic.lean",
+      "recordIdentifier": "11439aae-5886-5842-beec-17dad0d4f400",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.ConstructiveArithmetic.cancelAddedLeft",
+      "private": false,
+      "line": 24,
+      "path": "planetarium/formal/ArtPlanetarium/ConstructiveArithmetic.lean",
+      "recordIdentifier": "0ed75250-a5ef-5c60-874e-98b11b61c5c3",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.ConstructiveArithmetic.restoreSubtracted",
+      "private": false,
+      "line": 29,
+      "path": "planetarium/formal/ArtPlanetarium/ConstructiveArithmetic.lean",
+      "recordIdentifier": "7a63ea12-9170-590c-a3d2-9a692ef9d746",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.ConstructiveArithmetic.fuelIndependent",
+      "private": true,
+      "line": 36,
+      "path": "planetarium/formal/ArtPlanetarium/ConstructiveArithmetic.lean",
+      "recordIdentifier": "8d5567b4-68a9-50e8-aa3b-c02d65e16a93",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.ConstructiveArithmetic.coreStep",
+      "private": true,
+      "line": 50,
+      "path": "planetarium/formal/ArtPlanetarium/ConstructiveArithmetic.lean",
+      "recordIdentifier": "ee8fe7ab-a0c1-597a-b8db-22f69a2ef2f4",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.ConstructiveArithmetic.coreUnchanged",
+      "private": true,
+      "line": 56,
+      "path": "planetarium/formal/ArtPlanetarium/ConstructiveArithmetic.lean",
+      "recordIdentifier": "ddb841e8-d6e0-549a-822c-d4e44eb7bf3d",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.ConstructiveArithmetic.coreEqualsModulo",
+      "private": true,
+      "line": 63,
+      "path": "planetarium/formal/ArtPlanetarium/ConstructiveArithmetic.lean",
+      "recordIdentifier": "0ccbddd1-3cbd-53be-a5f7-85b0ce8c7e24",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.ConstructiveArithmetic.addOneSpan",
+      "private": false,
+      "line": 81,
+      "path": "planetarium/formal/ArtPlanetarium/ConstructiveArithmetic.lean",
+      "recordIdentifier": "b716c140-b323-576b-9f4d-3826659f0754",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.ConstructiveArithmetic.addManySpans",
+      "private": false,
+      "line": 89,
+      "path": "planetarium/formal/ArtPlanetarium/ConstructiveArithmetic.lean",
+      "recordIdentifier": "aa49a091-ee74-5c0d-ab4c-9972be7d2daf",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.ConstructiveArithmetic.multipleHasZeroRemainder",
+      "private": false,
+      "line": 98,
+      "path": "planetarium/formal/ArtPlanetarium/ConstructiveArithmetic.lean",
+      "recordIdentifier": "ff90f68a-42a9-52fb-bc1b-c9fac0803c39",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.reconstructCoordinates",
+      "private": true,
+      "line": 18,
+      "path": "planetarium/formal/ArtPlanetarium/DimensionProofs.lean",
+      "recordIdentifier": "9a9c0ee7-fb1e-58f7-be05-6e2756747cb5",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.coordinate_count_matches_dimension",
+      "private": false,
+      "line": 31,
+      "path": "planetarium/formal/ArtPlanetarium/DimensionProofs.lean",
+      "recordIdentifier": "afcdb8f1-3c1e-5542-9e61-9004bf45861d",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.decoding_encoded_coordinates_recovers_input",
+      "private": false,
+      "line": 39,
+      "path": "planetarium/formal/ArtPlanetarium/DimensionProofs.lean",
+      "recordIdentifier": "106a3d19-29b4-5edb-8b94-a429b7d614b7",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.embedding_then_dropping_axis_recovers_coordinates",
+      "private": false,
+      "line": 52,
+      "path": "planetarium/formal/ArtPlanetarium/DimensionProofs.lean",
+      "recordIdentifier": "babd30e5-a7d9-58d0-91e6-18b382fdef3e",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.four_quarter_turns_recover_coordinates",
+      "private": false,
+      "line": 60,
+      "path": "planetarium/formal/ArtPlanetarium/DimensionProofs.lean",
+      "recordIdentifier": "46744f84-6213-53ee-b402-0830ac05ee84",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.projection_ignores_additional_axis",
+      "private": false,
+      "line": 75,
+      "path": "planetarium/formal/ArtPlanetarium/DimensionProofs.lean",
+      "recordIdentifier": "a5dcdfdd-7cc7-59fa-9d04-1831481591ac",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.projection_can_hide_fourth_axis",
+      "private": false,
+      "line": 93,
+      "path": "planetarium/formal/ArtPlanetarium/DimensionProofs.lean",
+      "recordIdentifier": "73c9bac3-9ee7-527a-ac14-e71379cedfb4",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.timestamp_is_not_a_spatial_axis",
+      "private": false,
+      "line": 105,
+      "path": "planetarium/formal/ArtPlanetarium/DimensionProofs.lean",
+      "recordIdentifier": "1a7894e1-0151-58fd-a3ed-556e7dc5b58e",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.accepted_parameters_iff",
+      "private": false,
+      "line": 17,
+      "path": "planetarium/formal/ArtPlanetarium/Proofs.lean",
+      "recordIdentifier": "402b742e-4136-5355-899a-9961fe13d731",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.accepted_parameters_preserve_input",
+      "private": false,
+      "line": 30,
+      "path": "planetarium/formal/ArtPlanetarium/Proofs.lean",
+      "recordIdentifier": "82b668a3-b035-5249-8f4c-6a485a29da10",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.tile_repeats_after_any_number_of_spans",
+      "private": false,
+      "line": 40,
+      "path": "planetarium/formal/ArtPlanetarium/Proofs.lean",
+      "recordIdentifier": "5c5d6531-8da0-52ae-a83d-7e2b09c034e8",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.tile_coordinate_remains_inside_span",
+      "private": false,
+      "line": 45,
+      "path": "planetarium/formal/ArtPlanetarium/Proofs.lean",
+      "recordIdentifier": "a7cde63c-9907-5b39-ae6b-52d7619855f8",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.mirror_twice_recovers_coordinate",
+      "private": false,
+      "line": 49,
+      "path": "planetarium/formal/ArtPlanetarium/Proofs.lean",
+      "recordIdentifier": "877ba798-c744-5eb0-b185-f3be495e3b90",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.mirrored_pair_preserves_span",
+      "private": false,
+      "line": 57,
+      "path": "planetarium/formal/ArtPlanetarium/Proofs.lean",
+      "recordIdentifier": "83947bb4-a245-5c80-9886-582d09120cf0",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.grid_coordinates_are_aligned",
+      "private": false,
+      "line": 62,
+      "path": "planetarium/formal/ArtPlanetarium/Proofs.lean",
+      "recordIdentifier": "d945cf70-cb97-54bf-be14-2189e6abda31",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.grid_coordinates_preserve_strict_order",
+      "private": false,
+      "line": 66,
+      "path": "planetarium/formal/ArtPlanetarium/Proofs.lean",
+      "recordIdentifier": "8c3a4859-4ab3-51c4-98da-82687b2e9899",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.halo_closes_after_twelve_slots",
+      "private": false,
+      "line": 72,
+      "path": "planetarium/formal/ArtPlanetarium/Proofs.lean",
+      "recordIdentifier": "c1f6787d-dcf6-55ff-8a04-accb6fe0fe65",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.halo_has_twelve_distinct_angles",
+      "private": false,
+      "line": 76,
+      "path": "planetarium/formal/ArtPlanetarium/Proofs.lean",
+      "recordIdentifier": "fe15e7e0-7582-5632-a805-a9e45b2381d3",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.halo_angles_remain_inside_turn",
+      "private": false,
+      "line": 81,
+      "path": "planetarium/formal/ArtPlanetarium/Proofs.lean",
+      "recordIdentifier": "38314214-5991-53c6-aaa5-2c060a65a45c",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.orthogonal_angles_are_quarter_turns",
+      "private": false,
+      "line": 85,
+      "path": "planetarium/formal/ArtPlanetarium/Proofs.lean",
+      "recordIdentifier": "29c0bf35-24d1-5f7f-80b2-03be0b636ae4",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.route_angles_are_eighth_turns",
+      "private": false,
+      "line": 91,
+      "path": "planetarium/formal/ArtPlanetarium/Proofs.lean",
+      "recordIdentifier": "4bbe45d8-ebbb-56a3-b424-cd2c145f34ae",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.different_plane_normals_are_perpendicular",
+      "private": false,
+      "line": 97,
+      "path": "planetarium/formal/ArtPlanetarium/Proofs.lean",
+      "recordIdentifier": "076962ce-578d-5093-8fcc-1c9051db002d",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.palette_selection_stays_inside_palette",
+      "private": false,
+      "line": 102,
+      "path": "planetarium/formal/ArtPlanetarium/Proofs.lean",
+      "recordIdentifier": "fa38b9fc-c12a-52f7-b68a-5616749d009a",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.colour_channel_mix_stays_bounded",
+      "private": false,
+      "line": 106,
+      "path": "planetarium/formal/ArtPlanetarium/Proofs.lean",
+      "recordIdentifier": "520d5557-442c-57da-8f05-42be338699a1",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.fold_widths_are_deliberately_unequal",
+      "private": false,
+      "line": 119,
+      "path": "planetarium/formal/ArtPlanetarium/Proofs.lean",
+      "recordIdentifier": "f2641249-e90f-543d-b3fe-41af59691635",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.cycle_returns_after_any_number_of_periods",
+      "private": false,
+      "line": 123,
+      "path": "planetarium/formal/ArtPlanetarium/Proofs.lean",
+      "recordIdentifier": "229fad8f-1ccf-5fae-8398-72627d4273a1",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.reduced_motion_is_independent_of_time",
+      "private": false,
+      "line": 128,
+      "path": "planetarium/formal/ArtPlanetarium/Proofs.lean",
+      "recordIdentifier": "f403ed14-5236-5008-8a65-dbd7f780c596",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.two_toggles_restore_playback",
+      "private": false,
+      "line": 132,
+      "path": "planetarium/formal/ArtPlanetarium/Proofs.lean",
+      "recordIdentifier": "285a898b-c964-5d62-bf7e-c759d6454a81",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.visual_distance_does_not_establish_influence",
+      "private": false,
+      "line": 136,
+      "path": "planetarium/formal/ArtPlanetarium/Proofs.lean",
+      "recordIdentifier": "1442b214-77c1-54ac-aa17-411d14ad18e5",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.stale_evidence_cannot_pass",
+      "private": false,
+      "line": 142,
+      "path": "planetarium/formal/ArtPlanetarium/Proofs.lean",
+      "recordIdentifier": "8aa86c95-3282-5def-bc4d-2424d7b78d05",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.contradiction_cannot_pass",
+      "private": false,
+      "line": 146,
+      "path": "planetarium/formal/ArtPlanetarium/Proofs.lean",
+      "recordIdentifier": "4a634b09-1c93-5015-b263-c85ad944b010",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.neutral_only_evidence_cannot_pass",
+      "private": false,
+      "line": 150,
+      "path": "planetarium/formal/ArtPlanetarium/Proofs.lean",
+      "recordIdentifier": "b20a4eb7-5aa7-5d4d-b085-9ab58818968b",
+      "axioms": []
+    },
+    {
+      "name": "ArtPlanetarium.evidence_pass_requires_support_without_contradiction",
+      "private": false,
+      "line": 153,
+      "path": "planetarium/formal/ArtPlanetarium/Proofs.lean",
+      "recordIdentifier": "02dfd26a-aa61-5fe4-a900-f6d7dabc61e6",
+      "axioms": []
+    },
+    {
+      "name": "LumeniaExhibition.naturalSubtractionIsDifference",
+      "private": false,
+      "line": 37,
+      "path": "reference-assets/artist-cosmos/interactive/verification/Exhibition.lean",
+      "recordIdentifier": "c267c06b-3001-54d8-bce5-db270cf07f35",
+      "axioms": []
+    },
+    {
+      "name": "LumeniaExhibition.subNatNatOrder",
+      "private": false,
+      "line": 44,
+      "path": "reference-assets/artist-cosmos/interactive/verification/Exhibition.lean",
+      "recordIdentifier": "7928fdc6-da54-5e1f-b64b-d210443d629d",
+      "axioms": []
+    },
+    {
+      "name": "LumeniaExhibition.naturalOrderFromInteger",
+      "private": false,
+      "line": 54,
+      "path": "reference-assets/artist-cosmos/interactive/verification/Exhibition.lean",
+      "recordIdentifier": "f8a68a74-b68c-5554-800c-f8d122235265",
+      "axioms": []
+    },
+    {
+      "name": "LumeniaExhibition.finiteScoreBound",
+      "private": false,
+      "line": 60,
+      "path": "reference-assets/artist-cosmos/interactive/verification/Exhibition.lean",
+      "recordIdentifier": "9021a489-8022-57f2-ac3a-39285d284f30",
+      "axioms": []
+    },
+    {
+      "name": "LumeniaExhibition.scoreDifferenceBounded",
+      "private": false,
+      "line": 64,
+      "path": "reference-assets/artist-cosmos/interactive/verification/Exhibition.lean",
+      "recordIdentifier": "48165183-f0a0-54b5-90d2-536a8175d879",
+      "axioms": []
+    },
+    {
+      "name": "LumeniaExhibition.squaredDistanceNonnegative",
+      "private": false,
+      "line": 78,
+      "path": "reference-assets/artist-cosmos/interactive/verification/Exhibition.lean",
+      "recordIdentifier": "6a220851-8b19-53f3-b877-8ec1cf22ff54",
+      "axioms": []
+    },
+    {
+      "name": "LumeniaExhibition.movePreservesSource",
+      "private": false,
+      "line": 80,
+      "path": "reference-assets/artist-cosmos/interactive/verification/Exhibition.lean",
+      "recordIdentifier": "7982fe2a-9095-57ab-bbfb-915e47e306f8",
+      "axioms": []
+    },
+    {
+      "name": "LumeniaExhibition.movePreservesDistance",
+      "private": false,
+      "line": 83,
+      "path": "reference-assets/artist-cosmos/interactive/verification/Exhibition.lean",
+      "recordIdentifier": "92d55f09-26f4-51eb-9487-2875aaa55517",
+      "axioms": []
+    },
+    {
+      "name": "LumeniaExhibition.missingSourceStaysMissing",
+      "private": false,
+      "line": 86,
+      "path": "reference-assets/artist-cosmos/interactive/verification/Exhibition.lean",
+      "recordIdentifier": "495b4a37-b0e9-5736-901d-682fd855e088",
+      "axioms": []
+    },
+    {
+      "name": "LumeniaExhibition.allSourceCoordinatesBounded",
+      "private": false,
+      "line": 93,
+      "path": "reference-assets/artist-cosmos/interactive/verification/Exhibition.lean",
+      "recordIdentifier": "3da95be7-15cc-5184-afe1-2fea3160f5f3",
+      "axioms": []
+    },
+    {
+      "name": "LumeniaExhibition.exactSquaredDistanceMatrix",
+      "private": false,
+      "line": 95,
+      "path": "reference-assets/artist-cosmos/interactive/verification/Exhibition.lean",
+      "recordIdentifier": "718a60ee-9d81-5a85-970b-16bfdca4121e",
+      "axioms": []
+    },
+    {
+      "name": "LumeniaExhibition.allSquaredDistancesWithinCube",
+      "private": false,
+      "line": 98,
+      "path": "reference-assets/artist-cosmos/interactive/verification/Exhibition.lean",
+      "recordIdentifier": "cec0e0a7-43a5-5d81-b1fb-299d9438b9ce",
+      "axioms": []
+    },
+    {
+      "name": "LumeniaExhibition.initialPanelsDoNotOverlap",
+      "private": false,
+      "line": 102,
+      "path": "reference-assets/artist-cosmos/interactive/verification/Exhibition.lean",
+      "recordIdentifier": "ad31fbf2-486a-5f66-affc-a7d93e95c5a6",
+      "axioms": []
+    },
+    {
+      "name": "LumeniaExhibition.initialPanelPositionsUnique",
+      "private": false,
+      "line": 105,
+      "path": "reference-assets/artist-cosmos/interactive/verification/Exhibition.lean",
+      "recordIdentifier": "e559a2ac-0136-50b9-bcea-c576004bb06f",
+      "axioms": []
+    },
+    {
+      "name": "LumeniaExhibition.defaultPhysicsIsDisabled",
+      "private": false,
+      "line": 107,
+      "path": "reference-assets/artist-cosmos/interactive/verification/Exhibition.lean",
+      "recordIdentifier": "8ad350d1-f5fa-54c2-a9c8-49b754896d1b",
+      "axioms": []
+    },
+    {
+      "name": "LumeniaExhibition.constructiveMinRight",
+      "private": false,
+      "line": 114,
+      "path": "reference-assets/artist-cosmos/interactive/verification/Exhibition.lean",
+      "recordIdentifier": "4977b723-f774-5308-8c96-e58bb23e0832",
+      "axioms": []
+    },
+    {
+      "name": "LumeniaExhibition.perFrameStepCap",
+      "private": false,
+      "line": 119,
+      "path": "reference-assets/artist-cosmos/interactive/verification/Exhibition.lean",
+      "recordIdentifier": "0ce0171c-2cd2-5f32-84e7-e13d8ca146ae",
+      "axioms": []
+    },
+    {
+      "name": "LumeniaExhibition.sixtyStepsEqualOneSecond",
+      "private": false,
+      "line": 121,
+      "path": "reference-assets/artist-cosmos/interactive/verification/Exhibition.lean",
+      "recordIdentifier": "d4ec7ce2-55b7-5f00-874a-c225d18cd930",
+      "axioms": []
+    },
+    {
+      "name": "LumeniaExhibition.maximumFrameSpan",
+      "private": false,
+      "line": 123,
+      "path": "reference-assets/artist-cosmos/interactive/verification/Exhibition.lean",
+      "recordIdentifier": "9c388bb6-4436-5761-888d-e7a999b6cc2e",
+      "axioms": []
+    },
+    {
+      "name": "LumeniaExploration.capBound",
+      "private": false,
+      "line": 19,
+      "path": "reference-assets/artist-cosmos/explore/verification/Exploration.lean",
+      "recordIdentifier": "6e3ccb75-67ea-5b56-b4cc-12c81a19149a",
+      "axioms": []
+    },
+    {
+      "name": "LumeniaExploration.elapsedTimeBound",
+      "private": false,
+      "line": 25,
+      "path": "reference-assets/artist-cosmos/explore/verification/Exploration.lean",
+      "recordIdentifier": "0e1a402e-3608-56e6-8086-b934193d00ef",
+      "axioms": []
+    },
+    {
+      "name": "LumeniaExploration.displacementBound",
+      "private": false,
+      "line": 29,
+      "path": "reference-assets/artist-cosmos/explore/verification/Exploration.lean",
+      "recordIdentifier": "94db9690-12d0-5335-ad02-e97b23494cdd",
+      "axioms": []
+    },
+    {
+      "name": "LumeniaExploration.observerMagnitudeBound",
+      "private": false,
+      "line": 35,
+      "path": "reference-assets/artist-cosmos/explore/verification/Exploration.lean",
+      "recordIdentifier": "27107964-8a39-5dd2-b3c3-916e3bbd6338",
+      "axioms": []
+    },
+    {
+      "name": "LumeniaExploration.movementPreservesSource",
+      "private": false,
+      "line": 46,
+      "path": "reference-assets/artist-cosmos/explore/verification/Exploration.lean",
+      "recordIdentifier": "58618c46-a638-5e20-a3fa-3fb8fdf19ad6",
+      "axioms": []
+    },
+    {
+      "name": "LumeniaExploration.missingSourceRemainsMissing",
+      "private": false,
+      "line": 49,
+      "path": "reference-assets/artist-cosmos/explore/verification/Exploration.lean",
+      "recordIdentifier": "6b50c501-0201-5ff1-9ab7-7e226d8adbd1",
+      "axioms": []
+    },
+    {
+      "name": "LumeniaExploration.collisionStartsDisabled",
+      "private": false,
+      "line": 52,
+      "path": "reference-assets/artist-cosmos/explore/verification/Exploration.lean",
+      "recordIdentifier": "e8a0eec4-5e77-583c-a7b8-7a1e27085c84",
+      "axioms": []
+    },
+    {
+      "name": "LumeniaExploration.movementPreservesCollisionChoice",
+      "private": false,
+      "line": 55,
+      "path": "reference-assets/artist-cosmos/explore/verification/Exploration.lean",
+      "recordIdentifier": "371aeacb-aab8-5860-bcce-b68e8051de51",
+      "axioms": []
+    },
+    {
+      "name": "LumeniaExploration.passageClearance",
+      "private": false,
+      "line": 58,
+      "path": "reference-assets/artist-cosmos/explore/verification/Exploration.lean",
+      "recordIdentifier": "0b3566ed-b7e4-57e3-9735-cdb006f84865",
+      "axioms": []
+    },
+    {
+      "name": "LumeniaExploration.passageHasRoom",
+      "private": false,
+      "line": 60,
+      "path": "reference-assets/artist-cosmos/explore/verification/Exploration.lean",
+      "recordIdentifier": "01f224eb-b187-55d6-ad22-e4a6b8863200",
+      "axioms": []
+    }
+  ],
+  "runs": [
+    {
+      "project": ".",
+      "command": [
+        "lake",
+        "build"
+      ],
+      "exitCode": 0,
+      "stdout": "Build completed successfully (13 jobs).\n",
+      "stderr": "",
+      "error": null
+    },
+    {
+      "project": ".",
+      "source": "formal/Lumenia/CosmicExhibition.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "/var/folders/l2/17ztpq3n58b6tqm1yd1cyhdh0000gn/T/lumenia-kernel-audit-Bw553a/formal_Lumenia_CosmicExhibition.lean"
+      ],
+      "exitCode": 0,
+      "stdout": "'Lumenia.CosmicExhibition.display_motion_preserves_semantics' does not depend on any axioms\n'Lumenia.CosmicExhibition.display_motion_preserves_physics_setting' does not depend on any axioms\n'Lumenia.CosmicExhibition.missing_semantics_stay_missing' does not depend on any axioms\n'Lumenia.CosmicExhibition.default_physics_is_disabled' does not depend on any axioms\n'Lumenia.CosmicExhibition.score_difference_parts_bound' does not depend on any axioms\n'Lumenia.CosmicExhibition.overlap_is_symmetric' does not depend on any axioms\n'Lumenia.CosmicExhibition.widening_range_preserves_overlap' does not depend on any axioms\n",
+      "stderr": "",
+      "error": null
+    },
+    {
+      "project": ".",
+      "source": "formal/Lumenia/Proofs.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "/var/folders/l2/17ztpq3n58b6tqm1yd1cyhdh0000gn/T/lumenia-kernel-audit-Bw553a/formal_Lumenia_Proofs.lean"
+      ],
+      "exitCode": 0,
+      "stdout": "'_private._stdin.0.Lumenia.boolean_conjunction' does not depend on any axioms\n'_private._stdin.0.Lumenia.boolean_disjunction' does not depend on any axioms\n'_private._stdin.0.Lumenia.boolean_implication' does not depend on any axioms\n'_private._stdin.0.Lumenia.boolean_exclusion' does not depend on any axioms\n'Lumenia.asset_checks_iff_requirements' does not depend on any axioms\n'Lumenia.validate_raw_asset_accepts_iff' does not depend on any axioms\n'Lumenia.validate_raw_asset_rejects_iff' does not depend on any axioms\n'Lumenia.validate_raw_asset_preserves_input' does not depend on any axioms\n'Lumenia.validate_raw_asset_sound' does not depend on any axioms\n'Lumenia.validated_asset_satisfies_requirements' does not depend on any axioms\n'Lumenia.meshopt_variants_are_exclusive' does not depend on any axioms\n'Lumenia.extension_meshopt_requires_decoder' does not depend on any axioms\n'Lumenia.khronos_meshopt_requires_decoder' does not depend on any axioms\n'Lumenia.ktx2_requires_loader' does not depend on any axioms\n'Lumenia.draco_requires_loader' does not depend on any axioms\n'Lumenia.draco_is_enabled_iff_explicit' does not depend on any axioms\n'Lumenia.named_nodes_require_preservation' does not depend on any axioms\n'Lumenia.extras_require_preservation' does not depend on any axioms\n'Lumenia.both_meshopt_flags_reject' does not depend on any axioms\n'Lumenia.missing_meshopt_decoder_rejects' does not depend on any axioms\n'Lumenia.shipped_requires_validation' does not depend on any axioms\n'_private._stdin.0.Lumenia.rejected_never_reaches_shipped' does not depend on any axioms\n'_private._stdin.0.Lumenia.shipped_trace_is_empty' does not depend on any axioms\n'_private._stdin.0.Lumenia.validated_trace_is_ship' does not depend on any axioms\n'_private._stdin.0.Lumenia.optimized_trace_is_validate_ship' does not depend on any axioms\n'Lumenia.shipment_trace_is_exactly_optimize_validate_ship' does not depend on any axioms\n'Lumenia.shipped_history_requires_asset_requirements' does not depend on any axioms\n'Lumenia.invalid_asset_has_no_shipped_history' does not depend on any axioms\n'Lumenia.browser_capability_requires_client_component' does not depend on any axioms\n'_private._stdin.0.Lumenia.all_checked_at_member' does not depend on any axioms\n'Lumenia.static_export_cannot_require_server_only' does not depend on any axioms\n'Lumenia.accepted_component_places_browser_requirements_on_client' does not depend on any axioms\n'Lumenia.client_component_cannot_require_server_only' does not depend on any axioms\n'Lumenia.core_transfer_total_within_budget' does not depend on any axioms\n'Lumenia.category_budget_total_is_204800_bytes' does not depend on any axioms\n'Lumenia.measured_gate_pass_iff' does not depend on any axioms\n",
+      "stderr": "",
+      "error": null
+    },
+    {
+      "project": ".",
+      "source": "formal/Lumenia/ReviewChecks.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "/var/folders/l2/17ztpq3n58b6tqm1yd1cyhdh0000gn/T/lumenia-kernel-audit-Bw553a/formal_Lumenia_ReviewChecks.lean"
+      ],
+      "exitCode": 0,
+      "stdout": "'Lumenia.ReviewChecks.bounded_at_most_limit' does not depend on any axioms\n'Lumenia.ReviewChecks.batch_flight_at_most_twenty_four_metres' does not depend on any axioms\n'Lumenia.ReviewChecks.normal_step_is_four_hundred_millimetres' does not depend on any axioms\n'Lumenia.ReviewChecks.weighted_sum_is_bounded' does not depend on any axioms\n'Lumenia.ReviewChecks.normalized_recipe_stays_inside_score_range' does not depend on any axioms\n'Lumenia.ReviewChecks.clock_remains_inside_day' does not depend on any axioms\n'Lumenia.ReviewChecks.paused_clock_is_unchanged' does not depend on any axioms\n'Lumenia.ReviewChecks.clock_crosses_old_boundary_without_wrapping' does not depend on any axioms\n'Lumenia.ReviewChecks.trace_retention_is_bounded' does not depend on any axioms\n'Lumenia.ReviewChecks.successful_completion_requires_all_fields' does not depend on any axioms\n'Lumenia.ReviewChecks.identical_state_completes' does not depend on any axioms\n'Lumenia.ReviewChecks.artist_only_check_misses_playback_change' does not depend on any axioms\n'Lumenia.ReviewChecks.aborted_registration_cannot_execute' does not depend on any axioms\n'Lumenia.ReviewChecks.busy_writer_cannot_execute' does not depend on any axioms\n'Lumenia.ReviewChecks.reader_can_observe_busy_writer' does not depend on any axioms\n'Lumenia.ReviewChecks.changed_revision_cannot_pass' does not depend on any axioms\n'Lumenia.ReviewChecks.rebound_old_execution_cannot_pass' does not depend on any axioms\n'Lumenia.ReviewChecks.missing_inputs_cannot_pass' does not depend on any axioms\n",
+      "stderr": "",
+      "error": null
+    },
+    {
+      "project": "planetarium",
+      "command": [
+        "lake",
+        "build"
+      ],
+      "exitCode": 0,
+      "stdout": "Build completed successfully (13 jobs).\n",
+      "stderr": "",
+      "error": null
+    },
+    {
+      "project": "planetarium",
+      "source": "planetarium/formal/ArtPlanetarium/ConstructiveArithmetic.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "/var/folders/l2/17ztpq3n58b6tqm1yd1cyhdh0000gn/T/lumenia-kernel-audit-Bw553a/planetarium_formal_ArtPlanetarium_ConstructiveArithmetic.lean"
+      ],
+      "exitCode": 0,
+      "stdout": "'ArtPlanetarium.ConstructiveArithmetic.cancelAddedRight' does not depend on any axioms\n'ArtPlanetarium.ConstructiveArithmetic.cancelAddedLeft' does not depend on any axioms\n'ArtPlanetarium.ConstructiveArithmetic.restoreSubtracted' does not depend on any axioms\n'_private._stdin.0.ArtPlanetarium.ConstructiveArithmetic.fuelIndependent' does not depend on any axioms\n'_private._stdin.0.ArtPlanetarium.ConstructiveArithmetic.coreStep' does not depend on any axioms\n'_private._stdin.0.ArtPlanetarium.ConstructiveArithmetic.coreUnchanged' does not depend on any axioms\n'_private._stdin.0.ArtPlanetarium.ConstructiveArithmetic.coreEqualsModulo' does not depend on any axioms\n'ArtPlanetarium.ConstructiveArithmetic.addOneSpan' does not depend on any axioms\n'ArtPlanetarium.ConstructiveArithmetic.addManySpans' does not depend on any axioms\n'ArtPlanetarium.ConstructiveArithmetic.multipleHasZeroRemainder' does not depend on any axioms\n",
+      "stderr": "",
+      "error": null
+    },
+    {
+      "project": "planetarium",
+      "source": "planetarium/formal/ArtPlanetarium/DimensionProofs.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "/var/folders/l2/17ztpq3n58b6tqm1yd1cyhdh0000gn/T/lumenia-kernel-audit-Bw553a/planetarium_formal_ArtPlanetarium_DimensionProofs.lean"
+      ],
+      "exitCode": 0,
+      "stdout": "'_private._stdin.0.ArtPlanetarium.reconstructCoordinates' does not depend on any axioms\n'ArtPlanetarium.coordinate_count_matches_dimension' does not depend on any axioms\n'ArtPlanetarium.decoding_encoded_coordinates_recovers_input' does not depend on any axioms\n'ArtPlanetarium.embedding_then_dropping_axis_recovers_coordinates' does not depend on any axioms\n'ArtPlanetarium.four_quarter_turns_recover_coordinates' does not depend on any axioms\n'ArtPlanetarium.projection_ignores_additional_axis' does not depend on any axioms\n'ArtPlanetarium.projection_can_hide_fourth_axis' does not depend on any axioms\n'ArtPlanetarium.timestamp_is_not_a_spatial_axis' does not depend on any axioms\n",
+      "stderr": "",
+      "error": null
+    },
+    {
+      "project": "planetarium",
+      "source": "planetarium/formal/ArtPlanetarium/Proofs.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "/var/folders/l2/17ztpq3n58b6tqm1yd1cyhdh0000gn/T/lumenia-kernel-audit-Bw553a/planetarium_formal_ArtPlanetarium_Proofs.lean"
+      ],
+      "exitCode": 0,
+      "stdout": "'ArtPlanetarium.accepted_parameters_iff' does not depend on any axioms\n'ArtPlanetarium.accepted_parameters_preserve_input' does not depend on any axioms\n'ArtPlanetarium.tile_repeats_after_any_number_of_spans' does not depend on any axioms\n'ArtPlanetarium.tile_coordinate_remains_inside_span' does not depend on any axioms\n'ArtPlanetarium.mirror_twice_recovers_coordinate' does not depend on any axioms\n'ArtPlanetarium.mirrored_pair_preserves_span' does not depend on any axioms\n'ArtPlanetarium.grid_coordinates_are_aligned' does not depend on any axioms\n'ArtPlanetarium.grid_coordinates_preserve_strict_order' does not depend on any axioms\n'ArtPlanetarium.halo_closes_after_twelve_slots' does not depend on any axioms\n'ArtPlanetarium.halo_has_twelve_distinct_angles' does not depend on any axioms\n'ArtPlanetarium.halo_angles_remain_inside_turn' does not depend on any axioms\n'ArtPlanetarium.orthogonal_angles_are_quarter_turns' does not depend on any axioms\n'ArtPlanetarium.route_angles_are_eighth_turns' does not depend on any axioms\n'ArtPlanetarium.different_plane_normals_are_perpendicular' does not depend on any axioms\n'ArtPlanetarium.palette_selection_stays_inside_palette' does not depend on any axioms\n'ArtPlanetarium.colour_channel_mix_stays_bounded' does not depend on any axioms\n'ArtPlanetarium.fold_widths_are_deliberately_unequal' does not depend on any axioms\n'ArtPlanetarium.cycle_returns_after_any_number_of_periods' does not depend on any axioms\n'ArtPlanetarium.reduced_motion_is_independent_of_time' does not depend on any axioms\n'ArtPlanetarium.two_toggles_restore_playback' does not depend on any axioms\n'ArtPlanetarium.visual_distance_does_not_establish_influence' does not depend on any axioms\n'ArtPlanetarium.stale_evidence_cannot_pass' does not depend on any axioms\n'ArtPlanetarium.contradiction_cannot_pass' does not depend on any axioms\n'ArtPlanetarium.neutral_only_evidence_cannot_pass' does not depend on any axioms\n'ArtPlanetarium.evidence_pass_requires_support_without_contradiction' does not depend on any axioms\n",
+      "stderr": "",
+      "error": null
+    },
+    {
+      "project": "reference-assets/artist-cosmos/interactive/verification",
+      "command": [
+        "lake",
+        "build"
+      ],
+      "exitCode": 0,
+      "stdout": "ℹ [2/3] Replayed Exhibition\ninfo: Exhibition.lean:127:0: 'LumeniaExhibition.naturalSubtractionIsDifference' does not depend on any axioms\ninfo: Exhibition.lean:128:0: 'LumeniaExhibition.subNatNatOrder' does not depend on any axioms\ninfo: Exhibition.lean:129:0: 'LumeniaExhibition.naturalOrderFromInteger' does not depend on any axioms\ninfo: Exhibition.lean:130:0: 'LumeniaExhibition.finiteScoreBound' does not depend on any axioms\ninfo: Exhibition.lean:131:0: 'LumeniaExhibition.scoreDifferenceBounded' does not depend on any axioms\ninfo: Exhibition.lean:132:0: 'LumeniaExhibition.squaredDistanceNonnegative' does not depend on any axioms\ninfo: Exhibition.lean:133:0: 'LumeniaExhibition.movePreservesSource' does not depend on any axioms\ninfo: Exhibition.lean:134:0: 'LumeniaExhibition.movePreservesDistance' does not depend on any axioms\ninfo: Exhibition.lean:135:0: 'LumeniaExhibition.missingSourceStaysMissing' does not depend on any axioms\ninfo: Exhibition.lean:136:0: 'LumeniaExhibition.allSourceCoordinatesBounded' does not depend on any axioms\ninfo: Exhibition.lean:137:0: 'LumeniaExhibition.exactSquaredDistanceMatrix' does not depend on any axioms\ninfo: Exhibition.lean:138:0: 'LumeniaExhibition.allSquaredDistancesWithinCube' does not depend on any axioms\ninfo: Exhibition.lean:139:0: 'LumeniaExhibition.initialPanelsDoNotOverlap' does not depend on any axioms\ninfo: Exhibition.lean:140:0: 'LumeniaExhibition.initialPanelPositionsUnique' does not depend on any axioms\ninfo: Exhibition.lean:141:0: 'LumeniaExhibition.defaultPhysicsIsDisabled' does not depend on any axioms\ninfo: Exhibition.lean:142:0: 'LumeniaExhibition.constructiveMinRight' does not depend on any axioms\ninfo: Exhibition.lean:143:0: 'LumeniaExhibition.perFrameStepCap' does not depend on any axioms\ninfo: Exhibition.lean:144:0: 'LumeniaExhibition.sixtyStepsEqualOneSecond' does not depend on any axioms\ninfo: Exhibition.lean:145:0: 'LumeniaExhibition.maximumFrameSpan' does not depend on any axioms\nBuild completed successfully (3 jobs).\n",
+      "stderr": "",
+      "error": null
+    },
+    {
+      "project": "reference-assets/artist-cosmos/interactive/verification",
+      "source": "reference-assets/artist-cosmos/interactive/verification/Exhibition.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "/var/folders/l2/17ztpq3n58b6tqm1yd1cyhdh0000gn/T/lumenia-kernel-audit-Bw553a/reference-assets_artist-cosmos_interactive_verification_Exhibition.lean"
+      ],
+      "exitCode": 0,
+      "stdout": "'LumeniaExhibition.naturalSubtractionIsDifference' does not depend on any axioms\n'LumeniaExhibition.subNatNatOrder' does not depend on any axioms\n'LumeniaExhibition.naturalOrderFromInteger' does not depend on any axioms\n'LumeniaExhibition.finiteScoreBound' does not depend on any axioms\n'LumeniaExhibition.scoreDifferenceBounded' does not depend on any axioms\n'LumeniaExhibition.squaredDistanceNonnegative' does not depend on any axioms\n'LumeniaExhibition.movePreservesSource' does not depend on any axioms\n'LumeniaExhibition.movePreservesDistance' does not depend on any axioms\n'LumeniaExhibition.missingSourceStaysMissing' does not depend on any axioms\n'LumeniaExhibition.allSourceCoordinatesBounded' does not depend on any axioms\n'LumeniaExhibition.exactSquaredDistanceMatrix' does not depend on any axioms\n'LumeniaExhibition.allSquaredDistancesWithinCube' does not depend on any axioms\n'LumeniaExhibition.initialPanelsDoNotOverlap' does not depend on any axioms\n'LumeniaExhibition.initialPanelPositionsUnique' does not depend on any axioms\n'LumeniaExhibition.defaultPhysicsIsDisabled' does not depend on any axioms\n'LumeniaExhibition.constructiveMinRight' does not depend on any axioms\n'LumeniaExhibition.perFrameStepCap' does not depend on any axioms\n'LumeniaExhibition.sixtyStepsEqualOneSecond' does not depend on any axioms\n'LumeniaExhibition.maximumFrameSpan' does not depend on any axioms\n'LumeniaExhibition.naturalSubtractionIsDifference' does not depend on any axioms\n'LumeniaExhibition.subNatNatOrder' does not depend on any axioms\n'LumeniaExhibition.naturalOrderFromInteger' does not depend on any axioms\n'LumeniaExhibition.finiteScoreBound' does not depend on any axioms\n'LumeniaExhibition.scoreDifferenceBounded' does not depend on any axioms\n'LumeniaExhibition.squaredDistanceNonnegative' does not depend on any axioms\n'LumeniaExhibition.movePreservesSource' does not depend on any axioms\n'LumeniaExhibition.movePreservesDistance' does not depend on any axioms\n'LumeniaExhibition.missingSourceStaysMissing' does not depend on any axioms\n'LumeniaExhibition.allSourceCoordinatesBounded' does not depend on any axioms\n'LumeniaExhibition.exactSquaredDistanceMatrix' does not depend on any axioms\n'LumeniaExhibition.allSquaredDistancesWithinCube' does not depend on any axioms\n'LumeniaExhibition.initialPanelsDoNotOverlap' does not depend on any axioms\n'LumeniaExhibition.initialPanelPositionsUnique' does not depend on any axioms\n'LumeniaExhibition.defaultPhysicsIsDisabled' does not depend on any axioms\n'LumeniaExhibition.constructiveMinRight' does not depend on any axioms\n'LumeniaExhibition.perFrameStepCap' does not depend on any axioms\n'LumeniaExhibition.sixtyStepsEqualOneSecond' does not depend on any axioms\n'LumeniaExhibition.maximumFrameSpan' does not depend on any axioms\n",
+      "stderr": "",
+      "error": null
+    },
+    {
+      "project": "reference-assets/artist-cosmos/explore/verification",
+      "command": [
+        "lake",
+        "build"
+      ],
+      "exitCode": 0,
+      "stdout": "ℹ [2/3] Replayed Exploration\ninfo: Exploration.lean:62:0: 'LumeniaExploration.capBound' does not depend on any axioms\ninfo: Exploration.lean:63:0: 'LumeniaExploration.elapsedTimeBound' does not depend on any axioms\ninfo: Exploration.lean:64:0: 'LumeniaExploration.displacementBound' does not depend on any axioms\ninfo: Exploration.lean:65:0: 'LumeniaExploration.observerMagnitudeBound' does not depend on any axioms\ninfo: Exploration.lean:66:0: 'LumeniaExploration.movementPreservesSource' does not depend on any axioms\ninfo: Exploration.lean:67:0: 'LumeniaExploration.missingSourceRemainsMissing' does not depend on any axioms\ninfo: Exploration.lean:68:0: 'LumeniaExploration.collisionStartsDisabled' does not depend on any axioms\ninfo: Exploration.lean:69:0: 'LumeniaExploration.movementPreservesCollisionChoice' does not depend on any axioms\ninfo: Exploration.lean:70:0: 'LumeniaExploration.passageClearance' does not depend on any axioms\ninfo: Exploration.lean:71:0: 'LumeniaExploration.passageHasRoom' does not depend on any axioms\nBuild completed successfully (3 jobs).\n",
+      "stderr": "",
+      "error": null
+    },
+    {
+      "project": "reference-assets/artist-cosmos/explore/verification",
+      "source": "reference-assets/artist-cosmos/explore/verification/Exploration.lean",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "/var/folders/l2/17ztpq3n58b6tqm1yd1cyhdh0000gn/T/lumenia-kernel-audit-Bw553a/reference-assets_artist-cosmos_explore_verification_Exploration.lean"
+      ],
+      "exitCode": 0,
+      "stdout": "'LumeniaExploration.capBound' does not depend on any axioms\n'LumeniaExploration.elapsedTimeBound' does not depend on any axioms\n'LumeniaExploration.displacementBound' does not depend on any axioms\n'LumeniaExploration.observerMagnitudeBound' does not depend on any axioms\n'LumeniaExploration.movementPreservesSource' does not depend on any axioms\n'LumeniaExploration.missingSourceRemainsMissing' does not depend on any axioms\n'LumeniaExploration.collisionStartsDisabled' does not depend on any axioms\n'LumeniaExploration.movementPreservesCollisionChoice' does not depend on any axioms\n'LumeniaExploration.passageClearance' does not depend on any axioms\n'LumeniaExploration.passageHasRoom' does not depend on any axioms\n'LumeniaExploration.capBound' does not depend on any axioms\n'LumeniaExploration.elapsedTimeBound' does not depend on any axioms\n'LumeniaExploration.displacementBound' does not depend on any axioms\n'LumeniaExploration.observerMagnitudeBound' does not depend on any axioms\n'LumeniaExploration.movementPreservesSource' does not depend on any axioms\n'LumeniaExploration.missingSourceRemainsMissing' does not depend on any axioms\n'LumeniaExploration.collisionStartsDisabled' does not depend on any axioms\n'LumeniaExploration.movementPreservesCollisionChoice' does not depend on any axioms\n'LumeniaExploration.passageClearance' does not depend on any axioms\n'LumeniaExploration.passageHasRoom' does not depend on any axioms\n",
+      "stderr": "",
+      "error": null
+    }
+  ]
+}

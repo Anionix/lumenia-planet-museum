@@ -12,7 +12,7 @@ import { claimIdentifier, claimNamespace, uuidVersionSeven } from './identifiers
 import { sourceManifest, projectRoot } from './source-revision.mjs';
 import { observation, verificationResult, saveReport } from './report.mjs';
 import { evaluateObservation } from './contract.mjs';
-import { axiomDependenciesAreEmpty, languageServerCheckSucceeded } from './language-server-evidence.mjs';
+import { axiomDependenciesAreEmpty, languageServerCheckSucceeded, languageServerReceiptMatchesSource } from './language-server-evidence.mjs';
 
 const manifest = await sourceManifest();
 const executionIdentifier = uuidVersionSeven();
@@ -112,8 +112,9 @@ try {
   const incompleteProofs = proofTargets.filter((target) =>
     !receipt.checks.some((check) => check.tool === 'lean_verify' && check.target === target.name));
   const failures = receipt.checks.filter((check) => !languageServerCheckSucceeded(check));
+  const receiptMatches = languageServerReceiptMatchesSource(receipt, manifest);
   const item = observation('Lumenia.LeanLanguageServerGate',
-    missingTools.length + incompleteProofs.length + failures.length, 0, 'failed or missing checks',
+    missingTools.length + incompleteProofs.length + failures.length + (receiptMatches ? 0 : 1), 0, 'failed or missing checks',
     ['lean-lsp-mcp: ' + requiredTools.join(', ')],
     'Missing tools/theorems, failed calls, or stale language-server evidence.',
     { sourceRevision: receipt.sourceRevision, executionIdentifier });

@@ -2,11 +2,11 @@
 type: Verification Report
 title: Lumenia application-report
 status: pass
-sourceRevision: sha256:fa371b84fa47949a1c010e29b9545cb3671b586f9700f4df604d117be0605a2a
-executionIdentifier: 01a0a98a-1fcd-76f5-8725-5ce3dc84d003
+sourceRevision: sha256:87ed8dc07a6cf314667c9e4f158ea72255a3130c220ca3192f1266e238231c76
+executionIdentifier: 01a0a9c7-1e56-7366-9c3d-18f0173c7af6
 generated:
   by: scripts/run-application-check.mjs
-  at: 2026-09-16T09:26:45.734Z
+  at: 2026-09-16T10:33:18.865Z
 ---
 
 [Intent](../intent.md) → [Specification](../spec.md) → [Proof report](proof-report.md) → [Gate report](gate-report.md)

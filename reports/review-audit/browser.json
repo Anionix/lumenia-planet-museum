@@ -1,0 +1,1422 @@
+{
+  "executionIdentifier": "01a0a9c6-c101-794e-b225-4b01c529c05f",
+  "recordedAt": "2026-09-16T10:39:15.534Z",
+  "sourceRevisionBefore": "sha256:87ed8dc07a6cf314667c9e4f158ea72255a3130c220ca3192f1266e238231c76",
+  "sourceRevisionAfter": "sha256:87ed8dc07a6cf314667c9e4f158ea72255a3130c220ca3192f1266e238231c76",
+  "status": "pass",
+  "checks": {
+    "webglTwo": true,
+    "initialPhysicsDisabled": true,
+    "originalInitiallyRequestedOnce": true,
+    "fifteenSmallPreviewElements": true,
+    "imageInterferenceRejected": true,
+    "physicsEnabled": true,
+    "singleStopsPlayback": true,
+    "resetRestoresPositions": true,
+    "sourceCoordinatesUnchanged": true,
+    "allFifteenWorldsVisited": true,
+    "onlyTwelveKnownCoordinates": true,
+    "collisionEnabled": true,
+    "collisionDisabled": true
+  },
+  "code": "async (page) => {await page.goto('http://127.0.0.1:4175/cosmos/interactive/');await page.waitForFunction(()=>window.lumeniaReviewTools?.has('configure_image_exhibition'));await page.setViewportSize({width:1499,height:1049});const initial=await page.evaluate(()=>({state:window.lumeniaExhibition.snapshot(),originalRequests:performance.getEntriesByType('resource').filter(x=>x.name.endsWith('.png')).length,previewElements:document.querySelectorAll('.artist-strip img[src$=\".webp\"]').length,context:document.querySelector('canvas').dataset.contextVersion}));let release,started;const waiting=new Promise(resolve=>started=resolve);await page.route('**/alphonse-mucha.png',async route=>{started();await new Promise(resolve=>release=resolve);await route.continue();});await page.evaluate(()=>{window.lumeniaReviewResult=window.lumeniaReviewTools.get('configure_image_exhibition').execute({view:'all',playing:false,physics_enabled:false});});await waiting;await page.locator('[data-action=play]').click();release();const interrupted=await page.evaluate(()=>window.lumeniaReviewResult);await page.unroute('**/alphonse-mucha.png');const physics=await page.evaluate(()=>window.lumeniaReviewTools.get('configure_image_exhibition').execute({physics_enabled:true,playing:true,gravity_enabled:true}));const single=await page.evaluate(()=>window.lumeniaReviewTools.get('configure_image_exhibition').execute({view:'single'}));const reset=await page.evaluate(()=>window.lumeniaReviewTools.get('reset_image_exhibition').execute({}));const final=await page.evaluate(()=>window.lumeniaExhibition.snapshot());await page.goto('http://127.0.0.1:4175/cosmos/explore/');await page.waitForFunction(()=>window.lumeniaReviewTools?.has('navigate_exploration'));const worlds=await page.evaluate(async()=>{const catalog=await window.lumeniaReviewTools.get('read_exploration_catalog').execute({});const results=[];for(const world of catalog.result.worlds){const result=await window.lumeniaReviewTools.get('navigate_exploration').execute({world_identifier:world.worldIdentifier,viewpoint:'entrance'});results.push({worldIdentifier:world.worldIdentifier,status:result.status,result:result.result});}return results;});const collision=await page.evaluate(()=>window.lumeniaReviewTools.get('set_exploration_physics').execute({enabled:true,landing:false}));const disabled=await page.evaluate(()=>window.lumeniaReviewTools.get('set_exploration_physics').execute({enabled:false}));return {initial,interrupted,physics,single,reset,final,worlds,collision,disabled,registration:'Test replacement for document.modelContext; actual page controllers, WebGL2, image loading and Rapier.'};}",
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "### Result\n{\"initial\":{\"state\":{\"recordIdentifier\":\"812bd57c-a4b2-5b44-a893-e7740a3b032e\",\"renderer\":\"WebGL 2.0 (OpenGL ES 3.0 Chromium)\",\"physics\":\"disabled\",\"playing\":false,\"selectedArtist\":\"William Morris\",\"loadedImages\":1,\"physicsState\":null,\"displayPositions\":[[-14.6,5.2,0],[-7.3,5.2,0],[0,5.2,0],[7.3,5.2,0],[14.6,5.2,0],[-14.6,0,0],[-7.3,0,0],[0,0,0],[7.3,0,0],[14.6,0,0],[-14.6,-5.2,0],[-7.3,-5.2,0],[0,-5.2,0],[7.3,-5.2,0],[14.6,-5.2,0]],\"semanticPositions\":[[-0.7,0.05,-0.85],[-0.7,-0.45,-0.95],[0.25,0.2,-0.25],[0.95,0.6,0.65],[0.95,0.5,0.5],[0.55,-0.65,-0.95],[0.85,0.5,0.55],[0.9,0.65,0.85],[0.85,0.7,0.85],[0.75,0.8,0.98],[0.45,0.65,0.98],[-0.35,-0.75,-0.1],null,null,null],\"events\":[{\"event_identifier\":\"01a0a9c9-6b76-77b7-a7eb-9ba5fc6b7c85\",\"observed_at\":\"2026-09-16T10:35:44.886Z\",\"record_identifier\":\"812bd57c-a4b2-5b44-a893-e7740a3b032e\",\"transition\":\"webgl2_ready\",\"context\":\"WebGL 2.0 (OpenGL ES 3.0 Chromium)\",\"physics_enabled\":false}]},\"originalRequests\":1,\"previewElements\":15,\"context\":\"WebGL 2.0 (OpenGL ES 3.0 Chromium)\"},\"interrupted\":{\"status\":\"error\",\"executionIdentifier\":\"01a0a9c9-6f01-7840-ba12-209ccfed3619\",\"message\":\"The requested playing changed while the action was running.\"},\"physics\":{\"status\":\"complete\",\"recordIdentifier\":\"7512e65e-466a-501a-aa88-01dd5d93e414\",\"executionIdentifier\":\"01a0a9c9-7088-7703-afed-d8bd7229d391\",\"completedAt\":\"2026-09-16T10:35:49.485Z\",\"result\":{\"ready\":true,\"artistIdentifier\":\"4d06480c-9e64-5d9a-bc4a-4d88d9c53888\",\"artist\":\"William Morris\",\"view\":\"all\",\"playing\":true,\"physics\":\"enabled\",\"gravity\":true,\"loadedImages\":15,\"displayPosition\":[-14.600000381469727,5.272359371185303,0],\"sourceCoordinate\":{\"coordinate_identifier\":\"9d75669a-24ea-5b6d-8363-70c47b559eae\",\"values\":[-0.7,0.05,-0.85],\"unit\":\"dimensionless\"},\"renderedFrames\":219,\"links\":{\"wiki\":\"https://github.com/Anionix/lumenia-planet-museum/wiki\",\"discussions\":\"https://github.com/Anionix/lumenia-planet-museum/discussions/20\"}}},\"single\":{\"status\":\"complete\",\"recordIdentifier\":\"7512e65e-466a-501a-aa88-01dd5d93e414\",\"executionIdentifier\":\"01a0a9c9-7d72-7d64-9bb8-bb525df6efa2\",\"completedAt\":\"2026-09-16T10:35:49.499Z\",\"result\":{\"ready\":true,\"artistIdentifier\":\"4d06480c-9e64-5d9a-bc4a-4d88d9c53888\",\"artist\":\"William Morris\",\"view\":\"single\",\"playing\":false,\"physics\":\"disabled\",\"gravity\":false,\"loadedImages\":15,\"displayPosition\":[-14.600000381469727,5.272359371185303,0],\"sourceCoordinate\":{\"coordinate_identifier\":\"9d75669a-24ea-5b6d-8363-70c47b559eae\",\"values\":[-0.7,0.05,-0.85],\"unit\":\"dimensionless\"},\"renderedFrames\":220,\"links\":{\"wiki\":\"https://github.com/Anionix/lumenia-planet-museum/wiki\",\"discussions\":\"https://github.com/Anionix/lumenia-planet-museum/discussions/20\"}}},\"reset\":{\"status\":\"complete\",\"recordIdentifier\":\"1b3107fa-6965-55c6-a22b-806f7caefdc5\",\"executionIdentifier\":\"01a0a9c9-7d7d-7573-b6a1-d3760af7ed09\",\"completedAt\":\"2026-09-16T10:35:49.516Z\",\"result\":{\"ready\":true,\"artistIdentifier\":\"4d06480c-9e64-5d9a-bc4a-4d88d9c53888\",\"artist\":\"William Morris\",\"view\":\"single\",\"playing\":false,\"physics\":\"disabled\",\"gravity\":false,\"loadedImages\":15,\"displayPosition\":[-14.6,5.2,0],\"sourceCoordinate\":{\"coordinate_identifier\":\"9d75669a-24ea-5b6d-8363-70c47b559eae\",\"values\":[-0.7,0.05,-0.85],\"unit\":\"dimensionless\"},\"renderedFrames\":221,\"links\":{\"wiki\":\"https://github.com/Anionix/lumenia-planet-museum/wiki\",\"discussions\":\"https://github.com/Anionix/lumenia-planet-museum/discussions/20\"}}},\"final\":{\"recordIdentifier\":\"812bd57c-a4b2-5b44-a893-e7740a3b032e\",\"renderer\":\"WebGL 2.0 (OpenGL ES 3.0 Chromium)\",\"physics\":\"disabled\",\"playing\":false,\"selectedArtist\":\"William Morris\",\"loadedImages\":15,\"physicsState\":null,\"displayPositions\":[[-14.6,5.2,0],[-7.3,5.2,0],[0,5.2,0],[7.3,5.2,0],[14.6,5.2,0],[-14.6,0,0],[-7.3,0,0],[0,0,0],[7.3,0,0],[14.6,0,0],[-14.6,-5.2,0],[-7.3,-5.2,0],[0,-5.2,0],[7.3,-5.2,0],[14.6,-5.2,0]],\"semanticPositions\":[[-0.7,0.05,-0.85],[-0.7,-0.45,-0.95],[0.25,0.2,-0.25],[0.95,0.6,0.65],[0.95,0.5,0.5],[0.55,-0.65,-0.95],[0.85,0.5,0.55],[0.9,0.65,0.85],[0.85,0.7,0.85],[0.75,0.8,0.98],[0.45,0.65,0.98],[-0.35,-0.75,-0.1],null,null,null],\"events\":[{\"event_identifier\":\"01a0a9c9-6b76-77b7-a7eb-9ba5fc6b7c85\",\"observed_at\":\"2026-09-16T10:35:44.886Z\",\"record_identifier\":\"812bd57c-a4b2-5b44-a893-e7740a3b032e\",\"transition\":\"webgl2_ready\",\"context\":\"WebGL 2.0 (OpenGL ES 3.0 Chromium)\",\"physics_enabled\":false},{\"event_identifier\":\"01a0a9c9-6f01-7d32-9886-0c61f8f4f25d\",\"observed_at\":\"2026-09-16T10:35:45.793Z\",\"record_identifier\":\"812bd57c-a4b2-5b44-a893-e7740a3b032e\",\"transition\":\"physics_disabled\"},{\"event_identifier\":\"01a0a9c9-6f02-7dc1-8e05-a8b1a9b67a65\",\"observed_at\":\"2026-09-16T10:35:45.794Z\",\"record_identifier\":\"812bd57c-a4b2-5b44-a893-e7740a3b032e\",\"transition\":\"view_changed\",\"mode\":\"all\"},{\"event_identifier\":\"01a0a9c9-7004-712f-a833-886f6478a94c\",\"observed_at\":\"2026-09-16T10:35:46.052Z\",\"record_identifier\":\"812bd57c-a4b2-5b44-a893-e7740a3b032e\",\"transition\":\"playback_changed\",\"playing\":true},{\"event_identifier\":\"01a0a9c9-7d6c-7e02-8494-8834f1e3cf4b\",\"observed_at\":\"2026-09-16T10:35:49.484Z\",\"record_identifier\":\"812bd57c-a4b2-5b44-a893-e7740a3b032e\",\"transition\":\"physics_enabled\",\"engine_version\":\"0.12.0\",\"body_count\":15},{\"event_identifier\":\"01a0a9c9-7d6d-75fe-91cd-0db754a9fd7f\",\"observed_at\":\"2026-09-16T10:35:49.485Z\",\"record_identifier\":\"812bd57c-a4b2-5b44-a893-e7740a3b032e\",\"transition\":\"validated action -> presented result\",\"recordIdentifier\":\"7512e65e-466a-501a-aa88-01dd5d93e414\",\"executionIdentifier\":\"01a0a9c9-7088-7703-afed-d8bd7229d391\",\"tool\":\"configure_image_exhibition\"},{\"event_identifier\":\"01a0a9c9-7d73-7ef2-9d42-4c2155799d90\",\"observed_at\":\"2026-09-16T10:35:49.491Z\",\"record_identifier\":\"812bd57c-a4b2-5b44-a893-e7740a3b032e\",\"transition\":\"physics_disabled\"},{\"event_identifier\":\"01a0a9c9-7d73-77a6-94b6-dc2264af98c8\",\"observed_at\":\"2026-09-16T10:35:49.491Z\",\"record_identifier\":\"812bd57c-a4b2-5b44-a893-e7740a3b032e\",\"transition\":\"view_changed\",\"mode\":\"single\"},{\"event_identifier\":\"01a0a9c9-7d7b-7d47-81cb-2e344bd1c56d\",\"observed_at\":\"2026-09-16T10:35:49.499Z\",\"record_identifier\":\"812bd57c-a4b2-5b44-a893-e7740a3b032e\",\"transition\":\"validated action -> presented result\",\"recordIdentifier\":\"7512e65e-466a-501a-aa88-01dd5d93e414\",\"executionIdentifier\":\"01a0a9c9-7d72-7d64-9bb8-bb525df6efa2\",\"tool\":\"configure_image_exhibition\"},{\"event_identifier\":\"01a0a9c9-7d7e-7b56-88e2-85407a7fe3eb\",\"observed_at\":\"2026-09-16T10:35:49.502Z\",\"record_identifier\":\"812bd57c-a4b2-5b44-a893-e7740a3b032e\",\"transition\":\"physics_disabled\"},{\"event_identifier\":\"01a0a9c9-7d7e-7ac7-a1a9-1d65bc3388ed\",\"observed_at\":\"2026-09-16T10:35:49.502Z\",\"record_identifier\":\"812bd57c-a4b2-5b44-a893-e7740a3b032e\",\"transition\":\"display_reset\",\"semantic_positions_unchanged\":true},{\"event_identifier\":\"01a0a9c9-7d8c-77a9-bc79-cf80563841be\",\"observed_at\":\"2026-09-16T10:35:49.516Z\",\"record_identifier\":\"812bd57c-a4b2-5b44-a893-e7740a3b032e\",\"transition\":\"validated action -> presented result\",\"recordIdentifier\":\"1b3107fa-6965-55c6-a22b-806f7caefdc5\",\"executionIdentifier\":\"01a0a9c9-7d7d-7573-b6a1-d3760af7ed09\",\"tool\":\"reset_image_exhibition\"}]},\"worlds\":[{\"worldIdentifier\":\"cc6b59e2-1bfe-5a91-9baa-1afbcdeb0457\",\"status\":\"complete\",\"result\":{\"ready\":true,\"worldIdentifier\":\"cc6b59e2-1bfe-5a91-9baa-1afbcdeb0457\",\"artist\":\"Ettore Sottsass\",\"cameraPosition\":[23,12,34],\"cameraOrientation\":{\"yaw\":0.5947592574833529,\"pitch\":-0.26182257581287627},\"sourceCoordinate\":{\"coordinate_identifier\":\"15863bb0-a1a7-5239-9d46-32f94d98d1d1\",\"values\":[0.55,-0.65,-0.95],\"unit\":\"dimensionless\"},\"physics\":\"disabled\",\"landing\":false,\"contactCount\":0,\"renderedFrames\":2,\"viewpoints\":[{\"name\":\"entrance\",\"label\":\"入口\"},{\"name\":\"passage\",\"label\":\"環の手前へ\"},{\"name\":\"object\",\"label\":\"惑星のそばへ\"},{\"name\":\"landing\",\"label\":\"着地できる台へ\"}],\"links\":{\"wiki\":\"https://github.com/Anionix/lumenia-planet-museum/wiki\",\"discussions\":\"https://github.com/Anionix/lumenia-planet-museum/discussions/20\"}}},{\"worldIdentifier\":\"9bdb7953-2aff-556d-9126-07e9904550df\",\"status\":\"complete\",\"result\":{\"ready\":true,\"worldIdentifier\":\"9bdb7953-2aff-556d-9126-07e9904550df\",\"artist\":\"William Morris\",\"cameraPosition\":[25,13,38],\"cameraOrientation\":{\"yaw\":0.5819051181398854,\"pitch\":-0.2579390229540166},\"sourceCoordinate\":{\"coordinate_identifier\":\"9d75669a-24ea-5b6d-8363-70c47b559eae\",\"values\":[-0.7,0.05,-0.85],\"unit\":\"dimensionless\"},\"physics\":\"disabled\",\"landing\":false,\"contactCount\":0,\"renderedFrames\":3,\"viewpoints\":[{\"name\":\"entrance\",\"label\":\"入口\"},{\"name\":\"passage\",\"label\":\"環の手前へ\"},{\"name\":\"object\",\"label\":\"形のそばへ\"},{\"name\":\"landing\",\"label\":\"着地できる台へ\"}],\"links\":{\"wiki\":\"https://github.com/Anionix/lumenia-planet-museum/wiki\",\"discussions\":\"https://github.com/Anionix/lumenia-planet-museum/discussions/20\"}}},{\"worldIdentifier\":\"57e1b1ed-fefe-557e-94b8-bc4f104bfec9\",\"status\":\"complete\",\"result\":{\"ready\":true,\"worldIdentifier\":\"57e1b1ed-fefe-557e-94b8-bc4f104bfec9\",\"artist\":\"Alphonse Mucha\",\"cameraPosition\":[25,13,38],\"cameraOrientation\":{\"yaw\":0.5819051181398854,\"pitch\":-0.2579390229540166},\"sourceCoordinate\":{\"coordinate_identifier\":\"f7f331ca-1d9d-5f03-81bd-5cd3abce325a\",\"values\":[-0.7,-0.45,-0.95],\"unit\":\"dimensionless\"},\"physics\":\"disabled\",\"landing\":false,\"contactCount\":0,\"renderedFrames\":4,\"viewpoints\":[{\"name\":\"entrance\",\"label\":\"入口\"},{\"name\":\"passage\",\"label\":\"環の手前へ\"},{\"name\":\"object\",\"label\":\"形のそばへ\"},{\"name\":\"landing\",\"label\":\"着地できる台へ\"}],\"links\":{\"wiki\":\"https://github.com/Anionix/lumenia-planet-museum/wiki\",\"discussions\":\"https://github.com/Anionix/lumenia-planet-museum/discussions/20\"}}},{\"worldIdentifier\":\"8784b8be-7acc-50b7-a68d-78634d28dc66\",\"status\":\"complete\",\"result\":{\"ready\":true,\"worldIdentifier\":\"8784b8be-7acc-50b7-a68d-78634d28dc66\",\"artist\":\"Charles Rennie Mackintosh\",\"cameraPosition\":[25,13,38],\"cameraOrientation\":{\"yaw\":0.5819051181398854,\"pitch\":-0.2579390229540166},\"sourceCoordinate\":{\"coordinate_identifier\":\"04cca99c-8cd7-573b-8fe2-c91fe40750e7\",\"values\":[0.25,0.2,-0.25],\"unit\":\"dimensionless\"},\"physics\":\"disabled\",\"landing\":false,\"contactCount\":0,\"renderedFrames\":5,\"viewpoints\":[{\"name\":\"entrance\",\"label\":\"入口\"},{\"name\":\"passage\",\"label\":\"枠の手前へ\"},{\"name\":\"object\",\"label\":\"形のそばへ\"},{\"name\":\"landing\",\"label\":\"着地できる台へ\"}],\"links\":{\"wiki\":\"https://github.com/Anionix/lumenia-planet-museum/wiki\",\"discussions\":\"https://github.com/Anionix/lumenia-planet-museum/discussions/20\"}}},{\"worldIdentifier\":\"fdb53a66-8aa6-576a-b088-2302be21e751\",\"status\":\"complete\",\"result\":{\"ready\":true,\"worldIdentifier\":\"fdb53a66-8aa6-576a-b088-2302be21e751\",\"artist\":\"Piet Mondrian\",\"cameraPosition\":[25,13,38],\"cameraOrientation\":{\"yaw\":0.5819051181398854,\"pitch\":-0.2579390229540166},\"sourceCoordinate\":{\"coordinate_identifier\":\"084f90b6-a70c-5ae1-9639-cea3456efea5\",\"values\":[0.95,0.6,0.65],\"unit\":\"dimensionless\"},\"physics\":\"disabled\",\"landing\":false,\"contactCount\":0,\"renderedFrames\":6,\"viewpoints\":[{\"name\":\"entrance\",\"label\":\"入口\"},{\"name\":\"passage\",\"label\":\"枠の手前へ\"},{\"name\":\"object\",\"label\":\"形のそばへ\"},{\"name\":\"landing\",\"label\":\"着地できる台へ\"}],\"links\":{\"wiki\":\"https://github.com/Anionix/lumenia-planet-museum/wiki\",\"discussions\":\"https://github.com/Anionix/lumenia-planet-museum/discussions/20\"}}},{\"worldIdentifier\":\"c8490188-8792-5345-883a-be87df0b62a4\",\"status\":\"complete\",\"result\":{\"ready\":true,\"worldIdentifier\":\"c8490188-8792-5345-883a-be87df0b62a4\",\"artist\":\"Gerrit Rietveld\",\"cameraPosition\":[25,13,38],\"cameraOrientation\":{\"yaw\":0.5819051181398854,\"pitch\":-0.2579390229540166},\"sourceCoordinate\":{\"coordinate_identifier\":\"d541a9dc-5cae-5e58-b0c6-59d81f953ebd\",\"values\":[0.95,0.5,0.5],\"unit\":\"dimensionless\"},\"physics\":\"disabled\",\"landing\":false,\"contactCount\":0,\"renderedFrames\":7,\"viewpoints\":[{\"name\":\"entrance\",\"label\":\"入口\"},{\"name\":\"passage\",\"label\":\"枠の手前へ\"},{\"name\":\"object\",\"label\":\"形のそばへ\"},{\"name\":\"landing\",\"label\":\"着地できる台へ\"}],\"links\":{\"wiki\":\"https://github.com/Anionix/lumenia-planet-museum/wiki\",\"discussions\":\"https://github.com/Anionix/lumenia-planet-museum/discussions/20\"}}},{\"worldIdentifier\":\"ac1a6a0a-7e21-557d-a1d5-afcb0f4ae63c\",\"status\":\"complete\",\"result\":{\"ready\":true,\"worldIdentifier\":\"ac1a6a0a-7e21-557d-a1d5-afcb0f4ae63c\",\"artist\":\"Herbert Bayer\",\"cameraPosition\":[25,13,38],\"cameraOrientation\":{\"yaw\":0.5819051181398854,\"pitch\":-0.2579390229540166},\"sourceCoordinate\":{\"coordinate_identifier\":\"218048f4-6318-52d9-9dd6-6baf46ab8caf\",\"values\":[0.85,0.5,0.55],\"unit\":\"dimensionless\"},\"physics\":\"disabled\",\"landing\":false,\"contactCount\":0,\"renderedFrames\":8,\"viewpoints\":[{\"name\":\"entrance\",\"label\":\"入口\"},{\"name\":\"passage\",\"label\":\"枠の手前へ\"},{\"name\":\"object\",\"label\":\"形のそばへ\"},{\"name\":\"landing\",\"label\":\"着地できる台へ\"}],\"links\":{\"wiki\":\"https://github.com/Anionix/lumenia-planet-museum/wiki\",\"discussions\":\"https://github.com/Anionix/lumenia-planet-museum/discussions/20\"}}},{\"worldIdentifier\":\"1c11ae55-b9ca-5d93-838f-4eb3fb20b786\",\"status\":\"complete\",\"result\":{\"ready\":true,\"worldIdentifier\":\"1c11ae55-b9ca-5d93-838f-4eb3fb20b786\",\"artist\":\"Josef Müller-Brockmann\",\"cameraPosition\":[25,13,38],\"cameraOrientation\":{\"yaw\":0.5819051181398854,\"pitch\":-0.2579390229540166},\"sourceCoordinate\":{\"coordinate_identifier\":\"f4fdc4c4-a4de-5f27-9ce9-ce6324a39525\",\"values\":[0.9,0.65,0.85],\"unit\":\"dimensionless\"},\"physics\":\"disabled\",\"landing\":false,\"contactCount\":0,\"renderedFrames\":9,\"viewpoints\":[{\"name\":\"entrance\",\"label\":\"入口\"},{\"name\":\"passage\",\"label\":\"環の手前へ\"},{\"name\":\"object\",\"label\":\"形のそばへ\"},{\"name\":\"landing\",\"label\":\"着地できる台へ\"}],\"links\":{\"wiki\":\"https://github.com/Anionix/lumenia-planet-museum/wiki\",\"discussions\":\"https://github.com/Anionix/lumenia-planet-museum/discussions/20\"}}},{\"worldIdentifier\":\"56567625-bde1-59b0-a627-a8025a571c5a\",\"status\":\"complete\",\"result\":{\"ready\":true,\"worldIdentifier\":\"56567625-bde1-59b0-a627-a8025a571c5a\",\"artist\":\"Massimo Vignelli\",\"cameraPosition\":[25,13,38],\"cameraOrientation\":{\"yaw\":0.5819051181398854,\"pitch\":-0.2579390229540166},\"sourceCoordinate\":{\"coordinate_identifier\":\"a99dfabf-b74d-575f-9ba2-ee5505414d7c\",\"values\":[0.85,0.7,0.85],\"unit\":\"dimensionless\"},\"physics\":\"disabled\",\"landing\":false,\"contactCount\":0,\"renderedFrames\":10,\"viewpoints\":[{\"name\":\"entrance\",\"label\":\"入口\"},{\"name\":\"passage\",\"label\":\"枠の手前へ\"},{\"name\":\"object\",\"label\":\"形のそばへ\"},{\"name\":\"landing\",\"label\":\"着地できる台へ\"}],\"links\":{\"wiki\":\"https://github.com/Anionix/lumenia-planet-museum/wiki\",\"discussions\":\"https://github.com/Anionix/lumenia-planet-museum/discussions/20\"}}},{\"worldIdentifier\":\"73259200-0eea-57c2-bd4e-7f5328925409\",\"status\":\"complete\",\"result\":{\"ready\":true,\"worldIdentifier\":\"73259200-0eea-57c2-bd4e-7f5328925409\",\"artist\":\"Dieter Rams\",\"cameraPosition\":[25,13,38],\"cameraOrientation\":{\"yaw\":0.5819051181398854,\"pitch\":-0.2579390229540166},\"sourceCoordinate\":{\"coordinate_identifier\":\"2cffd42e-a9ac-585e-83a2-dee48925af3f\",\"values\":[0.75,0.8,0.98],\"unit\":\"dimensionless\"},\"physics\":\"disabled\",\"landing\":false,\"contactCount\":0,\"renderedFrames\":11,\"viewpoints\":[{\"name\":\"entrance\",\"label\":\"入口\"},{\"name\":\"passage\",\"label\":\"環の手前へ\"},{\"name\":\"object\",\"label\":\"形のそばへ\"},{\"name\":\"landing\",\"label\":\"着地できる台へ\"}],\"links\":{\"wiki\":\"https://github.com/Anionix/lumenia-planet-museum/wiki\",\"discussions\":\"https://github.com/Anionix/lumenia-planet-museum/discussions/20\"}}},{\"worldIdentifier\":\"1c5eecf4-0edf-5a69-8f73-e359c6a16302\",\"status\":\"complete\",\"result\":{\"ready\":true,\"worldIdentifier\":\"1c5eecf4-0edf-5a69-8f73-e359c6a16302\",\"artist\":\"Naoto Fukasawa\",\"cameraPosition\":[25,13,38],\"cameraOrientation\":{\"yaw\":0.5819051181398854,\"pitch\":-0.2579390229540166},\"sourceCoordinate\":{\"coordinate_identifier\":\"99b0c48e-9248-5e72-9c8c-229fe3245ca8\",\"values\":[0.45,0.65,0.98],\"unit\":\"dimensionless\"},\"physics\":\"disabled\",\"landing\":false,\"contactCount\":0,\"renderedFrames\":12,\"viewpoints\":[{\"name\":\"entrance\",\"label\":\"入口\"},{\"name\":\"passage\",\"label\":\"環の手前へ\"},{\"name\":\"object\",\"label\":\"形のそばへ\"},{\"name\":\"landing\",\"label\":\"着地できる台へ\"}],\"links\":{\"wiki\":\"https://github.com/Anionix/lumenia-planet-museum/wiki\",\"discussions\":\"https://github.com/Anionix/lumenia-planet-museum/discussions/20\"}}},{\"worldIdentifier\":\"9982b6c3-9ea7-5b67-a505-c6e7fd04bdcc\",\"status\":\"complete\",\"result\":{\"ready\":true,\"worldIdentifier\":\"9982b6c3-9ea7-5b67-a505-c6e7fd04bdcc\",\"artist\":\"Rei Kawakubo\",\"cameraPosition\":[25,13,38],\"cameraOrientation\":{\"yaw\":0.5819051181398854,\"pitch\":-0.2579390229540166},\"sourceCoordinate\":{\"coordinate_identifier\":\"bffefb98-97d0-5913-b880-308f4d6eb0d6\",\"values\":[-0.35,-0.75,-0.1],\"unit\":\"dimensionless\"},\"physics\":\"disabled\",\"landing\":false,\"contactCount\":0,\"renderedFrames\":13,\"viewpoints\":[{\"name\":\"entrance\",\"label\":\"入口\"},{\"name\":\"passage\",\"label\":\"環の手前へ\"},{\"name\":\"object\",\"label\":\"形のそばへ\"},{\"name\":\"landing\",\"label\":\"着地できる台へ\"}],\"links\":{\"wiki\":\"https://github.com/Anionix/lumenia-planet-museum/wiki\",\"discussions\":\"https://github.com/Anionix/lumenia-planet-museum/discussions/20\"}}},{\"worldIdentifier\":\"8ba9b165-fbfe-53fe-8e15-0a9c901496ea\",\"status\":\"complete\",\"result\":{\"ready\":true,\"worldIdentifier\":\"8ba9b165-fbfe-53fe-8e15-0a9c901496ea\",\"artist\":\"Charles Eames\",\"cameraPosition\":[25,13,38],\"cameraOrientation\":{\"yaw\":0.5819051181398854,\"pitch\":-0.2579390229540166},\"sourceCoordinate\":null,\"physics\":\"disabled\",\"landing\":false,\"contactCount\":0,\"renderedFrames\":14,\"viewpoints\":[{\"name\":\"entrance\",\"label\":\"入口\"},{\"name\":\"passage\",\"label\":\"環の手前へ\"},{\"name\":\"object\",\"label\":\"形のそばへ\"},{\"name\":\"landing\",\"label\":\"着地できる台へ\"}],\"links\":{\"wiki\":\"https://github.com/Anionix/lumenia-planet-museum/wiki\",\"discussions\":\"https://github.com/Anionix/lumenia-planet-museum/discussions/20\"}}},{\"worldIdentifier\":\"54fb3ebc-8312-5edb-9007-47bd83dbc990\",\"status\":\"complete\",\"result\":{\"ready\":true,\"worldIdentifier\":\"54fb3ebc-8312-5edb-9007-47bd83dbc990\",\"artist\":\"Ray Eames\",\"cameraPosition\":[25,13,38],\"cameraOrientation\":{\"yaw\":0.5819051181398854,\"pitch\":-0.2579390229540166},\"sourceCoordinate\":null,\"physics\":\"disabled\",\"landing\":false,\"contactCount\":0,\"renderedFrames\":15,\"viewpoints\":[{\"name\":\"entrance\",\"label\":\"入口\"},{\"name\":\"passage\",\"label\":\"環の手前へ\"},{\"name\":\"object\",\"label\":\"形のそばへ\"},{\"name\":\"landing\",\"label\":\"着地できる台へ\"}],\"links\":{\"wiki\":\"https://github.com/Anionix/lumenia-planet-museum/wiki\",\"discussions\":\"https://github.com/Anionix/lumenia-planet-museum/discussions/20\"}}},{\"worldIdentifier\":\"8eb56a5b-588a-5570-8647-67259f1f40bc\",\"status\":\"complete\",\"result\":{\"ready\":true,\"worldIdentifier\":\"8eb56a5b-588a-5570-8647-67259f1f40bc\",\"artist\":\"Walter Gropius\",\"cameraPosition\":[25,13,38],\"cameraOrientation\":{\"yaw\":0.5819051181398854,\"pitch\":-0.2579390229540166},\"sourceCoordinate\":null,\"physics\":\"disabled\",\"landing\":false,\"contactCount\":0,\"renderedFrames\":16,\"viewpoints\":[{\"name\":\"entrance\",\"label\":\"入口\"},{\"name\":\"passage\",\"label\":\"枠の手前へ\"},{\"name\":\"object\",\"label\":\"展示室の入口へ\"},{\"name\":\"landing\",\"label\":\"着地できる台へ\"}],\"links\":{\"wiki\":\"https://github.com/Anionix/lumenia-planet-museum/wiki\",\"discussions\":\"https://github.com/Anionix/lumenia-planet-museum/discussions/20\"}}}],\"collision\":{\"status\":\"complete\",\"recordIdentifier\":\"2912fc34-8b3a-5716-b122-f602abfc2bf1\",\"executionIdentifier\":\"01a0a9c9-817a-72f5-968f-0672ff30e987\",\"completedAt\":\"2026-09-16T10:35:50.572Z\",\"result\":{\"ready\":true,\"worldIdentifier\":\"8eb56a5b-588a-5570-8647-67259f1f40bc\",\"artist\":\"Walter Gropius\",\"cameraPosition\":[25,13,38],\"cameraOrientation\":{\"yaw\":0.5819051181398854,\"pitch\":-0.2579390229540166},\"sourceCoordinate\":null,\"physics\":\"enabled\",\"landing\":false,\"contactCount\":0,\"renderedFrames\":18,\"viewpoints\":[{\"name\":\"entrance\",\"label\":\"入口\"},{\"name\":\"passage\",\"label\":\"枠の手前へ\"},{\"name\":\"object\",\"label\":\"展示室の入口へ\"},{\"name\":\"landing\",\"label\":\"着地できる台へ\"}],\"links\":{\"wiki\":\"https://github.com/Anionix/lumenia-planet-museum/wiki\",\"discussions\":\"https://github.com/Anionix/lumenia-planet-museum/discussions/20\"}}},\"disabled\":{\"status\":\"complete\",\"recordIdentifier\":\"2912fc34-8b3a-5716-b122-f602abfc2bf1\",\"executionIdentifier\":\"01a0a9c9-81af-7776-ba73-cab8f6a773cd\",\"completedAt\":\"2026-09-16T10:35:50.599Z\",\"result\":{\"ready\":true,\"worldIdentifier\":\"8eb56a5b-588a-5570-8647-67259f1f40bc\",\"artist\":\"Walter Gropius\",\"cameraPosition\":[25,13,38],\"cameraOrientation\":{\"yaw\":0.5819051181398854,\"pitch\":-0.2579390229540166},\"sourceCoordinate\":null,\"physics\":\"disabled\",\"landing\":false,\"contactCount\":0,\"renderedFrames\":19,\"viewpoints\":[{\"name\":\"entrance\",\"label\":\"入口\"},{\"name\":\"passage\",\"label\":\"枠の手前へ\"},{\"name\":\"object\",\"label\":\"展示室の入口へ\"},{\"name\":\"landing\",\"label\":\"着地できる台へ\"}],\"links\":{\"wiki\":\"https://github.com/Anionix/lumenia-planet-museum/wiki\",\"discussions\":\"https://github.com/Anionix/lumenia-planet-museum/discussions/20\"}}},\"registration\":\"Test replacement for document.modelContext; actual page controllers, WebGL2, image loading and Rapier.\"}\n### Ran Playwright code\n```js\nawait (async (page) => {await page.goto('http://127.0.0.1:4175/cosmos/interactive/');await page.waitForFunction(()=>window.lumeniaReviewTools?.has('configure_image_exhibition'));await page.setViewportSize({width:1499,height:1049});const initial=await page.evaluate(()=>({state:window.lumeniaExhibition.snapshot(),originalRequests:performance.getEntriesByType('resource').filter(x=>x.name.endsWith('.png')).length,previewElements:document.querySelectorAll('.artist-strip img[src$=\".webp\"]').length,context:document.querySelector('canvas').dataset.contextVersion}));let release,started;const waiting=new Promise(resolve=>started=resolve);await page.route('**/alphonse-mucha.png',async route=>{started();await new Promise(resolve=>release=resolve);await route.continue();});await page.evaluate(()=>{window.lumeniaReviewResult=window.lumeniaReviewTools.get('configure_image_exhibition').execute({view:'all',playing:false,physics_enabled:false});});await waiting;await page.locator('[data-action=play]').click();release();const interrupted=await page.evaluate(()=>window.lumeniaReviewResult);await page.unroute('**/alphonse-mucha.png');const physics=await page.evaluate(()=>window.lumeniaReviewTools.get('configure_image_exhibition').execute({physics_enabled:true,playing:true,gravity_enabled:true}));const single=await page.evaluate(()=>window.lumeniaReviewTools.get('configure_image_exhibition').execute({view:'single'}));const reset=await page.evaluate(()=>window.lumeniaReviewTools.get('reset_image_exhibition').execute({}));const final=await page.evaluate(()=>window.lumeniaExhibition.snapshot());await page.goto('http://127.0.0.1:4175/cosmos/explore/');await page.waitForFunction(()=>window.lumeniaReviewTools?.has('navigate_exploration'));const worlds=await page.evaluate(async()=>{const catalog=await window.lumeniaReviewTools.get('read_exploration_catalog').execute({});const results=[];for(const world of catalog.result.worlds){const result=await window.lumeniaReviewTools.get('navigate_exploration').execute({world_identifier:world.worldIdentifier,viewpoint:'entrance'});results.push({worldIdentifier:world.worldIdentifier,status:result.status,result:result.result});}return results;});const collision=await page.evaluate(()=>window.lumeniaReviewTools.get('set_exploration_physics').execute({enabled:true,landing:false}));const disabled=await page.evaluate(()=>window.lumeniaReviewTools.get('set_exploration_physics').execute({enabled:false}));return {initial,interrupted,physics,single,reset,final,worlds,collision,disabled,registration:'Test replacement for document.modelContext; actual page controllers, WebGL2, image loading and Rapier.'};})(page);\n```\n### Page\n- Page URL: http://127.0.0.1:4175/cosmos/explore/?world=walter-gropius\n- Page Title: 宇宙を、探索する。 | Lumenia"
+      }
+    ]
+  },
+  "receivedAt": "2026-09-16T10:35:51.224Z",
+  "decoded": {
+    "initial": {
+      "state": {
+        "recordIdentifier": "812bd57c-a4b2-5b44-a893-e7740a3b032e",
+        "renderer": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+        "physics": "disabled",
+        "playing": false,
+        "selectedArtist": "William Morris",
+        "loadedImages": 1,
+        "physicsState": null,
+        "displayPositions": [
+          [
+            -14.6,
+            5.2,
+            0
+          ],
+          [
+            -7.3,
+            5.2,
+            0
+          ],
+          [
+            0,
+            5.2,
+            0
+          ],
+          [
+            7.3,
+            5.2,
+            0
+          ],
+          [
+            14.6,
+            5.2,
+            0
+          ],
+          [
+            -14.6,
+            0,
+            0
+          ],
+          [
+            -7.3,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            7.3,
+            0,
+            0
+          ],
+          [
+            14.6,
+            0,
+            0
+          ],
+          [
+            -14.6,
+            -5.2,
+            0
+          ],
+          [
+            -7.3,
+            -5.2,
+            0
+          ],
+          [
+            0,
+            -5.2,
+            0
+          ],
+          [
+            7.3,
+            -5.2,
+            0
+          ],
+          [
+            14.6,
+            -5.2,
+            0
+          ]
+        ],
+        "semanticPositions": [
+          [
+            -0.7,
+            0.05,
+            -0.85
+          ],
+          [
+            -0.7,
+            -0.45,
+            -0.95
+          ],
+          [
+            0.25,
+            0.2,
+            -0.25
+          ],
+          [
+            0.95,
+            0.6,
+            0.65
+          ],
+          [
+            0.95,
+            0.5,
+            0.5
+          ],
+          [
+            0.55,
+            -0.65,
+            -0.95
+          ],
+          [
+            0.85,
+            0.5,
+            0.55
+          ],
+          [
+            0.9,
+            0.65,
+            0.85
+          ],
+          [
+            0.85,
+            0.7,
+            0.85
+          ],
+          [
+            0.75,
+            0.8,
+            0.98
+          ],
+          [
+            0.45,
+            0.65,
+            0.98
+          ],
+          [
+            -0.35,
+            -0.75,
+            -0.1
+          ],
+          null,
+          null,
+          null
+        ],
+        "events": [
+          {
+            "event_identifier": "01a0a9c9-6b76-77b7-a7eb-9ba5fc6b7c85",
+            "observed_at": "2026-09-16T10:35:44.886Z",
+            "record_identifier": "812bd57c-a4b2-5b44-a893-e7740a3b032e",
+            "transition": "webgl2_ready",
+            "context": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+            "physics_enabled": false
+          }
+        ]
+      },
+      "originalRequests": 1,
+      "previewElements": 15,
+      "context": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+    },
+    "interrupted": {
+      "status": "error",
+      "executionIdentifier": "01a0a9c9-6f01-7840-ba12-209ccfed3619",
+      "message": "The requested playing changed while the action was running."
+    },
+    "physics": {
+      "status": "complete",
+      "recordIdentifier": "7512e65e-466a-501a-aa88-01dd5d93e414",
+      "executionIdentifier": "01a0a9c9-7088-7703-afed-d8bd7229d391",
+      "completedAt": "2026-09-16T10:35:49.485Z",
+      "result": {
+        "ready": true,
+        "artistIdentifier": "4d06480c-9e64-5d9a-bc4a-4d88d9c53888",
+        "artist": "William Morris",
+        "view": "all",
+        "playing": true,
+        "physics": "enabled",
+        "gravity": true,
+        "loadedImages": 15,
+        "displayPosition": [
+          -14.600000381469727,
+          5.272359371185303,
+          0
+        ],
+        "sourceCoordinate": {
+          "coordinate_identifier": "9d75669a-24ea-5b6d-8363-70c47b559eae",
+          "values": [
+            -0.7,
+            0.05,
+            -0.85
+          ],
+          "unit": "dimensionless"
+        },
+        "renderedFrames": 219,
+        "links": {
+          "wiki": "https://github.com/Anionix/lumenia-planet-museum/wiki",
+          "discussions": "https://github.com/Anionix/lumenia-planet-museum/discussions/20"
+        }
+      }
+    },
+    "single": {
+      "status": "complete",
+      "recordIdentifier": "7512e65e-466a-501a-aa88-01dd5d93e414",
+      "executionIdentifier": "01a0a9c9-7d72-7d64-9bb8-bb525df6efa2",
+      "completedAt": "2026-09-16T10:35:49.499Z",
+      "result": {
+        "ready": true,
+        "artistIdentifier": "4d06480c-9e64-5d9a-bc4a-4d88d9c53888",
+        "artist": "William Morris",
+        "view": "single",
+        "playing": false,
+        "physics": "disabled",
+        "gravity": false,
+        "loadedImages": 15,
+        "displayPosition": [
+          -14.600000381469727,
+          5.272359371185303,
+          0
+        ],
+        "sourceCoordinate": {
+          "coordinate_identifier": "9d75669a-24ea-5b6d-8363-70c47b559eae",
+          "values": [
+            -0.7,
+            0.05,
+            -0.85
+          ],
+          "unit": "dimensionless"
+        },
+        "renderedFrames": 220,
+        "links": {
+          "wiki": "https://github.com/Anionix/lumenia-planet-museum/wiki",
+          "discussions": "https://github.com/Anionix/lumenia-planet-museum/discussions/20"
+        }
+      }
+    },
+    "reset": {
+      "status": "complete",
+      "recordIdentifier": "1b3107fa-6965-55c6-a22b-806f7caefdc5",
+      "executionIdentifier": "01a0a9c9-7d7d-7573-b6a1-d3760af7ed09",
+      "completedAt": "2026-09-16T10:35:49.516Z",
+      "result": {
+        "ready": true,
+        "artistIdentifier": "4d06480c-9e64-5d9a-bc4a-4d88d9c53888",
+        "artist": "William Morris",
+        "view": "single",
+        "playing": false,
+        "physics": "disabled",
+        "gravity": false,
+        "loadedImages": 15,
+        "displayPosition": [
+          -14.6,
+          5.2,
+          0
+        ],
+        "sourceCoordinate": {
+          "coordinate_identifier": "9d75669a-24ea-5b6d-8363-70c47b559eae",
+          "values": [
+            -0.7,
+            0.05,
+            -0.85
+          ],
+          "unit": "dimensionless"
+        },
+        "renderedFrames": 221,
+        "links": {
+          "wiki": "https://github.com/Anionix/lumenia-planet-museum/wiki",
+          "discussions": "https://github.com/Anionix/lumenia-planet-museum/discussions/20"
+        }
+      }
+    },
+    "final": {
+      "recordIdentifier": "812bd57c-a4b2-5b44-a893-e7740a3b032e",
+      "renderer": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "physics": "disabled",
+      "playing": false,
+      "selectedArtist": "William Morris",
+      "loadedImages": 15,
+      "physicsState": null,
+      "displayPositions": [
+        [
+          -14.6,
+          5.2,
+          0
+        ],
+        [
+          -7.3,
+          5.2,
+          0
+        ],
+        [
+          0,
+          5.2,
+          0
+        ],
+        [
+          7.3,
+          5.2,
+          0
+        ],
+        [
+          14.6,
+          5.2,
+          0
+        ],
+        [
+          -14.6,
+          0,
+          0
+        ],
+        [
+          -7.3,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          7.3,
+          0,
+          0
+        ],
+        [
+          14.6,
+          0,
+          0
+        ],
+        [
+          -14.6,
+          -5.2,
+          0
+        ],
+        [
+          -7.3,
+          -5.2,
+          0
+        ],
+        [
+          0,
+          -5.2,
+          0
+        ],
+        [
+          7.3,
+          -5.2,
+          0
+        ],
+        [
+          14.6,
+          -5.2,
+          0
+        ]
+      ],
+      "semanticPositions": [
+        [
+          -0.7,
+          0.05,
+          -0.85
+        ],
+        [
+          -0.7,
+          -0.45,
+          -0.95
+        ],
+        [
+          0.25,
+          0.2,
+          -0.25
+        ],
+        [
+          0.95,
+          0.6,
+          0.65
+        ],
+        [
+          0.95,
+          0.5,
+          0.5
+        ],
+        [
+          0.55,
+          -0.65,
+          -0.95
+        ],
+        [
+          0.85,
+          0.5,
+          0.55
+        ],
+        [
+          0.9,
+          0.65,
+          0.85
+        ],
+        [
+          0.85,
+          0.7,
+          0.85
+        ],
+        [
+          0.75,
+          0.8,
+          0.98
+        ],
+        [
+          0.45,
+          0.65,
+          0.98
+        ],
+        [
+          -0.35,
+          -0.75,
+          -0.1
+        ],
+        null,
+        null,
+        null
+      ],
+      "events": [
+        {
+          "event_identifier": "01a0a9c9-6b76-77b7-a7eb-9ba5fc6b7c85",
+          "observed_at": "2026-09-16T10:35:44.886Z",
+          "record_identifier": "812bd57c-a4b2-5b44-a893-e7740a3b032e",
+          "transition": "webgl2_ready",
+          "context": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+          "physics_enabled": false
+        },
+        {
+          "event_identifier": "01a0a9c9-6f01-7d32-9886-0c61f8f4f25d",
+          "observed_at": "2026-09-16T10:35:45.793Z",
+          "record_identifier": "812bd57c-a4b2-5b44-a893-e7740a3b032e",
+          "transition": "physics_disabled"
+        },
+        {
+          "event_identifier": "01a0a9c9-6f02-7dc1-8e05-a8b1a9b67a65",
+          "observed_at": "2026-09-16T10:35:45.794Z",
+          "record_identifier": "812bd57c-a4b2-5b44-a893-e7740a3b032e",
+          "transition": "view_changed",
+          "mode": "all"
+        },
+        {
+          "event_identifier": "01a0a9c9-7004-712f-a833-886f6478a94c",
+          "observed_at": "2026-09-16T10:35:46.052Z",
+          "record_identifier": "812bd57c-a4b2-5b44-a893-e7740a3b032e",
+          "transition": "playback_changed",
+          "playing": true
+        },
+        {
+          "event_identifier": "01a0a9c9-7d6c-7e02-8494-8834f1e3cf4b",
+          "observed_at": "2026-09-16T10:35:49.484Z",
+          "record_identifier": "812bd57c-a4b2-5b44-a893-e7740a3b032e",
+          "transition": "physics_enabled",
+          "engine_version": "0.12.0",
+          "body_count": 15
+        },
+        {
+          "event_identifier": "01a0a9c9-7d6d-75fe-91cd-0db754a9fd7f",
+          "observed_at": "2026-09-16T10:35:49.485Z",
+          "record_identifier": "812bd57c-a4b2-5b44-a893-e7740a3b032e",
+          "transition": "validated action -> presented result",
+          "recordIdentifier": "7512e65e-466a-501a-aa88-01dd5d93e414",
+          "executionIdentifier": "01a0a9c9-7088-7703-afed-d8bd7229d391",
+          "tool": "configure_image_exhibition"
+        },
+        {
+          "event_identifier": "01a0a9c9-7d73-7ef2-9d42-4c2155799d90",
+          "observed_at": "2026-09-16T10:35:49.491Z",
+          "record_identifier": "812bd57c-a4b2-5b44-a893-e7740a3b032e",
+          "transition": "physics_disabled"
+        },
+        {
+          "event_identifier": "01a0a9c9-7d73-77a6-94b6-dc2264af98c8",
+          "observed_at": "2026-09-16T10:35:49.491Z",
+          "record_identifier": "812bd57c-a4b2-5b44-a893-e7740a3b032e",
+          "transition": "view_changed",
+          "mode": "single"
+        },
+        {
+          "event_identifier": "01a0a9c9-7d7b-7d47-81cb-2e344bd1c56d",
+          "observed_at": "2026-09-16T10:35:49.499Z",
+          "record_identifier": "812bd57c-a4b2-5b44-a893-e7740a3b032e",
+          "transition": "validated action -> presented result",
+          "recordIdentifier": "7512e65e-466a-501a-aa88-01dd5d93e414",
+          "executionIdentifier": "01a0a9c9-7d72-7d64-9bb8-bb525df6efa2",
+          "tool": "configure_image_exhibition"
+        },
+        {
+          "event_identifier": "01a0a9c9-7d7e-7b56-88e2-85407a7fe3eb",
+          "observed_at": "2026-09-16T10:35:49.502Z",
+          "record_identifier": "812bd57c-a4b2-5b44-a893-e7740a3b032e",
+          "transition": "physics_disabled"
+        },
+        {
+          "event_identifier": "01a0a9c9-7d7e-7ac7-a1a9-1d65bc3388ed",
+          "observed_at": "2026-09-16T10:35:49.502Z",
+          "record_identifier": "812bd57c-a4b2-5b44-a893-e7740a3b032e",
+          "transition": "display_reset",
+          "semantic_positions_unchanged": true
+        },
+        {
+          "event_identifier": "01a0a9c9-7d8c-77a9-bc79-cf80563841be",
+          "observed_at": "2026-09-16T10:35:49.516Z",
+          "record_identifier": "812bd57c-a4b2-5b44-a893-e7740a3b032e",
+          "transition": "validated action -> presented result",
+          "recordIdentifier": "1b3107fa-6965-55c6-a22b-806f7caefdc5",
+          "executionIdentifier": "01a0a9c9-7d7d-7573-b6a1-d3760af7ed09",
+          "tool": "reset_image_exhibition"
+        }
+      ]
+    },
+    "worlds": [
+      {
+        "worldIdentifier": "cc6b59e2-1bfe-5a91-9baa-1afbcdeb0457",
+        "status": "complete",
+        "result": {
+          "ready": true,
+          "worldIdentifier": "cc6b59e2-1bfe-5a91-9baa-1afbcdeb0457",
+          "artist": "Ettore Sottsass",
+          "cameraPosition": [
+            23,
+            12,
+            34
+          ],
+          "cameraOrientation": {
+            "yaw": 0.5947592574833529,
+            "pitch": -0.26182257581287627
+          },
+          "sourceCoordinate": {
+            "coordinate_identifier": "15863bb0-a1a7-5239-9d46-32f94d98d1d1",
+            "values": [
+              0.55,
+              -0.65,
+              -0.95
+            ],
+            "unit": "dimensionless"
+          },
+          "physics": "disabled",
+          "landing": false,
+          "contactCount": 0,
+          "renderedFrames": 2,
+          "viewpoints": [
+            {
+              "name": "entrance",
+              "label": "入口"
+            },
+            {
+              "name": "passage",
+              "label": "環の手前へ"
+            },
+            {
+              "name": "object",
+              "label": "惑星のそばへ"
+            },
+            {
+              "name": "landing",
+              "label": "着地できる台へ"
+            }
+          ],
+          "links": {
+            "wiki": "https://github.com/Anionix/lumenia-planet-museum/wiki",
+            "discussions": "https://github.com/Anionix/lumenia-planet-museum/discussions/20"
+          }
+        }
+      },
+      {
+        "worldIdentifier": "9bdb7953-2aff-556d-9126-07e9904550df",
+        "status": "complete",
+        "result": {
+          "ready": true,
+          "worldIdentifier": "9bdb7953-2aff-556d-9126-07e9904550df",
+          "artist": "William Morris",
+          "cameraPosition": [
+            25,
+            13,
+            38
+          ],
+          "cameraOrientation": {
+            "yaw": 0.5819051181398854,
+            "pitch": -0.2579390229540166
+          },
+          "sourceCoordinate": {
+            "coordinate_identifier": "9d75669a-24ea-5b6d-8363-70c47b559eae",
+            "values": [
+              -0.7,
+              0.05,
+              -0.85
+            ],
+            "unit": "dimensionless"
+          },
+          "physics": "disabled",
+          "landing": false,
+          "contactCount": 0,
+          "renderedFrames": 3,
+          "viewpoints": [
+            {
+              "name": "entrance",
+              "label": "入口"
+            },
+            {
+              "name": "passage",
+              "label": "環の手前へ"
+            },
+            {
+              "name": "object",
+              "label": "形のそばへ"
+            },
+            {
+              "name": "landing",
+              "label": "着地できる台へ"
+            }
+          ],
+          "links": {
+            "wiki": "https://github.com/Anionix/lumenia-planet-museum/wiki",
+            "discussions": "https://github.com/Anionix/lumenia-planet-museum/discussions/20"
+          }
+        }
+      },
+      {
+        "worldIdentifier": "57e1b1ed-fefe-557e-94b8-bc4f104bfec9",
+        "status": "complete",
+        "result": {
+          "ready": true,
+          "worldIdentifier": "57e1b1ed-fefe-557e-94b8-bc4f104bfec9",
+          "artist": "Alphonse Mucha",
+          "cameraPosition": [
+            25,
+            13,
+            38
+          ],
+          "cameraOrientation": {
+            "yaw": 0.5819051181398854,
+            "pitch": -0.2579390229540166
+          },
+          "sourceCoordinate": {
+            "coordinate_identifier": "f7f331ca-1d9d-5f03-81bd-5cd3abce325a",
+            "values": [
+              -0.7,
+              -0.45,
+              -0.95
+            ],
+            "unit": "dimensionless"
+          },
+          "physics": "disabled",
+          "landing": false,
+          "contactCount": 0,
+          "renderedFrames": 4,
+          "viewpoints": [
+            {
+              "name": "entrance",
+              "label": "入口"
+            },
+            {
+              "name": "passage",
+              "label": "環の手前へ"
+            },
+            {
+              "name": "object",
+              "label": "形のそばへ"
+            },
+            {
+              "name": "landing",
+              "label": "着地できる台へ"
+            }
+          ],
+          "links": {
+            "wiki": "https://github.com/Anionix/lumenia-planet-museum/wiki",
+            "discussions": "https://github.com/Anionix/lumenia-planet-museum/discussions/20"
+          }
+        }
+      },
+      {
+        "worldIdentifier": "8784b8be-7acc-50b7-a68d-78634d28dc66",
+        "status": "complete",
+        "result": {
+          "ready": true,
+          "worldIdentifier": "8784b8be-7acc-50b7-a68d-78634d28dc66",
+          "artist": "Charles Rennie Mackintosh",
+          "cameraPosition": [
+            25,
+            13,
+            38
+          ],
+          "cameraOrientation": {
+            "yaw": 0.5819051181398854,
+            "pitch": -0.2579390229540166
+          },
+          "sourceCoordinate": {
+            "coordinate_identifier": "04cca99c-8cd7-573b-8fe2-c91fe40750e7",
+            "values": [
+              0.25,
+              0.2,
+              -0.25
+            ],
+            "unit": "dimensionless"
+          },
+          "physics": "disabled",
+          "landing": false,
+          "contactCount": 0,
+          "renderedFrames": 5,
+          "viewpoints": [
+            {
+              "name": "entrance",
+              "label": "入口"
+            },
+            {
+              "name": "passage",
+              "label": "枠の手前へ"
+            },
+            {
+              "name": "object",
+              "label": "形のそばへ"
+            },
+            {
+              "name": "landing",
+              "label": "着地できる台へ"
+            }
+          ],
+          "links": {
+            "wiki": "https://github.com/Anionix/lumenia-planet-museum/wiki",
+            "discussions": "https://github.com/Anionix/lumenia-planet-museum/discussions/20"
+          }
+        }
+      },
+      {
+        "worldIdentifier": "fdb53a66-8aa6-576a-b088-2302be21e751",
+        "status": "complete",
+        "result": {
+          "ready": true,
+          "worldIdentifier": "fdb53a66-8aa6-576a-b088-2302be21e751",
+          "artist": "Piet Mondrian",
+          "cameraPosition": [
+            25,
+            13,
+            38
+          ],
+          "cameraOrientation": {
+            "yaw": 0.5819051181398854,
+            "pitch": -0.2579390229540166
+          },
+          "sourceCoordinate": {
+            "coordinate_identifier": "084f90b6-a70c-5ae1-9639-cea3456efea5",
+            "values": [
+              0.95,
+              0.6,
+              0.65
+            ],
+            "unit": "dimensionless"
+          },
+          "physics": "disabled",
+          "landing": false,
+          "contactCount": 0,
+          "renderedFrames": 6,
+          "viewpoints": [
+            {
+              "name": "entrance",
+              "label": "入口"
+            },
+            {
+              "name": "passage",
+              "label": "枠の手前へ"
+            },
+            {
+              "name": "object",
+              "label": "形のそばへ"
+            },
+            {
+              "name": "landing",
+              "label": "着地できる台へ"
+            }
+          ],
+          "links": {
+            "wiki": "https://github.com/Anionix/lumenia-planet-museum/wiki",
+            "discussions": "https://github.com/Anionix/lumenia-planet-museum/discussions/20"
+          }
+        }
+      },
+      {
+        "worldIdentifier": "c8490188-8792-5345-883a-be87df0b62a4",
+        "status": "complete",
+        "result": {
+          "ready": true,
+          "worldIdentifier": "c8490188-8792-5345-883a-be87df0b62a4",
+          "artist": "Gerrit Rietveld",
+          "cameraPosition": [
+            25,
+            13,
+            38
+          ],
+          "cameraOrientation": {
+            "yaw": 0.5819051181398854,
+            "pitch": -0.2579390229540166
+          },
+          "sourceCoordinate": {
+            "coordinate_identifier": "d541a9dc-5cae-5e58-b0c6-59d81f953ebd",
+            "values": [
+              0.95,
+              0.5,
+              0.5
+            ],
+            "unit": "dimensionless"
+          },
+          "physics": "disabled",
+          "landing": false,
+          "contactCount": 0,
+          "renderedFrames": 7,
+          "viewpoints": [
+            {
+              "name": "entrance",
+              "label": "入口"
+            },
+            {
+              "name": "passage",
+              "label": "枠の手前へ"
+            },
+            {
+              "name": "object",
+              "label": "形のそばへ"
+            },
+            {
+              "name": "landing",
+              "label": "着地できる台へ"
+            }
+          ],
+          "links": {
+            "wiki": "https://github.com/Anionix/lumenia-planet-museum/wiki",
+            "discussions": "https://github.com/Anionix/lumenia-planet-museum/discussions/20"
+          }
+        }
+      },
+      {
+        "worldIdentifier": "ac1a6a0a-7e21-557d-a1d5-afcb0f4ae63c",
+        "status": "complete",
+        "result": {
+          "ready": true,
+          "worldIdentifier": "ac1a6a0a-7e21-557d-a1d5-afcb0f4ae63c",
+          "artist": "Herbert Bayer",
+          "cameraPosition": [
+            25,
+            13,
+            38
+          ],
+          "cameraOrientation": {
+            "yaw": 0.5819051181398854,
+            "pitch": -0.2579390229540166
+          },
+          "sourceCoordinate": {
+            "coordinate_identifier": "218048f4-6318-52d9-9dd6-6baf46ab8caf",
+            "values": [
+              0.85,
+              0.5,
+              0.55
+            ],
+            "unit": "dimensionless"
+          },
+          "physics": "disabled",
+          "landing": false,
+          "contactCount": 0,
+          "renderedFrames": 8,
+          "viewpoints": [
+            {
+              "name": "entrance",
+              "label": "入口"
+            },
+            {
+              "name": "passage",
+              "label": "枠の手前へ"
+            },
+            {
+              "name": "object",
+              "label": "形のそばへ"
+            },
+            {
+              "name": "landing",
+              "label": "着地できる台へ"
+            }
+          ],
+          "links": {
+            "wiki": "https://github.com/Anionix/lumenia-planet-museum/wiki",
+            "discussions": "https://github.com/Anionix/lumenia-planet-museum/discussions/20"
+          }
+        }
+      },
+      {
+        "worldIdentifier": "1c11ae55-b9ca-5d93-838f-4eb3fb20b786",
+        "status": "complete",
+        "result": {
+          "ready": true,
+          "worldIdentifier": "1c11ae55-b9ca-5d93-838f-4eb3fb20b786",
+          "artist": "Josef Müller-Brockmann",
+          "cameraPosition": [
+            25,
+            13,
+            38
+          ],
+          "cameraOrientation": {
+            "yaw": 0.5819051181398854,
+            "pitch": -0.2579390229540166
+          },
+          "sourceCoordinate": {
+            "coordinate_identifier": "f4fdc4c4-a4de-5f27-9ce9-ce6324a39525",
+            "values": [
+              0.9,
+              0.65,
+              0.85
+            ],
+            "unit": "dimensionless"
+          },
+          "physics": "disabled",
+          "landing": false,
+          "contactCount": 0,
+          "renderedFrames": 9,
+          "viewpoints": [
+            {
+              "name": "entrance",
+              "label": "入口"
+            },
+            {
+              "name": "passage",
+              "label": "環の手前へ"
+            },
+            {
+              "name": "object",
+              "label": "形のそばへ"
+            },
+            {
+              "name": "landing",
+              "label": "着地できる台へ"
+            }
+          ],
+          "links": {
+            "wiki": "https://github.com/Anionix/lumenia-planet-museum/wiki",
+            "discussions": "https://github.com/Anionix/lumenia-planet-museum/discussions/20"
+          }
+        }
+      },
+      {
+        "worldIdentifier": "56567625-bde1-59b0-a627-a8025a571c5a",
+        "status": "complete",
+        "result": {
+          "ready": true,
+          "worldIdentifier": "56567625-bde1-59b0-a627-a8025a571c5a",
+          "artist": "Massimo Vignelli",
+          "cameraPosition": [
+            25,
+            13,
+            38
+          ],
+          "cameraOrientation": {
+            "yaw": 0.5819051181398854,
+            "pitch": -0.2579390229540166
+          },
+          "sourceCoordinate": {
+            "coordinate_identifier": "a99dfabf-b74d-575f-9ba2-ee5505414d7c",
+            "values": [
+              0.85,
+              0.7,
+              0.85
+            ],
+            "unit": "dimensionless"
+          },
+          "physics": "disabled",
+          "landing": false,
+          "contactCount": 0,
+          "renderedFrames": 10,
+          "viewpoints": [
+            {
+              "name": "entrance",
+              "label": "入口"
+            },
+            {
+              "name": "passage",
+              "label": "枠の手前へ"
+            },
+            {
+              "name": "object",
+              "label": "形のそばへ"
+            },
+            {
+              "name": "landing",
+              "label": "着地できる台へ"
+            }
+          ],
+          "links": {
+            "wiki": "https://github.com/Anionix/lumenia-planet-museum/wiki",
+            "discussions": "https://github.com/Anionix/lumenia-planet-museum/discussions/20"
+          }
+        }
+      },
+      {
+        "worldIdentifier": "73259200-0eea-57c2-bd4e-7f5328925409",
+        "status": "complete",
+        "result": {
+          "ready": true,
+          "worldIdentifier": "73259200-0eea-57c2-bd4e-7f5328925409",
+          "artist": "Dieter Rams",
+          "cameraPosition": [
+            25,
+            13,
+            38
+          ],
+          "cameraOrientation": {
+            "yaw": 0.5819051181398854,
+            "pitch": -0.2579390229540166
+          },
+          "sourceCoordinate": {
+            "coordinate_identifier": "2cffd42e-a9ac-585e-83a2-dee48925af3f",
+            "values": [
+              0.75,
+              0.8,
+              0.98
+            ],
+            "unit": "dimensionless"
+          },
+          "physics": "disabled",
+          "landing": false,
+          "contactCount": 0,
+          "renderedFrames": 11,
+          "viewpoints": [
+            {
+              "name": "entrance",
+              "label": "入口"
+            },
+            {
+              "name": "passage",
+              "label": "環の手前へ"
+            },
+            {
+              "name": "object",
+              "label": "形のそばへ"
+            },
+            {
+              "name": "landing",
+              "label": "着地できる台へ"
+            }
+          ],
+          "links": {
+            "wiki": "https://github.com/Anionix/lumenia-planet-museum/wiki",
+            "discussions": "https://github.com/Anionix/lumenia-planet-museum/discussions/20"
+          }
+        }
+      },
+      {
+        "worldIdentifier": "1c5eecf4-0edf-5a69-8f73-e359c6a16302",
+        "status": "complete",
+        "result": {
+          "ready": true,
+          "worldIdentifier": "1c5eecf4-0edf-5a69-8f73-e359c6a16302",
+          "artist": "Naoto Fukasawa",
+          "cameraPosition": [
+            25,
+            13,
+            38
+          ],
+          "cameraOrientation": {
+            "yaw": 0.5819051181398854,
+            "pitch": -0.2579390229540166
+          },
+          "sourceCoordinate": {
+            "coordinate_identifier": "99b0c48e-9248-5e72-9c8c-229fe3245ca8",
+            "values": [
+              0.45,
+              0.65,
+              0.98
+            ],
+            "unit": "dimensionless"
+          },
+          "physics": "disabled",
+          "landing": false,
+          "contactCount": 0,
+          "renderedFrames": 12,
+          "viewpoints": [
+            {
+              "name": "entrance",
+              "label": "入口"
+            },
+            {
+              "name": "passage",
+              "label": "環の手前へ"
+            },
+            {
+              "name": "object",
+              "label": "形のそばへ"
+            },
+            {
+              "name": "landing",
+              "label": "着地できる台へ"
+            }
+          ],
+          "links": {
+            "wiki": "https://github.com/Anionix/lumenia-planet-museum/wiki",
+            "discussions": "https://github.com/Anionix/lumenia-planet-museum/discussions/20"
+          }
+        }
+      },
+      {
+        "worldIdentifier": "9982b6c3-9ea7-5b67-a505-c6e7fd04bdcc",
+        "status": "complete",
+        "result": {
+          "ready": true,
+          "worldIdentifier": "9982b6c3-9ea7-5b67-a505-c6e7fd04bdcc",
+          "artist": "Rei Kawakubo",
+          "cameraPosition": [
+            25,
+            13,
+            38
+          ],
+          "cameraOrientation": {
+            "yaw": 0.5819051181398854,
+            "pitch": -0.2579390229540166
+          },
+          "sourceCoordinate": {
+            "coordinate_identifier": "bffefb98-97d0-5913-b880-308f4d6eb0d6",
+            "values": [
+              -0.35,
+              -0.75,
+              -0.1
+            ],
+            "unit": "dimensionless"
+          },
+          "physics": "disabled",
+          "landing": false,
+          "contactCount": 0,
+          "renderedFrames": 13,
+          "viewpoints": [
+            {
+              "name": "entrance",
+              "label": "入口"
+            },
+            {
+              "name": "passage",
+              "label": "環の手前へ"
+            },
+            {
+              "name": "object",
+              "label": "形のそばへ"
+            },
+            {
+              "name": "landing",
+              "label": "着地できる台へ"
+            }
+          ],
+          "links": {
+            "wiki": "https://github.com/Anionix/lumenia-planet-museum/wiki",
+            "discussions": "https://github.com/Anionix/lumenia-planet-museum/discussions/20"
+          }
+        }
+      },
+      {
+        "worldIdentifier": "8ba9b165-fbfe-53fe-8e15-0a9c901496ea",
+        "status": "complete",
+        "result": {
+          "ready": true,
+          "worldIdentifier": "8ba9b165-fbfe-53fe-8e15-0a9c901496ea",
+          "artist": "Charles Eames",
+          "cameraPosition": [
+            25,
+            13,
+            38
+          ],
+          "cameraOrientation": {
+            "yaw": 0.5819051181398854,
+            "pitch": -0.2579390229540166
+          },
+          "sourceCoordinate": null,
+          "physics": "disabled",
+          "landing": false,
+          "contactCount": 0,
+          "renderedFrames": 14,
+          "viewpoints": [
+            {
+              "name": "entrance",
+              "label": "入口"
+            },
+            {
+              "name": "passage",
+              "label": "環の手前へ"
+            },
+            {
+              "name": "object",
+              "label": "形のそばへ"
+            },
+            {
+              "name": "landing",
+              "label": "着地できる台へ"
+            }
+          ],
+          "links": {
+            "wiki": "https://github.com/Anionix/lumenia-planet-museum/wiki",
+            "discussions": "https://github.com/Anionix/lumenia-planet-museum/discussions/20"
+          }
+        }
+      },
+      {
+        "worldIdentifier": "54fb3ebc-8312-5edb-9007-47bd83dbc990",
+        "status": "complete",
+        "result": {
+          "ready": true,
+          "worldIdentifier": "54fb3ebc-8312-5edb-9007-47bd83dbc990",
+          "artist": "Ray Eames",
+          "cameraPosition": [
+            25,
+            13,
+            38
+          ],
+          "cameraOrientation": {
+            "yaw": 0.5819051181398854,
+            "pitch": -0.2579390229540166
+          },
+          "sourceCoordinate": null,
+          "physics": "disabled",
+          "landing": false,
+          "contactCount": 0,
+          "renderedFrames": 15,
+          "viewpoints": [
+            {
+              "name": "entrance",
+              "label": "入口"
+            },
+            {
+              "name": "passage",
+              "label": "環の手前へ"
+            },
+            {
+              "name": "object",
+              "label": "形のそばへ"
+            },
+            {
+              "name": "landing",
+              "label": "着地できる台へ"
+            }
+          ],
+          "links": {
+            "wiki": "https://github.com/Anionix/lumenia-planet-museum/wiki",
+            "discussions": "https://github.com/Anionix/lumenia-planet-museum/discussions/20"
+          }
+        }
+      },
+      {
+        "worldIdentifier": "8eb56a5b-588a-5570-8647-67259f1f40bc",
+        "status": "complete",
+        "result": {
+          "ready": true,
+          "worldIdentifier": "8eb56a5b-588a-5570-8647-67259f1f40bc",
+          "artist": "Walter Gropius",
+          "cameraPosition": [
+            25,
+            13,
+            38
+          ],
+          "cameraOrientation": {
+            "yaw": 0.5819051181398854,
+            "pitch": -0.2579390229540166
+          },
+          "sourceCoordinate": null,
+          "physics": "disabled",
+          "landing": false,
+          "contactCount": 0,
+          "renderedFrames": 16,
+          "viewpoints": [
+            {
+              "name": "entrance",
+              "label": "入口"
+            },
+            {
+              "name": "passage",
+              "label": "枠の手前へ"
+            },
+            {
+              "name": "object",
+              "label": "展示室の入口へ"
+            },
+            {
+              "name": "landing",
+              "label": "着地できる台へ"
+            }
+          ],
+          "links": {
+            "wiki": "https://github.com/Anionix/lumenia-planet-museum/wiki",
+            "discussions": "https://github.com/Anionix/lumenia-planet-museum/discussions/20"
+          }
+        }
+      }
+    ],
+    "collision": {
+      "status": "complete",
+      "recordIdentifier": "2912fc34-8b3a-5716-b122-f602abfc2bf1",
+      "executionIdentifier": "01a0a9c9-817a-72f5-968f-0672ff30e987",
+      "completedAt": "2026-09-16T10:35:50.572Z",
+      "result": {
+        "ready": true,
+        "worldIdentifier": "8eb56a5b-588a-5570-8647-67259f1f40bc",
+        "artist": "Walter Gropius",
+        "cameraPosition": [
+          25,
+          13,
+          38
+        ],
+        "cameraOrientation": {
+          "yaw": 0.5819051181398854,
+          "pitch": -0.2579390229540166
+        },
+        "sourceCoordinate": null,
+        "physics": "enabled",
+        "landing": false,
+        "contactCount": 0,
+        "renderedFrames": 18,
+        "viewpoints": [
+          {
+            "name": "entrance",
+            "label": "入口"
+          },
+          {
+            "name": "passage",
+            "label": "枠の手前へ"
+          },
+          {
+            "name": "object",
+            "label": "展示室の入口へ"
+          },
+          {
+            "name": "landing",
+            "label": "着地できる台へ"
+          }
+        ],
+        "links": {
+          "wiki": "https://github.com/Anionix/lumenia-planet-museum/wiki",
+          "discussions": "https://github.com/Anionix/lumenia-planet-museum/discussions/20"
+        }
+      }
+    },
+    "disabled": {
+      "status": "complete",
+      "recordIdentifier": "2912fc34-8b3a-5716-b122-f602abfc2bf1",
+      "executionIdentifier": "01a0a9c9-81af-7776-ba73-cab8f6a773cd",
+      "completedAt": "2026-09-16T10:35:50.599Z",
+      "result": {
+        "ready": true,
+        "worldIdentifier": "8eb56a5b-588a-5570-8647-67259f1f40bc",
+        "artist": "Walter Gropius",
+        "cameraPosition": [
+          25,
+          13,
+          38
+        ],
+        "cameraOrientation": {
+          "yaw": 0.5819051181398854,
+          "pitch": -0.2579390229540166
+        },
+        "sourceCoordinate": null,
+        "physics": "disabled",
+        "landing": false,
+        "contactCount": 0,
+        "renderedFrames": 19,
+        "viewpoints": [
+          {
+            "name": "entrance",
+            "label": "入口"
+          },
+          {
+            "name": "passage",
+            "label": "枠の手前へ"
+          },
+          {
+            "name": "object",
+            "label": "展示室の入口へ"
+          },
+          {
+            "name": "landing",
+            "label": "着地できる台へ"
+          }
+        ],
+        "links": {
+          "wiki": "https://github.com/Anionix/lumenia-planet-museum/wiki",
+          "discussions": "https://github.com/Anionix/lumenia-planet-museum/discussions/20"
+        }
+      }
+    },
+    "registration": "Test replacement for document.modelContext; actual page controllers, WebGL2, image loading and Rapier."
+  },
+  "registrationScope": "Test replacement for document.modelContext registration. Actual page handlers, assets, WebGL2 and Rapier ran. Native host integration was not tested.",
+  "recordIdentifier": "f27b04ac-2477-5cc0-94e2-fb73cea4cab5"
+}

@@ -1,0 +1,37 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {mkdtemp, mkdir, writeFile, rm} from 'node:fs/promises';
+import {tmpdir} from 'node:os';
+import path from 'node:path';
+import {sourceManifest} from '../scripts/source-revision.mjs';
+import {languageServerReceiptMatchesSource} from '../scripts/language-server-evidence.mjs';
+
+// machine contract; record_identifier=d93d88e9-8679-522b-a756-0b60472c9e5f.
+// transition: clean inputs -> generated output -> same source revision; real input edits must change it.
+test('source identity is unchanged by generated cosmos output but changes with source edits',async()=>{
+  const root=await mkdtemp(path.join(tmpdir(),'lumenia-revision-test-'));
+  try{
+    for(const directory of ['formal','contracts','scripts','tests','mcp','web','reference-assets'])await mkdir(path.join(root,directory));
+    for(const file of ['intent.md','spec.md','CONSTRAINTS.md','lean-toolchain','lakefile.toml','lake-manifest.json','package.json','package-lock.json','eslint.config.mjs'])await writeFile(path.join(root,file),'fixture');
+    const before=await sourceManifest(root);
+    await mkdir(path.join(root,'web/public/cosmos/interactive'),{recursive:true});
+    await writeFile(path.join(root,'web/public/cosmos/interactive/main.mjs'),'generated output');
+    assert.deepEqual(await sourceManifest(root),before);
+    await writeFile(path.join(root,'reference-assets/reference.json'),'new source');
+    assert.notEqual((await sourceManifest(root)).sourceRevision,before.sourceRevision);
+  }finally{await rm(root,{recursive:true,force:true});}
+});
+
+// machine contract; record_identifier=5c51405c-2fe3-5546-8621-278af8174a55.
+// transition: earlier receipt -> attempted rebinding -> rejection; complete fresh capture -> acceptance.
+test('freshness validation rejects relabelled, incomplete and changed input receipts',()=>{
+  const manifest={sourceRevision:'sha256:current',files:[{path:'formal/Proof.lean',sha256:'current'}]};
+  const fresh={...structuredClone(manifest),sourceRevisionBefore:manifest.sourceRevision,sourceRevisionAfter:manifest.sourceRevision,checkStartedAtSourceRevision:manifest.sourceRevision};
+  assert.equal(languageServerReceiptMatchesSource(fresh,manifest),true);
+  for(const overrides of [
+    {sourceRevisionBefore:'sha256:old'}, {sourceRevisionAfter:'sha256:old'},
+    {checkStartedAtSourceRevision:'sha256:old'}, {sourceRevisionBefore:undefined},
+    {files:[]}, {files:[{path:'formal/Proof.lean',sha256:'old'}]},
+    {bindingHistory:[{verifiedInputsUnchanged:true}]},
+  ])assert.equal(languageServerReceiptMatchesSource({...fresh,...overrides},manifest),false);
+});
