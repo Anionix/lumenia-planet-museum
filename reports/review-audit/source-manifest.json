@@ -1,9 +1,11 @@
 {
-  "executionIdentifier": "01a0aa33-cc00-7a0f-a691-0a14f659ede2",
-  "recordedAt": "2026-09-16T12:31:56.416Z",
-  "sourceRevisionBefore": "sha256:e2848a5d3243b0f7f5b56ca16b9132acf4c0612c4c0adee33566482f1cf4e973",
-  "sourceRevisionAfter": "sha256:e2848a5d3243b0f7f5b56ca16b9132acf4c0612c4c0adee33566482f1cf4e973",
-  "sourceRevision": "sha256:e2848a5d3243b0f7f5b56ca16b9132acf4c0612c4c0adee33566482f1cf4e973",
+  "executionIdentifier": "01a0aa42-7472-7b47-94bd-73e5ff25bbca",
+  "recordedAt": "2026-09-16T12:47:57.043Z",
+  "scope": "complete-audit",
+  "sourceRevisionBefore": "sha256:e56813b1ed4b504e78fb90e57be76a4ca318278c6e6a41e4309482112fee9f32",
+  "sourceRevisionAfter": "sha256:e56813b1ed4b504e78fb90e57be76a4ca318278c6e6a41e4309482112fee9f32",
+  "sourceRevision": "sha256:e56813b1ed4b504e78fb90e57be76a4ca318278c6e6a41e4309482112fee9f32",
+  "rootSourceRevision": "sha256:e2848a5d3243b0f7f5b56ca16b9132acf4c0612c4c0adee33566482f1cf4e973",
   "files": [
     {
       "path": "CONSTRAINTS.md",
@@ -144,6 +146,146 @@
     {
       "path": "package.json",
       "sha256": "ceec3257ddc64c87186fb7104e2f8b123b2a2ac3f8df47abe08be4ac8af8ffd2"
+    },
+    {
+      "path": "planetarium/checks/boundary-check.mjs",
+      "sha256": "5d47471ed37285b8bc7f923bcbb33f913c7ca5d6250fb585d3c89fd5cd41c809"
+    },
+    {
+      "path": "planetarium/checks/dimension-check.mjs",
+      "sha256": "4ea66e9701e341057bbfb377d0bc58dda99881a1ac2a01f8626cd9e35b735469"
+    },
+    {
+      "path": "planetarium/checks/illustration-design-reference-check.mjs",
+      "sha256": "464d54556593dcce5c95b174781e6c170feeb1e5f726ac3657b047e7503518cb"
+    },
+    {
+      "path": "planetarium/checks/knowledge-check.mjs",
+      "sha256": "b11e55aaa968c75a41026f40dfcb7f6f4f6f453eaeb6f387c319f600cb42714f"
+    },
+    {
+      "path": "planetarium/checks/wolfram-check.mjs",
+      "sha256": "06ef01182437563d669613085fd38cb75cc220a9a87cd7ec9729e545349c8397"
+    },
+    {
+      "path": "planetarium/examples/threejs-reference.html",
+      "sha256": "318d06dc77af8c94ad3bf22b244f55ef485b8437cb1b4a379e25093deb2ba892"
+    },
+    {
+      "path": "planetarium/formal/ArtPlanetarium.lean",
+      "sha256": "7db2035a5da5c36eaca6cc94e0c1cf70ab27ee380ba913a574506bcb8f4b6512"
+    },
+    {
+      "path": "planetarium/formal/ArtPlanetarium/AxiomAudit.lean",
+      "sha256": "9f1474a8060749798243577a11b80199565ca2aa51274dc2b813ee8b16aa4c5d"
+    },
+    {
+      "path": "planetarium/formal/ArtPlanetarium/ConstructiveArithmetic.lean",
+      "sha256": "2d8de699a50ec329f39af004208e13db68052ce0be4b30d0f7893f1a31195ad8"
+    },
+    {
+      "path": "planetarium/formal/ArtPlanetarium/Dimension.lean",
+      "sha256": "f8e865ff1824353c3af01f04b00f7f262c098e08c01cc7fc251784caa98eb116"
+    },
+    {
+      "path": "planetarium/formal/ArtPlanetarium/DimensionProofs.lean",
+      "sha256": "c7f9fb2b3ceaea0278a7f732aa2b9c560ff595f0ea8a3936e2ef2977f39488b6"
+    },
+    {
+      "path": "planetarium/formal/ArtPlanetarium/Model.lean",
+      "sha256": "c50d9f31335adf6d8cd7530f2e59c894cca52d6988cae30fc2bfbf43feaebdd6"
+    },
+    {
+      "path": "planetarium/formal/ArtPlanetarium/Proofs.lean",
+      "sha256": "cb6973e554a54df774c6dbf9a370249e6be8589fcb785f3c2b8da1797b5ba9e1"
+    },
+    {
+      "path": "planetarium/formal/Main.lean",
+      "sha256": "18f9415985f98a2ff340f98ecbe0144e4e3525a4b7308c6b0956656e86862f6f"
+    },
+    {
+      "path": "planetarium/illustration-design-reference.jsonl",
+      "sha256": "5ff2c20d1969a6f83edf2520e3a10853e500e12bd87b15de85b0dc7b0f0eab9c"
+    },
+    {
+      "path": "planetarium/intent.md",
+      "sha256": "7e583a3b54e4b6b5a0b90bb578eb14c104076e13e368ef82ad8b768cbc54bc5a"
+    },
+    {
+      "path": "planetarium/knowledge.json",
+      "sha256": "dd5d929a885f4dd730202636c61273ce7c09a91f7b8eca75a3630d67d6e85eb5"
+    },
+    {
+      "path": "planetarium/lake-manifest.json",
+      "sha256": "3244800c29fc7264e6e253d0b0b758a83b7e6951f24b8f11fad337901cad9a90"
+    },
+    {
+      "path": "planetarium/lakefile.toml",
+      "sha256": "d19b8bf85d91b1abb8752935273eb824a4dd1dd127816fd51c4936a2e189d98e"
+    },
+    {
+      "path": "planetarium/lean-toolchain",
+      "sha256": "db7bb24b756d745bbde83fe92718b51bd3625dae3701ba0f598d0eedcd3f3028"
+    },
+    {
+      "path": "planetarium/lib/declarations.mjs",
+      "sha256": "b3c25a614064e8922466f7c489f5d3c6a4a0f14cf88f2c8e028a34f7461757f3"
+    },
+    {
+      "path": "planetarium/lib/dimension.mjs",
+      "sha256": "3f5090c856b86e8625886dd35f59368fdbbd1fd60b787fad21394f21179273b7"
+    },
+    {
+      "path": "planetarium/lib/kernel.mjs",
+      "sha256": "3f16166f19cb4144fa8c9a5fd2acc0d521f3ba4fae6fd3c1eb4add7e02e656c4"
+    },
+    {
+      "path": "planetarium/lib/material-sphere.mjs",
+      "sha256": "8ccc67f7b009bc2228dc4a9a272f2a7f65a579d97fbbe357d0961f1166c927c4"
+    },
+    {
+      "path": "planetarium/lib/reference-physics-contract.mjs",
+      "sha256": "4d1495820c1b9dcf334accee1892edd4f0ead85f5575e7c91935518903b435ba"
+    },
+    {
+      "path": "planetarium/lib/revision.mjs",
+      "sha256": "3985f93a8f4a6af200c27fdc50dadf7b10329e5c768bbfdfc400e58113ab13a5"
+    },
+    {
+      "path": "planetarium/lib/threejs-reference-adapter.mjs",
+      "sha256": "99e2747a30820f9907a4a685f185dc7edfc3ae6fd5062a1e721bd1904d835941"
+    },
+    {
+      "path": "planetarium/research-receipt.json",
+      "sha256": "fb73e5d602c0e4cade86ddac824022c501dea6b1d25fa6c436ac431d333d74bf"
+    },
+    {
+      "path": "planetarium/scripts/check.mjs",
+      "sha256": "724758e359cb6304e90341aab02605296a61a2211036f5507966e64e2371029f"
+    },
+    {
+      "path": "planetarium/scripts/export-threejs-reference.mjs",
+      "sha256": "a164bca41041de60648491e483bc31a37483aed3aff0e7ea013a6499d37923e6"
+    },
+    {
+      "path": "planetarium/scripts/generate-artifacts.mjs",
+      "sha256": "4640c1eba835a1cef482790ccf851940f27999bf9411dac8ff94cbbf0d4d7432"
+    },
+    {
+      "path": "planetarium/scripts/serve-threejs-reference.mjs",
+      "sha256": "a632c058de0f762f0f0f2f927f8af62cebe17bbd14ead783b8d521ca2cbcc4dd"
+    },
+    {
+      "path": "planetarium/spec.md",
+      "sha256": "939c76152aa2a8d1072b1969f8ecd6faaaf29480c295b07d67671d0df8749c21"
+    },
+    {
+      "path": "planetarium/threejs-reference.md",
+      "sha256": "9d586062ded7f8e859997d365da0d029e9662e082e23377434f7f5f64a77cf1b"
+    },
+    {
+      "path": "planetarium/verification-dimension.wl",
+      "sha256": "a5fd26ab0975c074a9703a8fa0467ac44bd19f5ee611d33a34c93018e4de9ea5"
     },
     {
       "path": "reference-assets/artist-cosmos/README.md",

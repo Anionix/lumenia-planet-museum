@@ -1,8 +1,8 @@
 {
   "recordIdentifier": "1d153c2d-5993-5a65-aeaf-5d3b3f33d84d",
-  "executionIdentifier": "01a0aa35-e1ae-76c5-b062-fbd68fffc4c8",
-  "recordedAt": "2026-09-16T12:34:13.039Z",
-  "sourceRevision": "sha256:e2848a5d3243b0f7f5b56ca16b9132acf4c0612c4c0adee33566482f1cf4e973",
+  "executionIdentifier": "01a0aa42-b43c-7220-b65f-bab2f5650c80",
+  "recordedAt": "2026-09-16T12:48:13.372Z",
+  "sourceRevision": "sha256:e56813b1ed4b504e78fb90e57be76a4ca318278c6e6a41e4309482112fee9f32",
   "status": "verified_with_explicit_scope",
   "initialPullRequestCount": 12,
   "initialBugCommentCount": 9,
@@ -53,9 +53,12 @@
   "gitArchiveCheck": "git-archive.json",
   "reconciliation": {
     "sourceManifest": "source-manifest.json",
-    "sourceRevision": "sha256:e2848a5d3243b0f7f5b56ca16b9132acf4c0612c4c0adee33566482f1cf4e973",
+    "sourceRevision": "sha256:e56813b1ed4b504e78fb90e57be76a4ca318278c6e6a41e4309482112fee9f32",
+    "rootSourceRevision": "sha256:e2848a5d3243b0f7f5b56ca16b9132acf4c0612c4c0adee33566482f1cf4e973",
     "semanticInputsChanged": false,
     "kernelAudit": "lean-kernel.json",
-    "note": "Complete audit scope now includes planetarium source files while generated reports remain excluded."
-  }
+    "note": "The audit manifest and coverage use the complete scope, including planetarium sources; generated reports remain excluded."
+  },
+  "rootSourceRevision": "sha256:e2848a5d3243b0f7f5b56ca16b9132acf4c0612c4c0adee33566482f1cf4e973",
+  "manifestScope": "complete-audit"
 }
