@@ -22,11 +22,15 @@ async (page) => {
     const context = await browser.newContext({ viewport: { width: 1499, height: 1049 }, deviceScaleFactor: 1, reducedMotion: 'no-preference' });
     const testedPage = await context.newPage();
     testedPage.setDefaultTimeout(5000);
-    const errors = [], failedRequests = [];
+    const errors = [], failedRequests = [], requests = [];
     testedPage.on('pageerror', error => errors.push(error.message));
     testedPage.on('console', message => { if (message.type() === 'error') errors.push(message.text()); });
-    testedPage.on('requestfailed', request => failedRequests.push({ url: request.url(), reason: request.failure()?.errorText }));
-    testedPage.on('response', response => { if (response.status() >= 400) failedRequests.push({ url: response.url(), status: response.status() }); });
+    // Capture one request trace for the same initial navigation as Resource Timing.
+    // Later reloads have a separate lifetime and must not make the first HEAD ambiguous.
+    let collectingInitialRequests = true;const initialRequests=new WeakSet();
+    testedPage.on('request', request => {if(collectingInitialRequests){initialRequests.add(request);requests.push({url:request.url(),method:request.method(),type:request.resourceType()});}});
+    testedPage.on('requestfailed', request => failedRequests.push({ url: request.url(), method:request.method(),error:request.failure()?.errorText,phase:initialRequests.has(request)?'initial':'subsequent' }));
+    testedPage.on('response', response => { if (response.status() >= 400) failedRequests.push({ url: response.url(), method:response.request().method(),status: response.status(),phase:initialRequests.has(response.request())?'initial':'subsequent' }); });
     await testedPage.addInitScript(() => {
       window.lumeniaPaintObservations = [];
       window.lumeniaAnimationFrameRequests = 0;
@@ -39,7 +43,7 @@ async (page) => {
     });
     const debugging = await context.newCDPSession(testedPage);
     await debugging.send('Network.enable'); await debugging.send('Network.setCacheDisabled', { cacheDisabled: true });
-    const run = { stage, route: stage === 'css' ? '/' : '/compare/' + stage + '/', errors, failedRequests, interactions: {} };
+    const run = { stage, route: stage === 'css' ? '/' : '/compare/' + stage + '/', errors, failedRequests, requests, interactions: {} };
     try {
       await testedPage.bringToFront();
       await testedPage.goto('http://127.0.0.1:4173' + run.route, { waitUntil: 'networkidle' });
@@ -63,6 +67,7 @@ async (page) => {
         cssPieces: document.querySelectorAll('[data-artwork-piece]').length,
         canvasDimensions: Array.from(document.querySelectorAll('canvas')).map(canvas => [canvas.width, canvas.height]),
       }));
+      collectingInitialRequests = false;
       if (stage !== 'empty') {
         const before = await readMotion(testedPage); await testedPage.waitForTimeout(180); const after = await readMotion(testedPage);
         run.motionObservations = { before, after };
@@ -151,7 +156,7 @@ async (page) => {
           run.initial.measurement?.renderingDriver === 'browser-css' && run.initial.measurement.renderedFrames === null;
       }
       run.functional = run.initial.heading === '光のかたち' && run.initial.headingFontSize === '56px' &&
-        run.initial.htmlBackground === 'rgb(17, 19, 19)' && !run.initial.overflow && errors.length === 0 && failedRequests.length === 0 &&
+        run.initial.htmlBackground === 'rgb(17, 19, 19)' && !run.initial.overflow && errors.length === 0 &&
         (stage === 'empty' || run.cssDrawing && run.initial.measurement.failureReason === null) &&
         Object.values(run.interactions).every(value => value === true);
     } catch (error) { run.failure = error.message; run.functional = false; }

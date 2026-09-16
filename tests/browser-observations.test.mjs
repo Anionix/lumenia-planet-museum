@@ -75,7 +75,7 @@ test('header classification rejects missing, ambiguous, failed and non-header ev
 test('an aborted header notification is reconciled with a uniquely matched successful response', () => {
   const capture = headerCheckFixture();
   const run = capture.data.runs[0];
-  run.failedRequests.push({ url: run.requests[0].url, method: 'HEAD', error: 'net::ERR_ABORTED' });
+  run.failedRequests.push({ url: run.requests[0].url, method: 'HEAD', error: 'net::ERR_ABORTED',phase:'initial' });
   const stage = summarizeBrowserRuns(capture).stages[0];
   assert.equal(stage.functional, true);
   assert.deepEqual(stage.reconciledRequestFailures, run.failedRequests);
@@ -83,6 +83,8 @@ test('an aborted header notification is reconciled with a uniquely matched succe
 
 test('actual failures, incomplete evidence and unsuccessful interactions remain nonfunctional', () => {
   const mutations = [
+    run => run.failedRequests[0].phase = 'subsequent',
+    run => delete run.failedRequests[0].phase,
     run => run.failedRequests[0].method = 'GET',
     run => delete run.failedRequests[0].method,
     run => run.failedRequests[0].error = 'net::ERR_FAILED',
@@ -99,7 +101,7 @@ test('actual failures, incomplete evidence and unsuccessful interactions remain 
   for (const mutate of mutations) {
     const capture = headerCheckFixture();
     const run = capture.data.runs[0];
-    run.failedRequests.push({ url: run.requests[0].url, method: 'HEAD', error: 'net::ERR_ABORTED' });
+    run.failedRequests.push({ url: run.requests[0].url, method: 'HEAD', error: 'net::ERR_ABORTED',phase:'initial' });
     mutate(run);
     assert.equal(summarizeBrowserRuns(capture).stages[0].functional, false, mutate.toString());
   }
