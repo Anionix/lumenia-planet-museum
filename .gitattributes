@@ -3,3 +3,22 @@ reference-assets/artist-cosmos/interactive/verification/exact-inputs.json lingui
 reference-assets/artist-cosmos/explore/worlds/*.json linguist-generated
 reports/bounded-review/formal-correspondence.jsonl text eol=lf
 reports/bounded-review/formal-correspondence-inputs.jsonl text eol=lf
+.gitattributes text eol=lf
+formal/Lumenia/Model.lean text eol=lf
+formal/Lumenia/Proofs.lean text eol=lf
+formal/Lumenia/Tests.lean text eol=lf
+lake-manifest.json text eol=lf
+lakefile.toml text eol=lf
+lean-toolchain text eol=lf
+planetarium/checks/wolfram-check.mjs text eol=lf
+planetarium/lib/dimension.mjs text eol=lf
+planetarium/lib/kernel.mjs text eol=lf
+reports/review-audit/coverage.jsonl text eol=lf
+reports/review-audit/summary.json text eol=lf
+reports/review-audit/wolfram.json text eol=lf
+scripts/audit-record-consistency.mjs text eol=lf
+scripts/identifiers.mjs text eol=lf
+scripts/iso-timestamp.mjs text eol=lf
+scripts/source-revision.mjs text eol=lf
+tests/audit-record-consistency.test.mjs text eol=lf
+tests/review-verification.test.mjs text eol=lf
