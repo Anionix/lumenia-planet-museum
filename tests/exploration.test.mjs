@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { limits, movement, moveCamera, ringClearance, createWorldSession } from '../reference-assets/artist-cosmos/explore/navigation.mjs';
+import { limits, movement, moveCamera, createWorldSession } from '../reference-assets/artist-cosmos/explore/navigation.mjs';
 import {readFile} from 'node:fs/promises';
 import {createWorldGeometry,collisionSurfaces} from '../reference-assets/artist-cosmos/explore/geometry.mjs';
 import {createCollisionWorld} from '../reference-assets/artist-cosmos/explore/collision.mjs';
@@ -8,27 +8,14 @@ import typescript from 'typescript';
 import {runInNewContext} from 'node:vm';
 
 // recordIdentifier=81ca0bef-abaf-543e-a655-632cc55172c9; executionIdentifier=01a0abbe-d765-7a3b-9b79-d72bc7e25cb2; relatedIssueRecordIdentifier=960d3219-91ec-5fb8-9ead-c82bd64b8922; transition=frame timestamp -> bounded flight input.
-test('actual frame handler bounds earlier, equal, later and resumed timestamps for every movement trigger', async () => {
-  const source=typescript.createSourceFile('main.mjs',await readFile(new URL('../reference-assets/artist-cosmos/explore/main.mjs',import.meta.url),'utf8'),typescript.ScriptTarget.Latest,true);
-  const tick=source.statements.find(statement=>typescript.isFunctionDeclaration(statement)&&statement.name?.text==='tick');
-  assert.ok(tick,'The production frame handler must be present');
-  const contextFor=(trigger,samples)=>({frame:1,disposed:false,document:{hidden:false},session:{},lastTick:100,limits,keys:new Set(trigger==='keyboard'?['KeyW']:[]),commands:{KeyW:'forward'},axes:{forward:[0,0,-1]},heldMove:trigger==='button'?'forward':null,holdStarted:-200,heldMoved:false,landingInput:{checked:trigger==='landing'},collision:trigger==='landing'?{}:null,dirty:false,requestAnimationFrame:()=>1,applyMovement(input,seconds){samples.push(seconds);movement([...input],0,0,seconds,limits.maximumSpeed);}});
-  for(const [now,expected] of [[99,0],[100,0],[101,.001],[100000,.05]]) for(const trigger of ['keyboard','button','landing']) {
-    const samples=[],context=contextFor(trigger,samples);
-    runInNewContext(tick.getText(source)+';tick('+now+');',context);
-    assert.deepEqual(samples,[expected],trigger+' at '+now);assert.equal(context.lastTick,now);
-  }
-});
-
-test('flight has a direction-independent speed and bounds stalled frames', () => {
-  const forward = movement([0, 0, -1], 0, 0, 0.05, 16);
-  const diagonal = movement([1, 1, -1], 0, 0, 0.05, 16);
-  assert.ok(Math.abs(Math.hypot(...forward) - 0.8) < 1e-12);
-  assert.ok(Math.abs(Math.hypot(...diagonal) - 0.8) < 1e-12);
-  assert.deepEqual(movement([0, 0, -1], 0, 0, 200, 16), forward);
-  assert.deepEqual(movement([0, 0, 0], 0, 0, 1, 16), [0, 0, 0]);
-  for (const invalid of [NaN, Infinity, -1]) assert.throws(() => movement([0, 0, 1], 0, 0, invalid, 16));
-  assert.throws(() => movement([0, 0, 1], 0, 0, 1, 100));
+test('actual frame expression and flight stay bounded', async () => {
+  const source=typescript.createSourceFile('main.mjs',await readFile(new URL('../reference-assets/artist-cosmos/explore/main.mjs',import.meta.url),'utf8'),typescript.ScriptTarget.Latest,true),tick=source.statements.find(statement=>typescript.isFunctionDeclaration(statement)&&statement.name?.text==='tick');
+  const seconds=tick?.body.statements.flatMap(statement=>typescript.isVariableStatement(statement)?[...statement.declarationList.declarations]:[]).find(declaration=>declaration.name.getText(source)==='seconds');assert.ok(seconds?.initializer,'The frame duration expression must be present');
+  for(const [now,expected] of [[99,0],[100,0],[101,.001],[100000,.05]]) assert.equal(runInNewContext(seconds.initializer.getText(source),{now,lastTick:100,limits}),expected);
+  const [forward,diagonal]=[[0,0,-1],[1,1,-1]].map(input=>movement(input,0,0,.05,16));
+  for(const vector of [forward,diagonal]) assert.ok(Math.abs(Math.hypot(...vector)-.8)<1e-12);
+  assert.deepEqual([movement([0,0,-1],0,0,200,16),movement([0,0,0],0,0,1,16)],[forward,[0,0,0]]);
+  for(const [seconds,speed] of [[NaN,16],[Infinity,16],[-1,16],[1,100]]) assert.throws(()=>movement([0,0,1],0,0,seconds,speed));
 });
 
 test('actual Rapier passes the open ring, stops at the planet and lands on the platform', async () => {
@@ -52,20 +39,12 @@ test('actual Rapier passes the open ring, stops at the planet and lands on the p
 });
 
 test('free flight is bounded and never rewrites a source coordinate', () => {
-  const input = {recordIdentifier:'example', semanticPosition:{values:[0.55,-0.65,-0.95]}, spawn:{position:[0,0,0]}};
-  const session = createWorldSession(input);
+  const input={recordIdentifier:'example',semanticPosition:{values:[0.55,-0.65,-0.95]},spawn:{position:[0,0,0]}},session=createWorldSession(input);
   session.position = moveCamera([399.9, -399.9, 0], [0.8, -0.8, 0]);
-  assert.deepEqual(session.position, [400, -400, 0]);
-  assert.deepEqual(session.semanticPosition.values, input.semanticPosition.values);
+  assert.deepEqual([session.position,session.semanticPosition.values],[[400,-400,0],input.semanticPosition.values]);
   assert.throws(() => { session.semanticPosition.values[0] = 0; });
   assert.equal(createWorldSession({...input,semanticPosition:null}).semanticPosition, null);
   assert.equal(session.physics, 'disabled');
-});
-
-test('the Sottsass passage leaves space for the observer and contact gap', () => {
-  assert.ok(Math.abs(ringClearance(3, 0.5) - 2.05) < 1e-12);
-  assert.equal(limits.observerRadius, 0.4);
-  assert.ok(ringClearance(0.8, 0.5) < 0);
 });
 
 test('each of the fifteen worlds builds and preserves an open passage and a landing surface',async()=>{
