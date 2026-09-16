@@ -13,6 +13,13 @@ const replaceRootResult = (records, mutate) => {
   mutate(root.decoded);
   root.response.content[0].text = 'Out[1]= ' + JSON.stringify(JSON.stringify(root.decoded));
 };
+for (const [name, field] of [['material', 'calculationChecksPass'], ['images', 'all_passed'], ['clock', 'all_passed'], ['review', 'all_passed']])
+  for (const outcome of [false, undefined]) test(`rejects ${name} aggregate ${outcome}`, () => {
+    const changed = structuredClone(records), program = changed.wolfram.programs.find(program => program.name === name);
+    program.decoded[field] = outcome;
+    program.response.content[0].text = 'Out[1]= ' + JSON.stringify(JSON.stringify(program.decoded));
+    assert.throws(() => verifyAuditRecords(changed));
+  });
 for (const [name, mutate] of Object.entries({
   'older summary': value => value.summary.recordedAt = '2020-01-01T00:00:00Z',
   'older coverage': value => value.coverage[0].recordedAt = '2020-01-01T00:00:00Z',

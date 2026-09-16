@@ -15,6 +15,11 @@ function ordered(earlier, later) {
 }
 function checkCount(program) {
   const value = program.decoded;
+  if (program.name === 'material') {
+    same(value.status, 'blocked', 'Material receipt binding status');
+    same(value.statusReason, 'parent-receipt-must-bind-execution-uuid-and-source-revision', 'Material receipt binding reason');
+    same(value.calculationChecksPass, true, 'Material calculation result');
+  } else if (['images', 'clock', 'review'].includes(program.name)) same(value.all_passed, true, 'Aggregate calculation result');
   if (program.name === 'root') {
     assert.ok(value.comparisons.length > 0);
     same(value.comparisonCount, value.comparisons.length, 'Comparison count');
