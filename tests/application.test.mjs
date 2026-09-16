@@ -77,9 +77,16 @@ test('code gates trace star and named re-exports through client dependencies', (
   assert.deepEqual(inspection.issues.componentBoundary, []);
 });
 
-test('code gates ignore local export declarations without a module specifier', () => {
-  assert.deepEqual(inspectSources(new Map([['web/app/page.tsx', 'const value = 1; export {value};']])).issues,
-    { plumeriaScope: [], plumeriaComposition: [], staticExport: [], componentBoundary: [] });
+test('code gates distinguish type-only modules from runtime imports and exports', () => {
+  const inspect = source => inspectSources(new Map([['web/app/page.tsx', source]])).issues;
+  for (const source of ['const value = 1; export {value};', ...[
+    'import type Value', 'import type * as Values', 'import type {Value}', 'import {type Value}',
+    'export type *', 'export type * as Values', 'export type {Value}', 'export {type Value}',
+  ].map(clause => `${clause} from './missing';`)])
+    assert.deepEqual(inspect(source), { plumeriaScope: [], plumeriaComposition: [], staticExport: [], componentBoundary: [] });
+  for (const clause of ['import', 'import {} from', 'import Value, {type Other} from',
+    'import {type Other, value} from', 'export * from', 'export * as Values from', 'export {type Other, value} from'])
+    assert.ok(inspect(`${clause} './missing';`).componentBoundary.length, clause);
 });
 
 // llm machine contract; claim UUIDv5: e9194426-a204-577c-9758-7bfe9644b8fc
