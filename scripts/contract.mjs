@@ -20,6 +20,13 @@ const verificationStatuses = new Set([
   'staleEvidence',
 ]);
 const browsers = new Set(['chrome', 'safari', 'firefox', 'edge']);
+const verificationKeys = new Set([
+  'artifactIdentifier',
+  'claimIdentifiers',
+  'proofTargets',
+  'sourceRevision',
+  'measurementProfile',
+]);
 const expectedMeasurementProfile = Object.freeze({
   targetBrowsers: ['chrome', 'safari', 'firefox', 'edge'],
   coreTransferBudgetKibibytes: 200,
@@ -83,10 +90,7 @@ function validateStringArray(value, path, errors, itemValidator = null) {
   }
   const seen = new Set();
   value.forEach((item, index) => {
-    if (typeof item !== 'string' || item.length === 0) {
-      errors.push(path + '[' + index + ']: expected a non-empty string');
-      return;
-    }
+    if (!requireString(item, path + '[' + index + ']', errors)) return;
     if (seen.has(item)) {
       errors.push(path + '[' + index + ']: duplicate value');
     }
@@ -99,8 +103,7 @@ function validateStringArray(value, path, errors, itemValidator = null) {
 }
 
 function validateMeasurementProfile(value, path, errors) {
-  const allowedKeys = new Set(Object.keys(expectedMeasurementProfile));
-  if (!requireObject(value, allowedKeys, path, errors)) return false;
+  if (!requireObject(value, new Set(Object.keys(expectedMeasurementProfile)), path, errors)) return false;
   if (Array.isArray(value.targetBrowsers)) {
     const seen = new Set();
     value.targetBrowsers.forEach((browser, index) => {
@@ -149,14 +152,7 @@ function validateVerificationFields(value, path, errors) {
 
 function validateVerificationRequest(value, errors) {
   const path = 'verificationRequest';
-  const allowedKeys = new Set([
-    'artifactIdentifier',
-    'claimIdentifiers',
-    'proofTargets',
-    'sourceRevision',
-    'measurementProfile',
-  ]);
-  if (!requireObject(value, allowedKeys, path, errors)) return;
+  if (!requireObject(value, verificationKeys, path, errors)) return;
   validateVerificationFields(value, path, errors);
 }
 
@@ -187,12 +183,9 @@ function validateObservation(value, path, errors) {
   validateIdentifier(value.executionIdentifier, uuidv7Pattern, path + '.executionIdentifier', errors);
   const measurable = (item) => typeof item === 'boolean' ||
     (typeof item === 'number' && Number.isFinite(item) && item >= 0);
-  if (value.limit !== null && !measurable(value.limit)) {
-    errors.push(path + '.limit: expected a finite non-negative number, boolean or null');
-  }
-  if (value.observedValue !== null && !measurable(value.observedValue)) {
-    errors.push(path + '.observedValue: expected a finite non-negative number, boolean or null');
-  }
+  for (const field of ['limit', 'observedValue'])
+    if (value[field] !== null && !measurable(value[field]))
+      errors.push(path + '.' + field + ': expected a finite non-negative number, boolean or null');
   if (value.observedValue !== null && value.limit !== null && typeof value.observedValue !== typeof value.limit) {
     errors.push(path + ': observedValue and limit must have the same type');
   }
@@ -213,20 +206,13 @@ function validateObservation(value, path, errors) {
 
 function expectedOverallStatus(observations) {
   const statuses = new Set(observations.map((observation) => observation?.status));
-  if (statuses.has('fail')) return 'fail';
-  if (statuses.has('blocked')) return 'blocked';
-  if (statuses.has('staleEvidence')) return 'staleEvidence';
-  return 'pass';
+  return ['fail', 'blocked', 'staleEvidence'].find(status => statuses.has(status)) ?? 'pass';
 }
 
 function validateVerificationResult(value, errors) {
   const path = 'verificationResult';
   const allowedKeys = new Set([
-    'artifactIdentifier',
-    'claimIdentifiers',
-    'proofTargets',
-    'sourceRevision',
-    'measurementProfile',
+    ...verificationKeys,
     'executionIdentifier',
     'createdAt',
     'status',
