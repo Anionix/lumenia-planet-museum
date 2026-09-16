@@ -1,7 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
-import { readFile } from 'node:fs/promises';
+import { readFile, mkdtemp, rm } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
 import { inspectSources } from '../scripts/source-inspection.mjs';
 import { flagNames, optionNames, assetRulesSatisfied, validateArtworkManifest, registerRequiredDecoders, inspectGlb } from '../web/artwork/asset-contract.ts';
 import { projectRoot } from '../scripts/source-revision.mjs';
@@ -41,14 +42,19 @@ test('decoders activate only for explicit asset flags, including Draco opt-in', 
     assert.deepEqual(registered, expected);
   }
 });
-test('actual optimized binary declares Meshopt and passes the browser manifest parser', async () => {
+test('actual optimized binary passes the browser parser without publishing test evidence', async (context) => {
   // Rebuild with the existing optimizer/validator instead of relying on ignored local output.
-  const fixture = spawnSync(process.execPath, ['scripts/build-artwork.mjs'],
+  const directory = await mkdtemp(path.join(tmpdir(), 'lumenia-asset-test-'));
+  context.after(() => rm(directory, { recursive: true, force: true }));
+  const reportPath = path.join(projectRoot, 'reports/asset-pipeline-evidence.json');
+  const previousReport = await readFile(reportPath);
+  const fixture = spawnSync(process.execPath, ['scripts/build-artwork.mjs', '--fixture-directory', directory],
     { cwd: projectRoot, encoding: 'utf8', timeout: 60000 });
+  assert.deepEqual(await readFile(reportPath), previousReport, 'Tests must preserve committed evidence.');
   assert.equal(fixture.status, 0, fixture.error?.message ?? fixture.stderr + fixture.stdout);
-  const value = JSON.parse(await readFile(new URL('../artifacts/asset-fixtures/orbit.manifest.json', import.meta.url), 'utf8'));
+  const value = JSON.parse(await readFile(path.join(directory, 'artifacts/asset-fixtures/orbit.manifest.json'), 'utf8'));
   assert.ok(validateArtworkManifest(value));
-  const bytes = await readFile(new URL('../artifacts/asset-fixtures/orbit.glb', import.meta.url));
+  const bytes = await readFile(path.join(directory, 'artifacts/asset-fixtures/orbit.glb'));
   assert.equal(inspectGlb(bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength)).flags.usesExtensionMeshopt, true);
 });
 test('code gates accept module-scope Plumeria arrays inside a client boundary', () => {

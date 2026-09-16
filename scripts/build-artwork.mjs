@@ -12,13 +12,26 @@ import { inspectGlb, validateArtworkManifest } from '../web/artwork/asset-contra
 // llm machine contract; claim UUIDv5: 6c16261b-86c7-54d4-9712-99528cd7ca89
 // execution UUIDv7 generated per run; states: source -> optimized -> validated; any failed check -> rejected
 const executionIdentifier = uuidVersionSeven();
+const argumentsGiven = process.argv.slice(2);
+if (argumentsGiven.length && (argumentsGiven.length !== 2 || argumentsGiven[0] !== '--fixture-directory' || !path.isAbsolute(argumentsGiven[1])))
+  throw new Error('Expected --fixture-directory with an absolute temporary directory.');
+const fixtureDirectory = argumentsGiven[1];
+const outputRoot = fixtureDirectory ?? projectRoot;
 const inputs = await sourceManifest();
-const sourceDirectory = path.join(projectRoot, 'artifacts/source');
-const outputDirectory = path.join(projectRoot, 'artifacts/asset-fixtures');
+const sourceDirectory = path.join(outputRoot, 'artifacts/source');
+const outputDirectory = path.join(outputRoot, 'artifacts/asset-fixtures');
 // CSS-only release: retain old fixture outputs outside the publicly exported application.
+if (!fixtureDirectory) {
 await mkdir(path.join(projectRoot, 'artifacts/previous-assets'), { recursive: true });
 try { await rename(path.join(projectRoot, 'web/public/artworks'), path.join(projectRoot, 'artifacts/previous-assets', executionIdentifier)); }
 catch (error) { if (error.code !== 'ENOENT') throw error; }
+}
+// machine contract: temporary fixture -> validated bytes; only explicit artwork builds publish evidence.
+async function publishEvidence(evidence) {
+  if (fixtureDirectory) return;
+  await mkdir(path.join(projectRoot, 'reports'), { recursive: true });
+  await writeFile(path.join(projectRoot, 'reports/asset-pipeline-evidence.json'), JSON.stringify(evidence, null, 2) + '\n');
+}
 await mkdir(sourceDirectory, { recursive: true });
 await mkdir(outputDirectory, { recursive: true });
 const sourcePath = path.join(sourceDirectory, 'orbit.glb');
@@ -69,9 +82,8 @@ const evidence = { executionIdentifier, sourceRevision: inputs.sourceRevision, i
   transitions: ['source', ...(optimized.status === 0 ? ['optimized'] : [] )],
   createdAt: new Date().toISOString(), source: { path: sourcePath, sha256: digest(sourceBytes), byteLength: sourceBytes.length },
   optimizer: { command: process.execPath, arguments: argumentsList, exitCode: optimized.status, stdout: optimized.stdout, stderr: optimized.stderr }, state: 'rejected' };
-await mkdir(path.join(projectRoot, 'reports'), { recursive: true });
 if (optimized.status !== 0) {
-  await writeFile(path.join(projectRoot, 'reports/asset-pipeline-evidence.json'), JSON.stringify(evidence, null, 2));
+  await publishEvidence(evidence);
   throw new Error('gltfpack failed: ' + optimized.stderr);
 }
 const outputBytes = await readFile(outputPath);
@@ -91,7 +103,7 @@ evidence.leanBoundary = lean && { exitCode: lean.status, stdout: lean.stdout, st
 const leanAccepted = lean?.status === 0 && JSON.parse(lean.stdout.trim()).accepted === true;
 evidence.state = validation.issues.numErrors === 0 && nodesPreserved && manifest && leanAccepted ? 'validated' : 'rejected';
 evidence.transitions.push(evidence.state);
-await writeFile(path.join(projectRoot, 'reports/asset-pipeline-evidence.json'), JSON.stringify(evidence, null, 2) + '\n');
+await publishEvidence(evidence);
 if (evidence.state !== 'validated') throw new Error('Validator, preservation, runtime schema or Lean boundary rejected the asset.');
 await writeFile(manifestPath, JSON.stringify(manifest, null, 2) + '\n');
 console.log(JSON.stringify({ state: evidence.state, sourceBytes: sourceBytes.length, optimizedBytes: outputBytes.length,
