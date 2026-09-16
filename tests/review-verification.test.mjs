@@ -4,9 +4,18 @@ import {createHash} from 'node:crypto';
 import {mkdtemp, mkdir, writeFile, rm} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import path from 'node:path';
+import {execFileSync} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
 import {sourceManifest} from '../scripts/source-revision.mjs';
 import {evidenceDigest,languageServerReceiptMatchesSource,languageServerTargetMatchesInvocation} from '../scripts/language-server-evidence.mjs';
 import {captureLanguageServerReceipt} from '../scripts/capture-language-server.mjs';
+
+test('generated server configuration keeps the project root outside the checkout',()=>{
+  const script=fileURLToPath(new URL('../scripts/capture-language-server.mjs',import.meta.url));
+  const configuration=JSON.parse(execFileSync(process.execPath,[script,'--configuration'],{cwd:tmpdir(),encoding:'utf8'}));
+  assert.deepEqual(configuration.mcpServers['lean-lsp'].args.slice(-2),['--lean-project-path',fileURLToPath(new URL('../',import.meta.url))]);
+  assert.throws(()=>execFileSync(process.execPath,[script,'--unknown'],{cwd:tmpdir(),stdio:'pipe'}));
+});
 
 // machine contract; record_identifier=d93d88e9-8679-522b-a756-0b60472c9e5f.
 // transition: clean inputs -> generated output -> same source revision; real input edits must change it.
