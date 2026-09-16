@@ -52,6 +52,16 @@ function requireKeys(value, requiredKeys, path, errors) {
   }
 }
 
+function requireObject(value, allowedKeys, path, errors, requiredKeys = allowedKeys) {
+  if (!isRecord(value)) {
+    errors.push(path + ': expected an object');
+    return false;
+  }
+  hasOnlyKeys(value, allowedKeys, path, errors);
+  requireKeys(value, requiredKeys, path, errors);
+  return true;
+}
+
 function createValueValidator(check, description) {
   return (value, path, errors) => {
     const valid = check(value);
@@ -97,13 +107,8 @@ function validateStringArray(value, path, errors, itemValidator = null) {
 }
 
 function validateMeasurementProfile(value, path, errors) {
-  if (!isRecord(value)) {
-    errors.push(path + ': expected an object');
-    return false;
-  }
   const allowedKeys = new Set(Object.keys(expectedMeasurementProfile));
-  hasOnlyKeys(value, allowedKeys, path, errors);
-  requireKeys(value, [...allowedKeys], path, errors);
+  if (!requireObject(value, allowedKeys, path, errors)) return false;
   if (Array.isArray(value.targetBrowsers)) {
     const seen = new Set();
     value.targetBrowsers.forEach((browser, index) => {
@@ -159,12 +164,7 @@ function validateVerificationRequest(value, errors) {
     'sourceRevision',
     'measurementProfile',
   ]);
-  if (!isRecord(value)) {
-    errors.push(path + ': expected an object');
-    return;
-  }
-  hasOnlyKeys(value, allowedKeys, path, errors);
-  requireKeys(value, [...allowedKeys], path, errors);
+  if (!requireObject(value, allowedKeys, path, errors)) return;
   validateVerificationFields(value, path, errors);
 }
 
@@ -181,13 +181,8 @@ function validateObservation(value, path, errors) {
     'sourceRevision',
     'executionIdentifier',
   ]);
-  if (!isRecord(value)) {
-    errors.push(path + ': expected an object');
-    return;
-  }
-  hasOnlyKeys(value, allowedKeys, path, errors);
-  requireKeys(value, ['gateIdentifier', 'status', 'observedValue', 'limit', 'unit', 'checkedBy',
-    'failureReason', 'sourceRevision', 'executionIdentifier'], path, errors);
+  if (!requireObject(value, allowedKeys, path, errors, ['gateIdentifier', 'status', 'observedValue', 'limit', 'unit', 'checkedBy',
+    'failureReason', 'sourceRevision', 'executionIdentifier'])) return;
   validateIdentifier(value.gateIdentifier, uuidv5Pattern, path + '.gateIdentifier', errors);
   if (!verificationStatuses.has(value.status)) {
     errors.push(path + '.status: unsupported verification status');
@@ -245,12 +240,7 @@ function validateVerificationResult(value, errors) {
     'status',
     'observations',
   ]);
-  if (!isRecord(value)) {
-    errors.push(path + ': expected an object');
-    return;
-  }
-  hasOnlyKeys(value, allowedKeys, path, errors);
-  requireKeys(value, [...allowedKeys], path, errors);
+  if (!requireObject(value, allowedKeys, path, errors)) return;
   validateVerificationFields(value, path, errors);
   validateIdentifier(value.executionIdentifier, uuidv7Pattern, path + '.executionIdentifier', errors);
   if (!Number.isFinite(parseIsoTimestamp(value.createdAt))) {
@@ -303,12 +293,7 @@ function validateAssetManifest(value, errors) {
     'hasKtx2Loader',
     'hasDracoLoader',
   ]);
-  if (!isRecord(value)) {
-    errors.push(path + ': expected an object');
-    return;
-  }
-  hasOnlyKeys(value, allowedKeys, path, errors);
-  requireKeys(value, [...allowedKeys], path, errors);
+  if (!requireObject(value, allowedKeys, path, errors)) return;
   validateIdentifier(value.artifactIdentifier, uuidv5Pattern, path + '.artifactIdentifier', errors);
   if (!['glb', 'gltf'].includes(value.format)) {
     errors.push(path + '.format: expected glb or gltf');
