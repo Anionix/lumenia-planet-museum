@@ -11,6 +11,7 @@ export const projectRoot = fileURLToPath(new URL('../', import.meta.url));
 export async function sourceManifest(root = projectRoot, { includePlanetarium = false } = {}) {
   const inputs = ['intent.md', 'spec.md', 'CONSTRAINTS.md', 'lean-toolchain',
     'lakefile.toml', 'lake-manifest.json', 'package.json', 'package-lock.json', 'eslint.config.mjs'];
+  if ((await readdir(root)).includes('vercel.json')) inputs.push('vercel.json');
   async function visit(directory) {
     for (const entry of await readdir(path.join(root, directory), { withFileTypes: true })) {
       const relative = directory + '/' + entry.name;
