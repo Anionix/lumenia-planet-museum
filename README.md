@@ -45,7 +45,7 @@ npm run verify:gates
 
 公理依存は全登録定理でゼロを必須にしています。標準公理も自動承認しません。定理の条件を弱めず、依存が増えたら検査を不合格にします。
 
-Leanの言語サーバーは [設定例](mcp/lean-lsp-mcp.json) のプロジェクトパスを利用します。ソース変更後は、仕様にある六種類のMCP検査を実行し、実際の応答を `reports/lean-lsp-evidence.json` に記録してください。過去の応答を再利用するとstaleEvidenceになります。通常の構築成功を言語サーバー検査の実行と記録することはありません。
+Leanの言語サーバーの設定は、`node scripts/capture-language-server.mjs --configuration` で生成して接続先へ登録します。[設定の原型](mcp/lean-lsp-mcp.json) に、このスクリプトがある作業場所の絶対パスを加えるため、接続先の起動ディレクトリに依存しません。ソース変更後は、仕様にある六種類のMCP検査を実行し、実際の応答を `reports/lean-lsp-evidence.json` に記録してください。過去の応答を再利用するとstaleEvidenceになります。通常の構築成功を言語サーバー検査の実行と記録することはありません。
 
 出荷ゲートは同じ形式の測定報告を追加で受け取れます。
 
