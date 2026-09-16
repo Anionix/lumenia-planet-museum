@@ -1,8 +1,8 @@
 {
-  "executionIdentifier": "01a0a9c6-c101-794e-b225-4b01c529c05f",
-  "recordedAt": "2026-09-16T10:39:15.534Z",
-  "sourceRevisionBefore": "sha256:87ed8dc07a6cf314667c9e4f158ea72255a3130c220ca3192f1266e238231c76",
-  "sourceRevisionAfter": "sha256:87ed8dc07a6cf314667c9e4f158ea72255a3130c220ca3192f1266e238231c76",
+  "executionIdentifier": "01a0aa62-1972-7375-8461-ab39e3f524ae",
+  "recordedAt": "2026-09-16T13:22:30.785Z",
+  "sourceRevisionBefore": "sha256:e56813b1ed4b504e78fb90e57be76a4ca318278c6e6a41e4309482112fee9f32",
+  "sourceRevisionAfter": "sha256:e56813b1ed4b504e78fb90e57be76a4ca318278c6e6a41e4309482112fee9f32",
   "status": "pass",
   "programCount": 6,
   "checkCount": 55,
@@ -15,15 +15,15 @@
         "content": [
           {
             "type": "text",
-            "text": "Out[1]= \"{\\\"runIdentifier\\\":\\\"01a0a9c6-c101-794e-b225-4b01c529c05f\\\",\\\"startedAtUtc\\\":\\\"2026-09-16T10:35:31Z\\\",\\\"completedAtUtc\\\":\\\"2026-09-16T10:35:31Z\\\",\\\"comparisonCount\\\":3,\\\"totalInputCount\\\":44,\\\"comparisons\\\":[{\\\"function\\\":\\\"transition\\\",\\\"claimIdentifier\\\":\\\"3994c7e6-6387-590c-9922-3fad04fc482d\\\",\\\"inputCount\\\":20,\\\"uniqueInputCount\\\":20,\\\"goldenDimensionsMatch\\\":true,\\\"implementationVersusRequirementsMismatchCount\\\":0,\\\"implementationVersusGoldenMismatchCount\\\":0,\\\"goldenVersusRequirementsMismatchCount\\\":0,\\\"mismatches\\\":[],\\\"actualOutputs\\\":[[\\\"optimized\\\",\\\"none\\\",\\\"none\\\",\\\"rejected\\\"],[\\\"none\\\",\\\"validated\\\",\\\"none\\\",\\\"rejected\\\"],[\\\"none\\\",\\\"none\\\",\\\"shipped\\\",\\\"rejected\\\"],[\\\"none\\\",\\\"none\\\",\\\"none\\\",\\\"none\\\"],[\\\"none\\\",\\\"none\\\",\\\"none\\\",\\\"none\\\"]]},{\\\"function\\\":\\\"deploymentCapabilityAllowed\\\",\\\"claimIdentifier\\\":\\\"ac27dc88-da25-51f7-8af5-c431e22cd72b\\\",\\\"inputCount\\\":12,\\\"uniqueInputCount\\\":12,\\\"goldenDimensionsMatch\\\":true,\\\"implementationVersusRequirementsMismatchCount\\\":0,\\\"implementationVersusGoldenMismatchCount\\\":0,\\\"goldenVersusRequirementsMismatchCount\\\":0,\\\"mismatches\\\":[],\\\"actualOutputs\\\":[[true,false,true,true,true,true],[true,true,true,true,true,true]]},{\\\"function\\\":\\\"componentPlacementAllowed\\\",\\\"claimIdentifier\\\":\\\"cf86cf5d-e0c7-58e4-aa77-ae4d0e72bf46\\\",\\\"inputCount\\\":12,\\\"uniqueInputCount\\\":12,\\\"goldenDimensionsMatch\\\":true,\\\"implementationVersusRequirementsMismatchCount\\\":0,\\\"implementationVersusGoldenMismatchCount\\\":0,\\\"goldenVersusRequirementsMismatchCount\\\":0,\\\"mismatches\\\":[],\\\"actualOutputs\\\":[[true,true,false,false,false,false],[true,false,true,true,true,true]]}]}\""
+            "text": "Out[1]= \"{\\\"runIdentifier\\\":\\\"01a0a9c6-c101-794e-b225-4b01c529c05f\\\",\\\"startedAtUtc\\\":\\\"2026-09-16T13:18:55Z\\\",\\\"completedAtUtc\\\":\\\"2026-09-16T13:18:55Z\\\",\\\"comparisonCount\\\":3,\\\"totalInputCount\\\":44,\\\"comparisons\\\":[{\\\"function\\\":\\\"transition\\\",\\\"claimIdentifier\\\":\\\"3994c7e6-6387-590c-9922-3fad04fc482d\\\",\\\"inputCount\\\":20,\\\"uniqueInputCount\\\":20,\\\"goldenDimensionsMatch\\\":true,\\\"implementationVersusRequirementsMismatchCount\\\":0,\\\"implementationVersusGoldenMismatchCount\\\":0,\\\"goldenVersusRequirementsMismatchCount\\\":0,\\\"mismatches\\\":[],\\\"actualOutputs\\\":[[\\\"optimized\\\",\\\"none\\\",\\\"none\\\",\\\"rejected\\\"],[\\\"none\\\",\\\"validated\\\",\\\"none\\\",\\\"rejected\\\"],[\\\"none\\\",\\\"none\\\",\\\"shipped\\\",\\\"rejected\\\"],[\\\"none\\\",\\\"none\\\",\\\"none\\\",\\\"none\\\"],[\\\"none\\\",\\\"none\\\",\\\"none\\\",\\\"none\\\"]]},{\\\"function\\\":\\\"deploymentCapabilityAllowed\\\",\\\"claimIdentifier\\\":\\\"ac27dc88-da25-51f7-8af5-c431e22cd72b\\\",\\\"inputCount\\\":12,\\\"uniqueInputCount\\\":12,\\\"goldenDimensionsMatch\\\":true,\\\"implementationVersusRequirementsMismatchCount\\\":0,\\\"implementationVersusGoldenMismatchCount\\\":0,\\\"goldenVersusRequirementsMismatchCount\\\":0,\\\"mismatches\\\":[],\\\"actualOutputs\\\":[[true,false,true,true,true,true],[true,true,true,true,true,true]]},{\\\"function\\\":\\\"componentPlacementAllowed\\\",\\\"claimIdentifier\\\":\\\"cf86cf5d-e0c7-58e4-aa77-ae4d0e72bf46\\\",\\\"inputCount\\\":12,\\\"uniqueInputCount\\\":12,\\\"goldenDimensionsMatch\\\":true,\\\"implementationVersusRequirementsMismatchCount\\\":0,\\\"implementationVersusGoldenMismatchCount\\\":0,\\\"goldenVersusRequirementsMismatchCount\\\":0,\\\"mismatches\\\":[],\\\"actualOutputs\\\":[[true,true,false,false,false,false],[true,false,true,true,true,true]]}]}\""
           }
         ],
         "isError": false
       },
       "decoded": {
         "runIdentifier": "01a0a9c6-c101-794e-b225-4b01c529c05f",
-        "startedAtUtc": "2026-09-16T10:35:31Z",
-        "completedAtUtc": "2026-09-16T10:35:31Z",
+        "startedAtUtc": "2026-09-16T13:18:55Z",
+        "completedAtUtc": "2026-09-16T13:18:55Z",
         "comparisonCount": 3,
         "totalInputCount": 44,
         "comparisons": [
@@ -130,7 +130,7 @@
           }
         ]
       },
-      "receivedAt": "2026-09-16T10:35:32.531Z",
+      "receivedAt": "2026-09-16T13:22:30.785Z",
       "checkCount": 3,
       "status": "pass",
       "recordIdentifier": "2f3d33c5-9567-5c41-8385-9ae267b06721",
@@ -1766,7 +1766,7 @@
           "pass": true
         }
       },
-      "receivedAt": "2026-09-16T10:35:32.632Z",
+      "receivedAt": "2026-09-16T13:22:30.785Z",
       "checkCount": 13,
       "status": "pass",
       "recordIdentifier": "f41a2b19-b64a-5763-9275-b7a73c91bad7",
@@ -1976,7 +1976,7 @@
         "step_seconds": 0.0166666666667,
         "maximum_frame_seconds": 0.0833333333333
       },
-      "receivedAt": "2026-09-16T10:35:32.996Z",
+      "receivedAt": "2026-09-16T13:22:30.785Z",
       "checkCount": 10,
       "status": "pass",
       "recordIdentifier": "21b8f361-70e4-5407-aed1-de9bf17f9a0b",
@@ -2004,7 +2004,7 @@
         "ring_passage_positive": true,
         "render_interval_seconds": 0.03333333333333333
       },
-      "receivedAt": "2026-09-16T10:35:32.828Z",
+      "receivedAt": "2026-09-16T13:22:30.785Z",
       "checkCount": 6,
       "status": "pass",
       "recordIdentifier": "41018a33-77a2-5c02-bd1f-cb6e674541da",
@@ -2037,7 +2037,7 @@
         "radius": 12.48,
         "period_seconds": 171
       },
-      "receivedAt": "2026-09-16T10:35:32.524Z",
+      "receivedAt": "2026-09-16T13:22:30.785Z",
       "checkCount": 6,
       "status": "pass",
       "recordIdentifier": "95c64d2a-bc93-57d4-9e11-d33fc8d0b0f7",
@@ -2098,7 +2098,7 @@
         "truth_table_rows": 8,
         "scope": "Mathematical models and finite state obligations, not a proof of browser timing or historical influence."
       },
-      "receivedAt": "2026-09-16T10:38:24.267Z",
+      "receivedAt": "2026-09-16T13:22:30.785Z",
       "checkCount": 17,
       "status": "pass",
       "recordIdentifier": "6fc4dfed-5cf3-5c1a-94a2-ec7a0901b299",
@@ -2110,5 +2110,84 @@
     "checks": 13,
     "comparedRows": 156,
     "mismatches": 0
+  },
+  "rootSourceRevision": "sha256:e2848a5d3243b0f7f5b56ca16b9132acf4c0612c4c0adee33566482f1cf4e973",
+  "revalidation": {
+    "executionIdentifier": "01a0aa62-1972-7375-8461-ab39e3f524ae",
+    "recordedAt": "2026-09-16T13:22:30.785Z",
+    "sourceRevision": "sha256:e56813b1ed4b504e78fb90e57be76a4ca318278c6e6a41e4309482112fee9f32",
+    "rootSourceRevision": "sha256:e2848a5d3243b0f7f5b56ca16b9132acf4c0612c4c0adee33566482f1cf4e973",
+    "transport": "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "programCount": 6,
+    "allResponsesEvaluated": true,
+    "allSemanticChecksPassed": true,
+    "programs": [
+      {
+        "name": "root",
+        "invocationIdentifier": "01a0aa62-1972-79b9-a215-1390c6fe810e",
+        "transport": "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+        "responseSha256Before": "7a097ec0f6ab02a4c974c0190ae61b425d9e54900ae7e6be0f3ef6f47f39dcfc",
+        "responseSha256After": "cdbf1d8c8822ed3c89cc5b6ad9d8ad74c88b59ba1d78c2f6b436d3ae747335f3",
+        "decodedSha256After": "ec74d8c3f4a60b0991143c59dc89a177c42fa18ba961133d5eea5ed4d73f31c3",
+        "responseChanged": true,
+        "status": "pass",
+        "checkedAt": "2026-09-16T13:22:30.785Z"
+      },
+      {
+        "name": "material",
+        "invocationIdentifier": "01a0aa62-1972-7d48-b08b-9c5893d88740",
+        "transport": "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+        "responseSha256Before": "793a5524957414d2d3c3a2fa7674baa0dc9a21ecf1808f545e6c8e51ff935134",
+        "responseSha256After": "793a5524957414d2d3c3a2fa7674baa0dc9a21ecf1808f545e6c8e51ff935134",
+        "decodedSha256After": "e71b62807652645901495c038edd371b76b616dfe9ffb7d6c3ee3ce3248d05c2",
+        "responseChanged": false,
+        "status": "pass",
+        "checkedAt": "2026-09-16T13:22:30.785Z"
+      },
+      {
+        "name": "images",
+        "invocationIdentifier": "01a0aa62-1973-7c31-b23b-2cfd8fe8098f",
+        "transport": "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+        "responseSha256Before": "0846e33a32e1ca0e25dfac1f4bd1f977b2a51fa59f1ae1888be82293a9fcce11",
+        "responseSha256After": "0846e33a32e1ca0e25dfac1f4bd1f977b2a51fa59f1ae1888be82293a9fcce11",
+        "decodedSha256After": "8fabf66396ae48d42f6dd6ad998e5fafbf23de27e14758dc164c9cb76b739e33",
+        "responseChanged": false,
+        "status": "pass",
+        "checkedAt": "2026-09-16T13:22:30.785Z"
+      },
+      {
+        "name": "exploration",
+        "invocationIdentifier": "01a0aa62-1973-70fc-bfd9-e1e7928d479d",
+        "transport": "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+        "responseSha256Before": "74aff30f5bc97b627f159238b53ec012a9d9d39d4f1814a6ffc6469ff5fee527",
+        "responseSha256After": "74aff30f5bc97b627f159238b53ec012a9d9d39d4f1814a6ffc6469ff5fee527",
+        "decodedSha256After": "15ee402f5c5d4ff4c73b16165ae4835c55098c57260c253492316af19e9702e0",
+        "responseChanged": false,
+        "status": "pass",
+        "checkedAt": "2026-09-16T13:22:30.785Z"
+      },
+      {
+        "name": "clock",
+        "invocationIdentifier": "01a0aa62-1973-7b17-82f5-5d237c9cc826",
+        "transport": "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+        "responseSha256Before": "8958ca2d9a418f25dad1763bd6fc1540e0f7b7e177f3d4e4c74bc9967b6f4af6",
+        "responseSha256After": "8958ca2d9a418f25dad1763bd6fc1540e0f7b7e177f3d4e4c74bc9967b6f4af6",
+        "decodedSha256After": "74fbbe4c09a06eb4268bf46ccf50211469aed10f270ea63f789cb51dd9284002",
+        "responseChanged": false,
+        "status": "pass",
+        "checkedAt": "2026-09-16T13:22:30.785Z"
+      },
+      {
+        "name": "review",
+        "invocationIdentifier": "01a0aa62-1973-7534-b0d1-96bd0ad72585",
+        "transport": "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+        "responseSha256Before": "70f0182e48fef27175e69499a4e67dc458d3e41a7fd739f76c71dfbdc2c3ca23",
+        "responseSha256After": "70f0182e48fef27175e69499a4e67dc458d3e41a7fd739f76c71dfbdc2c3ca23",
+        "decodedSha256After": "2c6c17e31fac012a35eb6061f080021d57a27ba9f7d3d04e42e99a9d073ec97a",
+        "responseChanged": false,
+        "status": "pass",
+        "checkedAt": "2026-09-16T13:22:30.785Z"
+      }
+    ]
   }
 }
