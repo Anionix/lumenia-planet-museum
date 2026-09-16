@@ -25,16 +25,19 @@ test('source identity is unchanged by generated cosmos output but changes with s
     for(const directory of ['formal','contracts','scripts','tests','mcp','web','reference-assets'])await mkdir(path.join(root,directory));
     for(const file of ['intent.md','spec.md','CONSTRAINTS.md','lean-toolchain','lakefile.toml','lake-manifest.json','package.json','package-lock.json','eslint.config.mjs'])await writeFile(path.join(root,file),'fixture');
     await mkdir(path.join(root,'planetarium/lib'),{recursive:true});
-    await writeFile(path.join(root,'planetarium/lib/reference-physics-contract.mjs'),'fixture');
+    for(const file of ['reference-physics-contract.mjs','threejs-reference-adapter.mjs'])
+      await writeFile(path.join(root,'planetarium/lib',file),'fixture');
     const before=await sourceManifest(root);
     await mkdir(path.join(root,'web/public/cosmos/interactive'),{recursive:true});
     await writeFile(path.join(root,'web/public/cosmos/interactive/main.mjs'),'generated output');
     assert.deepEqual(await sourceManifest(root),before);
     await writeFile(path.join(root,'reference-assets/reference.json'),'new source');
     assert.notEqual((await sourceManifest(root)).sourceRevision,before.sourceRevision);
-    const beforeSharedEdit=await sourceManifest(root);
-    await writeFile(path.join(root,'planetarium/lib/reference-physics-contract.mjs'),'changed shared calculation');
-    assert.notEqual((await sourceManifest(root)).sourceRevision,beforeSharedEdit.sourceRevision);
+    for(const file of ['reference-physics-contract.mjs','threejs-reference-adapter.mjs']){
+      const beforeSharedEdit=await sourceManifest(root);
+      await writeFile(path.join(root,'planetarium/lib',file),'changed shared implementation');
+      assert.notEqual((await sourceManifest(root)).sourceRevision,beforeSharedEdit.sourceRevision);
+    }
   }finally{await rm(root,{recursive:true,force:true});}
 });
 

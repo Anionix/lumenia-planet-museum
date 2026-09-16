@@ -82,14 +82,9 @@ test('an orbit crosses 120 seconds continuously rather than teleporting', () => 
   assert.ok(Math.hypot(...after.map((value, index) => value - before[index])) < 0.02);
 });
 
-test('browser adapters are reproducible copies of the reusable source modules', async () => {
-  for (const filename of ['threejs-reference-adapter.mjs']) {
-    assert.equal(await readFile(new URL('../planetarium/lib/' + filename, import.meta.url), 'utf8'),
-      await readFile(new URL('../web/artwork/' + filename, import.meta.url), 'utf8'));
+test('browser exports share the checked physics and rendering implementations', async () => {
+  for (const filename of ['reference-physics-contract.mjs', 'threejs-reference-adapter.mjs']) {
+    assert.deepEqual(await import('../web/artwork/' + filename),
+      await import('../planetarium/lib/' + filename));
   }
-});
-
-test('browser physics exports are the checked numerical functions', async () => {
-  assert.deepEqual(await import('../web/artwork/reference-physics-contract.mjs'),
-    await import('../planetarium/lib/reference-physics-contract.mjs'));
 });
