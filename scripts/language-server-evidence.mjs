@@ -1,4 +1,5 @@
 import { createHash } from 'node:crypto';
+import { uuidVersionSeven } from './identifiers.mjs';
 
 // llm machine contract
 // claim identifier (UUIDv5): 35302202-9761-5b5d-ac14-01302e53c2bc
@@ -28,6 +29,25 @@ export function languageServerCheckBindingDigest(check, executionIdentifier, sou
   return digest({ executionIdentifier, sourceRevision, check: checkPayload(check) });
 }
 
+const uuidV7 = /^[0-9a-f]{8}-[0-9a-f]{4}-7[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+
+// Capture owns the invocation boundary. The caller supplies a function that performs
+// exactly one MCP call; this function never relabels a completed response.
+export async function captureLanguageServerCheck({ executionIdentifier, sourceRevision, sequence,
+  tool, target, arguments: args, invoke }) {
+  if (!executionIdentifier || !sourceRevision || !Number.isInteger(sequence) || sequence < 0 || typeof invoke !== 'function') {
+    throw new TypeError('A run identity, sequence and invocation function are required');
+  }
+  const invocationIdentifier = uuidVersionSeven(), startedAt = new Date().toISOString();
+  const response = await invoke();
+  const completedAt = new Date().toISOString();
+  const captureProof = { format: 'lean-lsp-invocation/v1', executionIdentifier, sourceRevision,
+    sequence, invocationIdentifier,
+    startedAt, completedAt, argumentsDigest: digest(args ?? null), responseDigest: digest(response) };
+  return { tool, target, ...(args === undefined ? {} : { arguments: args }), response,
+    executionIdentifier, sourceRevision, captureProof };
+}
+
 // machine contract; record_identifier=5c51405c-2fe3-5546-8621-278af8174a55.
 // transition: one atomic capture -> per-response binding -> exact source comparison.
 // A copied response cannot be relabelled without failing its content binding.
@@ -35,8 +55,15 @@ export function captureLanguageServerReceipt({ manifest, executionIdentifier, ch
   if (!manifest?.sourceRevision || !Array.isArray(manifest.files) || !Array.isArray(checks)) {
     throw new TypeError('A source manifest and captured checks are required');
   }
-  const capturedChecks = checks.map((check) => {
-    return { ...check, executionIdentifier,
+  const capturedChecks = checks.map((check, index) => {
+    if (check.captureProof?.format !== 'lean-lsp-invocation/v1' || check.captureProof.executionIdentifier !== executionIdentifier ||
+        check.captureProof.sourceRevision !== manifest.sourceRevision || check.captureProof.sequence !== index ||
+        !uuidV7.test(check.captureProof.invocationIdentifier ?? '') ||
+        check.captureProof.argumentsDigest !== digest(check.arguments ?? null) ||
+        check.captureProof.responseDigest !== digest(check.response)) {
+      throw new TypeError('Every check must come from the current invocation capture');
+    }
+    return { ...check,
       bindingDigest: languageServerCheckBindingDigest(check, executionIdentifier, manifest.sourceRevision) };
   });
   return {
@@ -48,7 +75,8 @@ export function captureLanguageServerReceipt({ manifest, executionIdentifier, ch
     checks: capturedChecks,
     capture: { format: 'lean-lsp-capture/v1', atomic: true, executionIdentifier,
       sourceRevision: manifest.sourceRevision, checkCount: capturedChecks.length,
-      checksDigest: digest(capturedChecks.map((check, index) => ({ index, bindingDigest: check.bindingDigest }))) },
+      checksDigest: digest(capturedChecks.map((check, index) => ({ index, bindingDigest: check.bindingDigest }))),
+      invocationsDigest: digest(capturedChecks.map((check) => check.captureProof)) },
   };
 }
 
@@ -61,9 +89,18 @@ export function languageServerReceiptMatchesSource(receipt, manifest) {
       receipt.sourceRevisionAfter !== manifest.sourceRevision || receipt.checkStartedAtSourceRevision !== manifest.sourceRevision ||
       (receipt.bindingHistory !== undefined && (!Array.isArray(receipt.bindingHistory) || receipt.bindingHistory.length !== 0)) ||
       canonical(receipt.files) !== canonical(manifest.files)) return false;
-  const digestMatches = capture.checksDigest === digest(checks.map((check, index) => ({ index, bindingDigest: check.bindingDigest })));
+  const digestMatches = capture.checksDigest === digest(checks.map((check, index) => ({ index, bindingDigest: check.bindingDigest }))) &&
+    capture.invocationsDigest === digest(checks.map((check) => check.captureProof));
+  const invocationIdentifiers = new Set();
   return digestMatches && checks.every((check) => {
-    return check.executionIdentifier === receipt.executionIdentifier &&
+    return check.captureProof?.format === 'lean-lsp-invocation/v1' &&
+      check.captureProof.executionIdentifier === receipt.executionIdentifier && check.captureProof.sourceRevision === manifest.sourceRevision &&
+      Number.isInteger(check.captureProof.sequence) &&
+      check.captureProof.sequence >= 0 && check.captureProof.sequence < checks.length &&
+      uuidV7.test(check.captureProof.invocationIdentifier ?? '') && !invocationIdentifiers.has(check.captureProof.invocationIdentifier) &&
+      invocationIdentifiers.add(check.captureProof.invocationIdentifier) &&
+      check.captureProof.argumentsDigest === digest(check.arguments ?? null) &&
+      check.captureProof.responseDigest === digest(check.response) &&
       check.bindingDigest === languageServerCheckBindingDigest(check, receipt.executionIdentifier, manifest.sourceRevision);
   });
 }

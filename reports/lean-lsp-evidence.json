@@ -1,8 +1,8 @@
 {
-  "sourceRevision": "sha256:c25e7241ed69a609897d851e977ff9de86435e4b20573b3fbd1298e51760d306",
-  "sourceRevisionBefore": "sha256:c25e7241ed69a609897d851e977ff9de86435e4b20573b3fbd1298e51760d306",
-  "sourceRevisionAfter": "sha256:c25e7241ed69a609897d851e977ff9de86435e4b20573b3fbd1298e51760d306",
-  "checkStartedAtSourceRevision": "sha256:c25e7241ed69a609897d851e977ff9de86435e4b20573b3fbd1298e51760d306",
+  "sourceRevision": "sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1",
+  "sourceRevisionBefore": "sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1",
+  "sourceRevisionAfter": "sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1",
+  "checkStartedAtSourceRevision": "sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1",
   "files": [
     {
       "path": "CONSTRAINTS.md",
@@ -610,7 +610,7 @@
     },
     {
       "path": "scripts/language-server-evidence.mjs",
-      "sha256": "ba5f021c9e2e7a31f7c2b5345087d0663558ac65435d66d49143651d743dca82"
+      "sha256": "aebfdffc08b19b4b49b83034a10fa98e4d01904d390b61119dfdfb8ca6e94e4d"
     },
     {
       "path": "scripts/measurement-context.mjs",
@@ -746,7 +746,7 @@
     },
     {
       "path": "tests/review-verification.test.mjs",
-      "sha256": "d5120c2b66a12dd0a5130a6bb97789de7258f876a4a8b076f3138ae672d6c944"
+      "sha256": "af9087ad4668a3b7ad0868808b996e89c3acc86e0ac6328cc15361530c6852ef"
     },
     {
       "path": "tests/threejs-reference-adapter.test.mjs",
@@ -1013,23 +1013,24 @@
       "sha256": "c77757068271adb58670f7d2de2d253ef2ffe2918809f8460b6d624496293d19"
     }
   ],
-  "executionIdentifier": "01a0a9ea-8326-7133-938d-98c018029bc1",
-  "startedAt": "2026-09-16T11:21:36.276Z",
-  "recordedAt": "2026-09-16T11:21:36.276Z",
+  "executionIdentifier": "01a0aa23-b1bf-7fbe-8f9c-9e3e6e5a18a9",
+  "startedAt": "2026-09-16T12:14:21.553Z",
+  "recordedAt": "2026-09-16T12:17:35.059Z",
   "capture": {
     "format": "lean-lsp-capture/v1",
     "atomic": true,
-    "executionIdentifier": "01a0a9ea-8326-7133-938d-98c018029bc1",
-    "sourceRevision": "sha256:c25e7241ed69a609897d851e977ff9de86435e4b20573b3fbd1298e51760d306",
+    "executionIdentifier": "01a0aa23-b1bf-7fbe-8f9c-9e3e6e5a18a9",
+    "sourceRevision": "sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1",
     "checkCount": 32,
-    "checksDigest": "sha256:8bc840341bf129cf0b8c3c442e8c2532f26682cfa9a9a11dd6d272574113ead1"
+    "checksDigest": "sha256:5bc6777c8b4cfe1068020337dc565662c81802addf4509242647ad3431856b0c",
+    "invocationsDigest": "sha256:670aff448068c373016d8cbb6722ba81d7790f46543736794876bb7ca2dfec54"
   },
   "checks": [
     {
       "tool": "lean_build",
       "target": "project",
-      "executionIdentifier": "01a0a9ea-8326-7133-938d-98c018029bc1",
-      "bindingDigest": "sha256:451305c4fd0f5f5976b2350864cb64745a0d070a5e0d418a22984455553248b7",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa23-b1bf-7fbe-8f9c-9e3e6e5a18a9","sourceRevision":"sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1","sequence":0,"invocationIdentifier":"01a0aa23-b1bf-71b6-aed4-3730a1ffa7bb","startedAt":"2026-09-16T12:14:21.553Z","completedAt":"2026-09-16T12:14:40.804Z","argumentsDigest":"sha256:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b","responseDigest":"sha256:b0dd457b61f2c280e3f03e875dd7ed96e7826aa836b098fbbdbadabfca7b95e0"},
+      "bindingDigest": "sha256:665f0fe4547a43213be78abc99545465ee2c50e91c3c87a7824294b893a269f6",
       "response": {
         "content": [
           {
@@ -1048,8 +1049,8 @@
     {
       "tool": "lean_diagnostic_messages",
       "target": "Lumenia.asset_checks_iff_requirements",
-      "executionIdentifier": "01a0a9ea-8326-7133-938d-98c018029bc1",
-      "bindingDigest": "sha256:f8fc36e777a8c8f6b8e590435b2b59394d9ac2d3706271976af600d4553fdc3c",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa23-b1bf-7fbe-8f9c-9e3e6e5a18a9","sourceRevision":"sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1","sequence":1,"invocationIdentifier":"01a0aa23-b1bf-70e0-8ba9-fe5ca09459b2","startedAt":"2026-09-16T12:14:21.556Z","completedAt":"2026-09-16T12:14:30.873Z","argumentsDigest":"sha256:6f006fa31559d01251df1aadc7c7892628573d104497050d5bb83527be5b0837","responseDigest":"sha256:c89d82221fbe8f9030d09d5f30ecc4be44a7a17d4e099a0873b3af4b3802416f"},
+      "bindingDigest": "sha256:27367dc41c9bc065f1b0e8415c42dfd6d611b42e69b2f962f65a13671fc4393c",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean"
       },
@@ -1074,8 +1075,8 @@
     {
       "tool": "lean_file_outline",
       "target": "Lumenia.asset_checks_iff_requirements",
-      "executionIdentifier": "01a0a9ea-8326-7133-938d-98c018029bc1",
-      "bindingDigest": "sha256:df89308993a6f5e62cd9c73e96db5dae9c114727f8bf71cc889c57eaf22be9c1",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa23-b1bf-7fbe-8f9c-9e3e6e5a18a9","sourceRevision":"sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1","sequence":2,"invocationIdentifier":"01a0aa23-b1bf-72d5-b3a9-b4da1133e074","startedAt":"2026-09-16T12:14:21.556Z","completedAt":"2026-09-16T12:14:30.872Z","argumentsDigest":"sha256:f5fe6b553ca43863ade7026a9b1a331f48b6795a8dc5708fe863050d0566d324","responseDigest":"sha256:f7f4b720fba3b5a57b95f7ca07a1e494630e14afc8384cc3d3c69da622400cf2"},
+      "bindingDigest": "sha256:79b5bd129983ab6151fb4249288cdacbc8100425a9f78169c10f66c8cc9747e8",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "max_declarations": 40
@@ -1421,8 +1422,8 @@
     {
       "tool": "lean_hover_info",
       "target": "Lumenia.asset_checks_iff_requirements",
-      "executionIdentifier": "01a0a9ea-8326-7133-938d-98c018029bc1",
-      "bindingDigest": "sha256:6ee8c09ed9cf6975569ab5cb3d875c28e99139932396ea269d3fd11476ecb14d",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa23-b1bf-7fbe-8f9c-9e3e6e5a18a9","sourceRevision":"sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1","sequence":3,"invocationIdentifier":"01a0aa23-b1bf-7db8-9ce3-ed36721bfa69","startedAt":"2026-09-16T12:14:21.556Z","completedAt":"2026-09-16T12:14:22.824Z","argumentsDigest":"sha256:4f82867a328d094dccd48201eb2e1315d71a497777f26ac851cadead9ff98f4b","responseDigest":"sha256:70f0484252e1f75903b96755a1dffb486bf060c10550cc98e3def7a647d4b41a"},
+      "bindingDigest": "sha256:7801b292c8994fc0939afa25b6e9c99ee60f4c92ea7f9b98f0d7c530d2185afe",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "line": 30,
@@ -1446,8 +1447,8 @@
     {
       "tool": "lean_goal",
       "target": "Lumenia.asset_checks_iff_requirements",
-      "executionIdentifier": "01a0a9ea-8326-7133-938d-98c018029bc1",
-      "bindingDigest": "sha256:dd68bd93262b61393dc2fee66738b544fe79343dce2e5f164d434c028db3544a",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa23-b1bf-7fbe-8f9c-9e3e6e5a18a9","sourceRevision":"sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1","sequence":4,"invocationIdentifier":"01a0aa23-b1bf-74c2-a2bb-59c87c649291","startedAt":"2026-09-16T12:14:21.556Z","completedAt":"2026-09-16T12:14:30.869Z","argumentsDigest":"sha256:a1dd5a66215bb837d8a79cf505b4b4c540be516ea8d315a892371f132ca25fe2","responseDigest":"sha256:248ad19b573b6edc58549462f674360391abdf805561627365aebbda0fd74161"},
+      "bindingDigest": "sha256:c0d06816b6953b3237acf472ad95dd525c0b56aea144ad9e3be6db0c36b030b6",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "line": 57
@@ -1471,8 +1472,8 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.asset_checks_iff_requirements",
-      "executionIdentifier": "01a0a9ea-8326-7133-938d-98c018029bc1",
-      "bindingDigest": "sha256:0f87122663cef69ad88ef198f89e02a48ed33fe0bf9d78fc5506201dd5780e87",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa23-b1bf-7fbe-8f9c-9e3e6e5a18a9","sourceRevision":"sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1","sequence":5,"invocationIdentifier":"01a0aa23-b1bf-7348-85a6-a84adbcf03de","startedAt":"2026-09-16T12:14:21.556Z","completedAt":"2026-09-16T12:14:58.751Z","argumentsDigest":"sha256:c2c0261436f6d2ccdee5ed2d0563f77739d9d24fc786dfb253d9e6d2dbd53895","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
+      "bindingDigest": "sha256:424c30c694267ddf3e149adfa46e805a37bde23bf0a360a345730db1530c8c18",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.asset_checks_iff_requirements",
@@ -1495,8 +1496,8 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.validate_raw_asset_accepts_iff",
-      "executionIdentifier": "01a0a9ea-8326-7133-938d-98c018029bc1",
-      "bindingDigest": "sha256:1fea5c1e4a973c0ac9be339d4521234380cd65335b19f852757b2ff5004ecf08",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa23-b1bf-7fbe-8f9c-9e3e6e5a18a9","sourceRevision":"sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1","sequence":6,"invocationIdentifier":"01a0aa23-b1bf-7754-992e-bcb921182be8","startedAt":"2026-09-16T12:14:21.556Z","completedAt":"2026-09-16T12:15:04.268Z","argumentsDigest":"sha256:14bd3dbb11158cf582e7a703ec4450cd136302c2214f0e22b5ec507ef901964a","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
+      "bindingDigest": "sha256:07454a6f19c50bf35497be14ef744a963a72b8a246e5c81c8086ddbcea30c426",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.validate_raw_asset_accepts_iff",
@@ -1519,8 +1520,8 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.validate_raw_asset_rejects_iff",
-      "executionIdentifier": "01a0a9ea-8326-7133-938d-98c018029bc1",
-      "bindingDigest": "sha256:01596d2201e6c75480aa26a08177136d5df0f226a0118e531f36fb04c26faadc",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa23-b1bf-7fbe-8f9c-9e3e6e5a18a9","sourceRevision":"sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1","sequence":7,"invocationIdentifier":"01a0aa23-b1bf-7acf-a991-a2ad06099c92","startedAt":"2026-09-16T12:14:21.556Z","completedAt":"2026-09-16T12:15:10.527Z","argumentsDigest":"sha256:b7b0b2c8e934b6059cc5daadfe488a69cc16d78d9633cbdc4c0e4fe0fd8c88ff","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
+      "bindingDigest": "sha256:13a3bea143211c44965d8a75b09358583c9b7a085595a3477b3bbb2204131172",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.validate_raw_asset_rejects_iff",
@@ -1543,8 +1544,8 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.validate_raw_asset_preserves_input",
-      "executionIdentifier": "01a0a9ea-8326-7133-938d-98c018029bc1",
-      "bindingDigest": "sha256:28c63e234033410f087655a33d8f3b55e9eb63e898c3cb9fd6d8a1781a9500ac",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa23-b1bf-7fbe-8f9c-9e3e6e5a18a9","sourceRevision":"sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1","sequence":8,"invocationIdentifier":"01a0aa23-b1bf-7996-9d3a-125db825d66c","startedAt":"2026-09-16T12:14:21.557Z","completedAt":"2026-09-16T12:15:16.628Z","argumentsDigest":"sha256:727659186b4429aa2dc4b718e2e97a7efc974d646a7b5211a6c6658da59737c2","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
+      "bindingDigest": "sha256:b9750838e837f4605b38a7f40f2c91c28d6a4d9fdaf535f42fb7a47b904e6295",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.validate_raw_asset_preserves_input",
@@ -1567,8 +1568,8 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.validate_raw_asset_sound",
-      "executionIdentifier": "01a0a9ea-8326-7133-938d-98c018029bc1",
-      "bindingDigest": "sha256:c3deb7220dac08711b006445f4bec9a609664e125e81df4a53a810d96e4a85f8",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa23-b1bf-7fbe-8f9c-9e3e6e5a18a9","sourceRevision":"sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1","sequence":9,"invocationIdentifier":"01a0aa23-b1bf-7a5f-9e45-117bfc9e7367","startedAt":"2026-09-16T12:14:21.557Z","completedAt":"2026-09-16T12:15:21.864Z","argumentsDigest":"sha256:016565a725df14a7cd20eabb4bc22da8c6ce8cc8f1861f16d07b67176b3eb426","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
+      "bindingDigest": "sha256:102fd6ccae6af8d2318d45af3ca270343082d565a53aa6fe4d6ea3d2e7b1d994",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.validate_raw_asset_sound",
@@ -1591,8 +1592,8 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.validated_asset_satisfies_requirements",
-      "executionIdentifier": "01a0a9ea-8326-7133-938d-98c018029bc1",
-      "bindingDigest": "sha256:f3cbd2dcaa7e8b3aea0b5a2f701e7ea45d3fed2bb3e72c40d28c05cc4b01d1b9",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa23-b1bf-7fbe-8f9c-9e3e6e5a18a9","sourceRevision":"sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1","sequence":10,"invocationIdentifier":"01a0aa23-b1bf-7085-b96a-ad116b5a9ea3","startedAt":"2026-09-16T12:14:21.558Z","completedAt":"2026-09-16T12:16:03.099Z","argumentsDigest":"sha256:11ed267e0e4800accffde5966415b78cd1c7277f8551b0996e274edea8f6b7ff","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
+      "bindingDigest": "sha256:140b70eb524f4521d089affa972960bbb1733a80b68740c9079f8fd83f79c85b",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.validated_asset_satisfies_requirements",
@@ -1615,8 +1616,8 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.meshopt_variants_are_exclusive",
-      "executionIdentifier": "01a0a9ea-8326-7133-938d-98c018029bc1",
-      "bindingDigest": "sha256:c09e5c20cb263e2fb64ad863d4b0e102218218ceb56476497776d02f733354e3",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa23-b1bf-7fbe-8f9c-9e3e6e5a18a9","sourceRevision":"sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1","sequence":11,"invocationIdentifier":"01a0aa23-b1bf-7193-9b0e-23a648f642c5","startedAt":"2026-09-16T12:14:21.558Z","completedAt":"2026-09-16T12:15:27.180Z","argumentsDigest":"sha256:86e0bcc2b20d82b2ee085f9cd8789307af114bd4757b29a6f97598e2e383237f","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
+      "bindingDigest": "sha256:e6b689a94fc27f2825ac3c3820e3598abb3e0dcb2fbc329d9b947b52e2c19841",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.meshopt_variants_are_exclusive",
@@ -1639,8 +1640,8 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.extension_meshopt_requires_decoder",
-      "executionIdentifier": "01a0a9ea-8326-7133-938d-98c018029bc1",
-      "bindingDigest": "sha256:e0a8efc705b8d65da0713281acbc48378f168a4941c94948faa097abc0afedf6",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa23-b1bf-7fbe-8f9c-9e3e6e5a18a9","sourceRevision":"sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1","sequence":12,"invocationIdentifier":"01a0aa23-b1bf-79be-93f5-537b3d6ac3b4","startedAt":"2026-09-16T12:14:21.558Z","completedAt":"2026-09-16T12:15:33.006Z","argumentsDigest":"sha256:be98a8c7877fb95c957213d0bc36c6590893ac8b6a89cb203eb00066e2ac1d19","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
+      "bindingDigest": "sha256:c1e18b2003fc78688addd061a6bdba3db28a86463df7e3d068284e4888a4c682",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.extension_meshopt_requires_decoder",
@@ -1663,8 +1664,8 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.khronos_meshopt_requires_decoder",
-      "executionIdentifier": "01a0a9ea-8326-7133-938d-98c018029bc1",
-      "bindingDigest": "sha256:566c7d97bba1efd6ae81a122d162dc5743f17dbcbfe09d2bd0f0acc83d7feb66",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa23-b1bf-7fbe-8f9c-9e3e6e5a18a9","sourceRevision":"sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1","sequence":13,"invocationIdentifier":"01a0aa23-b1bf-75e2-a397-e35b0cbe159c","startedAt":"2026-09-16T12:14:21.558Z","completedAt":"2026-09-16T12:16:14.201Z","argumentsDigest":"sha256:ead5f3db5b6f5acf499244fc09de6f27f14435bf3667605a0b026219c8f105d6","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
+      "bindingDigest": "sha256:80496bc3651de47e8fc8d9af2bcadda264684a01959261d2591ef922a918b299",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.khronos_meshopt_requires_decoder",
@@ -1687,8 +1688,8 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.ktx2_requires_loader",
-      "executionIdentifier": "01a0a9ea-8326-7133-938d-98c018029bc1",
-      "bindingDigest": "sha256:3d7144640df5de175a434c65c4ed87cad26a57044f1444c0ff095bfcce6d70b5",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa23-b1bf-7fbe-8f9c-9e3e6e5a18a9","sourceRevision":"sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1","sequence":14,"invocationIdentifier":"01a0aa23-b1bf-7ba6-816e-bca64e4d9d87","startedAt":"2026-09-16T12:14:21.558Z","completedAt":"2026-09-16T12:15:50.404Z","argumentsDigest":"sha256:1959bc2f313fa20639e3170b58a78d08b42f88e8e78d8dca73a609d226169c64","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
+      "bindingDigest": "sha256:58fcdd6192fed5e589706ffbcff228f7be41bad13dd251b8fb9ecea3a926f958",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.ktx2_requires_loader",
@@ -1711,8 +1712,8 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.draco_requires_loader",
-      "executionIdentifier": "01a0a9ea-8326-7133-938d-98c018029bc1",
-      "bindingDigest": "sha256:10b1cc51c76abad7c8328b474dd789828185d0bb6285fd7764ea867056fa25d0",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa23-b1bf-7fbe-8f9c-9e3e6e5a18a9","sourceRevision":"sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1","sequence":15,"invocationIdentifier":"01a0aa23-b1bf-742d-85bb-18e900e564b8","startedAt":"2026-09-16T12:14:21.558Z","completedAt":"2026-09-16T12:15:57.301Z","argumentsDigest":"sha256:11991a5484c007c6e0ef5de0c022fd0158103f4744da761618d93b572aede866","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
+      "bindingDigest": "sha256:1fc42c8d6b86d9c978ca73fff4b0e7a0303682189c7eeb7891f35be0e3546e9a",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.draco_requires_loader",
@@ -1735,8 +1736,8 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.draco_is_enabled_iff_explicit",
-      "executionIdentifier": "01a0a9ea-8326-7133-938d-98c018029bc1",
-      "bindingDigest": "sha256:5e0dbd350f2bb730b9c3ccd035a826e768a0e053741db696e804a9d2c9fd10a9",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa23-b1bf-7fbe-8f9c-9e3e6e5a18a9","sourceRevision":"sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1","sequence":16,"invocationIdentifier":"01a0aa23-b1bf-7aaf-9154-53e226f30830","startedAt":"2026-09-16T12:14:21.558Z","completedAt":"2026-09-16T12:16:19.646Z","argumentsDigest":"sha256:515416908098316526dc680ca53ad9cecd1a50904c62ed52033587c758f5663e","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
+      "bindingDigest": "sha256:b2fb262f603a477dc973f6a397c4b1cdf995881e5bd706f55e16a04128dfb694",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.draco_is_enabled_iff_explicit",
@@ -1759,8 +1760,8 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.named_nodes_require_preservation",
-      "executionIdentifier": "01a0a9ea-8326-7133-938d-98c018029bc1",
-      "bindingDigest": "sha256:bd7bd7e7a6d8521dbed199ac13913abb6e3447a4a6684a10a77d48468d6148ea",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa23-b1bf-7fbe-8f9c-9e3e6e5a18a9","sourceRevision":"sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1","sequence":17,"invocationIdentifier":"01a0aa23-b1bf-71b0-8f09-4de4418a6773","startedAt":"2026-09-16T12:14:21.558Z","completedAt":"2026-09-16T12:15:44.859Z","argumentsDigest":"sha256:2136a90812bb44986f4b9b45b8958880b93ffc9dd675330a2a2caa1402c0207a","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
+      "bindingDigest": "sha256:641e166a0a801f9eb09b5351e0e994a73fb352d7cb35ba7c013fc34c3d75e79d",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.named_nodes_require_preservation",
@@ -1783,8 +1784,8 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.extras_require_preservation",
-      "executionIdentifier": "01a0a9ea-8326-7133-938d-98c018029bc1",
-      "bindingDigest": "sha256:0b08125414000a13ae332cd2456d7ab7de74ebdb13c9dd83ba5d56fdb051b6a0",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa23-b1bf-7fbe-8f9c-9e3e6e5a18a9","sourceRevision":"sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1","sequence":18,"invocationIdentifier":"01a0aa23-b1bf-7a0c-9c3b-9eedc1c90a0b","startedAt":"2026-09-16T12:14:21.558Z","completedAt":"2026-09-16T12:15:37.568Z","argumentsDigest":"sha256:6052aa8ea817ff44201f4fcf22ea2ce86c026d5afa227252b8bef4d2d217310a","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
+      "bindingDigest": "sha256:fc45b271c84965cc4da31fcddf728d2441200377ee11b6ea2ec559ce0e6cb07f",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.extras_require_preservation",
@@ -1807,8 +1808,8 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.both_meshopt_flags_reject",
-      "executionIdentifier": "01a0a9ea-8326-7133-938d-98c018029bc1",
-      "bindingDigest": "sha256:3baab5af60c8a12b3d00d9a6a605441d5e99bae68507937354eb0506c5f399fd",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa23-b1bf-7fbe-8f9c-9e3e6e5a18a9","sourceRevision":"sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1","sequence":19,"invocationIdentifier":"01a0aa23-b1bf-7081-b656-0817e6d47ae9","startedAt":"2026-09-16T12:14:21.558Z","completedAt":"2026-09-16T12:16:09.166Z","argumentsDigest":"sha256:64ff065b4b2963f7065e6b896f4799b3444a52a6df436bd486d51185b45fba4e","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
+      "bindingDigest": "sha256:6fd389905cdc4bd0618dc8ce1b46a1745f18b461272ff04117238aeee7e807c4",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.both_meshopt_flags_reject",
@@ -1831,8 +1832,8 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.missing_meshopt_decoder_rejects",
-      "executionIdentifier": "01a0a9ea-8326-7133-938d-98c018029bc1",
-      "bindingDigest": "sha256:69fba1163ac2e5a138cf017dfb02af9ad85097aa8e8d7b666dbd69f53396468b",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa23-b1bf-7fbe-8f9c-9e3e6e5a18a9","sourceRevision":"sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1","sequence":20,"invocationIdentifier":"01a0aa23-b1bf-74bd-bbc2-aa96a045efd6","startedAt":"2026-09-16T12:14:21.558Z","completedAt":"2026-09-16T12:16:24.172Z","argumentsDigest":"sha256:b4357110724fe39c7555d333a8b8323af254b4eb4e099970ef9a0b1b9d3237d1","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
+      "bindingDigest": "sha256:68e332edf022d98e1fb2359d58b734f94d6510c73926035e46318110b2c35eb0",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.missing_meshopt_decoder_rejects",
@@ -1855,8 +1856,8 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.shipped_history_requires_asset_requirements",
-      "executionIdentifier": "01a0a9ea-8326-7133-938d-98c018029bc1",
-      "bindingDigest": "sha256:08785e23b44b0f150a6effa9e1fbfa37672fda63c038b8a445f069d74394f2eb",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa23-b1bf-7fbe-8f9c-9e3e6e5a18a9","sourceRevision":"sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1","sequence":21,"invocationIdentifier":"01a0aa23-b1bf-7083-b7ef-485c70fcd1bb","startedAt":"2026-09-16T12:14:21.558Z","completedAt":"2026-09-16T12:16:31.138Z","argumentsDigest":"sha256:708ee12dd28cf39fe605adc78126895706d17176fcd2c6e8f5ec71f78c57f392","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
+      "bindingDigest": "sha256:1ec7e1a266081dffa802c371fd953a3bfcb647842a42c13ebc3f6ed332ff8337",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.shipped_history_requires_asset_requirements",
@@ -1879,8 +1880,8 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.shipped_requires_validation",
-      "executionIdentifier": "01a0a9ea-8326-7133-938d-98c018029bc1",
-      "bindingDigest": "sha256:f4189db9985d6079fe3b0dec91134e72692df76f1a0c4bad972138f105baff56",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa23-b1bf-7fbe-8f9c-9e3e6e5a18a9","sourceRevision":"sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1","sequence":22,"invocationIdentifier":"01a0aa23-b1bf-7cb2-8945-dcce9a94d1e5","startedAt":"2026-09-16T12:14:21.558Z","completedAt":"2026-09-16T12:16:40.091Z","argumentsDigest":"sha256:5b489872563f5c65647cda39765c3ea786555aed17732bab9b500b6f98e8fd55","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
+      "bindingDigest": "sha256:046a01d3167060fa98e757124400086d3a3a0f00a9a16bc1b9049229d87f8754",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.shipped_requires_validation",
@@ -1903,8 +1904,8 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.invalid_asset_has_no_shipped_history",
-      "executionIdentifier": "01a0a9ea-8326-7133-938d-98c018029bc1",
-      "bindingDigest": "sha256:72d1876c159775466b6c2194a88faae3fa06f4efce24612990e2272aa1f88d10",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa23-b1bf-7fbe-8f9c-9e3e6e5a18a9","sourceRevision":"sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1","sequence":23,"invocationIdentifier":"01a0aa23-b1bf-7592-8729-7939c9000dd0","startedAt":"2026-09-16T12:14:21.558Z","completedAt":"2026-09-16T12:16:46.925Z","argumentsDigest":"sha256:84a678b6537cc3c1b1a316b1e8d15211d9710c07228f9c0eee70dee01ff8042e","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
+      "bindingDigest": "sha256:46fd94fd3dab2a61667786994a5004e26c4b1004d6514633ec04c123e8877e28",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.invalid_asset_has_no_shipped_history",
@@ -1927,8 +1928,8 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.shipment_trace_is_exactly_optimize_validate_ship",
-      "executionIdentifier": "01a0a9ea-8326-7133-938d-98c018029bc1",
-      "bindingDigest": "sha256:2fc15817763f62995e7360445d1abd336b35eaa1e99575087e19422e214edac2",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa23-b1bf-7fbe-8f9c-9e3e6e5a18a9","sourceRevision":"sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1","sequence":24,"invocationIdentifier":"01a0aa23-b1bf-7ccf-930d-209f14870bfb","startedAt":"2026-09-16T12:14:21.558Z","completedAt":"2026-09-16T12:17:02.884Z","argumentsDigest":"sha256:9c2bbdce5684ca221e536f1dff5ebac2d354610e34af94ef0e9a44cf74473136","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
+      "bindingDigest": "sha256:564c44048381fb2a372beec468952ea4cb0d1f880589d0729cfd5ae1a707d838",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.shipment_trace_is_exactly_optimize_validate_ship",
@@ -1951,8 +1952,8 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.browser_capability_requires_client_component",
-      "executionIdentifier": "01a0a9ea-8326-7133-938d-98c018029bc1",
-      "bindingDigest": "sha256:c11579403b6f01043f33c81c3dddcc0f575964fc5d8b47e4ef3bb11faaa9a141",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa23-b1bf-7fbe-8f9c-9e3e6e5a18a9","sourceRevision":"sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1","sequence":25,"invocationIdentifier":"01a0aa23-b1bf-71d9-b24a-888ad1321d18","startedAt":"2026-09-16T12:14:21.558Z","completedAt":"2026-09-16T12:16:51.651Z","argumentsDigest":"sha256:b82c3f21b0d4f43f7149c1d362dd038b45a4c3ea5bf9c18dd8f374f3606797ae","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
+      "bindingDigest": "sha256:dceae3239c192cd0560b94445fb1567a57e62849926d3824ce1083b778cf9270",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.browser_capability_requires_client_component",
@@ -1975,8 +1976,8 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.static_export_cannot_require_server_only",
-      "executionIdentifier": "01a0a9ea-8326-7133-938d-98c018029bc1",
-      "bindingDigest": "sha256:150d000bfb225fee05606f277968d122951740bb091265da26c6d932d4486e09",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa23-b1bf-7fbe-8f9c-9e3e6e5a18a9","sourceRevision":"sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1","sequence":26,"invocationIdentifier":"01a0aa23-b1bf-75d0-9658-69a5a8bcb3d9","startedAt":"2026-09-16T12:14:21.558Z","completedAt":"2026-09-16T12:17:08.332Z","argumentsDigest":"sha256:43b5fc89e706d90bd2e0b1d1ac427032037b6a3b08b41e232c1707979fd45ef0","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
+      "bindingDigest": "sha256:abd8e154cddaf0af23d95c62dd298f0132b58f2c9937b018bd20a792863bc212",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.static_export_cannot_require_server_only",
@@ -1999,8 +2000,8 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.accepted_component_places_browser_requirements_on_client",
-      "executionIdentifier": "01a0a9ea-8326-7133-938d-98c018029bc1",
-      "bindingDigest": "sha256:204a22dd91464f50be6ba903b418181f98a42f9fc629257011ef0e45d3e1afe0",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa23-b1bf-7fbe-8f9c-9e3e6e5a18a9","sourceRevision":"sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1","sequence":27,"invocationIdentifier":"01a0aa23-b1bf-74a3-ae57-3662587f6373","startedAt":"2026-09-16T12:14:21.558Z","completedAt":"2026-09-16T12:17:21.447Z","argumentsDigest":"sha256:07d3c91ae10b6f4333185df6a7e1740adb70ea64fc85cdcab94d0d45c7cdddbe","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
+      "bindingDigest": "sha256:df8afa30b03cb68bf38d56afd96f5c02f9016988dc71b2d4b0ab7bba926cd84b",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.accepted_component_places_browser_requirements_on_client",
@@ -2023,8 +2024,8 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.client_component_cannot_require_server_only",
-      "executionIdentifier": "01a0a9ea-8326-7133-938d-98c018029bc1",
-      "bindingDigest": "sha256:ea9cbb3c898f1984686f74a59397e233366d12208df5718eff4781c42d5d39af",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa23-b1bf-7fbe-8f9c-9e3e6e5a18a9","sourceRevision":"sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1","sequence":28,"invocationIdentifier":"01a0aa23-b1bf-7be7-b890-89e209bfab1a","startedAt":"2026-09-16T12:14:21.558Z","completedAt":"2026-09-16T12:16:57.019Z","argumentsDigest":"sha256:ca13f3b2f3732e67b5c701a45cfa96fd4886820cebecb86c2cef35c69e3964fd","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
+      "bindingDigest": "sha256:4c21359c22a635e399861a8720c2143e6e7d2095a71a8c33c79c0db654aab15c",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.client_component_cannot_require_server_only",
@@ -2047,8 +2048,8 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.core_transfer_total_within_budget",
-      "executionIdentifier": "01a0a9ea-8326-7133-938d-98c018029bc1",
-      "bindingDigest": "sha256:c1f8e2f97b0b5d1e35f02814cc8ba47ec454c6329f01665f5bb15d4fd248da8a",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa23-b1bf-7fbe-8f9c-9e3e6e5a18a9","sourceRevision":"sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1","sequence":29,"invocationIdentifier":"01a0aa23-b1bf-7d12-98bf-1a95102daa80","startedAt":"2026-09-16T12:14:21.558Z","completedAt":"2026-09-16T12:17:35.059Z","argumentsDigest":"sha256:9f046ec1dad4ed219b662c2d16c6e56f525a4abb9ce563053e59193c90c66521","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
+      "bindingDigest": "sha256:67eea2a977247556134691a90ebc214703a344cafae086fe1defa011106564b2",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.core_transfer_total_within_budget",
@@ -2071,8 +2072,8 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.category_budget_total_is_204800_bytes",
-      "executionIdentifier": "01a0a9ea-8326-7133-938d-98c018029bc1",
-      "bindingDigest": "sha256:581cea1c87e75aaaf1dab758da7af3a39a43948eae2ea0b135a809582efa9eef",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa23-b1bf-7fbe-8f9c-9e3e6e5a18a9","sourceRevision":"sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1","sequence":30,"invocationIdentifier":"01a0aa23-b1bf-7043-935f-ea4a4c9b0cf6","startedAt":"2026-09-16T12:14:21.558Z","completedAt":"2026-09-16T12:17:14.963Z","argumentsDigest":"sha256:adde7f5a8781188c7e20ae3c98a256a3f5672c146c66d795fac636f12ce84303","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
+      "bindingDigest": "sha256:b9572f7597b98a3c8bf96f036c6d045753beb2ce8164e7ee97d26786700df2e1",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.category_budget_total_is_204800_bytes",
@@ -2095,8 +2096,8 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.measured_gate_pass_iff",
-      "executionIdentifier": "01a0a9ea-8326-7133-938d-98c018029bc1",
-      "bindingDigest": "sha256:1332beadd84b8b3e8cbbd0eb8e42d91ec17b80fde9f0f4726eafc969ebf1ec45",
+      "captureProof": {"format":"lean-lsp-invocation/v1","executionIdentifier":"01a0aa23-b1bf-7fbe-8f9c-9e3e6e5a18a9","sourceRevision":"sha256:a844cc765af953da98bd61787a8eea72fd51cc86e1cd05e2bf1d1e56f8718aa1","sequence":31,"invocationIdentifier":"01a0aa23-b1bf-75da-8e47-88d2cbae50b3","startedAt":"2026-09-16T12:14:21.558Z","completedAt":"2026-09-16T12:17:28.078Z","argumentsDigest":"sha256:cf0b1d0cf3a724d0c368a8bbfe5124403efeba77e7080eadaa421c7da725b997","responseDigest":"sha256:dddaa9574e76a0a979f7e981ccf9a1383027db142cd70090fb39375e352ced66"},
+      "bindingDigest": "sha256:6f23bc60932d7812e185db2a3051dadbe665a21531a814edd1c8d6b519c508ae",
       "arguments": {
         "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
         "theorem_name": "Lumenia.measured_gate_pass_iff",
