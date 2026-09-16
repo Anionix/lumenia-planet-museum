@@ -18,4 +18,4 @@ jobs:
       - run: npm ci
       - run: npm run lint && npx --no-install eslint scripts
       - run: node scripts/connect-planetarium.mjs
-      - run: node --test tests/json-lines.test.mjs tests/audit-record-consistency.test.mjs
+      - run: node --test tests/json-lines.test.mjs tests/audit-record-consistency.test.mjs tests/exploration.test.mjs

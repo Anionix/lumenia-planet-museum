@@ -40,7 +40,7 @@ function observe(){
 }
 function tick(now){
   frame=0;if(disposed||document.hidden||!session)return;
-  const seconds=Math.min((now-lastTick)/1000,limits.maximumSeconds);lastTick=now;
+  const seconds=Math.max(0,Math.min((now-lastTick)/1000,limits.maximumSeconds));lastTick=now;
   const input=[0,0,0];for(const key of keys){const direction=axes[commands[key]];if(direction)for(let axis=0;axis<3;axis++)input[axis]+=direction[axis];}
   if(heldMove&&now-holdStarted>160){for(let axis=0;axis<3;axis++)input[axis]+=axes[heldMove][axis];heldMoved=true;}
   const moving=input.some(Boolean)||(landingInput.checked&&collision);
