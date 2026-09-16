@@ -105,4 +105,19 @@ example : evaluateMeasuredGate ⟨some 2501, 2500, "same", "same"⟩ = .fail := 
 example : evaluateMeasuredGate ⟨none, 2500, "same", "same"⟩ = .blocked := by decide
 example : evaluateMeasuredGate ⟨some 1, 2500, "old", "new"⟩ = .staleEvidence := by decide
 
+-- claimIdentifier=a9edc65d-7707-5763-bb76-176d2a2b21f6; executionIdentifier=01a0ab94-f361-737f-91a9-1dd9adeca578; transition=specified -> proved
+-- Perm preserves multiplicity; regression tests check the JavaScript boundary, not this proof.
+theorem checkNamePermutationIsInvariantUnderReversal (actual expected : List String) :
+    List.Perm actual.reverse expected ↔ List.Perm actual expected := by
+  let rec accumulated : (names reversed : List String) → List.Perm (names.reverseAux reversed) (names ++ reversed)
+    | [], _ => .rfl
+    | name :: names, reversed => (accumulated names (name :: reversed)).trans List.perm_middle
+  have appendEmpty : actual ++ [] = actual := by
+    induction actual with
+    | nil => rfl
+    | cons name names previous => exact congrArg (name :: ·) previous
+  have reversal : actual.reverse.Perm actual := (accumulated actual []).trans (List.Perm.of_eq appendEmpty)
+  exact ⟨fun permuted => reversal.symm.trans permuted, fun permuted => reversal.trans permuted⟩
+#print axioms checkNamePermutationIsInvariantUnderReversal
+
 end Lumenia.Tests
