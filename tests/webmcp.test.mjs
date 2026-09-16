@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {registerPageTools,explorationTools,imageExhibitionTools,createPresentationCheckpoint} from '../reference-assets/artist-cosmos/interactive/webmcp.mjs';
+import {registerPageTools,explorationTools,imageExhibitionTools,createPresentationCheckpoint,assertPresentedState,imageConfigurationTarget} from '../reference-assets/artist-cosmos/interactive/webmcp.mjs';
 import {createWorldSession,movement,moveCamera,limits} from '../reference-assets/artist-cosmos/explore/navigation.mjs';
 import {readFile} from 'node:fs/promises';
 
@@ -10,6 +10,26 @@ function registry(){
 }
 function controller(overrides={}){return {catalog:()=>[],snapshot:()=>({physics:'disabled'}),navigate:async input=>input,physics:async input=>input,configure:async input=>input,reset:async()=>({playing:false}),...overrides};}
 const inputWorld='cc6b59e2-1bfe-5a91-9baa-1afbcdeb0457';
+
+test('completion rejects changes to every promised field, including camera coordinates',()=>{
+  const expected={artistIdentifier:inputWorld,view:'all',playing:false,physics:'enabled',gravity:false,cameraPosition:[23,12,34],cameraOrientation:{yaw:0,pitch:0}};
+  assert.doesNotThrow(()=>assertPresentedState(expected,structuredClone(expected)));
+  for(const [field,value] of Object.entries({artistIdentifier:'another',view:'single',playing:true,physics:'disabled',gravity:true,cameraPosition:[23.4,12,34],cameraOrientation:{yaw:.1,pitch:0}})){
+    assert.throws(()=>assertPresentedState(expected,{...structuredClone(expected),[field]:value}),new RegExp(field));
+  }
+});
+
+test('image targets include implied physics transitions and preserve unspecified settings',()=>{
+  const current={artistIdentifier:inputWorld,view:'single',playing:false,physics:'disabled',gravity:false};
+  assert.deepEqual(imageConfigurationTarget(current,{physics_enabled:true}),{...current,view:'all',playing:true,physics:'enabled'});
+  assert.deepEqual(imageConfigurationTarget(current,{physics_enabled:true,playing:false,gravity_enabled:true}),{...current,view:'all',physics:'enabled',gravity:true});
+  const active={...current,view:'all',playing:true,physics:'enabled',gravity:true};
+  assert.deepEqual(imageConfigurationTarget(active,{view:'single'}),{...active,view:'single',physics:'disabled',gravity:false});
+  assert.deepEqual(imageConfigurationTarget(active,{physics_enabled:true}),active);
+  const expected=imageConfigurationTarget(current,{view:'all',playing:false});
+  current.playing=true;
+  assert.equal(expected.playing,false,'Target must be captured before an asynchronous load');
+});
 
 test('WebMCP is optional and partial registration rolls back without breaking the page',async()=>{
   const states=[];const unsupported=registerPageTools(undefined,[],{onStatus:status=>states.push(status)});

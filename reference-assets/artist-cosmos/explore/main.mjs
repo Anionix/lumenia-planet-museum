@@ -2,7 +2,7 @@ import * as THREE from '../interactive/vendor/three.module.js';
 import {limits,movement,moveCamera,createWorldSession} from './navigation.mjs';
 import {createWorldGeometry,collisionSurfaces,createStars,createNebula} from './geometry.mjs';
 import {createTrace} from '../interactive/model.mjs';
-import {registerPageTools,explorationTools,createPresentationCheckpoint,communityLinks} from '../interactive/webmcp.mjs';
+import {registerPageTools,explorationTools,createPresentationCheckpoint,communityLinks,assertPresentedState} from '../interactive/webmcp.mjs';
 
 // llm machine contract; UUIDv5: be15d308-d6c7-5b93-aca4-32206c14ac81.
 // transition: catalogue -> requested world -> active camera -> optional collision -> disposed.
@@ -93,15 +93,16 @@ function teardown(){if(disposed)return;disposed=true;pageTools?.dispose();presen
 // transition: validated tool input -> existing camera/collision handlers -> completed render -> concise snapshot.
 function explorationSnapshot(){
   return {ready:!disposed&&Boolean(session)&&canvas.dataset.worldReady==='true',worldIdentifier:session?world.recordIdentifier:null,
-    artist:session?world.artistName:null,cameraPosition:session?[...session.position]:null,sourceCoordinate:session?structuredClone(session.semanticPosition):null,
+    artist:session?world.artistName:null,cameraPosition:session?[...session.position]:null,cameraOrientation:session?{yaw,pitch}:null,sourceCoordinate:session?structuredClone(session.semanticPosition):null,
     physics:session?.physics??'disabled',landing:landingInput.checked,contactCount,renderedFrames:frames,
     viewpoints:session?['entrance','passage','object','landing'].map((name,index)=>({name,label:index===0?'入口':world.landmarks[index-1].name})):[],links:communityLinks};
 }
 function requireActiveExploration(){if(disposed||!session||!geometry||document.hidden)throw new Error('Open the exploration page and wait for a world to be ready.');}
-async function presentExploration(expectedWorld){
+async function presentExploration(expected,expectedSession){
   requireActiveExploration();const completed=presentation.next();requestFrame();await completed;
-  if(world.recordIdentifier!==expectedWorld)throw new Error('The selected world changed while the action was running.');
-  return explorationSnapshot();
+  requireActiveExploration();
+  if(session!==expectedSession)throw new Error('The active exploration changed while the action was running.');
+  const observed=explorationSnapshot();assertPresentedState(expected,observed);return observed;
 }
 function connectExplorationTools(){
   pageTools=registerPageTools(document.modelContext,explorationTools({
@@ -112,11 +113,12 @@ function connectExplorationTools(){
       const entry=input.world_identifier?catalog.worlds.find(item=>item.recordIdentifier===input.world_identifier):null;
       if(input.world_identifier&&!entry)throw new TypeError('Unknown world identifier. Read the exploration catalogue first.');
       if(entry&&entry.recordIdentifier!==world.recordIdentifier){await enterWorld(entry);if(!session||world.recordIdentifier!==entry.recordIdentifier)throw new Error('The requested world did not become active.');}
-      requireActiveExploration();const expectedWorld=world.recordIdentifier;clearInput();landingInput.checked=false;
+      requireActiveExploration();const expectedSession=session;clearInput();landingInput.checked=false;
       if(input.viewpoint){const index=['passage','object','landing'].indexOf(input.viewpoint);waypoint(index<0?world.spawn:world.landmarks[index]);}
       if(input.look_turns){yaw+=input.look_turns*Math.PI/12;rotate();}
       if(input.movement)for(let step=0;step<(input.steps??1);step++)applyMovement(input.movement,limits.maximumSeconds);
-      return presentExploration(expectedWorld);
+      const expected={worldIdentifier:world.recordIdentifier,cameraPosition:[...session.position],cameraOrientation:{yaw,pitch},physics:session.physics,landing:false};
+      return presentExploration(expected,expectedSession);
     },
     async physics(input){
       requireActiveExploration();const expectedSession=session;
@@ -124,7 +126,7 @@ function connectExplorationTools(){
       if((session.physics==='enabled')!==input.enabled){collisionInput.checked=input.enabled;await toggleCollision();}
       if(session!==expectedSession||session.physics!==(input.enabled?'enabled':'disabled'))throw new Error('The requested collision setting did not become active.');
       if(input.landing!==undefined)landingInput.checked=input.landing;
-      return presentExploration(world.recordIdentifier);
+      return presentExploration({worldIdentifier:world.recordIdentifier,physics:input.enabled?'enabled':'disabled',landing:input.landing??landingInput.checked},expectedSession);
     },
   }),{onStatus:value=>{canvas.dataset.webmcp=value;},onExecution:event=>trace.add('WebMCP action completed',event)});
 }
