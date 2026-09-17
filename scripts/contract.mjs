@@ -1,3 +1,5 @@
+import { parseIsoTimestamp } from './iso-timestamp.mjs';
+
 /*
 llm machine contract
 claim identifier: 4f6e0b5a-4f25-5b41-9e9e-2f9e4e70e0a1
@@ -275,7 +277,7 @@ function validateVerificationResult(value, errors) {
   }
   validateMeasurementProfile(value.measurementProfile, path + '.measurementProfile', errors);
   validateIdentifier(value.executionIdentifier, uuidv7Pattern, path + '.executionIdentifier', errors);
-  if (typeof value.createdAt !== 'string' || Number.isNaN(Date.parse(value.createdAt))) {
+  if (!Number.isFinite(parseIsoTimestamp(value.createdAt))) {
     errors.push(path + '.createdAt: expected an ISO date-time');
   }
   if (!verificationStatuses.has(value.status)) {

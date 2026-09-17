@@ -19,6 +19,11 @@ test('six historical calculation records agree with their JSON Lines references'
   assert.equal(result.status, 'pass');
   assert.equal(result.checkCount, 55);
 });
+test('rejects an impossible date even when Date.parse would normalize it', () => {
+  const changed = structuredClone(records);
+  changed.summary.recordedAt = '2026-09-31T15:43:32.946Z';
+  assert.throws(() => verifyAuditRecords(changed));
+});
 const replaceRootResult = (records, mutate, name = 'root') => {
   const root = records.wolfram.programs.find(program => program.name === name);
   mutate(root.decoded);

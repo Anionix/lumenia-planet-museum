@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto';
 import { readFileSync, realpathSync } from 'node:fs';
 import path from 'node:path';
 import { projectRoot } from './source-revision.mjs';
+import { parseIsoTimestamp } from './iso-timestamp.mjs';
 
 // machine contract; record_identifier=35302202-9761-5b5d-ac14-01302e53c2bc
 // transition: explicit axiom dependencies -> accept only an empty list.
@@ -53,12 +54,13 @@ export function languageServerReceiptMatchesSource(receipt, manifest, root = pro
   return checks.every((check, sequence) => {
     if (!check || typeof check !== 'object') return false;
     const binding = languageServerFileBinding(check, manifest, root, receipt.sourceRoot);
-    const start = Date.parse(check.startedAt), end = Date.parse(check.completedAt);
+    const receiptStart = parseIsoTimestamp(receipt.startedAt), receiptEnd = parseIsoTimestamp(receipt.recordedAt);
+    const start = parseIsoTimestamp(check.startedAt), end = parseIsoTimestamp(check.completedAt);
     if (!languageServerTools.includes(check.tool) || !languageServerTargetMatchesInvocation(check) ||
         binding === undefined || canonical(binding) !== canonical(check.sourceFileBinding) ||
         check.sequence !== sequence || !uuidVersionSeven.test(check.invocationIdentifier ?? '') ||
         identifiers.has(check.invocationIdentifier) || !Number.isFinite(start) || !Number.isFinite(end) ||
-        !(Date.parse(receipt.startedAt) <= start && start <= end && end <= Date.parse(receipt.recordedAt))) return false;
+        !(receiptStart <= start && start <= end && end <= receiptEnd)) return false;
     identifiers.add(check.invocationIdentifier);
     return true;
   });

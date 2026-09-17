@@ -30,6 +30,11 @@ test('the committed verification result is valid and has a pass aggregate', asyn
   const result = await readExample('verification-result.json');
   assert.deepEqual(validateVerificationDocument(result), { valid: true, errors: [] });
 });
+test('createdAt rejects impossible dates instead of accepting normalization', async () => {
+  const result = await readExample('verification-result.json');
+  result.createdAt = '2026-09-31T15:43:32.946Z';
+  assert.equal(validateVerificationDocument(result).valid, false);
+});
 
 test('the committed asset manifest is valid', async () => {
   const manifest = await readExample('valid-asset-manifest.json');
