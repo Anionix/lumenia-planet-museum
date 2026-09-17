@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { createExhibitionState, createTrace, clampPanelPosition } from './model.mjs';
 import { connectOptionalPhysics } from './vendor/reference-physics-contract.mjs';
+import {thumbnailPath} from './thumbnail.mjs';
 import { registerPageTools, imageExhibitionTools, createPresentationCheckpoint, communityLinks, assertPresentedState, imageConfigurationTarget } from './webmcp.mjs';
 
 const $ = selector => document.querySelector(selector);
@@ -339,7 +340,7 @@ async function initialize() {
     panel.add(new THREE.Mesh(bodyGeometry,bodyMaterial),front,back,outline);panel.userData.front=front;panel.userData.outline=outline;
     scene.add(panel);panels.push(panel);surfaces.push(front);bases.push(panel.position.clone());baseRotations.push(panel.rotation.clone());
     const button=document.createElement('button');button.type='button';button.setAttribute('aria-label',`${item.artist_name_ja}を選ぶ`);button.setAttribute('aria-pressed',String(index===0));
-    const image=document.createElement('img');image.src=item.image_url;image.alt='';image.width=95;image.height=63;image.loading='lazy';image.decoding='async';
+    const image=document.createElement('img');image.src=thumbnailPath(item.image_url);image.alt='';image.width=95;image.height=63;image.loading='lazy';image.decoding='async';
     const label=document.createElement('span');label.textContent=item.artist_name_ja;button.append(image,label);button.addEventListener('click',()=>selectArtist(index));$('.artist-strip').append(button);
   }
   // Sparse stationary stars belong to the presentation scene, not the generated image pixels.

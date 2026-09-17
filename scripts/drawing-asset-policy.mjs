@@ -16,3 +16,14 @@ export function isRegisteredReferenceImage(output, sourceFiles, registration) {
   return source !== undefined && /^[0-9a-f]{64}$/.test(image.sha256) &&
     source.sha256 === image.sha256 && output.sha256 === image.sha256 && output.bytes > 0;
 }
+
+// machine contract; record_identifier=e332864f-3c91-5a0a-a748-be735ca33cac.
+// Source and derivative must both match their recorded content, with a bounded byte size.
+export function isRegisteredReferenceThumbnail(output,sourceFiles,registration){
+  const image=registration.images.find(item=>item.path===output.path);
+  if(!image||!/^cosmos\/thumbnails\/[a-z]+(?:-[a-z]+)*\.webp$/.test(image.path))return false;
+  const source=sourceFiles.find(file=>file.path===image.sourcePath);
+  const thumbnail=sourceFiles.find(file=>file.path==='reference-assets/artist-cosmos/'+image.path.slice('cosmos/'.length));
+  return source?.sha256===image.sourceSha256&&thumbnail?.sha256===image.sha256&&output.sha256===image.sha256&&
+    output.bytes===image.bytes&&output.bytes>0&&output.bytes<=registration.maximumBytesPerImage;
+}

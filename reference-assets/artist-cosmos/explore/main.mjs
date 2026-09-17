@@ -2,6 +2,7 @@ import * as THREE from '../interactive/vendor/three.module.js';
 import {limits,movement,moveCamera,createWorldSession} from './navigation.mjs';
 import {createWorldGeometry,collisionSurfaces,createStars,createNebula} from './geometry.mjs';
 import {createTrace} from '../interactive/model.mjs';
+import {thumbnailPath} from '../interactive/thumbnail.mjs';
 import {registerPageTools,explorationTools,createPresentationCheckpoint,communityLinks,assertPresentedState} from '../interactive/webmcp.mjs';
 
 // llm machine contract; UUIDv5: be15d308-d6c7-5b93-aca4-32206c14ac81.
@@ -162,7 +163,7 @@ try{
   nebula=createNebula();scene.add(nebula.mesh);stars=createStars(19);scene.add(stars.points);resize();
   const response=await fetch('./worlds.json');if(!response.ok)throw new Error('Catalogue unavailable');catalog=await response.json();
   for(const entry of catalog.worlds){const button=document.createElement('button');button.type='button';button.dataset.world=entry.slug;button.setAttribute('aria-label',entry.artistNameJapanese+'の宇宙に入る');
-    const image=document.createElement('img');image.src=entry.image;image.alt='';image.loading='lazy';image.decoding='async';const label=document.createElement('span');label.textContent=entry.artistNameJapanese;button.append(image,label);button.addEventListener('click',()=>enterWorld(entry));worldList.append(button);}
+    const image=document.createElement('img');image.src=thumbnailPath(entry.image);image.alt='';image.width=95;image.height=63;image.loading='lazy';image.decoding='async';const label=document.createElement('span');label.textContent=entry.artistNameJapanese;button.append(image,label);button.addEventListener('click',()=>enterWorld(entry));worldList.append(button);}
   const requested=new URLSearchParams(location.search).get('world');await enterWorld(catalog.worlds.find(entry=>entry.slug===requested)??catalog.worlds.find(entry=>entry.slug==='ettore-sottsass')??catalog.worlds[0]);
   connectExplorationTools();
 }catch(error){loading.hidden=true;fallback.hidden=false;console.error(error);}

@@ -12,8 +12,10 @@ const digest = bytes => createHash('sha256').update(bytes).digest('hex');
 export async function buildCosmicImages(outputDirectory = path.join(projectRoot, 'web/public/cosmos')) {
   const sourceRows = (await readFile(path.join(sourceDirectory, 'references.jsonl'), 'utf8')).trim().split('\n').map(JSON.parse);
   const registration = JSON.parse(await readFile(path.join(projectRoot, 'contracts/cosmic-reference-images.json'), 'utf8'));
+  const thumbnails = JSON.parse(await readFile(path.join(projectRoot, 'contracts/cosmic-reference-thumbnails.json'), 'utf8'));
   assert.equal(sourceRows.length, 15);
   assert.equal(registration.images.length, 15);
+  assert.equal(thumbnails.images.length,15);
   assert.equal(new Set(sourceRows.map(row => row.record_identifier)).size, 15);
   const dataset = await readFile(path.join(projectRoot, 'planetarium/illustration-design-reference.jsonl'));
   await mkdir(outputDirectory, { recursive: true });
@@ -29,6 +31,14 @@ export async function buildCosmicImages(outputDirectory = path.join(projectRoot,
     assert.equal(admitted?.path, 'cosmos/' + row.asset_path);
     assert.equal(admitted?.sha256, row.sha256);
     await writeFile(path.join(outputDirectory, row.asset_path), image);
+    const preview=thumbnails.images.find(item=>item.sourcePath==='reference-assets/artist-cosmos/'+row.asset_path);
+    assert.equal(preview?.sourceSha256,row.sha256);
+    assert.equal(preview.path,'cosmos/thumbnails/'+row.asset_path.replace(/\.png$/,'.webp'));
+    const previewBytes=await readFile(path.join(sourceDirectory,preview.path.slice('cosmos/'.length)));
+    assert.equal(digest(previewBytes),preview.sha256);assert.equal(previewBytes.length,preview.bytes);
+    assert.ok(preview.bytes>0&&preview.bytes<=thumbnails.maximumBytesPerImage);
+    await mkdir(path.join(outputDirectory,'thumbnails'),{recursive:true});
+    await writeFile(path.join(outputDirectory,preview.path.slice('cosmos/'.length)),previewBytes);
     const { original_generation_path, previous_asset_path, ...published } = row;
     void original_generation_path; void previous_asset_path;
     published.reference_dataset_path = './illustration-design-reference.jsonl';
@@ -48,7 +58,7 @@ export async function buildCosmicImages(outputDirectory = path.join(projectRoot,
   gallery = gallery.replace(/<a[^>]*href="\.\.\/artist-references-2026-09-15\/index.html"[^>]*>[^<]*<\/a>/, '<a href="/records/">資料と検算記録 ↗</a>');
   await writeFile(path.join(outputDirectory, 'index.html'), gallery);
   const applicationFiles = [
-    'index.html', 'main.mjs', 'model.mjs', 'physics.mjs', 'webmcp.mjs', 'style.css', 'exhibition.json', 'dependencies.json', 'README.md',
+    'index.html', 'main.mjs', 'model.mjs', 'physics.mjs', 'webmcp.mjs', 'thumbnail.mjs', 'style.css', 'exhibition.json', 'dependencies.json', 'README.md',
     'vendor/three.module.js', 'vendor/three.core.js', 'vendor/controls/OrbitControls.js',
     'vendor/rapier.mjs', 'vendor/reference-physics-contract.mjs', 'vendor/THREE-LICENSE.txt', 'vendor/RAPIER-LICENSE.txt',
   ];
