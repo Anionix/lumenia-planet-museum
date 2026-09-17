@@ -7,12 +7,13 @@ const require=createRequire(import.meta.url);
 const sharp=createRequire(require.resolve('next/package.json'))('sharp');
 import {projectRoot} from './source-revision.mjs';
 import {claimIdentifier} from './identifiers.mjs';
+import {readJsonLines} from './json-lines.mjs';
 
 // machine contract; record_identifier=e332864f-3c91-5a0a-a748-be735ca33cac.
 // transition: unchanged source image -> bounded thumbnail -> content-bound registration.
 // Explicit authoring command only. Ordinary web builds copy these registered derivatives.
 const source=path.join(projectRoot,'reference-assets/artist-cosmos');
-const rows=(await readFile(path.join(source,'references.jsonl'),'utf8')).trim().split('\n').map(JSON.parse);
+const rows=await readJsonLines(path.join(source,'references.jsonl'));
 const digest=bytes=>createHash('sha256').update(bytes).digest('hex');
 await mkdir(path.join(source,'thumbnails'),{recursive:true});
 const images=[];

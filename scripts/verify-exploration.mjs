@@ -17,9 +17,11 @@ const catalog=await json(directory+'worlds.json');
 const reference=await json('reference-assets/artist-cosmos/interactive/exhibition.json');
 assert.equal(catalog.physicsEnabledByDefault,false);
 const inputs=[];
+let semanticPositions=0;
 for(const entry of catalog.worlds){
   const file=directory+entry.file.replace('./','');const bytes=await read(file);assert.equal(digest(bytes),entry.sha256);
   const world=JSON.parse(bytes), original=reference.items.find(item=>item.artist_name===world.artistName);
+  if(world.semanticPosition!==null)semanticPositions++;
   assert.ok(original);assert.equal(world.recordIdentifier,claimIdentifier('exploration/'+entry.slug));
   assert.deepEqual(world.semanticPosition,original.semantic_position);assert.deepEqual(world.sources,original.sources);
   assert.equal(world.sourceImageSha256,original.image_sha256);assert.equal(world.machineContract.physicsEnabledByDefault,false);
@@ -27,10 +29,7 @@ for(const entry of catalog.worlds){
   assert.ok(world.shapes.length<=300);assert.equal(new Set(world.shapes.map(shape=>shape.recordIdentifier)).size,world.shapes.length);
   inputs.push({path:file,sha256:digest(bytes)});
 }
-if(catalog.worlds.length===15){
-  const known=await Promise.all(catalog.worlds.map(async entry=>(await json(directory+entry.file.replace('./',''))).semanticPosition!==null));
-  assert.equal(known.filter(Boolean).length,12);
-}
+if(catalog.worlds.length===15)assert.equal(semanticPositions,12);
 const proofFile=directory+'verification/Exploration.lean';const proof=(await read(proofFile)).toString();
 const declarations=[...proof.matchAll(/^theorem (\w+)/gm)].map(match=>'LumeniaExploration.'+match[1]);
 assert.equal(declarations.length,10);assert.ok(!/\b(sorry|axiom|native_decide|unsafe)\b/.test(proof));

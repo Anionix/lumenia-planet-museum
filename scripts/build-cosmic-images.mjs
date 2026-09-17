@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto';
 import { copyFile, mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { projectRoot } from './source-revision.mjs';
+import { readJsonLines, writeJsonLines } from './json-lines.mjs';
 
 // llm machine contract; UUIDv5: 26c1a73e-a5ed-5a54-93c7-29888e27f48e.
 // transition: source-linked immutable images -> verified copies -> static exhibition.
@@ -10,15 +11,13 @@ import { projectRoot } from './source-revision.mjs';
 const sourceDirectory = path.join(projectRoot, 'reference-assets/artist-cosmos');
 const digest = bytes => createHash('sha256').update(bytes).digest('hex');
 export async function buildCosmicImages(outputDirectory = path.join(projectRoot, 'web/public/cosmos')) {
-  const sourceRows = (await readFile(path.join(sourceDirectory, 'references.jsonl'), 'utf8')).trim().split('\n').map(JSON.parse);
+  const sourceRows = await readJsonLines(path.join(sourceDirectory, 'references.jsonl'));
   const registration = JSON.parse(await readFile(path.join(projectRoot, 'contracts/cosmic-reference-images.json'), 'utf8'));
   const thumbnails = JSON.parse(await readFile(path.join(projectRoot, 'contracts/cosmic-reference-thumbnails.json'), 'utf8'));
-  assert.equal(sourceRows.length, 15);
-  assert.equal(registration.images.length, 15);
-  assert.equal(thumbnails.images.length,15);
+  for (const images of [sourceRows, registration.images, thumbnails.images]) assert.equal(images.length, 15);
   assert.equal(new Set(sourceRows.map(row => row.record_identifier)).size, 15);
   const dataset = await readFile(path.join(projectRoot, 'planetarium/illustration-design-reference.jsonl'));
-  await mkdir(outputDirectory, { recursive: true });
+  await mkdir(path.join(outputDirectory, 'thumbnails'), { recursive: true });
   const publishedRows = [];
   for (const row of sourceRows) {
     assert.match(row.asset_path, /^[a-z]+(?:-[a-z]+)*\.png$/);
@@ -37,14 +36,13 @@ export async function buildCosmicImages(outputDirectory = path.join(projectRoot,
     const previewBytes=await readFile(path.join(sourceDirectory,preview.path.slice('cosmos/'.length)));
     assert.equal(digest(previewBytes),preview.sha256);assert.equal(previewBytes.length,preview.bytes);
     assert.ok(preview.bytes>0&&preview.bytes<=thumbnails.maximumBytesPerImage);
-    await mkdir(path.join(outputDirectory,'thumbnails'),{recursive:true});
     await writeFile(path.join(outputDirectory,preview.path.slice('cosmos/'.length)),previewBytes);
     const { original_generation_path, previous_asset_path, ...published } = row;
     void original_generation_path; void previous_asset_path;
     published.reference_dataset_path = './illustration-design-reference.jsonl';
     publishedRows.push(published);
   }
-  await writeFile(path.join(outputDirectory, 'references.jsonl'), publishedRows.map(row => JSON.stringify(row)).join('\n') + '\n');
+  await writeJsonLines(path.join(outputDirectory, 'references.jsonl'), publishedRows);
   await writeFile(path.join(outputDirectory, 'illustration-design-reference.jsonl'), dataset);
   let gallery = await readFile(path.join(sourceDirectory, 'index.html'), 'utf8');
   gallery = gallery.replace('<main>', '<nav class="topline" aria-label="展示の移動"><a href="/">美術館に戻る</a><a href="./interactive/">画像を動かす展示へ →</a></nav><main>');
@@ -64,11 +62,9 @@ export async function buildCosmicImages(outputDirectory = path.join(projectRoot,
   ];
   const dependency = JSON.parse(await readFile(path.join(sourceDirectory, 'interactive/dependencies.json'), 'utf8'));
   for (const file of dependency.files) assert.equal(digest(await readFile(path.join(sourceDirectory, 'interactive', file.local_path))), file.sha256);
-  for (const file of applicationFiles) {
-    const destination = path.join(outputDirectory, 'interactive', file);
-    await mkdir(path.dirname(destination), { recursive: true });
-    await copyFile(path.join(sourceDirectory, 'interactive', file), destination);
-  }
+  await mkdir(path.join(outputDirectory, 'interactive/vendor/controls'), { recursive: true });
+  for (const file of applicationFiles)
+    await copyFile(path.join(sourceDirectory, 'interactive', file), path.join(outputDirectory, 'interactive', file));
   const documentation = [
     '# 15枚の宇宙を動かす', '',
     '作家を選び、視点を回し、画像を浮かべたりつかんだりできます。「物理で遊ぶ」を入れると衝突と落下を利用できます。初期状態では物理を読み込みません。', '',
