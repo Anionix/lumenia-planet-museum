@@ -1,0 +1,47 @@
+{
+  "identifier": "190fdb1a-2e41-565d-9aed-9fe5ca2179a6",
+  "enabled": true,
+  "physicsEnabled": false,
+  "historicalSolarSystem": false,
+  "maximumTriangles": 20000,
+  "maximumDrawCalls": 40,
+  "maximumPixelRatio": 1.5,
+  "maximumFramesPerSecond": 30,
+  "initialScriptCompressedBytes": 240000,
+  "lazySceneCompressedBytes": 220000,
+  "maximumCatalogCompressedBytes": 12000,
+  "requiredPeople": 15,
+  "requiredSemanticCoordinates": 12,
+  "unknownHistoricalPeriods": "remain_unspecified",
+  "proofScope": "Display state invariants, natural-number difference parts, and nonnegative calendar-year interval rules. Real-number differences and trigonometric identity are checked separately with Wolfram.",
+  "declarations": [
+    {
+      "name": "Lumenia.CosmicExhibition.display_motion_preserves_semantics",
+      "identifier": "c0367b69-6031-554f-bf67-9117c026aebe"
+    },
+    {
+      "name": "Lumenia.CosmicExhibition.display_motion_preserves_physics_setting",
+      "identifier": "aef00b01-ac1f-5eab-839b-d1ec3dc9b86e"
+    },
+    {
+      "name": "Lumenia.CosmicExhibition.missing_semantics_stay_missing",
+      "identifier": "f7a5f56d-e88c-5f9d-9ce5-0710f0d51703"
+    },
+    {
+      "name": "Lumenia.CosmicExhibition.default_physics_is_disabled",
+      "identifier": "3d4a7b4e-6916-5715-a7ed-adf59fb98603"
+    },
+    {
+      "name": "Lumenia.CosmicExhibition.score_difference_parts_bound",
+      "identifier": "aae351a9-b097-595c-bb1f-7d9a8ed51cb9"
+    },
+    {
+      "name": "Lumenia.CosmicExhibition.overlap_is_symmetric",
+      "identifier": "54fcbba8-4d50-548b-a7ab-8f57a372e284"
+    },
+    {
+      "name": "Lumenia.CosmicExhibition.widening_range_preserves_overlap",
+      "identifier": "e63728e6-d47b-54e5-be0d-32e18f54fbca"
+    }
+  ]
+}

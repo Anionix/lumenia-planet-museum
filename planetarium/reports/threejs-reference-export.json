@@ -1,0 +1,35 @@
+{
+  "report_type": "threejs_reference_export",
+  "execution_identifier": "01a0a45b-fc7b-77a1-a9b9-dc3d9aa798e0",
+  "recorded_at": "2026-09-15T09:18:07.073Z",
+  "three_revision": "186",
+  "source_sha256": "5ff2c20d1969a6f83edf2520e3a10853e500e12bd87b15de85b0dc7b0f0eab9c",
+  "recipe_count": 12,
+  "source_coordinates_preserved": true,
+  "semantic_and_display_coordinates_separate": true,
+  "physics_enabled_by_default": false,
+  "real_physics_engine_connected": false,
+  "serialization_round_trip": "passed",
+  "texture_pixels_embedded": true,
+  "generated_recipe_sha256": "04d9c378ef78395511fc2ee3eeed4555b501e017dcfebb3cabe301c9677c0b2b",
+  "generated_scene_sha256": "79c52a2357d5c5f0c61f3754e4e0cb50bd340f5b1d9688f3f6a330cbc37844b4",
+  "skipped_profiles": [
+    {
+      "profile_identifier": "ea3de1f9-179b-5bca-89e0-289084190234",
+      "name": "Charles Eames",
+      "reason": "no supplied style coordinate; position was not synthesized"
+    },
+    {
+      "profile_identifier": "0fcb82c9-fa68-5fb0-bb38-41102237b725",
+      "name": "Ray Eames",
+      "reason": "no supplied style coordinate; position was not synthesized"
+    },
+    {
+      "profile_identifier": "6956222e-f308-5e00-a3d5-d0129505f27e",
+      "name": "Walter Gropius",
+      "reason": "no supplied style coordinate; position was not synthesized"
+    }
+  ],
+  "visual_review_status": "basic_browser_rendering_passed",
+  "visual_review_receipt": "planetarium/reports/threejs-reference-browser-review.json"
+}

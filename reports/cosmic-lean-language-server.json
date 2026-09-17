@@ -1,0 +1,424 @@
+{
+  "executionIdentifier": "01a0a47d-dfdf-7b26-ad3f-feaee37691a6",
+  "sourceDigest": "59397a93a57427b38da7a09b275d5164ba64a58136ee7c53d39abcbbfb16aeda",
+  "sourceFile": "formal/Lumenia/CosmicExhibition.lean",
+  "records": [
+    {
+      "tool": "lean_diagnostic_messages",
+      "input": {
+        "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/CosmicExhibition.lean"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"success\": true,\n  \"timed_out\": false,\n  \"items\": [],\n  \"failed_dependencies\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "result": {
+            "success": true,
+            "timed_out": false,
+            "items": [],
+            "failed_dependencies": []
+          }
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_file_outline",
+      "input": {
+        "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/CosmicExhibition.lean"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"imports\": [\n    \"Std\"\n  ],\n  \"declarations\": [\n    {\n      \"name\": \"Lumenia.CosmicExhibition\",\n      \"kind\": \"Ns\",\n      \"start_line\": 3,\n      \"end_line\": 62,\n      \"type_signature\": null,\n      \"children\": []\n    },\n    {\n      \"name\": \"ExhibitionState\",\n      \"kind\": \"Struct\",\n      \"start_line\": 15,\n      \"end_line\": 19,\n      \"type_signature\": \"Type\",\n      \"children\": [\n        {\n          \"name\": \"semantic\",\n          \"kind\": \"field\",\n          \"start_line\": 15,\n          \"end_line\": 15,\n          \"type_signature\": \"Option (Int × Int × Int)\",\n          \"children\": []\n        },\n        {\n          \"name\": \"display\",\n          \"kind\": \"field\",\n          \"start_line\": 15,\n          \"end_line\": 15,\n          \"type_signature\": \"Int × Int × Int\",\n          \"children\": []\n        },\n        {\n          \"name\": \"physicsEnabled\",\n          \"kind\": \"field\",\n          \"start_line\": 15,\n          \"end_line\": 15,\n          \"type_signature\": \"Bool\",\n          \"children\": []\n        }\n      ]\n    },\n    {\n      \"name\": \"moveDisplay\",\n      \"kind\": \"Thm\",\n      \"start_line\": 21,\n      \"end_line\": 22,\n      \"type_signature\": \"ExhibitionState → Int × Int × Int → ExhibitionState\",\n      \"children\": []\n    },\n    {\n      \"name\": \"display_motion_preserves_semantics\",\n      \"kind\": \"Thm\",\n      \"start_line\": 25,\n      \"end_line\": 26,\n      \"type_signature\": \"∀ (state : ExhibitionState)\\n        (position : Int × Int × Int), (moveDisplay state position).semantic = state.semantic\",\n      \"children\": []\n    },\n    {\n      \"name\": \"display_motion_preserves_physics_setting\",\n      \"kind\": \"Thm\",\n      \"start_line\": 29,\n      \"end_line\": 30,\n      \"type_signature\": \"∀ (state : ExhibitionState)\\n        (position : Int × Int × Int),\\n        (moveDisplay state position).physicsEnabled = state.physicsEnabled\",\n      \"children\": []\n    },\n    {\n      \"name\": \"missing_semantics_stay_missing\",\n      \"kind\": \"Thm\",\n      \"start_line\": 33,\n      \"end_line\": 34,\n      \"type_signature\": \"∀ (position next : Int × Int × Int),\\n        (moveDisplay { semantic := none, display := position } next).semantic = none\",\n      \"children\": []\n    },\n    {\n      \"name\": \"default_physics_is_disabled\",\n      \"kind\": \"Thm\",\n      \"start_line\": 37,\n      \"end_line\": 38,\n      \"type_signature\": \"∀ (position : Int × Int × Int),\\n        { semantic := none, display := position }.physicsEnabled = false\",\n      \"children\": []\n    },\n    {\n      \"name\": \"score_difference_parts_bound\",\n      \"kind\": \"Thm\",\n      \"start_line\": 41,\n      \"end_line\": 45,\n      \"type_signature\": \"∀ (first second scale : Nat),\\n        first ≤ scale → second ≤ scale → first - second ≤ scale ∧ second - first ≤ scale\",\n      \"children\": []\n    },\n    {\n      \"name\": \"overlaps\",\n      \"kind\": \"Thm\",\n      \"start_line\": 47,\n      \"end_line\": 48,\n      \"type_signature\": \"Nat → Nat → Nat → Nat → Prop\",\n      \"children\": []\n    },\n    {\n      \"name\": \"overlap_is_symmetric\",\n      \"kind\": \"Thm\",\n      \"start_line\": 51,\n      \"end_line\": 54,\n      \"type_signature\": \"∀ (a b c d : Nat),\\n        overlaps a b c d ↔ overlaps c d a b\",\n      \"children\": []\n    },\n    {\n      \"name\": \"widening_range_preserves_overlap\",\n      \"kind\": \"Thm\",\n      \"start_line\": 57,\n      \"end_line\": 60,\n      \"type_signature\": \"∀ (a b c d lower upper : Nat),\\n        overlaps a b c d → lower ≤ c → d ≤ upper → overlaps a b lower upper\",\n      \"children\": []\n    },\n    {\n      \"name\": \"moveDisplay\",\n      \"kind\": \"Def\",\n      \"start_line\": 21,\n      \"end_line\": 21,\n      \"type_signature\": \"(state : ExhibitionState) (position : Int × Int × Int) : ExhibitionState\",\n      \"children\": []\n    },\n    {\n      \"name\": \"display_motion_preserves_semantics\",\n      \"kind\": \"Thm\",\n      \"start_line\": 25,\n      \"end_line\": 25,\n      \"type_signature\": \"(state : ExhibitionState) (position : Int × Int × Int) : (moveDisplay state position).semantic = state.semantic\",\n      \"children\": []\n    },\n    {\n      \"name\": \"display_motion_preserves_physics_setting\",\n      \"kind\": \"Thm\",\n      \"start_line\": 29,\n      \"end_line\": 29,\n      \"type_signature\": \"(state : ExhibitionState) (position : Int × Int × Int) : (moveDisplay state position).physicsEnabled = state.physicsEnabled\",\n      \"children\": []\n    },\n    {\n      \"name\": \"missing_semantics_stay_missing\",\n      \"kind\": \"Thm\",\n      \"start_line\": 33,\n      \"end_line\": 33,\n      \"type_signature\": \"(position next : Int × Int × Int) : (moveDisplay ⟨none, position, false⟩ next).semantic = none\",\n      \"children\": []\n    },\n    {\n      \"name\": \"default_physics_is_disabled\",\n      \"kind\": \"Thm\",\n      \"start_line\": 37,\n      \"end_line\": 37,\n      \"type_signature\": \"(position : Int × Int × Int) : ({ semantic\",\n      \"children\": []\n    },\n    {\n      \"name\": \"score_difference_parts_bound\",\n      \"kind\": \"Thm\",\n      \"start_line\": 41,\n      \"end_line\": 41,\n      \"type_signature\": \"(first second scale : Nat) (firstUpper : first ≤ scale) (secondUpper : second ≤ scale) : first - second ≤ scale ∧ second - first ≤ scale\",\n      \"children\": []\n    },\n    {\n      \"name\": \"overlaps\",\n      \"kind\": \"Def\",\n      \"start_line\": 47,\n      \"end_line\": 47,\n      \"type_signature\": \"(firstStart firstEnd secondStart secondEnd : Nat) : Prop\",\n      \"children\": []\n    },\n    {\n      \"name\": \"overlap_is_symmetric\",\n      \"kind\": \"Thm\",\n      \"start_line\": 51,\n      \"end_line\": 51,\n      \"type_signature\": \"(a b c d : Nat) : overlaps a b c d ↔ overlaps c d a b\",\n      \"children\": []\n    },\n    {\n      \"name\": \"widening_range_preserves_overlap\",\n      \"kind\": \"Thm\",\n      \"start_line\": 57,\n      \"end_line\": 57,\n      \"type_signature\": \"(a b c d lower upper : Nat) (overlap : overlaps a b c d) (left : lower ≤ c) (right : d ≤ upper) : overlaps a b lower upper\",\n      \"children\": []\n    }\n  ],\n  \"total_declarations\": null\n}"
+          }
+        ],
+        "structuredContent": {
+          "imports": [
+            "Std"
+          ],
+          "declarations": [
+            {
+              "name": "Lumenia.CosmicExhibition",
+              "kind": "Ns",
+              "start_line": 3,
+              "end_line": 62,
+              "type_signature": null,
+              "children": []
+            },
+            {
+              "name": "ExhibitionState",
+              "kind": "Struct",
+              "start_line": 15,
+              "end_line": 19,
+              "type_signature": "Type",
+              "children": [
+                {
+                  "name": "semantic",
+                  "kind": "field",
+                  "start_line": 15,
+                  "end_line": 15,
+                  "type_signature": "Option (Int × Int × Int)",
+                  "children": []
+                },
+                {
+                  "name": "display",
+                  "kind": "field",
+                  "start_line": 15,
+                  "end_line": 15,
+                  "type_signature": "Int × Int × Int",
+                  "children": []
+                },
+                {
+                  "name": "physicsEnabled",
+                  "kind": "field",
+                  "start_line": 15,
+                  "end_line": 15,
+                  "type_signature": "Bool",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "moveDisplay",
+              "kind": "Thm",
+              "start_line": 21,
+              "end_line": 22,
+              "type_signature": "ExhibitionState → Int × Int × Int → ExhibitionState",
+              "children": []
+            },
+            {
+              "name": "display_motion_preserves_semantics",
+              "kind": "Thm",
+              "start_line": 25,
+              "end_line": 26,
+              "type_signature": "∀ (state : ExhibitionState)\n        (position : Int × Int × Int), (moveDisplay state position).semantic = state.semantic",
+              "children": []
+            },
+            {
+              "name": "display_motion_preserves_physics_setting",
+              "kind": "Thm",
+              "start_line": 29,
+              "end_line": 30,
+              "type_signature": "∀ (state : ExhibitionState)\n        (position : Int × Int × Int),\n        (moveDisplay state position).physicsEnabled = state.physicsEnabled",
+              "children": []
+            },
+            {
+              "name": "missing_semantics_stay_missing",
+              "kind": "Thm",
+              "start_line": 33,
+              "end_line": 34,
+              "type_signature": "∀ (position next : Int × Int × Int),\n        (moveDisplay { semantic := none, display := position } next).semantic = none",
+              "children": []
+            },
+            {
+              "name": "default_physics_is_disabled",
+              "kind": "Thm",
+              "start_line": 37,
+              "end_line": 38,
+              "type_signature": "∀ (position : Int × Int × Int),\n        { semantic := none, display := position }.physicsEnabled = false",
+              "children": []
+            },
+            {
+              "name": "score_difference_parts_bound",
+              "kind": "Thm",
+              "start_line": 41,
+              "end_line": 45,
+              "type_signature": "∀ (first second scale : Nat),\n        first ≤ scale → second ≤ scale → first - second ≤ scale ∧ second - first ≤ scale",
+              "children": []
+            },
+            {
+              "name": "overlaps",
+              "kind": "Thm",
+              "start_line": 47,
+              "end_line": 48,
+              "type_signature": "Nat → Nat → Nat → Nat → Prop",
+              "children": []
+            },
+            {
+              "name": "overlap_is_symmetric",
+              "kind": "Thm",
+              "start_line": 51,
+              "end_line": 54,
+              "type_signature": "∀ (a b c d : Nat),\n        overlaps a b c d ↔ overlaps c d a b",
+              "children": []
+            },
+            {
+              "name": "widening_range_preserves_overlap",
+              "kind": "Thm",
+              "start_line": 57,
+              "end_line": 60,
+              "type_signature": "∀ (a b c d lower upper : Nat),\n        overlaps a b c d → lower ≤ c → d ≤ upper → overlaps a b lower upper",
+              "children": []
+            },
+            {
+              "name": "moveDisplay",
+              "kind": "Def",
+              "start_line": 21,
+              "end_line": 21,
+              "type_signature": "(state : ExhibitionState) (position : Int × Int × Int) : ExhibitionState",
+              "children": []
+            },
+            {
+              "name": "display_motion_preserves_semantics",
+              "kind": "Thm",
+              "start_line": 25,
+              "end_line": 25,
+              "type_signature": "(state : ExhibitionState) (position : Int × Int × Int) : (moveDisplay state position).semantic = state.semantic",
+              "children": []
+            },
+            {
+              "name": "display_motion_preserves_physics_setting",
+              "kind": "Thm",
+              "start_line": 29,
+              "end_line": 29,
+              "type_signature": "(state : ExhibitionState) (position : Int × Int × Int) : (moveDisplay state position).physicsEnabled = state.physicsEnabled",
+              "children": []
+            },
+            {
+              "name": "missing_semantics_stay_missing",
+              "kind": "Thm",
+              "start_line": 33,
+              "end_line": 33,
+              "type_signature": "(position next : Int × Int × Int) : (moveDisplay ⟨none, position, false⟩ next).semantic = none",
+              "children": []
+            },
+            {
+              "name": "default_physics_is_disabled",
+              "kind": "Thm",
+              "start_line": 37,
+              "end_line": 37,
+              "type_signature": "(position : Int × Int × Int) : ({ semantic",
+              "children": []
+            },
+            {
+              "name": "score_difference_parts_bound",
+              "kind": "Thm",
+              "start_line": 41,
+              "end_line": 41,
+              "type_signature": "(first second scale : Nat) (firstUpper : first ≤ scale) (secondUpper : second ≤ scale) : first - second ≤ scale ∧ second - first ≤ scale",
+              "children": []
+            },
+            {
+              "name": "overlaps",
+              "kind": "Def",
+              "start_line": 47,
+              "end_line": 47,
+              "type_signature": "(firstStart firstEnd secondStart secondEnd : Nat) : Prop",
+              "children": []
+            },
+            {
+              "name": "overlap_is_symmetric",
+              "kind": "Thm",
+              "start_line": 51,
+              "end_line": 51,
+              "type_signature": "(a b c d : Nat) : overlaps a b c d ↔ overlaps c d a b",
+              "children": []
+            },
+            {
+              "name": "widening_range_preserves_overlap",
+              "kind": "Thm",
+              "start_line": 57,
+              "end_line": 57,
+              "type_signature": "(a b c d lower upper : Nat) (overlap : overlaps a b c d) (left : lower ≤ c) (right : d ≤ upper) : overlaps a b lower upper",
+              "children": []
+            }
+          ],
+          "total_declarations": null
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_goal",
+      "input": {
+        "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/CosmicExhibition.lean",
+        "line": 54
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"line_context\": \"  · intro ⟨left, right⟩; exact ⟨right, left⟩\",\n  \"goals\": null,\n  \"goals_before\": [\n    \"case mpr\\na b c d : Nat\\n⊢ overlaps c d a b → overlaps a b c d\"\n  ],\n  \"goals_after\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "line_context": "  · intro ⟨left, right⟩; exact ⟨right, left⟩",
+          "goals": null,
+          "goals_before": [
+            "case mpr\na b c d : Nat\n⊢ overlaps c d a b → overlaps a b c d"
+          ],
+          "goals_after": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_hover_info",
+      "input": {
+        "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/CosmicExhibition.lean",
+        "line": 51,
+        "column": 9
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"symbol\": \"overlap_is_symmetric\",\n  \"info\": \"Lumenia.CosmicExhibition.overlap_is_symmetric (a b c d : Nat) : overlaps a b c d ↔ overlaps c d a b\",\n  \"diagnostics\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "symbol": "overlap_is_symmetric",
+          "info": "Lumenia.CosmicExhibition.overlap_is_symmetric (a b c d : Nat) : overlaps a b c d ↔ overlaps c d a b",
+          "diagnostics": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_verify",
+      "input": {
+        "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/CosmicExhibition.lean",
+        "theorem_name": "Lumenia.CosmicExhibition.display_motion_preserves_semantics"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "axioms": [],
+          "warnings": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_verify",
+      "input": {
+        "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/CosmicExhibition.lean",
+        "theorem_name": "Lumenia.CosmicExhibition.display_motion_preserves_physics_setting"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "axioms": [],
+          "warnings": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_verify",
+      "input": {
+        "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/CosmicExhibition.lean",
+        "theorem_name": "Lumenia.CosmicExhibition.missing_semantics_stay_missing"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "axioms": [],
+          "warnings": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_verify",
+      "input": {
+        "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/CosmicExhibition.lean",
+        "theorem_name": "Lumenia.CosmicExhibition.default_physics_is_disabled"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "axioms": [],
+          "warnings": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_verify",
+      "input": {
+        "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/CosmicExhibition.lean",
+        "theorem_name": "Lumenia.CosmicExhibition.score_difference_parts_bound"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "axioms": [],
+          "warnings": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_verify",
+      "input": {
+        "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/CosmicExhibition.lean",
+        "theorem_name": "Lumenia.CosmicExhibition.overlap_is_symmetric"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "axioms": [],
+          "warnings": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_verify",
+      "input": {
+        "file_path": "/private/tmp/lumenia-cosmic-exhibition/formal/Lumenia/CosmicExhibition.lean",
+        "theorem_name": "Lumenia.CosmicExhibition.widening_range_preserves_overlap"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "axioms": [],
+          "warnings": []
+        },
+        "isError": false
+      }
+    }
+  ]
+}

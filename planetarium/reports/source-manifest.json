@@ -1,8 +1,8 @@
 {
   "artifactIdentifier": "e67bec4e-cc81-54b8-8de8-e04f06503867",
-  "sourceRevision": "sha256:99f3a0699e44857a632cb5d19bcfc5c6fdd6f844acb179a341ec8e3d5eee5736",
-  "executionIdentifier": "01a09acc-4808-7629-b5d4-a4839d16870c",
-  "recordedAt": "2026-09-13T12:44:34.184Z",
+  "sourceRevision": "sha256:9478a5e17024ef21aaf5239ea2f13ffac7885ead15d95ef4607e5be55fd781bd",
+  "executionIdentifier": "01a0a48b-cf79-770e-a05f-eee1d6a3021e",
+  "recordedAt": "2026-09-15T10:10:21.177Z",
   "machineContract": {
     "state": "observed",
     "transition": "source-bound evidence -> proof report -> gate report"
@@ -29,12 +29,20 @@
       "digest": "sha256:4ea66e9701e341057bbfb377d0bc58dda99881a1ac2a01f8626cd9e35b735469"
     },
     {
+      "path": "checks/illustration-design-reference-check.mjs",
+      "digest": "sha256:464d54556593dcce5c95b174781e6c170feeb1e5f726ac3657b047e7503518cb"
+    },
+    {
       "path": "checks/knowledge-check.mjs",
       "digest": "sha256:b11e55aaa968c75a41026f40dfcb7f6f4f6f453eaeb6f387c319f600cb42714f"
     },
     {
       "path": "checks/wolfram-check.mjs",
       "digest": "sha256:06ef01182437563d669613085fd38cb75cc220a9a87cd7ec9729e545349c8397"
+    },
+    {
+      "path": "examples/threejs-reference.html",
+      "digest": "sha256:318d06dc77af8c94ad3bf22b244f55ef485b8437cb1b4a379e25093deb2ba892"
     },
     {
       "path": "formal/ArtPlanetarium.lean",
@@ -67,6 +75,10 @@
     {
       "path": "formal/Main.lean",
       "digest": "sha256:18f9415985f98a2ff340f98ecbe0144e4e3525a4b7308c6b0956656e86862f6f"
+    },
+    {
+      "path": "illustration-design-reference.jsonl",
+      "digest": "sha256:5ff2c20d1969a6f83edf2520e3a10853e500e12bd87b15de85b0dc7b0f0eab9c"
     },
     {
       "path": "intent.md",
@@ -105,8 +117,16 @@
       "digest": "sha256:8ccc67f7b009bc2228dc4a9a272f2a7f65a579d97fbbe357d0961f1166c927c4"
     },
     {
+      "path": "lib/reference-physics-contract.mjs",
+      "digest": "sha256:4d1495820c1b9dcf334accee1892edd4f0ead85f5575e7c91935518903b435ba"
+    },
+    {
       "path": "lib/revision.mjs",
       "digest": "sha256:3985f93a8f4a6af200c27fdc50dadf7b10329e5c768bbfdfc400e58113ab13a5"
+    },
+    {
+      "path": "lib/threejs-reference-adapter.mjs",
+      "digest": "sha256:99e2747a30820f9907a4a685f185dc7edfc3ae6fd5062a1e721bd1904d835941"
     },
     {
       "path": "research-receipt.json",
@@ -117,12 +137,24 @@
       "digest": "sha256:724758e359cb6304e90341aab02605296a61a2211036f5507966e64e2371029f"
     },
     {
+      "path": "scripts/export-threejs-reference.mjs",
+      "digest": "sha256:a164bca41041de60648491e483bc31a37483aed3aff0e7ea013a6499d37923e6"
+    },
+    {
       "path": "scripts/generate-artifacts.mjs",
       "digest": "sha256:4640c1eba835a1cef482790ccf851940f27999bf9411dac8ff94cbbf0d4d7432"
     },
     {
+      "path": "scripts/serve-threejs-reference.mjs",
+      "digest": "sha256:a632c058de0f762f0f0f2f927f8af62cebe17bbd14ead783b8d521ca2cbcc4dd"
+    },
+    {
       "path": "spec.md",
       "digest": "sha256:939c76152aa2a8d1072b1969f8ecd6faaaf29480c295b07d67671d0df8749c21"
+    },
+    {
+      "path": "threejs-reference.md",
+      "digest": "sha256:9d586062ded7f8e859997d365da0d029e9662e082e23377434f7f5f64a77cf1b"
     },
     {
       "path": "verification-dimension.wl",
