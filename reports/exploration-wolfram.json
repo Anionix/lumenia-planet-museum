@@ -1,0 +1,37 @@
+{
+  "recordIdentifier": "be15d308-d6c7-5b93-aca4-32206c14ac81",
+  "evaluatedCode": "ClearAll[\"Global`*\"]; rotation={{Cos[yaw],Sin[yaw] Sin[pitch],Sin[yaw] Cos[pitch]},{0,Cos[pitch],-Sin[pitch]},{-Sin[yaw],Cos[yaw] Sin[pitch],Cos[yaw] Cos[pitch]}}; result=<|\"rotation_preserves_length\"->FullSimplify[Transpose[rotation].rotation==IdentityMatrix[3],Assumptions->Element[{yaw,pitch},Reals]],\"bounded_elapsed\"->Resolve[ForAll[elapsed,elapsed>=0,0<=Min[elapsed,1/20]<=1/20],Reals],\"bounded_displacement\"->Resolve[ForAll[{elapsed,speed},elapsed>=0 && 0<=speed<=16,0<=speed Min[elapsed,1/20]<=4/5],Reals],\"normalized_diagonal\"->FullSimplify[Norm[{1,1,-1}/Norm[{1,1,-1}]]==1],\"coordinate_clamp\"->Resolve[ForAll[position,-400<=Max[-400,Min[400,position]]<=400],Reals],\"ring_clearance_metres\"->3-1/2-2/5-1/20,\"ring_passage_positive\"->(3-1/2-2/5-1/20>0),\"render_interval_seconds\"->1/30|>;ExportString[result,\"RawJSON\"]",
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Out[1]= \"{\\n\\t\\\"rotation_preserves_length\\\":true,\\n\\t\\\"bounded_elapsed\\\":true,\\n\\t\\\"bounded_displacement\\\":true,\\n\\t\\\"normalized_diagonal\\\":true,\\n\\t\\\"coordinate_clamp\\\":true,\\n\\t\\\"ring_clearance_metres\\\":2.05,\\n\\t\\\"ring_passage_positive\\\":true,\\n\\t\\\"render_interval_seconds\\\":3.333333333333333e-2\\n}\""
+      }
+    ],
+    "isError": false
+  },
+  "scope": "Real-valued movement and ring clearance, not the floating-point renderer.",
+  "executionIdentifier": "01a0a5eb-aaf8-743f-a399-9ffd07cdf4c2",
+  "recordedAt": "2026-09-15T16:34:40.504Z",
+  "inputs": [
+    {
+      "path": "reference-assets/artist-cosmos/explore/navigation.mjs",
+      "sha256": "99b9a8816885b3b676b92e062f378d753129d036d6139e500cadfc2aa81aa4a5"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/worlds/ettore-sottsass.json",
+      "sha256": "fb3ac97e605e0175961f3c5caa2960ba5cea90d675e74ce7a7192d0bf44b672b"
+    }
+  ],
+  "evaluatedCodeSha256": "a52a78c26ca6c23b5c94a255c8299bba57a93c9d91bb1c957c22b47c57cf3027",
+  "result": {
+    "rotation_preserves_length": true,
+    "bounded_elapsed": true,
+    "bounded_displacement": true,
+    "normalized_diagonal": true,
+    "coordinate_clamp": true,
+    "ring_clearance_metres": 2.05,
+    "ring_passage_positive": true,
+    "render_interval_seconds": 0.03333333333333333
+  }
+}

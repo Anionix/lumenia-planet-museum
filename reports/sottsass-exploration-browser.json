@@ -1,0 +1,57 @@
+{
+  "recordIdentifier": "be15d308-d6c7-5b93-aca4-32206c14ac81",
+  "executionIdentifier": "01a0a5e6-1d23-7868-a1fd-adddf5462b41",
+  "recordedAt": "2026-09-15T16:28:36.515Z",
+  "url": "http://127.0.0.1:4175/cosmos/explore/?world=ettore-sottsass",
+  "observed": {
+    "contextVersion": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "physicsInitially": "disabled",
+    "physicsAfterActivation": "enabled",
+    "ringEntry": [
+      -17,
+      5,
+      16
+    ],
+    "ringExit": [
+      -17,
+      5,
+      6.4
+    ],
+    "ringContacts": 0,
+    "behindPlanet": [
+      -17,
+      5,
+      -13.6
+    ],
+    "activeWorlds": 1,
+    "semanticPosition": [
+      0.55,
+      -0.65,
+      -0.95
+    ],
+    "consoleErrors": 0
+  },
+  "scope": "Actual on-screen button navigation through the ring to the back of the planet, not a prerecorded camera animation.",
+  "inputs": [
+    {
+      "path": "reference-assets/artist-cosmos/explore/main.mjs",
+      "sha256": "74511e8bb1af2bfc833bb923a1517a1b88ec0828511199ec7e0d7b3791bcb5c1"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/navigation.mjs",
+      "sha256": "99b9a8816885b3b676b92e062f378d753129d036d6139e500cadfc2aa81aa4a5"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/geometry.mjs",
+      "sha256": "a9f89716cfc793df0457d6904c42321d253c6688ac3d7bf57025bebb6fb6add0"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/collision.mjs",
+      "sha256": "13f558e4d8f8c72391471366bcf741b807b75d676ee5f32bb38a3b8dbf8c48be"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/worlds/ettore-sottsass.json",
+      "sha256": "2e9ed5381e7e55f4192548ba916a6560e0b75f654b7dbafeb08e720aaa9bffd7"
+    }
+  ]
+}

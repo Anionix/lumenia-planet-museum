@@ -1,0 +1,91 @@
+{
+  "recordIdentifier": "be15d308-d6c7-5b93-aca4-32206c14ac81",
+  "checks": [
+    {
+      "name": "capBound",
+      "result": {
+        "axioms": [],
+        "warnings": []
+      }
+    },
+    {
+      "name": "elapsedTimeBound",
+      "result": {
+        "axioms": [],
+        "warnings": []
+      }
+    },
+    {
+      "name": "displacementBound",
+      "result": {
+        "axioms": [],
+        "warnings": []
+      }
+    },
+    {
+      "name": "observerMagnitudeBound",
+      "result": {
+        "axioms": [],
+        "warnings": []
+      }
+    },
+    {
+      "name": "movementPreservesSource",
+      "result": {
+        "axioms": [],
+        "warnings": []
+      }
+    },
+    {
+      "name": "missingSourceRemainsMissing",
+      "result": {
+        "axioms": [],
+        "warnings": []
+      }
+    },
+    {
+      "name": "collisionStartsDisabled",
+      "result": {
+        "axioms": [],
+        "warnings": []
+      }
+    },
+    {
+      "name": "movementPreservesCollisionChoice",
+      "result": {
+        "axioms": [],
+        "warnings": []
+      }
+    },
+    {
+      "name": "passageClearance",
+      "result": {
+        "axioms": [],
+        "warnings": []
+      }
+    },
+    {
+      "name": "passageHasRoom",
+      "result": {
+        "axioms": [],
+        "warnings": []
+      }
+    }
+  ],
+  "executionIdentifier": "01a0a5e4-62ea-70b0-ae40-f7004ce9bea0",
+  "recordedAt": "2026-09-15T16:26:43.306Z",
+  "inputs": [
+    {
+      "path": "reference-assets/artist-cosmos/explore/verification/Exploration.lean",
+      "sha256": "0bd76bc65ba0659f293769103bae3e72ac7c5f2dffe4571a39e0057995316d30"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/verification/lean-toolchain",
+      "sha256": "db7bb24b756d745bbde83fe92718b51bd3625dae3701ba0f598d0eedcd3f3028"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/verification/lakefile.toml",
+      "sha256": "d780cfc3b5958bda77d9d8963d9a9213fa7934fbde7d84f77d3fb4a3d8ed7d38"
+    }
+  ]
+}
