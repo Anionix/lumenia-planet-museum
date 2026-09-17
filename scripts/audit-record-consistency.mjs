@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { claimIdentifier, uuidVersionSeven } from './identifiers.mjs';
 import { wolframChecks } from '../planetarium/checks/wolfram-check.mjs';
 import { parseIsoTimestamp } from './iso-timestamp.mjs';
+import { readJsonLines } from './json-lines.mjs';
 
 // machine contract: recorded calculation -> later reference; mismatches -> rejected.
 // claimIdentifier=c87c7d7c-11a9-50c8-ac18-101d59a67c0a; executionIdentifier=01a0ab94-f361-737f-91a9-1dd9adeca578; transition=reproduced -> corrected.
@@ -144,9 +145,8 @@ export function verifyCorrespondenceLinks(calculationLines, bindingLines) {
   }
 }
 export async function readAuditRecords(directory = new URL('../reports/review-audit/', import.meta.url)) {
-  const read = name => readFile(new URL(name, directory), 'utf8');
-  const [wolfram, summary, coverage] = await Promise.all(['wolfram.json', 'summary.json', 'coverage.jsonl'].map(read));
-  return { wolfram: JSON.parse(wolfram), summary: JSON.parse(summary), coverage: coverage.trim().split('\n').map(JSON.parse) };
+  const [wolfram, summary] = await Promise.all(['wolfram.json', 'summary.json'].map(async name => JSON.parse(await readFile(new URL(name, directory), 'utf8'))));
+  return { wolfram, summary, coverage: await readJsonLines(new URL('coverage.jsonl', directory)) };
 }
 if (process.argv[1] === fileURLToPath(import.meta.url))
   console.log(JSON.stringify(verifyAuditRecords(await readAuditRecords())));
