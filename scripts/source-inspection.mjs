@@ -29,21 +29,20 @@ export function inspectSources(sources) {
         if (declaration.expression.text === 'use client') module.client = true;
         if (declaration.expression.text === 'use server') add('staticExport', declaration, 'Server Actions need a server runtime');
       }
-      if (ts.isImportDeclaration(declaration) && !declaration.importClause?.isTypeOnly) {
-        const specifier = declaration.moduleSpecifier.text;
-        if (declaration.importClause?.namedBindings && ts.isNamedImports(declaration.importClause.namedBindings) &&
-          declaration.importClause.namedBindings.elements.every(binding => binding.isTypeOnly)) continue;
+      if (ts.isImportDeclaration(declaration) || ts.isExportDeclaration(declaration)) {
+        const clause = declaration.importClause ?? declaration, bindings = clause.namedBindings ?? clause.exportClause;
+        if (clause.isTypeOnly || (!clause.name && bindings?.elements?.length && bindings.elements.every(binding => binding.isTypeOnly))) continue;
+        const specifier = declaration.moduleSpecifier?.text;
+        if (!specifier) continue;
         module.imports.push(specifier);
-        if (specifier === 'react' && declaration.importClause?.namedBindings && ts.isNamedImports(declaration.importClause.namedBindings)) {
-          for (const binding of declaration.importClause.namedBindings.elements) {
+        if (specifier === 'react' && bindings && ts.isNamedImports(bindings)) {
+          for (const binding of bindings.elements) {
             if (/^use(State|Effect|LayoutEffect|Reducer|Ref|SyncExternalStore|ActionState|Transition|DeferredValue|ImperativeHandle)$/.test((binding.propertyName ?? binding.name).text)) reactHooks.add(binding.name.text);
           }
         }
         if (['next/headers', 'next/server', 'server-only'].includes(specifier)) add('staticExport', declaration, 'Request-time server capability is prohibited in this static application');
         if (specifier === 'next/image') add('staticExport', declaration, 'This application contract requires explicit static images, without the server image optimizer');
       }
-      if (ts.isExportDeclaration(declaration) && declaration.moduleSpecifier && ts.isStringLiteral(declaration.moduleSpecifier))
-        module.imports.push(declaration.moduleSpecifier.text);
     }
     if (/(?:^|\/)(?:middleware|proxy|route)\.[cm]?[jt]sx?$/.test(filename)) add('staticExport', source, 'Request handlers are outside this static application contract');
     function visit(node, typePosition = false) {
