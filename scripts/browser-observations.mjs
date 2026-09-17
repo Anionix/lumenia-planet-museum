@@ -46,7 +46,7 @@ export function summarizeBrowserRuns(capture) {
     const firstUsableArtwork = run.initial?.marks?.find(entry => entry.name === 'lumenia:artwork-ready')?.startTime ?? null;
     // Preserve the browser notification as evidence; only a unique, successful HEAD response can reconcile its abort.
     const failedRequests = Array.isArray(run.failedRequests) ? run.failedRequests : [];
-    const reconciledRequestFailures = failedRequests.filter(failure => failure.method === 'HEAD'
+    const reconciledRequestFailures = failedRequests.filter(failure => failure.phase === 'initial' && failure.method === 'HEAD'
       && failure.error === 'net::ERR_ABORTED' && confirmedHeaderChecks.has(failure.url)
       && failedRequests.filter(other => other.url === failure.url).length === 1);
     return { stage: run.stage, route: run.route, bytes, coreBytes: bytes.html + bytes.javascript + bytes.style + bytes.font + bytes.metadata,
