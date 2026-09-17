@@ -1,4 +1,5 @@
 import { execFileSync } from 'node:child_process';
+import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -29,19 +30,14 @@ export function exceptionPaths(rows) {
   rows.forEach((row, index) => {
     if (row === null || typeof row !== 'object' || Array.isArray(row))
       throw new TypeError(`JSON Lines exception ${index + 1} must be an object.`);
-    if (row.record_type !== exceptionRecordType)
-      throw new Error(`JSON Lines exception ${index + 1} has an unsupported record_type.`);
-    if (!validExceptionPath(row.path))
-      throw new Error(`JSON Lines exception ${index + 1} has an invalid path.`);
-    for (const field of ['reason', 'scope']) {
-      if (!nonEmptyString(row[field])) throw new Error(`JSON Lines exception ${index + 1} requires a non-empty ${field}.`);
-    }
-    if (typeof row.recordIdentifier !== 'string' || !uuidV5Pattern.test(row.recordIdentifier))
-      throw new Error(`JSON Lines exception ${index + 1} has an invalid recordIdentifier.`);
-    if (identifiers.has(row.recordIdentifier.toLowerCase()))
-      throw new Error(`JSON Lines exception ${index + 1} duplicates a recordIdentifier.`);
+    assert.equal(row.record_type, exceptionRecordType, `JSON Lines exception ${index + 1} has an unsupported record_type.`);
+    assert(validExceptionPath(row.path), `JSON Lines exception ${index + 1} has an invalid path.`);
+    for (const field of ['reason', 'scope'])
+      assert(nonEmptyString(row[field]), `JSON Lines exception ${index + 1} requires a non-empty ${field}.`);
+    assert(typeof row.recordIdentifier === 'string' && uuidV5Pattern.test(row.recordIdentifier), `JSON Lines exception ${index + 1} has an invalid recordIdentifier.`);
+    assert(!identifiers.has(row.recordIdentifier.toLowerCase()), `JSON Lines exception ${index + 1} duplicates a recordIdentifier.`);
     identifiers.add(row.recordIdentifier.toLowerCase());
-    if (paths.has(row.path)) throw new Error(`JSON Lines exception ${index + 1} duplicates a path.`);
+    assert(!paths.has(row.path), `JSON Lines exception ${index + 1} duplicates a path.`);
     paths.add(row.path);
   });
   return paths;
