@@ -42,6 +42,8 @@ export function inspectSources(sources) {
         if (['next/headers', 'next/server', 'server-only'].includes(specifier)) add('staticExport', declaration, 'Request-time server capability is prohibited in this static application');
         if (specifier === 'next/image') add('staticExport', declaration, 'This application contract requires explicit static images, without the server image optimizer');
       }
+      if (ts.isExportDeclaration(declaration) && declaration.moduleSpecifier && ts.isStringLiteral(declaration.moduleSpecifier))
+        module.imports.push(declaration.moduleSpecifier.text);
     }
     if (/(?:^|\/)(?:middleware|proxy|route)\.[cm]?[jt]sx?$/.test(filename)) add('staticExport', source, 'Request handlers are outside this static application contract');
     function visit(node, typePosition = false) {
