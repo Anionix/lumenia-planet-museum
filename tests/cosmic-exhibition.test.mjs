@@ -68,10 +68,18 @@ test('pause, reduced motion and visibility freeze the presentation clock; resume
   assert.equal(advancePresentationClock(3, 8, true, false, false), 3);
   assert.equal(advancePresentationClock(3, 8, true, true, true), 3);
   assert.equal(advancePresentationClock(3, 8, true, true, false), 3.1);
-  assert.ok(advancePresentationClock(119.98, 8, true, true, false) < 0.1);
+  assert.equal(advancePresentationClock(119.98, 8, true, true, false), 120.08);
+  assert.equal(advancePresentationClock(86399.98, 8, true, true, false), 86400);
   assert.throws(() => orbitPosition(cosmicCatalog[0].orbit, NaN));
   assert.throws(() => advancePresentationClock(3, Infinity, true, true, false));
   assert.equal(exhibitionLimits.physicsEnabled, false);
+});
+
+test('an orbit crosses 120 seconds continuously rather than teleporting', () => {
+  const orbit = cosmicCatalog.find(person => person.canonicalName === 'Walter Gropius').orbit;
+  const before = orbitPosition(orbit, 119.99);
+  const after = orbitPosition(orbit, advancePresentationClock(119.99, 1 / 30, true, true, false));
+  assert.ok(Math.hypot(...after.map((value, index) => value - before[index])) < 0.02);
 });
 
 test('browser adapters are reproducible copies of the reusable source modules', async () => {

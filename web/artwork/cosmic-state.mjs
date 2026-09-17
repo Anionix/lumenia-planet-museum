@@ -6,11 +6,12 @@ export const exhibitionLimits = Object.freeze({
   people: 15, starCount: 800, sphereWidthSegments: 32, sphereHeightSegments: 16,
   textureWidth: 256, textureHeight: 128, maximumPixelRatio: 1.5,
   maximumFramesPerSecond: 30, maximumFrameSeconds: 0.1,
+  maximumPresentationSeconds: 86400,
   maximumTriangles: 20000, maximumDrawCalls: 40, physicsEnabled: false,
 });
 
 export function orbitPosition(orbit, seconds) {
-  if (!Number.isFinite(seconds) || seconds < 0 || seconds > 86400) throw new RangeError('Presentation seconds outside [0,86400]');
+  if (!Number.isFinite(seconds) || seconds < 0 || seconds > exhibitionLimits.maximumPresentationSeconds) throw new RangeError('Presentation time outside its supported range');
   if (!Number.isFinite(orbit.radius) || orbit.radius <= 0 || orbit.radius > 100 ||
       !Number.isFinite(orbit.periodSeconds) || orbit.periodSeconds < 10 ||
       !Number.isFinite(orbit.phaseRadians) || !Number.isFinite(orbit.inclinationRadians))
@@ -38,7 +39,9 @@ export function intersectsYears(period, start, end) {
 }
 
 export function advancePresentationClock(seconds, elapsedSeconds, playing, visible, reducedMotion) {
-  if (!Number.isFinite(seconds) || seconds < 0 || !Number.isFinite(elapsedSeconds) || elapsedSeconds < 0) throw new RangeError('Invalid presentation time');
+  if (!Number.isFinite(seconds) || seconds < 0 || seconds > exhibitionLimits.maximumPresentationSeconds || !Number.isFinite(elapsedSeconds) || elapsedSeconds < 0) throw new RangeError('Invalid presentation time');
   if (!playing || !visible || reducedMotion) return seconds;
-  return (seconds + Math.min(elapsedSeconds, exhibitionLimits.maximumFrameSeconds)) % 120;
+  // llm machine contract; UUIDv5: 307bb7f3-f518-59db-bbaf-a56492eae6be.
+  // transition: elapsed time -> continuous bounded orbit; no periodic teleport.
+  return Math.min(exhibitionLimits.maximumPresentationSeconds, seconds + Math.min(elapsedSeconds, exhibitionLimits.maximumFrameSeconds));
 }
