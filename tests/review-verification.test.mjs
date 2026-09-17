@@ -50,8 +50,6 @@ test('change size check reads blobs independently of Git attributes',()=>inTempo
 // transition: clean inputs -> generated output -> same source revision; real input edits must change it.
 test('source identity binds formal evidence and changes with source edits',()=>inTemporaryDirectory('lumenia-revision-test-',async root=>{
     const readLines=async name=>(await readFile(new URL('../reports/bounded-review/'+name+'.jsonl',import.meta.url),'utf8')).replace(/\n$/,'').split('\n');
-    for(const name of ['formal-correspondence','formal-correspondence-inputs'])
-      assert.match(execFileSync('git',['check-attr','eol','--','reports/bounded-review/'+name+'.jsonl'],{cwd:fileURLToPath(new URL('../',import.meta.url)),encoding:'utf8'}),/: eol: lf\s*$/);
     const calculations=await readLines('formal-correspondence'), bindings=await readLines('formal-correspondence-inputs');
     verifyCorrespondenceLinks(calculations,bindings);
     for(const previousLine of [calculations[0],bindings[0]]) {
@@ -74,6 +72,8 @@ test('source identity binds formal evidence and changes with source edits',()=>i
       assert.throws(()=>verifyCorrespondenceLinks(lines,bindings));
     assert.throws(()=>verifyCorrespondenceLinks(calculations,[]));
     const correspondence=JSON.parse(bindings.at(-1));
+    for(const file of ['reports/bounded-review/formal-correspondence.jsonl','reports/bounded-review/formal-correspondence-inputs.jsonl',...correspondence.inputs.map(input=>input.path)])
+      assert.match(execFileSync('git',['check-attr','eol','--',file],{cwd:fileURLToPath(new URL('../',import.meta.url)),encoding:'utf8'}),/: eol: lf\s*$/);
     for(const input of correspondence.inputs) assert.equal(createHash('sha256').update(await readFile(new URL('../'+input.path,import.meta.url))).digest('hex'),input.sha256);
     for(const directory of ['formal','contracts','scripts','tests','mcp','web','reference-assets'])await mkdir(path.join(root,directory));
     for(const file of ['intent.md','spec.md','CONSTRAINTS.md','lean-toolchain','lakefile.toml','lake-manifest.json','package.json','package-lock.json','eslint.config.mjs'])await writeFile(path.join(root,file),'fixture');
