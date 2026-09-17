@@ -1,10 +1,12 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
 import {mkdtemp, mkdir, writeFile, rm} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import path from 'node:path';
 import {sourceManifest} from '../scripts/source-revision.mjs';
-import {languageServerReceiptMatchesSource} from '../scripts/language-server-evidence.mjs';
+import {evidenceDigest,languageServerReceiptMatchesSource,languageServerTargetMatchesInvocation} from '../scripts/language-server-evidence.mjs';
+import {captureLanguageServerReceipt} from '../scripts/capture-language-server.mjs';
 
 // machine contract; record_identifier=d93d88e9-8679-522b-a756-0b60472c9e5f.
 // transition: clean inputs -> generated output -> same source revision; real input edits must change it.
@@ -39,15 +41,54 @@ test('complete audit identity includes planetarium source but excludes its repor
 });
 
 // machine contract; record_identifier=5c51405c-2fe3-5546-8621-278af8174a55.
-// transition: earlier receipt -> attempted rebinding -> rejection; complete fresh capture -> acceptance.
-test('freshness validation rejects relabelled, incomplete and changed input receipts',()=>{
-  const manifest={sourceRevision:'sha256:current',files:[{path:'formal/Proof.lean',sha256:'current'}]};
-  const fresh={...structuredClone(manifest),sourceRevisionBefore:manifest.sourceRevision,sourceRevisionAfter:manifest.sourceRevision,checkStartedAtSourceRevision:manifest.sourceRevision};
-  assert.equal(languageServerReceiptMatchesSource(fresh,manifest),true);
-  for(const overrides of [
-    {sourceRevisionBefore:'sha256:old'}, {sourceRevisionAfter:'sha256:old'},
-    {checkStartedAtSourceRevision:'sha256:old'}, {sourceRevisionBefore:undefined},
-    {files:[]}, {files:[{path:'formal/Proof.lean',sha256:'old'}]},
-    {bindingHistory:[{verifiedInputsUnchanged:true}]},
-  ])assert.equal(languageServerReceiptMatchesSource({...fresh,...overrides},manifest),false);
+// These synthetic JSON fixtures test integrity only; the formal gate always calls the actual server.
+test('receipt integrity rejects changed files, relabelled requests and missing proof targets',async()=>{
+  const root=await mkdtemp(path.join(tmpdir(),'lumenia-lsp-binding-test-'));
+  try{
+    await mkdir(path.join(root,'formal'),{recursive:true});
+    const proofSource='theorem Proof : True := by trivial\n';
+    await writeFile(path.join(root,'formal/Proof.lean'),proofSource);
+    const files=[{path:'formal/Proof.lean',sha256:createHash('sha256').update(proofSource).digest('hex')}];
+    const manifest={sourceRevision:'sha256:fixture',files}, oldRoot='/unavailable/creator/checkout';
+    const checks=[{tool:'lean_verify',target:'Lumenia.Proof',sequence:0,
+      invocationIdentifier:'01a0aa00-0000-7000-8000-000000000002',
+      arguments:{file_path:oldRoot+'/formal/Proof.lean',theorem_name:'Lumenia.Proof'},
+      response:{structuredContent:{axioms:[],warnings:[]}},sourceFileBinding:files[0],
+      startedAt:'2026-09-16T00:00:00Z',completedAt:'2026-09-16T00:00:01Z'}];
+    const receipt={...manifest,executionIdentifier:'01a0aa00-0000-7000-8000-000000000001',sourceRoot:oldRoot,
+      sourceRevisionBefore:manifest.sourceRevision,sourceRevisionAfter:manifest.sourceRevision,checks,
+      startedAt:checks[0].startedAt,recordedAt:checks[0].completedAt,
+      capture:{format:'lean-lsp-capture/v2',origin:'local-stdio-process',serverPackage:'lean-lsp-mcp==0.27.0',
+        checkCount:1,checksDigest:evidenceDigest(checks)}};
+    assert.equal(languageServerReceiptMatchesSource(receipt,manifest,root),true);
+    for(const mutation of [
+      value=>{value.sourceRevisionBefore='old';},value=>{value.sourceRevisionAfter='old';},
+      value=>{value.sourceRevision='old';},value=>{value.files=[];},
+      value=>{value.capture.origin='callback';},value=>{value.checks[0].response.structuredContent.axioms=['propext'];},
+      value=>{value.checks[0].arguments={};},value=>{value.checks[0].arguments.theorem_name='Lumenia.Other';},
+      value=>{value.checks[0].arguments.file_path='/outside/Proof.lean';},
+      value=>{value.checks[0].sourceFileBinding.path='../outside.lean';},
+      value=>{value.checks[0].sequence=1;},value=>{value.checks[0].completedAt='2026-09-17T00:00:00Z';},
+    ]){
+      const changed=structuredClone(receipt); mutation(changed);
+      assert.equal(languageServerReceiptMatchesSource(changed,manifest,root),false);
+    }
+    for(const args of [{}, {theorem_name:''}, {theorem_name:'Lumenia.Other'}])
+      assert.equal(languageServerTargetMatchesInvocation({tool:'lean_verify',target:'Lumenia.Proof',arguments:args}),false);
+    for(const mutation of [
+      value=>{value.checks[0].arguments.theorem_name=undefined;},
+      value=>{value.checks[0].arguments.theorem_name='Lumenia.Other';},
+      value=>{value.checks[0].arguments.file_path='/outside/Proof.lean';},
+      value=>{value.checks[0]=null;},
+    ]){
+      const changed=structuredClone(receipt); mutation(changed);
+      changed.capture.checksDigest=evidenceDigest(changed.checks);
+      assert.equal(languageServerReceiptMatchesSource(changed,manifest,root),false);
+    }
+    // Even a syntactically valid fixture cannot be supplied to the live capture API.
+    await assert.rejects(captureLanguageServerReceipt(receipt),/no supplied/);
+    await assert.rejects(captureLanguageServerReceipt(async()=>checks[0].response),/no supplied/);
+    await writeFile(path.join(root,'formal/Proof.lean'),'changed\n');
+    assert.equal(languageServerReceiptMatchesSource(receipt,manifest,root),false);
+  }finally{await rm(root,{recursive:true,force:true});}
 });

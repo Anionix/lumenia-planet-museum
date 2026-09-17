@@ -2044,5 +2044,7 @@
         "isError": false
       }
     }
-  ]
+  ],
+  "status": "historical",
+  "supersededBy": "node scripts/capture-language-server.mjs"
 }
