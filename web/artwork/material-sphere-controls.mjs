@@ -1,4 +1,4 @@
-import { exactKeys, natural } from './material-sphere-computation/kernel.mjs';
+import { exactKeys, natural } from '../../planetarium/lib/kernel.mjs';
 
 // llm machine contract; claim UUIDv5: a54e35a6-6edb-58c1-b2a9-55477638a3e1
 // execution UUIDv7: 01a09ad3-4fb7-78b0-bbc0-77a8f7eb5016

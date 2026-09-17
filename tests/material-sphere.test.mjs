@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { readFile } from 'node:fs/promises';
 import { materialSphereRenderingTargets, dispatchMaterialSphere } from '../web/artwork/material-sphere-renderer.mjs';
-import { makeCoordinateRequest } from '../web/artwork/material-sphere-computation/dimension.mjs';
+import { makeCoordinateRequest } from '../planetarium/lib/dimension.mjs';
 import { compileMaterialSphere } from '../planetarium/lib/material-sphere.mjs';
 import { formatMaterialSphereSchemas } from '../scripts/connect-planetarium.mjs';
 import { sourceManifest } from '../planetarium/lib/revision.mjs';
@@ -20,7 +20,7 @@ const request = (components = [3, 2], extras = {}) => ({ profileIdentifier: prof
 test('Material Sphere application uses current source-bound mathematical evidence', async () => {
   assert.equal((await sourceManifest()).sourceRevision, report.sourceRevision);
 });
-test('Application numerical functions are byte-identical to checked functions', async () => {
+test('Temporary numerical copies match originals until cleanup', async () => {
   for (const file of ['kernel.mjs', 'dimension.mjs']) assert.equal(
     await readFile(new URL('../web/artwork/material-sphere-computation/' + file, import.meta.url), 'utf8'),
     await readFile(new URL('../planetarium/lib/' + file, import.meta.url), 'utf8'));
