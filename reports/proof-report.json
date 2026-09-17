@@ -58,7 +58,7 @@
     "Lumenia.category_budget_total_is_204800_bytes",
     "Lumenia.measured_gate_pass_iff"
   ],
-  "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
+  "sourceRevision": "sha256:0bdf9f362166ae3da7478a7cc969070db351ad1e4a4f5e695abeca9acde4c22a",
   "measurementProfile": {
     "targetBrowsers": [
       "chrome",
@@ -75,8 +75,8 @@
     "largestContentfulPaintMilliseconds": 2500,
     "firstUsableArtworkMilliseconds": 3000
   },
-  "executionIdentifier": "01a09a2f-6a86-7f3e-885e-1b516bd73d53",
-  "createdAt": "2026-09-13T09:53:15.344Z",
+  "executionIdentifier": "01a0a4a5-249b-748a-9d45-f40af9198610",
+  "createdAt": "2026-09-15T10:38:08.169Z",
   "status": "pass",
   "observations": [
     {
@@ -89,8 +89,8 @@
         "lake build"
       ],
       "failureReason": null,
-      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
-      "executionIdentifier": "01a09a2f-6a86-7f3e-885e-1b516bd73d53"
+      "sourceRevision": "sha256:0bdf9f362166ae3da7478a7cc969070db351ad1e4a4f5e695abeca9acde4c22a",
+      "executionIdentifier": "01a0a4a5-249b-748a-9d45-f40af9198610"
     },
     {
       "gateIdentifier": "46de9356-94a7-5355-a9a6-a6fde3471fcc",
@@ -102,8 +102,8 @@
         "lake build diagnostics"
       ],
       "failureReason": null,
-      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
-      "executionIdentifier": "01a09a2f-6a86-7f3e-885e-1b516bd73d53"
+      "sourceRevision": "sha256:0bdf9f362166ae3da7478a7cc969070db351ad1e4a4f5e695abeca9acde4c22a",
+      "executionIdentifier": "01a0a4a5-249b-748a-9d45-f40af9198610"
     },
     {
       "gateIdentifier": "f41d531f-0196-5b20-b945-ca46fae9c68c",
@@ -112,11 +112,11 @@
       "limit": 0,
       "unit": "exit code",
       "checkedBy": [
-        "/Users/st/.local/share/mise/installs/node/24.15.0/bin/node --test --test-reporter=tap"
+        "/opt/homebrew/Cellar/node/25.9.0_2/bin/node --test --test-reporter=tap"
       ],
       "failureReason": null,
-      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
-      "executionIdentifier": "01a09a2f-6a86-7f3e-885e-1b516bd73d53"
+      "sourceRevision": "sha256:0bdf9f362166ae3da7478a7cc969070db351ad1e4a4f5e695abeca9acde4c22a",
+      "executionIdentifier": "01a0a4a5-249b-748a-9d45-f40af9198610"
     },
     {
       "gateIdentifier": "086560f2-20bf-57f3-9a27-90eb0a01a009",
@@ -125,11 +125,11 @@
       "limit": 0,
       "unit": "exit code",
       "checkedBy": [
-        "/Users/st/.local/share/mise/installs/node/24.15.0/bin/node scripts/verify-contract.mjs contracts/examples/verification-request.json contracts/examples/verification-result.json contracts/examples/valid-asset-manifest.json"
+        "/opt/homebrew/Cellar/node/25.9.0_2/bin/node scripts/verify-contract.mjs contracts/examples/verification-request.json contracts/examples/verification-result.json contracts/examples/valid-asset-manifest.json"
       ],
       "failureReason": null,
-      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
-      "executionIdentifier": "01a09a2f-6a86-7f3e-885e-1b516bd73d53"
+      "sourceRevision": "sha256:0bdf9f362166ae3da7478a7cc969070db351ad1e4a4f5e695abeca9acde4c22a",
+      "executionIdentifier": "01a0a4a5-249b-748a-9d45-f40af9198610"
     },
     {
       "gateIdentifier": "def07315-f6e6-5266-818b-d351c346b7bf",
@@ -141,8 +141,8 @@
         "UUIDv5 namespace recomputation and Lean declaration inventory"
       ],
       "failureReason": null,
-      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
-      "executionIdentifier": "01a09a2f-6a86-7f3e-885e-1b516bd73d53"
+      "sourceRevision": "sha256:0bdf9f362166ae3da7478a7cc969070db351ad1e4a4f5e695abeca9acde4c22a",
+      "executionIdentifier": "01a0a4a5-249b-748a-9d45-f40af9198610"
     },
     {
       "gateIdentifier": "12e7cf84-79d8-5287-8370-9150ed6afc8b",
@@ -154,8 +154,8 @@
         "local Lean source scan; all project Lean files"
       ],
       "failureReason": null,
-      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
-      "executionIdentifier": "01a09a2f-6a86-7f3e-885e-1b516bd73d53"
+      "sourceRevision": "sha256:0bdf9f362166ae3da7478a7cc969070db351ad1e4a4f5e695abeca9acde4c22a",
+      "executionIdentifier": "01a0a4a5-249b-748a-9d45-f40af9198610"
     },
     {
       "gateIdentifier": "6d27294e-b98b-5837-8931-d6907c80c2be",
@@ -167,8 +167,8 @@
         "lake env lean formal/Lumenia/AxiomAudit.lean"
       ],
       "failureReason": null,
-      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
-      "executionIdentifier": "01a09a2f-6a86-7f3e-885e-1b516bd73d53"
+      "sourceRevision": "sha256:0bdf9f362166ae3da7478a7cc969070db351ad1e4a4f5e695abeca9acde4c22a",
+      "executionIdentifier": "01a0a4a5-249b-748a-9d45-f40af9198610"
     },
     {
       "gateIdentifier": "35302202-9761-5b5d-ac14-01302e53c2bc",
@@ -180,8 +180,8 @@
         "Lean #print axioms for every registered public theorem"
       ],
       "failureReason": null,
-      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
-      "executionIdentifier": "01a09a2f-6a86-7f3e-885e-1b516bd73d53"
+      "sourceRevision": "sha256:0bdf9f362166ae3da7478a7cc969070db351ad1e4a4f5e695abeca9acde4c22a",
+      "executionIdentifier": "01a0a4a5-249b-748a-9d45-f40af9198610"
     },
     {
       "gateIdentifier": "10f73733-d314-5c04-9ee1-10f74f8c6a6c",
@@ -193,8 +193,8 @@
         "lean-lsp-mcp: lean_build, lean_diagnostic_messages, lean_goal, lean_hover_info, lean_verify, lean_file_outline"
       ],
       "failureReason": null,
-      "sourceRevision": "sha256:b7ebb26c5de074837b4048d3b7e4c3be183594e7591d0ef40a0df29fd07763e9",
-      "executionIdentifier": "01a09a2f-6a86-7f3e-885e-1b516bd73d53"
+      "sourceRevision": "sha256:0bdf9f362166ae3da7478a7cc969070db351ad1e4a4f5e695abeca9acde4c22a",
+      "executionIdentifier": "01a0a4a5-249b-748a-9d45-f40af9198610"
     }
   ]
 }

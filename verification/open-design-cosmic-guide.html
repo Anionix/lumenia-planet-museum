@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Lumenia Planet Museumの仕上げ方針と静的な装飾見本">
+  <title>仕上げの航路 — Lumenia Planet Museum</title>
+  <!--
+    LLM STATE / 2026-09-15 / machine-contract
+    stable_id(uuidv5)=d34ff692-b938-58d1-a4f1-e5e7090b936c
+    revision_id(uuidv7)=01a0a4a8-94e6-7886-95e4-e92ad4ebd82a
+    transition=brief.locked -> guide.written -> checks.passed
+    constraints=motion.static; physics.disabled; imagery.none; scope=project-only
+  -->
+  <style>
+    :root {
+      --bg: #080d1c;
+      --fg: #f1eee3;
+      --body: #c2cbdc;
+      --accent: #d5eab1;
+      --border: oklch(0.34 0.035 258);
+      --muted: oklch(0.68 0.025 258);
+      --cyan: oklch(0.84 0.09 205);
+      --pink: oklch(0.84 0.085 350);
+      --display: Georgia, "Times New Roman", serif;
+      --body-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      background: var(--bg);
+      color: var(--fg);
+    }
+
+    body {
+      min-width: 320px;
+      margin: 0;
+      position: relative;
+      background-color: var(--bg);
+      color: var(--body);
+      font-family: var(--body-font);
+      line-height: 1.65;
+      letter-spacing: 0.01em;
+    }
+
+    body::before {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      width: 1px;
+      height: 1px;
+      background: color-mix(in oklch, var(--body) 72%, transparent);
+      box-shadow:
+        13vw 9vh 0 color-mix(in oklch, var(--body) 28%, transparent),
+        28vw 18vh 0 color-mix(in oklch, var(--body) 24%, transparent),
+        49vw 8vh 0 color-mix(in oklch, var(--body) 30%, transparent),
+        73vw 23vh 0 color-mix(in oklch, var(--body) 22%, transparent),
+        87vw 11vh 0 color-mix(in oklch, var(--body) 32%, transparent),
+        8vw 63vh 0 color-mix(in oklch, var(--body) 20%, transparent),
+        39vw 71vh 0 color-mix(in oklch, var(--body) 30%, transparent),
+        66vw 60vh 0 color-mix(in oklch, var(--body) 24%, transparent),
+        92vw 78vh 0 color-mix(in oklch, var(--body) 25%, transparent),
+        21vw 91vh 0 color-mix(in oklch, var(--body) 20%, transparent);
+      opacity: 0.65;
+      pointer-events: none;
+      content: "";
+    }
+
+    body > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    a {
+      color: var(--fg);
+      text-decoration-color: color-mix(in oklch, var(--body) 70%, transparent);
+      text-underline-offset: 0.25em;
+    }
+
+    a:hover {
+      background: color-mix(in oklch, var(--accent) 12%, transparent);
+      color: var(--fg);
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    .frame {
+      width: min(1160px, calc(100% - 48px));
+      margin-inline: auto;
+    }
+
+    .site-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 76px;
+      border-bottom: 1px solid var(--border);
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .wordmark {
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .wordmark span {
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    .header-meta {
+      color: var(--muted);
+      text-align: right;
+    }
+
+    .header-meta strong {
+      color: var(--body);
+      font-weight: 500;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.92fr);
+      gap: clamp(32px, 8vw, 108px);
+      align-items: center;
+      min-height: 590px;
+      padding-block: 72px 64px;
+    }
+
+    .eyebrow,
+    .section-kicker,
+    .orbit-caption,
+    .boundary-type,
+    .state-label,
+    .source-label {
+      margin: 0;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow {
+      margin-bottom: 22px;
+    }
+
+    .glitch-heading {
+      margin: 0;
+      color: var(--fg);
+      font-family: var(--display);
+      font-weight: 400;
+      letter-spacing: -0.065em;
+      text-shadow: -0.8px 0 var(--cyan), 0.8px 0 var(--pink);
+      text-wrap: balance;
+    }
+
+    .hero h1 {
+      max-width: 9.2em;
+      font-size: clamp(3.25rem, 7.6vw, 7.2rem);
+      line-height: 0.95;
+    }
+
+    .hero h1 span {
+      display: block;
+    }
+
+    .hero-lead {
+      max-width: 38rem;
+      margin: 32px 0 0;
+      color: var(--body);
+      font-size: clamp(1rem, 1.6vw, 1.18rem);
+      line-height: 1.9;
+      text-wrap: pretty;
+    }
+
+    .hero-note {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin: 30px 0 0;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+    }
+
+    .hero-note::before {
+      width: 34px;
+      height: 1px;
+      background: var(--border);
+      content: "";
+    }
+
+    .orbit-stage {
+      position: relative;
+      display: grid;
+      place-items: center;
+      width: min(100%, 370px);
+      aspect-ratio: 1;
+      margin-inline: auto;
+      border: 1px solid color-mix(in oklch, var(--border) 80%, transparent);
+      border-radius: 50%;
+    }
+
+    .orbit-stage::before,
+    .orbit-stage::after {
+      position: absolute;
+      content: "";
+      pointer-events: none;
+    }
+
+    .orbit-stage::before {
+      width: 1px;
+      height: 104%;
+      background: color-mix(in oklch, var(--border) 58%, transparent);
+    }
+
+    .orbit-stage::after {
+      width: 104%;
+      height: 1px;
+      background: color-mix(in oklch, var(--border) 58%, transparent);
+    }
+
+    .orbit {
+      position: absolute;
+      border: 1px solid color-mix(in oklch, var(--body) 38%, transparent);
+      border-radius: 50%;
+      transform: rotate(-22deg);
+    }
+
+    .orbit-a {
+      inset: 17%;
+    }
+
+    .orbit-b {
+      inset: 8%;
+      transform: rotate(68deg) scaleY(0.54);
+    }
+
+    .orbit-c {
+      inset: 27%;
+      transform: rotate(68deg) scaleY(0.58);
+    }
+
+    .orbit-core {
+      position: relative;
+      display: grid;
+      place-items: center;
+      width: 62px;
+      aspect-ratio: 1;
+      border: 1px solid var(--fg);
+      border-radius: 50%;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.08em;
+    }
+
+    .orbit-core::after {
+      position: absolute;
+      inset: 8px;
+      border: 1px solid var(--accent);
+      border-radius: 50%;
+      content: "";
+    }
+
+    .planet {
+      position: absolute;
+      width: 12px;
+      aspect-ratio: 1;
+      border: 1px solid var(--body);
+      border-radius: 50%;
+      background: var(--bg);
+    }
+
+    .planet-one {
+      top: 16%;
+      right: 28%;
+    }
+
+    .planet-two {
+      right: 9%;
+      bottom: 34%;
+      width: 18px;
+      border-color: var(--cyan);
+    }
+
+    .planet-three {
+      bottom: 17%;
+      left: 27%;
+      width: 8px;
+      border-color: var(--pink);
+    }
+
+    .orbit-caption {
+      position: absolute;
+      top: 11%;
+      left: 10%;
+      color: var(--fg);
+      font-size: 0.6rem;
+      line-height: 1.6;
+    }
+
+    .orbit-caption em {
+      color: var(--muted);
+      font-style: normal;
+    }
+
+    .state-rail {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .state-item {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-height: 104px;
+      padding: 22px 24px;
+      border-right: 1px solid var(--border);
+    }
+
+    .state-item:first-child {
+      padding-left: 0;
+    }
+
+    .state-item:last-child {
+      border-right: 0;
+    }
+
+    .state-value {
+      color: var(--fg);
+      font-family: var(--display);
+      font-size: 1.35rem;
+      line-height: 1.1;
+    }
+
+    .state-value.accent {
+      color: var(--accent);
+    }
+
+    .guide {
+      display: grid;
+      grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.28fr);
+      gap: clamp(32px, 9vw, 144px);
+      padding-block: 92px 82px;
+    }
+
+    .guide h2,
+    .boundary h2 {
+      max-width: 10em;
+      margin-top: 22px;
+      font-size: clamp(2rem, 4vw, 3.8rem);
+      line-height: 1.02;
+    }
+
+    .guide-copy {
+      max-width: 42rem;
+      padding-top: 26px;
+    }
+
+    .guide-copy p {
+      margin: 0 0 22px;
+      font-size: 1.04rem;
+      line-height: 1.95;
+      text-wrap: pretty;
+    }
+
+    .guide-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    .boundary {
+      display: grid;
+      grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.28fr);
+      gap: clamp(32px, 9vw, 144px);
+      padding-block: 0 86px;
+    }
+
+    .boundary-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      border-top: 1px solid var(--border);
+    }
+
+    .boundary-card {
+      min-height: 132px;
+      padding: 20px 18px 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .boundary-card:nth-child(odd) {
+      padding-right: 24px;
+      border-right: 1px solid var(--border);
+    }
+
+    .boundary-card:nth-child(even) {
+      padding-left: 24px;
+    }
+
+    .boundary-type {
+      display: block;
+      margin-bottom: 13px;
+      color: var(--fg);
+      letter-spacing: 0.08em;
+    }
+
+    .boundary-card p {
+      margin: 0;
+      color: var(--body);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    .source-footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 25px 0 38px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.74rem;
+      line-height: 1.6;
+    }
+
+    .source-footer p {
+      margin: 0;
+    }
+
+    .source-footer a {
+      color: var(--body);
+    }
+
+    @media (max-width: 760px) {
+      .frame {
+        width: min(100% - 32px, 560px);
+      }
+
+      .site-header {
+        min-height: 68px;
+      }
+
+      .header-meta {
+        max-width: 10rem;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 58px;
+        min-height: auto;
+        padding-block: 58px 54px;
+      }
+
+      .hero h1 {
+        font-size: clamp(3rem, 15vw, 5.2rem);
+      }
+
+      .orbit-stage {
+        width: min(100%, 330px);
+      }
+
+      .state-item {
+        min-height: 96px;
+        padding: 18px 12px;
+      }
+
+      .state-item:first-child {
+        padding-left: 0;
+      }
+
+      .state-value {
+        font-size: 1.14rem;
+      }
+
+      .guide,
+      .boundary {
+        grid-template-columns: 1fr;
+        gap: 26px;
+        padding-block: 66px 62px;
+      }
+
+      .guide-copy {
+        padding-top: 0;
+      }
+
+      .boundary {
+        padding-top: 0;
+      }
+
+      .source-footer {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .site-header {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4px;
+      }
+
+      .header-meta {
+        max-width: none;
+        text-align: left;
+      }
+
+      .state-rail {
+        grid-template-columns: 1fr;
+      }
+
+      .state-item,
+      .state-item:first-child {
+        min-height: auto;
+        padding: 15px 0;
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .state-item:last-child {
+        border-bottom: 0;
+      }
+
+      .boundary-list {
+        grid-template-columns: 1fr;
+      }
+
+      .boundary-card,
+      .boundary-card:nth-child(odd),
+      .boundary-card:nth-child(even) {
+        min-height: auto;
+        padding: 18px 0;
+        border-right: 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body data-state="guide.checked" data-session-id="01a0a4a8-94e6-7886-95e4-e92ad4ebd82a">
+  <header class="site-header frame" data-od-id="site-header" data-info-id="d34ff692-b938-58d1-a4f1-e5e7090b936c">
+    <a class="wordmark" href="#guide" data-od-id="brand-link">LUMENIA <span>/ PLANET MUSEUM</span></a>
+    <div class="header-meta">仕上げメモ <strong>静止を既定値に</strong></div>
+  </header>
+
+  <main class="frame" data-od-id="guide-main">
+    <section class="hero" data-od-id="hero-region" data-info-id="db6a7e08-dc40-5845-8544-14f6acb21706">
+      <div class="hero-copy">
+        <p class="eyebrow" data-od-id="hero-eyebrow">既存実装に添える / 仕上げ資料</p>
+        <h1 class="glitch-heading" data-od-id="hero-heading" data-text="静けさを、星系として整える。">
+          <span>静けさを、</span>
+          <span>星系として整える。</span>
+        </h1>
+        <p class="hero-lead" data-od-id="hero-lead">暗い宇宙を土台に、素材天体の気配と見出しの微かな色ずれを残す。見せる情報を増やすより、境界をきれいに保つ。</p>
+        <p class="hero-note" data-od-id="hero-note">本体リポジトリには変更なし</p>
+      </div>
+
+      <div class="orbit-stage" role="img" aria-label="素材天体の装飾見本。データではありません。" data-od-id="celestial-ornament" data-info-id="1ce54976-5bfe-58df-9077-c6fbf35ac5e2">
+        <span class="orbit-caption">装飾見本<br><em>非データ</em></span>
+        <span class="orbit orbit-a" aria-hidden="true"></span>
+        <span class="orbit orbit-b" aria-hidden="true"></span>
+        <span class="orbit orbit-c" aria-hidden="true"></span>
+        <span class="orbit-core" aria-hidden="true">15</span>
+        <span class="planet planet-one" aria-hidden="true"></span>
+        <span class="planet planet-two" aria-hidden="true"></span>
+        <span class="planet planet-three" aria-hidden="true"></span>
+      </div>
+    </section>
+
+    <section class="state-rail" aria-label="表示状態" data-od-id="state-rail">
+      <div class="state-item" data-od-id="state-static" data-info-id="1ce54976-5bfe-58df-9077-c6fbf35ac5e2">
+        <span class="state-label">表示</span>
+        <strong class="state-value accent">静止</strong>
+      </div>
+      <div class="state-item" data-od-id="state-physics-off">
+        <span class="state-label">物理演算</span>
+        <strong class="state-value">無効</strong>
+      </div>
+      <div class="state-item" data-od-id="state-scope">
+        <span class="state-label">見本の範囲</span>
+        <strong class="state-value">装飾のみ</strong>
+      </div>
+    </section>
+
+    <section class="guide" id="guide" data-od-id="finish-policy" data-info-id="199d58e1-1704-5c98-8944-aa8fd0c2e543">
+      <div>
+        <p class="section-kicker">仕上げの方針</p>
+        <h2 class="glitch-heading" data-od-id="policy-heading" data-text="記録と装飾を、混ぜない。">記録と装飾を、混ぜない。</h2>
+      </div>
+      <div class="guide-copy">
+        <p>15人の素材天体は、作品紹介のための小さな太陽系として見せる。装飾は雰囲気の確認に限り、歴史的影響や人物にない数値は追加しない。</p>
+        <p>静止を既定値にし、物理演算は無効。軽量表示を優先し、必要な情報の境界を崩さない。</p>
+      </div>
+    </section>
+
+    <section class="boundary" data-od-id="boundary-guide">
+      <div>
+        <p class="section-kicker">混同を防ぐ</p>
+        <h2 class="glitch-heading" data-od-id="boundary-heading" data-text="位置と時間は、別のもの。">位置と時間は、別のもの。</h2>
+      </div>
+      <div class="boundary-list" data-od-id="boundary-list">
+        <article class="boundary-card" data-od-id="boundary-feature-coordinate" data-info-id="16fe5fe4-025e-516f-b6fa-369c27a7b357">
+          <span class="boundary-type">特徴座標</span>
+          <p>作品の形を読む値</p>
+        </article>
+        <article class="boundary-card" data-od-id="boundary-screen-position" data-info-id="2d04ba51-e635-52ca-8a4c-78f235fa5d10">
+          <span class="boundary-type">画面の位置</span>
+          <p>いま見えている場所</p>
+        </article>
+        <article class="boundary-card" data-od-id="boundary-work-era" data-info-id="c045545c-53a4-555a-b39c-3af65fb346f6">
+          <span class="boundary-type">作品年代</span>
+          <p>作品が属する時代</p>
+        </article>
+        <article class="boundary-card" data-od-id="boundary-exhibit-duration" data-info-id="84cb8afc-43dd-5f7e-a121-55313e6bc8c3">
+          <span class="boundary-type">展示時間</span>
+          <p>画面で過ごす時間</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="source-footer frame" data-od-id="source-footer" data-info-id="e86921bb-07e1-5768-a8a0-f921729cd655">
+    <p><span class="source-label">記法の参照</span><br><a href="https://github.com/GoogleCloudPlatform/knowledge-catalog" rel="noreferrer" data-od-id="source-google-knowledge-catalog">Google Cloud Platform / Knowledge Catalog</a> · <a href="https://claude.com/blog/the-ai-native-sdlc-playbook" rel="noreferrer" data-od-id="source-claude-sdlc-playbook">Claude / AI-native SDLC Playbook</a></p>
+    <p>仕上げ資料 / このプロジェクトだけ / 2026-09-15</p>
+  </footer>
+</body>
+</html>

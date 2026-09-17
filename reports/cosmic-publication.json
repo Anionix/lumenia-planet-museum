@@ -1,0 +1,77 @@
+{
+  "record_type": "publication_receipt",
+  "record_id": "72d6a9dc-f388-5636-a746-fe846871dcaa",
+  "recorded_at": "2026-09-15T10:54:49.775Z",
+  "published_source_commit": "100ed58fcbed8288ecd751a03fd41dacbef85eaf",
+  "verification_source_revision": "sha256:0bdf9f362166ae3da7478a7cc969070db351ad1e4a4f5e695abeca9acde4c22a",
+  "checks": {
+    "tests_passed": 90,
+    "core_theorems_without_axioms": 27,
+    "cosmic_theorems_without_axioms": 7,
+    "planetarium_theorems_without_axioms": 38,
+    "application_checks_passed": 6,
+    "exported_files": 252,
+    "static_pages": 39,
+    "initial_script_gzip_bytes": 186300,
+    "lazy_scene_gzip_bytes": 155405,
+    "catalog_gzip_bytes": 8722
+  },
+  "deployments": [
+    {
+      "provider": "Vercel",
+      "url": "https://lumenia-planet-museum.vercel.app/",
+      "deployment_id": "dpl_CRdrMP6ajkAYrnVaWiyPEGtVe4PG",
+      "state": "READY",
+      "verified_routes": [
+        "/",
+        "/atelier/william-morris/",
+        "/records/"
+      ],
+      "verified_route_status": 200,
+      "verified_html_matches_build": true
+    },
+    {
+      "provider": "ChatGPT Sites",
+      "url": "https://lumenia-planet-museum.anionix.chatgpt.site",
+      "version": 4,
+      "deployment_id": "appgdep_6aa9225fc83c8191a6c7e5f8f379527f",
+      "state": "succeeded",
+      "access_mode": "public",
+      "archive": "sha256:e72f5d8fd2079fc545aa8cab486c88839eef1c72fb2ef6f2f3bd5268cc8eb52f",
+      "direct_http_verification": "blocked by Cloudflare error 1010; deployment service confirmed publication"
+    }
+  ],
+  "open_design": {
+    "application_version": "0.22.2",
+    "plugin_version": "0.5.2",
+    "mode": "Local Codex",
+    "connection_verified": true,
+    "generation": "succeeded",
+    "reference_file": "verification/open-design-cosmic-guide.html",
+    "reference_scope": "A short finishing guide and decorative sample. The production repository was implemented and checked separately."
+  },
+  "signature": {
+    "provider": "1Password",
+    "format": "ssh",
+    "scope": "repository",
+    "existing_public_key_corrected": true,
+    "first_contract_commit_signed": false,
+    "subsequent_commits_signed": true
+  },
+  "pull_requests": [
+    8,
+    9,
+    10
+  ],
+  "issues": [
+    5,
+    6,
+    7
+  ],
+  "limitations": [
+    "Browser interaction and rendering performance were not measured.",
+    "Source push and deployment do not merge the GitHub pull requests."
+  ],
+  "state_transition": "verified source -> identical static output -> source publication -> deployment success -> readback -> reference archived",
+  "execution_identifier": "01a0a4b4-c25e-75ec-b06f-8fc24be2d63d"
+}
