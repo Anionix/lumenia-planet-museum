@@ -50,7 +50,7 @@
   "createdAt": "2026-09-15T10:10:21.177Z",
   "machineContract": {
     "state": "generated",
-    "transition": "verified source -> exact numerical bridge -> renderer-specific build"
+    "transition": "verified source -> shared numerical imports -> renderer-specific build"
   },
   "inputs": [
     {
@@ -218,14 +218,6 @@
     {
       "file": "web/components/MaterialSphere.generated.tsx",
       "digest": "sha256:9d8f435523dd41cd2852c88b5ad7e8444f802c70742d213bba849318847e6fbf"
-    },
-    {
-      "file": "web/artwork/material-sphere-computation/kernel.mjs",
-      "digest": "sha256:3f16166f19cb4144fa8c9a5fd2acc0d521f3ba4fae6fd3c1eb4add7e02e656c4"
-    },
-    {
-      "file": "web/artwork/material-sphere-computation/dimension.mjs",
-      "digest": "sha256:3f5090c856b86e8625886dd35f59368fdbbd1fd60b787fad21394f21179273b7"
     }
   ],
   "plans": [

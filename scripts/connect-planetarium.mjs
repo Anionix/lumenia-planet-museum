@@ -80,10 +80,6 @@ export async function connectPlanetarium() {
   });
   component += '    default: throw new Error("Unknown Material Sphere profile");\n  }\n}\n';
   outputs.set('web/components/MaterialSphere.generated.tsx', component);
-  for (const name of ['kernel.mjs', 'dimension.mjs']) {
-    // Byte-identical copies: the deployed numerical functions are the checked functions, not a rewrite.
-    outputs.set('web/artwork/material-sphere-computation/' + name, await readFile(path.join(planetariumRoot, 'lib', name), 'utf8'));
-  }
   for (const [relative, content] of outputs) {
     await mkdir(path.dirname(path.join(projectRoot, relative)), { recursive: true });
     await writeFile(path.join(projectRoot, relative), content);
@@ -96,7 +92,7 @@ export async function connectPlanetarium() {
     // Neutral numerical input is shared. CSS properties are not a universal scene description.
     interpretationStatus: 'proposed', visualEquivalenceAcrossRenderers: 'notVerified' }));
   const evidence = { ...bridge, createdAt: report.recordedAt,
-    machineContract: { state: 'generated', transition: 'verified source -> exact numerical bridge -> renderer-specific build' },
+    machineContract: { state: 'generated', transition: 'verified source -> shared numerical imports -> renderer-specific build' },
     inputs: manifest.files, outputs: [...outputs].map(([file, content]) => ({ file, digest: digest(content) })), plans };
   await mkdir(path.join(projectRoot, 'reports'), { recursive: true });
   await writeFile(path.join(projectRoot, 'reports/material-sphere-bridge.json'), JSON.stringify(evidence, null, 2) + '\n');
