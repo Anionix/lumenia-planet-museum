@@ -10,6 +10,7 @@ import path from 'node:path';
 import { solidPanels, majorSegments, minorSegments, radiusRatio } from '../web/artwork/css-geometry.ts';
 import { artworkStages, artworkPieceCounts } from '../web/artwork/catalog.ts';
 import { booleanAssignments, leanVerdicts } from './support/lean-boundary.mjs';
+import { readJsonLines } from '../scripts/json-lines.mjs';
 
 // llm machine contract; claim UUIDv5: 6c16261b-86c7-54d4-9712-99528cd7ca89
 // execution UUIDv7 assigned by the report runner; transition: hostile or valid fixture -> checked verdict
@@ -126,10 +127,10 @@ test('Plumeria keyframes must be module-level constants just like style declarat
   assert.ok(inspectSources(new Map([['web/app/page.tsx', nested]])).issues.plumeriaScope.length);
 });
 
+const [component, styles] = await Promise.all(['CssArtwork.tsx', 'CssArtwork.styles.ts']
+  .map(name => readFile(new URL('../web/components/' + name, import.meta.url), 'utf8')));
 test('line artwork uses HTML border rings and has no vector or canvas drawing implementation', async () => {
-  const component = await readFile(new URL('../web/components/CssArtwork.tsx', import.meta.url), 'utf8');
-  const styles = await readFile(new URL('../web/components/CssArtwork.styles.ts', import.meta.url), 'utf8');
-  assert.equal(JSON.parse(await readFile(new URL('../contracts/css-line-artwork.json', import.meta.url), 'utf8')).ringCount, 48);
+  assert.equal((await readJsonLines(new URL('../contracts/css-line-artwork.jsonl', import.meta.url)))[0].ringCount, 48);
   assert.match(styles, /css\.keyframes\(/); assert.match(styles, /borderRadius: '50%'/);
   assert.doesNotMatch(component, /<(svg|canvas|img)\b|orbitPaths|orbitCoordinates|setInterval\(|setTimeout\(/);
   assert.equal((component.match(/requestAnimationFrame\(/g) ?? []).length, 2);
@@ -137,8 +138,7 @@ test('line artwork uses HTML border rings and has no vector or canvas drawing im
   assert.doesNotMatch(styles, /\$\{(?:angle|horizontal|vertical)\}(?:deg|rad)/);
 });
 
-test('CSS diagonal circles satisfy the torus equation at sampled points', async () => {
-  const styles = await readFile(new URL('../web/components/CssArtwork.styles.ts', import.meta.url), 'utf8');
+test('CSS diagonal circles satisfy the torus equation at sampled points', () => {
   const ratio = Number(styles.match(/\* (0\.\d+)\)\) rotateY/)?.[1]);
   const tilt = Number(styles.match(/rotateY\(-([\d.]+)deg\)/)?.[1]) * Math.PI / 180;
   assert.ok(Number.isFinite(ratio) && Number.isFinite(tilt));
