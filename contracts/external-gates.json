@@ -1,5 +1,5 @@
 {
-  "applicationProfile": "All three current artworks use Plumeria CSS rendering; user-approved replacement of Canvas and WebGL",
+  "applicationProfile": "cssArtworksAndExplicitCosmicExhibition",
   "gates": [
     {
       "name": "Lumenia.CoreInitialTransferGate",
@@ -245,6 +245,13 @@
       "unit": "boolean",
       "measurement": "288 native CSS panels; actual controls and movement without JavaScript",
       "gateIdentifier": "d63d9265-a8d6-5c44-94b7-2c6259cd6bf6"
+    },
+    {
+      "name": "Lumenia.CosmicExhibitionIsolationGate",
+      "limit": 0,
+      "unit": "violations",
+      "measurement": "Three.js is limited to registered client exhibition modules; no physics engine, decoder or new binary artwork. Existing CSS artwork and registered image admission checks remain enforced.",
+      "gateIdentifier": "81b0c197-77d0-52c6-b099-e3fc65e6fac2"
     }
   ],
   "referenceGates": [

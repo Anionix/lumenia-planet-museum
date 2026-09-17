@@ -10,6 +10,7 @@ import { uuidVersionSeven } from './identifiers.mjs';
 import { observation, verificationResult, saveReport } from './report.mjs';
 import { inspectCharacterAsset } from './inspect-character-asset.mjs';
 import { isRegisteredInterfaceIcon } from './drawing-asset-policy.mjs';
+import { registeredCosmicDrawing } from './cosmic-drawing-policy.mjs';
 
 // llm machine contract; claim UUIDv5: 07b6fb92-8639-50e0-873d-b43d3d5c28df
 // execution UUIDv7 generated per run; transition: current sources + built bytes + real asset -> measured code gates
@@ -23,7 +24,9 @@ const evidence = { manifest, executionIdentifier, generatedBy: 'scripts/run-appl
 const observations = [];
 const character = await inspectCharacterAsset(path.join(projectRoot, 'web/out'));
 evidence.characterInspection = character;
-const drawingGateName = character.receipt ? 'CssArtworkAndCharacterIsolationGate' : 'CssOnlyApplicationGate';
+const cosmicContract = await readJson('contracts/cosmic-exhibition.json');
+const cosmicEnabled = cosmicContract.enabled === true;
+const drawingGateName = cosmicEnabled ? 'CosmicExhibitionIsolationGate' : character.receipt ? 'CssArtworkAndCharacterIsolationGate' : 'CssOnlyApplicationGate';
 function add(name, value, reason, tools, revision = context.sourceRevision) {
   const definition = definitions.find(item => item.name === 'Lumenia.' + name);
   if (!definition) throw new Error('Unknown application gate: ' + name);
@@ -90,7 +93,8 @@ try {
   evidence.interfaceAssets = outputs.filter(file => isRegisteredInterfaceIcon(file, manifest.files));
   if (character.receipt && character.status !== 'pass') drawingProblems.push({ reason: character.failureReason });
   for (const module of clientModules.modules)
-    if (/node_modules\/(three|.*(?:draco|meshopt|ktx2|basis))\//i.test(module.resource ?? ''))
+    if (/node_modules\/(three|.*(?:draco|meshopt|ktx2|basis))\//i.test(module.resource ?? '') &&
+        !(cosmicEnabled && /node_modules\/three\//.test(module.resource ?? '')))
       drawingProblems.push({ module: module.identifier, reason: 'Non-CSS rendering dependency' });
   for (const file of outputs)
     if ((/^(artworks|decoders)\/|\.(glb|gltf|ktx2|wasm|png|jpe?g|webp|avif|gif|svg)$/.test(file.path)) &&
@@ -99,12 +103,21 @@ try {
       drawingProblems.push({ file: file.path, reason: 'Unregistered binary or non-CSS rendering asset in this build profile' });
   for (const file of inspection.clientReached) {
     const parsed = sources.get(file);
-    if (/<(?:svg|canvas|img)\b|\.getContext\s*\(|WebGLRenderer|WebGLRenderingContext/.test(parsed))
+    if (/<(?:svg|canvas|img)\b|\.getContext\s*\(|WebGLRenderer|WebGLRenderingContext/.test(parsed) &&
+        !(cosmicEnabled && registeredCosmicDrawing(file)))
       drawingProblems.push({ file, reason: 'Non-CSS drawing source' });
-    if (file !== 'web/components/CssArtwork.tsx' && /requestAnimationFrame\s*\(/.test(parsed))
+    if (file !== 'web/components/CssArtwork.tsx' && !(cosmicEnabled && file === 'web/artwork/cosmic-scene.mjs') && /requestAnimationFrame\s*\(/.test(parsed))
       drawingProblems.push({ file, reason: 'Unexpected drawing scheduler' });
   }
-  evidence.drawingProfile = character.receipt ? 'cssArtworksAndRegisteredCharacterImage' : 'cssOnly';
+  if (cosmicEnabled) {
+    for (const [file, source] of sources) {
+      if (/from\s*['"]three(?:\/[^'"]*)?['"]|import\s*\(['"]three(?:\/[^'"]*)?['"]\)/.test(source) && !registeredCosmicDrawing(file))
+        drawingProblems.push({ file, reason: 'Three.js import outside registered exhibition modules' });
+      if (/@dimforge\/rapier|new\s+(?:RAPIER|Rapier)\.World/.test(source))
+        drawingProblems.push({ file, reason: 'Physics must remain disabled and unloaded by default' });
+    }
+  }
+  evidence.drawingProfile = cosmicEnabled ? 'cssArtworksAndExplicitCosmicExhibition' : character.receipt ? 'cssArtworksAndRegisteredCharacterImage' : 'cssOnly';
   evidence.cssOnlyDrawingProblems = drawingProblems;
   add(drawingGateName, bytesUnchanged && clientModules.modules.length ? drawingProblems.length : null,
     'This build contains an unregistered drawing implementation, invalid character evidence, or stale output.',
