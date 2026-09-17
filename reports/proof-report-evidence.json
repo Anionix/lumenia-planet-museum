@@ -1,6 +1,6 @@
 {
   "manifest": {
-    "sourceRevision": "sha256:fa371b84fa47949a1c010e29b9545cb3671b586f9700f4df604d117be0605a2a",
+    "sourceRevision": "sha256:87ed8dc07a6cf314667c9e4f158ea72255a3130c220ca3192f1266e238231c76",
     "files": [
       {
         "path": "CONSTRAINTS.md",
@@ -21,6 +21,10 @@
       {
         "path": "contracts/cosmic-reference-images.json",
         "sha256": "022245e9b6fbfa5f2ddbb31b362b537777ee309d377cd810463b3182abeb7acc"
+      },
+      {
+        "path": "contracts/cosmic-reference-thumbnails.json",
+        "sha256": "625b82771ee1463fbe47d2841debaa586f8c49c845e8375cc0194202a673316e"
       },
       {
         "path": "contracts/css-artworks.json",
@@ -45,6 +49,10 @@
       {
         "path": "contracts/external-gates.json",
         "sha256": "72d221e87cfa69839658e2a29b9cdb383b531104aef17ee027a6313620bb1ecc"
+      },
+      {
+        "path": "contracts/review-verification.wl",
+        "sha256": "1e15364241033accac6305dc5abadeca6475004372353043bacb8b235970d531"
       },
       {
         "path": "contracts/verification-contract.schema.json",
@@ -83,6 +91,10 @@
         "sha256": "dc185dc0b11ffc1471061e7301249def8111ef69707876e0cf4ebb3ea05afb04"
       },
       {
+        "path": "formal/Lumenia/ReviewChecks.lean",
+        "sha256": "8c5a35d41c247e0260a2e01a6d55f13d23619b4b0dd74d4ddb01227c6ccccaef"
+      },
+      {
         "path": "formal/Lumenia/Tests.lean",
         "sha256": "329500e65c6d3c601e25d95d91de28d904ecf197b8b5a3ec1e95753b62a52995"
       },
@@ -112,7 +124,7 @@
       },
       {
         "path": "mcp/chrome-measurements.js",
-        "sha256": "1d052b24aa89a1145e3b38364951aa4f81f712f9983bf28e5b406c95e54d33c5"
+        "sha256": "054bd5b671c904ff6ffc8dd02d01c4acc9b7c61d3090709c4898d823ad455976"
       },
       {
         "path": "mcp/lean-lsp-mcp.json",
@@ -176,7 +188,7 @@
       },
       {
         "path": "reference-assets/artist-cosmos/explore/main.mjs",
-        "sha256": "0d4471dedf1b05074c71e85f98de67210bc51cafbd88b1fb60db59f7a2404c7c"
+        "sha256": "847e4110cc04ccaf711d85279c98bd44066c3e63d11dff5c81c88deb23544510"
       },
       {
         "path": "reference-assets/artist-cosmos/explore/navigation.mjs",
@@ -296,7 +308,7 @@
       },
       {
         "path": "reference-assets/artist-cosmos/interactive/main.mjs",
-        "sha256": "b22762da2169554fa5ebef0079a7dcb189a7b9e846517354d8a6c1862acf5c8b"
+        "sha256": "0becce2832328bad51d6d1dae08c73ec31f680060715a610dcb04577eedcfbbd"
       },
       {
         "path": "reference-assets/artist-cosmos/interactive/model.mjs",
@@ -321,6 +333,10 @@
       {
         "path": "reference-assets/artist-cosmos/interactive/tests/exhibition.test.mjs",
         "sha256": "de9004bed080f0a0571f905c25a87b8883a8755bdd0ed59405a714f64ebbd2c0"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/thumbnail.mjs",
+        "sha256": "ad475add726ee650f87821452c38b49db1b0ce58a5ebbfab710598adf78faa80"
       },
       {
         "path": "reference-assets/artist-cosmos/interactive/vendor/RAPIER-LICENSE.txt",
@@ -404,7 +420,7 @@
       },
       {
         "path": "reference-assets/artist-cosmos/interactive/webmcp.mjs",
-        "sha256": "9f825821aec1e5abcafb0e57c3f82a4ee104998a3024ca13d5d69872555bb015"
+        "sha256": "a72054421924eadfe10cd592ae7b9278440696b05e47207488eb74221143e1a9"
       },
       {
         "path": "reference-assets/artist-cosmos/josef-muller-brockmann.png",
@@ -435,6 +451,66 @@
         "sha256": "d75de875bc814bbc4cf6dbe85f6e1cdaf2a31340aaa06ab54a8c068f4345954b"
       },
       {
+        "path": "reference-assets/artist-cosmos/thumbnails/alphonse-mucha.webp",
+        "sha256": "95afa694862570e917208985a2afe17247abec194369aaf5aa718649f7f2a1f2"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/thumbnails/charles-eames.webp",
+        "sha256": "da6bb2d853023a420f54ee2488c132eaa88a66b744bdeb1b6d9301bc44116bcc"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/thumbnails/charles-rennie-mackintosh.webp",
+        "sha256": "8fdc23ff649c516dc5eef8d2bac0575613b142517e436cf0b9710b6cfc0ba727"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/thumbnails/dieter-rams.webp",
+        "sha256": "249ee97193242c22f01ce3b0a271f1d654cf3848d8519369f50f28e18f2b1417"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/thumbnails/ettore-sottsass.webp",
+        "sha256": "1a71a6b55bdb3938984fa6585ebb6a3a42c4eea38c730819ee1e9aa4df6a7370"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/thumbnails/gerrit-rietveld.webp",
+        "sha256": "ca7dafd332464695fb814383ea2a362ebdd0c27e5dee2d9332f3c0c6e7e0e493"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/thumbnails/herbert-bayer.webp",
+        "sha256": "390729746a58f1ab800021f0a1e5160cba8b85d6d8769c4ec881a69f87871e5b"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/thumbnails/josef-muller-brockmann.webp",
+        "sha256": "006b8cf6d35aa051a26e8dd42bcafb236f3c8b95ad6c9149707b1d2dd5775269"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/thumbnails/massimo-vignelli.webp",
+        "sha256": "34834ce2ee04962a3cc1e6296f19a032f69af70d08b67eafb6d75e025b664123"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/thumbnails/naoto-fukasawa.webp",
+        "sha256": "281a6f3f16eccb1fa562a39b8468144505947f953a981a856032f06333eba806"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/thumbnails/piet-mondrian.webp",
+        "sha256": "3cb143f171ad04c0afcb73c7bd1d01d6628bc895fd3d289a942e4dc5cc1a6325"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/thumbnails/ray-eames.webp",
+        "sha256": "4048c374067b91fac8e0e97b161c14d8328d272dd9ef3c5f1fb5553c91338ab3"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/thumbnails/rei-kawakubo.webp",
+        "sha256": "c7345e2afaf62c36e03757e7d2dd751158e7261d6850a1387888af63ef02efc1"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/thumbnails/walter-gropius.webp",
+        "sha256": "27e9d564215b2b9a7201a74e30a14bf6c4012b157c197c9c8fea7aad470f26bd"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/thumbnails/william-morris.webp",
+        "sha256": "e6c5a5598c7efcbf07cb2062fb1de34a7927e9716ca8d18766298532aa701e0a"
+      },
+      {
         "path": "reference-assets/artist-cosmos/walter-gropius.png",
         "sha256": "595059dbe0521bed0cff56afb278d8034344416ceb419f895d5afd6d6b589fb4"
       },
@@ -447,8 +523,12 @@
         "sha256": "ef94351ba2fc8e33d2f510136d43ffc9d7784654e88bffaee94da078772d6801"
       },
       {
+        "path": "scripts/audit-review-kernel.mjs",
+        "sha256": "e69699d14caaba0a914d7a4c0ca40fdf870c20fd1f6ce658c55d9eddbd35c7c3"
+      },
+      {
         "path": "scripts/browser-observations.mjs",
-        "sha256": "31eddef823b66065b8893ad6da5149712a534af3792c844d913be78fddba9355"
+        "sha256": "4c7af1a548a1c098c37f9a15825d5efee054573b78f8777ed7dea83d50ccea82"
       },
       {
         "path": "scripts/build-artwork.mjs",
@@ -468,11 +548,15 @@
       },
       {
         "path": "scripts/build-cosmic-images.mjs",
-        "sha256": "1f32dd06900e7c8fb874f490360e9b4b3b6a2e93297de3cee78348851ef0f0a0"
+        "sha256": "e1f9d428fa467771c73b043e45370448cc4e2b142b524f0339abfc14455a8b10"
       },
       {
         "path": "scripts/build-exploration.mjs",
         "sha256": "5fa07c6aa1d7e093fd785c1e929bb6c911885a1d3e50e425f7e75be90b55a3d7"
+      },
+      {
+        "path": "scripts/build-reference-thumbnails.mjs",
+        "sha256": "af86f5d73a5af96b1e6e23b2aea3b98c52082e1afe1ebfc9cf69e8a4202d1949"
       },
       {
         "path": "scripts/build-web.mjs",
@@ -500,7 +584,7 @@
       },
       {
         "path": "scripts/drawing-asset-policy.mjs",
-        "sha256": "57112eba494063e0cd5d1ba6fd154a09a9076758d222ae244e1380e2787e2af2"
+        "sha256": "b82f8d1f3a041a083788b9290f34a34c08e44a833765b10638fbff74fbe97d0d"
       },
       {
         "path": "scripts/exploration-recipes.mjs",
@@ -524,7 +608,7 @@
       },
       {
         "path": "scripts/language-server-evidence.mjs",
-        "sha256": "59fdf821773569b9dbd4b62527a64b29bf39adb2f923b345cbcd4fb185784898"
+        "sha256": "cabebf9637f1d3d7093ab648a291c7fa51a450436caeb33143e7d7f4cfc43275"
       },
       {
         "path": "scripts/measurement-context.mjs",
@@ -544,7 +628,7 @@
       },
       {
         "path": "scripts/run-application-check.mjs",
-        "sha256": "67168cefa1cd9519f265c3a0088573edf30b8f23cf5be61ba7f523ab9c31a00c"
+        "sha256": "53edfc032d35defcd5e2890e594f59c2f1e723177a8e838a0371ac7ec11f7f88"
       },
       {
         "path": "scripts/run-asset-reference-check.mjs",
@@ -552,7 +636,7 @@
       },
       {
         "path": "scripts/run-formal-check.mjs",
-        "sha256": "10a575905640953302c3d407665b9b7c012c47f8ca9f202044b1be0b4114eb56"
+        "sha256": "22114b17a2e8d6c0be28c96930739a338cb84a8c4c70a81dea90a9e1fc9c9c55"
       },
       {
         "path": "scripts/run-gates.mjs",
@@ -568,7 +652,7 @@
       },
       {
         "path": "scripts/source-revision.mjs",
-        "sha256": "2bc9a85fae617b28a3201c053652a9c08ee672985c472e8fac4e62001e2be88e"
+        "sha256": "0bc29e99a721a9e660f2941faeb5f058b14be99770871c2a9981e19b252daff5"
       },
       {
         "path": "scripts/stage-museum-character.mjs",
@@ -599,8 +683,12 @@
         "sha256": "58b34595cf2779a3f68419d620fc25e0b7dc25a21dc050ca5d40627b0670e3f8"
       },
       {
+        "path": "tests/browser-collector.test.mjs",
+        "sha256": "fe940c814d66c7a0f28241500f282a20c570bcf59bd688fd2eff09aa201f548b"
+      },
+      {
         "path": "tests/browser-observations.test.mjs",
-        "sha256": "6cb8c19cd493d4321fc6835cb1d8d4810d46482eb376c7d397e0d8b7b8fa80e4"
+        "sha256": "6592c6d0161e40911d29e3a3cb9f4c1c3112bbace220714cc457d42e8a046df6"
       },
       {
         "path": "tests/character-admission.test.mjs",
@@ -651,12 +739,20 @@
         "sha256": "327a7a5f3f93221bff98a3e067ef3f1ec46fdad500550f20040b0312351c1f02"
       },
       {
+        "path": "tests/reference-thumbnails.test.mjs",
+        "sha256": "ac2c9924e5ffce12d500dadb0182aa89023923d6809c8ef00cae112dedee2bce"
+      },
+      {
+        "path": "tests/review-verification.test.mjs",
+        "sha256": "b8268b99346f0e9d64181c967262911b25b3eec5f54ece7a1c8d136a45c25407"
+      },
+      {
         "path": "tests/threejs-reference-adapter.test.mjs",
         "sha256": "bddd1df4330aae164ebe89414bbf9f402d89214fa36d61079cf1b839b2c883b1"
       },
       {
         "path": "tests/webmcp.test.mjs",
-        "sha256": "0e79dce1cbef477dccc10780ed148c0335e6751867e200fcd837049dd0ae02fb"
+        "sha256": "97423fa0f56e26bc6495517da0ba18bd9a13bf67d6811346f4df285f55560c24"
       },
       {
         "path": "web/AGENTS.md",
@@ -907,234 +1003,6 @@
         "sha256": "b1cabd11511431b4230d21303222b0d8e09169144fa675ee624612c8a7946f67"
       },
       {
-        "path": "web/public/cosmos/alphonse-mucha.png",
-        "sha256": "57fe2c034be6dd3340464ab9852a79e8d8f12e8de46ee61b1d1af3f4801b09a0"
-      },
-      {
-        "path": "web/public/cosmos/charles-eames.png",
-        "sha256": "33c97fe0f290497c22f556293b923d7b4b5d5bcacf027b7a1ba34034974e8d37"
-      },
-      {
-        "path": "web/public/cosmos/charles-rennie-mackintosh.png",
-        "sha256": "81ee0b404ebe5e70465681397f6f2ea7ae82c85a4971f1524fdc7fc3e3be01a8"
-      },
-      {
-        "path": "web/public/cosmos/dieter-rams.png",
-        "sha256": "9b18c578a617c774b195ce2ddea6ef3c3cd2cf9562a60a5031df5b64742ff866"
-      },
-      {
-        "path": "web/public/cosmos/ettore-sottsass.png",
-        "sha256": "62f9f2086ffa001a9b5c326c4a4fb7eeba1ae4857fe9eb93a1f465349161cefa"
-      },
-      {
-        "path": "web/public/cosmos/explore/README.md",
-        "sha256": "f3734efaea1645d9d4c4a5837a11c38719cc6aa4e06e7090c286b020f2f2d409"
-      },
-      {
-        "path": "web/public/cosmos/explore/collision.mjs",
-        "sha256": "13f558e4d8f8c72391471366bcf741b807b75d676ee5f32bb38a3b8dbf8c48be"
-      },
-      {
-        "path": "web/public/cosmos/explore/geometry.mjs",
-        "sha256": "cef74914f09f2fba6facf47383761ec1cf521042780527cdf5672e4056684488"
-      },
-      {
-        "path": "web/public/cosmos/explore/index.html",
-        "sha256": "f7389559b538b733be0ba2f36e377095945d21c5e4ef243baaefa187152a1bfd"
-      },
-      {
-        "path": "web/public/cosmos/explore/main.mjs",
-        "sha256": "0d4471dedf1b05074c71e85f98de67210bc51cafbd88b1fb60db59f7a2404c7c"
-      },
-      {
-        "path": "web/public/cosmos/explore/navigation.mjs",
-        "sha256": "99b9a8816885b3b676b92e062f378d753129d036d6139e500cadfc2aa81aa4a5"
-      },
-      {
-        "path": "web/public/cosmos/explore/style.css",
-        "sha256": "954e429a5420d7dfee9876fc079f574dc1ac9561d2edf646c80e6f98d193236f"
-      },
-      {
-        "path": "web/public/cosmos/explore/worlds.json",
-        "sha256": "68a37e5a703e748a0e741c3defbbdf3e4a620f41dce92c7af7884cf03a79edff"
-      },
-      {
-        "path": "web/public/cosmos/explore/worlds/alphonse-mucha.json",
-        "sha256": "0f83d764f60976289e7fbc0c1dbdb67153766cfdfa646be7d913111b272850b7"
-      },
-      {
-        "path": "web/public/cosmos/explore/worlds/charles-eames.json",
-        "sha256": "65ffa39ad47261b6ee9208306ab3944d6f0db7d28060c571f54f9cac0acef827"
-      },
-      {
-        "path": "web/public/cosmos/explore/worlds/charles-rennie-mackintosh.json",
-        "sha256": "7ff646191074ec3e7ccf8b8eb3e0c4201e7d2ac05e9d6471e6e03b0f0ae4d2ea"
-      },
-      {
-        "path": "web/public/cosmos/explore/worlds/dieter-rams.json",
-        "sha256": "6eda4ca02aa1ed636d6d6c8196815c7067d619d33ceed6906592b22c4bfd217e"
-      },
-      {
-        "path": "web/public/cosmos/explore/worlds/ettore-sottsass.json",
-        "sha256": "fb3ac97e605e0175961f3c5caa2960ba5cea90d675e74ce7a7192d0bf44b672b"
-      },
-      {
-        "path": "web/public/cosmos/explore/worlds/gerrit-rietveld.json",
-        "sha256": "830919c67b451684ff5a4979d8ae2b8895a171e2512c554f8b0689181c08c82f"
-      },
-      {
-        "path": "web/public/cosmos/explore/worlds/herbert-bayer.json",
-        "sha256": "f8c4532a4adfa846bd96b84f4ee7b69c5cc7d9469fc7fe186db6647dcb56702b"
-      },
-      {
-        "path": "web/public/cosmos/explore/worlds/josef-muller-brockmann.json",
-        "sha256": "c8aa85237a82634db071cf1537798c03e52748242231a31d7ea90a0f29824aca"
-      },
-      {
-        "path": "web/public/cosmos/explore/worlds/massimo-vignelli.json",
-        "sha256": "8ee1785ab63f4b3d80a14a4caf295f14869af38b51d65ba6d8372c40d785958a"
-      },
-      {
-        "path": "web/public/cosmos/explore/worlds/naoto-fukasawa.json",
-        "sha256": "f93dc6864304ebf47aecb13272e71c80013acf80137ec77405f5822c669102d2"
-      },
-      {
-        "path": "web/public/cosmos/explore/worlds/piet-mondrian.json",
-        "sha256": "7eb0111d5a68e863c3dcd91f6b670f0089c4067d4e94e6fbb96ef4e842596eee"
-      },
-      {
-        "path": "web/public/cosmos/explore/worlds/ray-eames.json",
-        "sha256": "73adf919c358f6abe24a508fff81070caca45f246b7b8a53f0c537263e8f16fb"
-      },
-      {
-        "path": "web/public/cosmos/explore/worlds/rei-kawakubo.json",
-        "sha256": "69bb6af25b333be75f5ec25ace0bc821b801f6a92c445d1f2d2fd8d5f3fc2de4"
-      },
-      {
-        "path": "web/public/cosmos/explore/worlds/walter-gropius.json",
-        "sha256": "b2cb6370ecc3c6d4262a69223d5b5bc2300419d42b1777cebbc322ab28cc89b1"
-      },
-      {
-        "path": "web/public/cosmos/explore/worlds/william-morris.json",
-        "sha256": "3e82f60d3d049df3c318d34b4318ebac611692493be4a24d15ab297b89e35dec"
-      },
-      {
-        "path": "web/public/cosmos/gerrit-rietveld.png",
-        "sha256": "ca4d66b058126ed541e30ea886139ebfd2815740b6db8b538ca26f3c21305fc0"
-      },
-      {
-        "path": "web/public/cosmos/herbert-bayer.png",
-        "sha256": "1179f76272afc9eac1ac1b7b3ec6fcfcab9194bf000d27bbcd41e85cf25a8c3b"
-      },
-      {
-        "path": "web/public/cosmos/illustration-design-reference.jsonl",
-        "sha256": "5ff2c20d1969a6f83edf2520e3a10853e500e12bd87b15de85b0dc7b0f0eab9c"
-      },
-      {
-        "path": "web/public/cosmos/index.html",
-        "sha256": "3f98cb8943756dc2e35f3d1e0999d666dad5f3c158b83a85549b99639c049271"
-      },
-      {
-        "path": "web/public/cosmos/interactive/README.md",
-        "sha256": "494ddbf505fdf6bb914061d736c7f3797de174b91d3a37156d6d7937b2ba4e05"
-      },
-      {
-        "path": "web/public/cosmos/interactive/dependencies.json",
-        "sha256": "ec143940f4dd67e1c95f9d94e849c2b177abd484701a51528d8659f63054a141"
-      },
-      {
-        "path": "web/public/cosmos/interactive/exhibition.json",
-        "sha256": "108306a4418dd2b7740e2f7130cdac366adc5352d305722047dc41c1db96d616"
-      },
-      {
-        "path": "web/public/cosmos/interactive/index.html",
-        "sha256": "7fdcd4301499ff70f6eead1fbbb55489df4822988f44674db5a50c50b0eeaf53"
-      },
-      {
-        "path": "web/public/cosmos/interactive/main.mjs",
-        "sha256": "b22762da2169554fa5ebef0079a7dcb189a7b9e846517354d8a6c1862acf5c8b"
-      },
-      {
-        "path": "web/public/cosmos/interactive/model.mjs",
-        "sha256": "ba02dbf2d014e3673fd0033e97056a840d02c1db504987ff577922b94db00395"
-      },
-      {
-        "path": "web/public/cosmos/interactive/physics.mjs",
-        "sha256": "076dfd0f15f91d278eb51870d842c01e19e7ca3a77431c5d4bed658be6e45503"
-      },
-      {
-        "path": "web/public/cosmos/interactive/style.css",
-        "sha256": "1889ad1612d94417e05ca18522232110c3d510c09b3c5841ea5aad17c820b654"
-      },
-      {
-        "path": "web/public/cosmos/interactive/vendor/RAPIER-LICENSE.txt",
-        "sha256": "4c05555705e3efde601fb1252ae48f1d63992af8a8fb8947745b7fa834e8f519"
-      },
-      {
-        "path": "web/public/cosmos/interactive/vendor/THREE-LICENSE.txt",
-        "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
-      },
-      {
-        "path": "web/public/cosmos/interactive/vendor/controls/OrbitControls.js",
-        "sha256": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b"
-      },
-      {
-        "path": "web/public/cosmos/interactive/vendor/rapier.mjs",
-        "sha256": "82b65114e949ed17969a5d0a3517b952f430ea524f4a19ce4a31e72fb7757f27"
-      },
-      {
-        "path": "web/public/cosmos/interactive/vendor/reference-physics-contract.mjs",
-        "sha256": "4d1495820c1b9dcf334accee1892edd4f0ead85f5575e7c91935518903b435ba"
-      },
-      {
-        "path": "web/public/cosmos/interactive/vendor/three.core.js",
-        "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
-      },
-      {
-        "path": "web/public/cosmos/interactive/vendor/three.module.js",
-        "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
-      },
-      {
-        "path": "web/public/cosmos/interactive/webmcp.mjs",
-        "sha256": "9f825821aec1e5abcafb0e57c3f82a4ee104998a3024ca13d5d69872555bb015"
-      },
-      {
-        "path": "web/public/cosmos/josef-muller-brockmann.png",
-        "sha256": "75a303ac4c65d1608c6ffb3f2f3ce70a2191aacb0980713dccfa4c8ce29a13cd"
-      },
-      {
-        "path": "web/public/cosmos/massimo-vignelli.png",
-        "sha256": "68c567fa35979197d5652c822492322a995378ec30c20aa0f965db10bc4c7fc7"
-      },
-      {
-        "path": "web/public/cosmos/naoto-fukasawa.png",
-        "sha256": "c1d81e3a60c2e9859fe9c4c1fabd7fc27dc17d1b053d8cc2bbde8cf409b60f3a"
-      },
-      {
-        "path": "web/public/cosmos/piet-mondrian.png",
-        "sha256": "66ab2202b937935af83683534d1a667cc8e291dd5cb40049b29232439f9eb8da"
-      },
-      {
-        "path": "web/public/cosmos/ray-eames.png",
-        "sha256": "c4933e043eb1931a3bb4f64bb83821fbbca0b081298808c373adc12167c3b3f8"
-      },
-      {
-        "path": "web/public/cosmos/references.jsonl",
-        "sha256": "5d4f42946a7bd355d7f2540bafa7b5e4e85bfae93f81f6d0310044a9228b8ace"
-      },
-      {
-        "path": "web/public/cosmos/rei-kawakubo.png",
-        "sha256": "d75de875bc814bbc4cf6dbe85f6e1cdaf2a31340aaa06ab54a8c068f4345954b"
-      },
-      {
-        "path": "web/public/cosmos/walter-gropius.png",
-        "sha256": "595059dbe0521bed0cff56afb278d8034344416ceb419f895d5afd6d6b589fb4"
-      },
-      {
-        "path": "web/public/cosmos/william-morris.png",
-        "sha256": "d7485b0b48ab20c6ef5b369f0206db25137aac82021054cc1b8c8b4fb437d7a0"
-      },
-      {
         "path": "web/public/favicon.svg",
         "sha256": "b2a54a1ce80bfa8b03ccbab7fd6c1e1c57a8f4e3c11c83be25fee5700fe1e744"
       },
@@ -1144,7 +1012,7 @@
       }
     ]
   },
-  "executionIdentifier": "01a0a98a-1de0-715d-9080-5c4de1ae306b",
+  "executionIdentifier": "01a0a9cb-dae3-7411-b5ac-3db574cd8c31",
   "gateNames": {
     "79885f8e-618d-5cd3-9ee7-350d8e279b8b": "Lumenia.LeanProjectBuildGate",
     "46de9356-94a7-5355-a9a6-a6fde3471fcc": "Lumenia.LeanWarningGate",
@@ -1174,7 +1042,7 @@
         "--test-reporter=tap"
       ],
       "exitCode": 0,
-      "stdout": "TAP version 13\n# Subtest: initial display keeps 12 source coordinates and 3 unknown values with physics disabled\nok 1 - initial display keeps 12 source coordinates and 3 unknown values with physics disabled\n  ---\n  duration_ms: 45.104542\n  type: 'test'\n  ...\n# Subtest: semantic distance is an immutable snapshot independent of mutable display/input arrays\nok 2 - semantic distance is an immutable snapshot independent of mutable display/input arrays\n  ---\n  duration_ms: 1.086875\n  type: 'test'\n  ...\n# Subtest: fixed steps agree at 60 and 120 frames per second and cap long pauses\nok 3 - fixed steps agree at 60 and 120 frames per second and cap long pauses\n  ---\n  duration_ms: 0.2235\n  type: 'test'\n  ...\n# Subtest: real Rapier bodies collide, remain finite, and do not mutate source coordinates\nok 4 - real Rapier bodies collide, remain finite, and do not mutate source coordinates\n  ---\n  duration_ms: 258.278333\n  type: 'test'\n  ...\n# Subtest: gravity causes a fall and the display floor catches the panel\nok 5 - gravity causes a fall and the display floor catches the panel\n  ---\n  duration_ms: 13.880167\n  type: 'test'\n  ...\n# Subtest: kinematic dragging moves a body then releases it into simulation\nok 6 - kinematic dragging moves a body then releases it into simulation\n  ---\n  duration_ms: 1.375667\n  type: 'test'\n  ...\n# Subtest: actual browser validator agrees with compiled Lean over all 4096 assignments\nok 7 - actual browser validator agrees with compiled Lean over all 4096 assignments\n  ---\n  duration_ms: 342.614833\n  type: 'test'\n  ...\n# Subtest: runtime manifest rejects malformed flags, unvalidated stages, unknown keys and external resources\nok 8 - runtime manifest rejects malformed flags, unvalidated stages, unknown keys and external resources\n  ---\n  duration_ms: 0.559375\n  type: 'test'\n  ...\n# Subtest: decoders activate only for explicit asset flags, including Draco opt-in\nok 9 - decoders activate only for explicit asset flags, including Draco opt-in\n  ---\n  duration_ms: 1.547667\n  type: 'test'\n  ...\n# Subtest: actual optimized binary declares Meshopt and passes the browser manifest parser\nok 10 - actual optimized binary declares Meshopt and passes the browser manifest parser\n  ---\n  duration_ms: 13.419208\n  type: 'test'\n  ...\n# Subtest: code gates accept module-scope Plumeria arrays inside a client boundary\nok 11 - code gates accept module-scope Plumeria arrays inside a client boundary\n  ---\n  duration_ms: 16.176292\n  type: 'test'\n  ...\n# Subtest: framework links work in server and client pages without admitting unknown framework modules\nok 12 - framework links work in server and client pages without admitting unknown framework modules\n  ---\n  duration_ms: 1.464167\n  type: 'test'\n  ...\n# Subtest: code gates distinguish literal object keys from browser access\nok 13 - code gates distinguish literal object keys from browser access\n  ---\n  duration_ms: 0.740583\n  type: 'test'\n  ...\n# Subtest: code gates reject nested create, className, nonarray styles, server events and transitive browser access\nok 14 - code gates reject nested create, className, nonarray styles, server events and transitive browser access\n  ---\n  duration_ms: 1.163333\n  type: 'test'\n  ...\n# Subtest: code gates reject request-time server functions and nonliteral imports\nok 15 - code gates reject request-time server functions and nonliteral imports\n  ---\n  duration_ms: 0.677875\n  type: 'test'\n  ...\n# Subtest: Plumeria namespace aliases and opaque JSX props cannot bypass code gates\nok 16 - Plumeria namespace aliases and opaque JSX props cannot bypass code gates\n  ---\n  duration_ms: 0.529042\n  type: 'test'\n  ...\n# Subtest: Plumeria keyframes must be module-level constants just like style declarations\nok 17 - Plumeria keyframes must be module-level constants just like style declarations\n  ---\n  duration_ms: 1.268833\n  type: 'test'\n  ...\n# Subtest: line artwork uses HTML border rings and has no vector or canvas drawing implementation\nok 18 - line artwork uses HTML border rings and has no vector or canvas drawing implementation\n  ---\n  duration_ms: 6.651667\n  type: 'test'\n  ...\n# Subtest: CSS diagonal circles satisfy the torus equation at sampled points\nok 19 - CSS diagonal circles satisfy the torus equation at sampled points\n  ---\n  duration_ms: 0.499167\n  type: 'test'\n  ...\n# Subtest: all artwork kinds use CSS and the solid consists of finite torus panels\nok 20 - all artwork kinds use CSS and the solid consists of finite torus panels\n  ---\n  duration_ms: 0.843958\n  type: 'test'\n  ...\n# Subtest: shared controls have no drawing loop or graphics dependency\nok 21 - shared controls have no drawing loop or graphics dependency\n  ---\n  duration_ms: 1.900917\n  type: 'test'\n  ...\n# Subtest: decoder bytes remain in core; only artwork bytes are excluded\nok 22 - decoder bytes remain in core; only artwork bytes are excluded\n  ---\n  duration_ms: 2.584834\n  type: 'test'\n  ...\n# Subtest: missing stages, cached entries and unknown resource classes cannot pass transfer measurement\nok 23 - missing stages, cached entries and unknown resource classes cannot pass transfer measurement\n  ---\n  duration_ms: 0.343084\n  type: 'test'\n  ...\n# Subtest: successful header checks and subsequent page payloads count toward metadata and core bytes\nok 24 - successful header checks and subsequent page payloads count toward metadata and core bytes\n  ---\n  duration_ms: 0.18\n  type: 'test'\n  ...\n# Subtest: header classification rejects missing, ambiguous, failed and non-header evidence\nok 25 - header classification rejects missing, ambiguous, failed and non-header evidence\n  ---\n  duration_ms: 1.874291\n  type: 'test'\n  ...\n# Subtest: an aborted header notification is reconciled with a uniquely matched successful response\nok 26 - an aborted header notification is reconciled with a uniquely matched successful response\n  ---\n  duration_ms: 1.128792\n  type: 'test'\n  ...\n# Subtest: actual failures, incomplete evidence and unsuccessful interactions remain nonfunctional\nok 27 - actual failures, incomplete evidence and unsuccessful interactions remain nonfunctional\n  ---\n  duration_ms: 1.498958\n  type: 'test'\n  ...\n# Subtest: Character receipt boundary accepts a complete synthetic record without claiming visual verification\nok 28 - Character receipt boundary accepts a complete synthetic record without claiming visual verification\n  ---\n  duration_ms: 83.658333\n  type: 'test'\n  ...\n# Subtest: Character admission rejects sixteen unique but unrecognized direction labels\nok 29 - Character admission rejects sixteen unique but unrecognized direction labels\n  ---\n  duration_ms: 58.528416\n  type: 'test'\n  ...\n# Subtest: Character admission rejects wrong person\nok 30 - Character admission rejects wrong person\n  ---\n  duration_ms: 28.622875\n  type: 'test'\n  ...\n# Subtest: Character admission rejects unbound decoded image\nok 31 - Character admission rejects unbound decoded image\n  ---\n  duration_ms: 11.573958\n  type: 'test'\n  ...\n# Subtest: Character admission rejects missing axis evidence\nok 32 - Character admission rejects missing axis evidence\n  ---\n  duration_ms: 49.120334\n  type: 'test'\n  ...\n# Subtest: Character admission rejects failed standard inspection\nok 33 - Character admission rejects failed standard inspection\n  ---\n  duration_ms: 49.855458\n  type: 'test'\n  ...\n# Subtest: Character admission rejects incomplete continuity\nok 34 - Character admission rejects incomplete continuity\n  ---\n  duration_ms: 23.452334\n  type: 'test'\n  ...\n# Subtest: Character admission rejects duplicate direction\nok 35 - Character admission rejects duplicate direction\n  ---\n  duration_ms: 25.594458\n  type: 'test'\n  ...\n# Subtest: Character admission rejects missing direction\nok 36 - Character admission rejects missing direction\n  ---\n  duration_ms: 68.022375\n  type: 'test'\n  ...\n# Subtest: Character admission rejects failed direction\nok 37 - Character admission rejects failed direction\n  ---\n  duration_ms: 39.32125\n  type: 'test'\n  ...\n# Subtest: Character admission rejects empty semantic observation\nok 38 - Character admission rejects empty semantic observation\n  ---\n  duration_ms: 39.561459\n  type: 'test'\n  ...\n# Subtest: Character admission rejects non-text semantic reason\nok 39 - Character admission rejects non-text semantic reason\n  ---\n  duration_ms: 22.182916\n  type: 'test'\n  ...\n# Subtest: Character admission rejects failed independent review\nok 40 - Character admission rejects failed independent review\n  ---\n  duration_ms: 19.220375\n  type: 'test'\n  ...\n# Subtest: Character admission rejects failed blind review\nok 41 - Character admission rejects failed blind review\n  ---\n  duration_ms: 137.85475\n  type: 'test'\n  ...\n# Subtest: Character admission rejects intermediate atlas\nok 42 - Character admission rejects intermediate atlas\n  ---\n  duration_ms: 20.647167\n  type: 'test'\n  ...\n# Subtest: Character admission rejects invalid execution identifier\nok 43 - Character admission rejects invalid execution identifier\n  ---\n  duration_ms: 26.755083\n  type: 'test'\n  ...\n# Subtest: Character admission rejects image bytes changed after inspection\nok 44 - Character admission rejects image bytes changed after inspection\n  ---\n  duration_ms: 43.603541\n  type: 'test'\n  ...\n# Subtest: Character admission rejects evidence changed after inspection\nok 45 - Character admission rejects evidence changed after inspection\n  ---\n  duration_ms: 49.2465\n  type: 'test'\n  ...\n# Subtest: Missing character receipt is blocked, not accepted\nok 46 - Missing character receipt is blocked, not accepted\n  ---\n  duration_ms: 7.420416\n  type: 'test'\n  ...\n# Subtest: Unverified raster characters cannot mount; failed or stale evidence stops availability generation\nok 47 - Unverified raster characters cannot mount; failed or stale evidence stops availability generation\n  ---\n  duration_ms: 2.647875\n  type: 'test'\n  ...\n# Subtest: Accepted character availability preserves the image digest and evidence run\nok 48 - Accepted character availability preserves the image digest and evidence run\n  ---\n  duration_ms: 0.22575\n  type: 'test'\n  ...\n# Subtest: The studio reads freshly generated character availability instead of a manual ready flag\nok 49 - The studio reads freshly generated character availability instead of a manual ready flag\n  ---\n  duration_ms: 44.135458\n  type: 'test'\n  ...\n# Subtest: the committed verification request is valid\nok 50 - the committed verification request is valid\n  ---\n  duration_ms: 14.154375\n  type: 'test'\n  ...\n# Subtest: the committed verification result is valid and has a pass aggregate\nok 51 - the committed verification result is valid and has a pass aggregate\n  ---\n  duration_ms: 1.49375\n  type: 'test'\n  ...\n# Subtest: the committed asset manifest is valid\nok 52 - the committed asset manifest is valid\n  ---\n  duration_ms: 4.205417\n  type: 'test'\n  ...\n# Subtest: the fixed category budgets add up to the core budget\nok 53 - the fixed category budgets add up to the core budget\n  ---\n  duration_ms: 23.963291\n  type: 'test'\n  ...\n# Subtest: dual Meshopt encodings are rejected\nok 54 - dual Meshopt encodings are rejected\n  ---\n  duration_ms: 10.142917\n  type: 'test'\n  ...\n# Subtest: a Meshopt asset without its decoder is rejected\nok 55 - a Meshopt asset without its decoder is rejected\n  ---\n  duration_ms: 16.844542\n  type: 'test'\n  ...\n# Subtest: a KTX2 asset without its loader is rejected\nok 56 - a KTX2 asset without its loader is rejected\n  ---\n  duration_ms: 6.920291\n  type: 'test'\n  ...\n# Subtest: preservation options are required when the asset needs them\nok 57 - preservation options are required when the asset needs them\n  ---\n  duration_ms: 3.448625\n  type: 'test'\n  ...\n# Subtest: a result cannot claim pass when an observation failed\nok 58 - a result cannot claim pass when an observation failed\n  ---\n  duration_ms: 4.216708\n  type: 'test'\n  ...\n# Subtest: unknown properties fail closed\nok 59 - unknown properties fail closed\n  ---\n  duration_ms: 2.83725\n  type: 'test'\n  ...\n# Subtest: a pass with a missing, textual, non-finite or over-limit observation is rejected\nok 60 - a pass with a missing, textual, non-finite or over-limit observation is rejected\n  ---\n  duration_ms: 15.078167\n  type: 'test'\n  ...\n# Subtest: old evidence cannot be promoted to pass\nok 61 - old evidence cannot be promoted to pass\n  ---\n  duration_ms: 2.057875\n  type: 'test'\n  ...\n# Subtest: missing evidence is blocked even if an explanation says it passed\nok 62 - missing evidence is blocked even if an explanation says it passed\n  ---\n  duration_ms: 1.808042\n  type: 'test'\n  ...\n# Subtest: null observations, duplicate gates and an incomplete browser matrix fail closed\nok 63 - null observations, duplicate gates and an incomplete browser matrix fail closed\n  ---\n  duration_ms: 7.079167\n  type: 'test'\n  ...\n# Subtest: 15 unique sourced bodies keep 12 supplied semantic coordinates and all physics disabled\nok 64 - 15 unique sourced bodies keep 12 supplied semantic coordinates and all physics disabled\n  ---\n  duration_ms: 14.154625\n  type: 'test'\n  ...\n# Subtest: presentation movement never changes semantic distance, including missing coordinates\nok 65 - presentation movement never changes semantic distance, including missing coordinates\n  ---\n  duration_ms: 190.726583\n  type: 'test'\n  ...\n# Subtest: chronology keeps interval boundaries, unspecified date and exhibition date distinct\nok 66 - chronology keeps interval boundaries, unspecified date and exhibition date distinct\n  ---\n  duration_ms: 0.697833\n  type: 'test'\n  ...\n# Subtest: pause, reduced motion and visibility freeze the presentation clock; resumed frames stay bounded\nok 67 - pause, reduced motion and visibility freeze the presentation clock; resumed frames stay bounded\n  ---\n  duration_ms: 0.120709\n  type: 'test'\n  ...\n# Subtest: an orbit crosses 120 seconds continuously rather than teleporting\nok 68 - an orbit crosses 120 seconds continuously rather than teleporting\n  ---\n  duration_ms: 0.088792\n  type: 'test'\n  ...\n# Subtest: browser adapters are reproducible copies of the reusable source modules\nok 69 - browser adapters are reproducible copies of the reusable source modules\n  ---\n  duration_ms: 13.425667\n  type: 'test'\n  ...\n# Subtest: the 15 supplied images match their publication registration\nok 70 - the 15 supplied images match their publication registration\n  ---\n  duration_ms: 213.594459\n  type: 'test'\n  ...\n# Subtest: an unregistered, altered, or source-missing image is not admitted\nok 71 - an unregistered, altered, or source-missing image is not admitted\n  ---\n  duration_ms: 1.635875\n  type: 'test'\n  ...\n# Subtest: Only the source-identical tab icon is admitted as interface metadata\nok 72 - Only the source-identical tab icon is admitted as interface metadata\n  ---\n  duration_ms: 0.964375\n  type: 'test'\n  ...\n# Subtest: flight has a direction-independent speed and bounds stalled frames\nok 73 - flight has a direction-independent speed and bounds stalled frames\n  ---\n  duration_ms: 3.654417\n  type: 'test'\n  ...\n# Subtest: actual Rapier passes the open ring, stops at the planet and lands on the platform\nok 74 - actual Rapier passes the open ring, stops at the planet and lands on the platform\n  ---\n  duration_ms: 470.52375\n  type: 'test'\n  ...\n# Subtest: free flight is bounded and never rewrites a source coordinate\nok 75 - free flight is bounded and never rewrites a source coordinate\n  ---\n  duration_ms: 0.53725\n  type: 'test'\n  ...\n# Subtest: the Sottsass passage leaves space for the observer and contact gap\nok 76 - the Sottsass passage leaves space for the observer and contact gap\n  ---\n  duration_ms: 0.75425\n  type: 'test'\n  ...\n# Subtest: each of the fifteen worlds builds and preserves an open passage and a landing surface\nok 77 - each of the fifteen worlds builds and preserves an open passage and a landing surface\n  ---\n  duration_ms: 655.475791\n  type: 'test'\n  ...\n# Subtest: Integration status never promotes incomplete or stale evidence to pass\nok 78 - Integration status never promotes incomplete or stale evidence to pass\n  ---\n  duration_ms: 1.992291\n  type: 'test'\n  ...\n# Subtest: an inconclusive axiom response cannot become pass merely through a success label\nok 79 - an inconclusive axiom response cannot become pass merely through a success label\n  ---\n  duration_ms: 1.588625\n  type: 'test'\n  ...\n# Subtest: the shared command-line and language-server policy rejects every axiom, including standard axioms\nok 80 - the shared command-line and language-server policy rejects every axiom, including standard axioms\n  ---\n  duration_ms: 0.2995\n  type: 'test'\n  ...\n# Subtest: time-limited diagnostics and unknown goal states are not a clean verification\nok 81 - time-limited diagnostics and unknown goal states are not a clean verification\n  ---\n  duration_ms: 0.085542\n  type: 'test'\n  ...\n# Subtest: hover must resolve the requested declaration rather than a nearby tactic\nok 82 - hover must resolve the requested declaration rather than a nearby tactic\n  ---\n  duration_ms: 0.07075\n  type: 'test'\n  ...\n# Subtest: all 4096 asset assignments agree between the Lean executable and the JSON boundary\nok 83 - all 4096 asset assignments agree between the Lean executable and the JSON boundary\n  ---\n  duration_ms: 530.826708\n  type: 'test'\n  ...\n# Subtest: every Boolean field rejects missing values, strings, numbers, arrays and null in Lean\nok 84 - every Boolean field rejects missing values, strings, numbers, arrays and null in Lean\n  ---\n  duration_ms: 58.303917\n  type: 'test'\n  ...\n# Subtest: mixed assets are accepted when all used formats have their required loaders\nok 85 - mixed assets are accepted when all used formats have their required loaders\n  ---\n  duration_ms: 56.961292\n  type: 'test'\n  ...\n# Subtest: Material Sphere application uses current source-bound mathematical evidence\nok 86 - Material Sphere application uses current source-bound mathematical evidence\n  ---\n  duration_ms: 98.849083\n  type: 'test'\n  ...\n# Subtest: Application numerical functions are byte-identical to checked functions\nok 87 - Application numerical functions are byte-identical to checked functions\n  ---\n  duration_ms: 1.941083\n  type: 'test'\n  ...\n# Subtest: All fifteen generated Plumeria schemas equal the current checked recipes\nok 88 - All fifteen generated Plumeria schemas equal the current checked recipes\n  ---\n  duration_ms: 3915.180125\n  type: 'test'\n  ...\n# Subtest: CSS output uses checked one-to-four dimensional projection without treating time as an axis\nok 89 - CSS output uses checked one-to-four dimensional projection without treating time as an axis\n  ---\n  duration_ms: 1.665917\n  type: 'test'\n  ...\n# Subtest: The four unconnected output branches never silently fall back to CSS\nok 90 - The four unconnected output branches never silently fall back to CSS\n  ---\n  duration_ms: 0.322083\n  type: 'test'\n  ...\n# Subtest: A separately registered output receives the same neutral numerical plan\nok 91 - A separately registered output receives the same neutral numerical plan\n  ---\n  duration_ms: 0.286583\n  type: 'test'\n  ...\n# Subtest: Malformed numerical input is rejected before an adapter can execute\nok 92 - Malformed numerical input is rejected before an adapter can execute\n  ---\n  duration_ms: 0.120584\n  type: 'test'\n  ...\n# Subtest: CSS playback and reduced motion use the checked bounded phase\nok 93 - CSS playback and reduced motion use the checked bounded phase\n  ---\n  duration_ms: 0.087083\n  type: 'test'\n  ...\n# Subtest: Page tools have the same integer bounds and step as the visible sliders\nok 94 - Page tools have the same integer bounds and step as the visible sliders\n  ---\n  duration_ms: 0.117292\n  type: 'test'\n  ...\n# Subtest: Museum character follows the complete version two atlas geometry\nok 95 - Museum character follows the complete version two atlas geometry\n  ---\n  duration_ms: 1.384417\n  type: 'test'\n  ...\n# Subtest: All sixteen gaze cells are unique, in bounds, and advance clockwise\nok 96 - All sixteen gaze cells are unique, in bounds, and advance clockwise\n  ---\n  duration_ms: 1.593584\n  type: 'test'\n  ...\n# Subtest: Neutral, invalid pointers and cardinal screen coordinates cannot be confused\nok 97 - Neutral, invalid pointers and cardinal screen coordinates cannot be confused\n  ---\n  duration_ms: 0.126959\n  type: 'test'\n  ...\n# Subtest: Studio interaction selects greetings, attention, making and rest explicitly\nok 98 - Studio interaction selects greetings, attention, making and rest explicitly\n  ---\n  duration_ms: 0.129583\n  type: 'test'\n  ...\n# Subtest: Generated Plumeria keyframes match every declared frame duration\nok 99 - Generated Plumeria keyframes match every declared frame duration\n  ---\n  duration_ms: 4034.841459\n  type: 'test'\n  ...\n# Subtest: the actual dataset yields twelve explicitly positioned recipes and preserves source links\nok 100 - the actual dataset yields twelve explicitly positioned recipes and preserves source links\n  ---\n  duration_ms: 70.165917\n  type: 'test'\n  ...\n# Subtest: three.js serialization reloads all positions, textures, stable resource identities and provenance\nok 101 - three.js serialization reloads all positions, textures, stable resource identities and provenance\n  ---\n  duration_ms: 263.414542\n  type: 'test'\n  ...\n# Subtest: invalid numeric, resource, unit and unsupported-shape inputs fail before object allocation\nok 102 - invalid numeric, resource, unit and unsupported-shape inputs fail before object allocation\n  ---\n  duration_ms: 3.012875\n  type: 'test'\n  ...\n# Subtest: a generic box uses the same portable material contract without artist-dependent rendering logic\nok 103 - a generic box uses the same portable material contract without artist-dependent rendering logic\n  ---\n  duration_ms: 7.564375\n  type: 'test'\n  ...\n# Subtest: every selected pattern produces bounded opaque pixels and color-space assumptions are explicit\nok 104 - every selected pattern produces bounded opaque pixels and color-space assumptions are explicit\n  ---\n  duration_ms: 210.181125\n  type: 'test'\n  ...\n# Subtest: scene disposal releases geometry, material and texture resources\nok 105 - scene disposal releases geometry, material and texture resources\n  ---\n  duration_ms: 5.166458\n  type: 'test'\n  ...\n# Subtest: moving display objects and metadata never changes an existing semantic coordinate index\nok 106 - moving display objects and metadata never changes an existing semantic coordinate index\n  ---\n  duration_ms: 46.151666\n  type: 'test'\n  ...\n# Subtest: disabled physics never connects or steps an engine\nok 107 - disabled physics never connects or steps an engine\n  ---\n  duration_ms: 0.528042\n  type: 'test'\n  ...\n# Subtest: optional physics validates units, origins, source references and coefficients\nok 108 - optional physics validates units, origins, source references and coefficients\n  ---\n  duration_ms: 1.127791\n  type: 'test'\n  ...\n# Subtest: an explicit engine adapter can move display transforms while similarity remains fixed\nok 109 - an explicit engine adapter can move display transforms while similarity remains fixed\n  ---\n  duration_ms: 45.066375\n  type: 'test'\n  ...\n# Subtest: WebMCP is optional and partial registration rolls back without breaking the page\nok 110 - WebMCP is optional and partial registration rolls back without breaking the page\n  ---\n  duration_ms: 2.951583\n  type: 'test'\n  ...\n# Subtest: registered tools reject malformed and oversized input before an application action\nok 111 - registered tools reject malformed and oversized input before an application action\n  ---\n  duration_ms: 11.801917\n  type: 'test'\n  ...\n# Subtest: mutating tools are serialized while read tools remain available\nok 112 - mutating tools are serialized while read tools remain available\n  ---\n  duration_ms: 1.305042\n  type: 'test'\n  ...\n# Subtest: physics and image configuration require explicit compatible settings\nok 113 - physics and image configuration require explicit compatible settings\n  ---\n  duration_ms: 0.565\n  type: 'test'\n  ...\n# Subtest: a command completes only after its presentation checkpoint and failure is reported\nok 114 - a command completes only after its presentation checkpoint and failure is reported\n  ---\n  duration_ms: 0.703625\n  type: 'test'\n  ...\n# Subtest: batched flight reuses the bounded movement model and preserves the original coordinate\nok 115 - batched flight reuses the bounded movement model and preserves the original coordinate\n  ---\n  duration_ms: 3.8735\n  type: 'test'\n  ...\n1..115\n# tests 115\n# suites 0\n# pass 115\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 6007.382167\n",
+      "stdout": "TAP version 13\n# Subtest: initial display keeps 12 source coordinates and 3 unknown values with physics disabled\nok 1 - initial display keeps 12 source coordinates and 3 unknown values with physics disabled\n  ---\n  duration_ms: 7.194083\n  type: 'test'\n  ...\n# Subtest: semantic distance is an immutable snapshot independent of mutable display/input arrays\nok 2 - semantic distance is an immutable snapshot independent of mutable display/input arrays\n  ---\n  duration_ms: 0.872541\n  type: 'test'\n  ...\n# Subtest: fixed steps agree at 60 and 120 frames per second and cap long pauses\nok 3 - fixed steps agree at 60 and 120 frames per second and cap long pauses\n  ---\n  duration_ms: 0.182375\n  type: 'test'\n  ...\n# Subtest: real Rapier bodies collide, remain finite, and do not mutate source coordinates\nok 4 - real Rapier bodies collide, remain finite, and do not mutate source coordinates\n  ---\n  duration_ms: 82.751375\n  type: 'test'\n  ...\n# Subtest: gravity causes a fall and the display floor catches the panel\nok 5 - gravity causes a fall and the display floor catches the panel\n  ---\n  duration_ms: 12.765542\n  type: 'test'\n  ...\n# Subtest: kinematic dragging moves a body then releases it into simulation\nok 6 - kinematic dragging moves a body then releases it into simulation\n  ---\n  duration_ms: 1.288084\n  type: 'test'\n  ...\n# Subtest: actual browser validator agrees with compiled Lean over all 4096 assignments\nok 7 - actual browser validator agrees with compiled Lean over all 4096 assignments\n  ---\n  duration_ms: 388.015833\n  type: 'test'\n  ...\n# Subtest: runtime manifest rejects malformed flags, unvalidated stages, unknown keys and external resources\nok 8 - runtime manifest rejects malformed flags, unvalidated stages, unknown keys and external resources\n  ---\n  duration_ms: 0.528875\n  type: 'test'\n  ...\n# Subtest: decoders activate only for explicit asset flags, including Draco opt-in\nok 9 - decoders activate only for explicit asset flags, including Draco opt-in\n  ---\n  duration_ms: 0.978792\n  type: 'test'\n  ...\n# Subtest: actual optimized binary declares Meshopt and passes the browser manifest parser\nok 10 - actual optimized binary declares Meshopt and passes the browser manifest parser\n  ---\n  duration_ms: 8.073125\n  type: 'test'\n  ...\n# Subtest: code gates accept module-scope Plumeria arrays inside a client boundary\nok 11 - code gates accept module-scope Plumeria arrays inside a client boundary\n  ---\n  duration_ms: 15.336667\n  type: 'test'\n  ...\n# Subtest: framework links work in server and client pages without admitting unknown framework modules\nok 12 - framework links work in server and client pages without admitting unknown framework modules\n  ---\n  duration_ms: 3.597583\n  type: 'test'\n  ...\n# Subtest: code gates distinguish literal object keys from browser access\nok 13 - code gates distinguish literal object keys from browser access\n  ---\n  duration_ms: 2.035583\n  type: 'test'\n  ...\n# Subtest: code gates reject nested create, className, nonarray styles, server events and transitive browser access\nok 14 - code gates reject nested create, className, nonarray styles, server events and transitive browser access\n  ---\n  duration_ms: 2.436459\n  type: 'test'\n  ...\n# Subtest: code gates reject request-time server functions and nonliteral imports\nok 15 - code gates reject request-time server functions and nonliteral imports\n  ---\n  duration_ms: 1.25525\n  type: 'test'\n  ...\n# Subtest: Plumeria namespace aliases and opaque JSX props cannot bypass code gates\nok 16 - Plumeria namespace aliases and opaque JSX props cannot bypass code gates\n  ---\n  duration_ms: 1.555083\n  type: 'test'\n  ...\n# Subtest: Plumeria keyframes must be module-level constants just like style declarations\nok 17 - Plumeria keyframes must be module-level constants just like style declarations\n  ---\n  duration_ms: 2.088291\n  type: 'test'\n  ...\n# Subtest: line artwork uses HTML border rings and has no vector or canvas drawing implementation\nok 18 - line artwork uses HTML border rings and has no vector or canvas drawing implementation\n  ---\n  duration_ms: 8.940458\n  type: 'test'\n  ...\n# Subtest: CSS diagonal circles satisfy the torus equation at sampled points\nok 19 - CSS diagonal circles satisfy the torus equation at sampled points\n  ---\n  duration_ms: 1.007083\n  type: 'test'\n  ...\n# Subtest: all artwork kinds use CSS and the solid consists of finite torus panels\nok 20 - all artwork kinds use CSS and the solid consists of finite torus panels\n  ---\n  duration_ms: 1.541083\n  type: 'test'\n  ...\n# Subtest: shared controls have no drawing loop or graphics dependency\nok 21 - shared controls have no drawing loop or graphics dependency\n  ---\n  duration_ms: 1.39125\n  type: 'test'\n  ...\n# Subtest: the collector supplies enough evidence to reconcile one successful initial HEAD\nok 22 - the collector supplies enough evidence to reconcile one successful initial HEAD\n  ---\n  duration_ms: 11.662584\n  type: 'test'\n  ...\n# Subtest: decoder bytes remain in core; only artwork bytes are excluded\nok 23 - decoder bytes remain in core; only artwork bytes are excluded\n  ---\n  duration_ms: 3.102833\n  type: 'test'\n  ...\n# Subtest: missing stages, cached entries and unknown resource classes cannot pass transfer measurement\nok 24 - missing stages, cached entries and unknown resource classes cannot pass transfer measurement\n  ---\n  duration_ms: 2.007959\n  type: 'test'\n  ...\n# Subtest: successful header checks and subsequent page payloads count toward metadata and core bytes\nok 25 - successful header checks and subsequent page payloads count toward metadata and core bytes\n  ---\n  duration_ms: 1.266542\n  type: 'test'\n  ...\n# Subtest: header classification rejects missing, ambiguous, failed and non-header evidence\nok 26 - header classification rejects missing, ambiguous, failed and non-header evidence\n  ---\n  duration_ms: 5.294292\n  type: 'test'\n  ...\n# Subtest: an aborted header notification is reconciled with a uniquely matched successful response\nok 27 - an aborted header notification is reconciled with a uniquely matched successful response\n  ---\n  duration_ms: 3.768458\n  type: 'test'\n  ...\n# Subtest: actual failures, incomplete evidence and unsuccessful interactions remain nonfunctional\nok 28 - actual failures, incomplete evidence and unsuccessful interactions remain nonfunctional\n  ---\n  duration_ms: 1.070375\n  type: 'test'\n  ...\n# Subtest: Character receipt boundary accepts a complete synthetic record without claiming visual verification\nok 29 - Character receipt boundary accepts a complete synthetic record without claiming visual verification\n  ---\n  duration_ms: 30.5975\n  type: 'test'\n  ...\n# Subtest: Character admission rejects sixteen unique but unrecognized direction labels\nok 30 - Character admission rejects sixteen unique but unrecognized direction labels\n  ---\n  duration_ms: 24.0435\n  type: 'test'\n  ...\n# Subtest: Character admission rejects wrong person\nok 31 - Character admission rejects wrong person\n  ---\n  duration_ms: 18.149209\n  type: 'test'\n  ...\n# Subtest: Character admission rejects unbound decoded image\nok 32 - Character admission rejects unbound decoded image\n  ---\n  duration_ms: 32.246291\n  type: 'test'\n  ...\n# Subtest: Character admission rejects missing axis evidence\nok 33 - Character admission rejects missing axis evidence\n  ---\n  duration_ms: 110.39875\n  type: 'test'\n  ...\n# Subtest: Character admission rejects failed standard inspection\nok 34 - Character admission rejects failed standard inspection\n  ---\n  duration_ms: 37.581416\n  type: 'test'\n  ...\n# Subtest: Character admission rejects incomplete continuity\nok 35 - Character admission rejects incomplete continuity\n  ---\n  duration_ms: 38.576041\n  type: 'test'\n  ...\n# Subtest: Character admission rejects duplicate direction\nok 36 - Character admission rejects duplicate direction\n  ---\n  duration_ms: 31.931958\n  type: 'test'\n  ...\n# Subtest: Character admission rejects missing direction\nok 37 - Character admission rejects missing direction\n  ---\n  duration_ms: 45.696042\n  type: 'test'\n  ...\n# Subtest: Character admission rejects failed direction\nok 38 - Character admission rejects failed direction\n  ---\n  duration_ms: 26.983125\n  type: 'test'\n  ...\n# Subtest: Character admission rejects empty semantic observation\nok 39 - Character admission rejects empty semantic observation\n  ---\n  duration_ms: 30.167334\n  type: 'test'\n  ...\n# Subtest: Character admission rejects non-text semantic reason\nok 40 - Character admission rejects non-text semantic reason\n  ---\n  duration_ms: 56.728375\n  type: 'test'\n  ...\n# Subtest: Character admission rejects failed independent review\nok 41 - Character admission rejects failed independent review\n  ---\n  duration_ms: 63.57075\n  type: 'test'\n  ...\n# Subtest: Character admission rejects failed blind review\nok 42 - Character admission rejects failed blind review\n  ---\n  duration_ms: 26.24575\n  type: 'test'\n  ...\n# Subtest: Character admission rejects intermediate atlas\nok 43 - Character admission rejects intermediate atlas\n  ---\n  duration_ms: 20.49475\n  type: 'test'\n  ...\n# Subtest: Character admission rejects invalid execution identifier\nok 44 - Character admission rejects invalid execution identifier\n  ---\n  duration_ms: 35.566791\n  type: 'test'\n  ...\n# Subtest: Character admission rejects image bytes changed after inspection\nok 45 - Character admission rejects image bytes changed after inspection\n  ---\n  duration_ms: 22.249958\n  type: 'test'\n  ...\n# Subtest: Character admission rejects evidence changed after inspection\nok 46 - Character admission rejects evidence changed after inspection\n  ---\n  duration_ms: 22.112125\n  type: 'test'\n  ...\n# Subtest: Missing character receipt is blocked, not accepted\nok 47 - Missing character receipt is blocked, not accepted\n  ---\n  duration_ms: 6.881416\n  type: 'test'\n  ...\n# Subtest: Unverified raster characters cannot mount; failed or stale evidence stops availability generation\nok 48 - Unverified raster characters cannot mount; failed or stale evidence stops availability generation\n  ---\n  duration_ms: 1.674792\n  type: 'test'\n  ...\n# Subtest: Accepted character availability preserves the image digest and evidence run\nok 49 - Accepted character availability preserves the image digest and evidence run\n  ---\n  duration_ms: 0.240333\n  type: 'test'\n  ...\n# Subtest: The studio reads freshly generated character availability instead of a manual ready flag\nok 50 - The studio reads freshly generated character availability instead of a manual ready flag\n  ---\n  duration_ms: 59.326792\n  type: 'test'\n  ...\n# Subtest: the committed verification request is valid\nok 51 - the committed verification request is valid\n  ---\n  duration_ms: 12.132667\n  type: 'test'\n  ...\n# Subtest: the committed verification result is valid and has a pass aggregate\nok 52 - the committed verification result is valid and has a pass aggregate\n  ---\n  duration_ms: 1.593208\n  type: 'test'\n  ...\n# Subtest: the committed asset manifest is valid\nok 53 - the committed asset manifest is valid\n  ---\n  duration_ms: 1.836917\n  type: 'test'\n  ...\n# Subtest: the fixed category budgets add up to the core budget\nok 54 - the fixed category budgets add up to the core budget\n  ---\n  duration_ms: 0.123792\n  type: 'test'\n  ...\n# Subtest: dual Meshopt encodings are rejected\nok 55 - dual Meshopt encodings are rejected\n  ---\n  duration_ms: 0.607292\n  type: 'test'\n  ...\n# Subtest: a Meshopt asset without its decoder is rejected\nok 56 - a Meshopt asset without its decoder is rejected\n  ---\n  duration_ms: 0.6795\n  type: 'test'\n  ...\n# Subtest: a KTX2 asset without its loader is rejected\nok 57 - a KTX2 asset without its loader is rejected\n  ---\n  duration_ms: 0.612417\n  type: 'test'\n  ...\n# Subtest: preservation options are required when the asset needs them\nok 58 - preservation options are required when the asset needs them\n  ---\n  duration_ms: 1.0435\n  type: 'test'\n  ...\n# Subtest: a result cannot claim pass when an observation failed\nok 59 - a result cannot claim pass when an observation failed\n  ---\n  duration_ms: 1.308667\n  type: 'test'\n  ...\n# Subtest: unknown properties fail closed\nok 60 - unknown properties fail closed\n  ---\n  duration_ms: 1.6185\n  type: 'test'\n  ...\n# Subtest: a pass with a missing, textual, non-finite or over-limit observation is rejected\nok 61 - a pass with a missing, textual, non-finite or over-limit observation is rejected\n  ---\n  duration_ms: 4.305583\n  type: 'test'\n  ...\n# Subtest: old evidence cannot be promoted to pass\nok 62 - old evidence cannot be promoted to pass\n  ---\n  duration_ms: 0.8725\n  type: 'test'\n  ...\n# Subtest: missing evidence is blocked even if an explanation says it passed\nok 63 - missing evidence is blocked even if an explanation says it passed\n  ---\n  duration_ms: 0.858708\n  type: 'test'\n  ...\n# Subtest: null observations, duplicate gates and an incomplete browser matrix fail closed\nok 64 - null observations, duplicate gates and an incomplete browser matrix fail closed\n  ---\n  duration_ms: 1.421917\n  type: 'test'\n  ...\n# Subtest: 15 unique sourced bodies keep 12 supplied semantic coordinates and all physics disabled\nok 65 - 15 unique sourced bodies keep 12 supplied semantic coordinates and all physics disabled\n  ---\n  duration_ms: 2.320875\n  type: 'test'\n  ...\n# Subtest: presentation movement never changes semantic distance, including missing coordinates\nok 66 - presentation movement never changes semantic distance, including missing coordinates\n  ---\n  duration_ms: 154.134666\n  type: 'test'\n  ...\n# Subtest: chronology keeps interval boundaries, unspecified date and exhibition date distinct\nok 67 - chronology keeps interval boundaries, unspecified date and exhibition date distinct\n  ---\n  duration_ms: 0.867666\n  type: 'test'\n  ...\n# Subtest: pause, reduced motion and visibility freeze the presentation clock; resumed frames stay bounded\nok 68 - pause, reduced motion and visibility freeze the presentation clock; resumed frames stay bounded\n  ---\n  duration_ms: 0.215\n  type: 'test'\n  ...\n# Subtest: an orbit crosses 120 seconds continuously rather than teleporting\nok 69 - an orbit crosses 120 seconds continuously rather than teleporting\n  ---\n  duration_ms: 0.122709\n  type: 'test'\n  ...\n# Subtest: browser adapters are reproducible copies of the reusable source modules\nok 70 - browser adapters are reproducible copies of the reusable source modules\n  ---\n  duration_ms: 26.125334\n  type: 'test'\n  ...\n# Subtest: the 15 supplied images match their publication registration\nok 71 - the 15 supplied images match their publication registration\n  ---\n  duration_ms: 64.62275\n  type: 'test'\n  ...\n# Subtest: an unregistered, altered, or source-missing image is not admitted\nok 72 - an unregistered, altered, or source-missing image is not admitted\n  ---\n  duration_ms: 0.407333\n  type: 'test'\n  ...\n# Subtest: Only the source-identical tab icon is admitted as interface metadata\nok 73 - Only the source-identical tab icon is admitted as interface metadata\n  ---\n  duration_ms: 1.706042\n  type: 'test'\n  ...\n# Subtest: flight has a direction-independent speed and bounds stalled frames\nok 74 - flight has a direction-independent speed and bounds stalled frames\n  ---\n  duration_ms: 4.055125\n  type: 'test'\n  ...\n# Subtest: actual Rapier passes the open ring, stops at the planet and lands on the platform\nok 75 - actual Rapier passes the open ring, stops at the planet and lands on the platform\n  ---\n  duration_ms: 220.241292\n  type: 'test'\n  ...\n# Subtest: free flight is bounded and never rewrites a source coordinate\nok 76 - free flight is bounded and never rewrites a source coordinate\n  ---\n  duration_ms: 14.983584\n  type: 'test'\n  ...\n# Subtest: the Sottsass passage leaves space for the observer and contact gap\nok 77 - the Sottsass passage leaves space for the observer and contact gap\n  ---\n  duration_ms: 0.746166\n  type: 'test'\n  ...\n# Subtest: each of the fifteen worlds builds and preserves an open passage and a landing surface\nok 78 - each of the fifteen worlds builds and preserves an open passage and a landing surface\n  ---\n  duration_ms: 616.127917\n  type: 'test'\n  ...\n# Subtest: Integration status never promotes incomplete or stale evidence to pass\nok 79 - Integration status never promotes incomplete or stale evidence to pass\n  ---\n  duration_ms: 1.935209\n  type: 'test'\n  ...\n# Subtest: an inconclusive axiom response cannot become pass merely through a success label\nok 80 - an inconclusive axiom response cannot become pass merely through a success label\n  ---\n  duration_ms: 1.822666\n  type: 'test'\n  ...\n# Subtest: the shared command-line and language-server policy rejects every axiom, including standard axioms\nok 81 - the shared command-line and language-server policy rejects every axiom, including standard axioms\n  ---\n  duration_ms: 0.10425\n  type: 'test'\n  ...\n# Subtest: time-limited diagnostics and unknown goal states are not a clean verification\nok 82 - time-limited diagnostics and unknown goal states are not a clean verification\n  ---\n  duration_ms: 0.070208\n  type: 'test'\n  ...\n# Subtest: hover must resolve the requested declaration rather than a nearby tactic\nok 83 - hover must resolve the requested declaration rather than a nearby tactic\n  ---\n  duration_ms: 0.065084\n  type: 'test'\n  ...\n# Subtest: all 4096 asset assignments agree between the Lean executable and the JSON boundary\nok 84 - all 4096 asset assignments agree between the Lean executable and the JSON boundary\n  ---\n  duration_ms: 412.504875\n  type: 'test'\n  ...\n# Subtest: every Boolean field rejects missing values, strings, numbers, arrays and null in Lean\nok 85 - every Boolean field rejects missing values, strings, numbers, arrays and null in Lean\n  ---\n  duration_ms: 46.4245\n  type: 'test'\n  ...\n# Subtest: mixed assets are accepted when all used formats have their required loaders\nok 86 - mixed assets are accepted when all used formats have their required loaders\n  ---\n  duration_ms: 51.950708\n  type: 'test'\n  ...\n# Subtest: Material Sphere application uses current source-bound mathematical evidence\nok 87 - Material Sphere application uses current source-bound mathematical evidence\n  ---\n  duration_ms: 68.3585\n  type: 'test'\n  ...\n# Subtest: Application numerical functions are byte-identical to checked functions\nok 88 - Application numerical functions are byte-identical to checked functions\n  ---\n  duration_ms: 1.2765\n  type: 'test'\n  ...\n# Subtest: All fifteen generated Plumeria schemas equal the current checked recipes\nok 89 - All fifteen generated Plumeria schemas equal the current checked recipes\n  ---\n  duration_ms: 2275.830917\n  type: 'test'\n  ...\n# Subtest: CSS output uses checked one-to-four dimensional projection without treating time as an axis\nok 90 - CSS output uses checked one-to-four dimensional projection without treating time as an axis\n  ---\n  duration_ms: 3.122875\n  type: 'test'\n  ...\n# Subtest: The four unconnected output branches never silently fall back to CSS\nok 91 - The four unconnected output branches never silently fall back to CSS\n  ---\n  duration_ms: 0.276541\n  type: 'test'\n  ...\n# Subtest: A separately registered output receives the same neutral numerical plan\nok 92 - A separately registered output receives the same neutral numerical plan\n  ---\n  duration_ms: 0.39375\n  type: 'test'\n  ...\n# Subtest: Malformed numerical input is rejected before an adapter can execute\nok 93 - Malformed numerical input is rejected before an adapter can execute\n  ---\n  duration_ms: 0.110708\n  type: 'test'\n  ...\n# Subtest: CSS playback and reduced motion use the checked bounded phase\nok 94 - CSS playback and reduced motion use the checked bounded phase\n  ---\n  duration_ms: 0.092166\n  type: 'test'\n  ...\n# Subtest: Page tools have the same integer bounds and step as the visible sliders\nok 95 - Page tools have the same integer bounds and step as the visible sliders\n  ---\n  duration_ms: 0.200792\n  type: 'test'\n  ...\n# Subtest: Museum character follows the complete version two atlas geometry\nok 96 - Museum character follows the complete version two atlas geometry\n  ---\n  duration_ms: 7.077\n  type: 'test'\n  ...\n# Subtest: All sixteen gaze cells are unique, in bounds, and advance clockwise\nok 97 - All sixteen gaze cells are unique, in bounds, and advance clockwise\n  ---\n  duration_ms: 4.148166\n  type: 'test'\n  ...\n# Subtest: Neutral, invalid pointers and cardinal screen coordinates cannot be confused\nok 98 - Neutral, invalid pointers and cardinal screen coordinates cannot be confused\n  ---\n  duration_ms: 0.40075\n  type: 'test'\n  ...\n# Subtest: Studio interaction selects greetings, attention, making and rest explicitly\nok 99 - Studio interaction selects greetings, attention, making and rest explicitly\n  ---\n  duration_ms: 0.689625\n  type: 'test'\n  ...\n# Subtest: Generated Plumeria keyframes match every declared frame duration\nok 100 - Generated Plumeria keyframes match every declared frame duration\n  ---\n  duration_ms: 2405.1755\n  type: 'test'\n  ...\n# Subtest: all fifteen small previews have bounded size and unchanged source images\nok 101 - all fifteen small previews have bounded size and unchanged source images\n  ---\n  duration_ms: 204.288833\n  type: 'test'\n  ...\n# Subtest: source identity is unchanged by generated cosmos output but changes with source edits\nok 102 - source identity is unchanged by generated cosmos output but changes with source edits\n  ---\n  duration_ms: 84.901083\n  type: 'test'\n  ...\n# Subtest: freshness validation rejects relabelled, incomplete and changed input receipts\nok 103 - freshness validation rejects relabelled, incomplete and changed input receipts\n  ---\n  duration_ms: 0.295875\n  type: 'test'\n  ...\n# Subtest: the actual dataset yields twelve explicitly positioned recipes and preserves source links\nok 104 - the actual dataset yields twelve explicitly positioned recipes and preserves source links\n  ---\n  duration_ms: 14.555458\n  type: 'test'\n  ...\n# Subtest: three.js serialization reloads all positions, textures, stable resource identities and provenance\nok 105 - three.js serialization reloads all positions, textures, stable resource identities and provenance\n  ---\n  duration_ms: 210.710791\n  type: 'test'\n  ...\n# Subtest: invalid numeric, resource, unit and unsupported-shape inputs fail before object allocation\nok 106 - invalid numeric, resource, unit and unsupported-shape inputs fail before object allocation\n  ---\n  duration_ms: 1.895\n  type: 'test'\n  ...\n# Subtest: a generic box uses the same portable material contract without artist-dependent rendering logic\nok 107 - a generic box uses the same portable material contract without artist-dependent rendering logic\n  ---\n  duration_ms: 5.536333\n  type: 'test'\n  ...\n# Subtest: every selected pattern produces bounded opaque pixels and color-space assumptions are explicit\nok 108 - every selected pattern produces bounded opaque pixels and color-space assumptions are explicit\n  ---\n  duration_ms: 127.23475\n  type: 'test'\n  ...\n# Subtest: scene disposal releases geometry, material and texture resources\nok 109 - scene disposal releases geometry, material and texture resources\n  ---\n  duration_ms: 6.53925\n  type: 'test'\n  ...\n# Subtest: moving display objects and metadata never changes an existing semantic coordinate index\nok 110 - moving display objects and metadata never changes an existing semantic coordinate index\n  ---\n  duration_ms: 41.03675\n  type: 'test'\n  ...\n# Subtest: disabled physics never connects or steps an engine\nok 111 - disabled physics never connects or steps an engine\n  ---\n  duration_ms: 0.249291\n  type: 'test'\n  ...\n# Subtest: optional physics validates units, origins, source references and coefficients\nok 112 - optional physics validates units, origins, source references and coefficients\n  ---\n  duration_ms: 0.502917\n  type: 'test'\n  ...\n# Subtest: an explicit engine adapter can move display transforms while similarity remains fixed\nok 113 - an explicit engine adapter can move display transforms while similarity remains fixed\n  ---\n  duration_ms: 37.116583\n  type: 'test'\n  ...\n# Subtest: completion rejects changes to every promised field, including camera coordinates\nok 114 - completion rejects changes to every promised field, including camera coordinates\n  ---\n  duration_ms: 2.386375\n  type: 'test'\n  ...\n# Subtest: image targets include implied physics transitions and preserve unspecified settings\nok 115 - image targets include implied physics transitions and preserve unspecified settings\n  ---\n  duration_ms: 2.15425\n  type: 'test'\n  ...\n# Subtest: WebMCP is optional and partial registration rolls back without breaking the page\nok 116 - WebMCP is optional and partial registration rolls back without breaking the page\n  ---\n  duration_ms: 0.580208\n  type: 'test'\n  ...\n# Subtest: registered tools reject malformed and oversized input before an application action\nok 117 - registered tools reject malformed and oversized input before an application action\n  ---\n  duration_ms: 9.830708\n  type: 'test'\n  ...\n# Subtest: mutating tools are serialized while read tools remain available\nok 118 - mutating tools are serialized while read tools remain available\n  ---\n  duration_ms: 0.332208\n  type: 'test'\n  ...\n# Subtest: physics and image configuration require explicit compatible settings\nok 119 - physics and image configuration require explicit compatible settings\n  ---\n  duration_ms: 0.570458\n  type: 'test'\n  ...\n# Subtest: a command completes only after its presentation checkpoint and failure is reported\nok 120 - a command completes only after its presentation checkpoint and failure is reported\n  ---\n  duration_ms: 1.174333\n  type: 'test'\n  ...\n# Subtest: batched flight reuses the bounded movement model and preserves the original coordinate\nok 121 - batched flight reuses the bounded movement model and preserves the original coordinate\n  ---\n  duration_ms: 14.237541\n  type: 'test'\n  ...\n1..121\n# tests 121\n# suites 0\n# pass 121\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 3965.521459\n",
       "stderr": "",
       "error": null
     },
@@ -1234,7 +1102,7 @@
     "Lumenia.measured_gate_pass_iff": []
   },
   "regressionSummary": {
-    "tests": 115,
+    "tests": 121,
     "failed": 0
   },
   "registryErrors": [],
@@ -1244,7 +1112,10 @@
     "standardAxiomsAllowed": false
   },
   "languageServerReceipt": {
-    "sourceRevision": "sha256:fa371b84fa47949a1c010e29b9545cb3671b586f9700f4df604d117be0605a2a",
+    "sourceRevision": "sha256:87ed8dc07a6cf314667c9e4f158ea72255a3130c220ca3192f1266e238231c76",
+    "sourceRevisionBefore": "sha256:87ed8dc07a6cf314667c9e4f158ea72255a3130c220ca3192f1266e238231c76",
+    "sourceRevisionAfter": "sha256:87ed8dc07a6cf314667c9e4f158ea72255a3130c220ca3192f1266e238231c76",
+    "checkStartedAtSourceRevision": "sha256:87ed8dc07a6cf314667c9e4f158ea72255a3130c220ca3192f1266e238231c76",
     "files": [
       {
         "path": "CONSTRAINTS.md",
@@ -1265,6 +1136,10 @@
       {
         "path": "contracts/cosmic-reference-images.json",
         "sha256": "022245e9b6fbfa5f2ddbb31b362b537777ee309d377cd810463b3182abeb7acc"
+      },
+      {
+        "path": "contracts/cosmic-reference-thumbnails.json",
+        "sha256": "625b82771ee1463fbe47d2841debaa586f8c49c845e8375cc0194202a673316e"
       },
       {
         "path": "contracts/css-artworks.json",
@@ -1289,6 +1164,10 @@
       {
         "path": "contracts/external-gates.json",
         "sha256": "72d221e87cfa69839658e2a29b9cdb383b531104aef17ee027a6313620bb1ecc"
+      },
+      {
+        "path": "contracts/review-verification.wl",
+        "sha256": "1e15364241033accac6305dc5abadeca6475004372353043bacb8b235970d531"
       },
       {
         "path": "contracts/verification-contract.schema.json",
@@ -1327,6 +1206,10 @@
         "sha256": "dc185dc0b11ffc1471061e7301249def8111ef69707876e0cf4ebb3ea05afb04"
       },
       {
+        "path": "formal/Lumenia/ReviewChecks.lean",
+        "sha256": "8c5a35d41c247e0260a2e01a6d55f13d23619b4b0dd74d4ddb01227c6ccccaef"
+      },
+      {
         "path": "formal/Lumenia/Tests.lean",
         "sha256": "329500e65c6d3c601e25d95d91de28d904ecf197b8b5a3ec1e95753b62a52995"
       },
@@ -1356,7 +1239,7 @@
       },
       {
         "path": "mcp/chrome-measurements.js",
-        "sha256": "1d052b24aa89a1145e3b38364951aa4f81f712f9983bf28e5b406c95e54d33c5"
+        "sha256": "054bd5b671c904ff6ffc8dd02d01c4acc9b7c61d3090709c4898d823ad455976"
       },
       {
         "path": "mcp/lean-lsp-mcp.json",
@@ -1420,7 +1303,7 @@
       },
       {
         "path": "reference-assets/artist-cosmos/explore/main.mjs",
-        "sha256": "0d4471dedf1b05074c71e85f98de67210bc51cafbd88b1fb60db59f7a2404c7c"
+        "sha256": "847e4110cc04ccaf711d85279c98bd44066c3e63d11dff5c81c88deb23544510"
       },
       {
         "path": "reference-assets/artist-cosmos/explore/navigation.mjs",
@@ -1540,7 +1423,7 @@
       },
       {
         "path": "reference-assets/artist-cosmos/interactive/main.mjs",
-        "sha256": "b22762da2169554fa5ebef0079a7dcb189a7b9e846517354d8a6c1862acf5c8b"
+        "sha256": "0becce2832328bad51d6d1dae08c73ec31f680060715a610dcb04577eedcfbbd"
       },
       {
         "path": "reference-assets/artist-cosmos/interactive/model.mjs",
@@ -1565,6 +1448,10 @@
       {
         "path": "reference-assets/artist-cosmos/interactive/tests/exhibition.test.mjs",
         "sha256": "de9004bed080f0a0571f905c25a87b8883a8755bdd0ed59405a714f64ebbd2c0"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/interactive/thumbnail.mjs",
+        "sha256": "ad475add726ee650f87821452c38b49db1b0ce58a5ebbfab710598adf78faa80"
       },
       {
         "path": "reference-assets/artist-cosmos/interactive/vendor/RAPIER-LICENSE.txt",
@@ -1648,7 +1535,7 @@
       },
       {
         "path": "reference-assets/artist-cosmos/interactive/webmcp.mjs",
-        "sha256": "9f825821aec1e5abcafb0e57c3f82a4ee104998a3024ca13d5d69872555bb015"
+        "sha256": "a72054421924eadfe10cd592ae7b9278440696b05e47207488eb74221143e1a9"
       },
       {
         "path": "reference-assets/artist-cosmos/josef-muller-brockmann.png",
@@ -1679,6 +1566,66 @@
         "sha256": "d75de875bc814bbc4cf6dbe85f6e1cdaf2a31340aaa06ab54a8c068f4345954b"
       },
       {
+        "path": "reference-assets/artist-cosmos/thumbnails/alphonse-mucha.webp",
+        "sha256": "95afa694862570e917208985a2afe17247abec194369aaf5aa718649f7f2a1f2"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/thumbnails/charles-eames.webp",
+        "sha256": "da6bb2d853023a420f54ee2488c132eaa88a66b744bdeb1b6d9301bc44116bcc"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/thumbnails/charles-rennie-mackintosh.webp",
+        "sha256": "8fdc23ff649c516dc5eef8d2bac0575613b142517e436cf0b9710b6cfc0ba727"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/thumbnails/dieter-rams.webp",
+        "sha256": "249ee97193242c22f01ce3b0a271f1d654cf3848d8519369f50f28e18f2b1417"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/thumbnails/ettore-sottsass.webp",
+        "sha256": "1a71a6b55bdb3938984fa6585ebb6a3a42c4eea38c730819ee1e9aa4df6a7370"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/thumbnails/gerrit-rietveld.webp",
+        "sha256": "ca7dafd332464695fb814383ea2a362ebdd0c27e5dee2d9332f3c0c6e7e0e493"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/thumbnails/herbert-bayer.webp",
+        "sha256": "390729746a58f1ab800021f0a1e5160cba8b85d6d8769c4ec881a69f87871e5b"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/thumbnails/josef-muller-brockmann.webp",
+        "sha256": "006b8cf6d35aa051a26e8dd42bcafb236f3c8b95ad6c9149707b1d2dd5775269"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/thumbnails/massimo-vignelli.webp",
+        "sha256": "34834ce2ee04962a3cc1e6296f19a032f69af70d08b67eafb6d75e025b664123"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/thumbnails/naoto-fukasawa.webp",
+        "sha256": "281a6f3f16eccb1fa562a39b8468144505947f953a981a856032f06333eba806"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/thumbnails/piet-mondrian.webp",
+        "sha256": "3cb143f171ad04c0afcb73c7bd1d01d6628bc895fd3d289a942e4dc5cc1a6325"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/thumbnails/ray-eames.webp",
+        "sha256": "4048c374067b91fac8e0e97b161c14d8328d272dd9ef3c5f1fb5553c91338ab3"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/thumbnails/rei-kawakubo.webp",
+        "sha256": "c7345e2afaf62c36e03757e7d2dd751158e7261d6850a1387888af63ef02efc1"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/thumbnails/walter-gropius.webp",
+        "sha256": "27e9d564215b2b9a7201a74e30a14bf6c4012b157c197c9c8fea7aad470f26bd"
+      },
+      {
+        "path": "reference-assets/artist-cosmos/thumbnails/william-morris.webp",
+        "sha256": "e6c5a5598c7efcbf07cb2062fb1de34a7927e9716ca8d18766298532aa701e0a"
+      },
+      {
         "path": "reference-assets/artist-cosmos/walter-gropius.png",
         "sha256": "595059dbe0521bed0cff56afb278d8034344416ceb419f895d5afd6d6b589fb4"
       },
@@ -1691,8 +1638,12 @@
         "sha256": "ef94351ba2fc8e33d2f510136d43ffc9d7784654e88bffaee94da078772d6801"
       },
       {
+        "path": "scripts/audit-review-kernel.mjs",
+        "sha256": "e69699d14caaba0a914d7a4c0ca40fdf870c20fd1f6ce658c55d9eddbd35c7c3"
+      },
+      {
         "path": "scripts/browser-observations.mjs",
-        "sha256": "31eddef823b66065b8893ad6da5149712a534af3792c844d913be78fddba9355"
+        "sha256": "4c7af1a548a1c098c37f9a15825d5efee054573b78f8777ed7dea83d50ccea82"
       },
       {
         "path": "scripts/build-artwork.mjs",
@@ -1712,11 +1663,15 @@
       },
       {
         "path": "scripts/build-cosmic-images.mjs",
-        "sha256": "1f32dd06900e7c8fb874f490360e9b4b3b6a2e93297de3cee78348851ef0f0a0"
+        "sha256": "e1f9d428fa467771c73b043e45370448cc4e2b142b524f0339abfc14455a8b10"
       },
       {
         "path": "scripts/build-exploration.mjs",
         "sha256": "5fa07c6aa1d7e093fd785c1e929bb6c911885a1d3e50e425f7e75be90b55a3d7"
+      },
+      {
+        "path": "scripts/build-reference-thumbnails.mjs",
+        "sha256": "af86f5d73a5af96b1e6e23b2aea3b98c52082e1afe1ebfc9cf69e8a4202d1949"
       },
       {
         "path": "scripts/build-web.mjs",
@@ -1744,7 +1699,7 @@
       },
       {
         "path": "scripts/drawing-asset-policy.mjs",
-        "sha256": "57112eba494063e0cd5d1ba6fd154a09a9076758d222ae244e1380e2787e2af2"
+        "sha256": "b82f8d1f3a041a083788b9290f34a34c08e44a833765b10638fbff74fbe97d0d"
       },
       {
         "path": "scripts/exploration-recipes.mjs",
@@ -1768,7 +1723,7 @@
       },
       {
         "path": "scripts/language-server-evidence.mjs",
-        "sha256": "59fdf821773569b9dbd4b62527a64b29bf39adb2f923b345cbcd4fb185784898"
+        "sha256": "cabebf9637f1d3d7093ab648a291c7fa51a450436caeb33143e7d7f4cfc43275"
       },
       {
         "path": "scripts/measurement-context.mjs",
@@ -1788,7 +1743,7 @@
       },
       {
         "path": "scripts/run-application-check.mjs",
-        "sha256": "67168cefa1cd9519f265c3a0088573edf30b8f23cf5be61ba7f523ab9c31a00c"
+        "sha256": "53edfc032d35defcd5e2890e594f59c2f1e723177a8e838a0371ac7ec11f7f88"
       },
       {
         "path": "scripts/run-asset-reference-check.mjs",
@@ -1796,7 +1751,7 @@
       },
       {
         "path": "scripts/run-formal-check.mjs",
-        "sha256": "10a575905640953302c3d407665b9b7c012c47f8ca9f202044b1be0b4114eb56"
+        "sha256": "22114b17a2e8d6c0be28c96930739a338cb84a8c4c70a81dea90a9e1fc9c9c55"
       },
       {
         "path": "scripts/run-gates.mjs",
@@ -1812,7 +1767,7 @@
       },
       {
         "path": "scripts/source-revision.mjs",
-        "sha256": "2bc9a85fae617b28a3201c053652a9c08ee672985c472e8fac4e62001e2be88e"
+        "sha256": "0bc29e99a721a9e660f2941faeb5f058b14be99770871c2a9981e19b252daff5"
       },
       {
         "path": "scripts/stage-museum-character.mjs",
@@ -1843,8 +1798,12 @@
         "sha256": "58b34595cf2779a3f68419d620fc25e0b7dc25a21dc050ca5d40627b0670e3f8"
       },
       {
+        "path": "tests/browser-collector.test.mjs",
+        "sha256": "fe940c814d66c7a0f28241500f282a20c570bcf59bd688fd2eff09aa201f548b"
+      },
+      {
         "path": "tests/browser-observations.test.mjs",
-        "sha256": "6cb8c19cd493d4321fc6835cb1d8d4810d46482eb376c7d397e0d8b7b8fa80e4"
+        "sha256": "6592c6d0161e40911d29e3a3cb9f4c1c3112bbace220714cc457d42e8a046df6"
       },
       {
         "path": "tests/character-admission.test.mjs",
@@ -1895,12 +1854,20 @@
         "sha256": "327a7a5f3f93221bff98a3e067ef3f1ec46fdad500550f20040b0312351c1f02"
       },
       {
+        "path": "tests/reference-thumbnails.test.mjs",
+        "sha256": "ac2c9924e5ffce12d500dadb0182aa89023923d6809c8ef00cae112dedee2bce"
+      },
+      {
+        "path": "tests/review-verification.test.mjs",
+        "sha256": "b8268b99346f0e9d64181c967262911b25b3eec5f54ece7a1c8d136a45c25407"
+      },
+      {
         "path": "tests/threejs-reference-adapter.test.mjs",
         "sha256": "bddd1df4330aae164ebe89414bbf9f402d89214fa36d61079cf1b839b2c883b1"
       },
       {
         "path": "tests/webmcp.test.mjs",
-        "sha256": "0e79dce1cbef477dccc10780ed148c0335e6751867e200fcd837049dd0ae02fb"
+        "sha256": "97423fa0f56e26bc6495517da0ba18bd9a13bf67d6811346f4df285f55560c24"
       },
       {
         "path": "web/AGENTS.md",
@@ -2151,234 +2118,6 @@
         "sha256": "b1cabd11511431b4230d21303222b0d8e09169144fa675ee624612c8a7946f67"
       },
       {
-        "path": "web/public/cosmos/alphonse-mucha.png",
-        "sha256": "57fe2c034be6dd3340464ab9852a79e8d8f12e8de46ee61b1d1af3f4801b09a0"
-      },
-      {
-        "path": "web/public/cosmos/charles-eames.png",
-        "sha256": "33c97fe0f290497c22f556293b923d7b4b5d5bcacf027b7a1ba34034974e8d37"
-      },
-      {
-        "path": "web/public/cosmos/charles-rennie-mackintosh.png",
-        "sha256": "81ee0b404ebe5e70465681397f6f2ea7ae82c85a4971f1524fdc7fc3e3be01a8"
-      },
-      {
-        "path": "web/public/cosmos/dieter-rams.png",
-        "sha256": "9b18c578a617c774b195ce2ddea6ef3c3cd2cf9562a60a5031df5b64742ff866"
-      },
-      {
-        "path": "web/public/cosmos/ettore-sottsass.png",
-        "sha256": "62f9f2086ffa001a9b5c326c4a4fb7eeba1ae4857fe9eb93a1f465349161cefa"
-      },
-      {
-        "path": "web/public/cosmos/explore/README.md",
-        "sha256": "f3734efaea1645d9d4c4a5837a11c38719cc6aa4e06e7090c286b020f2f2d409"
-      },
-      {
-        "path": "web/public/cosmos/explore/collision.mjs",
-        "sha256": "13f558e4d8f8c72391471366bcf741b807b75d676ee5f32bb38a3b8dbf8c48be"
-      },
-      {
-        "path": "web/public/cosmos/explore/geometry.mjs",
-        "sha256": "cef74914f09f2fba6facf47383761ec1cf521042780527cdf5672e4056684488"
-      },
-      {
-        "path": "web/public/cosmos/explore/index.html",
-        "sha256": "f7389559b538b733be0ba2f36e377095945d21c5e4ef243baaefa187152a1bfd"
-      },
-      {
-        "path": "web/public/cosmos/explore/main.mjs",
-        "sha256": "0d4471dedf1b05074c71e85f98de67210bc51cafbd88b1fb60db59f7a2404c7c"
-      },
-      {
-        "path": "web/public/cosmos/explore/navigation.mjs",
-        "sha256": "99b9a8816885b3b676b92e062f378d753129d036d6139e500cadfc2aa81aa4a5"
-      },
-      {
-        "path": "web/public/cosmos/explore/style.css",
-        "sha256": "954e429a5420d7dfee9876fc079f574dc1ac9561d2edf646c80e6f98d193236f"
-      },
-      {
-        "path": "web/public/cosmos/explore/worlds.json",
-        "sha256": "68a37e5a703e748a0e741c3defbbdf3e4a620f41dce92c7af7884cf03a79edff"
-      },
-      {
-        "path": "web/public/cosmos/explore/worlds/alphonse-mucha.json",
-        "sha256": "0f83d764f60976289e7fbc0c1dbdb67153766cfdfa646be7d913111b272850b7"
-      },
-      {
-        "path": "web/public/cosmos/explore/worlds/charles-eames.json",
-        "sha256": "65ffa39ad47261b6ee9208306ab3944d6f0db7d28060c571f54f9cac0acef827"
-      },
-      {
-        "path": "web/public/cosmos/explore/worlds/charles-rennie-mackintosh.json",
-        "sha256": "7ff646191074ec3e7ccf8b8eb3e0c4201e7d2ac05e9d6471e6e03b0f0ae4d2ea"
-      },
-      {
-        "path": "web/public/cosmos/explore/worlds/dieter-rams.json",
-        "sha256": "6eda4ca02aa1ed636d6d6c8196815c7067d619d33ceed6906592b22c4bfd217e"
-      },
-      {
-        "path": "web/public/cosmos/explore/worlds/ettore-sottsass.json",
-        "sha256": "fb3ac97e605e0175961f3c5caa2960ba5cea90d675e74ce7a7192d0bf44b672b"
-      },
-      {
-        "path": "web/public/cosmos/explore/worlds/gerrit-rietveld.json",
-        "sha256": "830919c67b451684ff5a4979d8ae2b8895a171e2512c554f8b0689181c08c82f"
-      },
-      {
-        "path": "web/public/cosmos/explore/worlds/herbert-bayer.json",
-        "sha256": "f8c4532a4adfa846bd96b84f4ee7b69c5cc7d9469fc7fe186db6647dcb56702b"
-      },
-      {
-        "path": "web/public/cosmos/explore/worlds/josef-muller-brockmann.json",
-        "sha256": "c8aa85237a82634db071cf1537798c03e52748242231a31d7ea90a0f29824aca"
-      },
-      {
-        "path": "web/public/cosmos/explore/worlds/massimo-vignelli.json",
-        "sha256": "8ee1785ab63f4b3d80a14a4caf295f14869af38b51d65ba6d8372c40d785958a"
-      },
-      {
-        "path": "web/public/cosmos/explore/worlds/naoto-fukasawa.json",
-        "sha256": "f93dc6864304ebf47aecb13272e71c80013acf80137ec77405f5822c669102d2"
-      },
-      {
-        "path": "web/public/cosmos/explore/worlds/piet-mondrian.json",
-        "sha256": "7eb0111d5a68e863c3dcd91f6b670f0089c4067d4e94e6fbb96ef4e842596eee"
-      },
-      {
-        "path": "web/public/cosmos/explore/worlds/ray-eames.json",
-        "sha256": "73adf919c358f6abe24a508fff81070caca45f246b7b8a53f0c537263e8f16fb"
-      },
-      {
-        "path": "web/public/cosmos/explore/worlds/rei-kawakubo.json",
-        "sha256": "69bb6af25b333be75f5ec25ace0bc821b801f6a92c445d1f2d2fd8d5f3fc2de4"
-      },
-      {
-        "path": "web/public/cosmos/explore/worlds/walter-gropius.json",
-        "sha256": "b2cb6370ecc3c6d4262a69223d5b5bc2300419d42b1777cebbc322ab28cc89b1"
-      },
-      {
-        "path": "web/public/cosmos/explore/worlds/william-morris.json",
-        "sha256": "3e82f60d3d049df3c318d34b4318ebac611692493be4a24d15ab297b89e35dec"
-      },
-      {
-        "path": "web/public/cosmos/gerrit-rietveld.png",
-        "sha256": "ca4d66b058126ed541e30ea886139ebfd2815740b6db8b538ca26f3c21305fc0"
-      },
-      {
-        "path": "web/public/cosmos/herbert-bayer.png",
-        "sha256": "1179f76272afc9eac1ac1b7b3ec6fcfcab9194bf000d27bbcd41e85cf25a8c3b"
-      },
-      {
-        "path": "web/public/cosmos/illustration-design-reference.jsonl",
-        "sha256": "5ff2c20d1969a6f83edf2520e3a10853e500e12bd87b15de85b0dc7b0f0eab9c"
-      },
-      {
-        "path": "web/public/cosmos/index.html",
-        "sha256": "3f98cb8943756dc2e35f3d1e0999d666dad5f3c158b83a85549b99639c049271"
-      },
-      {
-        "path": "web/public/cosmos/interactive/README.md",
-        "sha256": "494ddbf505fdf6bb914061d736c7f3797de174b91d3a37156d6d7937b2ba4e05"
-      },
-      {
-        "path": "web/public/cosmos/interactive/dependencies.json",
-        "sha256": "ec143940f4dd67e1c95f9d94e849c2b177abd484701a51528d8659f63054a141"
-      },
-      {
-        "path": "web/public/cosmos/interactive/exhibition.json",
-        "sha256": "108306a4418dd2b7740e2f7130cdac366adc5352d305722047dc41c1db96d616"
-      },
-      {
-        "path": "web/public/cosmos/interactive/index.html",
-        "sha256": "7fdcd4301499ff70f6eead1fbbb55489df4822988f44674db5a50c50b0eeaf53"
-      },
-      {
-        "path": "web/public/cosmos/interactive/main.mjs",
-        "sha256": "b22762da2169554fa5ebef0079a7dcb189a7b9e846517354d8a6c1862acf5c8b"
-      },
-      {
-        "path": "web/public/cosmos/interactive/model.mjs",
-        "sha256": "ba02dbf2d014e3673fd0033e97056a840d02c1db504987ff577922b94db00395"
-      },
-      {
-        "path": "web/public/cosmos/interactive/physics.mjs",
-        "sha256": "076dfd0f15f91d278eb51870d842c01e19e7ca3a77431c5d4bed658be6e45503"
-      },
-      {
-        "path": "web/public/cosmos/interactive/style.css",
-        "sha256": "1889ad1612d94417e05ca18522232110c3d510c09b3c5841ea5aad17c820b654"
-      },
-      {
-        "path": "web/public/cosmos/interactive/vendor/RAPIER-LICENSE.txt",
-        "sha256": "4c05555705e3efde601fb1252ae48f1d63992af8a8fb8947745b7fa834e8f519"
-      },
-      {
-        "path": "web/public/cosmos/interactive/vendor/THREE-LICENSE.txt",
-        "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
-      },
-      {
-        "path": "web/public/cosmos/interactive/vendor/controls/OrbitControls.js",
-        "sha256": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b"
-      },
-      {
-        "path": "web/public/cosmos/interactive/vendor/rapier.mjs",
-        "sha256": "82b65114e949ed17969a5d0a3517b952f430ea524f4a19ce4a31e72fb7757f27"
-      },
-      {
-        "path": "web/public/cosmos/interactive/vendor/reference-physics-contract.mjs",
-        "sha256": "4d1495820c1b9dcf334accee1892edd4f0ead85f5575e7c91935518903b435ba"
-      },
-      {
-        "path": "web/public/cosmos/interactive/vendor/three.core.js",
-        "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
-      },
-      {
-        "path": "web/public/cosmos/interactive/vendor/three.module.js",
-        "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
-      },
-      {
-        "path": "web/public/cosmos/interactive/webmcp.mjs",
-        "sha256": "9f825821aec1e5abcafb0e57c3f82a4ee104998a3024ca13d5d69872555bb015"
-      },
-      {
-        "path": "web/public/cosmos/josef-muller-brockmann.png",
-        "sha256": "75a303ac4c65d1608c6ffb3f2f3ce70a2191aacb0980713dccfa4c8ce29a13cd"
-      },
-      {
-        "path": "web/public/cosmos/massimo-vignelli.png",
-        "sha256": "68c567fa35979197d5652c822492322a995378ec30c20aa0f965db10bc4c7fc7"
-      },
-      {
-        "path": "web/public/cosmos/naoto-fukasawa.png",
-        "sha256": "c1d81e3a60c2e9859fe9c4c1fabd7fc27dc17d1b053d8cc2bbde8cf409b60f3a"
-      },
-      {
-        "path": "web/public/cosmos/piet-mondrian.png",
-        "sha256": "66ab2202b937935af83683534d1a667cc8e291dd5cb40049b29232439f9eb8da"
-      },
-      {
-        "path": "web/public/cosmos/ray-eames.png",
-        "sha256": "c4933e043eb1931a3bb4f64bb83821fbbca0b081298808c373adc12167c3b3f8"
-      },
-      {
-        "path": "web/public/cosmos/references.jsonl",
-        "sha256": "5d4f42946a7bd355d7f2540bafa7b5e4e85bfae93f81f6d0310044a9228b8ace"
-      },
-      {
-        "path": "web/public/cosmos/rei-kawakubo.png",
-        "sha256": "d75de875bc814bbc4cf6dbe85f6e1cdaf2a31340aaa06ab54a8c068f4345954b"
-      },
-      {
-        "path": "web/public/cosmos/walter-gropius.png",
-        "sha256": "595059dbe0521bed0cff56afb278d8034344416ceb419f895d5afd6d6b589fb4"
-      },
-      {
-        "path": "web/public/cosmos/william-morris.png",
-        "sha256": "d7485b0b48ab20c6ef5b369f0206db25137aac82021054cc1b8c8b4fb437d7a0"
-      },
-      {
         "path": "web/public/favicon.svg",
         "sha256": "b2a54a1ce80bfa8b03ccbab7fd6c1e1c57a8f4e3c11c83be25fee5700fe1e744"
       },
@@ -2387,8 +2126,9 @@
         "sha256": "c77757068271adb58670f7d2de2d253ef2ffe2918809f8460b6d624496293d19"
       }
     ],
-    "executionIdentifier": "01a0a5bf-3b40-7143-81e8-42d3046c45fa",
-    "recordedAt": "2026-09-15T15:46:08.321Z",
+    "executionIdentifier": "01a0a9c6-c101-794e-b225-4b01c529c05f",
+    "startedAt": "2026-09-16T10:32:50.177Z",
+    "recordedAt": "2026-09-16T10:38:18.672Z",
     "checks": [
       {
         "tool": "lean_build",
@@ -2411,6 +2151,9 @@
       {
         "tool": "lean_diagnostic_messages",
         "target": "Lumenia.asset_checks_iff_requirements",
+        "arguments": {
+          "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean"
+        },
         "response": {
           "content": [
             {
@@ -2432,6 +2175,10 @@
       {
         "tool": "lean_file_outline",
         "target": "Lumenia.asset_checks_iff_requirements",
+        "arguments": {
+          "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+          "max_declarations": 40
+        },
         "response": {
           "content": [
             {
@@ -2773,6 +2520,11 @@
       {
         "tool": "lean_hover_info",
         "target": "Lumenia.asset_checks_iff_requirements",
+        "arguments": {
+          "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+          "line": 30,
+          "column": 9
+        },
         "response": {
           "content": [
             {
@@ -2791,6 +2543,10 @@
       {
         "tool": "lean_goal",
         "target": "Lumenia.asset_checks_iff_requirements",
+        "arguments": {
+          "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+          "line": 57
+        },
         "response": {
           "content": [
             {
@@ -2810,6 +2566,11 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.asset_checks_iff_requirements",
+        "arguments": {
+          "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+          "theorem_name": "Lumenia.asset_checks_iff_requirements",
+          "scan_source": true
+        },
         "response": {
           "content": [
             {
@@ -2827,6 +2588,11 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.validate_raw_asset_accepts_iff",
+        "arguments": {
+          "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+          "theorem_name": "Lumenia.validate_raw_asset_accepts_iff",
+          "scan_source": true
+        },
         "response": {
           "content": [
             {
@@ -2844,6 +2610,11 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.validate_raw_asset_rejects_iff",
+        "arguments": {
+          "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+          "theorem_name": "Lumenia.validate_raw_asset_rejects_iff",
+          "scan_source": true
+        },
         "response": {
           "content": [
             {
@@ -2861,6 +2632,11 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.validate_raw_asset_preserves_input",
+        "arguments": {
+          "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+          "theorem_name": "Lumenia.validate_raw_asset_preserves_input",
+          "scan_source": true
+        },
         "response": {
           "content": [
             {
@@ -2878,6 +2654,11 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.validate_raw_asset_sound",
+        "arguments": {
+          "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+          "theorem_name": "Lumenia.validate_raw_asset_sound",
+          "scan_source": true
+        },
         "response": {
           "content": [
             {
@@ -2895,6 +2676,11 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.validated_asset_satisfies_requirements",
+        "arguments": {
+          "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+          "theorem_name": "Lumenia.validated_asset_satisfies_requirements",
+          "scan_source": true
+        },
         "response": {
           "content": [
             {
@@ -2912,6 +2698,11 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.meshopt_variants_are_exclusive",
+        "arguments": {
+          "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+          "theorem_name": "Lumenia.meshopt_variants_are_exclusive",
+          "scan_source": true
+        },
         "response": {
           "content": [
             {
@@ -2929,6 +2720,11 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.extension_meshopt_requires_decoder",
+        "arguments": {
+          "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+          "theorem_name": "Lumenia.extension_meshopt_requires_decoder",
+          "scan_source": true
+        },
         "response": {
           "content": [
             {
@@ -2946,6 +2742,11 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.khronos_meshopt_requires_decoder",
+        "arguments": {
+          "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+          "theorem_name": "Lumenia.khronos_meshopt_requires_decoder",
+          "scan_source": true
+        },
         "response": {
           "content": [
             {
@@ -2963,6 +2764,11 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.ktx2_requires_loader",
+        "arguments": {
+          "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+          "theorem_name": "Lumenia.ktx2_requires_loader",
+          "scan_source": true
+        },
         "response": {
           "content": [
             {
@@ -2980,6 +2786,11 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.draco_requires_loader",
+        "arguments": {
+          "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+          "theorem_name": "Lumenia.draco_requires_loader",
+          "scan_source": true
+        },
         "response": {
           "content": [
             {
@@ -2997,6 +2808,11 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.draco_is_enabled_iff_explicit",
+        "arguments": {
+          "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+          "theorem_name": "Lumenia.draco_is_enabled_iff_explicit",
+          "scan_source": true
+        },
         "response": {
           "content": [
             {
@@ -3014,6 +2830,11 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.named_nodes_require_preservation",
+        "arguments": {
+          "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+          "theorem_name": "Lumenia.named_nodes_require_preservation",
+          "scan_source": true
+        },
         "response": {
           "content": [
             {
@@ -3031,6 +2852,11 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.extras_require_preservation",
+        "arguments": {
+          "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+          "theorem_name": "Lumenia.extras_require_preservation",
+          "scan_source": true
+        },
         "response": {
           "content": [
             {
@@ -3048,6 +2874,11 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.both_meshopt_flags_reject",
+        "arguments": {
+          "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+          "theorem_name": "Lumenia.both_meshopt_flags_reject",
+          "scan_source": true
+        },
         "response": {
           "content": [
             {
@@ -3065,40 +2896,11 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.missing_meshopt_decoder_rejects",
-        "response": {
-          "content": [
-            {
-              "type": "text",
-              "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
-            }
-          ],
-          "structuredContent": {
-            "axioms": [],
-            "warnings": []
-          },
-          "isError": false
-        }
-      },
-      {
-        "tool": "lean_verify",
-        "target": "Lumenia.shipped_requires_validation",
-        "response": {
-          "content": [
-            {
-              "type": "text",
-              "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
-            }
-          ],
-          "structuredContent": {
-            "axioms": [],
-            "warnings": []
-          },
-          "isError": false
-        }
-      },
-      {
-        "tool": "lean_verify",
-        "target": "Lumenia.shipment_trace_is_exactly_optimize_validate_ship",
+        "arguments": {
+          "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+          "theorem_name": "Lumenia.missing_meshopt_decoder_rejects",
+          "scan_source": true
+        },
         "response": {
           "content": [
             {
@@ -3116,6 +2918,33 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.shipped_history_requires_asset_requirements",
+        "arguments": {
+          "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+          "theorem_name": "Lumenia.shipped_history_requires_asset_requirements",
+          "scan_source": true
+        },
+        "response": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+            }
+          ],
+          "structuredContent": {
+            "axioms": [],
+            "warnings": []
+          },
+          "isError": false
+        }
+      },
+      {
+        "tool": "lean_verify",
+        "target": "Lumenia.shipped_requires_validation",
+        "arguments": {
+          "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+          "theorem_name": "Lumenia.shipped_requires_validation",
+          "scan_source": true
+        },
         "response": {
           "content": [
             {
@@ -3133,6 +2962,33 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.invalid_asset_has_no_shipped_history",
+        "arguments": {
+          "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+          "theorem_name": "Lumenia.invalid_asset_has_no_shipped_history",
+          "scan_source": true
+        },
+        "response": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+            }
+          ],
+          "structuredContent": {
+            "axioms": [],
+            "warnings": []
+          },
+          "isError": false
+        }
+      },
+      {
+        "tool": "lean_verify",
+        "target": "Lumenia.shipment_trace_is_exactly_optimize_validate_ship",
+        "arguments": {
+          "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+          "theorem_name": "Lumenia.shipment_trace_is_exactly_optimize_validate_ship",
+          "scan_source": true
+        },
         "response": {
           "content": [
             {
@@ -3150,6 +3006,11 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.browser_capability_requires_client_component",
+        "arguments": {
+          "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+          "theorem_name": "Lumenia.browser_capability_requires_client_component",
+          "scan_source": true
+        },
         "response": {
           "content": [
             {
@@ -3167,6 +3028,11 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.static_export_cannot_require_server_only",
+        "arguments": {
+          "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+          "theorem_name": "Lumenia.static_export_cannot_require_server_only",
+          "scan_source": true
+        },
         "response": {
           "content": [
             {
@@ -3184,6 +3050,11 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.accepted_component_places_browser_requirements_on_client",
+        "arguments": {
+          "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+          "theorem_name": "Lumenia.accepted_component_places_browser_requirements_on_client",
+          "scan_source": true
+        },
         "response": {
           "content": [
             {
@@ -3201,6 +3072,11 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.client_component_cannot_require_server_only",
+        "arguments": {
+          "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+          "theorem_name": "Lumenia.client_component_cannot_require_server_only",
+          "scan_source": true
+        },
         "response": {
           "content": [
             {
@@ -3218,6 +3094,11 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.core_transfer_total_within_budget",
+        "arguments": {
+          "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+          "theorem_name": "Lumenia.core_transfer_total_within_budget",
+          "scan_source": true
+        },
         "response": {
           "content": [
             {
@@ -3235,6 +3116,11 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.category_budget_total_is_204800_bytes",
+        "arguments": {
+          "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+          "theorem_name": "Lumenia.category_budget_total_is_204800_bytes",
+          "scan_source": true
+        },
         "response": {
           "content": [
             {
@@ -3252,6 +3138,11 @@
       {
         "tool": "lean_verify",
         "target": "Lumenia.measured_gate_pass_iff",
+        "arguments": {
+          "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+          "theorem_name": "Lumenia.measured_gate_pass_iff",
+          "scan_source": true
+        },
         "response": {
           "content": [
             {
@@ -3265,79 +3156,6 @@
           },
           "isError": false
         }
-      }
-    ],
-    "verifiedInputScope": "Root Lean modules, toolchain, Lake configuration and theorem registry; byte-identical before and after the checks. UI and image publication changes are independently tested.",
-    "checkStartedAtSourceRevision": "sha256:abbc6a923a028deddb37b5bcebe433e1c9ae170ace10016800cb23ad2dfb99f9",
-    "verifiedInputs": [
-      {
-        "path": "contracts/claims.json",
-        "sha256": "2250c5046c0a3c1a0836267d3b4823b255cce0303b25ff3fa76c8fe9060da087"
-      },
-      {
-        "path": "formal/Lumenia.lean",
-        "sha256": "0f9ee325f4c9bf73d42edfeb1b059cb4b66de230ba6983256fbe46bcb26fd779"
-      },
-      {
-        "path": "formal/Lumenia/AxiomAudit.lean",
-        "sha256": "a2ac9deab960ba87a619b4d76866e2dea1699c610d049ba0e54b0379eb8daf00"
-      },
-      {
-        "path": "formal/Lumenia/Boundary.lean",
-        "sha256": "41be9e4293f8f54e671150aa2f1afadc27d0393f865af9ebdbdcb6bb8ea363c3"
-      },
-      {
-        "path": "formal/Lumenia/CosmicExhibition.lean",
-        "sha256": "59397a93a57427b38da7a09b275d5164ba64a58136ee7c53d39abcbbfb16aeda"
-      },
-      {
-        "path": "formal/Lumenia/CosmicExhibitionAudit.lean",
-        "sha256": "cc87c7c5abcb146d49ea79e7c638ca3a86911efccb4f66051b0b3c08416650bd"
-      },
-      {
-        "path": "formal/Lumenia/Model.lean",
-        "sha256": "0f528929e0243d7f922a9d7f9603eed43e8c0e13c6f44a86922f06dad82a0b06"
-      },
-      {
-        "path": "formal/Lumenia/Proofs.lean",
-        "sha256": "dc185dc0b11ffc1471061e7301249def8111ef69707876e0cf4ebb3ea05afb04"
-      },
-      {
-        "path": "formal/Lumenia/Tests.lean",
-        "sha256": "329500e65c6d3c601e25d95d91de28d904ecf197b8b5a3ec1e95753b62a52995"
-      },
-      {
-        "path": "formal/Main.lean",
-        "sha256": "8b3eeea5ac3bcfb89963c5064a1307da6cb975ca5a89eb109319f2bce377e715"
-      },
-      {
-        "path": "lake-manifest.json",
-        "sha256": "4273a8dd6528dfcfc627997ee3f06313b97d795918cfc09b5ae65821723e54fb"
-      },
-      {
-        "path": "lakefile.toml",
-        "sha256": "450866fae5ba7ab3c9d0b025436f30ea29e39124837b035b428bd40233048c62"
-      },
-      {
-        "path": "lean-toolchain",
-        "sha256": "db7bb24b756d745bbde83fe92718b51bd3625dae3701ba0f598d0eedcd3f3028"
-      }
-    ],
-    "bindingHistory": [
-      {
-        "executionIdentifier": "01a0a762-856b-70f8-9984-b7801024f20f",
-        "recordedAt": "2026-09-15T23:24:06.891Z",
-        "previousSourceRevision": "sha256:81baf2dec9fb672eb9c37d13fda9695911748f4408e5fe1673ec241b58d14bab",
-        "sourceRevision": "sha256:e81a712d0bb4f40024df879541bb7a916324c4bf0920bbcde3a7f98baa5f5e53",
-        "verifiedInputsUnchanged": true
-      },
-      {
-        "executionIdentifier": "01a0a98a-19dc-753e-8d52-62b30574dfda",
-        "recordedAt": "2026-09-16T09:26:35.228Z",
-        "previousSourceRevision": "sha256:e81a712d0bb4f40024df879541bb7a916324c4bf0920bbcde3a7f98baa5f5e53",
-        "sourceRevision": "sha256:fa371b84fa47949a1c010e29b9545cb3671b586f9700f4df604d117be0605a2a",
-        "verifiedInputsUnchanged": true,
-        "reason": "Reused existing language-server observations after exact comparison of all 13 verified proof inputs. WebMCP behavior is tested separately."
       }
     ]
   }

@@ -1,0 +1,2114 @@
+{
+  "executionIdentifier": "01a0a9c6-c101-794e-b225-4b01c529c05f",
+  "recordedAt": "2026-09-16T10:39:15.534Z",
+  "sourceRevisionBefore": "sha256:87ed8dc07a6cf314667c9e4f158ea72255a3130c220ca3192f1266e238231c76",
+  "sourceRevisionAfter": "sha256:87ed8dc07a6cf314667c9e4f158ea72255a3130c220ca3192f1266e238231c76",
+  "status": "pass",
+  "programCount": 6,
+  "checkCount": 55,
+  "scope": "Independent evaluated mathematics and finite models; implementation equivalence is checked separately.",
+  "programs": [
+    {
+      "name": "root",
+      "code": "(* Run UUIDv7: 01a0a9c6-c101-794e-b225-4b01c529c05f.\n   Machine contract: sourceRead -> requirementsCompared -> resultReturned.\n   No filesystem operations. Lean some .stage maps to \"stage\"; none to \"none\". *)\nClearAll[\"Global`*\"];\nrunIdentifier = \"01a0a9c6-c101-794e-b225-4b01c529c05f\";\nutcTime[] := DateString[{\"ISODate\", \"T\", \"Hour\", \":\", \"Minute\", \":\", \"Second\", \"Z\"}, TimeZone -> 0];\nstartedAtUtc = utcTime[];\nstages = {\"source\", \"optimized\", \"validated\", \"shipped\", \"rejected\"};\nevents = {\"optimize\", \"validate\", \"ship\", \"reject\"};\nmodes = {\"staticExport\", \"serverRuntime\"};\nplacements = {\"server\", \"client\"};\ncapabilities = {\"pureRendering\", \"serverOnly\", \"browserApi\", \"state\", \"eventHandler\", \"threeDimensionalRendering\"};\n\n(* Current Model.lean lines 131-145, 195-200, 210-218: literal branch translations. *)\ntransitionImplementation[stage_, event_] := Switch[stage,\n  \"source\", Switch[event, \"optimize\", \"optimized\", \"reject\", \"rejected\", \"validate\" | \"ship\", \"none\"],\n  \"optimized\", Switch[event, \"validate\", \"validated\", \"reject\", \"rejected\", \"optimize\" | \"ship\", \"none\"],\n  \"validated\", Switch[event, \"ship\", \"shipped\", \"reject\", \"rejected\", \"optimize\" | \"validate\", \"none\"],\n  \"shipped\" | \"rejected\", \"none\"];\ndeploymentImplementation[mode_, capability_] := Switch[mode,\n  \"staticExport\", Switch[capability, \"serverOnly\", False,\n    \"pureRendering\" | \"browserApi\" | \"state\" | \"eventHandler\" | \"threeDimensionalRendering\", True],\n  \"serverRuntime\", True];\nplacementImplementation[placement_, capability_] := Switch[capability,\n  \"pureRendering\", True,\n  \"serverOnly\", Switch[placement, \"server\", True, \"client\", False],\n  \"browserApi\" | \"state\" | \"eventHandler\" | \"threeDimensionalRendering\",\n    Switch[placement, \"server\", False, \"client\", True]];\n\n(* Independent requirements: spec.md lines 53-68.\n   Tests.lean lines 64-70 additionally specify rejection from each unfinished stage.\n   Ordered progress permits exactly the event at the current stage index.\n   Shipped and rejected are terminal; all other nonprogress events are invalid. *)\nstageIndex = AssociationThread[stages -> Range[0, 4]];\neventIndex = AssociationThread[events -> Range[0, 3]];\ntransitionRequirement[stage_, event_] := Which[\n  MemberQ[{\"shipped\", \"rejected\"}, stage], \"none\",\n  event === \"reject\", \"rejected\",\n  Lookup[stageIndex, stage] === Lookup[eventIndex, event],\n    stages[[Lookup[stageIndex, stage] + 2]],\n  True, \"none\"];\n(* Static export forbids request-time server features.\n   Pure rendering is allowed on either side. Server-only features require server;\n   browser access, state, handlers and three-dimensional rendering require client. *)\ndeploymentRequirement[mode_, capability_] :=\n  Not[mode === \"staticExport\" && capability === \"serverOnly\"];\nrequiredPlacement = <|\"pureRendering\" -> {\"server\", \"client\"}, \"serverOnly\" -> {\"server\"},\n  \"browserApi\" -> {\"client\"}, \"state\" -> {\"client\"}, \"eventHandler\" -> {\"client\"},\n  \"threeDimensionalRendering\" -> {\"client\"}|>;\nplacementRequirement[placement_, capability_] :=\n  MemberQ[Lookup[requiredPlacement, capability], placement];\n\n(* Golden tables freshly read from current Tests.lean lines 64-80. *)\ntransitionGolden = {{\"optimized\", \"none\", \"none\", \"rejected\"},\n  {\"none\", \"validated\", \"none\", \"rejected\"}, {\"none\", \"none\", \"shipped\", \"rejected\"},\n  {\"none\", \"none\", \"none\", \"none\"}, {\"none\", \"none\", \"none\", \"none\"}};\ndeploymentGolden = {{True, False, True, True, True, True}, {True, True, True, True, True, True}};\nplacementGolden = {{True, True, False, False, False, False}, {True, False, True, True, True, True}};\n\ncompareEveryInput[name_, claimIdentifier_, rowDomain_, columnDomain_, implementation_, requirement_, golden_] :=\n Module[{inputs, actual, required, expected, records},\n  inputs = Tuples[{rowDomain, columnDomain}];\n  actual = (implementation @@ # &) /@ inputs;\n  required = (requirement @@ # &) /@ inputs;\n  expected = Flatten[golden];\n  records = MapThread[\n    <|\"input\" -> #1, \"implementation\" -> #2, \"requirement\" -> #3, \"golden\" -> #4,\n      \"implementationMatchesRequirement\" -> SameQ[#2, #3],\n      \"implementationMatchesGolden\" -> SameQ[#2, #4],\n      \"goldenMatchesRequirement\" -> SameQ[#4, #3]|> &,\n    {inputs, actual, required, expected}];\n  <|\"function\" -> name, \"claimIdentifier\" -> claimIdentifier,\n    \"inputCount\" -> Length[inputs], \"uniqueInputCount\" -> Length[DeleteDuplicates[inputs]],\n    \"goldenDimensionsMatch\" -> SameQ[Dimensions[golden], {Length[rowDomain], Length[columnDomain]}],\n    \"implementationVersusRequirementsMismatchCount\" ->\n      Count[Lookup[records, \"implementationMatchesRequirement\"], False],\n    \"implementationVersusGoldenMismatchCount\" -> Count[Lookup[records, \"implementationMatchesGolden\"], False],\n    \"goldenVersusRequirementsMismatchCount\" -> Count[Lookup[records, \"goldenMatchesRequirement\"], False],\n    \"mismatches\" -> Select[records, Not[#[\"implementationMatchesRequirement\"] &&\n      #[\"implementationMatchesGolden\"] && #[\"goldenMatchesRequirement\"]] &],\n    \"actualOutputs\" -> Partition[actual, Length[columnDomain]]|>\n ];\ncomparisons = {\n  compareEveryInput[\"transition\", \"3994c7e6-6387-590c-9922-3fad04fc482d\",\n    stages, events, transitionImplementation, transitionRequirement, transitionGolden],\n  compareEveryInput[\"deploymentCapabilityAllowed\", \"ac27dc88-da25-51f7-8af5-c431e22cd72b\",\n    modes, capabilities, deploymentImplementation, deploymentRequirement, deploymentGolden],\n  compareEveryInput[\"componentPlacementAllowed\", \"cf86cf5d-e0c7-58e4-aa77-ae4d0e72bf46\",\n    placements, capabilities, placementImplementation, placementRequirement, placementGolden]};\nExportString[<|\"runIdentifier\" -> runIdentifier, \"startedAtUtc\" -> startedAtUtc,\n  \"completedAtUtc\" -> utcTime[], \"comparisonCount\" -> Length[comparisons],\n  \"totalInputCount\" -> Total[Lookup[comparisons, \"inputCount\"]], \"comparisons\" -> comparisons|>,\n  \"RawJSON\", \"Compact\" -> True]",
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Out[1]= \"{\\\"runIdentifier\\\":\\\"01a0a9c6-c101-794e-b225-4b01c529c05f\\\",\\\"startedAtUtc\\\":\\\"2026-09-16T10:35:31Z\\\",\\\"completedAtUtc\\\":\\\"2026-09-16T10:35:31Z\\\",\\\"comparisonCount\\\":3,\\\"totalInputCount\\\":44,\\\"comparisons\\\":[{\\\"function\\\":\\\"transition\\\",\\\"claimIdentifier\\\":\\\"3994c7e6-6387-590c-9922-3fad04fc482d\\\",\\\"inputCount\\\":20,\\\"uniqueInputCount\\\":20,\\\"goldenDimensionsMatch\\\":true,\\\"implementationVersusRequirementsMismatchCount\\\":0,\\\"implementationVersusGoldenMismatchCount\\\":0,\\\"goldenVersusRequirementsMismatchCount\\\":0,\\\"mismatches\\\":[],\\\"actualOutputs\\\":[[\\\"optimized\\\",\\\"none\\\",\\\"none\\\",\\\"rejected\\\"],[\\\"none\\\",\\\"validated\\\",\\\"none\\\",\\\"rejected\\\"],[\\\"none\\\",\\\"none\\\",\\\"shipped\\\",\\\"rejected\\\"],[\\\"none\\\",\\\"none\\\",\\\"none\\\",\\\"none\\\"],[\\\"none\\\",\\\"none\\\",\\\"none\\\",\\\"none\\\"]]},{\\\"function\\\":\\\"deploymentCapabilityAllowed\\\",\\\"claimIdentifier\\\":\\\"ac27dc88-da25-51f7-8af5-c431e22cd72b\\\",\\\"inputCount\\\":12,\\\"uniqueInputCount\\\":12,\\\"goldenDimensionsMatch\\\":true,\\\"implementationVersusRequirementsMismatchCount\\\":0,\\\"implementationVersusGoldenMismatchCount\\\":0,\\\"goldenVersusRequirementsMismatchCount\\\":0,\\\"mismatches\\\":[],\\\"actualOutputs\\\":[[true,false,true,true,true,true],[true,true,true,true,true,true]]},{\\\"function\\\":\\\"componentPlacementAllowed\\\",\\\"claimIdentifier\\\":\\\"cf86cf5d-e0c7-58e4-aa77-ae4d0e72bf46\\\",\\\"inputCount\\\":12,\\\"uniqueInputCount\\\":12,\\\"goldenDimensionsMatch\\\":true,\\\"implementationVersusRequirementsMismatchCount\\\":0,\\\"implementationVersusGoldenMismatchCount\\\":0,\\\"goldenVersusRequirementsMismatchCount\\\":0,\\\"mismatches\\\":[],\\\"actualOutputs\\\":[[true,true,false,false,false,false],[true,false,true,true,true,true]]}]}\""
+          }
+        ],
+        "isError": false
+      },
+      "decoded": {
+        "runIdentifier": "01a0a9c6-c101-794e-b225-4b01c529c05f",
+        "startedAtUtc": "2026-09-16T10:35:31Z",
+        "completedAtUtc": "2026-09-16T10:35:31Z",
+        "comparisonCount": 3,
+        "totalInputCount": 44,
+        "comparisons": [
+          {
+            "function": "transition",
+            "claimIdentifier": "3994c7e6-6387-590c-9922-3fad04fc482d",
+            "inputCount": 20,
+            "uniqueInputCount": 20,
+            "goldenDimensionsMatch": true,
+            "implementationVersusRequirementsMismatchCount": 0,
+            "implementationVersusGoldenMismatchCount": 0,
+            "goldenVersusRequirementsMismatchCount": 0,
+            "mismatches": [],
+            "actualOutputs": [
+              [
+                "optimized",
+                "none",
+                "none",
+                "rejected"
+              ],
+              [
+                "none",
+                "validated",
+                "none",
+                "rejected"
+              ],
+              [
+                "none",
+                "none",
+                "shipped",
+                "rejected"
+              ],
+              [
+                "none",
+                "none",
+                "none",
+                "none"
+              ],
+              [
+                "none",
+                "none",
+                "none",
+                "none"
+              ]
+            ]
+          },
+          {
+            "function": "deploymentCapabilityAllowed",
+            "claimIdentifier": "ac27dc88-da25-51f7-8af5-c431e22cd72b",
+            "inputCount": 12,
+            "uniqueInputCount": 12,
+            "goldenDimensionsMatch": true,
+            "implementationVersusRequirementsMismatchCount": 0,
+            "implementationVersusGoldenMismatchCount": 0,
+            "goldenVersusRequirementsMismatchCount": 0,
+            "mismatches": [],
+            "actualOutputs": [
+              [
+                true,
+                false,
+                true,
+                true,
+                true,
+                true
+              ],
+              [
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+              ]
+            ]
+          },
+          {
+            "function": "componentPlacementAllowed",
+            "claimIdentifier": "cf86cf5d-e0c7-58e4-aa77-ae4d0e72bf46",
+            "inputCount": 12,
+            "uniqueInputCount": 12,
+            "goldenDimensionsMatch": true,
+            "implementationVersusRequirementsMismatchCount": 0,
+            "implementationVersusGoldenMismatchCount": 0,
+            "goldenVersusRequirementsMismatchCount": 0,
+            "mismatches": [],
+            "actualOutputs": [
+              [
+                true,
+                true,
+                false,
+                false,
+                false,
+                false
+              ],
+              [
+                true,
+                false,
+                true,
+                true,
+                true,
+                true
+              ]
+            ]
+          }
+        ]
+      },
+      "receivedAt": "2026-09-16T10:35:32.531Z",
+      "checkCount": 3,
+      "status": "pass",
+      "recordIdentifier": "2f3d33c5-9567-5c41-8385-9ae267b06721",
+      "codeSha256": "31389405532952159ea0a18bf0ea653e0c7c6d51974c68a7e5623efd2f8babc6"
+    },
+    {
+      "name": "material",
+      "code": "(*\n  llm machine contract\n  artifactIdentifier: e67bec4e-cc81-54b8-8de8-e04f06503867\n  executionIdentifier: 01a09a86-bce5-77fe-8aff-ce403b00e379\n  state: dimension-contract-written\n  transition: dimension-contract-written -> independent-Wolfram-evaluation\n\n  This file is the independent Wolfram calculation for Material Sphere.\n  It uses exact integer arithmetic only.  It does not evaluate aesthetics,\n  artistic essence, authorship, or symbolic visual quality.\n  The external boundary is strict: spaceDimensions is 1..4 and the integer\n  coordinate list has exactly that length.  timeMilliseconds is a separate\n  field; three-dimensional-space-plus-time is not four-dimensional space.\n  The first-plane rotation is intentionally undefined for one dimension and\n  is represented by Null, which is exported as JSON null.  Matrix tests cover\n  dimensions 2..4 only.\n*)\n\nClearAll[\n  validCoordinateQ, encodeCoordinates, appendAxis, dropLastAxis,\n  projectToPlane, sameExceptLastAxisQ, spaceTimeSample,\n  firstPlaneRotationMatrix, haloAngle, routeAngle, orthogonalAngle,\n  channelMixNumerator, evidenceDecision, evidenceExpected\n];\n\nvalidCoordinateQ[spaceDimensions_, coordinates_] :=\n  IntegerQ[spaceDimensions] && 1 <= spaceDimensions <= 4 &&\n    ListQ[coordinates] && Length[coordinates] === spaceDimensions &&\n    AllTrue[coordinates, IntegerQ];\n\nencodeCoordinates[spaceDimensions_, coordinates_] :=\n  If[validCoordinateQ[spaceDimensions, coordinates], coordinates, Null];\n\nappendAxis[coordinates_List, axis_Integer] := Append[coordinates, axis];\n\ndropLastAxis[coordinates_List] :=\n  If[coordinates === {}, Null, Most[coordinates]];\n\n(* Projection is an explicit two-dimensional view; extra spatial axes are dropped. *)\nprojectToPlane[coordinates_List] := Take[Join[coordinates, {0, 0}], 2];\n\nsameExceptLastAxisQ[first_List, second_List] :=\n  Length[first] === Length[second] && Length[first] >= 1 &&\n    Take[first, Length[first] - 1] === Take[second, Length[second] - 1] &&\n    Last[first] =!= Last[second];\n\nspaceTimeSample[spaceDimensions_, coordinates_, timeMilliseconds_] :=\n  <|\n    \"spaceDimensions\" -> spaceDimensions,\n    \"coordinates\" -> coordinates,\n    \"timeMilliseconds\" -> timeMilliseconds\n  |>;\n\n(* R is the exact first-plane 90-degree rotation, embedded in dimensions 2..4. *)\nfirstPlaneRotationMatrix[spaceDimensions_Integer] :=\n  If[MemberQ[{2, 3, 4}, spaceDimensions],\n    Table[\n      Which[\n        row === 1 && column === 2, -1,\n        row === 2 && column === 1, 1,\n        row === column && row > 2, 1,\n        True, 0\n      ],\n      {row, spaceDimensions}, {column, spaceDimensions}\n    ],\n    Null\n  ];\n\nhaloAngle[index_Integer] := 30*Mod[index, 12];\nrouteAngle[index_Integer] := 45*Mod[index, 8];\northogonalAngle[index_Integer] := 90*Mod[index, 4];\n\nchannelMixNumerator[firstChannel_Integer, secondChannel_Integer, weight_Integer] :=\n  (100 - weight)*firstChannel + weight*secondChannel;\n\nevidenceDecision[supportCount_Integer, contradictionCount_Integer, stale_] :=\n  Which[\n    stale === True, \"staleEvidence\",\n    contradictionCount > 0, \"fail\",\n    supportCount === 0, \"blocked\",\n    True, \"pass\"\n  ];\n\n(* A separately evaluated contract table keeps the decision rows machine-checkable. *)\nevidenceExpected[supportCount_Integer, contradictionCount_Integer, stale_] :=\n  If[stale === True, \"staleEvidence\",\n    If[contradictionCount > 0, \"fail\",\n      If[supportCount === 0, \"blocked\", \"pass\"]\n    ]\n  ];\n\ncoordinateRows = Table[\n  With[\n    {coordinates = Take[{-3, 0, 2, 7}, spaceDimensions]},\n    With[\n      {encoded = encodeCoordinates[spaceDimensions, coordinates]},\n      <|\n        \"spaceDimensions\" -> spaceDimensions,\n        \"inputLength\" -> Length[coordinates],\n        \"encodedCoordinates\" -> encoded,\n        \"expectedLength\" -> spaceDimensions,\n        \"pass\" -> (encoded =!= Null && Length[encoded] === spaceDimensions &&\n          AllTrue[encoded, IntegerQ])\n      |>\n    ]\n  ],\n  {spaceDimensions, 1, 4}\n];\n\ninvalidCoordinateRows = Map[\n  Function[input,\n    With[\n      {encoded = encodeCoordinates[input[\"spaceDimensions\"], input[\"coordinates\"]]},\n      <|\n        \"spaceDimensions\" -> input[\"spaceDimensions\"],\n        \"input\" -> input[\"coordinates\"],\n        \"accepted\" -> (encoded =!= Null),\n        \"pass\" -> (encoded === Null)\n      |>\n    ]\n  ],\n  {\n    <|\"spaceDimensions\" -> 2, \"coordinates\" -> {1}|>,\n    <|\"spaceDimensions\" -> 3, \"coordinates\" -> {1, 2, 3, 4}|>,\n    <|\"spaceDimensions\" -> 4, \"coordinates\" -> {1, 2, 3.0, 4}|>,\n    <|\"spaceDimensions\" -> 5, \"coordinates\" -> {1, 2, 3, 4, 5}|>\n  }\n];\n\nappendDropRows = Table[\n  With[\n    {original = Take[{-3, 0, 2, 7}, spaceDimensions], appendedAxis = 100 + spaceDimensions},\n    With[\n      {appended = appendAxis[original, appendedAxis]},\n      With[\n        {restored = dropLastAxis[appended]},\n        <|\n          \"spaceDimensions\" -> spaceDimensions,\n          \"original\" -> original,\n          \"appended\" -> appended,\n          \"restored\" -> restored,\n          \"pass\" -> (restored === original && Length[appended] === spaceDimensions + 1)\n        |>\n      ]\n    ]\n  ],\n  {spaceDimensions, 1, 4}\n];\n\nrotationRows = Table[\n  With[\n    {matrix = firstPlaneRotationMatrix[spaceDimensions]},\n    With[\n      {powerFour = If[matrix === Null, Null, MatrixPower[matrix, 4]]},\n      <|\n        \"spaceDimensions\" -> spaceDimensions,\n        \"rotationMatrix\" -> matrix,\n        \"powerFour\" -> powerFour,\n        \"expectedForOneDimension\" -> If[spaceDimensions === 1, Null, \"matrix-test-not-applicable\"],\n        \"pass\" -> If[\n          spaceDimensions === 1,\n          matrix === Null && powerFour === Null,\n          MemberQ[{2, 3, 4}, spaceDimensions] && powerFour === IdentityMatrix[spaceDimensions]\n        ]\n      |>\n    ]\n  ],\n  {spaceDimensions, 1, 4}\n];\n\nprojectionRows = Table[\n  With[\n    {coordinates = Take[{-2, 4, 7, 11}, spaceDimensions]},\n    With[\n      {projection = projectToPlane[coordinates], expected = Take[Join[coordinates, {0, 0}], 2]},\n      <|\n        \"spaceDimensions\" -> spaceDimensions,\n        \"coordinates\" -> coordinates,\n        \"projectedCoordinates\" -> projection,\n        \"expectedProjection\" -> expected,\n        \"pass\" -> (projection === expected && Length[projection] === 2)\n      |>\n    ]\n  ],\n  {spaceDimensions, 1, 4}\n];\n\npointA = {1, -2, 3, 4};\npointB = {1, -2, 3, 9};\nprojectionCounterexample = <|\n  \"pointA\" -> pointA,\n  \"pointB\" -> pointB,\n  \"pointsDistinct\" -> (pointA =!= pointB),\n  \"onlyAdditionalAxisDiffers\" -> sameExceptLastAxisQ[pointA, pointB],\n  \"projectionA\" -> projectToPlane[pointA],\n  \"projectionB\" -> projectToPlane[pointB],\n  \"same2DProjection\" -> (projectToPlane[pointA] === projectToPlane[pointB]),\n  \"pass\" -> (pointA =!= pointB && sameExceptLastAxisQ[pointA, pointB] &&\n    projectToPlane[pointA] === projectToPlane[pointB])\n|>;\n\nthreeDimensionalPlusTime = spaceTimeSample[3, {-2, 0, 5}, 1250];\nthreeDimensionalPlusTimeLater = spaceTimeSample[3, {-2, 0, 5}, 2500];\nfourDimensionalSpace = spaceTimeSample[4, {-2, 0, 5, 7}, 1250];\n\ntimeSeparation = <|\n  \"threeDimensionalPlusTime\" -> threeDimensionalPlusTime,\n  \"fourDimensionalSpace\" -> fourDimensionalSpace,\n  \"threeDimensionalCoordinateLength\" -> Length[threeDimensionalPlusTime[\"coordinates\"]],\n  \"fourDimensionalCoordinateLength\" -> Length[fourDimensionalSpace[\"coordinates\"]],\n  \"timeChangeLeavesCoordinatesUnchanged\" ->\n    (threeDimensionalPlusTime[\"coordinates\"] === threeDimensionalPlusTimeLater[\"coordinates\"]),\n  \"timeMillisecondsIsSeparateField\" ->\n    (MemberQ[Keys[threeDimensionalPlusTime], \"timeMilliseconds\"] &&\n      MemberQ[Keys[fourDimensionalSpace], \"timeMilliseconds\"]),\n  \"threeDimensionalPlusTimeIsNotFourDimensionalSpace\" ->\n    (Length[threeDimensionalPlusTime[\"coordinates\"]] === 3 &&\n      Length[fourDimensionalSpace[\"coordinates\"]] === 4),\n  \"pass\" ->\n    (Length[threeDimensionalPlusTime[\"coordinates\"]] === 3 &&\n      Length[fourDimensionalSpace[\"coordinates\"]] === 4 &&\n      threeDimensionalPlusTime[\"coordinates\"] === threeDimensionalPlusTimeLater[\"coordinates\"] &&\n      MemberQ[Keys[threeDimensionalPlusTime], \"timeMilliseconds\"] &&\n      MemberQ[Keys[fourDimensionalSpace], \"timeMilliseconds\"])\n|>;\n\nhaloRows = Table[\n  With[{angle = haloAngle[index], expected = 30*Mod[index, 12]},\n    <|\n      \"index\" -> index,\n      \"angleDegrees\" -> angle,\n      \"expectedAngleDegrees\" -> expected,\n      \"pass\" -> (angle === expected && 0 <= angle && angle < 360)\n    |>\n  ],\n  {index, 0, 11}\n];\nhaloAngles = Lookup[haloRows, \"angleDegrees\"];\nhaloCheck = <|\n  \"table\" -> haloRows,\n  \"closesAfterTwelveSlots\" -> (haloAngle[12] === haloAngle[0]),\n  \"twelveAnglesAreDistinct\" -> (Length[DeleteDuplicates[haloAngles]] === 12),\n  \"pass\" -> (And @@ Lookup[haloRows, \"pass\"] && haloAngle[12] === haloAngle[0] &&\n    Length[DeleteDuplicates[haloAngles]] === 12)\n|>;\n\nrouteRows = Table[\n  With[{angle = routeAngle[index], expected = 45*Mod[index, 8]},\n    <|\n      \"index\" -> index,\n      \"angleDegrees\" -> angle,\n      \"expectedAngleDegrees\" -> expected,\n      \"multipleOf45Degrees\" -> (Mod[angle, 45] === 0),\n      \"pass\" -> (angle === expected && 0 <= angle && angle < 360 && Mod[angle, 45] === 0)\n    |>\n  ],\n  {index, 0, 7}\n];\n\northogonalRows = Table[\n  With[{angle = orthogonalAngle[index], expected = 90*Mod[index, 4]},\n    <|\n      \"index\" -> index,\n      \"angleDegrees\" -> angle,\n      \"expectedAngleDegrees\" -> expected,\n      \"multipleOf90Degrees\" -> (Mod[angle, 90] === 0),\n      \"pass\" -> (angle === expected && 0 <= angle && angle < 360 && Mod[angle, 90] === 0)\n    |>\n  ],\n  {index, 0, 3}\n];\n\nchannelInputs = Tuples[{{0, 1, 254, 255}, {0, 1, 254, 255}, {0, 1, 50, 99, 100}}];\nchannelRows = Map[\n  Function[input,\n    With[\n      {firstChannel = input[[1]], secondChannel = input[[2]], weight = input[[3]]},\n      With[\n        {numerator = channelMixNumerator[firstChannel, secondChannel, weight]},\n        <|\n          \"firstChannel\" -> firstChannel,\n          \"secondChannel\" -> secondChannel,\n          \"weightPercent\" -> weight,\n          \"numerator\" -> numerator,\n          \"upperLimit\" -> 25500,\n          \"pass\" -> (IntegerQ[numerator] && 0 <= numerator <= 25500)\n        |>\n      ]\n    ]\n  ],\n  channelInputs\n];\n\nevidenceRows = Flatten[\n  Table[\n    With[{observed = evidenceDecision[support, contradiction, stale],\n      expected = evidenceExpected[support, contradiction, stale]},\n      <|\n        \"supportCount\" -> support,\n        \"contradictionCount\" -> contradiction,\n        \"stale\" -> stale,\n        \"observedDecision\" -> observed,\n        \"expectedDecision\" -> expected,\n        \"pass\" -> (observed === expected)\n      |>\n    ],\n    {support, 0, 3}, {contradiction, 0, 3}, {stale, {False, True}}\n  ],\n  2\n];\n\nchecks = <|\n  \"exactCoordinateLengthsOneToFour\" -> And @@ Lookup[coordinateRows, \"pass\"],\n  \"invalidCoordinateLengthsRejected\" -> And @@ Lookup[invalidCoordinateRows, \"pass\"],\n  \"appendDropRestoresAllDimensions\" -> And @@ Lookup[appendDropRows, \"pass\"],\n  \"firstPlaneRotationOneDimensionIsNull\" -> rotationRows[[1, \"pass\"]],\n  \"firstPlaneRotationMatrixPowerFourIsIdentityForTwoToFourDimensions\" ->\n    And @@ rotationRows[[{2, 3, 4}, \"pass\"]],\n  \"projectionTablesAreExactTwoDimensionalViews\" -> And @@ Lookup[projectionRows, \"pass\"],\n  \"fourDimensionalProjectionCounterexample\" -> projectionCounterexample[\"pass\"],\n  \"timeIsSeparateFromSpatialCoordinates\" -> timeSeparation[\"pass\"],\n  \"haloAngleTable\" -> haloCheck[\"pass\"],\n  \"routeAngleTable\" -> And @@ Lookup[routeRows, \"pass\"],\n  \"orthogonalAngleTable\" -> And @@ Lookup[orthogonalRows, \"pass\"],\n  \"channelMixFiniteTable\" -> And @@ Lookup[channelRows, \"pass\"],\n  \"evidenceDecisionTable\" -> And @@ Lookup[evidenceRows, \"pass\"]\n|>;\n\noverallPass = And @@ Values[checks];\n\ncoordinateTable = <|\n  \"rowFields\" -> {\"spaceDimensions\", \"inputLength\", \"encodedCoordinates\", \"expectedLength\", \"pass\"},\n  \"rows\" -> (Lookup[#, {\"spaceDimensions\", \"inputLength\", \"encodedCoordinates\", \"expectedLength\", \"pass\"}] & /@ coordinateRows)\n|>;\n\ninvalidCoordinateTable = <|\n  \"rowFields\" -> {\"spaceDimensions\", \"input\", \"accepted\", \"pass\"},\n  \"rows\" -> (Lookup[#, {\"spaceDimensions\", \"input\", \"accepted\", \"pass\"}] & /@ invalidCoordinateRows)\n|>;\n\nappendDropTable = <|\n  \"rowFields\" -> {\"spaceDimensions\", \"original\", \"appended\", \"restored\", \"pass\"},\n  \"rows\" -> (Lookup[#, {\"spaceDimensions\", \"original\", \"appended\", \"restored\", \"pass\"}] & /@ appendDropRows)\n|>;\n\nrotationTable = <|\n  \"rowFields\" -> {\"spaceDimensions\", \"rotationMatrix\", \"powerFour\", \"expectedForOneDimension\", \"pass\"},\n  \"rows\" -> (Lookup[#, {\"spaceDimensions\", \"rotationMatrix\", \"powerFour\", \"expectedForOneDimension\", \"pass\"}] & /@ rotationRows)\n|>;\n\nprojectionTable = <|\n  \"rowFields\" -> {\"spaceDimensions\", \"coordinates\", \"projectedCoordinates\", \"expectedProjection\", \"pass\"},\n  \"rows\" -> (Lookup[#, {\"spaceDimensions\", \"coordinates\", \"projectedCoordinates\", \"expectedProjection\", \"pass\"}] & /@ projectionRows)\n|>;\n\nangleTable[rows_List, extra_Association] :=\n  Join[\n    <|\n      \"rowFields\" -> {\"index\", \"angleDegrees\", \"expectedAngleDegrees\", \"pass\"},\n      \"rows\" -> (Lookup[#, {\"index\", \"angleDegrees\", \"expectedAngleDegrees\", \"pass\"}] & /@ rows)\n    |>,\n    extra\n  ];\n\nchannelMixTable = <|\n  \"rowFields\" -> {\"firstChannel\", \"secondChannel\", \"weightPercent\", \"numerator\", \"upperLimit\", \"pass\"},\n  \"inputFirstChannels\" -> {0, 1, 254, 255},\n  \"inputSecondChannels\" -> {0, 1, 254, 255},\n  \"inputWeightPercents\" -> {0, 1, 50, 99, 100},\n  \"rows\" -> (Lookup[#, {\"firstChannel\", \"secondChannel\", \"weightPercent\", \"numerator\", \"upperLimit\", \"pass\"}] & /@ channelRows),\n  \"pass\" -> (And @@ Lookup[channelRows, \"pass\"])\n|>;\n\nevidenceTable = <|\n  \"rowFields\" -> {\"supportCount\", \"contradictionCount\", \"stale\", \"observedDecision\", \"expectedDecision\", \"pass\"},\n  \"rows\" -> (Lookup[#, {\"supportCount\", \"contradictionCount\", \"stale\", \"observedDecision\", \"expectedDecision\", \"pass\"}] & /@ evidenceRows),\n  \"pass\" -> (And @@ Lookup[evidenceRows, \"pass\"])\n |>;\n\nresult = <|\n  \"artifactIdentifier\" -> \"e67bec4e-cc81-54b8-8de8-e04f06503867\",\n  \"calculation\" -> \"independent-Wolfram-exact-integer-and-finite-table-check\",\n  \"status\" -> If[overallPass, \"blocked\", \"fail\"],\n  \"statusReason\" -> If[overallPass,\n    \"parent-receipt-must-bind-execution-uuid-and-source-revision\",\n    \"independent-calculation-check-failure\"\n  ],\n  \"calculationChecksPass\" -> overallPass,\n  \"checks\" -> checks,\n  \"dimensionContract\" -> <|\n    \"acceptedSpaceDimensions\" -> {1, 2, 3, 4},\n    \"coordinateKind\" -> \"integer-grid\",\n    \"exactCoordinateLength\" -> True,\n    \"oneDimensionalFirstPlaneRotation\" -> Null,\n    \"rotationMatrixTargetDimensions\" -> {2, 3, 4},\n    \"timeMillisecondsIsNotASpatialAxis\" -> True\n  |>,\n  \"coordinateTable\" -> coordinateTable,\n  \"invalidCoordinateTable\" -> invalidCoordinateTable,\n  \"appendDropTable\" -> appendDropTable,\n  \"rotationTable\" -> rotationTable,\n  \"projectionTable\" -> projectionTable,\n  \"projectionCounterexample\" -> projectionCounterexample,\n  \"timeSeparation\" -> timeSeparation,\n  \"halo\" -> angleTable[haloRows, <|\n    \"closesAfterTwelveSlots\" -> haloCheck[\"closesAfterTwelveSlots\"],\n    \"twelveAnglesAreDistinct\" -> haloCheck[\"twelveAnglesAreDistinct\"],\n    \"pass\" -> haloCheck[\"pass\"]\n  |>],\n  \"route\" -> angleTable[routeRows, <|\"pass\" -> (And @@ Lookup[routeRows, \"pass\"])|>],\n  \"orthogonal\" -> angleTable[orthogonalRows, <|\"pass\" -> (And @@ Lookup[orthogonalRows, \"pass\"])|>],\n  \"channelMix\" -> channelMixTable,\n  \"evidence\" -> evidenceTable\n|>;\n\nExportString[result, \"RawJSON\", \"Compact\" -> True]\n",
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Out[1]= \"{\\\"artifactIdentifier\\\":\\\"e67bec4e-cc81-54b8-8de8-e04f06503867\\\",\\\"calculation\\\":\\\"independent-Wolfram-exact-integer-and-finite-table-check\\\",\\\"status\\\":\\\"blocked\\\",\\\"statusReason\\\":\\\"parent-receipt-must-bind-execution-uuid-and-source-revision\\\",\\\"calculationChecksPass\\\":true,\\\"checks\\\":{\\\"exactCoordinateLengthsOneToFour\\\":true,\\\"invalidCoordinateLengthsRejected\\\":true,\\\"appendDropRestoresAllDimensions\\\":true,\\\"firstPlaneRotationOneDimensionIsNull\\\":true,\\\"firstPlaneRotationMatrixPowerFourIsIdentityForTwoToFourDimensions\\\":true,\\\"projectionTablesAreExactTwoDimensionalViews\\\":true,\\\"fourDimensionalProjectionCounterexample\\\":true,\\\"timeIsSeparateFromSpatialCoordinates\\\":true,\\\"haloAngleTable\\\":true,\\\"routeAngleTable\\\":true,\\\"orthogonalAngleTable\\\":true,\\\"channelMixFiniteTable\\\":true,\\\"evidenceDecisionTable\\\":true},\\\"dimensionContract\\\":{\\\"acceptedSpaceDimensions\\\":[1,2,3,4],\\\"coordinateKind\\\":\\\"integer-grid\\\",\\\"exactCoordinateLength\\\":true,\\\"oneDimensionalFirstPlaneRotation\\\":null,\\\"rotationMatrixTargetDimensions\\\":[2,3,4],\\\"timeMillisecondsIsNotASpatialAxis\\\":true},\\\"coordinateTable\\\":{\\\"rowFields\\\":[\\\"spaceDimensions\\\",\\\"inputLength\\\",\\\"encodedCoordinates\\\",\\\"expectedLength\\\",\\\"pass\\\"],\\\"rows\\\":[[1,1,[-3],1,true],[2,2,[-3,0],2,true],[3,3,[-3,0,2],3,true],[4,4,[-3,0,2,7],4,true]]},\\\"invalidCoordinateTable\\\":{\\\"rowFields\\\":[\\\"spaceDimensions\\\",\\\"input\\\",\\\"accepted\\\",\\\"pass\\\"],\\\"rows\\\":[[2,[1],false,true],[3,[1,2,3,4],false,true],[4,[1,2,3.0,4],false,true],[5,[1,2,3,4,5],false,true]]},\\\"appendDropTable\\\":{\\\"rowFields\\\":[\\\"spaceDimensions\\\",\\\"original\\\",\\\"appended\\\",\\\"restored\\\",\\\"pass\\\"],\\\"rows\\\":[[1,[-3],[-3,101],[-3],true],[2,[-3,0],[-3,0,102],[-3,0],true],[3,[-3,0,2],[-3,0,2,103],[-3,0,2],true],[4,[-3,0,2,7],[-3,0,2,7,104],[-3,0,2,7],true]]},\\\"rotationTable\\\":{\\\"rowFields\\\":[\\\"spaceDimensions\\\",\\\"rotationMatrix\\\",\\\"powerFour\\\",\\\"expectedForOneDimension\\\",\\\"pass\\\"],\\\"rows\\\":[[1,null,null,null,true],[2,[[0,-1],[1,0]],[[1,0],[0,1]],\\\"matrix-test-not-applicable\\\",true],[3,[[0,-1,0],[1,0,0],[0,0,1]],[[1,0,0],[0,1,0],[0,0,1]],\\\"matrix-test-not-applicable\\\",true],[4,[[0,-1,0,0],[1,0,0,0],[0,0,1,0],[0,0,0,1]],[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]],\\\"matrix-test-not-applicable\\\",true]]},\\\"projectionTable\\\":{\\\"rowFields\\\":[\\\"spaceDimensions\\\",\\\"coordinates\\\",\\\"projectedCoordinates\\\",\\\"expectedProjection\\\",\\\"pass\\\"],\\\"rows\\\":[[1,[-2],[-2,0],[-2,0],true],[2,[-2,4],[-2,4],[-2,4],true],[3,[-2,4,7],[-2,4],[-2,4],true],[4,[-2,4,7,11],[-2,4],[-2,4],true]]},\\\"projectionCounterexample\\\":{\\\"pointA\\\":[1,-2,3,4],\\\"pointB\\\":[1,-2,3,9],\\\"pointsDistinct\\\":true,\\\"onlyAdditionalAxisDiffers\\\":true,\\\"projectionA\\\":[1,-2],\\\"projectionB\\\":[1,-2],\\\"same2DProjection\\\":true,\\\"pass\\\":true},\\\"timeSeparation\\\":{\\\"threeDimensionalPlusTime\\\":{\\\"spaceDimensions\\\":3,\\\"coordinates\\\":[-2,0,5],\\\"timeMilliseconds\\\":1250},\\\"fourDimensionalSpace\\\":{\\\"spaceDimensions\\\":4,\\\"coordinates\\\":[-2,0,5,7],\\\"timeMilliseconds\\\":1250},\\\"threeDimensionalCoordinateLength\\\":3,\\\"fourDimensionalCoordinateLength\\\":4,\\\"timeChangeLeavesCoordinatesUnchanged\\\":true,\\\"timeMillisecondsIsSeparateField\\\":true,\\\"threeDimensionalPlusTimeIsNotFourDimensionalSpace\\\":true,\\\"pass\\\":true},\\\"halo\\\":{\\\"rowFields\\\":[\\\"index\\\",\\\"angleDegrees\\\",\\\"expectedAngleDegrees\\\",\\\"pass\\\"],\\\"rows\\\":[[0,0,0,true],[1,30,30,true],[2,60,60,true],[3,90,90,true],[4,120,120,true],[5,150,150,true],[6,180,180,true],[7,210,210,true],[8,240,240,true],[9,270,270,true],[10,300,300,true],[11,330,330,true]],\\\"closesAfterTwelveSlots\\\":true,\\\"twelveAnglesAreDistinct\\\":true,\\\"pass\\\":true},\\\"route\\\":{\\\"rowFields\\\":[\\\"index\\\",\\\"angleDegrees\\\",\\\"expectedAngleDegrees\\\",\\\"pass\\\"],\\\"rows\\\":[[0,0,0,true],[1,45,45,true],[2,90,90,true],[3,135,135,true],[4,180,180,true],[5,225,225,true],[6,270,270,true],[7,315,315,true]],\\\"pass\\\":true},\\\"orthogonal\\\":{\\\"rowFields\\\":[\\\"index\\\",\\\"angleDegrees\\\",\\\"expectedAngleDegrees\\\",\\\"pass\\\"],\\\"rows\\\":[[0,0,0,true],[1,90,90,true],[2,180,180,true],[3,270,270,true]],\\\"pass\\\":true},\\\"channelMix\\\":{\\\"rowFields\\\":[\\\"firstChannel\\\",\\\"secondChannel\\\",\\\"weightPercent\\\",\\\"numerator\\\",\\\"upperLimit\\\",\\\"pass\\\"],\\\"inputFirstChannels\\\":[0,1,254,255],\\\"inputSecondChannels\\\":[0,1,254,255],\\\"inputWeightPercents\\\":[0,1,50,99,100],\\\"rows\\\":[[0,0,0,0,25500,true],[0,0,1,0,25500,true],[0,0,50,0,25500,true],[0,0,99,0,25500,true],[0,0,100,0,25500,true],[0,1,0,0,25500,true],[0,1,1,1,25500,true],[0,1,50,50,25500,true],[0,1,99,99,25500,true],[0,1,100,100,25500,true],[0,254,0,0,25500,true],[0,254,1,254,25500,true],[0,254,50,12700,25500,true],[0,254,99,25146,25500,true],[0,254,100,25400,25500,true],[0,255,0,0,25500,true],[0,255,1,255,25500,true],[0,255,50,12750,25500,true],[0,255,99,25245,25500,true],[0,255,100,25500,25500,true],[1,0,0,100,25500,true],[1,0,1,99,25500,true],[1,0,50,50,25500,true],[1,0,99,1,25500,true],[1,0,100,0,25500,true],[1,1,0,100,25500,true],[1,1,1,100,25500,true],[1,1,50,100,25500,true],[1,1,99,100,25500,true],[1,1,100,100,25500,true],[1,254,0,100,25500,true],[1,254,1,353,25500,true],[1,254,50,12750,25500,true],[1,254,99,25147,25500,true],[1,254,100,25400,25500,true],[1,255,0,100,25500,true],[1,255,1,354,25500,true],[1,255,50,12800,25500,true],[1,255,99,25246,25500,true],[1,255,100,25500,25500,true],[254,0,0,25400,25500,true],[254,0,1,25146,25500,true],[254,0,50,12700,25500,true],[254,0,99,254,25500,true],[254,0,100,0,25500,true],[254,1,0,25400,25500,true],[254,1,1,25147,25500,true],[254,1,50,12750,25500,true],[254,1,99,353,25500,true],[254,1,100,100,25500,true],[254,254,0,25400,25500,true],[254,254,1,25400,25500,true],[254,254,50,25400,25500,true],[254,254,99,25400,25500,true],[254,254,100,25400,25500,true],[254,255,0,25400,25500,true],[254,255,1,25401,25500,true],[254,255,50,25450,25500,true],[254,255,99,25499,25500,true],[254,255,100,25500,25500,true],[255,0,0,25500,25500,true],[255,0,1,25245,25500,true],[255,0,50,12750,25500,true],[255,0,99,255,25500,true],[255,0,100,0,25500,true],[255,1,0,25500,25500,true],[255,1,1,25246,25500,true],[255,1,50,12800,25500,true],[255,1,99,354,25500,true],[255,1,100,100,25500,true],[255,254,0,25500,25500,true],[255,254,1,25499,25500,true],[255,254,50,25450,25500,true],[255,254,99,25401,25500,true],[255,254,100,25400,25500,true],[255,255,0,25500,25500,true],[255,255,1,25500,25500,true],[255,255,50,25500,25500,true],[255,255,99,25500,25500,true],[255,255,100,25500,25500,true]],\\\"pass\\\":true},\\\"evidence\\\":{\\\"rowFields\\\":[\\\"supportCount\\\",\\\"contradictionCount\\\",\\\"stale\\\",\\\"observedDecision\\\",\\\"expectedDecision\\\",\\\"pass\\\"],\\\"rows\\\":[[0,0,false,\\\"blocked\\\",\\\"blocked\\\",true],[0,0,true,\\\"staleEvidence\\\",\\\"staleEvidence\\\",true],[0,1,false,\\\"fail\\\",\\\"fail\\\",true],[0,1,true,\\\"staleEvidence\\\",\\\"staleEvidence\\\",true],[0,2,false,\\\"fail\\\",\\\"fail\\\",true],[0,2,true,\\\"staleEvidence\\\",\\\"staleEvidence\\\",true],[0,3,false,\\\"fail\\\",\\\"fail\\\",true],[0,3,true,\\\"staleEvidence\\\",\\\"staleEvidence\\\",true],[1,0,false,\\\"pass\\\",\\\"pass\\\",true],[1,0,true,\\\"staleEvidence\\\",\\\"staleEvidence\\\",true],[1,1,false,\\\"fail\\\",\\\"fail\\\",true],[1,1,true,\\\"staleEvidence\\\",\\\"staleEvidence\\\",true],[1,2,false,\\\"fail\\\",\\\"fail\\\",true],[1,2,true,\\\"staleEvidence\\\",\\\"staleEvidence\\\",true],[1,3,false,\\\"fail\\\",\\\"fail\\\",true],[1,3,true,\\\"staleEvidence\\\",\\\"staleEvidence\\\",true],[2,0,false,\\\"pass\\\",\\\"pass\\\",true],[2,0,true,\\\"staleEvidence\\\",\\\"staleEvidence\\\",true],[2,1,false,\\\"fail\\\",\\\"fail\\\",true],[2,1,true,\\\"staleEvidence\\\",\\\"staleEvidence\\\",true],[2,2,false,\\\"fail\\\",\\\"fail\\\",true],[2,2,true,\\\"staleEvidence\\\",\\\"staleEvidence\\\",true],[2,3,false,\\\"fail\\\",\\\"fail\\\",true],[2,3,true,\\\"staleEvidence\\\",\\\"staleEvidence\\\",true],[3,0,false,\\\"pass\\\",\\\"pass\\\",true],[3,0,true,\\\"staleEvidence\\\",\\\"staleEvidence\\\",true],[3,1,false,\\\"fail\\\",\\\"fail\\\",true],[3,1,true,\\\"staleEvidence\\\",\\\"staleEvidence\\\",true],[3,2,false,\\\"fail\\\",\\\"fail\\\",true],[3,2,true,\\\"staleEvidence\\\",\\\"staleEvidence\\\",true],[3,3,false,\\\"fail\\\",\\\"fail\\\",true],[3,3,true,\\\"staleEvidence\\\",\\\"staleEvidence\\\",true]],\\\"pass\\\":true}}\""
+          }
+        ],
+        "isError": false
+      },
+      "decoded": {
+        "artifactIdentifier": "e67bec4e-cc81-54b8-8de8-e04f06503867",
+        "calculation": "independent-Wolfram-exact-integer-and-finite-table-check",
+        "status": "blocked",
+        "statusReason": "parent-receipt-must-bind-execution-uuid-and-source-revision",
+        "calculationChecksPass": true,
+        "checks": {
+          "exactCoordinateLengthsOneToFour": true,
+          "invalidCoordinateLengthsRejected": true,
+          "appendDropRestoresAllDimensions": true,
+          "firstPlaneRotationOneDimensionIsNull": true,
+          "firstPlaneRotationMatrixPowerFourIsIdentityForTwoToFourDimensions": true,
+          "projectionTablesAreExactTwoDimensionalViews": true,
+          "fourDimensionalProjectionCounterexample": true,
+          "timeIsSeparateFromSpatialCoordinates": true,
+          "haloAngleTable": true,
+          "routeAngleTable": true,
+          "orthogonalAngleTable": true,
+          "channelMixFiniteTable": true,
+          "evidenceDecisionTable": true
+        },
+        "dimensionContract": {
+          "acceptedSpaceDimensions": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "coordinateKind": "integer-grid",
+          "exactCoordinateLength": true,
+          "oneDimensionalFirstPlaneRotation": null,
+          "rotationMatrixTargetDimensions": [
+            2,
+            3,
+            4
+          ],
+          "timeMillisecondsIsNotASpatialAxis": true
+        },
+        "coordinateTable": {
+          "rowFields": [
+            "spaceDimensions",
+            "inputLength",
+            "encodedCoordinates",
+            "expectedLength",
+            "pass"
+          ],
+          "rows": [
+            [
+              1,
+              1,
+              [
+                -3
+              ],
+              1,
+              true
+            ],
+            [
+              2,
+              2,
+              [
+                -3,
+                0
+              ],
+              2,
+              true
+            ],
+            [
+              3,
+              3,
+              [
+                -3,
+                0,
+                2
+              ],
+              3,
+              true
+            ],
+            [
+              4,
+              4,
+              [
+                -3,
+                0,
+                2,
+                7
+              ],
+              4,
+              true
+            ]
+          ]
+        },
+        "invalidCoordinateTable": {
+          "rowFields": [
+            "spaceDimensions",
+            "input",
+            "accepted",
+            "pass"
+          ],
+          "rows": [
+            [
+              2,
+              [
+                1
+              ],
+              false,
+              true
+            ],
+            [
+              3,
+              [
+                1,
+                2,
+                3,
+                4
+              ],
+              false,
+              true
+            ],
+            [
+              4,
+              [
+                1,
+                2,
+                3,
+                4
+              ],
+              false,
+              true
+            ],
+            [
+              5,
+              [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              false,
+              true
+            ]
+          ]
+        },
+        "appendDropTable": {
+          "rowFields": [
+            "spaceDimensions",
+            "original",
+            "appended",
+            "restored",
+            "pass"
+          ],
+          "rows": [
+            [
+              1,
+              [
+                -3
+              ],
+              [
+                -3,
+                101
+              ],
+              [
+                -3
+              ],
+              true
+            ],
+            [
+              2,
+              [
+                -3,
+                0
+              ],
+              [
+                -3,
+                0,
+                102
+              ],
+              [
+                -3,
+                0
+              ],
+              true
+            ],
+            [
+              3,
+              [
+                -3,
+                0,
+                2
+              ],
+              [
+                -3,
+                0,
+                2,
+                103
+              ],
+              [
+                -3,
+                0,
+                2
+              ],
+              true
+            ],
+            [
+              4,
+              [
+                -3,
+                0,
+                2,
+                7
+              ],
+              [
+                -3,
+                0,
+                2,
+                7,
+                104
+              ],
+              [
+                -3,
+                0,
+                2,
+                7
+              ],
+              true
+            ]
+          ]
+        },
+        "rotationTable": {
+          "rowFields": [
+            "spaceDimensions",
+            "rotationMatrix",
+            "powerFour",
+            "expectedForOneDimension",
+            "pass"
+          ],
+          "rows": [
+            [
+              1,
+              null,
+              null,
+              null,
+              true
+            ],
+            [
+              2,
+              [
+                [
+                  0,
+                  -1
+                ],
+                [
+                  1,
+                  0
+                ]
+              ],
+              [
+                [
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  1
+                ]
+              ],
+              "matrix-test-not-applicable",
+              true
+            ],
+            [
+              3,
+              [
+                [
+                  0,
+                  -1,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1
+                ]
+              ],
+              [
+                [
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1
+                ]
+              ],
+              "matrix-test-not-applicable",
+              true
+            ],
+            [
+              4,
+              [
+                [
+                  0,
+                  -1,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              ],
+              [
+                [
+                  1,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              ],
+              "matrix-test-not-applicable",
+              true
+            ]
+          ]
+        },
+        "projectionTable": {
+          "rowFields": [
+            "spaceDimensions",
+            "coordinates",
+            "projectedCoordinates",
+            "expectedProjection",
+            "pass"
+          ],
+          "rows": [
+            [
+              1,
+              [
+                -2
+              ],
+              [
+                -2,
+                0
+              ],
+              [
+                -2,
+                0
+              ],
+              true
+            ],
+            [
+              2,
+              [
+                -2,
+                4
+              ],
+              [
+                -2,
+                4
+              ],
+              [
+                -2,
+                4
+              ],
+              true
+            ],
+            [
+              3,
+              [
+                -2,
+                4,
+                7
+              ],
+              [
+                -2,
+                4
+              ],
+              [
+                -2,
+                4
+              ],
+              true
+            ],
+            [
+              4,
+              [
+                -2,
+                4,
+                7,
+                11
+              ],
+              [
+                -2,
+                4
+              ],
+              [
+                -2,
+                4
+              ],
+              true
+            ]
+          ]
+        },
+        "projectionCounterexample": {
+          "pointA": [
+            1,
+            -2,
+            3,
+            4
+          ],
+          "pointB": [
+            1,
+            -2,
+            3,
+            9
+          ],
+          "pointsDistinct": true,
+          "onlyAdditionalAxisDiffers": true,
+          "projectionA": [
+            1,
+            -2
+          ],
+          "projectionB": [
+            1,
+            -2
+          ],
+          "same2DProjection": true,
+          "pass": true
+        },
+        "timeSeparation": {
+          "threeDimensionalPlusTime": {
+            "spaceDimensions": 3,
+            "coordinates": [
+              -2,
+              0,
+              5
+            ],
+            "timeMilliseconds": 1250
+          },
+          "fourDimensionalSpace": {
+            "spaceDimensions": 4,
+            "coordinates": [
+              -2,
+              0,
+              5,
+              7
+            ],
+            "timeMilliseconds": 1250
+          },
+          "threeDimensionalCoordinateLength": 3,
+          "fourDimensionalCoordinateLength": 4,
+          "timeChangeLeavesCoordinatesUnchanged": true,
+          "timeMillisecondsIsSeparateField": true,
+          "threeDimensionalPlusTimeIsNotFourDimensionalSpace": true,
+          "pass": true
+        },
+        "halo": {
+          "rowFields": [
+            "index",
+            "angleDegrees",
+            "expectedAngleDegrees",
+            "pass"
+          ],
+          "rows": [
+            [
+              0,
+              0,
+              0,
+              true
+            ],
+            [
+              1,
+              30,
+              30,
+              true
+            ],
+            [
+              2,
+              60,
+              60,
+              true
+            ],
+            [
+              3,
+              90,
+              90,
+              true
+            ],
+            [
+              4,
+              120,
+              120,
+              true
+            ],
+            [
+              5,
+              150,
+              150,
+              true
+            ],
+            [
+              6,
+              180,
+              180,
+              true
+            ],
+            [
+              7,
+              210,
+              210,
+              true
+            ],
+            [
+              8,
+              240,
+              240,
+              true
+            ],
+            [
+              9,
+              270,
+              270,
+              true
+            ],
+            [
+              10,
+              300,
+              300,
+              true
+            ],
+            [
+              11,
+              330,
+              330,
+              true
+            ]
+          ],
+          "closesAfterTwelveSlots": true,
+          "twelveAnglesAreDistinct": true,
+          "pass": true
+        },
+        "route": {
+          "rowFields": [
+            "index",
+            "angleDegrees",
+            "expectedAngleDegrees",
+            "pass"
+          ],
+          "rows": [
+            [
+              0,
+              0,
+              0,
+              true
+            ],
+            [
+              1,
+              45,
+              45,
+              true
+            ],
+            [
+              2,
+              90,
+              90,
+              true
+            ],
+            [
+              3,
+              135,
+              135,
+              true
+            ],
+            [
+              4,
+              180,
+              180,
+              true
+            ],
+            [
+              5,
+              225,
+              225,
+              true
+            ],
+            [
+              6,
+              270,
+              270,
+              true
+            ],
+            [
+              7,
+              315,
+              315,
+              true
+            ]
+          ],
+          "pass": true
+        },
+        "orthogonal": {
+          "rowFields": [
+            "index",
+            "angleDegrees",
+            "expectedAngleDegrees",
+            "pass"
+          ],
+          "rows": [
+            [
+              0,
+              0,
+              0,
+              true
+            ],
+            [
+              1,
+              90,
+              90,
+              true
+            ],
+            [
+              2,
+              180,
+              180,
+              true
+            ],
+            [
+              3,
+              270,
+              270,
+              true
+            ]
+          ],
+          "pass": true
+        },
+        "channelMix": {
+          "rowFields": [
+            "firstChannel",
+            "secondChannel",
+            "weightPercent",
+            "numerator",
+            "upperLimit",
+            "pass"
+          ],
+          "inputFirstChannels": [
+            0,
+            1,
+            254,
+            255
+          ],
+          "inputSecondChannels": [
+            0,
+            1,
+            254,
+            255
+          ],
+          "inputWeightPercents": [
+            0,
+            1,
+            50,
+            99,
+            100
+          ],
+          "rows": [
+            [
+              0,
+              0,
+              0,
+              0,
+              25500,
+              true
+            ],
+            [
+              0,
+              0,
+              1,
+              0,
+              25500,
+              true
+            ],
+            [
+              0,
+              0,
+              50,
+              0,
+              25500,
+              true
+            ],
+            [
+              0,
+              0,
+              99,
+              0,
+              25500,
+              true
+            ],
+            [
+              0,
+              0,
+              100,
+              0,
+              25500,
+              true
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              25500,
+              true
+            ],
+            [
+              0,
+              1,
+              1,
+              1,
+              25500,
+              true
+            ],
+            [
+              0,
+              1,
+              50,
+              50,
+              25500,
+              true
+            ],
+            [
+              0,
+              1,
+              99,
+              99,
+              25500,
+              true
+            ],
+            [
+              0,
+              1,
+              100,
+              100,
+              25500,
+              true
+            ],
+            [
+              0,
+              254,
+              0,
+              0,
+              25500,
+              true
+            ],
+            [
+              0,
+              254,
+              1,
+              254,
+              25500,
+              true
+            ],
+            [
+              0,
+              254,
+              50,
+              12700,
+              25500,
+              true
+            ],
+            [
+              0,
+              254,
+              99,
+              25146,
+              25500,
+              true
+            ],
+            [
+              0,
+              254,
+              100,
+              25400,
+              25500,
+              true
+            ],
+            [
+              0,
+              255,
+              0,
+              0,
+              25500,
+              true
+            ],
+            [
+              0,
+              255,
+              1,
+              255,
+              25500,
+              true
+            ],
+            [
+              0,
+              255,
+              50,
+              12750,
+              25500,
+              true
+            ],
+            [
+              0,
+              255,
+              99,
+              25245,
+              25500,
+              true
+            ],
+            [
+              0,
+              255,
+              100,
+              25500,
+              25500,
+              true
+            ],
+            [
+              1,
+              0,
+              0,
+              100,
+              25500,
+              true
+            ],
+            [
+              1,
+              0,
+              1,
+              99,
+              25500,
+              true
+            ],
+            [
+              1,
+              0,
+              50,
+              50,
+              25500,
+              true
+            ],
+            [
+              1,
+              0,
+              99,
+              1,
+              25500,
+              true
+            ],
+            [
+              1,
+              0,
+              100,
+              0,
+              25500,
+              true
+            ],
+            [
+              1,
+              1,
+              0,
+              100,
+              25500,
+              true
+            ],
+            [
+              1,
+              1,
+              1,
+              100,
+              25500,
+              true
+            ],
+            [
+              1,
+              1,
+              50,
+              100,
+              25500,
+              true
+            ],
+            [
+              1,
+              1,
+              99,
+              100,
+              25500,
+              true
+            ],
+            [
+              1,
+              1,
+              100,
+              100,
+              25500,
+              true
+            ],
+            [
+              1,
+              254,
+              0,
+              100,
+              25500,
+              true
+            ],
+            [
+              1,
+              254,
+              1,
+              353,
+              25500,
+              true
+            ],
+            [
+              1,
+              254,
+              50,
+              12750,
+              25500,
+              true
+            ],
+            [
+              1,
+              254,
+              99,
+              25147,
+              25500,
+              true
+            ],
+            [
+              1,
+              254,
+              100,
+              25400,
+              25500,
+              true
+            ],
+            [
+              1,
+              255,
+              0,
+              100,
+              25500,
+              true
+            ],
+            [
+              1,
+              255,
+              1,
+              354,
+              25500,
+              true
+            ],
+            [
+              1,
+              255,
+              50,
+              12800,
+              25500,
+              true
+            ],
+            [
+              1,
+              255,
+              99,
+              25246,
+              25500,
+              true
+            ],
+            [
+              1,
+              255,
+              100,
+              25500,
+              25500,
+              true
+            ],
+            [
+              254,
+              0,
+              0,
+              25400,
+              25500,
+              true
+            ],
+            [
+              254,
+              0,
+              1,
+              25146,
+              25500,
+              true
+            ],
+            [
+              254,
+              0,
+              50,
+              12700,
+              25500,
+              true
+            ],
+            [
+              254,
+              0,
+              99,
+              254,
+              25500,
+              true
+            ],
+            [
+              254,
+              0,
+              100,
+              0,
+              25500,
+              true
+            ],
+            [
+              254,
+              1,
+              0,
+              25400,
+              25500,
+              true
+            ],
+            [
+              254,
+              1,
+              1,
+              25147,
+              25500,
+              true
+            ],
+            [
+              254,
+              1,
+              50,
+              12750,
+              25500,
+              true
+            ],
+            [
+              254,
+              1,
+              99,
+              353,
+              25500,
+              true
+            ],
+            [
+              254,
+              1,
+              100,
+              100,
+              25500,
+              true
+            ],
+            [
+              254,
+              254,
+              0,
+              25400,
+              25500,
+              true
+            ],
+            [
+              254,
+              254,
+              1,
+              25400,
+              25500,
+              true
+            ],
+            [
+              254,
+              254,
+              50,
+              25400,
+              25500,
+              true
+            ],
+            [
+              254,
+              254,
+              99,
+              25400,
+              25500,
+              true
+            ],
+            [
+              254,
+              254,
+              100,
+              25400,
+              25500,
+              true
+            ],
+            [
+              254,
+              255,
+              0,
+              25400,
+              25500,
+              true
+            ],
+            [
+              254,
+              255,
+              1,
+              25401,
+              25500,
+              true
+            ],
+            [
+              254,
+              255,
+              50,
+              25450,
+              25500,
+              true
+            ],
+            [
+              254,
+              255,
+              99,
+              25499,
+              25500,
+              true
+            ],
+            [
+              254,
+              255,
+              100,
+              25500,
+              25500,
+              true
+            ],
+            [
+              255,
+              0,
+              0,
+              25500,
+              25500,
+              true
+            ],
+            [
+              255,
+              0,
+              1,
+              25245,
+              25500,
+              true
+            ],
+            [
+              255,
+              0,
+              50,
+              12750,
+              25500,
+              true
+            ],
+            [
+              255,
+              0,
+              99,
+              255,
+              25500,
+              true
+            ],
+            [
+              255,
+              0,
+              100,
+              0,
+              25500,
+              true
+            ],
+            [
+              255,
+              1,
+              0,
+              25500,
+              25500,
+              true
+            ],
+            [
+              255,
+              1,
+              1,
+              25246,
+              25500,
+              true
+            ],
+            [
+              255,
+              1,
+              50,
+              12800,
+              25500,
+              true
+            ],
+            [
+              255,
+              1,
+              99,
+              354,
+              25500,
+              true
+            ],
+            [
+              255,
+              1,
+              100,
+              100,
+              25500,
+              true
+            ],
+            [
+              255,
+              254,
+              0,
+              25500,
+              25500,
+              true
+            ],
+            [
+              255,
+              254,
+              1,
+              25499,
+              25500,
+              true
+            ],
+            [
+              255,
+              254,
+              50,
+              25450,
+              25500,
+              true
+            ],
+            [
+              255,
+              254,
+              99,
+              25401,
+              25500,
+              true
+            ],
+            [
+              255,
+              254,
+              100,
+              25400,
+              25500,
+              true
+            ],
+            [
+              255,
+              255,
+              0,
+              25500,
+              25500,
+              true
+            ],
+            [
+              255,
+              255,
+              1,
+              25500,
+              25500,
+              true
+            ],
+            [
+              255,
+              255,
+              50,
+              25500,
+              25500,
+              true
+            ],
+            [
+              255,
+              255,
+              99,
+              25500,
+              25500,
+              true
+            ],
+            [
+              255,
+              255,
+              100,
+              25500,
+              25500,
+              true
+            ]
+          ],
+          "pass": true
+        },
+        "evidence": {
+          "rowFields": [
+            "supportCount",
+            "contradictionCount",
+            "stale",
+            "observedDecision",
+            "expectedDecision",
+            "pass"
+          ],
+          "rows": [
+            [
+              0,
+              0,
+              false,
+              "blocked",
+              "blocked",
+              true
+            ],
+            [
+              0,
+              0,
+              true,
+              "staleEvidence",
+              "staleEvidence",
+              true
+            ],
+            [
+              0,
+              1,
+              false,
+              "fail",
+              "fail",
+              true
+            ],
+            [
+              0,
+              1,
+              true,
+              "staleEvidence",
+              "staleEvidence",
+              true
+            ],
+            [
+              0,
+              2,
+              false,
+              "fail",
+              "fail",
+              true
+            ],
+            [
+              0,
+              2,
+              true,
+              "staleEvidence",
+              "staleEvidence",
+              true
+            ],
+            [
+              0,
+              3,
+              false,
+              "fail",
+              "fail",
+              true
+            ],
+            [
+              0,
+              3,
+              true,
+              "staleEvidence",
+              "staleEvidence",
+              true
+            ],
+            [
+              1,
+              0,
+              false,
+              "pass",
+              "pass",
+              true
+            ],
+            [
+              1,
+              0,
+              true,
+              "staleEvidence",
+              "staleEvidence",
+              true
+            ],
+            [
+              1,
+              1,
+              false,
+              "fail",
+              "fail",
+              true
+            ],
+            [
+              1,
+              1,
+              true,
+              "staleEvidence",
+              "staleEvidence",
+              true
+            ],
+            [
+              1,
+              2,
+              false,
+              "fail",
+              "fail",
+              true
+            ],
+            [
+              1,
+              2,
+              true,
+              "staleEvidence",
+              "staleEvidence",
+              true
+            ],
+            [
+              1,
+              3,
+              false,
+              "fail",
+              "fail",
+              true
+            ],
+            [
+              1,
+              3,
+              true,
+              "staleEvidence",
+              "staleEvidence",
+              true
+            ],
+            [
+              2,
+              0,
+              false,
+              "pass",
+              "pass",
+              true
+            ],
+            [
+              2,
+              0,
+              true,
+              "staleEvidence",
+              "staleEvidence",
+              true
+            ],
+            [
+              2,
+              1,
+              false,
+              "fail",
+              "fail",
+              true
+            ],
+            [
+              2,
+              1,
+              true,
+              "staleEvidence",
+              "staleEvidence",
+              true
+            ],
+            [
+              2,
+              2,
+              false,
+              "fail",
+              "fail",
+              true
+            ],
+            [
+              2,
+              2,
+              true,
+              "staleEvidence",
+              "staleEvidence",
+              true
+            ],
+            [
+              2,
+              3,
+              false,
+              "fail",
+              "fail",
+              true
+            ],
+            [
+              2,
+              3,
+              true,
+              "staleEvidence",
+              "staleEvidence",
+              true
+            ],
+            [
+              3,
+              0,
+              false,
+              "pass",
+              "pass",
+              true
+            ],
+            [
+              3,
+              0,
+              true,
+              "staleEvidence",
+              "staleEvidence",
+              true
+            ],
+            [
+              3,
+              1,
+              false,
+              "fail",
+              "fail",
+              true
+            ],
+            [
+              3,
+              1,
+              true,
+              "staleEvidence",
+              "staleEvidence",
+              true
+            ],
+            [
+              3,
+              2,
+              false,
+              "fail",
+              "fail",
+              true
+            ],
+            [
+              3,
+              2,
+              true,
+              "staleEvidence",
+              "staleEvidence",
+              true
+            ],
+            [
+              3,
+              3,
+              false,
+              "fail",
+              "fail",
+              true
+            ],
+            [
+              3,
+              3,
+              true,
+              "staleEvidence",
+              "staleEvidence",
+              true
+            ]
+          ],
+          "pass": true
+        }
+      },
+      "receivedAt": "2026-09-16T10:35:32.632Z",
+      "checkCount": 13,
+      "status": "pass",
+      "recordIdentifier": "f41a2b19-b64a-5763-9275-b7a73c91bad7",
+      "codeSha256": "a5fd26ab0975c074a9703a8fa0467ac44bd19f5ee611d33a34c93018e4de9ea5"
+    },
+    {
+      "name": "images",
+      "code": "(* Exact values exported from the current exhibition. Manifest: 108306a4418dd2b7740e2f7130cdac366adc5352d305722047dc41c1db96d616 *)\ncoordinates = {{-70,5,-85},{-70,-45,-95},{25,20,-25},{95,60,65},{95,50,50},{55,-65,-95},{85,50,55},{90,65,85},{85,70,85},{75,80,98},{45,65,98},{-35,-75,-10}}/100;\npresentation = {{-146,52,0},{-73,52,0},{0,52,0},{73,52,0},{146,52,0},{-146,0,0},{-73,0,0},{0,0,0},{73,0,0},{146,0,0},{-146,-52,0},{-73,-52,0},{0,-52,0},{73,-52,0},{146,-52,0}}/10;\nexpectedNumerators = {{0,2600,12850,52750,47475,20625,45650,58100,57150,60139,50314,13250},{2600,0,18150,63850,57275,16025,55550,70100,69650,73899,62574,9350},{12850,18150,0,14600,11425,13025,10900,18350,18200,21229,17554,12850},{52750,63850,14600,0,325,42825,300,450,600,1889,3614,40750},{47475,57275,11425,325,0,35850,125,1475,1725,3604,5029,36125},{20625,16025,13025,42825,35850,0,36625,50525,51525,58674,54249,15425},{45650,55550,10900,300,125,36625,0,1150,1300,2849,3674,34250},{58100,70100,18350,450,1475,50525,1150,0,50,619,2194,44250},{57150,69650,18200,600,1725,51525,1300,50,0,369,1794,44450},{60139,73899,21229,1889,3604,58674,2849,619,369,0,1125,47789},{50314,62574,17554,3614,5029,54249,3674,2194,1794,1125,0,37664},{13250,9350,12850,40750,36125,15425,34250,44250,44450,47789,37664,0}};\nsquaredMatrix = Table[Total[(coordinates[[i]]-coordinates[[j]])^2],{i,Length[coordinates]},{j,Length[coordinates]}];\nchecks = <|\n\"real_score_difference_bounded\" -> Resolve[ForAll[{a,b},Implies[0<=a<=1 && 0<=b<=1,-1<=a-b<=1]],Reals],\n\"normalized_two_component_mixture_bounded\" -> Resolve[ForAll[{a,b,w},Implies[0<=a<=1 && 0<=b<=1 && 0<=w<=1,0<=w*a+(1-w)*b<=1]],Reals],\n\"coordinate_bounds\" -> And@@Flatten[Map[-1<=#<=1&,coordinates,{2}]],\n\"exact_squared_distance_matrix_matches\" -> (10000*squaredMatrix===expectedNumerators),\n\"distance_symmetry\" -> (squaredMatrix===Transpose[squaredMatrix]),\n\"distance_diagonal_zero\" -> (Diagonal[squaredMatrix]===ConstantArray[0,Length[coordinates]]),\n\"squared_distance_range\" -> And@@Flatten[Map[0<=#<=12&,squaredMatrix,{2}]],\n\"initial_panels_do_not_overlap\" -> And@@Flatten[Table[If[i==j,True,Abs[presentation[[i,1]]-presentation[[j,1]]]>=6 || Abs[presentation[[i,2]]-presentation[[j,2]]]>=4],{i,15},{j,15}]],\n\"sixty_steps_equal_one_second\" -> (60*(1/60)==1),\n\"maximum_five_steps_equal_one_twelfth_second\" -> (5*(1/60)==1/12)\n|>;\nExportString[<|\"checks\"->checks,\"all_passed\"->And@@Values[checks],\"known_count\"->Length[coordinates],\"unknown_count\"->3,\"unique_pairs\"->Binomial[Length[coordinates],2],\"squared_distance_numerators\"->(10000*squaredMatrix),\"squared_distance_denominator\"->10000,\"maximum_observed_distance\"->N[Sqrt[Max[squaredMatrix]],12],\"step_seconds\"->N[1/60,12],\"maximum_frame_seconds\"->N[1/12,12]|>,\"RawJSON\"]\n",
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Out[1]= \"{\\n\\t\\\"checks\\\":{\\n\\t\\t\\\"real_score_difference_bounded\\\":true,\\n\\t\\t\\\"normalized_two_component_mixture_bounded\\\":true,\\n\\t\\t\\\"coordinate_bounds\\\":true,\\n\\t\\t\\\"exact_squared_distance_matrix_matches\\\":true,\\n\\t\\t\\\"distance_symmetry\\\":true,\\n\\t\\t\\\"distance_diagonal_zero\\\":true,\\n\\t\\t\\\"squared_distance_range\\\":true,\\n\\t\\t\\\"initial_panels_do_not_overlap\\\":true,\\n\\t\\t\\\"sixty_steps_equal_one_second\\\":true,\\n\\t\\t\\\"maximum_five_steps_equal_one_twelfth_second\\\":true\\n\\t},\\n\\t\\\"all_passed\\\":true,\\n\\t\\\"known_count\\\":12,\\n\\t\\\"unknown_count\\\":3,\\n\\t\\\"unique_pairs\\\":66,\\n\\t\\\"squared_distance_numerators\\\":[\\n\\t\\t[\\n\\t\\t\\t0,\\n\\t\\t\\t2600,\\n\\t\\t\\t12850,\\n\\t\\t\\t52750,\\n\\t\\t\\t47475,\\n\\t\\t\\t20625,\\n\\t\\t\\t45650,\\n\\t\\t\\t58100,\\n\\t\\t\\t57150,\\n\\t\\t\\t60139,\\n\\t\\t\\t50314,\\n\\t\\t\\t13250\\n\\t\\t],\\n\\t\\t[\\n\\t\\t\\t2600,\\n\\t\\t\\t0,\\n\\t\\t\\t18150,\\n\\t\\t\\t63850,\\n\\t\\t\\t57275,\\n\\t\\t\\t16025,\\n\\t\\t\\t55550,\\n\\t\\t\\t70100,\\n\\t\\t\\t69650,\\n\\t\\t\\t73899,\\n\\t\\t\\t62574,\\n\\t\\t\\t9350\\n\\t\\t],\\n\\t\\t[\\n\\t\\t\\t12850,\\n\\t\\t\\t18150,\\n\\t\\t\\t0,\\n\\t\\t\\t14600,\\n\\t\\t\\t11425,\\n\\t\\t\\t13025,\\n\\t\\t\\t10900,\\n\\t\\t\\t18350,\\n\\t\\t\\t18200,\\n\\t\\t\\t21229,\\n\\t\\t\\t17554,\\n\\t\\t\\t12850\\n\\t\\t],\\n\\t\\t[\\n\\t\\t\\t52750,\\n\\t\\t\\t63850,\\n\\t\\t\\t14600,\\n\\t\\t\\t0,\\n\\t\\t\\t325,\\n\\t\\t\\t42825,\\n\\t\\t\\t300,\\n\\t\\t\\t450,\\n\\t\\t\\t600,\\n\\t\\t\\t1889,\\n\\t\\t\\t3614,\\n\\t\\t\\t40750\\n\\t\\t],\\n\\t\\t[\\n\\t\\t\\t47475,\\n\\t\\t\\t57275,\\n\\t\\t\\t11425,\\n\\t\\t\\t325,\\n\\t\\t\\t0,\\n\\t\\t\\t35850,\\n\\t\\t\\t125,\\n\\t\\t\\t1475,\\n\\t\\t\\t1725,\\n\\t\\t\\t3604,\\n\\t\\t\\t5029,\\n\\t\\t\\t36125\\n\\t\\t],\\n\\t\\t[\\n\\t\\t\\t20625,\\n\\t\\t\\t16025,\\n\\t\\t\\t13025,\\n\\t\\t\\t42825,\\n\\t\\t\\t35850,\\n\\t\\t\\t0,\\n\\t\\t\\t36625,\\n\\t\\t\\t50525,\\n\\t\\t\\t51525,\\n\\t\\t\\t58674,\\n\\t\\t\\t54249,\\n\\t\\t\\t15425\\n\\t\\t],\\n\\t\\t[\\n\\t\\t\\t45650,\\n\\t\\t\\t55550,\\n\\t\\t\\t10900,\\n\\t\\t\\t300,\\n\\t\\t\\t125,\\n\\t\\t\\t36625,\\n\\t\\t\\t0,\\n\\t\\t\\t1150,\\n\\t\\t\\t1300,\\n\\t\\t\\t2849,\\n\\t\\t\\t3674,\\n\\t\\t\\t34250\\n\\t\\t],\\n\\t\\t[\\n\\t\\t\\t58100,\\n\\t\\t\\t70100,\\n\\t\\t\\t18350,\\n\\t\\t\\t450,\\n\\t\\t\\t1475,\\n\\t\\t\\t50525,\\n\\t\\t\\t1150,\\n\\t\\t\\t0,\\n\\t\\t\\t50,\\n\\t\\t\\t619,\\n\\t\\t\\t2194,\\n\\t\\t\\t44250\\n\\t\\t],\\n\\t\\t[\\n\\t\\t\\t57150,\\n\\t\\t\\t69650,\\n\\t\\t\\t18200,\\n\\t\\t\\t600,\\n\\t\\t\\t1725,\\n\\t\\t\\t51525,\\n\\t\\t\\t1300,\\n\\t\\t\\t50,\\n\\t\\t\\t0,\\n\\t\\t\\t369,\\n\\t\\t\\t1794,\\n\\t\\t\\t44450\\n\\t\\t],\\n\\t\\t[\\n\\t\\t\\t60139,\\n\\t\\t\\t73899,\\n\\t\\t\\t21229,\\n\\t\\t\\t1889,\\n\\t\\t\\t3604,\\n\\t\\t\\t58674,\\n\\t\\t\\t2849,\\n\\t\\t\\t619,\\n\\t\\t\\t369,\\n\\t\\t\\t0,\\n\\t\\t\\t1125,\\n\\t\\t\\t47789\\n\\t\\t],\\n\\t\\t[\\n\\t\\t\\t50314,\\n\\t\\t\\t62574,\\n\\t\\t\\t17554,\\n\\t\\t\\t3614,\\n\\t\\t\\t5029,\\n\\t\\t\\t54249,\\n\\t\\t\\t3674,\\n\\t\\t\\t2194,\\n\\t\\t\\t1794,\\n\\t\\t\\t1125,\\n\\t\\t\\t0,\\n\\t\\t\\t37664\\n\\t\\t],\\n\\t\\t[\\n\\t\\t\\t13250,\\n\\t\\t\\t9350,\\n\\t\\t\\t12850,\\n\\t\\t\\t40750,\\n\\t\\t\\t36125,\\n\\t\\t\\t15425,\\n\\t\\t\\t34250,\\n\\t\\t\\t44250,\\n\\t\\t\\t44450,\\n\\t\\t\\t47789,\\n\\t\\t\\t37664,\\n\\t\\t\\t0\\n\\t\\t]\\n\\t],\\n\\t\\\"squared_distance_denominator\\\":10000,\\n\\t\\\"maximum_observed_distance\\\":2.71843705095,\\n\\t\\\"step_seconds\\\":0.0166666666667,\\n\\t\\\"maximum_frame_seconds\\\":0.0833333333333\\n}\""
+          }
+        ],
+        "isError": false
+      },
+      "decoded": {
+        "checks": {
+          "real_score_difference_bounded": true,
+          "normalized_two_component_mixture_bounded": true,
+          "coordinate_bounds": true,
+          "exact_squared_distance_matrix_matches": true,
+          "distance_symmetry": true,
+          "distance_diagonal_zero": true,
+          "squared_distance_range": true,
+          "initial_panels_do_not_overlap": true,
+          "sixty_steps_equal_one_second": true,
+          "maximum_five_steps_equal_one_twelfth_second": true
+        },
+        "all_passed": true,
+        "known_count": 12,
+        "unknown_count": 3,
+        "unique_pairs": 66,
+        "squared_distance_numerators": [
+          [
+            0,
+            2600,
+            12850,
+            52750,
+            47475,
+            20625,
+            45650,
+            58100,
+            57150,
+            60139,
+            50314,
+            13250
+          ],
+          [
+            2600,
+            0,
+            18150,
+            63850,
+            57275,
+            16025,
+            55550,
+            70100,
+            69650,
+            73899,
+            62574,
+            9350
+          ],
+          [
+            12850,
+            18150,
+            0,
+            14600,
+            11425,
+            13025,
+            10900,
+            18350,
+            18200,
+            21229,
+            17554,
+            12850
+          ],
+          [
+            52750,
+            63850,
+            14600,
+            0,
+            325,
+            42825,
+            300,
+            450,
+            600,
+            1889,
+            3614,
+            40750
+          ],
+          [
+            47475,
+            57275,
+            11425,
+            325,
+            0,
+            35850,
+            125,
+            1475,
+            1725,
+            3604,
+            5029,
+            36125
+          ],
+          [
+            20625,
+            16025,
+            13025,
+            42825,
+            35850,
+            0,
+            36625,
+            50525,
+            51525,
+            58674,
+            54249,
+            15425
+          ],
+          [
+            45650,
+            55550,
+            10900,
+            300,
+            125,
+            36625,
+            0,
+            1150,
+            1300,
+            2849,
+            3674,
+            34250
+          ],
+          [
+            58100,
+            70100,
+            18350,
+            450,
+            1475,
+            50525,
+            1150,
+            0,
+            50,
+            619,
+            2194,
+            44250
+          ],
+          [
+            57150,
+            69650,
+            18200,
+            600,
+            1725,
+            51525,
+            1300,
+            50,
+            0,
+            369,
+            1794,
+            44450
+          ],
+          [
+            60139,
+            73899,
+            21229,
+            1889,
+            3604,
+            58674,
+            2849,
+            619,
+            369,
+            0,
+            1125,
+            47789
+          ],
+          [
+            50314,
+            62574,
+            17554,
+            3614,
+            5029,
+            54249,
+            3674,
+            2194,
+            1794,
+            1125,
+            0,
+            37664
+          ],
+          [
+            13250,
+            9350,
+            12850,
+            40750,
+            36125,
+            15425,
+            34250,
+            44250,
+            44450,
+            47789,
+            37664,
+            0
+          ]
+        ],
+        "squared_distance_denominator": 10000,
+        "maximum_observed_distance": 2.71843705095,
+        "step_seconds": 0.0166666666667,
+        "maximum_frame_seconds": 0.0833333333333
+      },
+      "receivedAt": "2026-09-16T10:35:32.996Z",
+      "checkCount": 10,
+      "status": "pass",
+      "recordIdentifier": "21b8f361-70e4-5407-aed1-de9bf17f9a0b",
+      "codeSha256": "cd01f3a9a8292af65eb5880c0f0ebd2dcd05cec6516ecb2805d81b688036639d"
+    },
+    {
+      "name": "exploration",
+      "code": "ClearAll[\"Global`*\"]; rotation={{Cos[yaw],Sin[yaw] Sin[pitch],Sin[yaw] Cos[pitch]},{0,Cos[pitch],-Sin[pitch]},{-Sin[yaw],Cos[yaw] Sin[pitch],Cos[yaw] Cos[pitch]}}; result=<|\"rotation_preserves_length\"->FullSimplify[Transpose[rotation].rotation==IdentityMatrix[3],Assumptions->Element[{yaw,pitch},Reals]],\"bounded_elapsed\"->Resolve[ForAll[elapsed,elapsed>=0,0<=Min[elapsed,1/20]<=1/20],Reals],\"bounded_displacement\"->Resolve[ForAll[{elapsed,speed},elapsed>=0 && 0<=speed<=16,0<=speed Min[elapsed,1/20]<=4/5],Reals],\"normalized_diagonal\"->FullSimplify[Norm[{1,1,-1}/Norm[{1,1,-1}]]==1],\"coordinate_clamp\"->Resolve[ForAll[position,-400<=Max[-400,Min[400,position]]<=400],Reals],\"ring_clearance_metres\"->3-1/2-2/5-1/20,\"ring_passage_positive\"->(3-1/2-2/5-1/20>0),\"render_interval_seconds\"->1/30|>;ExportString[result,\"RawJSON\"]",
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Out[1]= \"{\\n\\t\\\"rotation_preserves_length\\\":true,\\n\\t\\\"bounded_elapsed\\\":true,\\n\\t\\\"bounded_displacement\\\":true,\\n\\t\\\"normalized_diagonal\\\":true,\\n\\t\\\"coordinate_clamp\\\":true,\\n\\t\\\"ring_clearance_metres\\\":2.05,\\n\\t\\\"ring_passage_positive\\\":true,\\n\\t\\\"render_interval_seconds\\\":3.333333333333333e-2\\n}\""
+          }
+        ],
+        "isError": false
+      },
+      "decoded": {
+        "rotation_preserves_length": true,
+        "bounded_elapsed": true,
+        "bounded_displacement": true,
+        "normalized_diagonal": true,
+        "coordinate_clamp": true,
+        "ring_clearance_metres": 2.05,
+        "ring_passage_positive": true,
+        "render_interval_seconds": 0.03333333333333333
+      },
+      "receivedAt": "2026-09-16T10:35:32.828Z",
+      "checkCount": 6,
+      "status": "pass",
+      "recordIdentifier": "41018a33-77a2-5c02-bd1f-cb6e674541da",
+      "codeSha256": "a52a78c26ca6c23b5c94a255c8299bba57a93c9d91bb1c957c22b47c57cf3027"
+    },
+    {
+      "name": "clock",
+      "code": "next[s_,d_] := Min[86400,s+Min[d,1/10]]; checks=<|\"bounded\"->FullSimplify[0<=next[s,d]<=86400,0<=s<=86400&&d>=0],\"monotone\"->FullSimplify[s<=next[s,d],0<=s<=86400&&d>=0],\"step_bounded\"->FullSimplify[next[s,d]-s<=1/10,0<=s<=86400&&d>=0],\"boundary_120\"->(next[11999/100,1/30]>120),\"end_stops\"->(next[86400,1/30]==86400),\"pause_identity\"->(Min[86400,120]==120)|>; continuous=2*(312/25)*Sin[Pi/(171*30)]; oldJump=2*(312/25)*Abs[Sin[Pi*(Mod[11999/100+1/30,120]-11999/100)/171]]; ExportString[<|\"checks\"->checks,\"all_passed\"->And@@Values[checks],\"continuous_distance\"->N[continuous,16],\"old_jump_distance\"->N[oldJump,16],\"radius\"->12.48,\"period_seconds\"->171|>,\"RawJSON\"]",
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Out[1]= \"{\\n\\t\\\"checks\\\":{\\n\\t\\t\\\"bounded\\\":true,\\n\\t\\t\\\"monotone\\\":true,\\n\\t\\t\\\"step_bounded\\\":true,\\n\\t\\t\\\"boundary_120\\\":true,\\n\\t\\t\\\"end_stops\\\":true,\\n\\t\\t\\\"pause_identity\\\":true\\n\\t},\\n\\t\\\"all_passed\\\":true,\\n\\t\\\"continuous_distance\\\":0.01528540891468537,\\n\\t\\\"old_jump_distance\\\":20.12094582403507,\\n\\t\\\"radius\\\":1.248e1,\\n\\t\\\"period_seconds\\\":171\\n}\""
+          }
+        ],
+        "isError": false
+      },
+      "decoded": {
+        "checks": {
+          "bounded": true,
+          "monotone": true,
+          "step_bounded": true,
+          "boundary_120": true,
+          "end_stops": true,
+          "pause_identity": true
+        },
+        "all_passed": true,
+        "continuous_distance": 0.01528540891468537,
+        "old_jump_distance": 20.12094582403507,
+        "radius": 12.48,
+        "period_seconds": 171
+      },
+      "receivedAt": "2026-09-16T10:35:32.524Z",
+      "checkCount": 6,
+      "status": "pass",
+      "recordIdentifier": "95c64d2a-bc93-57d4-9e11-d33fc8d0b0f7",
+      "codeSha256": "61e184aef02fa74ccda7e429e525b1792f490ee0da1f81a267a86f7e4dc1ed65"
+    },
+    {
+      "name": "review",
+      "code": "(* machine contract; record identifier: 02656152-2558-5647-bf33-4eb4ecc3c652.\n   Integer models, real-valued bounds and finite state comparisons are independent\n   of the JavaScript implementation. Browser observations remain separate evidence. *)\naxisMatrix={{-1,1,0,0,0,0,0,0,0,0,0},{0,0,0,0,1,0,-1,0,0,0,0},{0,0,-1,1,0,0,0,0,0,0,0}};\nstates=Select[Tuples[{{0,1},{False,True},{False,True},{False,True},{False,True}}],\n  (#[[2]]||!#[[4]])&&(!#[[5]]||#[[4]])&];\npairs=Tuples[states,2];\ncounterexamples=Select[pairs,#[[1,1]]==#[[2,1]]&&#[[1]]=!=#[[2]]&];\nflags=Tuples[{False,True},3];\nchecks=<|\n  \"score_difference_bound\"->(Reduce[0<=a<=1&&0<=b<=1&&(a-b < -1||a-b>1),{a,b},Reals]===False),\n  \"projection_rank_three\"->(MatrixRank[axisMatrix]===3),\n  \"projection_retains_eight_unseen_dimensions\"->(Length[NullSpace[axisMatrix]]===8),\n  \"nonnegative_normalized_recipe_bound\"->TrueQ[Resolve[ForAll[{w1,w2,w3,t1,t2,t3},\n    Implies[w1>=0&&w2>=0&&w3>=0&&w1+w2+w3==1&&0<=t1<=1&&0<=t2<=1&&0<=t3<=1,\n      0<=w1*t1+w2*t2+w3*t3<=1]],Reals]],\n  \"normal_step_metres\"->(8/20===2/5),\n  \"sixty_step_distance_metres\"->(60*8/20===24),\n  \"bounded_batch\"->(Reduce[0<=n<=60&&0<=d<=2/5&&n*d>24,{n,d},Reals]===False),\n  \"turn_range_radians\"->TrueQ[FullSimplify[-Pi<=turn*Pi/12<=Pi,Assumptions->-12<=turn<=12]],\n  \"full_state_equality_rejects_every_partial_match\"->AllTrue[counterexamples,#[[1]]=!=#[[2]]&],\n  \"artist_only_gate_has_counterexamples\"->(Length[counterexamples]===112),\n  \"complete_valid_states\"->(Length[states]===16&&Length[pairs]===256),\n  \"only_fresh_complete_same_revision_receipt_passes\"->(Select[flags,And@@#&]==={{True,True,True}}),\n  \"busy_writer_is_rejected\"->Not[!False && (False || !True)],\n  \"aborted_actions_are_rejected\"->AllTrue[flags,(!#[[3]]&&(#[[1]]||!#[[2]]))===If[#[[3]],False,#[[1]]||!#[[2]]]&],\n  \"trace_length_bound\"->(Reduce[n>=0&&Min[n+1,200]>200,n,Integers]===False),\n  \"clock_day_bound\"->(Reduce[0<=t<=86400000&&dt>=0&&Min[t+Min[dt,100],86400000]>86400000,{t,dt},Reals]===False),\n  \"clock_crosses_two_minutes_without_wrapping\"->(Min[119950+Min[100,100],86400000]===120050)\n|>;\nExportString[<|\"checks\"->checks,\"all_passed\"->And@@Values[checks],\"valid_state_count\"->Length[states],\n  \"state_pair_count\"->Length[pairs],\"partial_match_counterexample_count\"->Length[counterexamples],\n  \"partial_match_example\"->First[counterexamples],\"truth_table_rows\"->Length[flags],\n  \"scope\"->\"Mathematical models and finite state obligations, not a proof of browser timing or historical influence.\"|>,\"RawJSON\"]\n",
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Out[1]= \"{\\n\\t\\\"checks\\\":{\\n\\t\\t\\\"score_difference_bound\\\":true,\\n\\t\\t\\\"projection_rank_three\\\":true,\\n\\t\\t\\\"projection_retains_eight_unseen_dimensions\\\":true,\\n\\t\\t\\\"nonnegative_normalized_recipe_bound\\\":true,\\n\\t\\t\\\"normal_step_metres\\\":true,\\n\\t\\t\\\"sixty_step_distance_metres\\\":true,\\n\\t\\t\\\"bounded_batch\\\":true,\\n\\t\\t\\\"turn_range_radians\\\":true,\\n\\t\\t\\\"full_state_equality_rejects_every_partial_match\\\":true,\\n\\t\\t\\\"artist_only_gate_has_counterexamples\\\":true,\\n\\t\\t\\\"complete_valid_states\\\":true,\\n\\t\\t\\\"only_fresh_complete_same_revision_receipt_passes\\\":true,\\n\\t\\t\\\"busy_writer_is_rejected\\\":true,\\n\\t\\t\\\"aborted_actions_are_rejected\\\":true,\\n\\t\\t\\\"trace_length_bound\\\":true,\\n\\t\\t\\\"clock_day_bound\\\":true,\\n\\t\\t\\\"clock_crosses_two_minutes_without_wrapping\\\":true\\n\\t},\\n\\t\\\"all_passed\\\":true,\\n\\t\\\"valid_state_count\\\":16,\\n\\t\\\"state_pair_count\\\":256,\\n\\t\\\"partial_match_counterexample_count\\\":112,\\n\\t\\\"partial_match_example\\\":[\\n\\t\\t[\\n\\t\\t\\t0,\\n\\t\\t\\tfalse,\\n\\t\\t\\tfalse,\\n\\t\\t\\tfalse,\\n\\t\\t\\tfalse\\n\\t\\t],\\n\\t\\t[\\n\\t\\t\\t0,\\n\\t\\t\\tfalse,\\n\\t\\t\\ttrue,\\n\\t\\t\\tfalse,\\n\\t\\t\\tfalse\\n\\t\\t]\\n\\t],\\n\\t\\\"truth_table_rows\\\":8,\\n\\t\\\"scope\\\":\\\"Mathematical models and finite state obligations, not a proof of browser timing or historical influence.\\\"\\n}\""
+          }
+        ],
+        "isError": false
+      },
+      "decoded": {
+        "checks": {
+          "score_difference_bound": true,
+          "projection_rank_three": true,
+          "projection_retains_eight_unseen_dimensions": true,
+          "nonnegative_normalized_recipe_bound": true,
+          "normal_step_metres": true,
+          "sixty_step_distance_metres": true,
+          "bounded_batch": true,
+          "turn_range_radians": true,
+          "full_state_equality_rejects_every_partial_match": true,
+          "artist_only_gate_has_counterexamples": true,
+          "complete_valid_states": true,
+          "only_fresh_complete_same_revision_receipt_passes": true,
+          "busy_writer_is_rejected": true,
+          "aborted_actions_are_rejected": true,
+          "trace_length_bound": true,
+          "clock_day_bound": true,
+          "clock_crosses_two_minutes_without_wrapping": true
+        },
+        "all_passed": true,
+        "valid_state_count": 16,
+        "state_pair_count": 256,
+        "partial_match_counterexample_count": 112,
+        "partial_match_example": [
+          [
+            0,
+            false,
+            false,
+            false,
+            false
+          ],
+          [
+            0,
+            false,
+            true,
+            false,
+            false
+          ]
+        ],
+        "truth_table_rows": 8,
+        "scope": "Mathematical models and finite state obligations, not a proof of browser timing or historical influence."
+      },
+      "receivedAt": "2026-09-16T10:38:24.267Z",
+      "checkCount": 17,
+      "status": "pass",
+      "recordIdentifier": "6fc4dfed-5cf3-5c1a-94a2-ec7a0901b299",
+      "codeSha256": "1e15364241033accac6305dc5abadeca6475004372353043bacb8b235970d531"
+    }
+  ],
+  "recordIdentifier": "3bc7f915-7f5f-53da-9b2d-8ce37e584f8c",
+  "materialRuntimeComparison": {
+    "checks": 13,
+    "comparedRows": 156,
+    "mismatches": 0
+  }
+}

@@ -1,0 +1,1018 @@
+{
+  "executionIdentifier": "01a0a9c6-c101-794e-b225-4b01c529c05f",
+  "recordedAt": "2026-09-16T10:39:15.534Z",
+  "sourceRevisionBefore": "sha256:87ed8dc07a6cf314667c9e4f158ea72255a3130c220ca3192f1266e238231c76",
+  "sourceRevisionAfter": "sha256:87ed8dc07a6cf314667c9e4f158ea72255a3130c220ca3192f1266e238231c76",
+  "sourceRevision": "sha256:87ed8dc07a6cf314667c9e4f158ea72255a3130c220ca3192f1266e238231c76",
+  "files": [
+    {
+      "path": "CONSTRAINTS.md",
+      "sha256": "497ae62402dc9e7492480152f4b16d3ba0e017584a461251d342b716b831c9da"
+    },
+    {
+      "path": "contracts/asset-manifest.schema.json",
+      "sha256": "1ac3534da3c258b5eaacfe031c5cdf71bf8d77e66a84349b7fbd5318c3c47cbb"
+    },
+    {
+      "path": "contracts/claims.json",
+      "sha256": "2250c5046c0a3c1a0836267d3b4823b255cce0303b25ff3fa76c8fe9060da087"
+    },
+    {
+      "path": "contracts/cosmic-exhibition.json",
+      "sha256": "8d8886b9b3df3e98a68063ead911e1c2d156550fc8903d267917a29c030ed5ff"
+    },
+    {
+      "path": "contracts/cosmic-reference-images.json",
+      "sha256": "022245e9b6fbfa5f2ddbb31b362b537777ee309d377cd810463b3182abeb7acc"
+    },
+    {
+      "path": "contracts/cosmic-reference-thumbnails.json",
+      "sha256": "625b82771ee1463fbe47d2841debaa586f8c49c845e8375cc0194202a673316e"
+    },
+    {
+      "path": "contracts/css-artworks.json",
+      "sha256": "134ecfcb05f92cf9fcc573f9eed02b5220fa7230e77bd514b38b687b26b43922"
+    },
+    {
+      "path": "contracts/css-line-artwork.json",
+      "sha256": "5b6c0cab63d6c829c3c71fe18f7c8632fa61d6d60fb16fddcb29f40fb2d82b89"
+    },
+    {
+      "path": "contracts/examples/valid-asset-manifest.json",
+      "sha256": "5a112a222b51c635cb473550b6a8077d0626c208a7305fe9e81a7350c3d67d20"
+    },
+    {
+      "path": "contracts/examples/verification-request.json",
+      "sha256": "7a6c9e468f145685ef766bfc3e77c60c212072d0eecf58d7b7298a0bb0153b0e"
+    },
+    {
+      "path": "contracts/examples/verification-result.json",
+      "sha256": "28f87578eadb898be5135cdf94b7dcbd1ccc1e65ae44ea286d2991e9be360c5d"
+    },
+    {
+      "path": "contracts/external-gates.json",
+      "sha256": "72d221e87cfa69839658e2a29b9cdb383b531104aef17ee027a6313620bb1ecc"
+    },
+    {
+      "path": "contracts/review-verification.wl",
+      "sha256": "1e15364241033accac6305dc5abadeca6475004372353043bacb8b235970d531"
+    },
+    {
+      "path": "contracts/verification-contract.schema.json",
+      "sha256": "fbe69c9db9eac5debee95d2b9fc723ddd152e27f3892bc646718f1283c6b23de"
+    },
+    {
+      "path": "eslint.config.mjs",
+      "sha256": "978430f74599f639af8650e0f36ece7f26e916f819e7563df8f5809bba9be226"
+    },
+    {
+      "path": "formal/Lumenia.lean",
+      "sha256": "0f9ee325f4c9bf73d42edfeb1b059cb4b66de230ba6983256fbe46bcb26fd779"
+    },
+    {
+      "path": "formal/Lumenia/AxiomAudit.lean",
+      "sha256": "a2ac9deab960ba87a619b4d76866e2dea1699c610d049ba0e54b0379eb8daf00"
+    },
+    {
+      "path": "formal/Lumenia/Boundary.lean",
+      "sha256": "41be9e4293f8f54e671150aa2f1afadc27d0393f865af9ebdbdcb6bb8ea363c3"
+    },
+    {
+      "path": "formal/Lumenia/CosmicExhibition.lean",
+      "sha256": "59397a93a57427b38da7a09b275d5164ba64a58136ee7c53d39abcbbfb16aeda"
+    },
+    {
+      "path": "formal/Lumenia/CosmicExhibitionAudit.lean",
+      "sha256": "cc87c7c5abcb146d49ea79e7c638ca3a86911efccb4f66051b0b3c08416650bd"
+    },
+    {
+      "path": "formal/Lumenia/Model.lean",
+      "sha256": "0f528929e0243d7f922a9d7f9603eed43e8c0e13c6f44a86922f06dad82a0b06"
+    },
+    {
+      "path": "formal/Lumenia/Proofs.lean",
+      "sha256": "dc185dc0b11ffc1471061e7301249def8111ef69707876e0cf4ebb3ea05afb04"
+    },
+    {
+      "path": "formal/Lumenia/ReviewChecks.lean",
+      "sha256": "8c5a35d41c247e0260a2e01a6d55f13d23619b4b0dd74d4ddb01227c6ccccaef"
+    },
+    {
+      "path": "formal/Lumenia/Tests.lean",
+      "sha256": "329500e65c6d3c601e25d95d91de28d904ecf197b8b5a3ec1e95753b62a52995"
+    },
+    {
+      "path": "formal/Main.lean",
+      "sha256": "8b3eeea5ac3bcfb89963c5064a1307da6cb975ca5a89eb109319f2bce377e715"
+    },
+    {
+      "path": "intent.md",
+      "sha256": "9c36b5d17dce933b4966c3a291616b0e8236866ff1e5daa2d21d933b8c87682b"
+    },
+    {
+      "path": "lake-manifest.json",
+      "sha256": "4273a8dd6528dfcfc627997ee3f06313b97d795918cfc09b5ae65821723e54fb"
+    },
+    {
+      "path": "lakefile.toml",
+      "sha256": "450866fae5ba7ab3c9d0b025436f30ea29e39124837b035b428bd40233048c62"
+    },
+    {
+      "path": "lean-toolchain",
+      "sha256": "db7bb24b756d745bbde83fe92718b51bd3625dae3701ba0f598d0eedcd3f3028"
+    },
+    {
+      "path": "mcp/application-verification.md",
+      "sha256": "4e3624c1b89b97c74ac2833d070d958d21187de2a5650b5259d41e43743ab735"
+    },
+    {
+      "path": "mcp/chrome-measurements.js",
+      "sha256": "054bd5b671c904ff6ffc8dd02d01c4acc9b7c61d3090709c4898d823ad455976"
+    },
+    {
+      "path": "mcp/lean-lsp-mcp.json",
+      "sha256": "98a7471d12c4e449b04a8867fffeaf77424d84cb75a451a18d2efeb94e410fec"
+    },
+    {
+      "path": "mcp/lumenia-verification-contract.schema.json",
+      "sha256": "0b054151d9949e9a46f8ee470da837109aa07b0d3baf7161eda4cdd8f4ed33a9"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "65e21e4e7a5b9110a238d6848b53254df3ce8878099ff6985cfeba9ff46df142"
+    },
+    {
+      "path": "package.json",
+      "sha256": "ceec3257ddc64c87186fb7104e2f8b123b2a2ac3f8df47abe08be4ac8af8ffd2"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/README.md",
+      "sha256": "671b06fa0fcafbd68c76af9e1a8f66940f6bf2ec45e8972985a994aa83d051ff"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/alphonse-mucha.png",
+      "sha256": "57fe2c034be6dd3340464ab9852a79e8d8f12e8de46ee61b1d1af3f4801b09a0"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/art-direction-briefs.jsonl",
+      "sha256": "e810baa3313677bf837a22aae700e8ac796ea86cea702159a17b4c0d6b339210"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/charles-eames.png",
+      "sha256": "33c97fe0f290497c22f556293b923d7b4b5d5bcacf027b7a1ba34034974e8d37"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/charles-rennie-mackintosh.png",
+      "sha256": "81ee0b404ebe5e70465681397f6f2ea7ae82c85a4971f1524fdc7fc3e3be01a8"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/dieter-rams.png",
+      "sha256": "9b18c578a617c774b195ce2ddea6ef3c3cd2cf9562a60a5031df5b64742ff866"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/ettore-sottsass.png",
+      "sha256": "62f9f2086ffa001a9b5c326c4a4fb7eeba1ae4857fe9eb93a1f465349161cefa"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/README.md",
+      "sha256": "f3734efaea1645d9d4c4a5837a11c38719cc6aa4e06e7090c286b020f2f2d409"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/collision.mjs",
+      "sha256": "13f558e4d8f8c72391471366bcf741b807b75d676ee5f32bb38a3b8dbf8c48be"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/geometry.mjs",
+      "sha256": "cef74914f09f2fba6facf47383761ec1cf521042780527cdf5672e4056684488"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/index.html",
+      "sha256": "f7389559b538b733be0ba2f36e377095945d21c5e4ef243baaefa187152a1bfd"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/main.mjs",
+      "sha256": "847e4110cc04ccaf711d85279c98bd44066c3e63d11dff5c81c88deb23544510"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/navigation.mjs",
+      "sha256": "99b9a8816885b3b676b92e062f378d753129d036d6139e500cadfc2aa81aa4a5"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/style.css",
+      "sha256": "954e429a5420d7dfee9876fc079f574dc1ac9561d2edf646c80e6f98d193236f"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/verification/Exploration.lean",
+      "sha256": "0bd76bc65ba0659f293769103bae3e72ac7c5f2dffe4571a39e0057995316d30"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/verification/lake-manifest.json",
+      "sha256": "b8c57e60b9ac6cecb88dc2e783968d84ac26310ba0c3f13ddbd6b9ff221c6e32"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/verification/lakefile.toml",
+      "sha256": "d780cfc3b5958bda77d9d8963d9a9213fa7934fbde7d84f77d3fb4a3d8ed7d38"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/verification/lean-toolchain",
+      "sha256": "db7bb24b756d745bbde83fe92718b51bd3625dae3701ba0f598d0eedcd3f3028"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/worlds.json",
+      "sha256": "68a37e5a703e748a0e741c3defbbdf3e4a620f41dce92c7af7884cf03a79edff"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/worlds/alphonse-mucha.json",
+      "sha256": "0f83d764f60976289e7fbc0c1dbdb67153766cfdfa646be7d913111b272850b7"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/worlds/charles-eames.json",
+      "sha256": "65ffa39ad47261b6ee9208306ab3944d6f0db7d28060c571f54f9cac0acef827"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/worlds/charles-rennie-mackintosh.json",
+      "sha256": "7ff646191074ec3e7ccf8b8eb3e0c4201e7d2ac05e9d6471e6e03b0f0ae4d2ea"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/worlds/dieter-rams.json",
+      "sha256": "6eda4ca02aa1ed636d6d6c8196815c7067d619d33ceed6906592b22c4bfd217e"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/worlds/ettore-sottsass.json",
+      "sha256": "fb3ac97e605e0175961f3c5caa2960ba5cea90d675e74ce7a7192d0bf44b672b"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/worlds/gerrit-rietveld.json",
+      "sha256": "830919c67b451684ff5a4979d8ae2b8895a171e2512c554f8b0689181c08c82f"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/worlds/herbert-bayer.json",
+      "sha256": "f8c4532a4adfa846bd96b84f4ee7b69c5cc7d9469fc7fe186db6647dcb56702b"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/worlds/josef-muller-brockmann.json",
+      "sha256": "c8aa85237a82634db071cf1537798c03e52748242231a31d7ea90a0f29824aca"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/worlds/massimo-vignelli.json",
+      "sha256": "8ee1785ab63f4b3d80a14a4caf295f14869af38b51d65ba6d8372c40d785958a"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/worlds/naoto-fukasawa.json",
+      "sha256": "f93dc6864304ebf47aecb13272e71c80013acf80137ec77405f5822c669102d2"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/worlds/piet-mondrian.json",
+      "sha256": "7eb0111d5a68e863c3dcd91f6b670f0089c4067d4e94e6fbb96ef4e842596eee"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/worlds/ray-eames.json",
+      "sha256": "73adf919c358f6abe24a508fff81070caca45f246b7b8a53f0c537263e8f16fb"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/worlds/rei-kawakubo.json",
+      "sha256": "69bb6af25b333be75f5ec25ace0bc821b801f6a92c445d1f2d2fd8d5f3fc2de4"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/worlds/walter-gropius.json",
+      "sha256": "b2cb6370ecc3c6d4262a69223d5b5bc2300419d42b1777cebbc322ab28cc89b1"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/worlds/william-morris.json",
+      "sha256": "3e82f60d3d049df3c318d34b4318ebac611692493be4a24d15ab297b89e35dec"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/gerrit-rietveld.png",
+      "sha256": "ca4d66b058126ed541e30ea886139ebfd2815740b6db8b538ca26f3c21305fc0"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/herbert-bayer.png",
+      "sha256": "1179f76272afc9eac1ac1b7b3ec6fcfcab9194bf000d27bbcd41e85cf25a8c3b"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/index.html",
+      "sha256": "030f01f7a67de32fef6d268c2810d310c5427b6cef8ee31efa04d30118648079"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/README.md",
+      "sha256": "73482be2291063568caab1663b6407c24fb87cf82a7461c54f362da4b0fdd0a8"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/dependencies.json",
+      "sha256": "ec143940f4dd67e1c95f9d94e849c2b177abd484701a51528d8659f63054a141"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/exhibition.json",
+      "sha256": "108306a4418dd2b7740e2f7130cdac366adc5352d305722047dc41c1db96d616"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/index.html",
+      "sha256": "7fdcd4301499ff70f6eead1fbbb55489df4822988f44674db5a50c50b0eeaf53"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/main.mjs",
+      "sha256": "0becce2832328bad51d6d1dae08c73ec31f680060715a610dcb04577eedcfbbd"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/model.mjs",
+      "sha256": "ba02dbf2d014e3673fd0033e97056a840d02c1db504987ff577922b94db00395"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/package.json",
+      "sha256": "e15ae6610a16ce9223f55341be75a7ad86adfb09f00775888dfde0cfb1128dbe"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/physics.mjs",
+      "sha256": "076dfd0f15f91d278eb51870d842c01e19e7ca3a77431c5d4bed658be6e45503"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/serve.mjs",
+      "sha256": "3cb45b0670682d9827f6f212097fdd4d777579957093dd3c17af0943a76012ff"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/style.css",
+      "sha256": "1889ad1612d94417e05ca18522232110c3d510c09b3c5841ea5aad17c820b654"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/tests/exhibition.test.mjs",
+      "sha256": "de9004bed080f0a0571f905c25a87b8883a8755bdd0ed59405a714f64ebbd2c0"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/thumbnail.mjs",
+      "sha256": "ad475add726ee650f87821452c38b49db1b0ce58a5ebbfab710598adf78faa80"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/vendor/RAPIER-LICENSE.txt",
+      "sha256": "4c05555705e3efde601fb1252ae48f1d63992af8a8fb8947745b7fa834e8f519"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/vendor/THREE-LICENSE.txt",
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/vendor/controls/OrbitControls.js",
+      "sha256": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/vendor/rapier.mjs",
+      "sha256": "82b65114e949ed17969a5d0a3517b952f430ea524f4a19ce4a31e72fb7757f27"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/vendor/reference-physics-contract.mjs",
+      "sha256": "4d1495820c1b9dcf334accee1892edd4f0ead85f5575e7c91935518903b435ba"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/vendor/three.core.js",
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/vendor/three.module.js",
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/verification/Exhibition.lean",
+      "sha256": "54614a2c5c9461f8e207f947372bb23fb39dcf381202d2fbfcea4e6b1bf5c4fb"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/verification/browser-receipt.json",
+      "sha256": "29eda44c15f14aca04818b6f22a1053c82d0dd661e4196b4994cf48ca8e95b46"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/verification/exact-inputs.json",
+      "sha256": "a678c79803ceefc12490669020c2c5d67148bd7512168c64f6da9f1ee1de2e08"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/verification/lake-manifest.json",
+      "sha256": "3a0155577bbf410840be1e28429836728232b991d62561433eec0b423b97b5e6"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/verification/lakefile.toml",
+      "sha256": "b56bfa054b9ff62738d7328e37f87597b221f445e973d25e5594b1277faee88e"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/verification/lean-axioms.txt",
+      "sha256": "23e29ec6eb25be32394bcb4e94435d7a3b490b5f26c7c930aa66dcfecd4ad95d"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/verification/lean-toolchain",
+      "sha256": "db7bb24b756d745bbde83fe92718b51bd3625dae3701ba0f598d0eedcd3f3028"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/verification/prepare.mjs",
+      "sha256": "9bdcf6d17cd1123570429dd5990ebe67dc9bc5812c172c30308b0c43b68aa7e6"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/verification/runtime-tests.txt",
+      "sha256": "f30df59ac705d220ae1916730c4d3417c0c70a36c8f2e054030786c51ed4cb74"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/verification/verification.json",
+      "sha256": "fdca4cd4eb6a3b9e5b7390e96a3591c183b1b224b99c64cdd1fa1e7b8d80eb72"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/verification/verify.mjs",
+      "sha256": "5ffca77e31ea74b24e6b4461e44c0c257c56de9f474715838f22a9bfa572ae85"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/verification/wolfram-receipt.json",
+      "sha256": "b5adaeae7acafa61c3bf374605fc651faef06d91ccadc5387afaf9e497bfac89"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/verification/wolfram.wl",
+      "sha256": "cd01f3a9a8292af65eb5880c0f0ebd2dcd05cec6516ecb2805d81b688036639d"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/webmcp.mjs",
+      "sha256": "a72054421924eadfe10cd592ae7b9278440696b05e47207488eb74221143e1a9"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/josef-muller-brockmann.png",
+      "sha256": "75a303ac4c65d1608c6ffb3f2f3ce70a2191aacb0980713dccfa4c8ce29a13cd"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/massimo-vignelli.png",
+      "sha256": "68c567fa35979197d5652c822492322a995378ec30c20aa0f965db10bc4c7fc7"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/naoto-fukasawa.png",
+      "sha256": "c1d81e3a60c2e9859fe9c4c1fabd7fc27dc17d1b053d8cc2bbde8cf409b60f3a"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/piet-mondrian.png",
+      "sha256": "66ab2202b937935af83683534d1a667cc8e291dd5cb40049b29232439f9eb8da"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/ray-eames.png",
+      "sha256": "c4933e043eb1931a3bb4f64bb83821fbbca0b081298808c373adc12167c3b3f8"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/references.jsonl",
+      "sha256": "654e0f596b0cedd19fd87ae79a5ee9073d55b4a5808afcdeeb8be9dd7e600331"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/rei-kawakubo.png",
+      "sha256": "d75de875bc814bbc4cf6dbe85f6e1cdaf2a31340aaa06ab54a8c068f4345954b"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/thumbnails/alphonse-mucha.webp",
+      "sha256": "95afa694862570e917208985a2afe17247abec194369aaf5aa718649f7f2a1f2"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/thumbnails/charles-eames.webp",
+      "sha256": "da6bb2d853023a420f54ee2488c132eaa88a66b744bdeb1b6d9301bc44116bcc"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/thumbnails/charles-rennie-mackintosh.webp",
+      "sha256": "8fdc23ff649c516dc5eef8d2bac0575613b142517e436cf0b9710b6cfc0ba727"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/thumbnails/dieter-rams.webp",
+      "sha256": "249ee97193242c22f01ce3b0a271f1d654cf3848d8519369f50f28e18f2b1417"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/thumbnails/ettore-sottsass.webp",
+      "sha256": "1a71a6b55bdb3938984fa6585ebb6a3a42c4eea38c730819ee1e9aa4df6a7370"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/thumbnails/gerrit-rietveld.webp",
+      "sha256": "ca7dafd332464695fb814383ea2a362ebdd0c27e5dee2d9332f3c0c6e7e0e493"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/thumbnails/herbert-bayer.webp",
+      "sha256": "390729746a58f1ab800021f0a1e5160cba8b85d6d8769c4ec881a69f87871e5b"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/thumbnails/josef-muller-brockmann.webp",
+      "sha256": "006b8cf6d35aa051a26e8dd42bcafb236f3c8b95ad6c9149707b1d2dd5775269"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/thumbnails/massimo-vignelli.webp",
+      "sha256": "34834ce2ee04962a3cc1e6296f19a032f69af70d08b67eafb6d75e025b664123"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/thumbnails/naoto-fukasawa.webp",
+      "sha256": "281a6f3f16eccb1fa562a39b8468144505947f953a981a856032f06333eba806"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/thumbnails/piet-mondrian.webp",
+      "sha256": "3cb143f171ad04c0afcb73c7bd1d01d6628bc895fd3d289a942e4dc5cc1a6325"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/thumbnails/ray-eames.webp",
+      "sha256": "4048c374067b91fac8e0e97b161c14d8328d272dd9ef3c5f1fb5553c91338ab3"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/thumbnails/rei-kawakubo.webp",
+      "sha256": "c7345e2afaf62c36e03757e7d2dd751158e7261d6850a1387888af63ef02efc1"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/thumbnails/walter-gropius.webp",
+      "sha256": "27e9d564215b2b9a7201a74e30a14bf6c4012b157c197c9c8fea7aad470f26bd"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/thumbnails/william-morris.webp",
+      "sha256": "e6c5a5598c7efcbf07cb2062fb1de34a7927e9716ca8d18766298532aa701e0a"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/walter-gropius.png",
+      "sha256": "595059dbe0521bed0cff56afb278d8034344416ceb419f895d5afd6d6b589fb4"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/william-morris.png",
+      "sha256": "d7485b0b48ab20c6ef5b369f0206db25137aac82021054cc1b8c8b4fb437d7a0"
+    },
+    {
+      "path": "scripts/artist-world-recipes.mjs",
+      "sha256": "ef94351ba2fc8e33d2f510136d43ffc9d7784654e88bffaee94da078772d6801"
+    },
+    {
+      "path": "scripts/audit-review-kernel.mjs",
+      "sha256": "e69699d14caaba0a914d7a4c0ca40fdf870c20fd1f6ce658c55d9eddbd35c7c3"
+    },
+    {
+      "path": "scripts/browser-observations.mjs",
+      "sha256": "4c7af1a548a1c098c37f9a15825d5efee054573b78f8777ed7dea83d50ccea82"
+    },
+    {
+      "path": "scripts/build-artwork.mjs",
+      "sha256": "887dcaa527e92f80401a91bf7c065fd6d787a4e83e531b2a61c59454f6396e2b"
+    },
+    {
+      "path": "scripts/build-character-availability.mjs",
+      "sha256": "440f105f8b0e215c19f824a1b8fb674bf3caa525db818cf3c5275c0f590babdd"
+    },
+    {
+      "path": "scripts/build-character-styles.mjs",
+      "sha256": "df70415e44ed2830e257b7ed7c6d0bfa71311414b27ae9d404523169686cf6cc"
+    },
+    {
+      "path": "scripts/build-cosmic-catalog.mjs",
+      "sha256": "84b05e6c303c87bb5d93a9685636882a7f33b5133b6ea0f6e73da7743e0b9aca"
+    },
+    {
+      "path": "scripts/build-cosmic-images.mjs",
+      "sha256": "e1f9d428fa467771c73b043e45370448cc4e2b142b524f0339abfc14455a8b10"
+    },
+    {
+      "path": "scripts/build-exploration.mjs",
+      "sha256": "5fa07c6aa1d7e093fd785c1e929bb6c911885a1d3e50e425f7e75be90b55a3d7"
+    },
+    {
+      "path": "scripts/build-reference-thumbnails.mjs",
+      "sha256": "af86f5d73a5af96b1e6e23b2aea3b98c52082e1afe1ebfc9cf69e8a4202d1949"
+    },
+    {
+      "path": "scripts/build-web.mjs",
+      "sha256": "fad90e381b321260363a8d0175b95420edcc1786c1abb6dc3d63e3da7b783aa8"
+    },
+    {
+      "path": "scripts/character-registration.mjs",
+      "sha256": "d9a2cf146a3351e87343a077f6c18d9e7f17d702baca4a327f72ec31b6b5473e"
+    },
+    {
+      "path": "scripts/collect-measurements.mjs",
+      "sha256": "1dcdb72aa8b03042ed97fc72b5b000f4aa28523f42a471af0fe4b22648a673ff"
+    },
+    {
+      "path": "scripts/connect-planetarium.mjs",
+      "sha256": "e32bd4009a6ecb42f5014ff8529acb2b336bb852ad116327b505cc4921636697"
+    },
+    {
+      "path": "scripts/contract.mjs",
+      "sha256": "96fa1a635a416efb050968b9dd81352610b951b2d40da4df97c56c28e9afcfa0"
+    },
+    {
+      "path": "scripts/cosmic-drawing-policy.mjs",
+      "sha256": "d024bccc427e0a1fdcefbd1474036f9cc554135a56447d20a1eacae931cf6bee"
+    },
+    {
+      "path": "scripts/drawing-asset-policy.mjs",
+      "sha256": "b82f8d1f3a041a083788b9290f34a34c08e44a833765b10638fbff74fbe97d0d"
+    },
+    {
+      "path": "scripts/exploration-recipes.mjs",
+      "sha256": "ba3ca408a129ece7da812f9c3a743df9a7e04799d3b8238a61011761d1e49e4f"
+    },
+    {
+      "path": "scripts/export-css-character.mjs",
+      "sha256": "1353bb9b03b74716c28592f2c9317fffdadac8c4eb858cc2611d93e0237f892b"
+    },
+    {
+      "path": "scripts/identifiers.mjs",
+      "sha256": "fa658b8a45f3e414ab940631e8ca7f186f0be8917393a8054c0676e00f21134b"
+    },
+    {
+      "path": "scripts/inspect-character-asset.mjs",
+      "sha256": "f001b10dde025be2485b16d83434a11a546409647ff3e725031a5edecf25163a"
+    },
+    {
+      "path": "scripts/inspect-cosmic-bundle.mjs",
+      "sha256": "bc50a40208338c917d1cee9a419025709da7c72254b8fce9dd05ef6b601ebacf"
+    },
+    {
+      "path": "scripts/language-server-evidence.mjs",
+      "sha256": "cabebf9637f1d3d7093ab648a291c7fa51a450436caeb33143e7d7f4cfc43275"
+    },
+    {
+      "path": "scripts/measurement-context.mjs",
+      "sha256": "338b53a2650f08c0967c079f9574b97b66be30e1a3058539c75c94fe8bec9ac2"
+    },
+    {
+      "path": "scripts/publish-local-evidence.mjs",
+      "sha256": "68cf5d26ed835551babde2eb2a2b214c1cda95184001f669835d4c0b64372357"
+    },
+    {
+      "path": "scripts/publish-material-sphere-evidence.mjs",
+      "sha256": "ca9493f3c4c6a824b3d28266014dc93a3d255750b9d45527c82c0de38449a516"
+    },
+    {
+      "path": "scripts/report.mjs",
+      "sha256": "2ed519504df41e4dc7cb09a6e2b62a4d0aaf9a67cc6ef7b05fe6efda5995cc56"
+    },
+    {
+      "path": "scripts/run-application-check.mjs",
+      "sha256": "53edfc032d35defcd5e2890e594f59c2f1e723177a8e838a0371ac7ec11f7f88"
+    },
+    {
+      "path": "scripts/run-asset-reference-check.mjs",
+      "sha256": "4439f90e72a97c896650342c12e390e1495860fd704512efd98c7482e196ae59"
+    },
+    {
+      "path": "scripts/run-formal-check.mjs",
+      "sha256": "22114b17a2e8d6c0be28c96930739a338cb84a8c4c70a81dea90a9e1fc9c9c55"
+    },
+    {
+      "path": "scripts/run-gates.mjs",
+      "sha256": "5f4099e2c34e0f2c270767d52d6816d9b524cac857debe8d9cd12b68f38bc09e"
+    },
+    {
+      "path": "scripts/serve-web.mjs",
+      "sha256": "4a297557545bd57a2981909a1064e8d490772cb6473e29b56afa66e7667ee7f2"
+    },
+    {
+      "path": "scripts/source-inspection.mjs",
+      "sha256": "d1631e5dcc34697d33767bbad9b7077e26df97fe8905d7b6178bdf27317341f7"
+    },
+    {
+      "path": "scripts/source-revision.mjs",
+      "sha256": "0bc29e99a721a9e660f2941faeb5f058b14be99770871c2a9981e19b252daff5"
+    },
+    {
+      "path": "scripts/stage-museum-character.mjs",
+      "sha256": "c5b627f532138ef6a0162e59575410c7eb8bdd03fe4e12ef32f296223b53dc29"
+    },
+    {
+      "path": "scripts/verify-contract.mjs",
+      "sha256": "dfaf2d2774cbbea870beed8f384447d11b4b5cca903713544f67dd09a7a97eb2"
+    },
+    {
+      "path": "scripts/verify-cosmic-exhibition.mjs",
+      "sha256": "1566f2d386e232b506c787a6d125a6ca8cfd61ab4c4d40b49e849c96b8b62dca"
+    },
+    {
+      "path": "scripts/verify-css-museum-people.mjs",
+      "sha256": "d037ac7a7b7d6693105406a4e1924e8adb6263d241201492ce838947bfd1cf76"
+    },
+    {
+      "path": "scripts/verify-exploration.mjs",
+      "sha256": "937e44f03e3a11a5587e595b8cbf98803aee8258e8194d1c0236ceae6b7c979e"
+    },
+    {
+      "path": "spec.md",
+      "sha256": "b293e5c86933bcdd000b85ddc2b1c9942d693f24831d38d34f5c15be3fe8a223"
+    },
+    {
+      "path": "tests/application.test.mjs",
+      "sha256": "58b34595cf2779a3f68419d620fc25e0b7dc25a21dc050ca5d40627b0670e3f8"
+    },
+    {
+      "path": "tests/browser-collector.test.mjs",
+      "sha256": "fe940c814d66c7a0f28241500f282a20c570bcf59bd688fd2eff09aa201f548b"
+    },
+    {
+      "path": "tests/browser-observations.test.mjs",
+      "sha256": "6592c6d0161e40911d29e3a3cb9f4c1c3112bbace220714cc457d42e8a046df6"
+    },
+    {
+      "path": "tests/character-admission.test.mjs",
+      "sha256": "02db740deb4cbd7530954dae8a1d0f9ee916278c2b018a1fc8627ce538d9a9e4"
+    },
+    {
+      "path": "tests/character-availability.test.mjs",
+      "sha256": "52f707b05a0f8e0173d533004c6afc4b9f349ac75121210cb3b95bdbad4985a7"
+    },
+    {
+      "path": "tests/contract.test.mjs",
+      "sha256": "46d8e96c1a68093a52b14f9762d50b21c00a96f39f08fb8b6de94f758c9ccc9d"
+    },
+    {
+      "path": "tests/cosmic-exhibition.test.mjs",
+      "sha256": "9f12cc6b5a9fc107094b6f6bdb2f7717c32af71af167d8e0f3da693db804bc10"
+    },
+    {
+      "path": "tests/cosmic-image-publication.test.mjs",
+      "sha256": "f8c45287aa0b2ea93f2524c4a38c99c2f0f7c38b5c661fefe18950964386ed13"
+    },
+    {
+      "path": "tests/drawing-asset-policy.test.mjs",
+      "sha256": "da5e621afbec765be34bf034a7c569dbcf13fdcdd6bdb4895f26becf47333ba4"
+    },
+    {
+      "path": "tests/exploration.test.mjs",
+      "sha256": "c4dd236737c91da0c827018976ede1f09340abefa53ee72697c99ace0b4029e1"
+    },
+    {
+      "path": "tests/integration-report.test.mjs",
+      "sha256": "bdf00d2ea3d6f8d090b6dd8b1eb31a509a7f1e771130e12b0db57bf44f1926d4"
+    },
+    {
+      "path": "tests/language-server-evidence.test.mjs",
+      "sha256": "60e73ef3764b7d6cabdf7fde7d76a4cc9fa52913db4f3a74af3b277cb516b425"
+    },
+    {
+      "path": "tests/lean-boundary.test.mjs",
+      "sha256": "3ae3fb10a0b31ab7aaab4565ff37db509123d3cf4f9863f59c91a1a0683eed3e"
+    },
+    {
+      "path": "tests/material-sphere.test.mjs",
+      "sha256": "190d18f10db656d71537ca4c15ea47ce3c6e2e02dab210e9b32c8298883d4337"
+    },
+    {
+      "path": "tests/museum-character.test.mjs",
+      "sha256": "327a7a5f3f93221bff98a3e067ef3f1ec46fdad500550f20040b0312351c1f02"
+    },
+    {
+      "path": "tests/reference-thumbnails.test.mjs",
+      "sha256": "ac2c9924e5ffce12d500dadb0182aa89023923d6809c8ef00cae112dedee2bce"
+    },
+    {
+      "path": "tests/review-verification.test.mjs",
+      "sha256": "b8268b99346f0e9d64181c967262911b25b3eec5f54ece7a1c8d136a45c25407"
+    },
+    {
+      "path": "tests/threejs-reference-adapter.test.mjs",
+      "sha256": "bddd1df4330aae164ebe89414bbf9f402d89214fa36d61079cf1b839b2c883b1"
+    },
+    {
+      "path": "tests/webmcp.test.mjs",
+      "sha256": "97423fa0f56e26bc6495517da0ba18bd9a13bf67d6811346f4df285f55560c24"
+    },
+    {
+      "path": "web/AGENTS.md",
+      "sha256": "63f2c50380ed6303237cce215ce27af1d620d094c215e28d1b1538a3c070e3bb"
+    },
+    {
+      "path": "web/CLAUDE.md",
+      "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49"
+    },
+    {
+      "path": "web/app/atelier/[person]/page.tsx",
+      "sha256": "5d7254dcec806d7c05d7dfacf81c15bfd34fcca58fa6ae14d99ad3845ab51416"
+    },
+    {
+      "path": "web/app/compare/[stage]/page.tsx",
+      "sha256": "5609017531139affde21942379a3a7332da042807460ff572818b8b32316adef"
+    },
+    {
+      "path": "web/app/globals.css",
+      "sha256": "bd1378dc90465b836dfe738dfb05fd0abdfd47f178703d4adea54e4143adac82"
+    },
+    {
+      "path": "web/app/layout.tsx",
+      "sha256": "ff07116e0db7dd59f9516b000a5c8925791ff897f33ebc70fa1b54780467ab03"
+    },
+    {
+      "path": "web/app/page.tsx",
+      "sha256": "6cb03e1ac12a21ee1526dfc636561b3f958c55423869b2619fd37ab392e7835c"
+    },
+    {
+      "path": "web/app/planetarium/[person]/page.tsx",
+      "sha256": "b20836724b6c300c7098e12903496df301a4920210cc6592d540b49328643402"
+    },
+    {
+      "path": "web/app/planetarium/page.tsx",
+      "sha256": "7e86319347ce5e61bf21ae18eb588db6263035554842a7e31bbf47a61a90629a"
+    },
+    {
+      "path": "web/app/records/page.tsx",
+      "sha256": "95ab38a311e147ce738f8bde0a6f2f5c03ce9b8076916d03133a5da35b6bdac5"
+    },
+    {
+      "path": "web/artwork/asset-contract.ts",
+      "sha256": "ba59eac5fdd51295c380d870b141d52022c32fe224deed967b899c4ac2be0257"
+    },
+    {
+      "path": "web/artwork/catalog.ts",
+      "sha256": "6a759815d7b2bf3e059aed18a85d0a1450959c1bbed16aa8f6c2d8735a215624"
+    },
+    {
+      "path": "web/artwork/cosmic-catalog.generated.mjs",
+      "sha256": "0195657a356098c9fa7fdb1e0a54a3ab77047b099854efd8c88651cda6c2df8e"
+    },
+    {
+      "path": "web/artwork/cosmic-recipes.generated.mjs",
+      "sha256": "98110a1b10322443d73a3eb6d6496bcfcb91d1c2df4397427c6122041cb7aafc"
+    },
+    {
+      "path": "web/artwork/cosmic-scene.mjs",
+      "sha256": "2e9b1af1d46fafa9a1ae97d95687399a1183a6f54ab3ba481c68b98a928b4d48"
+    },
+    {
+      "path": "web/artwork/cosmic-state.mjs",
+      "sha256": "69c5fede45085eb479874630a78603e13b5fda5866c48414f545cebdfed5e755"
+    },
+    {
+      "path": "web/artwork/css-geometry.ts",
+      "sha256": "ca30e7eaeb6e2705f4f867daed770243319715a876507e2392f85240413297fd"
+    },
+    {
+      "path": "web/artwork/css-museum-people.mjs",
+      "sha256": "bb32573d1bdb74bc5c2d3267faccea3dad1fd1ecf72eb43ded3ce29ec1846139"
+    },
+    {
+      "path": "web/artwork/material-sphere-catalog.ts",
+      "sha256": "75240efe3c7ae5e7fc7a2e343117edfb0d67e8ed098a484286f966def2515a4f"
+    },
+    {
+      "path": "web/artwork/material-sphere-computation/dimension.mjs",
+      "sha256": "3f5090c856b86e8625886dd35f59368fdbbd1fd60b787fad21394f21179273b7"
+    },
+    {
+      "path": "web/artwork/material-sphere-computation/kernel.mjs",
+      "sha256": "3f16166f19cb4144fa8c9a5fd2acc0d521f3ba4fae6fd3c1eb4add7e02e656c4"
+    },
+    {
+      "path": "web/artwork/material-sphere-controls.mjs",
+      "sha256": "065943a3b2eed7f7f890970dfd9c6f0d407d01b6f08ee633918c1af398a18d12"
+    },
+    {
+      "path": "web/artwork/material-sphere-renderer.mjs",
+      "sha256": "6a2d85f4ce673925a570983f98c37694523e80a3fd539975c10c69f41b53e603"
+    },
+    {
+      "path": "web/artwork/measurement.ts",
+      "sha256": "26e4f708d398d45a5d1b415842e987586a1b3915f8e1af79e816f3c99551b0f7"
+    },
+    {
+      "path": "web/artwork/museum-character-availability.ts",
+      "sha256": "1565bec87ddb52892ab4226697060dbb182f69c950a074f242e430ecab61c29b"
+    },
+    {
+      "path": "web/artwork/museum-character.mjs",
+      "sha256": "0756b189fde1688935f2f1b07bfe9136fff69cb76b33f01825f51d6c20381e3b"
+    },
+    {
+      "path": "web/artwork/reference-physics-contract.mjs",
+      "sha256": "4d1495820c1b9dcf334accee1892edd4f0ead85f5575e7c91935518903b435ba"
+    },
+    {
+      "path": "web/artwork/threejs-reference-adapter.mjs",
+      "sha256": "99e2747a30820f9907a4a685f185dc7edfc3ae6fd5062a1e721bd1904d835941"
+    },
+    {
+      "path": "web/components/ArtistStudio.styles.ts",
+      "sha256": "2da07e52856623e8e21ee9f6be67325f20985aa4f1f87c47761a45ed01e9c30e"
+    },
+    {
+      "path": "web/components/ArtistStudio.tsx",
+      "sha256": "d9395fa44c6545afcc2806c95509b8a80df400d659c005c117365c2d50f2f8af"
+    },
+    {
+      "path": "web/components/ArtworkExperience.tsx",
+      "sha256": "87a70790dd0ef3330b31600f7ee0da3fbc311c531f440319273efb7e9faceed1"
+    },
+    {
+      "path": "web/components/CosmicExhibition.styles.ts",
+      "sha256": "5026028dd947301e68795b0edb977a0d6c56f804639d5a6cffb0a90557cfea1b"
+    },
+    {
+      "path": "web/components/CosmicExhibition.tsx",
+      "sha256": "e7f7042d0946215b1fadbd5434c82694478f20f555a9679552461861cbe55592"
+    },
+    {
+      "path": "web/components/CssArtistCharacter.styles.ts",
+      "sha256": "c2519b39de4e6cbfb84a0e2d1919baeb95a123425e399e1e2e783ccab8f425eb"
+    },
+    {
+      "path": "web/components/CssArtistCharacter.tsx",
+      "sha256": "ce60b25580a95a93e736811bdbfbf6c7c1dd474660f0aa595c73b4929a84679a"
+    },
+    {
+      "path": "web/components/CssArtwork.styles.ts",
+      "sha256": "80c6969d39fed5581415d59b33cd6aab6f6e6d89724d07eb32525711825ac848"
+    },
+    {
+      "path": "web/components/CssArtwork.tsx",
+      "sha256": "5f91c8fe4664b55dce30b7474ea837ff3793dd17968c455dd5c951f554b99631"
+    },
+    {
+      "path": "web/components/CssMuseumCharacter.styles.ts",
+      "sha256": "0cdea08e4f9d5cdcfcbcd819fb711230a8f49d8e200bf183dee075cdd80e4923"
+    },
+    {
+      "path": "web/components/CssMuseumCharacter.tsx",
+      "sha256": "559ab1c826a7909e2f61f6dae0d30cc569486bc3aa0efd42d1ebc33bc50fa3bd"
+    },
+    {
+      "path": "web/components/Gallery.styles.ts",
+      "sha256": "0118347d40bc10a9bfd36ab210a56b2c8d1c821ec43b169df35cef11e134af06"
+    },
+    {
+      "path": "web/components/Gallery.tsx",
+      "sha256": "00f9182f1d2fed67b06f2c7de7682de001109d6ee98c22c6d11c5935692ecda2"
+    },
+    {
+      "path": "web/components/MaterialSphere.generated.styles.ts",
+      "sha256": "983d0c677f324a35c098a7b2e1c8d6393078f4f421b7db6e692818267ceb09f3"
+    },
+    {
+      "path": "web/components/MaterialSphere.generated.tsx",
+      "sha256": "9d8f435523dd41cd2852c88b5ad7e8444f802c70742d213bba849318847e6fbf"
+    },
+    {
+      "path": "web/components/MaterialSphere.styles.ts",
+      "sha256": "9f19a46f3f18d5599d6832ff3377892a526ceb6799fe1b56918a4cc9fd999c77"
+    },
+    {
+      "path": "web/components/MaterialSphereExperience.tsx",
+      "sha256": "a0480d9e30f8c3fb66d85806b18e9998e4af9b5d1f40891d39846030b24cd5b0"
+    },
+    {
+      "path": "web/components/MaterialSphereGallery.tsx",
+      "sha256": "2d3026d2c3389943b310c2f240d3ff2aa9976dba034ddadc42e931351cf343fc"
+    },
+    {
+      "path": "web/components/MuseumCharacter.generated.styles.ts",
+      "sha256": "e90d0b6f89cc404c95c2c137687ba1530f9935b14c2de63d61c70e11231f2260"
+    },
+    {
+      "path": "web/components/MuseumCharacter.styles.ts",
+      "sha256": "2ae8a5e358fcce7632a2e1c23fe4684f201985accffecd8a01080dcd5b59dc15"
+    },
+    {
+      "path": "web/components/MuseumCharacter.tsx",
+      "sha256": "c3c4b861a50d58efdd7aeb0d756365fcc28dae6d1895bb05168a3f347b67c5f9"
+    },
+    {
+      "path": "web/components/PlanetMuseum.styles.ts",
+      "sha256": "fe1783391b8595feda9b8d17e2ba474a40db4f75630826c224e7e8d8834ddc9c"
+    },
+    {
+      "path": "web/components/PlanetMuseum.tsx",
+      "sha256": "9be2fe4db25642e83d75e3bfb7adb61b3896a90230c0a28424d10e05d09e7caf"
+    },
+    {
+      "path": "web/next.config.mjs",
+      "sha256": "35fe3344aba5d30d201ebb94db59f8646edb19a901688cf75cce206f46eb4d93"
+    },
+    {
+      "path": "web/plumeria.d.ts",
+      "sha256": "1879e1b9739a04a44842a8a3e2a256c56b7d2503ff131dcab9b66febd5751503"
+    },
+    {
+      "path": "web/public/characters/william-morris/evidence/chroma-despill-extended.json",
+      "sha256": "8b36034a1952692456cf3fcafec319fcdba6faa9f66711d155b3e53ef375794d"
+    },
+    {
+      "path": "web/public/characters/william-morris/evidence/direction-blind-validation.json",
+      "sha256": "48801a6b37764463b7cafecbc922f5b71c550f0e660fbd7ad1dd6ff7491bd821"
+    },
+    {
+      "path": "web/public/characters/william-morris/evidence/direction-semantics.json",
+      "sha256": "9df546d086c4c075ff916779398b33948c037b56275082032e14bf45013fa7d7"
+    },
+    {
+      "path": "web/public/characters/william-morris/evidence/look-continuity.json",
+      "sha256": "b7081ab44eddacc5da752ae56537deaab0e493e20c9b337a93591d85074a46ea"
+    },
+    {
+      "path": "web/public/characters/william-morris/evidence/review.json",
+      "sha256": "a468782b792ec6e34530c3580a8d561dee84b7bd222a3854f46bb590488f679e"
+    },
+    {
+      "path": "web/public/characters/william-morris/evidence/validation-extended.json",
+      "sha256": "f00b3c73e94610018f96f8f4056016ee6b79c9c1cc63f9b02d991d80364a3f6f"
+    },
+    {
+      "path": "web/public/characters/william-morris/evidence/visual-review.json",
+      "sha256": "a2b967a772badc7e2315fcdc9e68aa125c8dd97e0e969972299500d000dd5c51"
+    },
+    {
+      "path": "web/public/characters/william-morris/receipt.json",
+      "sha256": "9cfd1a2171709fd6a2b8a976e08ecfe95a8d78229c32a2b09a8bc59261c8f753"
+    },
+    {
+      "path": "web/public/characters/william-morris/spritesheet.webp",
+      "sha256": "b1cabd11511431b4230d21303222b0d8e09169144fa675ee624612c8a7946f67"
+    },
+    {
+      "path": "web/public/favicon.svg",
+      "sha256": "b2a54a1ce80bfa8b03ccbab7fd6c1e1c57a8f4e3c11c83be25fee5700fe1e744"
+    },
+    {
+      "path": "web/tsconfig.json",
+      "sha256": "c77757068271adb58670f7d2de2d253ef2ffe2918809f8460b6d624496293d19"
+    }
+  ],
+  "recordIdentifier": "1b6ff9b9-c071-5f0f-81ce-535a53e2ee66"
+}

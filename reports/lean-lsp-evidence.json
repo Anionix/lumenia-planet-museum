@@ -1,5 +1,8 @@
 {
-  "sourceRevision": "sha256:fa371b84fa47949a1c010e29b9545cb3671b586f9700f4df604d117be0605a2a",
+  "sourceRevision": "sha256:87ed8dc07a6cf314667c9e4f158ea72255a3130c220ca3192f1266e238231c76",
+  "sourceRevisionBefore": "sha256:87ed8dc07a6cf314667c9e4f158ea72255a3130c220ca3192f1266e238231c76",
+  "sourceRevisionAfter": "sha256:87ed8dc07a6cf314667c9e4f158ea72255a3130c220ca3192f1266e238231c76",
+  "checkStartedAtSourceRevision": "sha256:87ed8dc07a6cf314667c9e4f158ea72255a3130c220ca3192f1266e238231c76",
   "files": [
     {
       "path": "CONSTRAINTS.md",
@@ -20,6 +23,10 @@
     {
       "path": "contracts/cosmic-reference-images.json",
       "sha256": "022245e9b6fbfa5f2ddbb31b362b537777ee309d377cd810463b3182abeb7acc"
+    },
+    {
+      "path": "contracts/cosmic-reference-thumbnails.json",
+      "sha256": "625b82771ee1463fbe47d2841debaa586f8c49c845e8375cc0194202a673316e"
     },
     {
       "path": "contracts/css-artworks.json",
@@ -44,6 +51,10 @@
     {
       "path": "contracts/external-gates.json",
       "sha256": "72d221e87cfa69839658e2a29b9cdb383b531104aef17ee027a6313620bb1ecc"
+    },
+    {
+      "path": "contracts/review-verification.wl",
+      "sha256": "1e15364241033accac6305dc5abadeca6475004372353043bacb8b235970d531"
     },
     {
       "path": "contracts/verification-contract.schema.json",
@@ -82,6 +93,10 @@
       "sha256": "dc185dc0b11ffc1471061e7301249def8111ef69707876e0cf4ebb3ea05afb04"
     },
     {
+      "path": "formal/Lumenia/ReviewChecks.lean",
+      "sha256": "8c5a35d41c247e0260a2e01a6d55f13d23619b4b0dd74d4ddb01227c6ccccaef"
+    },
+    {
       "path": "formal/Lumenia/Tests.lean",
       "sha256": "329500e65c6d3c601e25d95d91de28d904ecf197b8b5a3ec1e95753b62a52995"
     },
@@ -111,7 +126,7 @@
     },
     {
       "path": "mcp/chrome-measurements.js",
-      "sha256": "1d052b24aa89a1145e3b38364951aa4f81f712f9983bf28e5b406c95e54d33c5"
+      "sha256": "054bd5b671c904ff6ffc8dd02d01c4acc9b7c61d3090709c4898d823ad455976"
     },
     {
       "path": "mcp/lean-lsp-mcp.json",
@@ -175,7 +190,7 @@
     },
     {
       "path": "reference-assets/artist-cosmos/explore/main.mjs",
-      "sha256": "0d4471dedf1b05074c71e85f98de67210bc51cafbd88b1fb60db59f7a2404c7c"
+      "sha256": "847e4110cc04ccaf711d85279c98bd44066c3e63d11dff5c81c88deb23544510"
     },
     {
       "path": "reference-assets/artist-cosmos/explore/navigation.mjs",
@@ -295,7 +310,7 @@
     },
     {
       "path": "reference-assets/artist-cosmos/interactive/main.mjs",
-      "sha256": "b22762da2169554fa5ebef0079a7dcb189a7b9e846517354d8a6c1862acf5c8b"
+      "sha256": "0becce2832328bad51d6d1dae08c73ec31f680060715a610dcb04577eedcfbbd"
     },
     {
       "path": "reference-assets/artist-cosmos/interactive/model.mjs",
@@ -320,6 +335,10 @@
     {
       "path": "reference-assets/artist-cosmos/interactive/tests/exhibition.test.mjs",
       "sha256": "de9004bed080f0a0571f905c25a87b8883a8755bdd0ed59405a714f64ebbd2c0"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/thumbnail.mjs",
+      "sha256": "ad475add726ee650f87821452c38b49db1b0ce58a5ebbfab710598adf78faa80"
     },
     {
       "path": "reference-assets/artist-cosmos/interactive/vendor/RAPIER-LICENSE.txt",
@@ -403,7 +422,7 @@
     },
     {
       "path": "reference-assets/artist-cosmos/interactive/webmcp.mjs",
-      "sha256": "9f825821aec1e5abcafb0e57c3f82a4ee104998a3024ca13d5d69872555bb015"
+      "sha256": "a72054421924eadfe10cd592ae7b9278440696b05e47207488eb74221143e1a9"
     },
     {
       "path": "reference-assets/artist-cosmos/josef-muller-brockmann.png",
@@ -434,6 +453,66 @@
       "sha256": "d75de875bc814bbc4cf6dbe85f6e1cdaf2a31340aaa06ab54a8c068f4345954b"
     },
     {
+      "path": "reference-assets/artist-cosmos/thumbnails/alphonse-mucha.webp",
+      "sha256": "95afa694862570e917208985a2afe17247abec194369aaf5aa718649f7f2a1f2"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/thumbnails/charles-eames.webp",
+      "sha256": "da6bb2d853023a420f54ee2488c132eaa88a66b744bdeb1b6d9301bc44116bcc"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/thumbnails/charles-rennie-mackintosh.webp",
+      "sha256": "8fdc23ff649c516dc5eef8d2bac0575613b142517e436cf0b9710b6cfc0ba727"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/thumbnails/dieter-rams.webp",
+      "sha256": "249ee97193242c22f01ce3b0a271f1d654cf3848d8519369f50f28e18f2b1417"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/thumbnails/ettore-sottsass.webp",
+      "sha256": "1a71a6b55bdb3938984fa6585ebb6a3a42c4eea38c730819ee1e9aa4df6a7370"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/thumbnails/gerrit-rietveld.webp",
+      "sha256": "ca7dafd332464695fb814383ea2a362ebdd0c27e5dee2d9332f3c0c6e7e0e493"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/thumbnails/herbert-bayer.webp",
+      "sha256": "390729746a58f1ab800021f0a1e5160cba8b85d6d8769c4ec881a69f87871e5b"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/thumbnails/josef-muller-brockmann.webp",
+      "sha256": "006b8cf6d35aa051a26e8dd42bcafb236f3c8b95ad6c9149707b1d2dd5775269"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/thumbnails/massimo-vignelli.webp",
+      "sha256": "34834ce2ee04962a3cc1e6296f19a032f69af70d08b67eafb6d75e025b664123"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/thumbnails/naoto-fukasawa.webp",
+      "sha256": "281a6f3f16eccb1fa562a39b8468144505947f953a981a856032f06333eba806"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/thumbnails/piet-mondrian.webp",
+      "sha256": "3cb143f171ad04c0afcb73c7bd1d01d6628bc895fd3d289a942e4dc5cc1a6325"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/thumbnails/ray-eames.webp",
+      "sha256": "4048c374067b91fac8e0e97b161c14d8328d272dd9ef3c5f1fb5553c91338ab3"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/thumbnails/rei-kawakubo.webp",
+      "sha256": "c7345e2afaf62c36e03757e7d2dd751158e7261d6850a1387888af63ef02efc1"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/thumbnails/walter-gropius.webp",
+      "sha256": "27e9d564215b2b9a7201a74e30a14bf6c4012b157c197c9c8fea7aad470f26bd"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/thumbnails/william-morris.webp",
+      "sha256": "e6c5a5598c7efcbf07cb2062fb1de34a7927e9716ca8d18766298532aa701e0a"
+    },
+    {
       "path": "reference-assets/artist-cosmos/walter-gropius.png",
       "sha256": "595059dbe0521bed0cff56afb278d8034344416ceb419f895d5afd6d6b589fb4"
     },
@@ -446,8 +525,12 @@
       "sha256": "ef94351ba2fc8e33d2f510136d43ffc9d7784654e88bffaee94da078772d6801"
     },
     {
+      "path": "scripts/audit-review-kernel.mjs",
+      "sha256": "e69699d14caaba0a914d7a4c0ca40fdf870c20fd1f6ce658c55d9eddbd35c7c3"
+    },
+    {
       "path": "scripts/browser-observations.mjs",
-      "sha256": "31eddef823b66065b8893ad6da5149712a534af3792c844d913be78fddba9355"
+      "sha256": "4c7af1a548a1c098c37f9a15825d5efee054573b78f8777ed7dea83d50ccea82"
     },
     {
       "path": "scripts/build-artwork.mjs",
@@ -467,11 +550,15 @@
     },
     {
       "path": "scripts/build-cosmic-images.mjs",
-      "sha256": "1f32dd06900e7c8fb874f490360e9b4b3b6a2e93297de3cee78348851ef0f0a0"
+      "sha256": "e1f9d428fa467771c73b043e45370448cc4e2b142b524f0339abfc14455a8b10"
     },
     {
       "path": "scripts/build-exploration.mjs",
       "sha256": "5fa07c6aa1d7e093fd785c1e929bb6c911885a1d3e50e425f7e75be90b55a3d7"
+    },
+    {
+      "path": "scripts/build-reference-thumbnails.mjs",
+      "sha256": "af86f5d73a5af96b1e6e23b2aea3b98c52082e1afe1ebfc9cf69e8a4202d1949"
     },
     {
       "path": "scripts/build-web.mjs",
@@ -499,7 +586,7 @@
     },
     {
       "path": "scripts/drawing-asset-policy.mjs",
-      "sha256": "57112eba494063e0cd5d1ba6fd154a09a9076758d222ae244e1380e2787e2af2"
+      "sha256": "b82f8d1f3a041a083788b9290f34a34c08e44a833765b10638fbff74fbe97d0d"
     },
     {
       "path": "scripts/exploration-recipes.mjs",
@@ -523,7 +610,7 @@
     },
     {
       "path": "scripts/language-server-evidence.mjs",
-      "sha256": "59fdf821773569b9dbd4b62527a64b29bf39adb2f923b345cbcd4fb185784898"
+      "sha256": "cabebf9637f1d3d7093ab648a291c7fa51a450436caeb33143e7d7f4cfc43275"
     },
     {
       "path": "scripts/measurement-context.mjs",
@@ -543,7 +630,7 @@
     },
     {
       "path": "scripts/run-application-check.mjs",
-      "sha256": "67168cefa1cd9519f265c3a0088573edf30b8f23cf5be61ba7f523ab9c31a00c"
+      "sha256": "53edfc032d35defcd5e2890e594f59c2f1e723177a8e838a0371ac7ec11f7f88"
     },
     {
       "path": "scripts/run-asset-reference-check.mjs",
@@ -551,7 +638,7 @@
     },
     {
       "path": "scripts/run-formal-check.mjs",
-      "sha256": "10a575905640953302c3d407665b9b7c012c47f8ca9f202044b1be0b4114eb56"
+      "sha256": "22114b17a2e8d6c0be28c96930739a338cb84a8c4c70a81dea90a9e1fc9c9c55"
     },
     {
       "path": "scripts/run-gates.mjs",
@@ -567,7 +654,7 @@
     },
     {
       "path": "scripts/source-revision.mjs",
-      "sha256": "2bc9a85fae617b28a3201c053652a9c08ee672985c472e8fac4e62001e2be88e"
+      "sha256": "0bc29e99a721a9e660f2941faeb5f058b14be99770871c2a9981e19b252daff5"
     },
     {
       "path": "scripts/stage-museum-character.mjs",
@@ -598,8 +685,12 @@
       "sha256": "58b34595cf2779a3f68419d620fc25e0b7dc25a21dc050ca5d40627b0670e3f8"
     },
     {
+      "path": "tests/browser-collector.test.mjs",
+      "sha256": "fe940c814d66c7a0f28241500f282a20c570bcf59bd688fd2eff09aa201f548b"
+    },
+    {
       "path": "tests/browser-observations.test.mjs",
-      "sha256": "6cb8c19cd493d4321fc6835cb1d8d4810d46482eb376c7d397e0d8b7b8fa80e4"
+      "sha256": "6592c6d0161e40911d29e3a3cb9f4c1c3112bbace220714cc457d42e8a046df6"
     },
     {
       "path": "tests/character-admission.test.mjs",
@@ -650,12 +741,20 @@
       "sha256": "327a7a5f3f93221bff98a3e067ef3f1ec46fdad500550f20040b0312351c1f02"
     },
     {
+      "path": "tests/reference-thumbnails.test.mjs",
+      "sha256": "ac2c9924e5ffce12d500dadb0182aa89023923d6809c8ef00cae112dedee2bce"
+    },
+    {
+      "path": "tests/review-verification.test.mjs",
+      "sha256": "b8268b99346f0e9d64181c967262911b25b3eec5f54ece7a1c8d136a45c25407"
+    },
+    {
       "path": "tests/threejs-reference-adapter.test.mjs",
       "sha256": "bddd1df4330aae164ebe89414bbf9f402d89214fa36d61079cf1b839b2c883b1"
     },
     {
       "path": "tests/webmcp.test.mjs",
-      "sha256": "0e79dce1cbef477dccc10780ed148c0335e6751867e200fcd837049dd0ae02fb"
+      "sha256": "97423fa0f56e26bc6495517da0ba18bd9a13bf67d6811346f4df285f55560c24"
     },
     {
       "path": "web/AGENTS.md",
@@ -906,234 +1005,6 @@
       "sha256": "b1cabd11511431b4230d21303222b0d8e09169144fa675ee624612c8a7946f67"
     },
     {
-      "path": "web/public/cosmos/alphonse-mucha.png",
-      "sha256": "57fe2c034be6dd3340464ab9852a79e8d8f12e8de46ee61b1d1af3f4801b09a0"
-    },
-    {
-      "path": "web/public/cosmos/charles-eames.png",
-      "sha256": "33c97fe0f290497c22f556293b923d7b4b5d5bcacf027b7a1ba34034974e8d37"
-    },
-    {
-      "path": "web/public/cosmos/charles-rennie-mackintosh.png",
-      "sha256": "81ee0b404ebe5e70465681397f6f2ea7ae82c85a4971f1524fdc7fc3e3be01a8"
-    },
-    {
-      "path": "web/public/cosmos/dieter-rams.png",
-      "sha256": "9b18c578a617c774b195ce2ddea6ef3c3cd2cf9562a60a5031df5b64742ff866"
-    },
-    {
-      "path": "web/public/cosmos/ettore-sottsass.png",
-      "sha256": "62f9f2086ffa001a9b5c326c4a4fb7eeba1ae4857fe9eb93a1f465349161cefa"
-    },
-    {
-      "path": "web/public/cosmos/explore/README.md",
-      "sha256": "f3734efaea1645d9d4c4a5837a11c38719cc6aa4e06e7090c286b020f2f2d409"
-    },
-    {
-      "path": "web/public/cosmos/explore/collision.mjs",
-      "sha256": "13f558e4d8f8c72391471366bcf741b807b75d676ee5f32bb38a3b8dbf8c48be"
-    },
-    {
-      "path": "web/public/cosmos/explore/geometry.mjs",
-      "sha256": "cef74914f09f2fba6facf47383761ec1cf521042780527cdf5672e4056684488"
-    },
-    {
-      "path": "web/public/cosmos/explore/index.html",
-      "sha256": "f7389559b538b733be0ba2f36e377095945d21c5e4ef243baaefa187152a1bfd"
-    },
-    {
-      "path": "web/public/cosmos/explore/main.mjs",
-      "sha256": "0d4471dedf1b05074c71e85f98de67210bc51cafbd88b1fb60db59f7a2404c7c"
-    },
-    {
-      "path": "web/public/cosmos/explore/navigation.mjs",
-      "sha256": "99b9a8816885b3b676b92e062f378d753129d036d6139e500cadfc2aa81aa4a5"
-    },
-    {
-      "path": "web/public/cosmos/explore/style.css",
-      "sha256": "954e429a5420d7dfee9876fc079f574dc1ac9561d2edf646c80e6f98d193236f"
-    },
-    {
-      "path": "web/public/cosmos/explore/worlds.json",
-      "sha256": "68a37e5a703e748a0e741c3defbbdf3e4a620f41dce92c7af7884cf03a79edff"
-    },
-    {
-      "path": "web/public/cosmos/explore/worlds/alphonse-mucha.json",
-      "sha256": "0f83d764f60976289e7fbc0c1dbdb67153766cfdfa646be7d913111b272850b7"
-    },
-    {
-      "path": "web/public/cosmos/explore/worlds/charles-eames.json",
-      "sha256": "65ffa39ad47261b6ee9208306ab3944d6f0db7d28060c571f54f9cac0acef827"
-    },
-    {
-      "path": "web/public/cosmos/explore/worlds/charles-rennie-mackintosh.json",
-      "sha256": "7ff646191074ec3e7ccf8b8eb3e0c4201e7d2ac05e9d6471e6e03b0f0ae4d2ea"
-    },
-    {
-      "path": "web/public/cosmos/explore/worlds/dieter-rams.json",
-      "sha256": "6eda4ca02aa1ed636d6d6c8196815c7067d619d33ceed6906592b22c4bfd217e"
-    },
-    {
-      "path": "web/public/cosmos/explore/worlds/ettore-sottsass.json",
-      "sha256": "fb3ac97e605e0175961f3c5caa2960ba5cea90d675e74ce7a7192d0bf44b672b"
-    },
-    {
-      "path": "web/public/cosmos/explore/worlds/gerrit-rietveld.json",
-      "sha256": "830919c67b451684ff5a4979d8ae2b8895a171e2512c554f8b0689181c08c82f"
-    },
-    {
-      "path": "web/public/cosmos/explore/worlds/herbert-bayer.json",
-      "sha256": "f8c4532a4adfa846bd96b84f4ee7b69c5cc7d9469fc7fe186db6647dcb56702b"
-    },
-    {
-      "path": "web/public/cosmos/explore/worlds/josef-muller-brockmann.json",
-      "sha256": "c8aa85237a82634db071cf1537798c03e52748242231a31d7ea90a0f29824aca"
-    },
-    {
-      "path": "web/public/cosmos/explore/worlds/massimo-vignelli.json",
-      "sha256": "8ee1785ab63f4b3d80a14a4caf295f14869af38b51d65ba6d8372c40d785958a"
-    },
-    {
-      "path": "web/public/cosmos/explore/worlds/naoto-fukasawa.json",
-      "sha256": "f93dc6864304ebf47aecb13272e71c80013acf80137ec77405f5822c669102d2"
-    },
-    {
-      "path": "web/public/cosmos/explore/worlds/piet-mondrian.json",
-      "sha256": "7eb0111d5a68e863c3dcd91f6b670f0089c4067d4e94e6fbb96ef4e842596eee"
-    },
-    {
-      "path": "web/public/cosmos/explore/worlds/ray-eames.json",
-      "sha256": "73adf919c358f6abe24a508fff81070caca45f246b7b8a53f0c537263e8f16fb"
-    },
-    {
-      "path": "web/public/cosmos/explore/worlds/rei-kawakubo.json",
-      "sha256": "69bb6af25b333be75f5ec25ace0bc821b801f6a92c445d1f2d2fd8d5f3fc2de4"
-    },
-    {
-      "path": "web/public/cosmos/explore/worlds/walter-gropius.json",
-      "sha256": "b2cb6370ecc3c6d4262a69223d5b5bc2300419d42b1777cebbc322ab28cc89b1"
-    },
-    {
-      "path": "web/public/cosmos/explore/worlds/william-morris.json",
-      "sha256": "3e82f60d3d049df3c318d34b4318ebac611692493be4a24d15ab297b89e35dec"
-    },
-    {
-      "path": "web/public/cosmos/gerrit-rietveld.png",
-      "sha256": "ca4d66b058126ed541e30ea886139ebfd2815740b6db8b538ca26f3c21305fc0"
-    },
-    {
-      "path": "web/public/cosmos/herbert-bayer.png",
-      "sha256": "1179f76272afc9eac1ac1b7b3ec6fcfcab9194bf000d27bbcd41e85cf25a8c3b"
-    },
-    {
-      "path": "web/public/cosmos/illustration-design-reference.jsonl",
-      "sha256": "5ff2c20d1969a6f83edf2520e3a10853e500e12bd87b15de85b0dc7b0f0eab9c"
-    },
-    {
-      "path": "web/public/cosmos/index.html",
-      "sha256": "3f98cb8943756dc2e35f3d1e0999d666dad5f3c158b83a85549b99639c049271"
-    },
-    {
-      "path": "web/public/cosmos/interactive/README.md",
-      "sha256": "494ddbf505fdf6bb914061d736c7f3797de174b91d3a37156d6d7937b2ba4e05"
-    },
-    {
-      "path": "web/public/cosmos/interactive/dependencies.json",
-      "sha256": "ec143940f4dd67e1c95f9d94e849c2b177abd484701a51528d8659f63054a141"
-    },
-    {
-      "path": "web/public/cosmos/interactive/exhibition.json",
-      "sha256": "108306a4418dd2b7740e2f7130cdac366adc5352d305722047dc41c1db96d616"
-    },
-    {
-      "path": "web/public/cosmos/interactive/index.html",
-      "sha256": "7fdcd4301499ff70f6eead1fbbb55489df4822988f44674db5a50c50b0eeaf53"
-    },
-    {
-      "path": "web/public/cosmos/interactive/main.mjs",
-      "sha256": "b22762da2169554fa5ebef0079a7dcb189a7b9e846517354d8a6c1862acf5c8b"
-    },
-    {
-      "path": "web/public/cosmos/interactive/model.mjs",
-      "sha256": "ba02dbf2d014e3673fd0033e97056a840d02c1db504987ff577922b94db00395"
-    },
-    {
-      "path": "web/public/cosmos/interactive/physics.mjs",
-      "sha256": "076dfd0f15f91d278eb51870d842c01e19e7ca3a77431c5d4bed658be6e45503"
-    },
-    {
-      "path": "web/public/cosmos/interactive/style.css",
-      "sha256": "1889ad1612d94417e05ca18522232110c3d510c09b3c5841ea5aad17c820b654"
-    },
-    {
-      "path": "web/public/cosmos/interactive/vendor/RAPIER-LICENSE.txt",
-      "sha256": "4c05555705e3efde601fb1252ae48f1d63992af8a8fb8947745b7fa834e8f519"
-    },
-    {
-      "path": "web/public/cosmos/interactive/vendor/THREE-LICENSE.txt",
-      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
-    },
-    {
-      "path": "web/public/cosmos/interactive/vendor/controls/OrbitControls.js",
-      "sha256": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b"
-    },
-    {
-      "path": "web/public/cosmos/interactive/vendor/rapier.mjs",
-      "sha256": "82b65114e949ed17969a5d0a3517b952f430ea524f4a19ce4a31e72fb7757f27"
-    },
-    {
-      "path": "web/public/cosmos/interactive/vendor/reference-physics-contract.mjs",
-      "sha256": "4d1495820c1b9dcf334accee1892edd4f0ead85f5575e7c91935518903b435ba"
-    },
-    {
-      "path": "web/public/cosmos/interactive/vendor/three.core.js",
-      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
-    },
-    {
-      "path": "web/public/cosmos/interactive/vendor/three.module.js",
-      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
-    },
-    {
-      "path": "web/public/cosmos/interactive/webmcp.mjs",
-      "sha256": "9f825821aec1e5abcafb0e57c3f82a4ee104998a3024ca13d5d69872555bb015"
-    },
-    {
-      "path": "web/public/cosmos/josef-muller-brockmann.png",
-      "sha256": "75a303ac4c65d1608c6ffb3f2f3ce70a2191aacb0980713dccfa4c8ce29a13cd"
-    },
-    {
-      "path": "web/public/cosmos/massimo-vignelli.png",
-      "sha256": "68c567fa35979197d5652c822492322a995378ec30c20aa0f965db10bc4c7fc7"
-    },
-    {
-      "path": "web/public/cosmos/naoto-fukasawa.png",
-      "sha256": "c1d81e3a60c2e9859fe9c4c1fabd7fc27dc17d1b053d8cc2bbde8cf409b60f3a"
-    },
-    {
-      "path": "web/public/cosmos/piet-mondrian.png",
-      "sha256": "66ab2202b937935af83683534d1a667cc8e291dd5cb40049b29232439f9eb8da"
-    },
-    {
-      "path": "web/public/cosmos/ray-eames.png",
-      "sha256": "c4933e043eb1931a3bb4f64bb83821fbbca0b081298808c373adc12167c3b3f8"
-    },
-    {
-      "path": "web/public/cosmos/references.jsonl",
-      "sha256": "5d4f42946a7bd355d7f2540bafa7b5e4e85bfae93f81f6d0310044a9228b8ace"
-    },
-    {
-      "path": "web/public/cosmos/rei-kawakubo.png",
-      "sha256": "d75de875bc814bbc4cf6dbe85f6e1cdaf2a31340aaa06ab54a8c068f4345954b"
-    },
-    {
-      "path": "web/public/cosmos/walter-gropius.png",
-      "sha256": "595059dbe0521bed0cff56afb278d8034344416ceb419f895d5afd6d6b589fb4"
-    },
-    {
-      "path": "web/public/cosmos/william-morris.png",
-      "sha256": "d7485b0b48ab20c6ef5b369f0206db25137aac82021054cc1b8c8b4fb437d7a0"
-    },
-    {
       "path": "web/public/favicon.svg",
       "sha256": "b2a54a1ce80bfa8b03ccbab7fd6c1e1c57a8f4e3c11c83be25fee5700fe1e744"
     },
@@ -1142,8 +1013,9 @@
       "sha256": "c77757068271adb58670f7d2de2d253ef2ffe2918809f8460b6d624496293d19"
     }
   ],
-  "executionIdentifier": "01a0a5bf-3b40-7143-81e8-42d3046c45fa",
-  "recordedAt": "2026-09-15T15:46:08.321Z",
+  "executionIdentifier": "01a0a9c6-c101-794e-b225-4b01c529c05f",
+  "startedAt": "2026-09-16T10:32:50.177Z",
+  "recordedAt": "2026-09-16T10:38:18.672Z",
   "checks": [
     {
       "tool": "lean_build",
@@ -1166,6 +1038,9 @@
     {
       "tool": "lean_diagnostic_messages",
       "target": "Lumenia.asset_checks_iff_requirements",
+      "arguments": {
+        "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean"
+      },
       "response": {
         "content": [
           {
@@ -1187,6 +1062,10 @@
     {
       "tool": "lean_file_outline",
       "target": "Lumenia.asset_checks_iff_requirements",
+      "arguments": {
+        "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+        "max_declarations": 40
+      },
       "response": {
         "content": [
           {
@@ -1528,6 +1407,11 @@
     {
       "tool": "lean_hover_info",
       "target": "Lumenia.asset_checks_iff_requirements",
+      "arguments": {
+        "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+        "line": 30,
+        "column": 9
+      },
       "response": {
         "content": [
           {
@@ -1546,6 +1430,10 @@
     {
       "tool": "lean_goal",
       "target": "Lumenia.asset_checks_iff_requirements",
+      "arguments": {
+        "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+        "line": 57
+      },
       "response": {
         "content": [
           {
@@ -1565,6 +1453,11 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.asset_checks_iff_requirements",
+      "arguments": {
+        "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.asset_checks_iff_requirements",
+        "scan_source": true
+      },
       "response": {
         "content": [
           {
@@ -1582,6 +1475,11 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.validate_raw_asset_accepts_iff",
+      "arguments": {
+        "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.validate_raw_asset_accepts_iff",
+        "scan_source": true
+      },
       "response": {
         "content": [
           {
@@ -1599,6 +1497,11 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.validate_raw_asset_rejects_iff",
+      "arguments": {
+        "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.validate_raw_asset_rejects_iff",
+        "scan_source": true
+      },
       "response": {
         "content": [
           {
@@ -1616,6 +1519,11 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.validate_raw_asset_preserves_input",
+      "arguments": {
+        "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.validate_raw_asset_preserves_input",
+        "scan_source": true
+      },
       "response": {
         "content": [
           {
@@ -1633,6 +1541,11 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.validate_raw_asset_sound",
+      "arguments": {
+        "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.validate_raw_asset_sound",
+        "scan_source": true
+      },
       "response": {
         "content": [
           {
@@ -1650,6 +1563,11 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.validated_asset_satisfies_requirements",
+      "arguments": {
+        "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.validated_asset_satisfies_requirements",
+        "scan_source": true
+      },
       "response": {
         "content": [
           {
@@ -1667,6 +1585,11 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.meshopt_variants_are_exclusive",
+      "arguments": {
+        "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.meshopt_variants_are_exclusive",
+        "scan_source": true
+      },
       "response": {
         "content": [
           {
@@ -1684,6 +1607,11 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.extension_meshopt_requires_decoder",
+      "arguments": {
+        "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.extension_meshopt_requires_decoder",
+        "scan_source": true
+      },
       "response": {
         "content": [
           {
@@ -1701,6 +1629,11 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.khronos_meshopt_requires_decoder",
+      "arguments": {
+        "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.khronos_meshopt_requires_decoder",
+        "scan_source": true
+      },
       "response": {
         "content": [
           {
@@ -1718,6 +1651,11 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.ktx2_requires_loader",
+      "arguments": {
+        "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.ktx2_requires_loader",
+        "scan_source": true
+      },
       "response": {
         "content": [
           {
@@ -1735,6 +1673,11 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.draco_requires_loader",
+      "arguments": {
+        "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.draco_requires_loader",
+        "scan_source": true
+      },
       "response": {
         "content": [
           {
@@ -1752,6 +1695,11 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.draco_is_enabled_iff_explicit",
+      "arguments": {
+        "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.draco_is_enabled_iff_explicit",
+        "scan_source": true
+      },
       "response": {
         "content": [
           {
@@ -1769,6 +1717,11 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.named_nodes_require_preservation",
+      "arguments": {
+        "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.named_nodes_require_preservation",
+        "scan_source": true
+      },
       "response": {
         "content": [
           {
@@ -1786,6 +1739,11 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.extras_require_preservation",
+      "arguments": {
+        "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.extras_require_preservation",
+        "scan_source": true
+      },
       "response": {
         "content": [
           {
@@ -1803,6 +1761,11 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.both_meshopt_flags_reject",
+      "arguments": {
+        "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.both_meshopt_flags_reject",
+        "scan_source": true
+      },
       "response": {
         "content": [
           {
@@ -1820,40 +1783,11 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.missing_meshopt_decoder_rejects",
-      "response": {
-        "content": [
-          {
-            "type": "text",
-            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
-          }
-        ],
-        "structuredContent": {
-          "axioms": [],
-          "warnings": []
-        },
-        "isError": false
-      }
-    },
-    {
-      "tool": "lean_verify",
-      "target": "Lumenia.shipped_requires_validation",
-      "response": {
-        "content": [
-          {
-            "type": "text",
-            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
-          }
-        ],
-        "structuredContent": {
-          "axioms": [],
-          "warnings": []
-        },
-        "isError": false
-      }
-    },
-    {
-      "tool": "lean_verify",
-      "target": "Lumenia.shipment_trace_is_exactly_optimize_validate_ship",
+      "arguments": {
+        "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.missing_meshopt_decoder_rejects",
+        "scan_source": true
+      },
       "response": {
         "content": [
           {
@@ -1871,6 +1805,33 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.shipped_history_requires_asset_requirements",
+      "arguments": {
+        "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.shipped_history_requires_asset_requirements",
+        "scan_source": true
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "axioms": [],
+          "warnings": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_verify",
+      "target": "Lumenia.shipped_requires_validation",
+      "arguments": {
+        "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.shipped_requires_validation",
+        "scan_source": true
+      },
       "response": {
         "content": [
           {
@@ -1888,6 +1849,33 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.invalid_asset_has_no_shipped_history",
+      "arguments": {
+        "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.invalid_asset_has_no_shipped_history",
+        "scan_source": true
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"axioms\": [],\n  \"warnings\": []\n}"
+          }
+        ],
+        "structuredContent": {
+          "axioms": [],
+          "warnings": []
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "lean_verify",
+      "target": "Lumenia.shipment_trace_is_exactly_optimize_validate_ship",
+      "arguments": {
+        "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.shipment_trace_is_exactly_optimize_validate_ship",
+        "scan_source": true
+      },
       "response": {
         "content": [
           {
@@ -1905,6 +1893,11 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.browser_capability_requires_client_component",
+      "arguments": {
+        "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.browser_capability_requires_client_component",
+        "scan_source": true
+      },
       "response": {
         "content": [
           {
@@ -1922,6 +1915,11 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.static_export_cannot_require_server_only",
+      "arguments": {
+        "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.static_export_cannot_require_server_only",
+        "scan_source": true
+      },
       "response": {
         "content": [
           {
@@ -1939,6 +1937,11 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.accepted_component_places_browser_requirements_on_client",
+      "arguments": {
+        "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.accepted_component_places_browser_requirements_on_client",
+        "scan_source": true
+      },
       "response": {
         "content": [
           {
@@ -1956,6 +1959,11 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.client_component_cannot_require_server_only",
+      "arguments": {
+        "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.client_component_cannot_require_server_only",
+        "scan_source": true
+      },
       "response": {
         "content": [
           {
@@ -1973,6 +1981,11 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.core_transfer_total_within_budget",
+      "arguments": {
+        "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.core_transfer_total_within_budget",
+        "scan_source": true
+      },
       "response": {
         "content": [
           {
@@ -1990,6 +2003,11 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.category_budget_total_is_204800_bytes",
+      "arguments": {
+        "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.category_budget_total_is_204800_bytes",
+        "scan_source": true
+      },
       "response": {
         "content": [
           {
@@ -2007,6 +2025,11 @@
     {
       "tool": "lean_verify",
       "target": "Lumenia.measured_gate_pass_iff",
+      "arguments": {
+        "file_path": "/private/tmp/lumenia-image-exploration/formal/Lumenia/Proofs.lean",
+        "theorem_name": "Lumenia.measured_gate_pass_iff",
+        "scan_source": true
+      },
       "response": {
         "content": [
           {
@@ -2020,79 +2043,6 @@
         },
         "isError": false
       }
-    }
-  ],
-  "verifiedInputScope": "Root Lean modules, toolchain, Lake configuration and theorem registry; byte-identical before and after the checks. UI and image publication changes are independently tested.",
-  "checkStartedAtSourceRevision": "sha256:abbc6a923a028deddb37b5bcebe433e1c9ae170ace10016800cb23ad2dfb99f9",
-  "verifiedInputs": [
-    {
-      "path": "contracts/claims.json",
-      "sha256": "2250c5046c0a3c1a0836267d3b4823b255cce0303b25ff3fa76c8fe9060da087"
-    },
-    {
-      "path": "formal/Lumenia.lean",
-      "sha256": "0f9ee325f4c9bf73d42edfeb1b059cb4b66de230ba6983256fbe46bcb26fd779"
-    },
-    {
-      "path": "formal/Lumenia/AxiomAudit.lean",
-      "sha256": "a2ac9deab960ba87a619b4d76866e2dea1699c610d049ba0e54b0379eb8daf00"
-    },
-    {
-      "path": "formal/Lumenia/Boundary.lean",
-      "sha256": "41be9e4293f8f54e671150aa2f1afadc27d0393f865af9ebdbdcb6bb8ea363c3"
-    },
-    {
-      "path": "formal/Lumenia/CosmicExhibition.lean",
-      "sha256": "59397a93a57427b38da7a09b275d5164ba64a58136ee7c53d39abcbbfb16aeda"
-    },
-    {
-      "path": "formal/Lumenia/CosmicExhibitionAudit.lean",
-      "sha256": "cc87c7c5abcb146d49ea79e7c638ca3a86911efccb4f66051b0b3c08416650bd"
-    },
-    {
-      "path": "formal/Lumenia/Model.lean",
-      "sha256": "0f528929e0243d7f922a9d7f9603eed43e8c0e13c6f44a86922f06dad82a0b06"
-    },
-    {
-      "path": "formal/Lumenia/Proofs.lean",
-      "sha256": "dc185dc0b11ffc1471061e7301249def8111ef69707876e0cf4ebb3ea05afb04"
-    },
-    {
-      "path": "formal/Lumenia/Tests.lean",
-      "sha256": "329500e65c6d3c601e25d95d91de28d904ecf197b8b5a3ec1e95753b62a52995"
-    },
-    {
-      "path": "formal/Main.lean",
-      "sha256": "8b3eeea5ac3bcfb89963c5064a1307da6cb975ca5a89eb109319f2bce377e715"
-    },
-    {
-      "path": "lake-manifest.json",
-      "sha256": "4273a8dd6528dfcfc627997ee3f06313b97d795918cfc09b5ae65821723e54fb"
-    },
-    {
-      "path": "lakefile.toml",
-      "sha256": "450866fae5ba7ab3c9d0b025436f30ea29e39124837b035b428bd40233048c62"
-    },
-    {
-      "path": "lean-toolchain",
-      "sha256": "db7bb24b756d745bbde83fe92718b51bd3625dae3701ba0f598d0eedcd3f3028"
-    }
-  ],
-  "bindingHistory": [
-    {
-      "executionIdentifier": "01a0a762-856b-70f8-9984-b7801024f20f",
-      "recordedAt": "2026-09-15T23:24:06.891Z",
-      "previousSourceRevision": "sha256:81baf2dec9fb672eb9c37d13fda9695911748f4408e5fe1673ec241b58d14bab",
-      "sourceRevision": "sha256:e81a712d0bb4f40024df879541bb7a916324c4bf0920bbcde3a7f98baa5f5e53",
-      "verifiedInputsUnchanged": true
-    },
-    {
-      "executionIdentifier": "01a0a98a-19dc-753e-8d52-62b30574dfda",
-      "recordedAt": "2026-09-16T09:26:35.228Z",
-      "previousSourceRevision": "sha256:e81a712d0bb4f40024df879541bb7a916324c4bf0920bbcde3a7f98baa5f5e53",
-      "sourceRevision": "sha256:fa371b84fa47949a1c010e29b9545cb3671b586f9700f4df604d117be0605a2a",
-      "verifiedInputsUnchanged": true,
-      "reason": "Reused existing language-server observations after exact comparison of all 13 verified proof inputs. WebMCP behavior is tested separately."
     }
   ]
 }

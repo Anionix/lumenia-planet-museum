@@ -1,0 +1,262 @@
+{
+  "scannedPullRequests": [
+    21,
+    19,
+    18,
+    17,
+    16,
+    15,
+    14,
+    10,
+    9,
+    8,
+    4,
+    3
+  ],
+  "sourceCommit": "544d928451833318e41b32d8a733e7343dea4d9f",
+  "collectedAt": "2026-09-16T09:52:52.939Z",
+  "comments": [
+    {
+      "pullRequest": 21,
+      "id": 4024644042,
+      "url": "https://github.com/Anionix/lumenia-planet-museum/pull/21#discussion_r4024644042",
+      "body": "**<sub><sub>![P2 Badge](https://img.shields.io/badge/P2-yellow?style=flat)</sub></sub>  Validate all requested exhibition state before completing**\n\nWhen `configure_image_exhibition` waits for `loadAllTextures()`, the normal view, playback, physics, and gravity controls remain active. If a user changes any of those settings during that wait, this check verifies only the selected artist, so the tool reports `complete` even though the resulting state no longer matches the requested configuration. Capture and compare all requested fields before returning, or prevent concurrent UI changes.\n\nUseful? React with 👍 / 👎.",
+      "path": "reference-assets/artist-cosmos/interactive/main.mjs",
+      "line": 216
+    },
+    {
+      "pullRequest": 19,
+      "id": 4021234772,
+      "url": "https://github.com/Anionix/lumenia-planet-museum/pull/19#discussion_r4021234772",
+      "body": "**<sub><sub>![P1 Badge](https://img.shields.io/badge/P1-orange?style=flat)</sub></sub>  Rerun LSP checks instead of rebinding stale responses**\n\nThis changes the receipt to the new source revision while retaining the earlier `executionIdentifier`, timestamp, and MCP responses; the added `bindingHistory` merely asserts that selected inputs stayed unchanged. `run-formal-check.mjs` only compares this top-level `sourceRevision` with the current manifest and evaluates the stored responses—it never validates `verifiedInputs` or the rebinding history—so this causes the current proof report to pass without running the six LSP checks for this revision, contrary to the stale-evidence behavior documented in `README.md:48`. Preserve the original revision and rerun the MCP checks, or implement and validate scoped evidence reuse before marking the new revision as covered.\n\nUseful? React with 👍 / 👎.",
+      "path": "reports/lean-lsp-evidence.json",
+      "line": 2
+    },
+    {
+      "pullRequest": 17,
+      "id": 4017991710,
+      "url": "https://github.com/Anionix/lumenia-planet-museum/pull/17#discussion_r4017991710",
+      "body": "**<sub><sub>![P2 Badge](https://img.shields.io/badge/P2-yellow?style=flat)</sub></sub>  Regenerate the browser evidence against the final sources**\n\nThis receipt does not describe the committed implementation: the recorded `main.mjs` digest is `74511e…`, while this commit contains `7c7e7f…`; the recorded geometry and world digests likewise differ from their committed files. These files contain the final collision-loading, color-output, and scene changes, so the claimed on-screen navigation and collision results were obtained from an earlier revision and cannot validate the code being reviewed. Regenerate the browser run after the final changes or clearly mark this receipt as superseded.\n\nUseful? React with 👍 / 👎.",
+      "path": "reports/sottsass-exploration-browser.json",
+      "line": 38
+    },
+    {
+      "pullRequest": 16,
+      "id": 4017723443,
+      "url": "https://github.com/Anionix/lumenia-planet-museum/pull/16#discussion_r4017723443",
+      "body": "**<sub><sub>![P1 Badge](https://img.shields.io/badge/P1-orange?style=flat)</sub></sub>  Bind the receipt to the committed source digest**\n\nFor the recorded `sourceCommit`, a clean archive evaluated by `scripts/source-revision.mjs` produces `sha256:195980a457dfe88b376ca59c55f018a7f38dd97e81881c6cec38931ddf5a98b1`, not the stored `81baf2…` value. The latter manifest includes 33 generated files under the gitignored `web/public/cosmos/` directory, which are absent from both the commit and its archive. Consequently the publication receipt and the pass reports keyed to this revision cannot be authenticated from the committed source; generate the revision before staging these outputs or exclude that generated directory.\n\nUseful? React with 👍 / 👎.",
+      "path": "reports/cosmic-images-publication.json",
+      "line": 6
+    },
+    {
+      "pullRequest": 15,
+      "id": 4017602269,
+      "url": "https://github.com/Anionix/lumenia-planet-museum/pull/15#discussion_r4017602269",
+      "body": "**<sub><sub>![P2 Badge](https://img.shields.io/badge/P2-yellow?style=flat)</sub></sub>  Avoid loading full originals for every thumbnail**\n\nOn a wide desktop, all 15 buttons fit in or near the visible horizontal strip, so assigning every thumbnail the original `image_url` causes the browser to fetch the entire 35.9 MiB image set during the initial single-image view; `loading=\"lazy\"` does not defer images already near the viewport. This defeats the intended on-demand loading and substantially slows first load, especially on constrained connections. Use dedicated thumbnail assets or assign each thumbnail source only when it enters the strip viewport.\n\nUseful? React with 👍 / 👎.",
+      "path": "reference-assets/artist-cosmos/interactive/main.mjs",
+      "line": 288
+    },
+    {
+      "pullRequest": 14,
+      "id": 4017401186,
+      "url": "https://github.com/Anionix/lumenia-planet-museum/pull/14#discussion_r4017401186",
+      "body": "**<sub><sub>![P1 Badge](https://img.shields.io/badge/P1-orange?style=flat)</sub></sub>  Align the collector with HEAD reconciliation**\n\nWhen a `Link` navigation produces the HEAD/`ERR_ABORTED` sequence this change is intended to accept, the committed collector cannot satisfy these predicates: `mcp/chrome-measurements.js:25-29` never creates `run.requests` and records the failure text as `reason` without a request method, while this code requires `requests`, `failure.method`, and `failure.error`. Moreover, that collector sets `run.functional` to false whenever `failedRequests` is nonempty at lines 153-155. Consequently an actual capture still classifies the route transfer as unknown and the Chrome functionality gate as failed; update the capture schema and compute functionality after reconciliation rather than only adjusting the synthetic fixture.\n\nUseful? React with 👍 / 👎.",
+      "path": "scripts/browser-observations.mjs",
+      "line": 51
+    },
+    {
+      "pullRequest": 3,
+      "id": 4011767541,
+      "url": "https://github.com/Anionix/lumenia-planet-museum/pull/3#discussion_r4011767541",
+      "body": "**<sub><sub>![P1 Badge](https://img.shields.io/badge/P1-orange?style=flat)</sub></sub>  Populate the request trace required by classification**\n\nWhen measurements are produced by the checked-in `mcp/chrome-measurements.js`, the run object never receives a `requests` property: the collector only retains `errors`, `failedRequests`, and `interactions` at line 42. Consequently `isConfirmedHeaderCheck` always rejects the extensionless `HEAD /records/` timing, so the transfer remains unclassified and `summary.complete` stays false in the exact scenario this change is intended to fix. Record the request URL, method, and resource type in the collector before requiring that evidence here.\n\nUseful? React with 👍 / 👎.",
+      "path": "scripts/browser-observations.mjs",
+      "line": 34
+    },
+    {
+      "pullRequest": 3,
+      "id": 4011767546,
+      "url": "https://github.com/Anionix/lumenia-planet-museum/pull/3#discussion_r4011767546",
+      "body": "**<sub><sub>![P1 Badge](https://img.shields.io/badge/P1-orange?style=flat)</sub></sub>  Emit the failure fields used for reconciliation**\n\nThe checked-in collector records a failed request as `{ url, reason }` at `mcp/chrome-measurements.js:28`, whereas this predicate requires `failure.method` and `failure.error`. Thus an actual `net::ERR_ABORTED` notification can never enter `reconciledRequestFailures`, even after the successful HEAD response is classified. Update the producer and consumer to use the same failure-record schema.\n\nUseful? React with 👍 / 👎.",
+      "path": "scripts/browser-observations.mjs",
+      "line": 50
+    },
+    {
+      "pullRequest": 3,
+      "id": 4011767550,
+      "url": "https://github.com/Anionix/lumenia-planet-museum/pull/3#discussion_r4011767550",
+      "body": "**<sub><sub>![P1 Badge](https://img.shields.io/badge/P1-orange?style=flat)</sub></sub>  Base functionality on the reconciled failure set**\n\nIn the intended HEAD-abort scenario, `mcp/chrome-measurements.js:153-156` has already set `run.functional` to false because it requires `failedRequests.length === 0`. Requiring `run.functional === true` here therefore prevents a real reconciled abort from ever producing a functional stage; the test misses this because it appends the failure after constructing a fixture whose `functional` flag is already true. Recompute the relevant functional conditions after reconciliation or change the collector's flag semantics.\n\nUseful? React with 👍 / 👎.",
+      "path": "scripts/browser-observations.mjs",
+      "line": 55
+    }
+  ],
+  "issues": [
+    {
+      "recordIdentifier": "7d4e6480-ec4d-5aef-9d05-661556e308cb",
+      "title": "画像の読込中に設定が変わっても、WebMCPが完了を返す",
+      "url": "https://github.com/Anionix/lumenia-planet-museum/issues/22",
+      "issue_number": 22,
+      "body": "## 起きていること\n\n画像の読込待ちの間に利用者が並べ方・再生・物理演算・重力を変更すると、作家だけを確認する完了処理が、指定した設定と違う状態でも成功を返します。\n\n## 完了条件\n\n- [ ] 要求された作家・並べ方・再生・物理演算・重力を、描画後の状態と照合する。\n- [ ] 設定が割り込まれた場合は成功と報告しない。\n- [ ] 画像の読込待ちと描画待ちの両方に割り込みを入れる回帰検査を追加する。\n- [ ] 特徴座標を変更しない。\n\n## 起点となる一次資料\n\n- [変更提案21の指摘](https://github.com/Anionix/lumenia-planet-museum/pull/21#discussion_r4024644042)\n- [確認対象のファイル](https://github.com/Anionix/lumenia-planet-museum/blob/544d928451833318e41b32d8a733e7343dea4d9f/reference-assets/artist-cosmos/interactive/main.mjs)\n\nこの課題の作成は修正完了を意味しません。検算・実行検査・公開確認を分けて記録します。\n\n<!-- machine contract; record_identifier=7d4e6480-ec4d-5aef-9d05-661556e308cb; execution_identifier=01a0a99f-f237-73d3-aed7-ed85afb664f9; recorded_at=2026-09-16T09:50:26.872Z; transition=review comment -> deduplicated issue -> verification -> reviewed correction -->",
+      "state": "open",
+      "user": {
+        "login": "Anionix",
+        "name": "Anionix",
+        "email": null,
+        "avatar_url": "https://avatars.githubusercontent.com/u/134016296?v=4",
+        "id": 134016296
+      },
+      "assignees": null,
+      "labels": null,
+      "milestone": null,
+      "state_reason": null,
+      "comments": 0,
+      "created_at": "2026-09-16T09:51:45Z",
+      "updated_at": "2026-09-16T09:51:45Z",
+      "closed_at": null,
+      "display_url": "https://github.com/Anionix/lumenia-planet-museum/issues/22",
+      "display_title": "画像の読込中に設定が変わっても、WebMCPが完了を返す",
+      "sourceComments": [
+        4024644042
+      ]
+    },
+    {
+      "recordIdentifier": "5c51405c-2fe3-5546-8621-278af8174a55",
+      "title": "Leanの過去の検証応答が、版番号の更新だけで現在の証拠として通る",
+      "url": "https://github.com/Anionix/lumenia-planet-museum/issues/23",
+      "issue_number": 23,
+      "body": "## 起きていること\n\n言語サーバーの過去の応答を保持したまま資料全体の版番号を更新しています。検査側は対象ファイルの一覧と変更履歴を検証しないため、現在の版で実行した検証と区別できません。数理的な証明そのものと、実行記録の鮮度は別の問題です。\n\n## 完了条件\n\n- [ ] 現在の対象で言語サーバーの6種類の検査を実行し、各対象定理の公理依存を確認する。\n- [ ] 過去の実行時刻・応答・版番号を保全する。\n- [ ] 記録を再利用する場合は、対象範囲・全入力・道具の版の一致を機械的に検査する。\n- [ ] 入力が変わった記録、一覧が欠けた記録を合格にしない。\n\n## 起点となる一次資料\n\n- [変更提案19の指摘](https://github.com/Anionix/lumenia-planet-museum/pull/19#discussion_r4021234772)\n- [確認対象のファイル](https://github.com/Anionix/lumenia-planet-museum/blob/544d928451833318e41b32d8a733e7343dea4d9f/scripts/run-formal-check.mjs)\n\nこの課題の作成は修正完了を意味しません。検算・実行検査・公開確認を分けて記録します。\n\n<!-- machine contract; record_identifier=5c51405c-2fe3-5546-8621-278af8174a55; execution_identifier=01a0a99f-f237-73d3-aed7-ed85afb664f9; recorded_at=2026-09-16T09:50:26.872Z; transition=review comment -> deduplicated issue -> verification -> reviewed correction -->",
+      "state": "open",
+      "user": {
+        "login": "Anionix",
+        "name": "Anionix",
+        "email": null,
+        "avatar_url": "https://avatars.githubusercontent.com/u/134016296?v=4",
+        "id": 134016296
+      },
+      "assignees": null,
+      "labels": null,
+      "milestone": null,
+      "state_reason": null,
+      "comments": 0,
+      "created_at": "2026-09-16T09:51:53Z",
+      "updated_at": "2026-09-16T09:51:53Z",
+      "closed_at": null,
+      "display_url": "https://github.com/Anionix/lumenia-planet-museum/issues/23",
+      "display_title": "Leanの過去の検証応答が、版番号の更新だけで現在の証拠として通る",
+      "sourceComments": [
+        4021234772
+      ]
+    },
+    {
+      "recordIdentifier": "41bec436-1970-5704-80b5-0725115037f2",
+      "title": "探索のブラウザー確認記録が、確認対象のコードと一致しない",
+      "url": "https://github.com/Anionix/lumenia-planet-museum/issues/24",
+      "issue_number": 24,
+      "body": "## 起きていること\n\nソットサスの探索記録に含まれる処理・形状・世界設定の内容識別値が、その変更提案に保存されたファイルと一致しません。古い記録を現在の描画・衝突の証拠として使えません。\n\n## 完了条件\n\n- [ ] 記録の各入力を対象の保存版と照合する。\n- [ ] 旧記録は履歴として保全し、置き換え済みと明記する。\n- [ ] 現在の版で移動・環の通過・衝突・復帰を確認した記録を、確認した対象範囲とともに参照する。\n- [ ] 不一致の古い記録だけで現在の確認が完了しない検査を用意する。\n\n## 起点となる一次資料\n\n- [変更提案17の指摘](https://github.com/Anionix/lumenia-planet-museum/pull/17#discussion_r4017991710)\n- [確認対象のファイル](https://github.com/Anionix/lumenia-planet-museum/blob/544d928451833318e41b32d8a733e7343dea4d9f/reports/sottsass-exploration-browser.json)\n\nこの課題の作成は修正完了を意味しません。検算・実行検査・公開確認を分けて記録します。\n\n<!-- machine contract; record_identifier=41bec436-1970-5704-80b5-0725115037f2; execution_identifier=01a0a99f-f237-73d3-aed7-ed85afb664f9; recorded_at=2026-09-16T09:50:26.872Z; transition=review comment -> deduplicated issue -> verification -> reviewed correction -->",
+      "state": "open",
+      "user": {
+        "login": "Anionix",
+        "name": "Anionix",
+        "email": null,
+        "avatar_url": "https://avatars.githubusercontent.com/u/134016296?v=4",
+        "id": 134016296
+      },
+      "assignees": null,
+      "labels": null,
+      "milestone": null,
+      "state_reason": null,
+      "comments": 0,
+      "created_at": "2026-09-16T09:51:59Z",
+      "updated_at": "2026-09-16T09:51:59Z",
+      "closed_at": null,
+      "display_url": "https://github.com/Anionix/lumenia-planet-museum/issues/24",
+      "display_title": "探索のブラウザー確認記録が、確認対象のコードと一致しない",
+      "sourceComments": [
+        4017991710
+      ]
+    },
+    {
+      "recordIdentifier": "d93d88e9-8679-522b-a756-0b60472c9e5f",
+      "title": "生成済みファイルが資料全体の版に入り、Gitの保存版から再現できない",
+      "url": "https://github.com/Anionix/lumenia-planet-museum/issues/25",
+      "issue_number": 25,
+      "body": "## 起きていること\n\nGitで保存しない web/public/cosmos の生成物を資料全体の内容識別値に含めています。生成前・生成後・Gitの書き出しで異なる版になり、公開記録や検証記録を保存済みソースだけから追跡できません。\n\n## 完了条件\n\n- [ ] 入力となるソースと生成物の一覧を分ける。\n- [ ] 生成前と生成後でソースの内容識別値が一致する。\n- [ ] Gitの保存版から取り出したファイルでも同じソースの内容識別値になる。\n- [ ] 実装・資料・契約の変更は内容識別値に反映する。\n\n## 起点となる一次資料\n\n- [変更提案16の指摘](https://github.com/Anionix/lumenia-planet-museum/pull/16#discussion_r4017723443)\n- [確認対象のファイル](https://github.com/Anionix/lumenia-planet-museum/blob/544d928451833318e41b32d8a733e7343dea4d9f/scripts/source-revision.mjs)\n\nこの課題の作成は修正完了を意味しません。検算・実行検査・公開確認を分けて記録します。\n\n<!-- machine contract; record_identifier=d93d88e9-8679-522b-a756-0b60472c9e5f; execution_identifier=01a0a99f-f237-73d3-aed7-ed85afb664f9; recorded_at=2026-09-16T09:50:26.872Z; transition=review comment -> deduplicated issue -> verification -> reviewed correction -->",
+      "state": "open",
+      "user": {
+        "login": "Anionix",
+        "name": "Anionix",
+        "email": null,
+        "avatar_url": "https://avatars.githubusercontent.com/u/134016296?v=4",
+        "id": 134016296
+      },
+      "assignees": null,
+      "labels": null,
+      "milestone": null,
+      "state_reason": null,
+      "comments": 0,
+      "created_at": "2026-09-16T09:52:05Z",
+      "updated_at": "2026-09-16T09:52:05Z",
+      "closed_at": null,
+      "display_url": "https://github.com/Anionix/lumenia-planet-museum/issues/25",
+      "display_title": "生成済みファイルが資料全体の版に入り、Gitの保存版から再現できない",
+      "sourceComments": [
+        4017723443
+      ]
+    },
+    {
+      "recordIdentifier": "e332864f-3c91-5a0a-a748-be735ca33cac",
+      "title": "作家ボタンの縮小表示で原画像15枚を読み込み、初回表示が重くなる",
+      "url": "https://github.com/Anionix/lumenia-planet-museum/issues/26",
+      "issue_number": 26,
+      "body": "## 起きていること\n\n作家ボタンの縮小画像にも原画像のURLを設定しています。横幅の広い画面では多数のボタンが読み込み範囲に入り、一枚ずつの表示でも原画像一式の通信が発生します。レビューにある35.9メビバイトは当時の指摘値として扱い、現在の容量は別途測定します。\n\n## 完了条件\n\n- [ ] 縮小表示用の軽い画像を使うか、必要なボタンだけ画像を取得する。\n- [ ] 幅の広い画面と狭い画面で、最初に読み込む原画像数と通信量を測定する。\n- [ ] 作家を切り替えたときに必要な原画像が表示される。\n- [ ] 原画像と出典を保全する。\n\n## 起点となる一次資料\n\n- [変更提案15の指摘](https://github.com/Anionix/lumenia-planet-museum/pull/15#discussion_r4017602269)\n- [確認対象のファイル](https://github.com/Anionix/lumenia-planet-museum/blob/544d928451833318e41b32d8a733e7343dea4d9f/reference-assets/artist-cosmos/interactive/main.mjs)\n\nこの課題の作成は修正完了を意味しません。検算・実行検査・公開確認を分けて記録します。\n\n<!-- machine contract; record_identifier=e332864f-3c91-5a0a-a748-be735ca33cac; execution_identifier=01a0a99f-f237-73d3-aed7-ed85afb664f9; recorded_at=2026-09-16T09:50:26.872Z; transition=review comment -> deduplicated issue -> verification -> reviewed correction -->",
+      "state": "open",
+      "user": {
+        "login": "Anionix",
+        "name": "Anionix",
+        "email": null,
+        "avatar_url": "https://avatars.githubusercontent.com/u/134016296?v=4",
+        "id": 134016296
+      },
+      "assignees": null,
+      "labels": null,
+      "milestone": null,
+      "state_reason": null,
+      "comments": 0,
+      "created_at": "2026-09-16T09:52:12Z",
+      "updated_at": "2026-09-16T09:52:12Z",
+      "closed_at": null,
+      "display_url": "https://github.com/Anionix/lumenia-planet-museum/issues/26",
+      "display_title": "作家ボタンの縮小表示で原画像15枚を読み込み、初回表示が重くなる",
+      "sourceComments": [
+        4017602269
+      ]
+    }
+  ],
+  "existingIssue": {
+    "number": 2,
+    "url": "https://github.com/Anionix/lumenia-planet-museum/issues/2",
+    "sourceComments": [
+      4011767541,
+      4011767546,
+      4011767550,
+      4017401186
+    ]
+  },
+  "relatedIssues": [
+    {
+      "issueNumber": 27,
+      "recordIdentifier": "02656152-2558-5647-bf33-4eb4ecc3c652",
+      "url": "https://github.com/Anionix/lumenia-planet-museum/issues/27",
+      "finding": "Exploration completion checked the world but not requested camera or collision state."
+    }
+  ],
+  "followupReviewComments": [
+    {
+      "pullRequest": 28,
+      "url": "https://github.com/Anionix/lumenia-planet-museum/pull/28#discussion_r4024957891",
+      "issueNumber": 22,
+      "status": "addressed_in_proposal",
+      "fixCommit": "7719947",
+      "finding": "The expected playback state must include stopping physics."
+    }
+  ]
+}

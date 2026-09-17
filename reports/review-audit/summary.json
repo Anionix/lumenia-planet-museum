@@ -1,0 +1,53 @@
+{
+  "recordIdentifier": "1d153c2d-5993-5a65-aeaf-5d3b3f33d84d",
+  "executionIdentifier": "01a0a9c6-c101-794e-b225-4b01c529c05f",
+  "recordedAt": "2026-09-16T10:41:33.666Z",
+  "sourceRevision": "sha256:87ed8dc07a6cf314667c9e4f158ea72255a3130c220ca3192f1266e238231c76",
+  "status": "verified_with_explicit_scope",
+  "initialPullRequestCount": 12,
+  "initialBugCommentCount": 9,
+  "relatedIssue": 27,
+  "issues": [
+    2,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27
+  ],
+  "pullRequests": [
+    28,
+    29,
+    30,
+    31
+  ],
+  "lean": {
+    "theorems": 133,
+    "privateHelpers": 14,
+    "axiomDependencies": []
+  },
+  "wolfram": {
+    "programs": 6,
+    "checks": 55,
+    "statePairs": 256,
+    "partialMatchCounterexamples": 112
+  },
+  "runtime": {
+    "tests": 121,
+    "build": "pass",
+    "applicationGates": 6,
+    "browserChecks": 13
+  },
+  "limits": [
+    "Native WebMCP registration was replaced only at the test boundary.",
+    "Historical browser receipts are explicitly superseded, not rewritten or treated as fresh.",
+    "No proof of visual quality, historical influence, arbitrary physical behavior or public deployment."
+  ],
+  "sources": [
+    "https://lean-lang.org/theorem_proving_in_lean4/Axioms-and-Computation/",
+    "https://reference.wolfram.com/language/ref/Reduce.html",
+    "https://webmachinelearning.github.io/webmcp/"
+  ],
+  "gitArchiveCheck": "git-archive.json"
+}
