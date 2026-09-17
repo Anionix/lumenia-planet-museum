@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
-import {mkdtemp, mkdir, writeFile, rm} from 'node:fs/promises';
+import {mkdtemp, mkdir, readFile, writeFile, rm} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import path from 'node:path';
 import {execFileSync} from 'node:child_process';
@@ -10,6 +10,11 @@ import {sourceManifest} from '../scripts/source-revision.mjs';
 import {evidenceDigest,languageServerReceiptMatchesSource,languageServerTargetMatchesInvocation} from '../scripts/language-server-evidence.mjs';
 import {captureLanguageServerReceipt} from '../scripts/capture-language-server.mjs';
 import {checkChangeSize} from '../scripts/check-change-size.mjs';
+
+const inTemporaryDirectory=async(name,run)=>{
+  const root=await mkdtemp(path.join(tmpdir(),name));
+  try{return await run(root);}finally{await rm(root,{recursive:true,force:true});}
+};
 
 test('generated server configuration keeps the project root outside the checkout',()=>{
   const script=fileURLToPath(new URL('../scripts/capture-language-server.mjs',import.meta.url));
@@ -20,11 +25,9 @@ test('generated server configuration keeps the project root outside the checkout
 
 // machine contract; record_identifier=4d229b49-b126-530d-bce4-d30a1b38f3c0.
 // transition: Git attributes force text diff -> blob content still rejects binary add, edit and delete.
-test('change size check reads blobs independently of Git attributes',async()=>{
-  const root=await mkdtemp(path.join(tmpdir(),'lumenia-change-size-test-'));
+test('change size check reads blobs independently of Git attributes',()=>inTemporaryDirectory('lumenia-change-size-test-',async root=>{
   const git=(...arguments_)=>execFileSync('git',arguments_,{cwd:root,encoding:'utf8'}).trim();
   const commit=message=>{git('add','-A');git('-c','commit.gpgSign=false','-c','core.hooksPath=/dev/null','commit','--quiet','-m',message);};
-  try{
     git('init','--quiet');git('config','user.name','Lumenia Test');git('config','user.email','test@example.invalid');
     await writeFile(path.join(root,'note.txt'),'one\n');commit('base');const base=git('rev-parse','HEAD');
     await writeFile(path.join(root,'.gitattributes'),'*.bin diff\n');
@@ -37,14 +40,14 @@ test('change size check reads blobs independently of Git attributes',async()=>{
     assert.equal(checkChangeSize(edited,'HEAD',root).status,'fail');const deleted=git('rev-parse','HEAD');
     await writeFile(path.join(root,'note.txt'),'two\n');commit('edit text');
     assert.equal(checkChangeSize(deleted,'HEAD',root).status,'pass');
-  }finally{await rm(root,{recursive:true,force:true});}
-});
+}));
 
 // machine contract; record_identifier=d93d88e9-8679-522b-a756-0b60472c9e5f.
 // transition: clean inputs -> generated output -> same source revision; real input edits must change it.
-test('source identity is unchanged by generated cosmos output but changes with source edits',async()=>{
-  const root=await mkdtemp(path.join(tmpdir(),'lumenia-revision-test-'));
-  try{
+test('source identity binds formal evidence and changes with source edits',()=>inTemporaryDirectory('lumenia-revision-test-',async root=>{
+    const correspondence=JSON.parse(await readFile(new URL('../reports/bounded-review/formal-correspondence-inputs.jsonl',import.meta.url),'utf8'));
+    assert.equal(correspondence.sourceRevision,(await sourceManifest()).sourceRevision);
+    for(const input of correspondence.inputs) assert.equal(createHash('sha256').update(await readFile(new URL('../'+input.path,import.meta.url))).digest('hex'),input.sha256);
     for(const directory of ['formal','contracts','scripts','tests','mcp','web','reference-assets'])await mkdir(path.join(root,directory));
     for(const file of ['intent.md','spec.md','CONSTRAINTS.md','lean-toolchain','lakefile.toml','lake-manifest.json','package.json','package-lock.json','eslint.config.mjs'])await writeFile(path.join(root,file),'fixture');
     await mkdir(path.join(root,'planetarium/lib'),{recursive:true});
@@ -61,14 +64,11 @@ test('source identity is unchanged by generated cosmos output but changes with s
       await writeFile(path.join(root,'planetarium/lib',file),'changed shared implementation');
       assert.notEqual((await sourceManifest(root)).sourceRevision,beforeSharedEdit.sourceRevision);
     }
-  }finally{await rm(root,{recursive:true,force:true});}
-});
+}));
 
 // machine contract; record_identifier=6c667a72-10c8-5ab2-9f23-fd0cc9a72a1a.
 // transition: complete audit scope -> generated planetarium report -> source edit.
-test('complete audit identity includes planetarium source but excludes its reports',async()=>{
-  const root=await mkdtemp(path.join(tmpdir(),'lumenia-audit-revision-test-'));
-  try{
+test('complete audit identity includes planetarium source but excludes its reports',()=>inTemporaryDirectory('lumenia-audit-revision-test-',async root=>{
     for(const directory of ['formal','contracts','scripts','tests','mcp','web','reference-assets','planetarium'])await mkdir(path.join(root,directory));
     for(const file of ['intent.md','spec.md','CONSTRAINTS.md','lean-toolchain','lakefile.toml','lake-manifest.json','package.json','package-lock.json','eslint.config.mjs'])await writeFile(path.join(root,file),'fixture');
     const before=await sourceManifest(root,{includePlanetarium:true});
@@ -77,14 +77,11 @@ test('complete audit identity includes planetarium source but excludes its repor
     assert.deepEqual(await sourceManifest(root,{includePlanetarium:true}),before);
     await writeFile(path.join(root,'planetarium/intent.md'),'changed source');
     assert.notEqual((await sourceManifest(root,{includePlanetarium:true})).sourceRevision,before.sourceRevision);
-  }finally{await rm(root,{recursive:true,force:true});}
-});
+}));
 
 // machine contract; record_identifier=5c51405c-2fe3-5546-8621-278af8174a55.
 // These synthetic JSON fixtures test integrity only; the formal gate always calls the actual server.
-test('receipt integrity rejects changed files, relabelled requests and missing proof targets',async()=>{
-  const root=await mkdtemp(path.join(tmpdir(),'lumenia-lsp-binding-test-'));
-  try{
+test('receipt integrity rejects changed files, relabelled requests and missing proof targets',()=>inTemporaryDirectory('lumenia-lsp-binding-test-',async root=>{
     await mkdir(path.join(root,'formal'),{recursive:true});
     const proofSource='theorem Proof : True := by trivial\n';
     await writeFile(path.join(root,'formal/Proof.lean'),proofSource);
@@ -131,5 +128,4 @@ test('receipt integrity rejects changed files, relabelled requests and missing p
     await assert.rejects(captureLanguageServerReceipt(async()=>checks[0].response),/no supplied/);
     await writeFile(path.join(root,'formal/Proof.lean'),'changed\n');
     assert.equal(languageServerReceiptMatchesSource(receipt,manifest,root),false);
-  }finally{await rm(root,{recursive:true,force:true});}
-});
+}));
