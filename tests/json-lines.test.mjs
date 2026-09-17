@@ -58,6 +58,9 @@ test('format gate distinguishes required settings from custom data and malformed
     reason: 'npm package manifest', scope: 'external tool configuration only.',
   }]);
   assert.deepEqual(issues.map(issue => issue.file), ['custom.json', 'broken.jsonl']);
+  const schemas = ['contracts/asset-manifest.schema.json', 'contracts/verification-contract.schema.json', 'mcp/lumenia-verification-contract.schema.json'];
+  const registered = await readJsonLines(new URL('../contracts/json-lines-exceptions.jsonl', import.meta.url));
+  assert.deepEqual(await inspectDataFormats(schemas, path.resolve(import.meta.dirname, '..'), registered), []);
 });
 
 test('format exceptions require a reasoned standard-JSON row and unique paths', async context => {
