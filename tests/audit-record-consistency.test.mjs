@@ -24,6 +24,27 @@ test('rejects an impossible date even when Date.parse would normalize it', () =>
   changed.summary.recordedAt = '2026-09-31T15:43:32.946Z';
   assert.throws(() => verifyAuditRecords(changed));
 });
+for (const [label, mutate] of Object.entries({
+  'root function': value => value.wolfram.programs[0].decoded.comparisons[0].function = 'other',
+  'root claim': value => value.wolfram.programs[0].decoded.comparisons[0].claimIdentifier = value.wolfram.programs[0].decoded.comparisons[1].claimIdentifier,
+  'root input count': value => value.wolfram.programs[0].decoded.comparisons[0].inputCount++,
+  'root total count': value => value.wolfram.programs[0].decoded.totalInputCount++,
+  'missing named check': value => delete value.wolfram.programs[1].decoded.checks.exactCoordinateLengthsOneToFour,
+  'replaced named check': value => { delete value.wolfram.programs[1].decoded.checks.exactCoordinateLengthsOneToFour; value.wolfram.programs[1].decoded.checks.unrelatedCheck = true; },
+  'missing exploration check': value => delete value.wolfram.programs[3].decoded.coordinate_clamp,
+  'missing images check': value => delete value.wolfram.programs[2].decoded.checks.coordinate_bounds,
+  'missing clock check': value => delete value.wolfram.programs[4].decoded.checks.pause_identity,
+  'missing review check': value => delete value.wolfram.programs[5].decoded.checks.clock_day_bound,
+  'duplicate material input': value => { const program = value.wolfram.programs[1]; program.decoded.channelMix.rows[79] = program.decoded.channelMix.rows[0]; },
+})) test('rejects ' + label, () => {
+  const changed = structuredClone(records);
+  mutate(changed);
+  if (label === 'duplicate material input') {
+    const program = changed.wolfram.programs.find(item => item.name === 'material');
+    program.response.content[0].text = 'Out[1]= ' + JSON.stringify(JSON.stringify(program.decoded));
+  }
+  assert.throws(() => verifyAuditRecords(changed));
+});
 const replaceRootResult = (records, mutate, name = 'root') => {
   const root = records.wolfram.programs.find(program => program.name === name);
   mutate(root.decoded);

@@ -10,6 +10,20 @@ import { parseIsoTimestamp } from './iso-timestamp.mjs';
 const programNames = ['root', 'material', 'images', 'exploration', 'clock', 'review'];
 const executionPattern = /^[0-9a-f]{8}-[0-9a-f]{4}-7[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/;
 const same = (actual, expected, field) => assert.deepEqual(actual, expected, field);
+const expectedRootComparisons = [
+  { function: 'transition', claimIdentifier: '3994c7e6-6387-590c-9922-3fad04fc482d', inputCount: 20, uniqueInputCount: 20 },
+  { function: 'deploymentCapabilityAllowed', claimIdentifier: 'ac27dc88-da25-51f7-8af5-c431e22cd72b', inputCount: 12, uniqueInputCount: 12 },
+  { function: 'componentPlacementAllowed', claimIdentifier: 'cf86cf5d-e0c7-58e4-aa77-ae4d0e72bf46', inputCount: 12, uniqueInputCount: 12 },
+];
+const expectedChecks = {
+  material: 'exactCoordinateLengthsOneToFour invalidCoordinateLengthsRejected appendDropRestoresAllDimensions firstPlaneRotationOneDimensionIsNull firstPlaneRotationMatrixPowerFourIsIdentityForTwoToFourDimensions projectionTablesAreExactTwoDimensionalViews fourDimensionalProjectionCounterexample timeIsSeparateFromSpatialCoordinates haloAngleTable routeAngleTable orthogonalAngleTable channelMixFiniteTable evidenceDecisionTable'.split(' '),
+  images: 'real_score_difference_bounded normalized_two_component_mixture_bounded coordinate_bounds exact_squared_distance_matrix_matches distance_symmetry distance_diagonal_zero squared_distance_range initial_panels_do_not_overlap sixty_steps_equal_one_second maximum_five_steps_equal_one_twelfth_second'.split(' '),
+  exploration: 'rotation_preserves_length bounded_elapsed bounded_displacement normalized_diagonal coordinate_clamp ring_passage_positive'.split(' '),
+  clock: 'bounded monotone step_bounded boundary_120 end_stops pause_identity'.split(' '),
+  review: 'score_difference_bound projection_rank_three projection_retains_eight_unseen_dimensions nonnegative_normalized_recipe_bound normal_step_metres sixty_step_distance_metres bounded_batch turn_range_radians full_state_equality_rejects_every_partial_match artist_only_gate_has_counterexamples complete_valid_states only_fresh_complete_same_revision_receipt_passes busy_writer_is_rejected aborted_actions_are_rejected trace_length_bound clock_day_bound clock_crosses_two_minutes_without_wrapping'.split(' '),
+};
+const expectedMaterialInputs = [0, 1, 254, 255].flatMap(first =>
+  [0, 1, 254, 255].flatMap(second => [0, 1, 50, 99, 100].map(weight => `${first}:${second}:${weight}`))).sort();
 function ordered(earlier, later) {
   const earlierTimestamp = parseIsoTimestamp(earlier), laterTimestamp = parseIsoTimestamp(later);
   assert.ok(Number.isFinite(earlierTimestamp) && Number.isFinite(laterTimestamp) &&
@@ -21,6 +35,9 @@ function checkCount(program) {
   if (program.name === 'root') {
     assert.ok(value.comparisons.length > 0);
     same(value.comparisonCount, value.comparisons.length, 'Comparison count');
+    same(value.comparisons.map(({ function: name, claimIdentifier, inputCount, uniqueInputCount }) =>
+      ({ function: name, claimIdentifier, inputCount, uniqueInputCount })), expectedRootComparisons, 'Root comparison inputs');
+    same(value.totalInputCount, expectedRootComparisons.reduce((total, row) => total + row.inputCount, 0), 'Root total inputs');
     for (const comparison of value.comparisons) {
       same(comparison.goldenDimensionsMatch, true, 'Comparison dimensions');
       for (const field of ['implementationVersusRequirementsMismatchCount',
@@ -29,7 +46,10 @@ function checkCount(program) {
     }
     return value.comparisonCount;
   }
-  const checks = program.name === 'exploration' ? Object.values(value).filter(v => typeof v === 'boolean') : Object.values(value.checks);
+  const names = program.name === 'exploration' ? Object.entries(value).filter(([, item]) => typeof item === 'boolean').map(([name]) => name) : Object.keys(value.checks);
+  same(names, expectedChecks[program.name], program.name + ' check names');
+  if (program.name === 'material') same(value.channelMix.rows.map(row => row.slice(0, 3).join(':')).sort(), expectedMaterialInputs, 'Material input coverage');
+  const checks = program.name === 'exploration' ? names.map(name => value[name]) : Object.values(value.checks);
   assert.ok(checks.length > 0 && checks.every(value => value === true), 'Calculation checks');
   return checks.length;
 }
