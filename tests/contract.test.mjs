@@ -20,21 +20,23 @@ async function readExample(name) {
   return JSON.parse(await readFile(new URL('../contracts/examples/' + name, import.meta.url), 'utf8'));
 }
 
-test('the committed verification request is valid', async () => {
-  assert.deepEqual(validateVerificationDocument(await readExample('verification-request.json')), { valid: true, errors: [] });
+for (const [name, file, validate] of [
+  ['the committed verification request is valid', 'verification-request.json', validateVerificationDocument],
+  ['the committed verification result is valid and has a pass aggregate', 'verification-result.json', validateVerificationDocument],
+  ['the committed asset manifest is valid', 'valid-asset-manifest.json', validateAssetManifestDocument],
+]) test(name, async () => {
+  assert.deepEqual(validate(await readExample(file)), { valid: true, errors: [] });
 });
-
-test('the committed verification result is valid and has a pass aggregate', async () => {
-  assert.deepEqual(validateVerificationDocument(await readExample('verification-result.json')), { valid: true, errors: [] });
-});
-test('createdAt rejects impossible dates instead of accepting normalization', async () => {
-  const result = await readExample('verification-result.json');
-  result.createdAt = '2026-09-31T15:43:32.946Z';
-  assert.equal(validateVerificationDocument(result).valid, false);
-});
-
-test('the committed asset manifest is valid', async () => {
-  assert.deepEqual(validateAssetManifestDocument(await readExample('valid-asset-manifest.json')), { valid: true, errors: [] });
+for (const [name, file, mutate, message] of [
+  ['createdAt rejects impossible dates instead of accepting normalization', 'verification-result.json', result => result.createdAt = '2026-09-31T15:43:32.946Z'],
+  ['a result cannot claim pass when an observation failed', 'verification-result.json', result => { result.observations[0].status = 'fail'; result.observations[0].failureReason = 'intentional regression fixture'; }, /expected fail from observations/],
+  ['unknown properties fail closed', 'verification-request.json', request => request.unexpectedProperty = true, /unknown property/],
+]) test(name, async () => {
+  const value = await readExample(file);
+  mutate(value);
+  const { valid, errors } = validateVerificationDocument(value);
+  assert.equal(valid, false);
+  if (message) assert.match(errors.join('\n'), message);
 });
 
 test('the fixed category budgets add up to the core budget', () => {
@@ -57,23 +59,6 @@ for (const [name, field, value, message] of [
   const result = validateAssetManifestDocument(manifest);
   assert.equal(result.valid, false);
   assert.match(result.errors.join('\n'), message);
-});
-
-test('a result cannot claim pass when an observation failed', async () => {
-  const result = await readExample('verification-result.json');
-  result.observations[0].status = 'fail';
-  result.observations[0].failureReason = 'intentional regression fixture';
-  const validation = validateVerificationDocument(result);
-  assert.equal(validation.valid, false);
-  assert.match(validation.errors.join('\n'), /expected fail from observations/);
-});
-
-test('unknown properties fail closed', async () => {
-  const request = await readExample('verification-request.json');
-  request.unexpectedProperty = true;
-  const validation = validateVerificationDocument(request);
-  assert.equal(validation.valid, false);
-  assert.match(validation.errors.join('\n'), /unknown property/);
 });
 
 test('a pass with a missing, textual, non-finite or over-limit observation is rejected', async () => {
