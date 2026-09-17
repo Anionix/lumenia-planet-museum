@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { createExhibitionState, createTrace, clampPanelPosition } from './model.mjs';
 import { connectOptionalPhysics } from './vendor/reference-physics-contract.mjs';
-import { registerPageTools, imageExhibitionTools, createPresentationCheckpoint, communityLinks } from './webmcp.mjs';
+import { registerPageTools, imageExhibitionTools, createPresentationCheckpoint, communityLinks, assertPresentedState, imageConfigurationTarget } from './webmcp.mjs';
 
 const $ = selector => document.querySelector(selector);
 const canvas = $('canvas'), stage = $('.stage'), loading = $('.loading'), status = $('.interaction-status'), engineStatus = $('.engine-status');
@@ -211,10 +211,12 @@ function imageExhibitionSnapshot(){
     renderedFrames:renderer.info.render.frame,links:communityLinks};
 }
 function requireActiveImageExhibition(){if(!contextAvailable||!state||document.hidden)throw new Error('Open the image exhibition and wait for it to be ready.');}
-async function presentImageExhibition(expectedArtist){
+async function presentImageExhibition(expected,resetTransforms){
   requireActiveImageExhibition();syncControls();const completed=presentation.next();renderSoon();await completed;
-  if(manifest.items[state.selected].record_id!==expectedArtist)throw new Error('The selected artist changed while the action was running.');
-  return imageExhibitionSnapshot();
+  requireActiveImageExhibition();const observed=imageExhibitionSnapshot();
+  assertPresentedState(expected,observed);
+  if(resetTransforms)assertPresentedState(resetTransforms,{positions:panels.map(panel=>panel.position.toArray()),rotations:panels.map(panel=>panel.rotation.toArray())});
+  return observed;
 }
 function connectImageExhibitionTools(){
   pageTools?.dispose();
@@ -228,6 +230,7 @@ function connectImageExhibitionTools(){
       const desiredPhysics=input.physics_enabled??(input.view==='single'?false:state.physics==='enabled');
       if(input.gravity_enabled&&!desiredPhysics)throw new TypeError('Gravity requires physics.');
       if(state.physics==='loading'&&input.physics_enabled!==false)throw new Error('Physics is still loading.');
+      const expected=imageConfigurationTarget(imageExhibitionSnapshot(),input);
       endDrag(true);
       if(input.physics_enabled===false||input.view==='single')stopPhysics();
       if(input.view!==undefined)setView(input.view);
@@ -235,11 +238,15 @@ function connectImageExhibitionTools(){
       if(input.physics_enabled===true){await startPhysics();if(state.physics!=='enabled')throw new Error('Physics did not become active.');}
       if(input.gravity_enabled!==undefined){state.gravity=input.gravity_enabled;physicsEngine?.setGravity(state.gravity);}
       if(input.playing!==undefined){state.playing=input.playing;previousFrame=0;}
-      const expectedArtist=manifest.items[index].record_id;
-      if(state.mode==='all')await loadAllTextures();else await ensureTexture(state.selected);
-      return presentImageExhibition(expectedArtist);
+      if(expected.view==='all')await loadAllTextures();else await ensureTexture(index);
+      return presentImageExhibition(expected);
     },
-    async reset(){requireActiveImageExhibition();const expectedArtist=manifest.items[state.selected].record_id;resetExhibition();return presentImageExhibition(expectedArtist);},
+    async reset(){
+      requireActiveImageExhibition();const expected=imageConfigurationTarget(imageExhibitionSnapshot(),{physics_enabled:false,playing:false,gravity_enabled:false});
+      resetExhibition();
+      const transforms={positions:panels.map(panel=>panel.position.toArray()),rotations:panels.map(panel=>panel.rotation.toArray())};
+      return presentImageExhibition(expected,transforms);
+    },
   }),{onStatus:value=>{canvas.dataset.webmcp=value;},onExecution:event=>trace.add('WebMCP action completed',event)});
 }
 

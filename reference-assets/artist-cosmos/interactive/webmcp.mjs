@@ -43,6 +43,26 @@ export function createPresentationCheckpoint(timeoutMilliseconds=5000){
   };
 }
 
+// machine contract; record_identifier=02656152-2558-5647-bf33-4eb4ecc3c652 (UUIDv5).
+// transition: requested state -> asynchronous work -> rendered state -> compare every promised field.
+// A concurrent human action is retained; it makes the earlier tool request incomplete.
+export function assertPresentedState(expected,observed){
+  for(const [field,value] of Object.entries(expected)){
+    if(JSON.stringify(observed[field])!==JSON.stringify(value))throw new Error(`The requested ${field} changed while the action was running.`);
+  }
+}
+
+export function imageConfigurationTarget(current,input){
+  const physics=input.physics_enabled??(input.view==='single'?false:current.physics==='enabled');
+  const starting=physics&&current.physics!=='enabled';
+  const stopping=input.physics_enabled===false||input.view==='single';
+  return {artistIdentifier:input.artist_identifier??current.artistIdentifier,
+    view:starting?'all':input.view??current.view,
+    playing:input.playing??(starting?true:stopping?false:current.playing),
+    physics:physics?'enabled':'disabled',
+    gravity:input.gravity_enabled??(starting||!physics?false:current.gravity)};
+}
+
 export function registerPageTools(context,definitions,{onStatus=()=>{},onExecution=()=>{}}={}){
   const lifecycle=new AbortController();let busy=false;
   const dispose=()=>{lifecycle.abort();onStatus('unregistered');};
