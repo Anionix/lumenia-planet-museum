@@ -117,6 +117,7 @@ export function verifyAuditRecords({ wolfram, summary, coverage }) {
 }
 export function verifyCorrespondenceLinks(calculationLines, bindingLines) {
   const digest = text => createHash('sha256').update(text).digest('hex'), records = new Map();
+  let previousBindingIdentifier;
   assert.ok(calculationLines.length && bindingLines.length, 'Missing correspondence records');
   for (const [lines, binding] of [[calculationLines, false], [bindingLines, true]]) for (const line of lines) {
     const record = JSON.parse(line);
@@ -124,6 +125,7 @@ export function verifyCorrespondenceLinks(calculationLines, bindingLines) {
     assert.match(record.executionIdentifier, executionPattern);
     assert.ok(!records.has(record.executionIdentifier), 'Duplicate execution');
     if (binding) {
+      if (previousBindingIdentifier) same(record.previousExecutionIdentifier, previousBindingIdentifier, 'Latest predecessor');
       const previous = records.get(record.previousExecutionIdentifier);
       assert.ok(previous, 'Missing predecessor');
       same(record.previousRecordSha256, digest(previous.line), 'Predecessor hash');
@@ -138,6 +140,7 @@ export function verifyCorrespondenceLinks(calculationLines, bindingLines) {
         digest(field === 'code' ? calculation.wolfram.code : JSON.stringify(calculation.wolfram.response)), 'Wolfram ' + field);
     }
     records.set(record.executionIdentifier, { record, line });
+    if (binding) previousBindingIdentifier = record.executionIdentifier;
   }
 }
 export async function readAuditRecords(directory = new URL('../reports/review-audit/', import.meta.url)) {

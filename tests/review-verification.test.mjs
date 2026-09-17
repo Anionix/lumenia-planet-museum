@@ -49,9 +49,17 @@ test('change size check reads blobs independently of Git attributes',()=>inTempo
 // machine contract; record_identifier=d93d88e9-8679-522b-a756-0b60472c9e5f.
 // transition: clean inputs -> generated output -> same source revision; real input edits must change it.
 test('source identity binds formal evidence and changes with source edits',()=>inTemporaryDirectory('lumenia-revision-test-',async root=>{
-    const readLines=async name=>(await readFile(new URL('../reports/bounded-review/'+name+'.jsonl',import.meta.url),'utf8')).trimEnd().split('\n');
+    const readLines=async name=>(await readFile(new URL('../reports/bounded-review/'+name+'.jsonl',import.meta.url),'utf8')).replace(/\n$/,'').split('\n');
+    for(const name of ['formal-correspondence','formal-correspondence-inputs'])
+      assert.match(execFileSync('git',['check-attr','eol','--','reports/bounded-review/'+name+'.jsonl'],{cwd:fileURLToPath(new URL('../',import.meta.url)),encoding:'utf8'}),/: eol: lf\s*$/);
     const calculations=await readLines('formal-correspondence'), bindings=await readLines('formal-correspondence-inputs');
     verifyCorrespondenceLinks(calculations,bindings);
+    for(const previousLine of [calculations[0],bindings[0]]) {
+      const changed=JSON.parse(bindings.at(-1)),previous=JSON.parse(previousLine);
+      Object.assign(changed,{previousExecutionIdentifier:previous.executionIdentifier,previousRecordedAt:previous.recordedAt,
+        previousRecordSha256:createHash('sha256').update(previousLine).digest('hex')});
+      assert.throws(()=>verifyCorrespondenceLinks(calculations,[...bindings.slice(0,-1),JSON.stringify(changed)]));
+    }
     for(const mutate of [
       value=>value.previousExecutionIdentifier='missing', value=>value.previousRecordSha256='0'.repeat(64),
       value=>value.previousRecordedAt='2020-01-01T00:00:00Z', value=>value.calculationExecutionIdentifier=value.previousExecutionIdentifier,
