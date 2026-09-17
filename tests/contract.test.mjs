@@ -28,6 +28,9 @@ for (const [name, file, validate] of [
   assert.deepEqual(validate(await readExample(file)), { valid: true, errors: [] });
 });
 for (const [name, file, mutate, message] of [
+  ['null observations fail closed', 'verification-result.json', result => { result.observations = [null]; }],
+  ['duplicate gates fail closed', 'verification-result.json', result => { result.observations.push(result.observations[0]); }],
+  ['an incomplete browser matrix fails closed', 'verification-result.json', result => { result.measurementProfile.targetBrowsers = ['chrome']; }],
   ['createdAt rejects impossible dates instead of accepting normalization', 'verification-result.json', result => result.createdAt = '2026-09-31T15:43:32.946Z'],
   ['a result cannot claim pass when an observation failed', 'verification-result.json', result => { result.observations[0].status = 'fail'; result.observations[0].failureReason = 'intentional regression fixture'; }, /expected fail from observations/],
   ['unknown properties fail closed', 'verification-request.json', request => request.unexpectedProperty = true, /unknown property/],
@@ -82,16 +85,4 @@ test('missing evidence is blocked even if an explanation says it passed', async 
   result.observations[0].failureReason = 'passed according to an explanation';
   assert.equal(evaluateObservation(result.observations[0], result.sourceRevision), 'blocked');
   assert.equal(validateVerificationDocument(result).valid, false);
-});
-
-test('null observations, duplicate gates and an incomplete browser matrix fail closed', async () => {
-  for (const mutate of [
-    (result) => { result.observations = [null]; },
-    (result) => { result.observations.push(result.observations[0]); },
-    (result) => { result.measurementProfile.targetBrowsers = ['chrome']; },
-  ]) {
-    const result = await readExample('verification-result.json');
-    mutate(result);
-    assert.equal(validateVerificationDocument(result).valid, false);
-  }
 });

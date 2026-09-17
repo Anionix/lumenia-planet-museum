@@ -73,15 +73,11 @@ for (const [name, mutate] of [
   const { directory } = await fixture(t, mutate);
   assert.equal((await inspectCharacterAsset(directory)).status, 'fail');
 });
-test('Character admission rejects image bytes changed after inspection', async t => {
+for (const [name, file] of [['image bytes', 'spritesheet.webp'], ['evidence', 'evidence/visual-review.json']])
+test('Character admission rejects ' + name + ' changed after inspection', async t => {
   const { directory, root } = await fixture(t);
-  await writeFile(path.join(root, 'spritesheet.webp'), 'changed synthetic bytes');
-  assert.equal((await inspectCharacterAsset(directory)).status, 'fail');
-});
-test('Character admission rejects evidence changed after inspection', async t => {
-  const { directory, root } = await fixture(t);
-  const report = path.join(root, 'evidence/visual-review.json');
-  await writeFile(report, (await readFile(report, 'utf8')) + '\n');
+  const target = path.join(root, file);
+  await writeFile(target, (await readFile(target, 'utf8')) + '\n');
   assert.equal((await inspectCharacterAsset(directory)).status, 'fail');
 });
 test('Missing character receipt is blocked, not accepted', async t => {
