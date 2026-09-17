@@ -1,8 +1,8 @@
 {
   "recordIdentifier": "1d153c2d-5993-5a65-aeaf-5d3b3f33d84d",
-  "executionIdentifier": "01a0a9c6-c101-794e-b225-4b01c529c05f",
-  "recordedAt": "2026-09-16T10:41:33.666Z",
-  "sourceRevision": "sha256:87ed8dc07a6cf314667c9e4f158ea72255a3130c220ca3192f1266e238231c76",
+  "executionIdentifier": "01a0aae3-3852-7622-bea0-e0231e2b1008",
+  "recordedAt": "2026-09-16T15:43:32.946Z",
+  "sourceRevision": "sha256:e56813b1ed4b504e78fb90e57be76a4ca318278c6e6a41e4309482112fee9f32",
   "status": "verified_with_explicit_scope",
   "initialPullRequestCount": 12,
   "initialBugCommentCount": 9,
@@ -20,7 +20,8 @@
     28,
     29,
     30,
-    31
+    31,
+    32
   ],
   "lean": {
     "theorems": 133,
@@ -31,10 +32,12 @@
     "programs": 6,
     "checks": 55,
     "statePairs": 256,
-    "partialMatchCounterexamples": 112
+    "partialMatchCounterexamples": 112,
+    "executionIdentifier": "01a0aad9-833e-731e-a79c-dffd2363f6fa",
+    "recordedAt": "2026-09-16T15:35:51.720Z"
   },
   "runtime": {
-    "tests": 121,
+    "tests": 122,
     "build": "pass",
     "applicationGates": 6,
     "browserChecks": 13
@@ -49,5 +52,16 @@
     "https://reference.wolfram.com/language/ref/Reduce.html",
     "https://webmachinelearning.github.io/webmcp/"
   ],
-  "gitArchiveCheck": "git-archive.json"
+  "gitArchiveCheck": "git-archive.json",
+  "reconciliation": {
+    "sourceManifest": "source-manifest.json",
+    "sourceRevision": "sha256:e56813b1ed4b504e78fb90e57be76a4ca318278c6e6a41e4309482112fee9f32",
+    "rootSourceRevision": "sha256:e2848a5d3243b0f7f5b56ca16b9132acf4c0612c4c0adee33566482f1cf4e973",
+    "semanticInputsChanged": false,
+    "kernelAudit": "lean-kernel.json",
+    "note": "The audit manifest and coverage use the complete scope, including planetarium sources; generated reports remain excluded."
+  },
+  "rootSourceRevision": "sha256:e2848a5d3243b0f7f5b56ca16b9132acf4c0612c4c0adee33566482f1cf4e973",
+  "manifestScope": "complete-audit",
+  "previousExecutionIdentifier": "01a0aa42-b43c-7220-b65f-bab2f5650c80"
 }

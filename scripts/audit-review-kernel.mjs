@@ -17,7 +17,10 @@ const projects=[
  {directory:'reference-assets/artist-cosmos/explore/verification',sources:'.'},
 ];
 const digest=bytes=>createHash('sha256').update(bytes).digest('hex');
-const executionIdentifier=uuidVersionSeven(),before=await sourceManifest();
+const executionIdentifier=uuidVersionSeven();
+// machine contract; the kernel audit covers a second project. Its complete source
+// identity must participate in the before/after check even when generated reports change.
+const before=await sourceManifest(projectRoot,{includePlanetarium:true});
 const temporary=await mkdtemp(path.join(tmpdir(),'lumenia-kernel-audit-'));
 const inputs=[],declarations=[],runs=[];
 async function visit(directory){const files=[];for(const entry of await readdir(directory,{withFileTypes:true})){if(['.lake','node_modules'].includes(entry.name))continue;const file=path.join(directory,entry.name);if(entry.isDirectory())files.push(...await visit(file));else if(entry.name.endsWith('.lean'))files.push(file);}return files.sort();}
@@ -42,8 +45,10 @@ for(const project of projects){
  }
  for(const name of ['lean-toolchain','lakefile.toml','lake-manifest.json']){const file=path.join(directory,name);try{inputs.push({path:path.relative(projectRoot,file),sha256:digest(await readFile(file))});}catch(error){if(error.code!=='ENOENT')throw error;}}
 }
-const after=await sourceManifest();assert.equal(after.sourceRevision,before.sourceRevision,'Inputs changed during kernel audit');
-const report={recordIdentifier:claimIdentifier('review-audit/lean-kernel'),executionIdentifier,recordedAt:new Date().toISOString(),sourceRevision:after.sourceRevision,status:'pass',theoremCount:declarations.length,privateHelperCount:declarations.filter(x=>x.private).length,axioms:[],inputs,declarations,runs};
+const rootAfter=await sourceManifest();
+const after=await sourceManifest(projectRoot,{includePlanetarium:true});
+assert.equal(after.sourceRevision,before.sourceRevision,'Audited inputs changed during kernel audit');
+const report={recordIdentifier:claimIdentifier('review-audit/lean-kernel'),executionIdentifier,recordedAt:new Date().toISOString(),sourceRevision:after.sourceRevision,rootSourceRevision:rootAfter.sourceRevision,status:'pass',theoremCount:declarations.length,privateHelperCount:declarations.filter(x=>x.private).length,axioms:[],inputs,declarations,runs};
 await mkdir(path.join(projectRoot,'reports/review-audit'),{recursive:true});
 await writeFile(path.join(projectRoot,'reports/review-audit/lean-kernel.json'),JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify({status:report.status,theorems:report.theoremCount,privateHelpers:report.privateHelperCount,axioms:[]}));

@@ -22,6 +22,22 @@ test('source identity is unchanged by generated cosmos output but changes with s
   }finally{await rm(root,{recursive:true,force:true});}
 });
 
+// machine contract; record_identifier=6c667a72-10c8-5ab2-9f23-fd0cc9a72a1a.
+// transition: complete audit scope -> generated planetarium report -> source edit.
+test('complete audit identity includes planetarium source but excludes its reports',async()=>{
+  const root=await mkdtemp(path.join(tmpdir(),'lumenia-audit-revision-test-'));
+  try{
+    for(const directory of ['formal','contracts','scripts','tests','mcp','web','reference-assets','planetarium'])await mkdir(path.join(root,directory));
+    for(const file of ['intent.md','spec.md','CONSTRAINTS.md','lean-toolchain','lakefile.toml','lake-manifest.json','package.json','package-lock.json','eslint.config.mjs'])await writeFile(path.join(root,file),'fixture');
+    const before=await sourceManifest(root,{includePlanetarium:true});
+    await mkdir(path.join(root,'planetarium/reports'),{recursive:true});
+    await writeFile(path.join(root,'planetarium/reports/lean-kernel.json'),'generated report');
+    assert.deepEqual(await sourceManifest(root,{includePlanetarium:true}),before);
+    await writeFile(path.join(root,'planetarium/intent.md'),'changed source');
+    assert.notEqual((await sourceManifest(root,{includePlanetarium:true})).sourceRevision,before.sourceRevision);
+  }finally{await rm(root,{recursive:true,force:true});}
+});
+
 // machine contract; record_identifier=5c51405c-2fe3-5546-8621-278af8174a55.
 // transition: earlier receipt -> attempted rebinding -> rejection; complete fresh capture -> acceptance.
 test('freshness validation rejects relabelled, incomplete and changed input receipts',()=>{
