@@ -35,8 +35,8 @@ function add(name, value, reason, tools, revision = context.sourceRevision) {
   observations.push(observation(definition.name, value, definition.limit, definition.unit, tools, reason, { ...context, sourceRevision: revision }));
   evidence.gateNames[definition.gateIdentifier] = definition.name;
 }
-const sources = new Map(await Promise.all(manifest.files.filter(file => file.path.startsWith('web/') &&
-  (/\.tsx?$/.test(file.path) || /^web\/artwork\/.*\.mjs$/.test(file.path)) && !file.path.endsWith('.d.ts')).map(async file => [file.path, await readFile(path.join(projectRoot, file.path), 'utf8')])));
+const sources = new Map(await Promise.all(manifest.files.filter(file => file.path.startsWith('planetarium/lib/') || (file.path.startsWith('web/') &&
+  (/\.tsx?$/.test(file.path) || /^web\/artwork\/.*\.mjs$/.test(file.path)) && !file.path.endsWith('.d.ts'))).map(async file => [file.path, await readFile(path.join(projectRoot, file.path), 'utf8')])));
 const inspection = inspectSources(sources); evidence.sourceInspection = inspection;
 const lint = await new ESLint({ cwd: projectRoot }).lintFiles([...sources.keys()].filter(file => /\.tsx?$/.test(file)));
 evidence.plumeriaDiagnostics = lint.map(({ filePath, messages }) => ({ file: path.relative(projectRoot, filePath), messages }));

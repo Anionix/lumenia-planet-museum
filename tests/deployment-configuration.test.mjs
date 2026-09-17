@@ -15,6 +15,8 @@ test('deployment output changes invalidate source evidence', async () => {
     for (const file of ['intent.md', 'spec.md', 'CONSTRAINTS.md', 'lean-toolchain', 'lakefile.toml',
       'lake-manifest.json', 'package.json', 'package-lock.json', 'eslint.config.mjs'])
       await writeFile(path.join(root, file), 'fixture');
+    await mkdir(path.join(root, 'planetarium/lib'), { recursive: true });
+    await writeFile(path.join(root, 'planetarium/lib/reference-physics-contract.mjs'), 'fixture');
     const absent = await sourceManifest(root);
     await writeFile(path.join(root, 'vercel.json'), '{"outputDirectory":"public"}');
     const previous = await sourceManifest(root);

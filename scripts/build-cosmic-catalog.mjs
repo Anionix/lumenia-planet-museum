@@ -118,7 +118,7 @@ export async function buildCosmicCatalog() {
     await mkdir(path.dirname(path.join(projectRoot, file)), { recursive: true });
     await writeFile(path.join(projectRoot, file), content);
   }
-  for (const filename of ['threejs-reference-adapter.mjs', 'reference-physics-contract.mjs'])
+  for (const filename of ['threejs-reference-adapter.mjs'])
     await copyFile(path.join(projectRoot, 'planetarium/lib', filename), path.join(projectRoot, 'web/artwork', filename));
   const report = { executionIdentifier, recordedAt: new Date().toISOString(), people: summaries.length,
     semanticCoordinates: summaries.filter(item => item.semanticPosition).length,
