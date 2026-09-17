@@ -8,6 +8,7 @@ import { connectPlanetarium } from './connect-planetarium.mjs';
 import { buildCharacterStyles } from './build-character-styles.mjs';
 import { buildCharacterAvailability } from './build-character-availability.mjs';
 import { buildCosmicCatalog } from './build-cosmic-catalog.mjs';
+import { buildCosmicImages } from './build-cosmic-images.mjs';
 
 // llm machine contract; claim UUIDv5: 07b6fb92-8639-50e0-873d-b43d3d5c28df
 // execution UUIDv7 generated below; transition: source digest -> build -> output digest; drift -> rejected
@@ -33,6 +34,7 @@ export async function buildWeb() {
   await buildCharacterStyles();
   await buildCharacterAvailability();
   await buildCosmicCatalog();
+  await buildCosmicImages();
   const manifest = await sourceManifest(), executionIdentifier = uuidVersionSeven();
   const evidence = { executionIdentifier, sourceRevision: manifest.sourceRevision, manifest, createdAt: new Date().toISOString(), state: 'rejected' };
   await mkdir(path.join(projectRoot, 'reports'), { recursive: true });

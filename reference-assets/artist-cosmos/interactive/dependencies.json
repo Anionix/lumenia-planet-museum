@@ -1,0 +1,45 @@
+{
+  "record_id": "98971958-e89a-51a4-ac9d-980159fa4a6e",
+  "three": "0.186.0",
+  "rapier": "0.12.0",
+  "rapier_license": "Apache-2.0",
+  "rapier_source": "https://github.com/dimforge/rapier.js",
+  "files": [
+    {
+      "record_id": "4c02bdaa-f102-55aa-9ae1-7a23248b9081",
+      "source_path": "node_modules/three/build/three.module.js",
+      "local_path": "vendor/three.module.js",
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+    },
+    {
+      "record_id": "dfd928d9-6e63-5af3-b06c-a07e32223164",
+      "source_path": "node_modules/three/build/three.core.js",
+      "local_path": "vendor/three.core.js",
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
+    },
+    {
+      "record_id": "ce850ea0-4537-5e04-96e4-a0e8807cd146",
+      "source_path": "node_modules/three/examples/jsm/controls/OrbitControls.js",
+      "local_path": "vendor/controls/OrbitControls.js",
+      "sha256": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b"
+    },
+    {
+      "record_id": "b4d5d219-bb66-59e4-bb1c-060d6fd0d192",
+      "source_path": "node_modules/@dimforge/rapier3d-compat/rapier.es.js",
+      "local_path": "vendor/rapier.mjs",
+      "sha256": "82b65114e949ed17969a5d0a3517b952f430ea524f4a19ce4a31e72fb7757f27"
+    },
+    {
+      "record_id": "9d553a39-2e6a-5583-bf84-e147971f66e5",
+      "source_path": "node_modules/three/LICENSE",
+      "local_path": "vendor/THREE-LICENSE.txt",
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    },
+    {
+      "record_id": "8a7fb57a-284d-5e9b-8e3d-361e7df10459",
+      "source_path": "planetarium/lib/reference-physics-contract.mjs",
+      "local_path": "vendor/reference-physics-contract.mjs",
+      "sha256": "4d1495820c1b9dcf334accee1892edd4f0ead85f5575e7c91935518903b435ba"
+    }
+  ]
+}

@@ -9,6 +9,8 @@ import { projectRoot } from './source-revision.mjs';
 // state: local production preview; transition: exported bytes -> Brotli HTTP response -> measured browser
 const root = await realpath(path.join(projectRoot, 'web/out'));
 const types = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8',
+  '.mjs': 'text/javascript; charset=utf-8', '.png': 'image/png', '.jpg': 'image/jpeg', '.webp': 'image/webp',
+  '.jsonl': 'application/x-ndjson; charset=utf-8', '.md': 'text/plain; charset=utf-8',
   '.css': 'text/css; charset=utf-8', '.json': 'application/json', '.txt': 'text/plain; charset=utf-8',
   '.map': 'application/json', '.glb': 'model/gltf-binary', '.wasm': 'application/wasm', '.ktx2': 'image/ktx2',
   '.svg': 'image/svg+xml', '.ico': 'image/x-icon', '.woff2': 'font/woff2' };
@@ -27,10 +29,12 @@ const server = http.createServer(async (request, response) => {
     const modified = (await stat(file)).mtimeMs;
     if (!content || content.modified !== modified) {
       const bytes = await readFile(file);
-      content = { bytes, modified, brotli: brotliCompressSync(bytes, { params: { [constants.BROTLI_PARAM_QUALITY]: 11 } }) };
+      // Already compressed pictures must not block every request with another compression pass.
+      const textAsset = /\.(html|[cm]?js|css|jsonl?|txt|md|map|svg)$/.test(file);
+      content = { bytes, modified, brotli: textAsset ? brotliCompressSync(bytes, { params: { [constants.BROTLI_PARAM_QUALITY]: 11 } }) : null };
       cache.set(file, content);
     }
-    const compressed = /\bbr\b/.test(request.headers['accept-encoding'] ?? '');
+    const compressed = content.brotli !== null && /\bbr\b/.test(request.headers['accept-encoding'] ?? '');
     const bytes = compressed ? content.brotli : content.bytes;
     response.writeHead(200, { 'Content-Type': types[path.extname(file)] ?? 'application/octet-stream',
       'Content-Length': bytes.length, 'Cache-Control': 'no-store', 'Vary': 'Accept-Encoding',

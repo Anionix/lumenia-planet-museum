@@ -40,6 +40,8 @@ export function PlanetMuseum() {
           <h1 classStyle={[museumStyles.title]}>Planet<br />Museum</h1>
           <p classStyle={[museumStyles.description]}>制作中のアトリエへ、少しだけお邪魔する。<br />話を聞き、色とかたちに触れ、その時代をたどる。</p>
           <Link prefetch={false} href="/atelier/william-morris/" classStyle={[museumStyles.entry]}>モリスの制作室を訪ねる →</Link>
+          <p><a href="/cosmos/" classStyle={[museumStyles.entry]}>15枚の宇宙を見る →</a></p>
+          <p><a href="/cosmos/interactive/" classStyle={[museumStyles.entry]}>宇宙の画像を動かす →</a></p>
         </div>
         <div role="img" aria-label="植物の反復、直角の色面、色のコラージュをまとった三つの球" classStyle={[museumStyles.constellation]}>
           <div classStyle={[museumStyles.firstPlanet]}><MaterialSphereArtwork profileIdentifier={morris.profileIdentifier} /></div>
