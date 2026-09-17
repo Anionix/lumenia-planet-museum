@@ -48,7 +48,7 @@ test('successful header checks and subsequent page payloads count toward metadat
 });
 
 test('header classification rejects missing, ambiguous, failed and non-header evidence', () => {
-  const mutations = [
+  for (const mutate of [
     run => delete run.requests,
     run => run.requests[0].method = 'GET',
     run => run.requests[0].type = 'document',
@@ -64,8 +64,7 @@ test('header classification rejects missing, ambiguous, failed and non-header ev
     run => delete run.initial.resources.at(-1).responseStatus,
     run => run.initial.resources.at(-1).transferSize = 0,
     run => run.initial.resources.at(-1).name = 'https://example.com/records/',
-  ];
-  for (const mutate of mutations) {
+  ]) {
     const capture = headerCheckFixture();
     mutate(capture.data.runs[0]);
     assert.equal(summarizeBrowserRuns(capture).complete, false, mutate.toString());
@@ -82,7 +81,7 @@ test('an aborted header notification is reconciled with a uniquely matched succe
 });
 
 test('actual failures, incomplete evidence and unsuccessful interactions remain nonfunctional', () => {
-  const mutations = [
+  for (const mutate of [
     run => run.failedRequests[0].phase = 'subsequent',
     run => delete run.failedRequests[0].phase,
     run => run.failedRequests[0].method = 'GET',
@@ -97,8 +96,7 @@ test('actual failures, incomplete evidence and unsuccessful interactions remain 
     run => run.functional = false,
     run => run.errors.push('Page error'),
     run => run.failure = 'Interaction failed',
-  ];
-  for (const mutate of mutations) {
+  ]) {
     const capture = headerCheckFixture();
     const run = capture.data.runs[0];
     run.failedRequests.push({ url: run.requests[0].url, method: 'HEAD', error: 'net::ERR_ABORTED',phase:'initial' });

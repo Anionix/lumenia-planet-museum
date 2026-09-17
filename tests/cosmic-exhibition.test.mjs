@@ -1,6 +1,5 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { readFile } from 'node:fs/promises';
 import { cosmicCatalog } from '../web/artwork/cosmic-catalog.generated.mjs';
 import { cosmicRecipes } from '../web/artwork/cosmic-recipes.generated.mjs';
 import { orbitPosition, intersectsYears, advancePresentationClock, exhibitionLimits } from '../web/artwork/cosmic-state.mjs';

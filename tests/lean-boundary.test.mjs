@@ -41,13 +41,8 @@ test('all 4096 asset assignments agree between the Lean executable and the JSON 
 });
 
 test('every Boolean field rejects missing values, strings, numbers, arrays and null in Lean', () => {
-  const invalid = [];
-  for (const field of fields) {
-    for (const value of [undefined, 'false', 0, [], null]) {
-      const manifest = { ...fixture, [field]: value };
-      invalid.push(manifest);
-    }
-  }
+  const invalid = fields.flatMap(field => [undefined, 'false', 0, [], null]
+    .map(value => ({ ...fixture, [field]: value })));
   leanVerdicts(invalid).forEach((response) => {
     assert.equal(response.accepted, false);
     assert.equal(typeof response.failureReason, 'string');
