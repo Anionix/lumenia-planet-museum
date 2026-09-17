@@ -9,6 +9,6 @@ export default [{ ignores: ['web/.next/**', 'web/out/**'] }, {
   languageOptions: { parser: typescriptEslint.parser, parserOptions: { project: './web/tsconfig.json', tsconfigRootDir: import.meta.dirname } },
   plugins: { '@plumeria': plumeria }, rules: plumeria.configs.recommended.rules,
 }, {
-  files: ['scripts/**/*.mjs'],
-  rules: { 'no-constant-binary-expression': 'error', 'no-unreachable': 'error', 'no-unsafe-optional-chaining': 'error', 'valid-typeof': 'error' },
+  files: ['scripts/**/*.mjs', 'tests/**/*.mjs'],
+  rules: { 'no-unused-vars': 'error', 'no-constant-binary-expression': 'error', 'no-unreachable': 'error', 'no-unsafe-optional-chaining': 'error', 'valid-typeof': 'error' },
 }];
