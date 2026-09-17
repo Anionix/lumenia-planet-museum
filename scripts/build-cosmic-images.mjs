@@ -39,7 +39,11 @@ export async function buildCosmicImages(outputDirectory = path.join(projectRoot,
   let gallery = await readFile(path.join(sourceDirectory, 'index.html'), 'utf8');
   gallery = gallery.replace('<main>', '<nav class="topline" aria-label="展示の移動"><a href="/">美術館に戻る</a><a href="./interactive/">画像を動かす展示へ →</a></nav><main>');
   gallery = gallery.replace('content="light"', 'content="dark"');
-  gallery = gallery.replace('<main>', '<p style="width:min(1392px,92%);margin:24px auto"><a href="./explore/?world=ettore-sottsass">画像から生まれた立体の宇宙へ →</a></p><main>');
+  gallery = gallery.replace('<main>', '<p style="width:min(1392px,92%);margin:24px auto"><a href="./explore/?world=ettore-sottsass">15の立体の宇宙を探索する →</a></p><main>');
+  gallery = gallery.replace(/<article\b([^>]*)>([\s\S]*?)<\/article>/g,(article,attributes,content)=>{
+    const slug=content.match(/href="([a-z-]+)\.png"/)?.[1];
+    return slug?`<article${attributes}>${content}<p style="margin:20px 0 0 48px"><a href="./explore/?world=${slug}">この宇宙に入る →</a></p></article>`:article;
+  });
   gallery = gallery.replace('</style>', 'nav.topline{width:min(1392px,92%);margin-inline:auto}</style>');
   gallery = gallery.replace(/<a[^>]*href="\.\.\/artist-references-2026-09-15\/index.html"[^>]*>[^<]*<\/a>/, '<a href="/records/">資料と検算記録 ↗</a>');
   await writeFile(path.join(outputDirectory, 'index.html'), gallery);

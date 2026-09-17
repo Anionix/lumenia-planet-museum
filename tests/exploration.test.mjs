@@ -52,3 +52,44 @@ test('the Sottsass passage leaves space for the observer and contact gap', () =>
   assert.equal(limits.observerRadius, 0.4);
   assert.ok(ringClearance(0.8, 0.5) < 0);
 });
+
+test('each of the fifteen worlds builds and preserves an open passage and a landing surface',async()=>{
+  const catalog=JSON.parse(await readFile(new URL('../reference-assets/artist-cosmos/explore/worlds.json',import.meta.url)));
+  assert.equal(catalog.worlds.length,15);
+  const shapeSignatures=new Set();let knownCoordinates=0;
+  for(const entry of catalog.worlds){
+    const recipe=JSON.parse(await readFile(new URL('../reference-assets/artist-cosmos/explore/'+entry.file.replace('./',''),import.meta.url)));
+    if(recipe.semanticPosition!==null)knownCoordinates++;
+    shapeSignatures.add(JSON.stringify(recipe.shapes.map(shape=>[shape.kind,shape.parameters,shape.position])));
+    const geometry=createWorldGeometry(recipe);
+    const physics=await createCollisionWorld(collisionSurfaces(geometry.solids),recipe.landmarks[0].position);
+    try{
+      for(const mesh of geometry.solids){
+        assert.ok([...mesh.geometry.attributes.position.array].every(Number.isFinite),entry.slug+' has non-finite vertices');
+        if(mesh.geometry.type==='LatheGeometry'){
+          const vertices=mesh.geometry.attributes.position.array,indices=mesh.geometry.index.array;let volume=0;
+          for(let triangle=0;triangle<indices.length;triangle+=3){
+            const first=indices[triangle]*3,second=indices[triangle+1]*3,third=indices[triangle+2]*3;
+            volume+=(vertices[first]*(vertices[second+1]*vertices[third+2]-vertices[second+2]*vertices[third+1])
+              +vertices[first+1]*(vertices[second+2]*vertices[third]-vertices[second]*vertices[third+2])
+              +vertices[first+2]*(vertices[second]*vertices[third+1]-vertices[second+1]*vertices[third]))/6;
+          }
+          assert.ok(volume>0,'Closed plywood shells must face outward');
+        }
+      }
+      let position=[...recipe.landmarks[0].position];
+      for(let frame=0;frame<40;frame++)position=physics.move(position,[0,0,-.4]);
+      assert.ok(position[2]<recipe.passage.position[2]-7.8,entry.slug+' passage was blocked');
+      const landing=recipe.landmarks.at(-1).position;position=[...landing];
+      for(let frame=0;frame<90;frame++)position=physics.move(position,[0,-.1,0]);
+      assert.ok(position[1]>.69&&position[1]<.9,entry.slug+' landing was blocked');
+      if(entry.slug==='walter-gropius'){
+        position=[...recipe.landmarks[1].position];
+        for(let frame=0;frame<40;frame++)position=physics.move(position,[0,0,-.4]);
+        assert.ok(position[2]<0,'The entrance viewpoint must fit through the open doorway');
+      }
+    }finally{physics.dispose();geometry.dispose();}
+    assert.equal(geometry.group.children.length,0);
+  }
+  assert.equal(knownCoordinates,12);assert.equal(shapeSignatures.size,15,'Worlds must have distinct structures');
+});

@@ -1,0 +1,985 @@
+{
+  "record_type": "exploration_world",
+  "recordIdentifier": "73259200-0eea-57c2-bd4e-7f5328925409",
+  "referenceRecordedAt": "2026-09-15T14:04:34.114664+00:00",
+  "artistName": "Dieter Rams",
+  "artistNameJapanese": "ディーター・ラムス",
+  "title": "静かな観測衛星",
+  "description": "静かな白い観測体。穴の反復、薄い継ぎ目、ひとつの小さな操作部へ近づく。",
+  "sourceProfileIdentifier": "66355416-1298-53e7-af26-05303e93d7ad",
+  "sourceImageIdentifier": "e3a71fb6-541f-5994-ae75-a2bec6228364",
+  "sourceImageSha256": "9b18c578a617c774b195ce2ddea6ef3c3cd2cf9562a60a5031df5b64742ff866",
+  "image": "../dieter-rams.png",
+  "sources": [
+    {
+      "sourceIdentifier": "fb4e80f5-43ea-558a-acba-911e86ef8626",
+      "publisher": "Dieter Rams — Vitsœ",
+      "url": "https://www.vitsoe.com/us/about/dieter-rams",
+      "observedOn": "2026-09-13"
+    },
+    {
+      "sourceIdentifier": "cf2255f2-63b9-57e7-a243-fb2b3c771453",
+      "publisher": "Design by Vitsœ: 1976 speech by Dieter Rams",
+      "url": "https://www.vitsoe.com/us/voice/design-by-vitsoe?",
+      "observedOn": "2026-09-13"
+    }
+  ],
+  "semanticPosition": {
+    "coordinate_identifier": "2cffd42e-a9ac-585e-83a2-dee48925af3f",
+    "values": [
+      0.75,
+      0.8,
+      0.98
+    ],
+    "unit": "dimensionless"
+  },
+  "reconstruction": "Newly authored geometry inspired by cited materials and a ChatGPT-generated reference picture. Hidden surfaces are designed, not recovered.",
+  "machineContract": {
+    "physicsEnabledByDefault": false,
+    "metresPerSceneUnit": 1,
+    "valuesOrigin": "presentation_setting",
+    "movementLimits": {
+      "maximumSeconds": 0.05,
+      "maximumSpeed": 16,
+      "normalSpeed": 8,
+      "boundary": 400,
+      "observerRadius": 0.4,
+      "contactGap": 0.05,
+      "framesPerSecond": 30,
+      "maximumPixelRatio": 1.5
+    }
+  },
+  "spawn": {
+    "position": [
+      25,
+      13,
+      38
+    ],
+    "target": [
+      0,
+      1,
+      0
+    ]
+  },
+  "passage": {
+    "position": [
+      -18,
+      6,
+      12
+    ],
+    "radius": 3,
+    "tube": 0.5,
+    "kind": "circular"
+  },
+  "landmarks": [
+    {
+      "name": "環の手前へ",
+      "position": [
+        -18,
+        6,
+        20
+      ],
+      "target": [
+        -18,
+        6,
+        0
+      ]
+    },
+    {
+      "name": "形のそばへ",
+      "position": [
+        14,
+        4,
+        15
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "着地できる台へ",
+      "position": [
+        -18,
+        5,
+        14
+      ],
+      "target": [
+        -18,
+        0,
+        14
+      ]
+    }
+  ],
+  "background": "#090d16",
+  "accent": "#d9d6c5",
+  "shapes": [
+    {
+      "recordIdentifier": "85878ca3-507f-522f-bdf0-d783d7c01da2",
+      "kind": "sphere",
+      "parameters": [
+        26
+      ],
+      "position": [
+        8,
+        -32,
+        -80
+      ],
+      "color": "#567a99",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "f5a2b482-3cc9-5922-b82f-6009f2bed980",
+      "kind": "sphere",
+      "parameters": [
+        7
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "color": "#d4d2c7"
+    },
+    {
+      "recordIdentifier": "72053400-7eca-5b19-9a2e-4caccb4f7281",
+      "kind": "torus",
+      "parameters": [
+        7.08,
+        0.12
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "color": "#33353a",
+      "rotation": [
+        1.5707963267948966,
+        0,
+        0
+      ]
+    },
+    {
+      "recordIdentifier": "d722ac99-e2c3-5f3b-94cf-fd4914cd239b",
+      "kind": "cylinder",
+      "parameters": [
+        1.8,
+        1.8,
+        0.35
+      ],
+      "position": [
+        2,
+        1,
+        6.65
+      ],
+      "color": "#878d90",
+      "rotation": [
+        1.5707963267948966,
+        0,
+        0
+      ],
+      "metalness": 0.8,
+      "roughness": 0.3
+    },
+    {
+      "recordIdentifier": "bd04b05c-2c3c-5d8e-8c67-34558c12019c",
+      "kind": "sphere",
+      "parameters": [
+        0.22
+      ],
+      "position": [
+        4,
+        -1,
+        5.8
+      ],
+      "color": "#bd6b38"
+    },
+    {
+      "recordIdentifier": "e5cfbdc3-95be-5430-b1ae-9dafb3051269",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        -4.985624831751683,
+        2.2,
+        4.598264281691291
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "377578ab-5632-5ef8-91e5-a1b619c882d3",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        -4.508503832283025,
+        2.2,
+        5.0228604413177385
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "84179d8f-2d31-5194-a41b-f4ca9873f5e1",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        -3.9914753848915137,
+        2.2,
+        5.402996276867201
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "17c8446f-fd83-5390-969b-ff1d51639072",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        -3.439116015761108,
+        2.2,
+        5.7353069800517975
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "c8628b69-db17-51bd-9b4c-1fb769910fc7",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        -2.8563149860698576,
+        2.2,
+        6.016851071264352
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "60318808-db2a-5404-ad5b-971dc1e5d738",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        -2.248231014232338,
+        2.2,
+        6.245136436363226
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "bab68c94-8878-53f3-9b98-4e9d96549d1a",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        -1.620246613015881,
+        2.2,
+        6.418142385856268
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "2308b3c4-c8ba-54da-bcc7-516650614e11",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        -0.977920445719931,
+        2.2,
+        6.534337541224886
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "7ea90eff-4916-5a12-a0b9-64877af70f27",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        -0.326938123142307,
+        2.2,
+        6.592693390065797
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "5ac0d230-6e54-571a-b467-a368b0443cf3",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        0.326938123142307,
+        2.2,
+        6.592693390065797
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "3bc92dec-9dd7-5a05-a413-f7c890ea4903",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        0.977920445719931,
+        2.2,
+        6.534337541224886
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "c4222868-fae0-5d14-8d70-c0e7027f5a09",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        1.620246613015882,
+        2.2,
+        6.418142385856268
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "33518e81-81ee-53c5-b1d2-b1ab533def4e",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        2.248231014232339,
+        2.2,
+        6.245136436363226
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "3566dd14-c91a-540a-83d6-c064272c80cb",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        2.8563149860698576,
+        2.2,
+        6.016851071264352
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "139057cd-b094-5e23-aca3-707706d2f817",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        3.439116015761108,
+        2.2,
+        5.7353069800517975
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "a86ca7f5-5916-5595-aa4b-c29f57fbf369",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        3.9914753848915137,
+        2.2,
+        5.402996276867201
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "d5c20939-d393-58b9-8d38-98a5dcfd1650",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        4.508503832283024,
+        2.2,
+        5.022860441317739
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "a3b88c50-4dae-5a59-bccd-a049c054595c",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        4.985624831751683,
+        2.2,
+        4.598264281691291
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "111bcdd9-23e1-5b7d-a82a-3367e8e631d1",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        -4.985624831751683,
+        2.4200000000000004,
+        4.598264281691291
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "e0dd52b7-afa6-5f9e-9f0f-b60c26df73c6",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        -4.508503832283025,
+        2.4200000000000004,
+        5.0228604413177385
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "3229cc1b-bc52-5790-a92d-da7fdbda5259",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        -3.9914753848915137,
+        2.4200000000000004,
+        5.402996276867201
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "a3d5673b-23b1-5b29-a3a3-5b9615939be1",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        -3.439116015761108,
+        2.4200000000000004,
+        5.7353069800517975
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "bb41b0e6-3a7c-5a57-8cbd-720add705b55",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        -2.8563149860698576,
+        2.4200000000000004,
+        6.016851071264352
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "6a43d509-2b8e-59d1-8274-79d2795db1da",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        -2.248231014232338,
+        2.4200000000000004,
+        6.245136436363226
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "6022e4ad-d1e2-5be0-bb82-b11b56d4be30",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        -1.620246613015881,
+        2.4200000000000004,
+        6.418142385856268
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "4e1f0f1e-bb72-57a3-9921-2c00e102ada8",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        -0.977920445719931,
+        2.4200000000000004,
+        6.534337541224886
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "281a22f5-e5d2-51d7-9bd2-0cd756e12ff6",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        -0.326938123142307,
+        2.4200000000000004,
+        6.592693390065797
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "c21256c0-8479-5a31-924b-683f82ec92e7",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        0.326938123142307,
+        2.4200000000000004,
+        6.592693390065797
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "d84dfb1b-aee3-52d2-b08e-44f2548d5a2f",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        0.977920445719931,
+        2.4200000000000004,
+        6.534337541224886
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "ac628642-6054-5fe7-8375-bb9ee8b7a0d3",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        1.620246613015882,
+        2.4200000000000004,
+        6.418142385856268
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "952d1e54-7e4a-511a-bb43-1f8b9d6b54d1",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        2.248231014232339,
+        2.4200000000000004,
+        6.245136436363226
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "2404cc74-a09a-5c00-9122-694ffd909f3f",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        2.8563149860698576,
+        2.4200000000000004,
+        6.016851071264352
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "55389389-1ee1-57fb-b868-8e9b286c4276",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        3.439116015761108,
+        2.4200000000000004,
+        5.7353069800517975
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "7e56a716-eff2-54c5-a2e4-903ae70468b8",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        3.9914753848915137,
+        2.4200000000000004,
+        5.402996276867201
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "55e930d5-4ed8-5b32-8915-c309f8b00927",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        4.508503832283024,
+        2.4200000000000004,
+        5.022860441317739
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "25c6f77b-0ae4-5335-b21b-7bd16faf6024",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        4.985624831751683,
+        2.4200000000000004,
+        4.598264281691291
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "265f7ca9-7c07-59f7-b31f-5cfa34128a6a",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        -4.985624831751683,
+        2.64,
+        4.598264281691291
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "b34c6f9a-ba28-5d0b-8637-a6d81f0328c4",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        -4.508503832283025,
+        2.64,
+        5.0228604413177385
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "b8b7154d-09fa-529e-8632-72644b834f29",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        -3.9914753848915137,
+        2.64,
+        5.402996276867201
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "58d8fb99-3783-5082-a7fa-8be3eb5885ae",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        -3.439116015761108,
+        2.64,
+        5.7353069800517975
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "8f609419-d8d9-5477-a17d-1dc0a652fb32",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        -2.8563149860698576,
+        2.64,
+        6.016851071264352
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "bdc097c5-3bd9-517b-92d9-c0dc78d6faaf",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        -2.248231014232338,
+        2.64,
+        6.245136436363226
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "570ba96b-937e-5362-968e-b596b6dd8a53",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        -1.620246613015881,
+        2.64,
+        6.418142385856268
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "3d667a54-1518-5ad9-894a-1597d5e84d22",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        -0.977920445719931,
+        2.64,
+        6.534337541224886
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "f4263ff7-50cf-580d-a89e-11aa3f8fed19",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        -0.326938123142307,
+        2.64,
+        6.592693390065797
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "9c3f1f09-03a7-5c6b-ba07-d9de8ff3f8bc",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        0.326938123142307,
+        2.64,
+        6.592693390065797
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "496fa133-d7bb-59b9-9757-97397fa0d06a",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        0.977920445719931,
+        2.64,
+        6.534337541224886
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "314d8920-218f-5107-8404-4981aba2109e",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        1.620246613015882,
+        2.64,
+        6.418142385856268
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "4ea2d58d-1e51-59fe-8b01-8866bc6f39ae",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        2.248231014232339,
+        2.64,
+        6.245136436363226
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "320c15a0-2e50-523c-b72a-26a0aef3b93c",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        2.8563149860698576,
+        2.64,
+        6.016851071264352
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "39ab34cf-644d-5af3-8a6d-d0cf6cd27c48",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        3.439116015761108,
+        2.64,
+        5.7353069800517975
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "3048e9fd-3485-553d-a0cd-8145e6a06e59",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        3.9914753848915137,
+        2.64,
+        5.402996276867201
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "eadf5282-9589-59a0-8411-786658126744",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        4.508503832283024,
+        2.64,
+        5.022860441317739
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "9343829f-984d-542b-94f2-99b6ae575082",
+      "kind": "sphere",
+      "parameters": [
+        0.08
+      ],
+      "position": [
+        4.985624831751683,
+        2.64,
+        4.598264281691291
+      ],
+      "color": "#43484b",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "d46c3238-096f-570b-8018-c847fadb2525",
+      "kind": "torus",
+      "parameters": [
+        3,
+        0.5
+      ],
+      "position": [
+        -18,
+        6,
+        12
+      ],
+      "color": "#d9d6c5"
+    },
+    {
+      "recordIdentifier": "4315d792-1c7c-5201-ab31-5b57b3227d61",
+      "kind": "box",
+      "parameters": [
+        7,
+        0.6,
+        7
+      ],
+      "position": [
+        -18,
+        0,
+        12
+      ],
+      "color": "#d9d6c5"
+    }
+  ]
+}

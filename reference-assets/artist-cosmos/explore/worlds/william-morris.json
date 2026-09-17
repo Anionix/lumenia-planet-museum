@@ -1,0 +1,2654 @@
+{
+  "record_type": "exploration_world",
+  "recordIdentifier": "9bdb7953-2aff-556d-9126-07e9904550df",
+  "referenceRecordedAt": "2026-09-15T14:04:34.114664+00:00",
+  "artistName": "William Morris",
+  "artistNameJapanese": "ウィリアム・モリス",
+  "title": "織物の惑星",
+  "description": "植物の反復が、惑星の表面と星のつるへ続く。葉の間から遠い光を探す。",
+  "sourceProfileIdentifier": "e9146e26-704e-5073-8222-11be30c6d0be",
+  "sourceImageIdentifier": "dabb2607-8305-5c0c-b04e-fbc2a4a0b552",
+  "sourceImageSha256": "d7485b0b48ab20c6ef5b369f0206db25137aac82021054cc1b8c8b4fb437d7a0",
+  "image": "../william-morris.png",
+  "sources": [
+    {
+      "sourceIdentifier": "86cb342f-c0d4-5b25-bbb3-c89689f7c270",
+      "publisher": "Strawberry Thief — Victoria and Albert Museum",
+      "url": "https://collections.vam.ac.uk/item/O78889/",
+      "observedOn": "2026-09-13"
+    },
+    {
+      "sourceIdentifier": "0dd5a9c7-6077-510a-aa75-52ca0a452dc5",
+      "publisher": "William Morris textiles — Victoria and Albert Museum",
+      "url": "https://www.vam.ac.uk/articles/willam-morris-textiles/",
+      "observedOn": "2026-09-13"
+    }
+  ],
+  "semanticPosition": {
+    "coordinate_identifier": "9d75669a-24ea-5b6d-8363-70c47b559eae",
+    "values": [
+      -0.7,
+      0.05,
+      -0.85
+    ],
+    "unit": "dimensionless"
+  },
+  "reconstruction": "Newly authored geometry inspired by cited materials and a ChatGPT-generated reference picture. Hidden surfaces are designed, not recovered.",
+  "machineContract": {
+    "physicsEnabledByDefault": false,
+    "metresPerSceneUnit": 1,
+    "valuesOrigin": "presentation_setting",
+    "movementLimits": {
+      "maximumSeconds": 0.05,
+      "maximumSpeed": 16,
+      "normalSpeed": 8,
+      "boundary": 400,
+      "observerRadius": 0.4,
+      "contactGap": 0.05,
+      "framesPerSecond": 30,
+      "maximumPixelRatio": 1.5
+    }
+  },
+  "spawn": {
+    "position": [
+      25,
+      13,
+      38
+    ],
+    "target": [
+      0,
+      1,
+      0
+    ]
+  },
+  "passage": {
+    "position": [
+      -18,
+      6,
+      12
+    ],
+    "radius": 3,
+    "tube": 0.5,
+    "kind": "circular"
+  },
+  "landmarks": [
+    {
+      "name": "環の手前へ",
+      "position": [
+        -18,
+        6,
+        20
+      ],
+      "target": [
+        -18,
+        6,
+        0
+      ]
+    },
+    {
+      "name": "形のそばへ",
+      "position": [
+        14,
+        4,
+        15
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "着地できる台へ",
+      "position": [
+        -18,
+        5,
+        14
+      ],
+      "target": [
+        -18,
+        0,
+        14
+      ]
+    }
+  ],
+  "background": "#090d16",
+  "accent": "#b7a36c",
+  "shapes": [
+    {
+      "recordIdentifier": "72e4a5c1-779a-5454-a1c0-a10c24070d3e",
+      "kind": "sphere",
+      "parameters": [
+        8
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "color": "#254b3b"
+    },
+    {
+      "recordIdentifier": "459b058f-0b6c-5966-8dc4-d9367d61b385",
+      "kind": "sphere",
+      "parameters": [
+        1.6
+      ],
+      "position": [
+        -14,
+        10,
+        -18
+      ],
+      "color": "#dec99a"
+    },
+    {
+      "recordIdentifier": "c2e304f0-6573-5f4d-ace2-f0588982332d",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        2.9612907184498294,
+        7.483424213341422,
+        0.9160345648490568
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        0.3,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "f82aedc1-11e9-5963-b09f-19ce88c0eaf3",
+      "kind": "sphere",
+      "parameters": [
+        0.23
+      ],
+      "position": [
+        3.020516532818826,
+        7.633092697608251,
+        0.9343552561460379
+      ],
+      "color": "#b35e54",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "1074c769-e3b7-5f70-b9e6-8bec62fc26a1",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        1.857302908702281,
+        7.483424213341422,
+        2.4816905424531392
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        0.9283185307179587,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "0aae1aec-0795-5d2f-8eb4-6d1c44a955c7",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        0.043888515234503926,
+        7.483424213341422,
+        3.0994250823992857
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        1.5566370614359173,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "fe176aa9-a458-5138-af00-4ded9899d01b",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        -1.7862897993370856,
+        7.483424213341422,
+        2.5332845864528495
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        2.1849555921538757,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "0ca7f194-43db-5c6d-b940-282bef56682e",
+      "kind": "sphere",
+      "parameters": [
+        0.23
+      ],
+      "position": [
+        -1.8220155953238273,
+        7.633092697608251,
+        2.5839502781819066
+      ],
+      "color": "#b35e54",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "468af78f-b7b4-5713-bf38-25b5219ea8c7",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        -2.934166124319138,
+        7.483424213341422,
+        0.9995154816576459
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        2.8132741228718343,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "f4f767c4-1ae2-5571-826e-90c2dd388bfc",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        -2.96129071844983,
+        7.483424213341422,
+        -0.916034564849056
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        3.441592653589793,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "32dd9ad7-86f6-54ce-997e-b8580d3dd027",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        -1.8573029087022817,
+        7.483424213341422,
+        -2.4816905424531384
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        4.069911184307752,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "ae8d00dd-4d52-58c2-bb78-e85f0c954d4b",
+      "kind": "sphere",
+      "parameters": [
+        0.23
+      ],
+      "position": [
+        -1.8944489668763274,
+        7.633092697608251,
+        -2.531324353302201
+      ],
+      "color": "#b35e54",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "28fd5056-0f16-5a2c-a03a-eb71ba62e6bb",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        -0.043888515234504995,
+        7.483424213341422,
+        -3.0994250823992857
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        4.69822971502571,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "ce446b9e-94b1-57d0-82e9-65aca466bd97",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        1.7862897993370852,
+        7.483424213341422,
+        -2.5332845864528495
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        5.326548245743669,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "6b574b6d-b205-5814-993c-3266e373e09e",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        2.934166124319138,
+        7.483424213341422,
+        -0.9995154816576463
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        5.954866776461627,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "6f234ea6-340f-5daa-ad26-998df33c3911",
+      "kind": "sphere",
+      "parameters": [
+        0.23
+      ],
+      "position": [
+        2.9928494468055207,
+        7.633092697608251,
+        -1.0195057912907992
+      ],
+      "color": "#b35e54",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "55d2cedc-6cd4-5e7f-9b26-5884b51f192f",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        4.7271633214649595,
+        5.727564927611035,
+        3.234026427256951
+      ],
+      "color": "#9b9b65",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        0.6,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "4ca646f7-6518-51a7-a3d2-e55a834ff135",
+      "kind": "sphere",
+      "parameters": [
+        0.23
+      ],
+      "position": [
+        4.821706587894258,
+        5.842116226163256,
+        3.2987069558020905
+      ],
+      "color": "#b35e54",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "0da37b6e-4d74-551d-8489-fa0867bbd9c8",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        1.9234424227853226,
+        5.727564927611035,
+        5.394939225443575
+      ],
+      "color": "#9b9b65",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        1.2283185307179587,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "6983c006-9424-56cc-910c-3234d654ecb1",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        -1.6149681059948626,
+        5.727564927611035,
+        5.495168606750784
+      ],
+      "color": "#9b9b65",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        1.8566370614359173,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "5fe6d964-f5f7-5f0e-a7ea-1673247a16e4",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        -4.536515709032053,
+        5.727564927611035,
+        3.4964303541905997
+      ],
+      "color": "#9b9b65",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        2.484955592153876,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "54f88eb9-ce78-58cf-a743-23584022b697",
+      "kind": "sphere",
+      "parameters": [
+        0.23
+      ],
+      "position": [
+        -4.627246023212694,
+        5.842116226163256,
+        3.5663589612744118
+      ],
+      "color": "#b35e54",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "89669381-0647-5176-a7ba-64b53754bc3a",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        -5.725268501716829,
+        5.727564927611035,
+        0.16217454562643877
+      ],
+      "color": "#9b9b65",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        3.1132741228718346,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "50302143-a523-54bd-9e0b-2f658a59b326",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        -4.7271633214649595,
+        5.727564927611035,
+        -3.234026427256951
+      ],
+      "color": "#9b9b65",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        3.741592653589793,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "6abbc97b-6479-58e2-a893-662423684b50",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        -1.9234424227853255,
+        5.727564927611035,
+        -5.394939225443573
+      ],
+      "color": "#9b9b65",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        4.369911184307751,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "c91a89e8-45e2-5ecd-80b7-8df0811e017c",
+      "kind": "sphere",
+      "parameters": [
+        0.23
+      ],
+      "position": [
+        -1.961911271241032,
+        5.842116226163256,
+        -5.502838009952445
+      ],
+      "color": "#b35e54",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "1412f275-d44e-51bb-9eec-864ae798b435",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        1.6149681059948593,
+        5.727564927611035,
+        -5.495168606750785
+      ],
+      "color": "#9b9b65",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        4.99822971502571,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "00166ab0-bc89-5b85-aaee-3eaba1c0f46b",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        4.536515709032051,
+        5.727564927611035,
+        -3.4964303541906023
+      ],
+      "color": "#9b9b65",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        5.626548245743669,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "cd276bee-448b-5985-b590-880044c438a0",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        5.725268501716829,
+        5.727564927611035,
+        -0.162174545626442
+      ],
+      "color": "#9b9b65",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        6.254866776461627,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "c9266b63-a519-57ce-aa4a-639b9ca1179d",
+      "kind": "sphere",
+      "parameters": [
+        0.23
+      ],
+      "position": [
+        5.839773871751166,
+        5.842116226163256,
+        -0.16541803653897086
+      ],
+      "color": "#b35e54",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "a448d354-e35e-50b0-8477-3f3478ccda90",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        4.651771087811084,
+        3.0997358021572277,
+        5.861967562468216
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        0.8999999999999999,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "44ee1c83-0e99-5288-a713-c6b906195730",
+      "kind": "sphere",
+      "parameters": [
+        0.23
+      ],
+      "position": [
+        4.744806509567305,
+        3.1617305182003723,
+        5.97920691371758
+      ],
+      "color": "#b35e54",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "c4675573-22d7-5333-846e-aa4515439e92",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        0.31778378134552854,
+        3.0997358021572277,
+        7.476673820967344
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        1.5283185307179585,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "2812e1e7-4872-52f6-959b-bdc1c861a612",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        -4.137586128520554,
+        3.0997358021572277,
+        6.235544802653492
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        2.156637061435917,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "a5d0d9eb-347a-546c-b224-65d214807b5a",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        -7.0125387686718765,
+        3.0997358021572277,
+        2.612649608098762
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        2.784955592153876,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "45426bb5-19df-51a9-ada1-8b67d23cc3e7",
+      "kind": "sphere",
+      "parameters": [
+        0.23
+      ],
+      "position": [
+        -7.152789544045314,
+        3.1617305182003723,
+        2.664902600260737
+      ],
+      "color": "#b35e54",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "bed6d789-b2d6-5988-899a-4e3ec5413d68",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        -7.208939946616877,
+        3.0997358021572277,
+        -2.0081889360556024
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        3.4132741228718344,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "77ee0124-6d0d-5a16-b4e2-bf9e7e31eb42",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        -4.651771087811082,
+        3.0997358021572277,
+        -5.861967562468218
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        4.0415926535897935,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "3b5b98a3-b862-5d5f-a76c-690434e3af86",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        -0.31778378134552615,
+        3.0997358021572277,
+        -7.476673820967344
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        4.669911184307752,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "24c32052-5616-52ec-b134-50a6bc6ec276",
+      "kind": "sphere",
+      "parameters": [
+        0.23
+      ],
+      "position": [
+        -0.3241394569724367,
+        3.1617305182003723,
+        -7.626207297386691
+      ],
+      "color": "#b35e54",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "759f74f0-1d1c-5388-ad4c-0367af525020",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        4.137586128520557,
+        3.0997358021572277,
+        -6.23554480265349
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        5.298229715025711,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "165777c5-7a41-5406-920c-edca9859f24a",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        7.012538768671877,
+        3.0997358021572277,
+        -2.6126496080987596
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        5.926548245743669,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "949e2e63-699a-5a57-958b-6f491eae7d88",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        7.208939946616876,
+        3.0997358021572277,
+        2.008188936055605
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        6.554866776461628,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "431e7aa7-2e69-5995-ad73-6a6f074008b5",
+      "kind": "sphere",
+      "parameters": [
+        0.23
+      ],
+      "position": [
+        7.353118745549214,
+        3.1617305182003723,
+        2.0483527147767173
+      ],
+      "color": "#b35e54",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "8a34ef07-b47f-5aae-bd55-0b8f6adcf755",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        2.9350978112610564,
+        4.959819536546781e-16,
+        7.5495165963345325
+      ],
+      "color": "#9b9b65",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        1.2,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "aaa75623-32fc-5abe-9d2a-5f0efcad5273",
+      "kind": "sphere",
+      "parameters": [
+        0.23
+      ],
+      "position": [
+        2.9937997674862777,
+        5.059015927277717e-16,
+        7.700506928261223
+      ],
+      "color": "#b35e54",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "fea370ec-6722-509b-b7a5-269225bea66b",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        -2.0629505077998,
+        4.959819536546781e-16,
+        7.832894433245512
+      ],
+      "color": "#9b9b65",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        1.8283185307179586,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "8e7941f7-d86f-5a4e-a3df-b4e2684624f3",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        -6.273021849989989,
+        4.959819536546781e-16,
+        5.12437282694655
+      ],
+      "color": "#9b9b65",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        2.4566370614359174,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "9e4e8898-1b27-5c03-9b8d-b3791fc75819",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        -8.087012057654745,
+        4.959819536546781e-16,
+        0.45851497178038847
+      ],
+      "color": "#9b9b65",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        3.084955592153876,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "5cc3db4f-aad6-5f80-a57d-38447ff5aa14",
+      "kind": "sphere",
+      "parameters": [
+        0.23
+      ],
+      "position": [
+        -8.24875229880784,
+        5.059015927277717e-16,
+        0.46768527121599623
+      ],
+      "color": "#b35e54",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "eddfec29-cda5-5f6e-9f3c-77408b595d85",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        -6.812038526725613,
+        4.959819536546781e-16,
+        -4.382480018255182
+      ],
+      "color": "#9b9b65",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        3.7132741228718347,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "969b3ac3-fc49-5fc8-8267-88476c77ffae",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        -2.9350978112610555,
+        4.959819536546781e-16,
+        -7.549516596334533
+      ],
+      "color": "#9b9b65",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        4.341592653589793,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "18924043-f2ff-55ca-94c6-ba9040c570b3",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        2.0629505077998007,
+        4.959819536546781e-16,
+        -7.832894433245512
+      ],
+      "color": "#9b9b65",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        4.969911184307752,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "6c148b10-21e3-5fea-9753-95743d760aeb",
+      "kind": "sphere",
+      "parameters": [
+        0.23
+      ],
+      "position": [
+        2.104209517955797,
+        5.059015927277717e-16,
+        -7.9895523219104225
+      ],
+      "color": "#b35e54",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "0dbf3526-8959-5eb9-bfd9-084801ffc9ed",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        6.273021849989988,
+        4.959819536546781e-16,
+        -5.1243728269465505
+      ],
+      "color": "#9b9b65",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        5.5982297150257105,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "d61b59d3-289d-5db9-9e83-9acb465d79e7",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        8.087012057654745,
+        4.959819536546781e-16,
+        -0.45851497178038947
+      ],
+      "color": "#9b9b65",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        6.226548245743669,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "5b69abd7-3de1-5947-bd2f-66bd3b20f557",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        6.812038526725613,
+        4.959819536546781e-16,
+        4.3824800182551815
+      ],
+      "color": "#9b9b65",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        6.854866776461628,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "b9389b05-0686-5b03-9353-0e89adc1008f",
+      "kind": "sphere",
+      "parameters": [
+        0.23
+      ],
+      "position": [
+        6.948279297260125,
+        5.059015927277717e-16,
+        4.470129618620285
+      ],
+      "color": "#b35e54",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "08c1455b-276e-5241-8621-18ed3320b171",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        0.5293564877441032,
+        -3.0997358021572268,
+        7.464678135439459
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        1.5,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "1cc81290-c298-53c1-a91e-44274a380b85",
+      "kind": "sphere",
+      "parameters": [
+        0.23
+      ],
+      "position": [
+        0.5399436174989852,
+        -3.1617305182003714,
+        7.613971698148248
+      ],
+      "color": "#b35e54",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "3a583884-b8c5-525c-9be9-1309594c6ccb",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        -3.959369326453777,
+        -3.0997358021572268,
+        6.350199405810943
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        2.1283185307179586,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "71bd972a-62e4-5e99-ad3b-a8d6bdb032c4",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        -6.935750631960092,
+        -3.0997358021572268,
+        2.8101603385020333
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        2.7566370614359172,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "a5aff80a-b363-5245-8fa6-9641139c4aab",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        -7.262910933551216,
+        -3.0997358021572268,
+        -1.8032644642777427
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        3.384955592153876,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "524b6f54-612d-5f11-b334-9a66f6ff8964",
+      "kind": "sphere",
+      "parameters": [
+        0.23
+      ],
+      "position": [
+        -7.40816915222224,
+        -3.1617305182003714,
+        -1.8393297535632975
+      ],
+      "color": "#b35e54",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "1e395ce1-84dc-5fb2-8741-ea606aef9e58",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        -4.815886115789003,
+        -3.0997358021572268,
+        -5.727903532408291
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        4.0132741228718345,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "d06a24d2-83ac-5fb7-8afd-735f5c6c73e6",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        -0.5293564877441042,
+        -3.0997358021572268,
+        -7.464678135439459
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        4.641592653589793,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "4cf89b9d-5382-51f9-8c4c-3e2a3d451cd4",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        3.9593693264537766,
+        -3.0997358021572268,
+        -6.350199405810943
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        5.269911184307752,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "0ee23a4e-d4fd-5912-9d15-937e1bf93661",
+      "kind": "sphere",
+      "parameters": [
+        0.23
+      ],
+      "position": [
+        4.038556712982852,
+        -3.1617305182003714,
+        -6.477203393927162
+      ],
+      "color": "#b35e54",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "4251e3c7-b15b-52fc-9b09-27f89c0cd3f9",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        6.935750631960092,
+        -3.0997358021572268,
+        -2.810160338502034
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        5.89822971502571,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "f38208f8-d032-56c5-8aa8-6dbc34aae1fe",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        7.262910933551216,
+        -3.0997358021572268,
+        1.803264464277742
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        6.526548245743669,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "5bf88efc-111c-518a-b193-eddea7b15842",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        4.815886115789004,
+        -3.0997358021572268,
+        5.727903532408291
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        7.154866776461628,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "8cf2eee2-4247-57ab-a540-8c1d05e8b14e",
+      "kind": "sphere",
+      "parameters": [
+        0.23
+      ],
+      "position": [
+        4.912203838104785,
+        -3.1617305182003714,
+        5.842461603056457
+      ],
+      "color": "#b35e54",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "505b2939-e191-585b-88e5-22e561a613d0",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        -1.3013147490438857,
+        -5.727564927611034,
+        5.577775535455048
+      ],
+      "color": "#9b9b65",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        1.7999999999999998,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "26433f4a-9336-59bf-b819-f3d88f0ed86e",
+      "kind": "sphere",
+      "parameters": [
+        0.23
+      ],
+      "position": [
+        -1.3273410440247635,
+        -5.842116226163255,
+        5.689331046164149
+      ],
+      "color": "#b35e54",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "62dda7b1-6f06-54eb-9663-972e9a25cc0c",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        -4.331319947345503,
+        -5.727564927611034,
+        3.74762158091328
+      ],
+      "color": "#9b9b65",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        2.4283185307179584,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "f89c9c65-fe96-558a-8657-7dbf740fd218",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        -5.706908141911543,
+        -5.727564927611034,
+        0.4860035594352523
+      ],
+      "color": "#9b9b65",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        3.056637061435917,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "545a6d5b-bc51-586b-a75e-48433be8694c",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        -4.9026513969408825,
+        -5.727564927611034,
+        -2.961251303093612
+      ],
+      "color": "#9b9b65",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        3.6849555921538757,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "589cc976-4686-58ba-a7ff-b34d2d1e2843",
+      "kind": "sphere",
+      "parameters": [
+        0.23
+      ],
+      "position": [
+        -5.0007044248797,
+        -5.842116226163255,
+        -3.020476329155484
+      ],
+      "color": "#b35e54",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "012b273f-0f2e-5741-b8e6-72229c99b614",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        -2.225748453330957,
+        -5.727564927611034,
+        -5.277408817070633
+      ],
+      "color": "#9b9b65",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        4.313274122871834,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "9851a9dc-d955-5004-901e-820effec1fd5",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        1.3013147490438852,
+        -5.727564927611034,
+        -5.577775535455048
+      ],
+      "color": "#9b9b65",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        4.941592653589793,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "3dbb78a9-a6ea-5c85-855a-76f0cf63f5be",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        4.331319947345503,
+        -5.727564927611034,
+        -3.7476215809132802
+      ],
+      "color": "#9b9b65",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        5.569911184307752,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "91810f3f-fc39-53a1-be06-af7c1fe688fe",
+      "kind": "sphere",
+      "parameters": [
+        0.23
+      ],
+      "position": [
+        4.417946346292413,
+        -5.842116226163255,
+        -3.822574012531546
+      ],
+      "color": "#b35e54",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "e0a456b2-2fe8-528d-8421-f8769b5f1253",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        5.706908141911543,
+        -5.727564927611034,
+        -0.48600355943525303
+      ],
+      "color": "#9b9b65",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        6.19822971502571,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "12b44eb6-ddb6-5b12-92f6-7d020bfbc967",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        4.9026513969408825,
+        -5.727564927611034,
+        2.961251303093611
+      ],
+      "color": "#9b9b65",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        6.826548245743669,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "ea60d2d5-f4ed-519f-99ce-326be24476e3",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        2.225748453330958,
+        -5.727564927611034,
+        5.277408817070632
+      ],
+      "color": "#9b9b65",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        7.454866776461627,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "0ba498fb-5f79-51fc-8311-c65e3f5b3328",
+      "kind": "sphere",
+      "parameters": [
+        0.23
+      ],
+      "position": [
+        2.2702634223975773,
+        -5.842116226163255,
+        5.382956993412044
+      ],
+      "color": "#b35e54",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "1514fc60-6dff-5330-967f-1103bfe1e79e",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        -1.5648895450077913,
+        -7.483424213341422,
+        2.6757209785589793
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        2.1,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "8d9fad24-7863-5cad-b072-c255c1eaea04",
+      "kind": "sphere",
+      "parameters": [
+        0.23
+      ],
+      "position": [
+        -1.5961873359079473,
+        -7.633092697608251,
+        2.7292353981301587
+      ],
+      "color": "#b35e54",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "f3b1efb9-c0a5-547b-a235-b651017c2a30",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        -2.8387715666775355,
+        -7.483424213341422,
+        1.2448847478375207
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        2.7283185307179587,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "640ab591-36a9-5e0d-9634-5ad0bd74b2b8",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        -3.0283393361732487,
+        -7.483424213341422,
+        -0.6614551444815288
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        3.3566370614359173,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "3be8983d-e074-5a22-892a-7e46e7c77d5e",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        -2.061184408719076,
+        -7.483424213341422,
+        -2.315141653642107
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        3.984955592153876,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "6a818873-e6ef-5816-ac0e-ba1f9ec5b75f",
+      "kind": "sphere",
+      "parameters": [
+        0.23
+      ],
+      "position": [
+        -2.1024080968934573,
+        -7.633092697608251,
+        -2.361444486714949
+      ],
+      "color": "#b35e54",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "c15f4d22-1f89-583d-a813-3cd6e97045c4",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        -0.3067270942155722,
+        -7.483424213341422,
+        -3.0845227398820363
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        4.613274122871834,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "22130db1-f85e-5bf0-b2b5-f534e8fe84c0",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        1.5648895450077895,
+        -7.483424213341422,
+        -2.6757209785589806
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        5.241592653589793,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "d503e072-0568-50f7-b1ee-58ea7fd13d6d",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        2.8387715666775346,
+        -7.483424213341422,
+        -1.2448847478375222
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        5.869911184307751,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "34e37670-7668-5425-9158-83f8689e9898",
+      "kind": "sphere",
+      "parameters": [
+        0.23
+      ],
+      "position": [
+        2.8955469980110853,
+        -7.633092697608251,
+        -1.2697824427942728
+      ],
+      "color": "#b35e54",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "8de1bb93-6661-5328-a636-5a4df17365fc",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        3.028339336173249,
+        -7.483424213341422,
+        0.661455144481527
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        6.49822971502571,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "f82ccc36-9660-524b-95a3-ea56e17fb2d6",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        2.061184408719077,
+        -7.483424213341422,
+        2.3151416536421054
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        7.126548245743669,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "d888697a-dad2-5fe5-8e92-b7b25d82ef58",
+      "kind": "sphere",
+      "parameters": [
+        0.65
+      ],
+      "position": [
+        0.30672709421557254,
+        -7.483424213341422,
+        3.0845227398820363
+      ],
+      "color": "#cab783",
+      "scale": [
+        0.5,
+        1.5,
+        0.55
+      ],
+      "rotation": [
+        0,
+        7.754866776461627,
+        0.6
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "47e70329-c187-591a-8710-fbdf8e301d50",
+      "kind": "sphere",
+      "parameters": [
+        0.23
+      ],
+      "position": [
+        0.312861636099884,
+        -7.633092697608251,
+        3.146213194679677
+      ],
+      "color": "#b35e54",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "6eee0718-5330-5370-9678-6beeaae44a1b",
+      "kind": "tube",
+      "parameters": [
+        [
+          [
+            8,
+            0,
+            -5
+          ],
+          [
+            8.281562582758491,
+            1.6787558452182672,
+            -5
+          ],
+          [
+            8.197442846625679,
+            3.46582324654699,
+            -5
+          ],
+          [
+            7.716887999405491,
+            5.279407126243582,
+            -5
+          ],
+          [
+            6.827725751602221,
+            7.030089690815323,
+            -5
+          ],
+          [
+            5.538098635148432,
+            8.625077594280938,
+            -5
+          ],
+          [
+            3.877227972900405,
+            9.972818219849321,
+            -5
+          ],
+          [
+            1.895133643337685,
+            10.987764489371331,
+            -5
+          ],
+          [
+            -0.33871445869495026,
+            11.595053795281459,
+            -5
+          ],
+          [
+            -2.7377852410516996,
+            11.734863952082252,
+            -5
+          ],
+          [
+            -5.20183545683928,
+            11.366217835321022,
+            -5
+          ],
+          [
+            -7.621089468456728,
+            10.47002842946369,
+            -5
+          ],
+          [
+            -9.881075788252694,
+            9.051206619385418,
+            -5
+          ],
+          [
+            -11.86790923415992,
+            7.139693999727279,
+            -5
+          ],
+          [
+            -13.473779471561814,
+            4.790330547229437,
+            -5
+          ],
+          [
+            -14.60238932485657,
+            2.0815201188830414,
+            -5
+          ],
+          [
+            -15.174080592080246,
+            -0.8872869800992172,
+            -5
+          ],
+          [
+            -15.130391713868564,
+            -3.9992182467199155,
+            -5
+          ],
+          [
+            -14.437810502979767,
+            -7.124579137047125,
+            -5
+          ],
+          [
+            -13.090515632183594,
+            -10.126248095102005,
+            -5
+          ],
+          [
+            -11.111941554681403,
+            -12.86564242023478,
+            -5
+          ],
+          [
+            -8.555051332395207,
+            -15.208997228617116,
+            -5
+          ],
+          [
+            -5.501258372613706,
+            -17.033677122622336,
+            -5
+          ],
+          [
+            -2.057998869258241,
+            -18.234229916674074,
+            -5
+          ]
+        ],
+        0.12
+      ],
+      "position": [
+        -3,
+        4,
+        -4
+      ],
+      "color": "#b6a264",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "dfd3d4a7-8136-5532-82c6-9f4ed7969f01",
+      "kind": "tube",
+      "parameters": [
+        [
+          [
+            8,
+            0,
+            -6.2
+          ],
+          [
+            8.281562582758491,
+            1.6787558452182672,
+            -6.2
+          ],
+          [
+            8.197442846625679,
+            3.46582324654699,
+            -6.2
+          ],
+          [
+            7.716887999405491,
+            5.279407126243582,
+            -6.2
+          ],
+          [
+            6.827725751602221,
+            7.030089690815323,
+            -6.2
+          ],
+          [
+            5.538098635148432,
+            8.625077594280938,
+            -6.2
+          ],
+          [
+            3.877227972900405,
+            9.972818219849321,
+            -6.2
+          ],
+          [
+            1.895133643337685,
+            10.987764489371331,
+            -6.2
+          ],
+          [
+            -0.33871445869495026,
+            11.595053795281459,
+            -6.2
+          ],
+          [
+            -2.7377852410516996,
+            11.734863952082252,
+            -6.2
+          ],
+          [
+            -5.20183545683928,
+            11.366217835321022,
+            -6.2
+          ],
+          [
+            -7.621089468456728,
+            10.47002842946369,
+            -6.2
+          ],
+          [
+            -9.881075788252694,
+            9.051206619385418,
+            -6.2
+          ],
+          [
+            -11.86790923415992,
+            7.139693999727279,
+            -6.2
+          ],
+          [
+            -13.473779471561814,
+            4.790330547229437,
+            -6.2
+          ],
+          [
+            -14.60238932485657,
+            2.0815201188830414,
+            -6.2
+          ],
+          [
+            -15.174080592080246,
+            -0.8872869800992172,
+            -6.2
+          ],
+          [
+            -15.130391713868564,
+            -3.9992182467199155,
+            -6.2
+          ],
+          [
+            -14.437810502979767,
+            -7.124579137047125,
+            -6.2
+          ],
+          [
+            -13.090515632183594,
+            -10.126248095102005,
+            -6.2
+          ],
+          [
+            -11.111941554681403,
+            -12.86564242023478,
+            -6.2
+          ],
+          [
+            -8.555051332395207,
+            -15.208997228617116,
+            -6.2
+          ],
+          [
+            -5.501258372613706,
+            -17.033677122622336,
+            -6.2
+          ],
+          [
+            -2.057998869258241,
+            -18.234229916674074,
+            -6.2
+          ]
+        ],
+        0.12
+      ],
+      "position": [
+        -3,
+        4,
+        -4
+      ],
+      "color": "#b6a264",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "ea156b46-b25d-5203-aab7-f6fc89614a02",
+      "kind": "tube",
+      "parameters": [
+        [
+          [
+            8,
+            0,
+            -7.4
+          ],
+          [
+            8.281562582758491,
+            1.6787558452182672,
+            -7.4
+          ],
+          [
+            8.197442846625679,
+            3.46582324654699,
+            -7.4
+          ],
+          [
+            7.716887999405491,
+            5.279407126243582,
+            -7.4
+          ],
+          [
+            6.827725751602221,
+            7.030089690815323,
+            -7.4
+          ],
+          [
+            5.538098635148432,
+            8.625077594280938,
+            -7.4
+          ],
+          [
+            3.877227972900405,
+            9.972818219849321,
+            -7.4
+          ],
+          [
+            1.895133643337685,
+            10.987764489371331,
+            -7.4
+          ],
+          [
+            -0.33871445869495026,
+            11.595053795281459,
+            -7.4
+          ],
+          [
+            -2.7377852410516996,
+            11.734863952082252,
+            -7.4
+          ],
+          [
+            -5.20183545683928,
+            11.366217835321022,
+            -7.4
+          ],
+          [
+            -7.621089468456728,
+            10.47002842946369,
+            -7.4
+          ],
+          [
+            -9.881075788252694,
+            9.051206619385418,
+            -7.4
+          ],
+          [
+            -11.86790923415992,
+            7.139693999727279,
+            -7.4
+          ],
+          [
+            -13.473779471561814,
+            4.790330547229437,
+            -7.4
+          ],
+          [
+            -14.60238932485657,
+            2.0815201188830414,
+            -7.4
+          ],
+          [
+            -15.174080592080246,
+            -0.8872869800992172,
+            -7.4
+          ],
+          [
+            -15.130391713868564,
+            -3.9992182467199155,
+            -7.4
+          ],
+          [
+            -14.437810502979767,
+            -7.124579137047125,
+            -7.4
+          ],
+          [
+            -13.090515632183594,
+            -10.126248095102005,
+            -7.4
+          ],
+          [
+            -11.111941554681403,
+            -12.86564242023478,
+            -7.4
+          ],
+          [
+            -8.555051332395207,
+            -15.208997228617116,
+            -7.4
+          ],
+          [
+            -5.501258372613706,
+            -17.033677122622336,
+            -7.4
+          ],
+          [
+            -2.057998869258241,
+            -18.234229916674074,
+            -7.4
+          ]
+        ],
+        0.12
+      ],
+      "position": [
+        -3,
+        4,
+        -4
+      ],
+      "color": "#b6a264",
+      "collision": false
+    },
+    {
+      "recordIdentifier": "37ab8d68-bbb7-5871-8539-ad43c80e5016",
+      "kind": "torus",
+      "parameters": [
+        3,
+        0.5
+      ],
+      "position": [
+        -18,
+        6,
+        12
+      ],
+      "color": "#b7a36c"
+    },
+    {
+      "recordIdentifier": "a1434b07-df30-57eb-9327-ee27c2fdeea1",
+      "kind": "box",
+      "parameters": [
+        7,
+        0.6,
+        7
+      ],
+      "position": [
+        -18,
+        0,
+        12
+      ],
+      "color": "#b7a36c"
+    }
+  ]
+}

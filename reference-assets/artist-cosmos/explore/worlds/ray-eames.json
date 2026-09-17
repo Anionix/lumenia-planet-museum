@@ -1,0 +1,890 @@
+{
+  "record_type": "exploration_world",
+  "recordIdentifier": "54fb3ebc-8312-5edb-9007-47bd83dbc990",
+  "referenceRecordedAt": "2026-09-15T14:04:34.114664+00:00",
+  "artistName": "Ray Eames",
+  "artistNameJapanese": "レイ・イームズ",
+  "title": "星座を組み立てる",
+  "description": "色のカードが組み合わさる、隙間の多い天体。面の向こうに別の色が見える。",
+  "sourceProfileIdentifier": "0fcb82c9-fa68-5fb0-bb38-41102237b725",
+  "sourceImageIdentifier": "dab6c340-64db-5084-bd33-2da609519164",
+  "sourceImageSha256": "c4933e043eb1931a3bb4f64bb83821fbbca0b081298808c373adc12167c3b3f8",
+  "image": "../ray-eames.png",
+  "sources": [
+    {
+      "sourceIdentifier": "1ad6f2f1-5819-5492-b3f2-04a4e0f8ef8e",
+      "publisher": "House of Cards Mock-up Process — Eames Institute",
+      "url": "https://www.eamesinstitute.org/collection/artifacts/house-of-cards-mock-up-process-diamond-cards/",
+      "observedOn": "2026-09-13"
+    },
+    {
+      "sourceIdentifier": "7dd2584e-d9c6-51a6-ad1e-be3ad79314b0",
+      "publisher": "Small House of Cards — Eames Office",
+      "url": "https://www.eamesoffice.com/product/small-house-of-cards/",
+      "observedOn": "2026-09-13"
+    }
+  ],
+  "semanticPosition": null,
+  "reconstruction": "Newly authored geometry inspired by cited materials and a ChatGPT-generated reference picture. Hidden surfaces are designed, not recovered.",
+  "machineContract": {
+    "physicsEnabledByDefault": false,
+    "metresPerSceneUnit": 1,
+    "valuesOrigin": "presentation_setting",
+    "movementLimits": {
+      "maximumSeconds": 0.05,
+      "maximumSpeed": 16,
+      "normalSpeed": 8,
+      "boundary": 400,
+      "observerRadius": 0.4,
+      "contactGap": 0.05,
+      "framesPerSecond": 30,
+      "maximumPixelRatio": 1.5
+    }
+  },
+  "spawn": {
+    "position": [
+      25,
+      13,
+      38
+    ],
+    "target": [
+      0,
+      1,
+      0
+    ]
+  },
+  "passage": {
+    "position": [
+      -18,
+      6,
+      12
+    ],
+    "radius": 3,
+    "tube": 0.5,
+    "kind": "circular"
+  },
+  "landmarks": [
+    {
+      "name": "環の手前へ",
+      "position": [
+        -18,
+        6,
+        20
+      ],
+      "target": [
+        -18,
+        6,
+        0
+      ]
+    },
+    {
+      "name": "形のそばへ",
+      "position": [
+        14,
+        4,
+        15
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "着地できる台へ",
+      "position": [
+        -18,
+        5,
+        14
+      ],
+      "target": [
+        -18,
+        0,
+        14
+      ]
+    }
+  ],
+  "background": "#090d16",
+  "accent": "#c4968d",
+  "shapes": [
+    {
+      "recordIdentifier": "5a0855cf-7597-5b0d-82d9-3ec6f5964436",
+      "kind": "box",
+      "parameters": [
+        3.1,
+        4,
+        0.16
+      ],
+      "position": [
+        2.1189138534559024,
+        7.714285714285714,
+        0
+      ],
+      "color": "#ad5042",
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "recordIdentifier": "4b1b3ec0-f553-563d-9c3f-d8c3c6031c06",
+      "kind": "sphere",
+      "parameters": [
+        0.33
+      ],
+      "position": [
+        2.1189138534559024,
+        7.714285714285714,
+        0.2
+      ],
+      "color": "#d6c8ac",
+      "scale": [
+        1,
+        1,
+        0.2
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "ac9e411b-8999-5a4e-bb84-f34a4700ef23",
+      "kind": "box",
+      "parameters": [
+        3.1,
+        4,
+        0.16
+      ],
+      "position": [
+        -2.656533090219036,
+        7.142857142857143,
+        2.433603044316388
+      ],
+      "color": "#b09a45",
+      "rotation": [
+        0.47999260000000005,
+        2.399963,
+        0.83998705
+      ]
+    },
+    {
+      "recordIdentifier": "7b217ec1-758e-5003-9a08-bff918a0dec6",
+      "kind": "box",
+      "parameters": [
+        3.1,
+        4,
+        0.16
+      ],
+      "position": [
+        0.3988770169933547,
+        6.571428571428571,
+        -4.545021854284832
+      ],
+      "color": "#457d7f",
+      "rotation": [
+        0.9599852000000001,
+        4.799926,
+        1.6799741
+      ]
+    },
+    {
+      "recordIdentifier": "9a687852-7864-585d-aeb5-f429b1022656",
+      "kind": "box",
+      "parameters": [
+        3.1,
+        4,
+        0.16
+      ],
+      "position": [
+        3.219558722400655,
+        6,
+        4.199338237510032
+      ],
+      "color": "#b68e92",
+      "rotation": [
+        1.4399778000000003,
+        7.199889000000001,
+        2.51996115
+      ]
+    },
+    {
+      "recordIdentifier": "0f21c06e-ed25-5e81-bbc3-0c4151e6f23c",
+      "kind": "sphere",
+      "parameters": [
+        0.33
+      ],
+      "position": [
+        3.219558722400655,
+        6,
+        4.399338237510032
+      ],
+      "color": "#d6c8ac",
+      "scale": [
+        1,
+        1,
+        0.2
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "cbacef76-49b4-58be-b4e7-9487aa84c319",
+      "kind": "box",
+      "parameters": [
+        3.1,
+        4,
+        0.16
+      ],
+      "position": [
+        -5.786448542555575,
+        5.428571428571429,
+        -1.0235357879695328
+      ],
+      "color": "#32363c",
+      "rotation": [
+        1.9199704000000002,
+        9.599852,
+        3.3599482
+      ]
+    },
+    {
+      "recordIdentifier": "512d89fe-afa2-535c-9e55-849b7c42b2d5",
+      "kind": "box",
+      "parameters": [
+        3.1,
+        4,
+        0.16
+      ],
+      "position": [
+        5.363530430321953,
+        4.857142857142858,
+        -3.4118476795303345
+      ],
+      "color": "#ad5042",
+      "rotation": [
+        2.399963,
+        11.999815,
+        4.199935249999999
+      ]
+    },
+    {
+      "recordIdentifier": "5943b6ad-cc15-5739-b345-79449f71d722",
+      "kind": "box",
+      "parameters": [
+        3.1,
+        4,
+        0.16
+      ],
+      "position": [
+        -1.753668587017706,
+        4.285714285714286,
+        6.523595599677513
+      ],
+      "color": "#b09a45",
+      "rotation": [
+        2.8799556000000006,
+        14.399778000000001,
+        5.0399223
+      ]
+    },
+    {
+      "recordIdentifier": "bc87b4e9-9358-533d-ac99-a28904cd9982",
+      "kind": "sphere",
+      "parameters": [
+        0.33
+      ],
+      "position": [
+        -1.753668587017706,
+        4.285714285714286,
+        6.723595599677513
+      ],
+      "color": "#d6c8ac",
+      "scale": [
+        1,
+        1,
+        0.2
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "90ecc31b-ac2d-571f-ad78-ccd19503a56e",
+      "kind": "box",
+      "parameters": [
+        3.1,
+        4,
+        0.16
+      ],
+      "position": [
+        -3.265759399630169,
+        3.7142857142857144,
+        -6.287996276746691
+      ],
+      "color": "#457d7f",
+      "rotation": [
+        3.3599482000000003,
+        16.799741,
+        5.87990935
+      ]
+    },
+    {
+      "recordIdentifier": "b9d78022-9d7c-5518-bf7c-df2838bd62a3",
+      "kind": "box",
+      "parameters": [
+        3.1,
+        4,
+        0.16
+      ],
+      "position": [
+        6.910399895326212,
+        3.1428571428571432,
+        2.5236525644920524
+      ],
+      "color": "#b68e92",
+      "rotation": [
+        3.8399408000000004,
+        19.199704,
+        6.7198964
+      ]
+    },
+    {
+      "recordIdentifier": "04a16aa4-f274-5093-8885-f92080e9c845",
+      "kind": "box",
+      "parameters": [
+        3.1,
+        4,
+        0.16
+      ],
+      "position": [
+        -7.002346626262741,
+        2.571428571428571,
+        2.89048383972435
+      ],
+      "color": "#32363c",
+      "rotation": [
+        4.3199334,
+        21.599667,
+        7.559883449999999
+      ]
+    },
+    {
+      "recordIdentifier": "8449e071-6027-5e76-a6f9-220e95aadcf4",
+      "kind": "sphere",
+      "parameters": [
+        0.33
+      ],
+      "position": [
+        -7.002346626262741,
+        2.571428571428571,
+        3.0904838397243504
+      ],
+      "color": "#d6c8ac",
+      "scale": [
+        1,
+        1,
+        0.2
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "71e9f723-38e9-542d-b068-f233a70b1bf6",
+      "kind": "box",
+      "parameters": [
+        3.1,
+        4,
+        0.16
+      ],
+      "position": [
+        3.2830808430717258,
+        2,
+        -7.015795049590277
+      ],
+      "color": "#ad5042",
+      "rotation": [
+        4.799926,
+        23.99963,
+        8.399870499999999
+      ]
+    },
+    {
+      "recordIdentifier": "2add248e-f0fc-5aeb-b86e-3eb51d8609c6",
+      "kind": "box",
+      "parameters": [
+        3.1,
+        4,
+        0.16
+      ],
+      "position": [
+        2.355806661255583,
+        1.4285714285714288,
+        7.510616396025909
+      ],
+      "color": "#b09a45",
+      "rotation": [
+        5.2799186,
+        26.399593,
+        9.23985755
+      ]
+    },
+    {
+      "recordIdentifier": "60ceb3b3-e076-5aa3-8a8c-df4e415946ba",
+      "kind": "box",
+      "parameters": [
+        3.1,
+        4,
+        0.16
+      ],
+      "position": [
+        -6.881856908602339,
+        0.8571428571428568,
+        -3.988151402839572
+      ],
+      "color": "#457d7f",
+      "rotation": [
+        5.759911200000001,
+        28.799556000000003,
+        10.0798446
+      ]
+    },
+    {
+      "recordIdentifier": "6df7194c-cd28-548d-b3b3-a78ebb03f4b5",
+      "kind": "sphere",
+      "parameters": [
+        0.33
+      ],
+      "position": [
+        -6.881856908602339,
+        0.8571428571428568,
+        -3.788151402839572
+      ],
+      "color": "#d6c8ac",
+      "scale": [
+        1,
+        1,
+        0.2
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "650731b0-3329-55f6-a307-19b0598a169d",
+      "kind": "box",
+      "parameters": [
+        3.1,
+        4,
+        0.16
+      ],
+      "position": [
+        7.808416432578953,
+        0.2857142857142856,
+        -1.7166828951118935
+      ],
+      "color": "#b68e92",
+      "rotation": [
+        6.2399038000000004,
+        31.199519000000002,
+        10.91983165
+      ]
+    },
+    {
+      "recordIdentifier": "37c819b3-3059-5976-851e-2cdee6addea3",
+      "kind": "box",
+      "parameters": [
+        3.1,
+        4,
+        0.16
+      ],
+      "position": [
+        -4.598079127983025,
+        -0.2857142857142865,
+        6.540339110454872
+      ],
+      "color": "#32363c",
+      "rotation": [
+        6.7198964000000005,
+        33.599482,
+        11.7598187
+      ]
+    },
+    {
+      "recordIdentifier": "759977fe-4b2b-58a2-b670-ced7508fd4c8",
+      "kind": "box",
+      "parameters": [
+        3.1,
+        4,
+        0.16
+      ],
+      "position": [
+        -1.0221946656248682,
+        -0.8571428571428577,
+        -7.887992405423387
+      ],
+      "color": "#ad5042",
+      "rotation": [
+        7.199889000000001,
+        35.999445,
+        12.59980575
+      ]
+    },
+    {
+      "recordIdentifier": "6894203c-26a8-5d18-be09-e41aa0ba5464",
+      "kind": "sphere",
+      "parameters": [
+        0.33
+      ],
+      "position": [
+        -1.0221946656248682,
+        -0.8571428571428577,
+        -7.687992405423387
+      ],
+      "color": "#d6c8ac",
+      "scale": [
+        1,
+        1,
+        0.2
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "c91cedda-362e-5cb3-a0cf-e6a8f92b3fa4",
+      "kind": "box",
+      "parameters": [
+        3.1,
+        4,
+        0.16
+      ],
+      "position": [
+        6.018888682963807,
+        -1.4285714285714288,
+        5.07268791623924
+      ],
+      "color": "#b09a45",
+      "rotation": [
+        7.679881600000001,
+        38.399408,
+        13.4397928
+      ]
+    },
+    {
+      "recordIdentifier": "1fa0701f-3b1d-5012-8a0d-bbb371522fa4",
+      "kind": "box",
+      "parameters": [
+        3.1,
+        4,
+        0.16
+      ],
+      "position": [
+        -7.739350805233607,
+        -2,
+        0.3200767306911194
+      ],
+      "color": "#457d7f",
+      "rotation": [
+        8.1598742,
+        40.799371,
+        14.279779849999999
+      ]
+    },
+    {
+      "recordIdentifier": "98545621-6bb2-5634-83d9-56d35e627987",
+      "kind": "box",
+      "parameters": [
+        3.1,
+        4,
+        0.16
+      ],
+      "position": [
+        5.369694305676723,
+        -2.571428571428571,
+        -5.343607224115916
+      ],
+      "color": "#b68e92",
+      "rotation": [
+        8.6398668,
+        43.199334,
+        15.119766899999998
+      ]
+    },
+    {
+      "recordIdentifier": "9940e580-7471-57b3-95e3-d035f02a4510",
+      "kind": "sphere",
+      "parameters": [
+        0.33
+      ],
+      "position": [
+        5.369694305676723,
+        -2.571428571428571,
+        -5.143607224115915
+      ],
+      "color": "#d6c8ac",
+      "scale": [
+        1,
+        1,
+        0.2
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "aa1ee6d4-0a4c-5385-a2d8-7955dece4708",
+      "kind": "box",
+      "parameters": [
+        3.1,
+        4,
+        0.16
+      ],
+      "position": [
+        -0.3397889727341694,
+        -3.1428571428571423,
+        7.348944987792472
+      ],
+      "color": "#32363c",
+      "rotation": [
+        9.119859400000001,
+        45.599297,
+        15.95975395
+      ]
+    },
+    {
+      "recordIdentifier": "4a22ee46-6cba-5977-a2fa-3db0273f81fc",
+      "kind": "box",
+      "parameters": [
+        3.1,
+        4,
+        0.16
+      ],
+      "position": [
+        -4.53975930519739,
+        -3.7142857142857135,
+        -5.440098076645932
+      ],
+      "color": "#ad5042",
+      "rotation": [
+        9.599852,
+        47.99926,
+        16.799740999999997
+      ]
+    },
+    {
+      "recordIdentifier": "7d856ee9-eab7-5551-a01a-6d9a78977d23",
+      "kind": "box",
+      "parameters": [
+        3.1,
+        4,
+        0.16
+      ],
+      "position": [
+        6.694871015682949,
+        -4.2857142857142865,
+        0.9007525434839748
+      ],
+      "color": "#b09a45",
+      "rotation": [
+        10.079844600000001,
+        50.399223,
+        17.63972805
+      ]
+    },
+    {
+      "recordIdentifier": "23380ce5-05ca-59ed-9605-b73177b0c0d2",
+      "kind": "sphere",
+      "parameters": [
+        0.33
+      ],
+      "position": [
+        6.694871015682949,
+        -4.2857142857142865,
+        1.1007525434839749
+      ],
+      "color": "#d6c8ac",
+      "scale": [
+        1,
+        1,
+        0.2
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "68e93b66-6040-5e3e-bf7f-7068a816475c",
+      "kind": "box",
+      "parameters": [
+        3.1,
+        4,
+        0.16
+      ],
+      "position": [
+        -5.217965956851597,
+        -4.857142857142858,
+        3.6305639422056633
+      ],
+      "color": "#457d7f",
+      "rotation": [
+        10.5598372,
+        52.799186,
+        18.4797151
+      ]
+    },
+    {
+      "recordIdentifier": "8969c13d-c668-5655-8ce5-fc25b25cb21d",
+      "kind": "box",
+      "parameters": [
+        3.1,
+        4,
+        0.16
+      ],
+      "position": [
+        1.2897026728973928,
+        -5.428571428571429,
+        -5.732999150568511
+      ],
+      "color": "#b68e92",
+      "rotation": [
+        11.0398298,
+        55.199149,
+        19.319702149999998
+      ]
+    },
+    {
+      "recordIdentifier": "f7d3a828-2a8b-509d-b115-1d4ecd998daf",
+      "kind": "box",
+      "parameters": [
+        3.1,
+        4,
+        0.16
+      ],
+      "position": [
+        2.630859216793059,
+        -6,
+        4.591141446461328
+      ],
+      "color": "#32363c",
+      "rotation": [
+        11.519822400000002,
+        57.599112000000005,
+        20.1596892
+      ]
+    },
+    {
+      "recordIdentifier": "500d7a85-bd46-56ae-a1db-a875ac8da81a",
+      "kind": "sphere",
+      "parameters": [
+        0.33
+      ],
+      "position": [
+        2.630859216793059,
+        -6,
+        4.791141446461328
+      ],
+      "color": "#d6c8ac",
+      "scale": [
+        1,
+        1,
+        0.2
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "3093bfb2-4576-55be-bc8b-2ecefd1531aa",
+      "kind": "box",
+      "parameters": [
+        3.1,
+        4,
+        0.16
+      ],
+      "position": [
+        -4.346660436924497,
+        -6.571428571428571,
+        -1.386675728743961
+      ],
+      "color": "#ad5042",
+      "rotation": [
+        11.999815000000002,
+        59.999075000000005,
+        20.99967625
+      ]
+    },
+    {
+      "recordIdentifier": "72ee83b4-05dc-5c74-bd19-e04169d051d9",
+      "kind": "box",
+      "parameters": [
+        3.1,
+        4,
+        0.16
+      ],
+      "position": [
+        3.270508302463321,
+        -7.142857142857142,
+        -1.5110814935843744
+      ],
+      "color": "#b09a45",
+      "rotation": [
+        12.479807600000001,
+        62.399038000000004,
+        21.8396633
+      ]
+    },
+    {
+      "recordIdentifier": "cb46f01b-2c4c-5a77-a8fc-eac38ed3b051",
+      "kind": "box",
+      "parameters": [
+        3.1,
+        4,
+        0.16
+      ],
+      "position": [
+        -0.818018051345501,
+        -7.7142857142857135,
+        1.9546463583063474
+      ],
+      "color": "#457d7f",
+      "rotation": [
+        12.959800200000002,
+        64.799001,
+        22.67965035
+      ]
+    },
+    {
+      "recordIdentifier": "6c430c42-f405-52e5-bcba-fb46c8aecc90",
+      "kind": "sphere",
+      "parameters": [
+        0.33
+      ],
+      "position": [
+        -0.818018051345501,
+        -7.7142857142857135,
+        2.1546463583063473
+      ],
+      "color": "#d6c8ac",
+      "scale": [
+        1,
+        1,
+        0.2
+      ],
+      "collision": false
+    },
+    {
+      "recordIdentifier": "ebd76f81-493b-5709-9960-fd267c1fa40f",
+      "kind": "torus",
+      "parameters": [
+        3,
+        0.5
+      ],
+      "position": [
+        -18,
+        6,
+        12
+      ],
+      "color": "#c4968d"
+    },
+    {
+      "recordIdentifier": "c037273e-36b1-53ba-88fb-371de895e350",
+      "kind": "box",
+      "parameters": [
+        7,
+        0.6,
+        7
+      ],
+      "position": [
+        -18,
+        0,
+        12
+      ],
+      "color": "#c4968d"
+    }
+  ]
+}

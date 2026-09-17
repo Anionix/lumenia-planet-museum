@@ -1,0 +1,327 @@
+{
+  "record_type": "exploration_world",
+  "recordIdentifier": "1c11ae55-b9ca-5d93-838f-4eb3fb20b786",
+  "referenceRecordedAt": "2026-09-15T14:04:34.114664+00:00",
+  "artistName": "Josef Müller-Brockmann",
+  "artistNameJapanese": "ヨゼフ・ミューラー＝ブロックマン",
+  "title": "軌道の音楽",
+  "description": "間隔を揃えた白い弧が、黒い天体を囲む。軌道の切れ目を探す。",
+  "sourceProfileIdentifier": "200bbbd0-c4d4-5ebf-89e7-7bb100b9d737",
+  "sourceImageIdentifier": "750a89da-4faf-5927-8711-597c65b62e6d",
+  "sourceImageSha256": "75a303ac4c65d1608c6ffb3f2f3ce70a2191aacb0980713dccfa4c8ce29a13cd",
+  "image": "../josef-muller-brockmann.png",
+  "sources": [
+    {
+      "sourceIdentifier": "4b93d51d-6fad-5769-adf9-7f3fd5d7d339",
+      "publisher": "Poster, Beethoven — Cooper Hewitt",
+      "url": "https://collection.cooperhewitt.org/objects/2318803418/",
+      "observedOn": "2026-09-13"
+    },
+    {
+      "sourceIdentifier": "f6fd7cb6-0111-57fd-ba4e-fd472bde34ed",
+      "publisher": "Josef Müller-Brockmann — Shizuko Yoshikawa and Josef Müller-Brockmann Foundation",
+      "url": "https://syjmb.foundation/en/josef-mueller-brockmann/",
+      "observedOn": "2026-09-13"
+    }
+  ],
+  "semanticPosition": {
+    "coordinate_identifier": "f4fdc4c4-a4de-5f27-9ce9-ce6324a39525",
+    "values": [
+      0.9,
+      0.65,
+      0.85
+    ],
+    "unit": "dimensionless"
+  },
+  "reconstruction": "Newly authored geometry inspired by cited materials and a ChatGPT-generated reference picture. Hidden surfaces are designed, not recovered.",
+  "machineContract": {
+    "physicsEnabledByDefault": false,
+    "metresPerSceneUnit": 1,
+    "valuesOrigin": "presentation_setting",
+    "movementLimits": {
+      "maximumSeconds": 0.05,
+      "maximumSpeed": 16,
+      "normalSpeed": 8,
+      "boundary": 400,
+      "observerRadius": 0.4,
+      "contactGap": 0.05,
+      "framesPerSecond": 30,
+      "maximumPixelRatio": 1.5
+    }
+  },
+  "spawn": {
+    "position": [
+      25,
+      13,
+      38
+    ],
+    "target": [
+      0,
+      1,
+      0
+    ]
+  },
+  "passage": {
+    "position": [
+      -18,
+      6,
+      12
+    ],
+    "radius": 3,
+    "tube": 0.5,
+    "kind": "circular"
+  },
+  "landmarks": [
+    {
+      "name": "環の手前へ",
+      "position": [
+        -18,
+        6,
+        20
+      ],
+      "target": [
+        -18,
+        6,
+        0
+      ]
+    },
+    {
+      "name": "形のそばへ",
+      "position": [
+        14,
+        4,
+        15
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "着地できる台へ",
+      "position": [
+        -18,
+        5,
+        14
+      ],
+      "target": [
+        -18,
+        0,
+        14
+      ]
+    }
+  ],
+  "background": "#090d16",
+  "accent": "#d6cab1",
+  "shapes": [
+    {
+      "recordIdentifier": "2e7e670c-3d7e-5539-abc9-4bab27d67db0",
+      "kind": "sphere",
+      "parameters": [
+        7
+      ],
+      "position": [
+        0,
+        -1,
+        0
+      ],
+      "color": "#17171c"
+    },
+    {
+      "recordIdentifier": "78660fb3-e531-5e34-babb-39b1131680eb",
+      "kind": "sphere",
+      "parameters": [
+        1.3
+      ],
+      "position": [
+        -16,
+        12,
+        -22
+      ],
+      "color": "#aa3d30"
+    },
+    {
+      "recordIdentifier": "9cfeae7e-7737-51b0-839a-50bb108ba1be",
+      "kind": "annulus",
+      "parameters": [
+        8,
+        7.85,
+        0.15,
+        0.3,
+        4.7
+      ],
+      "position": [
+        0,
+        -1,
+        -0.8
+      ],
+      "color": "#dad2c0"
+    },
+    {
+      "recordIdentifier": "0fcf5766-460a-5f63-b1bc-4cc46f15776e",
+      "kind": "annulus",
+      "parameters": [
+        8.35,
+        8.2,
+        0.15,
+        0.3,
+        4.7
+      ],
+      "position": [
+        0,
+        -1,
+        -0.8
+      ],
+      "color": "#dad2c0"
+    },
+    {
+      "recordIdentifier": "3ec9aa04-6562-5aaa-8288-96a382ec9082",
+      "kind": "annulus",
+      "parameters": [
+        8.7,
+        8.549999999999999,
+        0.15,
+        0.3,
+        4.7
+      ],
+      "position": [
+        0,
+        -1,
+        -0.8
+      ],
+      "color": "#dad2c0"
+    },
+    {
+      "recordIdentifier": "ee546064-0f93-5b83-9948-4de314bb5ab6",
+      "kind": "annulus",
+      "parameters": [
+        10,
+        9.85,
+        0.15,
+        0.7,
+        4.7
+      ],
+      "position": [
+        0,
+        -1,
+        -0.8
+      ],
+      "color": "#dad2c0"
+    },
+    {
+      "recordIdentifier": "fcb0b168-fd70-5bdb-ac1a-30b8a3158c5b",
+      "kind": "annulus",
+      "parameters": [
+        10.35,
+        10.2,
+        0.15,
+        0.7,
+        4.7
+      ],
+      "position": [
+        0,
+        -1,
+        -0.8
+      ],
+      "color": "#dad2c0"
+    },
+    {
+      "recordIdentifier": "fd5b1d08-7e55-5cd9-94e5-ac655b04cfab",
+      "kind": "annulus",
+      "parameters": [
+        10.7,
+        10.549999999999999,
+        0.15,
+        0.7,
+        4.7
+      ],
+      "position": [
+        0,
+        -1,
+        -0.8
+      ],
+      "color": "#dad2c0"
+    },
+    {
+      "recordIdentifier": "accd18d6-f5d9-53de-b8cb-c869f9dde2dd",
+      "kind": "annulus",
+      "parameters": [
+        12,
+        11.85,
+        0.15,
+        1.1,
+        4.7
+      ],
+      "position": [
+        0,
+        -1,
+        -0.8
+      ],
+      "color": "#dad2c0"
+    },
+    {
+      "recordIdentifier": "3faf5c7c-1b14-5e8c-84d2-ebf937950dd0",
+      "kind": "annulus",
+      "parameters": [
+        12.35,
+        12.2,
+        0.15,
+        1.1,
+        4.7
+      ],
+      "position": [
+        0,
+        -1,
+        -0.8
+      ],
+      "color": "#dad2c0"
+    },
+    {
+      "recordIdentifier": "6284a91b-5a6f-56d1-b681-d51c4d0b6aa9",
+      "kind": "annulus",
+      "parameters": [
+        12.7,
+        12.549999999999999,
+        0.15,
+        1.1,
+        4.7
+      ],
+      "position": [
+        0,
+        -1,
+        -0.8
+      ],
+      "color": "#dad2c0"
+    },
+    {
+      "recordIdentifier": "9699b453-5013-5588-949a-5b5e2adf3ad5",
+      "kind": "torus",
+      "parameters": [
+        3,
+        0.5
+      ],
+      "position": [
+        -18,
+        6,
+        12
+      ],
+      "color": "#d6cab1"
+    },
+    {
+      "recordIdentifier": "0f2474cc-fc1c-50d9-80c3-5f8982dddad2",
+      "kind": "box",
+      "parameters": [
+        7,
+        0.6,
+        7
+      ],
+      "position": [
+        -18,
+        0,
+        12
+      ],
+      "color": "#d6cab1"
+    }
+  ]
+}

@@ -70,7 +70,9 @@ async function enterWorld(entry){
     worldList.hidden=true;document.querySelector('[data-action=worlds]').setAttribute('aria-expanded','false');
     history.replaceState(null,'',`?world=${encodeURIComponent(entry.slug)}`);loading.hidden=true;waypoint(world.spawn);
     trace.add('world active',{worldIdentifier:world.recordIdentifier});canvas.focus({preventScroll:true});requestFrame();
-  }catch(error){if(disposed||token!==requestNumber)return;loading.hidden=true;fallback.hidden=false;status.textContent='画像の一覧から引き続き見られます';console.error(error);}
+  }catch(error){if(disposed||token!==requestNumber)return;loading.hidden=true;fallback.hidden=false;
+    fallback.querySelector('p').textContent=error.message==='World file does not match its catalogue'?'展示データが更新されました。もう一度開いてください。':'この宇宙を読み込めませんでした。もう一度開くか、画像の一覧へ戻れます。';
+    status.textContent='画像の一覧から引き続き見られます';console.error(error);}
 }
 async function toggleCollision(){
   const token=++collisionRequest;collision?.dispose();collision=null;landingInput.checked=false;document.querySelector('.landing').hidden=true;

@@ -1,0 +1,314 @@
+{
+  "record_type": "exploration_world",
+  "recordIdentifier": "ac1a6a0a-7e21-557d-a1d5-afcb0f4ae63c",
+  "referenceRecordedAt": "2026-09-15T14:04:34.114664+00:00",
+  "artistName": "Herbert Bayer",
+  "artistNameJapanese": "ヘルベルト・バイヤー",
+  "title": "宇宙の文字以前",
+  "description": "赤い円、黒い影、細い直線。紙の構成から飛び出した形の間へ。",
+  "sourceProfileIdentifier": "aa8db2eb-17e5-5771-8443-94445af34296",
+  "sourceImageIdentifier": "303ee789-ddb1-5826-97c0-0fc1e18f8f1a",
+  "sourceImageSha256": "1179f76272afc9eac1ac1b7b3ec6fcfcab9194bf000d27bbcd41e85cf25a8c3b",
+  "image": "../herbert-bayer.png",
+  "sources": [
+    {
+      "sourceIdentifier": "dcbba08f-9fae-5fc6-9a7f-75eff86fbe7a",
+      "publisher": "Herbert Bayer biography — Cooper Hewitt",
+      "url": "https://collection.cooperhewitt.org/people/18059359/bio",
+      "observedOn": "2026-09-13"
+    },
+    {
+      "sourceIdentifier": "b3055c4e-856c-5978-9a3e-1bf19be39145",
+      "publisher": "Herbert Bayer — MoMA",
+      "url": "https://www.moma.org/collection/artists/399",
+      "observedOn": "2026-09-13"
+    }
+  ],
+  "semanticPosition": {
+    "coordinate_identifier": "218048f4-6318-52d9-9dd6-6baf46ab8caf",
+    "values": [
+      0.85,
+      0.5,
+      0.55
+    ],
+    "unit": "dimensionless"
+  },
+  "reconstruction": "Newly authored geometry inspired by cited materials and a ChatGPT-generated reference picture. Hidden surfaces are designed, not recovered.",
+  "machineContract": {
+    "physicsEnabledByDefault": false,
+    "metresPerSceneUnit": 1,
+    "valuesOrigin": "presentation_setting",
+    "movementLimits": {
+      "maximumSeconds": 0.05,
+      "maximumSpeed": 16,
+      "normalSpeed": 8,
+      "boundary": 400,
+      "observerRadius": 0.4,
+      "contactGap": 0.05,
+      "framesPerSecond": 30,
+      "maximumPixelRatio": 1.5
+    }
+  },
+  "spawn": {
+    "position": [
+      25,
+      13,
+      38
+    ],
+    "target": [
+      0,
+      1,
+      0
+    ]
+  },
+  "passage": {
+    "position": [
+      -18,
+      6,
+      12
+    ],
+    "radius": 3,
+    "tube": 0.5,
+    "kind": "rectangular"
+  },
+  "landmarks": [
+    {
+      "name": "枠の手前へ",
+      "position": [
+        -18,
+        6,
+        20
+      ],
+      "target": [
+        -18,
+        6,
+        0
+      ]
+    },
+    {
+      "name": "形のそばへ",
+      "position": [
+        14,
+        4,
+        15
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "着地できる台へ",
+      "position": [
+        -18,
+        5,
+        14
+      ],
+      "target": [
+        -18,
+        0,
+        14
+      ]
+    }
+  ],
+  "background": "#090d16",
+  "accent": "#d68d60",
+  "shapes": [
+    {
+      "recordIdentifier": "e85f7a2b-5f50-500c-b408-3b3e53660a13",
+      "kind": "cylinder",
+      "parameters": [
+        7,
+        7,
+        0.4
+      ],
+      "position": [
+        3,
+        3,
+        0
+      ],
+      "color": "#c44d36",
+      "rotation": [
+        1.5707963267948966,
+        0,
+        0
+      ]
+    },
+    {
+      "recordIdentifier": "fdba57e5-44b2-55b1-b535-d9eacef15c6e",
+      "kind": "cylinder",
+      "parameters": [
+        5,
+        5,
+        0.6
+      ],
+      "position": [
+        7,
+        3,
+        1
+      ],
+      "color": "#202026",
+      "rotation": [
+        1.5707963267948966,
+        0,
+        0
+      ]
+    },
+    {
+      "recordIdentifier": "842c88a8-51a7-56a9-9f6b-395a7533a3d1",
+      "kind": "sphere",
+      "parameters": [
+        2.5
+      ],
+      "position": [
+        -6,
+        -5,
+        2
+      ],
+      "color": "#a59b8e"
+    },
+    {
+      "recordIdentifier": "606fff43-ec20-5f9b-b5e7-48571413dc08",
+      "kind": "box",
+      "parameters": [
+        16,
+        0.4,
+        0.4
+      ],
+      "position": [
+        -1,
+        -7,
+        -1
+      ],
+      "color": "#d3c4a6",
+      "rotation": [
+        0,
+        0,
+        0.18
+      ]
+    },
+    {
+      "recordIdentifier": "d2dee722-ce41-515a-917d-0f45600ec4be",
+      "kind": "box",
+      "parameters": [
+        0.35,
+        18,
+        0.5
+      ],
+      "position": [
+        -7,
+        3,
+        -3
+      ],
+      "color": "#c6b798"
+    },
+    {
+      "recordIdentifier": "28954e5b-affd-5db9-898d-9ae0aeee4bb4",
+      "kind": "annulus",
+      "parameters": [
+        11,
+        10.7,
+        0.18,
+        0.2,
+        4.6
+      ],
+      "position": [
+        0,
+        0,
+        -2
+      ],
+      "color": "#dbcfb5"
+    },
+    {
+      "recordIdentifier": "f3da6302-956e-50df-85e2-2ff7d86c18f2",
+      "kind": "box",
+      "parameters": [
+        10,
+        20,
+        0.3
+      ],
+      "position": [
+        -11,
+        0,
+        -6
+      ],
+      "color": "#bcae94"
+    },
+    {
+      "recordIdentifier": "7c2519f3-3d8d-536a-a585-c308d6ca29ab",
+      "kind": "box",
+      "parameters": [
+        1,
+        7,
+        1
+      ],
+      "position": [
+        -21,
+        6,
+        12
+      ],
+      "color": "#d68d60"
+    },
+    {
+      "recordIdentifier": "bf8e2758-8458-5cd8-b8b3-4e1c8aef5483",
+      "kind": "box",
+      "parameters": [
+        5,
+        1,
+        1
+      ],
+      "position": [
+        -18,
+        3,
+        12
+      ],
+      "color": "#d68d60"
+    },
+    {
+      "recordIdentifier": "b421f70c-1eda-5c9b-9963-f61558f8dab5",
+      "kind": "box",
+      "parameters": [
+        1,
+        7,
+        1
+      ],
+      "position": [
+        -15,
+        6,
+        12
+      ],
+      "color": "#d68d60"
+    },
+    {
+      "recordIdentifier": "8dce4d3f-3155-5da1-9673-1c13a3026547",
+      "kind": "box",
+      "parameters": [
+        5,
+        1,
+        1
+      ],
+      "position": [
+        -18,
+        9,
+        12
+      ],
+      "color": "#d68d60"
+    },
+    {
+      "recordIdentifier": "86d08794-0f84-509b-a5c3-3646f03cbec6",
+      "kind": "box",
+      "parameters": [
+        7,
+        0.6,
+        7
+      ],
+      "position": [
+        -18,
+        0,
+        12
+      ],
+      "color": "#d68d60"
+    }
+  ]
+}
