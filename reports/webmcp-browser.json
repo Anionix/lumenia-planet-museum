@@ -1,0 +1,291 @@
+{
+  "recordIdentifier": "39a15752-2ccf-5945-9a6d-5dc072104013",
+  "executionIdentifier": "01a0a98e-5072-7c49-9155-876a5994cf5c",
+  "recordedAt": "2026-09-16T09:31:11.347Z",
+  "sourceRevision": "sha256:fa371b84fa47949a1c010e29b9545cb3671b586f9700f4df604d117be0605a2a",
+  "status": "pass",
+  "scope": "Observed calls through the native in-app browser WebMCP capability, followed by visible page readback. Selected result fields are recorded; this is not a full browser trace.",
+  "browser": "Codex In-app Browser",
+  "origins": [
+    "http://127.0.0.1:4175/cosmos/explore/",
+    "http://127.0.0.1:4175/cosmos/interactive/"
+  ],
+  "registeredToolsPerPage": 4,
+  "uniqueOperationsExercised": 8,
+  "inputs": [
+    {
+      "path": "reference-assets/artist-cosmos/explore/index.html",
+      "sha256": "f7389559b538b733be0ba2f36e377095945d21c5e4ef243baaefa187152a1bfd"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/main.mjs",
+      "sha256": "0d4471dedf1b05074c71e85f98de67210bc51cafbd88b1fb60db59f7a2404c7c"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/navigation.mjs",
+      "sha256": "99b9a8816885b3b676b92e062f378d753129d036d6139e500cadfc2aa81aa4a5"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/index.html",
+      "sha256": "7fdcd4301499ff70f6eead1fbbb55489df4822988f44674db5a50c50b0eeaf53"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/main.mjs",
+      "sha256": "b22762da2169554fa5ebef0079a7dcb189a7b9e846517354d8a6c1862acf5c8b"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/model.mjs",
+      "sha256": "ba02dbf2d014e3673fd0033e97056a840d02c1db504987ff577922b94db00395"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/interactive/webmcp.mjs",
+      "sha256": "9f825821aec1e5abcafb0e57c3f82a4ee104998a3024ca13d5d69872555bb015"
+    }
+  ],
+  "observations": [
+    {
+      "tool": "read_exploration_catalog",
+      "executionIdentifier": "01a0a987-a7ef-72d4-9221-faece29d8791",
+      "completedAt": "2026-09-16T09:23:54.992Z",
+      "input": {},
+      "status": "complete",
+      "worldCount": 15
+    },
+    {
+      "tool": "read_exploration_state",
+      "executionIdentifier": "01a0a987-c23b-7e2e-9649-5081a77e11be",
+      "completedAt": "2026-09-16T09:24:01.723Z",
+      "input": {},
+      "status": "complete",
+      "cameraPosition": [
+        23,
+        12,
+        34
+      ],
+      "sourceCoordinate": [
+        0.55,
+        -0.65,
+        -0.95
+      ],
+      "physics": "disabled",
+      "renderedFrames": 1
+    },
+    {
+      "tool": "navigate_exploration",
+      "executionIdentifier": "01a0a988-39d2-7ad0-becf-0184fce09b2a",
+      "completedAt": "2026-09-16T09:24:32.344Z",
+      "input": {
+        "viewpoint": "passage",
+        "movement": [
+          0,
+          0,
+          -1
+        ],
+        "steps": 24
+      },
+      "status": "complete",
+      "cameraPosition": [
+        -17,
+        5,
+        6.3999999999999915
+      ],
+      "sourceCoordinate": [
+        0.55,
+        -0.65,
+        -0.95
+      ],
+      "physics": "disabled",
+      "renderedFrames": 2,
+      "visibleText": "自由に飛行 · 現在地 -17.0 / 5.0 / 6.4 m"
+    },
+    {
+      "tool": "set_exploration_physics",
+      "executionIdentifier": "01a0a988-eabb-708a-baf8-71a3f024448c",
+      "completedAt": "2026-09-16T09:25:20.945Z",
+      "input": {
+        "enabled": true
+      },
+      "status": "complete",
+      "cameraPosition": [
+        -17,
+        5,
+        16
+      ],
+      "physics": "enabled",
+      "renderedFrames": 5
+    },
+    {
+      "tool": "navigate_exploration",
+      "executionIdentifier": "01a0a989-0f64-7133-a7ca-3266123d7803",
+      "completedAt": "2026-09-16T09:25:27.015Z",
+      "input": {
+        "movement": [
+          0,
+          0,
+          -1
+        ],
+        "steps": 24
+      },
+      "status": "complete",
+      "cameraPosition": [
+        -17,
+        5,
+        6.3999998569488525
+      ],
+      "sourceCoordinate": [
+        0.55,
+        -0.65,
+        -0.95
+      ],
+      "physics": "enabled",
+      "contactCount": 0,
+      "renderedFrames": 6,
+      "visibleText": "衝突あり · 現在地 -17.0 / 5.0 / 6.4 m"
+    },
+    {
+      "tool": "navigate_exploration",
+      "executionIdentifier": "01a0a989-94b4-7b3e-86ad-b985585c929f",
+      "input": {
+        "movement": [
+          0,
+          0,
+          -1
+        ],
+        "steps": 61
+      },
+      "status": "invalid_input",
+      "message": "Invalid input.steps",
+      "cameraPositionUnchanged": true
+    },
+    {
+      "tool": "navigate_exploration",
+      "executionIdentifier": "01a0a989-bf18-7724-ad71-26590002eb77",
+      "completedAt": "2026-09-16T09:26:12.075Z",
+      "input": {
+        "world_identifier": "8eb56a5b-588a-5570-8647-67259f1f40bc",
+        "viewpoint": "object"
+      },
+      "status": "complete",
+      "artist": "Walter Gropius",
+      "cameraPosition": [
+        0,
+        2,
+        15
+      ],
+      "sourceCoordinate": null,
+      "physics": "disabled",
+      "renderedFrames": 7,
+      "visibleText": "自由に飛行 · 現在地 0.0 / 2.0 / 15.0 m"
+    },
+    {
+      "tool": "read_image_exhibition_catalog",
+      "executionIdentifier": "01a0a98a-af15-78b7-b074-f314e7987997",
+      "completedAt": "2026-09-16T09:27:13.430Z",
+      "input": {},
+      "status": "complete",
+      "imageCount": 15
+    },
+    {
+      "tool": "read_image_exhibition_state",
+      "executionIdentifier": "01a0a98a-cf20-77a5-9b3e-d246188aba3f",
+      "completedAt": "2026-09-16T09:27:21.632Z",
+      "input": {},
+      "status": "complete",
+      "artist": "William Morris",
+      "physics": "disabled",
+      "playing": false,
+      "view": "single",
+      "loadedImages": 1,
+      "renderedFrames": 11
+    },
+    {
+      "tool": "configure_image_exhibition",
+      "executionIdentifier": "01a0a98b-8c56-78c3-9e8e-e4257529bb20",
+      "completedAt": "2026-09-16T09:28:10.119Z",
+      "input": {
+        "artist_identifier": "3cd9061a-a70c-5b5f-9175-d731e4d995e8",
+        "view": "single",
+        "playing": false
+      },
+      "status": "complete",
+      "artist": "Ettore Sottsass",
+      "sourceCoordinate": [
+        0.55,
+        -0.65,
+        -0.95
+      ],
+      "physics": "disabled",
+      "view": "single",
+      "playing": false,
+      "loadedImages": 2,
+      "renderedFrames": 14
+    },
+    {
+      "tool": "configure_image_exhibition",
+      "executionIdentifier": "01a0a98b-a40a-77ce-b77a-03c6b37870f5",
+      "completedAt": "2026-09-16T09:28:16.534Z",
+      "input": {
+        "view": "all",
+        "physics_enabled": true,
+        "gravity_enabled": true,
+        "playing": false
+      },
+      "status": "complete",
+      "physics": "enabled",
+      "gravity": true,
+      "playing": false,
+      "view": "all",
+      "loadedImages": 15,
+      "renderedFrames": 27,
+      "sourceCoordinate": [
+        0.55,
+        -0.65,
+        -0.95
+      ],
+      "visibleText": "WebGL 2 · 15 / 15枚 物理：入 · 一時停止"
+    },
+    {
+      "tool": "configure_image_exhibition",
+      "executionIdentifier": "01a0a98c-193f-7782-a569-fa9ac58e98ff",
+      "input": {
+        "view": "single",
+        "physics_enabled": true
+      },
+      "status": "invalid_input",
+      "message": "Single view cannot enable physics.",
+      "viewAndPhysicsUnchanged": true
+    },
+    {
+      "tool": "reset_image_exhibition",
+      "executionIdentifier": "01a0a98c-3d6f-7655-99c2-2af5d9eb1244",
+      "completedAt": "2026-09-16T09:28:55.409Z",
+      "input": {},
+      "status": "complete",
+      "artist": "Ettore Sottsass",
+      "sourceCoordinate": [
+        0.55,
+        -0.65,
+        -0.95
+      ],
+      "physics": "disabled",
+      "gravity": false,
+      "playing": false,
+      "view": "all",
+      "loadedImages": 15,
+      "renderedFrames": 33,
+      "visibleText": "WebGL 2 · 15 / 15枚 物理：切"
+    }
+  ],
+  "unsupportedEnvironment": {
+    "browser": "WebMCP plugin standalone Playwright browser",
+    "documentModelContextAvailable": false,
+    "navigatorModelContextAvailable": false,
+    "normalExplorationRendered": true,
+    "webmcpExecutionVerified": false
+  },
+  "references": [
+    "https://webmachinelearning.github.io/webmcp/",
+    "https://developer.chrome.com/blog/webmcp-epp",
+    "https://github.com/GoogleChromeLabs/webmcp-tools/"
+  ]
+}

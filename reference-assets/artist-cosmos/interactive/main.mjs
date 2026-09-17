@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { createExhibitionState, createTrace, clampPanelPosition } from './model.mjs';
 import { connectOptionalPhysics } from './vendor/reference-physics-contract.mjs';
+import { registerPageTools, imageExhibitionTools, createPresentationCheckpoint, communityLinks } from './webmcp.mjs';
 
 const $ = selector => document.querySelector(selector);
 const canvas = $('canvas'), stage = $('.stage'), loading = $('.loading'), status = $('.interaction-status'), engineStatus = $('.engine-status');
@@ -13,6 +14,7 @@ const panels = [], surfaces = [], bases = [], baseRotations = [], textures = new
 const raycaster = new THREE.Raycaster(), pointer = new THREE.Vector2(), pointerPlane = new THREE.Plane(new THREE.Vector3(0,0,1),0);
 const intersection = new THREE.Vector3();
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const presentation = createPresentationCheckpoint();let pageTools;
 
 // Machine contract: frozen reference data -> display meshes -> user gestures/optional physics.
 // The image remains a textured plane. Movement never edits a source image or a semantic coordinate.
@@ -40,6 +42,7 @@ function renderFrame(now) {
   }
   controls.update(elapsed);
   renderer.render(scene,camera);
+  presentation.presented();
   if (now-lastStatusTime > 350) {
     canvas.dataset.renderedFrames = String(renderer.info.render.frame);
     canvas.dataset.physicsSteps = String(physicsEngine?.snapshot().stepCount ?? 0);
@@ -198,6 +201,48 @@ function resetExhibition() {
   trace.add('display_reset',{semantic_positions_unchanged:true});renderSoon();
 }
 
+// machine contract; record_identifier=0557ed75-e7ec-5d1e-979b-b284003935bc (UUIDv5).
+// transition: validated batch -> shared selection/view/physics handlers -> loaded textures -> rendered result.
+function imageExhibitionSnapshot(){
+  const item=manifest.items[state.selected];
+  return {ready:contextAvailable&&canvas.dataset.exhibitionReady==='true',artistIdentifier:item.record_id,artist:item.artist_name,
+    view:state.mode,playing:state.playing,physics:state.physics,gravity:state.gravity,loadedImages:textures.size,
+    displayPosition:panels[state.selected].position.toArray(),sourceCoordinate:structuredClone(item.semantic_position),
+    renderedFrames:renderer.info.render.frame,links:communityLinks};
+}
+function requireActiveImageExhibition(){if(!contextAvailable||!state||document.hidden)throw new Error('Open the image exhibition and wait for it to be ready.');}
+async function presentImageExhibition(expectedArtist){
+  requireActiveImageExhibition();syncControls();const completed=presentation.next();renderSoon();await completed;
+  if(manifest.items[state.selected].record_id!==expectedArtist)throw new Error('The selected artist changed while the action was running.');
+  return imageExhibitionSnapshot();
+}
+function connectImageExhibitionTools(){
+  pageTools?.dispose();
+  pageTools=registerPageTools(document.modelContext,imageExhibitionTools({
+    catalog:()=>({images:manifest.items.map(item=>({artistIdentifier:item.record_id,artist:item.artist_name,artistJapanese:item.artist_name_ja,title:item.title})),links:communityLinks}),
+    snapshot:imageExhibitionSnapshot,
+    async configure(input){
+      requireActiveImageExhibition();
+      const index=input.artist_identifier?manifest.items.findIndex(item=>item.record_id===input.artist_identifier):state.selected;
+      if(index<0)throw new TypeError('Unknown artist identifier. Read the image catalogue first.');
+      const desiredPhysics=input.physics_enabled??(input.view==='single'?false:state.physics==='enabled');
+      if(input.gravity_enabled&&!desiredPhysics)throw new TypeError('Gravity requires physics.');
+      if(state.physics==='loading'&&input.physics_enabled!==false)throw new Error('Physics is still loading.');
+      endDrag(true);
+      if(input.physics_enabled===false||input.view==='single')stopPhysics();
+      if(input.view!==undefined)setView(input.view);
+      if(input.artist_identifier!==undefined)selectArtist(index);
+      if(input.physics_enabled===true){await startPhysics();if(state.physics!=='enabled')throw new Error('Physics did not become active.');}
+      if(input.gravity_enabled!==undefined){state.gravity=input.gravity_enabled;physicsEngine?.setGravity(state.gravity);}
+      if(input.playing!==undefined){state.playing=input.playing;previousFrame=0;}
+      const expectedArtist=manifest.items[index].record_id;
+      if(state.mode==='all')await loadAllTextures();else await ensureTexture(state.selected);
+      return presentImageExhibition(expectedArtist);
+    },
+    async reset(){requireActiveImageExhibition();const expectedArtist=manifest.items[state.selected].record_id;resetExhibition();return presentImageExhibition(expectedArtist);},
+  }),{onStatus:value=>{canvas.dataset.webmcp=value;},onExecution:event=>trace.add('WebMCP action completed',event)});
+}
+
 function pointerToRay(event) {
   const bounds=canvas.getBoundingClientRect();
   pointer.set((event.clientX-bounds.left)/bounds.width*2-1,-(event.clientY-bounds.top)/bounds.height*2+1);
@@ -255,8 +300,10 @@ function bindInteraction() {
   });
   document.addEventListener('visibilitychange',()=>{previousFrame=0;endDrag(true);if(document.hidden){cancelAnimationFrame(frameRequest);frameRequest=0;}else renderSoon();});
   reducedMotion.addEventListener('change',event=>{if(event.matches){state.playing=false;syncControls();renderSoon();}});
-  canvas.addEventListener('webglcontextlost',event=>{event.preventDefault();contextAvailable=false;state.playing=false;endDrag(true);cancelAnimationFrame(frameRequest);frameRequest=0;$('.fallback').hidden=false;engineStatus.textContent='立体描画が中断しました';trace.add('webgl_context_lost');});
-  canvas.addEventListener('webglcontextrestored',()=>{contextAvailable=true;$('.fallback').hidden=true;engineStatus.textContent=`WebGL 2 · ${textures.size} / 15枚`;trace.add('webgl_context_restored');syncControls();renderSoon();});
+  canvas.addEventListener('webglcontextlost',event=>{event.preventDefault();contextAvailable=false;pageTools?.dispose();presentation.cancel();state.playing=false;endDrag(true);cancelAnimationFrame(frameRequest);frameRequest=0;$('.fallback').hidden=false;engineStatus.textContent='立体描画が中断しました';trace.add('webgl_context_lost');});
+  canvas.addEventListener('webglcontextrestored',()=>{contextAvailable=true;$('.fallback').hidden=true;engineStatus.textContent=`WebGL 2 · ${textures.size} / 15枚`;trace.add('webgl_context_restored');syncControls();renderSoon();connectImageExhibitionTools();});
+  window.addEventListener('pagehide',()=>{pageTools?.dispose();presentation.cancel();});
+  window.addEventListener('pageshow',event=>{if(event.persisted&&contextAvailable)connectImageExhibitionTools();});
 }
 
 async function initialize() {
@@ -298,6 +345,7 @@ async function initialize() {
   await ensureTexture(0);loading.hidden=true;trace.add('webgl2_ready',{context:canvas.dataset.contextVersion,physics_enabled:false});
   canvas.dataset.exhibitionReady='true';
   renderSoon();
+  connectImageExhibitionTools();
   // Read-only receipts are available to a host's integration checks without granting mutation authority.
   window.lumeniaExhibition=Object.freeze({snapshot:()=>({recordIdentifier:manifest.record_id,renderer:canvas.dataset.contextVersion,physics:state.physics,playing:state.playing,selectedArtist:manifest.items[state.selected].artist_name,loadedImages:textures.size,physicsState:physicsEngine?.snapshot()??null,displayPositions:panels.map(panel=>panel.position.toArray()),semanticPositions:manifest.items.map(item=>item.semantic_position?.values??null),events:trace.snapshot()})});
 }

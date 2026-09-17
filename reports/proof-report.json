@@ -58,7 +58,7 @@
     "Lumenia.category_budget_total_is_204800_bytes",
     "Lumenia.measured_gate_pass_iff"
   ],
-  "sourceRevision": "sha256:e81a712d0bb4f40024df879541bb7a916324c4bf0920bbcde3a7f98baa5f5e53",
+  "sourceRevision": "sha256:fa371b84fa47949a1c010e29b9545cb3671b586f9700f4df604d117be0605a2a",
   "measurementProfile": {
     "targetBrowsers": [
       "chrome",
@@ -75,8 +75,8 @@
     "largestContentfulPaintMilliseconds": 2500,
     "firstUsableArtworkMilliseconds": 3000
   },
-  "executionIdentifier": "01a0a762-86fb-7d5a-b097-587c6acebb06",
-  "createdAt": "2026-09-15T23:24:14.766Z",
+  "executionIdentifier": "01a0a98a-1de0-715d-9080-5c4de1ae306b",
+  "createdAt": "2026-09-16T09:26:43.425Z",
   "status": "pass",
   "observations": [
     {
@@ -89,8 +89,8 @@
         "lake build"
       ],
       "failureReason": null,
-      "sourceRevision": "sha256:e81a712d0bb4f40024df879541bb7a916324c4bf0920bbcde3a7f98baa5f5e53",
-      "executionIdentifier": "01a0a762-86fb-7d5a-b097-587c6acebb06"
+      "sourceRevision": "sha256:fa371b84fa47949a1c010e29b9545cb3671b586f9700f4df604d117be0605a2a",
+      "executionIdentifier": "01a0a98a-1de0-715d-9080-5c4de1ae306b"
     },
     {
       "gateIdentifier": "46de9356-94a7-5355-a9a6-a6fde3471fcc",
@@ -102,8 +102,8 @@
         "lake build diagnostics"
       ],
       "failureReason": null,
-      "sourceRevision": "sha256:e81a712d0bb4f40024df879541bb7a916324c4bf0920bbcde3a7f98baa5f5e53",
-      "executionIdentifier": "01a0a762-86fb-7d5a-b097-587c6acebb06"
+      "sourceRevision": "sha256:fa371b84fa47949a1c010e29b9545cb3671b586f9700f4df604d117be0605a2a",
+      "executionIdentifier": "01a0a98a-1de0-715d-9080-5c4de1ae306b"
     },
     {
       "gateIdentifier": "f41d531f-0196-5b20-b945-ca46fae9c68c",
@@ -115,8 +115,8 @@
         "/opt/homebrew/Cellar/node/25.9.0_2/bin/node --test --test-reporter=tap"
       ],
       "failureReason": null,
-      "sourceRevision": "sha256:e81a712d0bb4f40024df879541bb7a916324c4bf0920bbcde3a7f98baa5f5e53",
-      "executionIdentifier": "01a0a762-86fb-7d5a-b097-587c6acebb06"
+      "sourceRevision": "sha256:fa371b84fa47949a1c010e29b9545cb3671b586f9700f4df604d117be0605a2a",
+      "executionIdentifier": "01a0a98a-1de0-715d-9080-5c4de1ae306b"
     },
     {
       "gateIdentifier": "086560f2-20bf-57f3-9a27-90eb0a01a009",
@@ -128,8 +128,8 @@
         "/opt/homebrew/Cellar/node/25.9.0_2/bin/node scripts/verify-contract.mjs contracts/examples/verification-request.json contracts/examples/verification-result.json contracts/examples/valid-asset-manifest.json"
       ],
       "failureReason": null,
-      "sourceRevision": "sha256:e81a712d0bb4f40024df879541bb7a916324c4bf0920bbcde3a7f98baa5f5e53",
-      "executionIdentifier": "01a0a762-86fb-7d5a-b097-587c6acebb06"
+      "sourceRevision": "sha256:fa371b84fa47949a1c010e29b9545cb3671b586f9700f4df604d117be0605a2a",
+      "executionIdentifier": "01a0a98a-1de0-715d-9080-5c4de1ae306b"
     },
     {
       "gateIdentifier": "def07315-f6e6-5266-818b-d351c346b7bf",
@@ -141,8 +141,8 @@
         "UUIDv5 namespace recomputation and Lean declaration inventory"
       ],
       "failureReason": null,
-      "sourceRevision": "sha256:e81a712d0bb4f40024df879541bb7a916324c4bf0920bbcde3a7f98baa5f5e53",
-      "executionIdentifier": "01a0a762-86fb-7d5a-b097-587c6acebb06"
+      "sourceRevision": "sha256:fa371b84fa47949a1c010e29b9545cb3671b586f9700f4df604d117be0605a2a",
+      "executionIdentifier": "01a0a98a-1de0-715d-9080-5c4de1ae306b"
     },
     {
       "gateIdentifier": "12e7cf84-79d8-5287-8370-9150ed6afc8b",
@@ -154,8 +154,8 @@
         "local Lean source scan; all project Lean files"
       ],
       "failureReason": null,
-      "sourceRevision": "sha256:e81a712d0bb4f40024df879541bb7a916324c4bf0920bbcde3a7f98baa5f5e53",
-      "executionIdentifier": "01a0a762-86fb-7d5a-b097-587c6acebb06"
+      "sourceRevision": "sha256:fa371b84fa47949a1c010e29b9545cb3671b586f9700f4df604d117be0605a2a",
+      "executionIdentifier": "01a0a98a-1de0-715d-9080-5c4de1ae306b"
     },
     {
       "gateIdentifier": "6d27294e-b98b-5837-8931-d6907c80c2be",
@@ -167,8 +167,8 @@
         "lake env lean formal/Lumenia/AxiomAudit.lean"
       ],
       "failureReason": null,
-      "sourceRevision": "sha256:e81a712d0bb4f40024df879541bb7a916324c4bf0920bbcde3a7f98baa5f5e53",
-      "executionIdentifier": "01a0a762-86fb-7d5a-b097-587c6acebb06"
+      "sourceRevision": "sha256:fa371b84fa47949a1c010e29b9545cb3671b586f9700f4df604d117be0605a2a",
+      "executionIdentifier": "01a0a98a-1de0-715d-9080-5c4de1ae306b"
     },
     {
       "gateIdentifier": "35302202-9761-5b5d-ac14-01302e53c2bc",
@@ -180,8 +180,8 @@
         "Lean #print axioms for every registered public theorem"
       ],
       "failureReason": null,
-      "sourceRevision": "sha256:e81a712d0bb4f40024df879541bb7a916324c4bf0920bbcde3a7f98baa5f5e53",
-      "executionIdentifier": "01a0a762-86fb-7d5a-b097-587c6acebb06"
+      "sourceRevision": "sha256:fa371b84fa47949a1c010e29b9545cb3671b586f9700f4df604d117be0605a2a",
+      "executionIdentifier": "01a0a98a-1de0-715d-9080-5c4de1ae306b"
     },
     {
       "gateIdentifier": "10f73733-d314-5c04-9ee1-10f74f8c6a6c",
@@ -193,8 +193,8 @@
         "lean-lsp-mcp: lean_build, lean_diagnostic_messages, lean_goal, lean_hover_info, lean_verify, lean_file_outline"
       ],
       "failureReason": null,
-      "sourceRevision": "sha256:e81a712d0bb4f40024df879541bb7a916324c4bf0920bbcde3a7f98baa5f5e53",
-      "executionIdentifier": "01a0a762-86fb-7d5a-b097-587c6acebb06"
+      "sourceRevision": "sha256:fa371b84fa47949a1c010e29b9545cb3671b586f9700f4df604d117be0605a2a",
+      "executionIdentifier": "01a0a98a-1de0-715d-9080-5c4de1ae306b"
     }
   ]
 }

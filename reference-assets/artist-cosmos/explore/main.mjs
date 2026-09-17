@@ -2,6 +2,7 @@ import * as THREE from '../interactive/vendor/three.module.js';
 import {limits,movement,moveCamera,createWorldSession} from './navigation.mjs';
 import {createWorldGeometry,collisionSurfaces,createStars,createNebula} from './geometry.mjs';
 import {createTrace} from '../interactive/model.mjs';
+import {registerPageTools,explorationTools,createPresentationCheckpoint,communityLinks} from '../interactive/webmcp.mjs';
 
 // llm machine contract; UUIDv5: be15d308-d6c7-5b93-aca4-32206c14ac81.
 // transition: catalogue -> requested world -> active camera -> optional collision -> disposed.
@@ -9,6 +10,7 @@ import {createTrace} from '../interactive/model.mjs';
 const canvas=document.querySelector('canvas'), loading=document.querySelector('.loading'), fallback=document.querySelector('.fallback');
 const collisionInput=document.querySelector('[name=collision]'), landingInput=document.querySelector('[name=landing]');
 const trace=createTrace('be15d308-d6c7-5b93-aca4-32206c14ac81');
+const presentation=createPresentationCheckpoint();let pageTools;
 let renderer,scene,camera,stars,nebula,geometry,session,world,catalog,collision;
 let requestNumber=0,collisionRequest=0,frame=0,lastRender=-Infinity,lastTick=0,dirty=false,disposed=false,frames=0;
 let yaw=0,pitch=0,drag=null,heldMove=null,holdStarted=0,heldMoved=false,activeWorldCount=0,contactCount=0;
@@ -42,7 +44,7 @@ function tick(now){
   if(heldMove&&now-holdStarted>160){for(let axis=0;axis<3;axis++)input[axis]+=axes[heldMove][axis];heldMoved=true;}
   const moving=input.some(Boolean)||(landingInput.checked&&collision);
   if(moving)applyMovement(input,seconds);
-  if(dirty&&now-lastRender>=1000/limits.framesPerSecond){renderer.render(scene,camera);frames++;lastRender=now;dirty=false;observe();}
+  if(dirty&&now-lastRender>=1000/limits.framesPerSecond){renderer.render(scene,camera);frames++;lastRender=now;dirty=false;observe();presentation.presented();}
   if((dirty||moving||heldMove)&&!frame)frame=requestAnimationFrame(tick);
 }
 function waypoint(point){if(!session)return;clearInput();landingInput.checked=false;positionChanged([...point.position]);camera.lookAt(...point.target);const orientation=new THREE.Euler().setFromQuaternion(camera.quaternion,'YXZ');yaw=orientation.y;pitch=orientation.x;trace.add('camera -> selected viewpoint',{position:point.position});requestFrame();}
@@ -85,7 +87,47 @@ async function toggleCollision(){
   finally{if(token===collisionRequest){collisionInput.disabled=false;requestFrame();}}
 }
 function resize(){if(!renderer)return;const rect=canvas.getBoundingClientRect();if(!rect.width||!rect.height)return;renderer.setSize(rect.width,rect.height,false);camera.aspect=rect.width/rect.height;camera.updateProjectionMatrix();requestFrame();}
-function teardown(){if(disposed)return;disposed=true;requestNumber++;releaseWorld();stars?.dispose();nebula?.dispose();renderer?.dispose();renderer?.forceContextLoss();trace.add('exploration disposed');canvas.dataset.disposed='true';}
+function teardown(){if(disposed)return;disposed=true;pageTools?.dispose();presentation.cancel();requestNumber++;releaseWorld();stars?.dispose();nebula?.dispose();renderer?.dispose();renderer?.forceContextLoss();trace.add('exploration disposed');canvas.dataset.disposed='true';}
+
+// machine contract; record_identifier=8d308b58-b6b7-58ca-87ce-25f6fa6b8dc8 (UUIDv5).
+// transition: validated tool input -> existing camera/collision handlers -> completed render -> concise snapshot.
+function explorationSnapshot(){
+  return {ready:!disposed&&Boolean(session)&&canvas.dataset.worldReady==='true',worldIdentifier:session?world.recordIdentifier:null,
+    artist:session?world.artistName:null,cameraPosition:session?[...session.position]:null,sourceCoordinate:session?structuredClone(session.semanticPosition):null,
+    physics:session?.physics??'disabled',landing:landingInput.checked,contactCount,renderedFrames:frames,
+    viewpoints:session?['entrance','passage','object','landing'].map((name,index)=>({name,label:index===0?'入口':world.landmarks[index-1].name})):[],links:communityLinks};
+}
+function requireActiveExploration(){if(disposed||!session||!geometry||document.hidden)throw new Error('Open the exploration page and wait for a world to be ready.');}
+async function presentExploration(expectedWorld){
+  requireActiveExploration();const completed=presentation.next();requestFrame();await completed;
+  if(world.recordIdentifier!==expectedWorld)throw new Error('The selected world changed while the action was running.');
+  return explorationSnapshot();
+}
+function connectExplorationTools(){
+  pageTools=registerPageTools(document.modelContext,explorationTools({
+    catalog:()=>({worlds:catalog.worlds.map(entry=>({worldIdentifier:entry.recordIdentifier,artist:entry.artistName,artistJapanese:entry.artistNameJapanese,title:entry.title})),links:communityLinks}),
+    snapshot:explorationSnapshot,
+    async navigate(input){
+      requireActiveExploration();
+      const entry=input.world_identifier?catalog.worlds.find(item=>item.recordIdentifier===input.world_identifier):null;
+      if(input.world_identifier&&!entry)throw new TypeError('Unknown world identifier. Read the exploration catalogue first.');
+      if(entry&&entry.recordIdentifier!==world.recordIdentifier){await enterWorld(entry);if(!session||world.recordIdentifier!==entry.recordIdentifier)throw new Error('The requested world did not become active.');}
+      requireActiveExploration();const expectedWorld=world.recordIdentifier;clearInput();landingInput.checked=false;
+      if(input.viewpoint){const index=['passage','object','landing'].indexOf(input.viewpoint);waypoint(index<0?world.spawn:world.landmarks[index]);}
+      if(input.look_turns){yaw+=input.look_turns*Math.PI/12;rotate();}
+      if(input.movement)for(let step=0;step<(input.steps??1);step++)applyMovement(input.movement,limits.maximumSeconds);
+      return presentExploration(expectedWorld);
+    },
+    async physics(input){
+      requireActiveExploration();const expectedSession=session;
+      if(session.physics==='loading')throw new Error('Collision is still loading.');
+      if((session.physics==='enabled')!==input.enabled){collisionInput.checked=input.enabled;await toggleCollision();}
+      if(session!==expectedSession||session.physics!==(input.enabled?'enabled':'disabled'))throw new Error('The requested collision setting did not become active.');
+      if(input.landing!==undefined)landingInput.checked=input.landing;
+      return presentExploration(world.recordIdentifier);
+    },
+  }),{onStatus:value=>{canvas.dataset.webmcp=value;},onExecution:event=>trace.add('WebMCP action completed',event)});
+}
 
 for(const button of document.querySelectorAll('[data-move]')){
   button.addEventListener('pointerdown',event=>{if(!session)return;button.setPointerCapture(event.pointerId);heldMove=button.dataset.move;holdStarted=performance.now();heldMoved=false;requestFrame();});
@@ -120,4 +162,5 @@ try{
   for(const entry of catalog.worlds){const button=document.createElement('button');button.type='button';button.dataset.world=entry.slug;button.setAttribute('aria-label',entry.artistNameJapanese+'の宇宙に入る');
     const image=document.createElement('img');image.src=entry.image;image.alt='';image.loading='lazy';image.decoding='async';const label=document.createElement('span');label.textContent=entry.artistNameJapanese;button.append(image,label);button.addEventListener('click',()=>enterWorld(entry));worldList.append(button);}
   const requested=new URLSearchParams(location.search).get('world');await enterWorld(catalog.worlds.find(entry=>entry.slug===requested)??catalog.worlds.find(entry=>entry.slug==='ettore-sottsass')??catalog.worlds[0]);
+  connectExplorationTools();
 }catch(error){loading.hidden=true;fallback.hidden=false;console.error(error);}

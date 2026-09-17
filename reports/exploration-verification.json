@@ -1,7 +1,7 @@
 {
   "recordIdentifier": "be15d308-d6c7-5b93-aca4-32206c14ac81",
-  "executionIdentifier": "01a0a75f-036c-76a2-96c1-3a2bbdd5349c",
-  "recordedAt": "2026-09-15T23:20:17.004Z",
+  "executionIdentifier": "01a0a98a-3521-7047-9660-c24d05f08183",
+  "recordedAt": "2026-09-16T09:26:42.210Z",
   "status": "pass",
   "worldCount": 15,
   "theoremCount": 10,
@@ -70,7 +70,7 @@
     },
     {
       "path": "reference-assets/artist-cosmos/explore/main.mjs",
-      "sha256": "478cbe80c951cf7ae5ae197f4a62497ec4312d4da99dccab472aec2938592b4c"
+      "sha256": "0d4471dedf1b05074c71e85f98de67210bc51cafbd88b1fb60db59f7a2404c7c"
     },
     {
       "path": "reference-assets/artist-cosmos/explore/navigation.mjs",
@@ -86,7 +86,7 @@
     },
     {
       "path": "reference-assets/artist-cosmos/explore/index.html",
-      "sha256": "29329433a2fee2d8d0fd83edf729b03d69f1d3bd370f26e46976ac0872e8dcc2"
+      "sha256": "f7389559b538b733be0ba2f36e377095945d21c5e4ef243baaefa187152a1bfd"
     },
     {
       "path": "reference-assets/artist-cosmos/explore/style.css",
@@ -98,6 +98,6 @@
     }
   ],
   "leanOutput": "'LumeniaExploration.capBound' does not depend on any axioms\n'LumeniaExploration.elapsedTimeBound' does not depend on any axioms\n'LumeniaExploration.displacementBound' does not depend on any axioms\n'LumeniaExploration.observerMagnitudeBound' does not depend on any axioms\n'LumeniaExploration.movementPreservesSource' does not depend on any axioms\n'LumeniaExploration.missingSourceRemainsMissing' does not depend on any axioms\n'LumeniaExploration.collisionStartsDisabled' does not depend on any axioms\n'LumeniaExploration.movementPreservesCollisionChoice' does not depend on any axioms\n'LumeniaExploration.passageClearance' does not depend on any axioms\n'LumeniaExploration.passageHasRoom' does not depend on any axioms\n",
-  "actualRuntimeTests": "✔ flight has a direction-independent speed and bounds stalled frames (1.757083ms)\n✔ actual Rapier passes the open ring, stops at the planet and lands on the platform (130.198083ms)\n✔ free flight is bounded and never rewrites a source coordinate (0.34475ms)\n✔ the Sottsass passage leaves space for the observer and contact gap (0.077166ms)\n✔ each of the fifteen worlds builds and preserves an open passage and a landing surface (233.47325ms)\nℹ tests 5\nℹ suites 0\nℹ pass 5\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 502.673792\n",
+  "actualRuntimeTests": "✔ flight has a direction-independent speed and bounds stalled frames (1.820375ms)\n✔ actual Rapier passes the open ring, stops at the planet and lands on the platform (188.745208ms)\n✔ free flight is bounded and never rewrites a source coordinate (0.335041ms)\n✔ the Sottsass passage leaves space for the observer and contact gap (0.074542ms)\n✔ each of the fifteen worlds builds and preserves an open passage and a landing surface (441.4205ms)\nℹ tests 5\nℹ suites 0\nℹ pass 5\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 824.164834\n",
   "scope": "Constructive integer model, real-valued Wolfram calculations, exact reference data, and actual Rapier checks. Browser evidence and publication are separate receipts."
 }

@@ -48,7 +48,7 @@ export async function buildCosmicImages(outputDirectory = path.join(projectRoot,
   gallery = gallery.replace(/<a[^>]*href="\.\.\/artist-references-2026-09-15\/index.html"[^>]*>[^<]*<\/a>/, '<a href="/records/">資料と検算記録 ↗</a>');
   await writeFile(path.join(outputDirectory, 'index.html'), gallery);
   const applicationFiles = [
-    'index.html', 'main.mjs', 'model.mjs', 'physics.mjs', 'style.css', 'exhibition.json', 'dependencies.json', 'README.md',
+    'index.html', 'main.mjs', 'model.mjs', 'physics.mjs', 'webmcp.mjs', 'style.css', 'exhibition.json', 'dependencies.json', 'README.md',
     'vendor/three.module.js', 'vendor/three.core.js', 'vendor/controls/OrbitControls.js',
     'vendor/rapier.mjs', 'vendor/reference-physics-contract.mjs', 'vendor/THREE-LICENSE.txt', 'vendor/RAPIER-LICENSE.txt',
   ];
