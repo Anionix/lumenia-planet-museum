@@ -16,6 +16,15 @@ jobs:
           CHANGE_BASE: ${{ github.event.pull_request.base.sha }}
           CHANGE_HEAD: ${{ github.event.pull_request.head.sha }}
       - run: npm ci && npm run lint && npx --no-install eslint scripts tests
+      - name: Check design scope revisions
+        run: |
+          node --input-type=module <<'NODE'
+          import {execFileSync} from 'node:child_process';
+          import {readJsonLines} from './scripts/json-lines.mjs';
+          const current=new Map((await readJsonLines('docs/agents/design-gaps.jsonl')).map(record=>[record.recordIdentifier,record]));
+          for(const record of current.values())
+            for(const file of record.scopeFiles??[]) execFileSync('git',['cat-file','-e',`${record.baselineCommit}:${file}`]);
+          NODE
       - name: Inspect duplicated parsing
         run: |
           npx --yes --package @ast-grep/cli@0.45.3 ast-grep test --skip-snapshot-tests
