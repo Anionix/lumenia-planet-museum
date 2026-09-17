@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { copyFile, mkdir, readFile, writeFile } from 'node:fs/promises';
+import { cp, mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { projectRoot } from './source-revision.mjs';
 import { readJsonLines, writeJsonLines } from './json-lines.mjs';
@@ -62,9 +62,11 @@ export async function buildCosmicImages(outputDirectory = path.join(projectRoot,
   ];
   const dependency = JSON.parse(await readFile(path.join(sourceDirectory, 'interactive/dependencies.json'), 'utf8'));
   for (const file of dependency.files) assert.equal(digest(await readFile(path.join(sourceDirectory, 'interactive', file.local_path))), file.sha256);
-  await mkdir(path.join(outputDirectory, 'interactive/vendor/controls'), { recursive: true });
-  for (const file of applicationFiles)
-    await copyFile(path.join(sourceDirectory, 'interactive', file), path.join(outputDirectory, 'interactive', file));
+  const worlds = JSON.parse(await readFile(path.join(sourceDirectory, 'explore/worlds.json'))).worlds;
+  assert.equal(worlds.length, 15);
+  for (const world of worlds) assert.equal(digest(await readFile(path.join(sourceDirectory, 'explore', world.file))), world.sha256);
+  for (const [directory, files] of [['interactive', applicationFiles], ['explore', ['index.html', 'style.css', 'main.mjs', 'navigation.mjs', 'geometry.mjs', 'collision.mjs', 'README.md', 'worlds.json', ...worlds.map(world => world.file)]]])
+    for (const file of files) await cp(path.join(sourceDirectory, directory, file), path.join(outputDirectory, directory, file));
   const documentation = [
     '# 15枚の宇宙を動かす', '',
     '作家を選び、視点を回し、画像を浮かべたりつかんだりできます。「物理で遊ぶ」を入れると衝突と落下を利用できます。初期状態では物理を読み込みません。', '',
