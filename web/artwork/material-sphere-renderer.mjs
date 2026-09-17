@@ -1,5 +1,5 @@
-import { coordinateRequest } from './material-sphere-computation/dimension.mjs';
-import { exactKeys, makeRequest, sampleRequest, validateMaterialParameters } from './material-sphere-computation/kernel.mjs';
+import { coordinateRequest } from '../../planetarium/lib/dimension.mjs';
+import { exactKeys, makeRequest, sampleRequest, validateMaterialParameters } from '../../planetarium/lib/kernel.mjs';
 
 // llm machine contract; claim UUIDv5: baf96ced-5d93-520d-aa86-dd2899b7fa53
 // execution UUIDv7: 01a09ad3-4fb7-78b0-bbc0-77a8f7eb5016

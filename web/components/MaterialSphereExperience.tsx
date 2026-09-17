@@ -3,14 +3,14 @@
 import '@plumeria/core';
 import { useEffect, useRef, useState, useSyncExternalStore, type ReactNode } from 'react';
 import { flushSync } from 'react-dom';
-import { makeCoordinateRequest } from '../artwork/material-sphere-computation/dimension.mjs';
+import { makeCoordinateRequest } from '../../planetarium/lib/dimension.mjs';
 import { dispatchMaterialSphere } from '../artwork/material-sphere-renderer.mjs';
 import { validateMaterialSphereControls } from '../artwork/material-sphere-controls.mjs';
 import { sphereStyles, spherePlaybackStyles } from './MaterialSphere.styles';
 
 // llm machine contract; claim UUIDv5: a54e35a6-6edb-58c1-b2a9-55477638a3e1
 // execution UUIDv7: 01a09ad3-4fb7-78b0-bbc0-77a8f7eb5016
-// transition: bounded controls -> copied checked numerical kernel -> Plumeria variable bindings.
+// transition: bounded controls -> shared checked numerical kernel -> Plumeria variable bindings.
 // CSS owns continuous motion. Projection drops axes 3 and 4; time never changes spatial dimension.
 const dimensions = [1, 2, 3, 4] as const;
 const axisNames = ['第1軸（横）', '第2軸（縦）', '第3軸', '第4軸'] as const;
