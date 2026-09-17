@@ -1,9 +1,9 @@
 {
   "recordIdentifier": "be15d308-d6c7-5b93-aca4-32206c14ac81",
-  "executionIdentifier": "01a0a5eb-bc96-78aa-91ab-178114d712ba",
-  "recordedAt": "2026-09-15T16:34:45.014Z",
+  "executionIdentifier": "01a0a75f-036c-76a2-96c1-3a2bbdd5349c",
+  "recordedAt": "2026-09-15T23:20:17.004Z",
   "status": "pass",
-  "worldCount": 1,
+  "worldCount": 15,
   "theoremCount": 10,
   "axiomDependencies": [],
   "wolframConditions": 6,
@@ -13,8 +13,64 @@
       "sha256": "fb3ac97e605e0175961f3c5caa2960ba5cea90d675e74ce7a7192d0bf44b672b"
     },
     {
+      "path": "reference-assets/artist-cosmos/explore/worlds/william-morris.json",
+      "sha256": "3e82f60d3d049df3c318d34b4318ebac611692493be4a24d15ab297b89e35dec"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/worlds/alphonse-mucha.json",
+      "sha256": "0f83d764f60976289e7fbc0c1dbdb67153766cfdfa646be7d913111b272850b7"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/worlds/charles-rennie-mackintosh.json",
+      "sha256": "7ff646191074ec3e7ccf8b8eb3e0c4201e7d2ac05e9d6471e6e03b0f0ae4d2ea"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/worlds/piet-mondrian.json",
+      "sha256": "7eb0111d5a68e863c3dcd91f6b670f0089c4067d4e94e6fbb96ef4e842596eee"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/worlds/gerrit-rietveld.json",
+      "sha256": "830919c67b451684ff5a4979d8ae2b8895a171e2512c554f8b0689181c08c82f"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/worlds/herbert-bayer.json",
+      "sha256": "f8c4532a4adfa846bd96b84f4ee7b69c5cc7d9469fc7fe186db6647dcb56702b"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/worlds/josef-muller-brockmann.json",
+      "sha256": "c8aa85237a82634db071cf1537798c03e52748242231a31d7ea90a0f29824aca"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/worlds/massimo-vignelli.json",
+      "sha256": "8ee1785ab63f4b3d80a14a4caf295f14869af38b51d65ba6d8372c40d785958a"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/worlds/dieter-rams.json",
+      "sha256": "6eda4ca02aa1ed636d6d6c8196815c7067d619d33ceed6906592b22c4bfd217e"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/worlds/naoto-fukasawa.json",
+      "sha256": "f93dc6864304ebf47aecb13272e71c80013acf80137ec77405f5822c669102d2"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/worlds/rei-kawakubo.json",
+      "sha256": "69bb6af25b333be75f5ec25ace0bc821b801f6a92c445d1f2d2fd8d5f3fc2de4"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/worlds/charles-eames.json",
+      "sha256": "65ffa39ad47261b6ee9208306ab3944d6f0db7d28060c571f54f9cac0acef827"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/worlds/ray-eames.json",
+      "sha256": "73adf919c358f6abe24a508fff81070caca45f246b7b8a53f0c537263e8f16fb"
+    },
+    {
+      "path": "reference-assets/artist-cosmos/explore/worlds/walter-gropius.json",
+      "sha256": "b2cb6370ecc3c6d4262a69223d5b5bc2300419d42b1777cebbc322ab28cc89b1"
+    },
+    {
       "path": "reference-assets/artist-cosmos/explore/main.mjs",
-      "sha256": "7c7e7f0923987f436466e0ee03a62f20025ab9751dae99f4abaf7b985f4f87e5"
+      "sha256": "478cbe80c951cf7ae5ae197f4a62497ec4312d4da99dccab472aec2938592b4c"
     },
     {
       "path": "reference-assets/artist-cosmos/explore/navigation.mjs",
@@ -22,7 +78,7 @@
     },
     {
       "path": "reference-assets/artist-cosmos/explore/geometry.mjs",
-      "sha256": "fd019140087de40ab9ea69876a6531810696423e23f5fe3422b4880c4d248016"
+      "sha256": "cef74914f09f2fba6facf47383761ec1cf521042780527cdf5672e4056684488"
     },
     {
       "path": "reference-assets/artist-cosmos/explore/collision.mjs",
@@ -30,7 +86,7 @@
     },
     {
       "path": "reference-assets/artist-cosmos/explore/index.html",
-      "sha256": "210e9742cfa5d39e6fd6163b7a4475272535ca8df4b322f8605fe0c9e5e2011e"
+      "sha256": "29329433a2fee2d8d0fd83edf729b03d69f1d3bd370f26e46976ac0872e8dcc2"
     },
     {
       "path": "reference-assets/artist-cosmos/explore/style.css",
@@ -42,6 +98,6 @@
     }
   ],
   "leanOutput": "'LumeniaExploration.capBound' does not depend on any axioms\n'LumeniaExploration.elapsedTimeBound' does not depend on any axioms\n'LumeniaExploration.displacementBound' does not depend on any axioms\n'LumeniaExploration.observerMagnitudeBound' does not depend on any axioms\n'LumeniaExploration.movementPreservesSource' does not depend on any axioms\n'LumeniaExploration.missingSourceRemainsMissing' does not depend on any axioms\n'LumeniaExploration.collisionStartsDisabled' does not depend on any axioms\n'LumeniaExploration.movementPreservesCollisionChoice' does not depend on any axioms\n'LumeniaExploration.passageClearance' does not depend on any axioms\n'LumeniaExploration.passageHasRoom' does not depend on any axioms\n",
-  "actualRuntimeTests": "✔ flight has a direction-independent speed and bounds stalled frames (1.790959ms)\n✔ actual Rapier passes the open ring, stops at the planet and lands on the platform (171.216125ms)\n✔ free flight is bounded and never rewrites a source coordinate (0.385791ms)\n✔ the Sottsass passage leaves space for the observer and contact gap (0.098875ms)\nℹ tests 4\nℹ suites 0\nℹ pass 4\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 303.595167\n",
+  "actualRuntimeTests": "✔ flight has a direction-independent speed and bounds stalled frames (1.757083ms)\n✔ actual Rapier passes the open ring, stops at the planet and lands on the platform (130.198083ms)\n✔ free flight is bounded and never rewrites a source coordinate (0.34475ms)\n✔ the Sottsass passage leaves space for the observer and contact gap (0.077166ms)\n✔ each of the fifteen worlds builds and preserves an open passage and a landing surface (233.47325ms)\nℹ tests 5\nℹ suites 0\nℹ pass 5\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 502.673792\n",
   "scope": "Constructive integer model, real-valued Wolfram calculations, exact reference data, and actual Rapier checks. Browser evidence and publication are separate receipts."
 }
