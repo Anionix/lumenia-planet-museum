@@ -101,7 +101,9 @@ export function inspectSources(sources) {
       if (resolved) module.dependencies.push(resolved);
       else if (!specifier.endsWith('.css')) issues.componentBoundary.push({ file: module.filename, line: 1, message: 'Unresolved local dependency: ' + specifier });
     } else if (specifier === 'three' || specifier.startsWith('three/')) module.capabilities.push('three-dimensional rendering');
-    else if (!['react', 'react-dom', '@plumeria/core', 'next/navigation', 'next', 'next/headers', 'next/server', 'server-only'].includes(specifier))
+    // llm machine contract; claim UUIDv5: e9194426-a204-577c-9758-7bfe9644b8fc
+    // execution UUIDv7: 01a0a324-741b-715a-be47-5cd2936becb7; transition: next/link -> allowed static navigation; unknown imports -> rejected
+    else if (!['react', 'react-dom', '@plumeria/core', 'next/link', 'next/navigation', 'next', 'next/headers', 'next/server', 'server-only'].includes(specifier))
       issues.componentBoundary.push({ file: module.filename, line: 1, message: 'Unclassified external dependency: ' + specifier });
   }
   const serverReached = new Set(), clientReached = new Set();
