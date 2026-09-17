@@ -31,4 +31,4 @@ jobs:
           npx --yes --package @ast-grep/cli@0.45.3 ast-grep scan --json=stream scripts tests
       - run: node scripts/connect-planetarium.mjs
       - run: node --test --test-name-pattern='code gates|framework links|Plumeria' tests/application.test.mjs
-      - run: node --test tests/json-lines.test.mjs tests/iso-timestamp.test.mjs tests/audit-record-consistency.test.mjs tests/exploration.test.mjs tests/review-verification.test.mjs tests/contract.test.mjs tests/browser-observations.test.mjs
+      - run: node --test tests/json-lines.test.mjs tests/iso-timestamp.test.mjs tests/audit-record-consistency.test.mjs tests/exploration.test.mjs tests/review-verification.test.mjs tests/contract.test.mjs tests/browser-observations.test.mjs tests/deployment-configuration.test.mjs
