@@ -1,6 +1,23 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { summarizeBrowserRuns } from '../scripts/browser-observations.mjs';
+import { readFile } from 'node:fs/promises';
+import { compileFunction } from 'node:vm';
+import typescript from 'typescript';
+
+// claimIdentifier=aa3ba52a-0e7d-581a-a91d-83d8ef5567be; executionIdentifier=01a0aca4-5470-79c1-9e07-98f3d0803e10; transition=desktop and mobile observations -> errors rejected.
+test('exhibition verification rejects errors and missing records on either viewport', async () => {
+  const source = typescript.createSourceFile('verify.mjs', await readFile(new URL('../reference-assets/artist-cosmos/interactive/verification/verify.mjs', import.meta.url), 'utf8'), typescript.ScriptTarget.Latest, true);
+  const readsErrors = node => typescript.isPropertyAccessExpression(node) && node.name.text === 'errors'
+    || typescript.forEachChild(node, readsErrors);
+  const check = compileFunction(source.statements.filter(readsErrors).map(node => node.getText(source)).join('\n'), ['assert', 'browser']);
+  const fixture = () => ({ observations: { errors: [] }, mobile: { errors: [] } });
+  assert.doesNotThrow(() => check(assert, fixture()));
+  for (const viewport of ['observations', 'mobile']) for (const invalid of [undefined, {}, { errors: null }, { errors: { length: 0 } }, { errors: ['Page error'] }]) {
+    const browser = fixture(); browser[viewport] = invalid;
+    assert.throws(() => check(assert, browser));
+  }
+});
 
 // llm machine contract; claim UUIDv5: b70d510f-8a47-5422-b007-5fd5d1d9a80b
 // execution UUIDv7 assigned by report runner; transition: measurement fixture -> counted or blocked

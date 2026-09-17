@@ -35,7 +35,7 @@ assert.equal(browser.manifest_sha256,inputs.manifest_sha256);
 for(const [file,hash] of Object.entries(browser.application_sha256))assert.equal(sha(await readFile(new URL(file,application))),hash,'Browser evidence is stale for '+file);
 assert.equal(browser.image_count,15);
 assert.equal(browser.context_version,'WebGL 2.0 (OpenGL ES 3.0 Chromium)');
-assert.deepEqual(browser.observations.errors,[]);
+for(const observation of [browser.observations,browser.mobile])assert.deepEqual(observation.errors,[]);
 assert.equal(browser.observations.allSemanticPositionsUnchanged,true);
 for(const condition of ['gravityMovedDisplay','paused','reset','restoredPositions'])assert.equal(browser.observations.physics[condition],true);
 const result={record_identifier:manifest.record_id,event_identifier:createEventIdentifier(),observed_at:new Date().toISOString(),state:'verified',manifest_sha256:inputs.manifest_sha256,lean_source_sha256:sha(leanSource),wolfram_code_sha256:sha(wolfram.evaluated_code),lean_version:'4.28.0',theorem_count:theoremNames.length,all_axiom_sets_empty:true,unproved_shortcuts:false,wolfram_checks:Object.keys(wolfram.result.checks).length,exact_pair_comparisons:inputs.javascript_pair_comparisons,maximum_squared_distance_error:inputs.maximum_squared_distance_error,original_image_count:manifest.items.length,original_images_unchanged:true,runtime_tests:6,browser_verified:true,browser_verification_observed_at:browser.observed_at,scope:'Exact integer source coordinates and squared distances; display/source separation; initial panel spacing; ideal fixed-step cap. Runtime collision and rendering are checked by tests and browser observation, not proved by Lean.'};
