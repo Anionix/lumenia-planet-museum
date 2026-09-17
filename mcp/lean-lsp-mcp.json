@@ -2,9 +2,8 @@
   "mcpServers": {
     "lean-lsp": {
       "command": "uvx",
-      "args": ["lean-lsp-mcp"],
+      "args": ["--from", "lean-lsp-mcp==0.27.0", "--with", "mcp==1.27.2", "lean-lsp-mcp"],
       "env": {
-        "LEAN_PROJECT_PATH": "/Users/st/.codex/.chatgpt-projects/g-p-6aa64443bd788191b78f5b5af98c1a94",
         "LEAN_LOG_LEVEL": "NONE"
       }
     }

@@ -73,7 +73,14 @@ export async function captureLanguageServerReceipt(...overrides) {
   return receipt;
 }
 
-if (process.argv[1] === new URL(import.meta.url).pathname) {
+if (process.argv[1] === new URL(import.meta.url).pathname && process.argv[2] === '--configuration') {
+  // machine contract: repository template -> absolute project path -> host configuration.
+  // Resolve from this module, so a host launched in another directory keeps the same project.
+  const configuration = JSON.parse(await readFile(new URL('../mcp/lean-lsp-mcp.json', import.meta.url), 'utf8'));
+  configuration.mcpServers['lean-lsp'].args.push('--lean-project-path', projectRoot);
+  console.log(JSON.stringify(configuration));
+} else if (process.argv[1] === new URL(import.meta.url).pathname) {
+  if (process.argv.length !== 2) throw new Error('Usage: capture-language-server.mjs [--configuration]');
   const receipt = await captureLanguageServerReceipt();
   console.log(JSON.stringify({ status: receipt.status, checks: receipt.checks.length, executionIdentifier: receipt.executionIdentifier }));
   process.exitCode = receipt.status === 'pass' ? 0 : 1;
