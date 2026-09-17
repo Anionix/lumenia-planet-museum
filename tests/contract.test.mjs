@@ -22,13 +22,11 @@ async function readExample(name) {
 }
 
 test('the committed verification request is valid', async () => {
-  const request = await readExample('verification-request.json');
-  assert.deepEqual(validateVerificationDocument(request), { valid: true, errors: [] });
+  assert.deepEqual(validateVerificationDocument(await readExample('verification-request.json')), { valid: true, errors: [] });
 });
 
 test('the committed verification result is valid and has a pass aggregate', async () => {
-  const result = await readExample('verification-result.json');
-  assert.deepEqual(validateVerificationDocument(result), { valid: true, errors: [] });
+  assert.deepEqual(validateVerificationDocument(await readExample('verification-result.json')), { valid: true, errors: [] });
 });
 test('createdAt rejects impossible dates instead of accepting normalization', async () => {
   const result = await readExample('verification-result.json');
@@ -37,8 +35,7 @@ test('createdAt rejects impossible dates instead of accepting normalization', as
 });
 
 test('the committed asset manifest is valid', async () => {
-  const manifest = await readExample('valid-asset-manifest.json');
-  assert.deepEqual(validateAssetManifestDocument(manifest), { valid: true, errors: [] });
+  assert.deepEqual(validateAssetManifestDocument(await readExample('valid-asset-manifest.json')), { valid: true, errors: [] });
 });
 
 test('the fixed category budgets add up to the core budget', () => {
@@ -52,36 +49,17 @@ test('the fixed category budgets add up to the core budget', () => {
   assert.equal(categoryTotal, profile.coreTransferBudgetKibibytes);
 });
 
-test('dual Meshopt encodings are rejected', async () => {
+for (const [name, field, value, message] of [
+  ['dual Meshopt encodings are rejected', 'usesKhronosMeshopt', true, /mutually exclusive/],
+  ['a Meshopt asset without its decoder is rejected', 'hasMeshoptDecoder', false, /Meshopt decoder is required/],
+  ['a KTX2 asset without its loader is rejected', 'hasKtx2Loader', false, /KTX2 loader is required/],
+  ['preservation options are required when the asset needs them', 'keepsExtras', false, /extras preservation is required/],
+]) test(name, async () => {
   const manifest = await readExample('valid-asset-manifest.json');
-  manifest.usesKhronosMeshopt = true;
+  manifest[field] = value;
   const result = validateAssetManifestDocument(manifest);
   assert.equal(result.valid, false);
-  assert.match(result.errors.join('\n'), /mutually exclusive/);
-});
-
-test('a Meshopt asset without its decoder is rejected', async () => {
-  const manifest = await readExample('valid-asset-manifest.json');
-  manifest.hasMeshoptDecoder = false;
-  const result = validateAssetManifestDocument(manifest);
-  assert.equal(result.valid, false);
-  assert.match(result.errors.join('\n'), /Meshopt decoder is required/);
-});
-
-test('a KTX2 asset without its loader is rejected', async () => {
-  const manifest = await readExample('valid-asset-manifest.json');
-  manifest.hasKtx2Loader = false;
-  const result = validateAssetManifestDocument(manifest);
-  assert.equal(result.valid, false);
-  assert.match(result.errors.join('\n'), /KTX2 loader is required/);
-});
-
-test('preservation options are required when the asset needs them', async () => {
-  const manifest = await readExample('valid-asset-manifest.json');
-  manifest.keepsExtras = false;
-  const result = validateAssetManifestDocument(manifest);
-  assert.equal(result.valid, false);
-  assert.match(result.errors.join('\n'), /extras preservation is required/);
+  assert.match(result.errors.join('\n'), message);
 });
 
 test('a result cannot claim pass when an observation failed', async () => {
