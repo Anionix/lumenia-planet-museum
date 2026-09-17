@@ -1,11 +1,29 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { limits, movement, moveCamera, createWorldSession } from '../reference-assets/artist-cosmos/explore/navigation.mjs';
-import {readFile} from 'node:fs/promises';
+import {readFile,mkdtemp,rm} from 'node:fs/promises';
+import {tmpdir} from 'node:os';
+import path from 'node:path';
+import {buildCosmicImages} from '../scripts/build-cosmic-images.mjs';
 import {createWorldGeometry,collisionSurfaces} from '../reference-assets/artist-cosmos/explore/geometry.mjs';
 import {createCollisionWorld} from '../reference-assets/artist-cosmos/explore/collision.mjs';
 import typescript from 'typescript';
 import {runInNewContext} from 'node:vm';
+
+// recordIdentifier=852b922a-b0ca-5d05-a182-ca4f1698223b; executionIdentifier=01a0acac-ce75-7411-95d0-f48cb66a7379; transition=registered worlds -> unchanged published bytes.
+test('publication reuses all registered world bytes without rewriting their sources', async context => {
+  const directory = await mkdtemp(path.join(tmpdir(), 'lumenia-published-worlds-'));
+  context.after(() => rm(directory, { recursive: true, force: true }));
+  const source = new URL('../reference-assets/artist-cosmos/explore/', import.meta.url);
+  const catalog = JSON.parse(await readFile(new URL('worlds.json', source)));
+  assert.equal(catalog.worlds.length, 15);
+  const files = await Promise.all(['worlds.json', ...catalog.worlds.map(world => world.file)].map(async file => [file, await readFile(new URL(file, source))]));
+  await buildCosmicImages(directory);
+  for (const [file, bytes] of files) {
+    assert.deepEqual(await readFile(path.join(directory, 'explore', file)), bytes);
+    assert.deepEqual(await readFile(new URL(file, source)), bytes);
+  }
+});
 
 // recordIdentifier=81ca0bef-abaf-543e-a655-632cc55172c9; executionIdentifier=01a0abbe-d765-7a3b-9b79-d72bc7e25cb2; relatedIssueRecordIdentifier=960d3219-91ec-5fb8-9ead-c82bd64b8922; transition=frame timestamp -> bounded flight input.
 test('actual frame expression and flight stay bounded', async () => {

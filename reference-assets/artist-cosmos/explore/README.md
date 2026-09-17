@@ -12,4 +12,6 @@ Leanは10定理と補助証明を検査し、公理依存がすべて空です�
 
 [ソースと検証記録](https://github.com/Anionix/lumenia-planet-museum/tree/codex/fifteen-explorable-worlds)を取得し、`node scripts/verify-exploration.mjs`で再確認できます。
 
+立体データを意図して作り直す場合だけ、`node scripts/build-exploration.mjs`を実行し、差分と検証記録を確認してください。通常の`npm run build`は登録済みデータをそのまま公開用にコピーします。
+
 一次資料: [Three.js の自由飛行](https://threejs.org/docs/pages/FlyControls.html)、[Three.js の色管理](https://threejs.org/manual/en/color-management.html)、[Rapier の移動と衝突](https://rapier.rs/docs/user_guides/javascript/character_controller/)。

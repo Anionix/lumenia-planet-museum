@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {copyFile,mkdir,readFile,writeFile} from 'node:fs/promises';
+import {mkdir,readFile,writeFile} from 'node:fs/promises';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
 import {projectRoot} from './source-revision.mjs';
@@ -8,11 +8,11 @@ import {worldRecipes} from './exploration-recipes.mjs';
 import {artistWorldRecipes} from './artist-world-recipes.mjs';
 import {limits,ringClearance} from '../reference-assets/artist-cosmos/explore/navigation.mjs';
 
-export async function buildExploration(destination=path.join(projectRoot,'web/public/cosmos/explore')) {
+export async function generateExploration(destination=path.join(projectRoot,'reference-assets/artist-cosmos/explore')) {
   const source=path.join(projectRoot,'reference-assets/artist-cosmos/explore');
   const reference=JSON.parse(await readFile(path.join(source,'../interactive/exhibition.json'),'utf8'));
   const catalog=[];
-  for (const directory of [source,destination]) await mkdir(path.join(directory,'worlds'),{recursive:true});
+  await mkdir(path.join(destination,'worlds'),{recursive:true});
   for (const [slug, recipe] of Object.entries({...worldRecipes,...artistWorldRecipes})) {
     const artist=reference.items.find(item=>item.image_url===`../${slug}.png`);
     assert.ok(artist, 'Reference artist missing');
@@ -28,13 +28,12 @@ export async function buildExploration(destination=path.join(projectRoot,'web/pu
       machineContract:{physicsEnabledByDefault:false,metresPerSceneUnit:1,valuesOrigin:'presentation_setting',movementLimits:limits},
       spawn:recipe.spawn,passage:recipe.passage,landmarks:recipe.landmarks,background:recipe.background,accent:recipe.accent,shapes};
     const bytes=JSON.stringify(world,null,2)+'\n';
-    for (const directory of [source,destination]) await writeFile(path.join(directory,'worlds',slug+'.json'),bytes);
+    await writeFile(path.join(destination,'worlds',slug+'.json'),bytes);
     catalog.push({recordIdentifier:world.recordIdentifier,slug,artistName:world.artistName,artistNameJapanese:world.artistNameJapanese,
       title:world.title,image:world.image,file:`./worlds/${slug}.json`,sha256:createHash('sha256').update(bytes).digest('hex')});
   }
   const catalogBytes=JSON.stringify({record_type:'exploration_catalog',recordIdentifier:claimIdentifier('exploration/catalog'),physicsEnabledByDefault:false,worlds:catalog},null,2)+'\n';
-  for (const directory of [source,destination]) await writeFile(path.join(directory,'worlds.json'),catalogBytes);
-  for (const file of ['index.html','style.css','main.mjs','navigation.mjs','geometry.mjs','collision.mjs','README.md']) await copyFile(path.join(source,file),path.join(destination,file));
+  await writeFile(path.join(destination,'worlds.json'),catalogBytes);
   return {worldCount:catalog.length,physicsEnabledByDefault:false};
 }
-if(process.argv[1]===new URL(import.meta.url).pathname) console.log(JSON.stringify(await buildExploration()));
+if(process.argv[1]===new URL(import.meta.url).pathname) console.log(JSON.stringify(await generateExploration()));
