@@ -87,7 +87,8 @@ test('source identity binds formal evidence and changes with source edits',()=>i
     for(const directory of ['formal','contracts','scripts','tests','mcp','web','reference-assets'])await mkdir(path.join(root,directory));
     for(const file of ['intent.md','spec.md','CONSTRAINTS.md','lean-toolchain','lakefile.toml','lake-manifest.json','package.json','package-lock.json','eslint.config.mjs'])await writeFile(path.join(root,file),'fixture');
     await mkdir(path.join(root,'planetarium/lib'),{recursive:true});
-    for(const file of ['reference-physics-contract.mjs','threejs-reference-adapter.mjs'])
+    const sharedFiles=['kernel.mjs','dimension.mjs','reference-physics-contract.mjs','threejs-reference-adapter.mjs'];
+    for(const file of sharedFiles)
       await writeFile(path.join(root,'planetarium/lib',file),'fixture');
     const before=await sourceManifest(root);
     await mkdir(path.join(root,'web/public/cosmos/interactive'),{recursive:true});
@@ -95,7 +96,7 @@ test('source identity binds formal evidence and changes with source edits',()=>i
     assert.deepEqual(await sourceManifest(root),before);
     await writeFile(path.join(root,'reference-assets/reference.json'),'new source');
     assert.notEqual((await sourceManifest(root)).sourceRevision,before.sourceRevision);
-    for(const file of ['reference-physics-contract.mjs','threejs-reference-adapter.mjs']){
+    for(const file of sharedFiles){
       const beforeSharedEdit=await sourceManifest(root);
       await writeFile(path.join(root,'planetarium/lib',file),'changed shared implementation');
       assert.notEqual((await sourceManifest(root)).sourceRevision,beforeSharedEdit.sourceRevision);
