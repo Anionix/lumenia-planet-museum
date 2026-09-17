@@ -52,29 +52,16 @@ function requireKeys(value, requiredKeys, path, errors) {
   }
 }
 
-function requireString(value, path, errors) {
-  if (typeof value !== 'string' || value.length === 0) {
-    errors.push(path + ': expected a non-empty string');
-    return false;
-  }
-  return true;
+function createValueValidator(check, description) {
+  return (value, path, errors) => {
+    const valid = check(value);
+    if (!valid) errors.push(path + ': expected ' + description);
+    return valid;
+  };
 }
-
-function requireBoolean(value, path, errors) {
-  if (typeof value !== 'boolean') {
-    errors.push(path + ': expected a boolean');
-    return false;
-  }
-  return true;
-}
-
-function requireInteger(value, path, errors) {
-  if (!Number.isInteger(value)) {
-    errors.push(path + ': expected an integer');
-    return false;
-  }
-  return true;
-}
+const requireString = createValueValidator(value => typeof value === 'string' && value.length > 0, 'a non-empty string');
+const requireBoolean = createValueValidator(value => typeof value === 'boolean', 'a boolean');
+const requireInteger = createValueValidator(Number.isInteger, 'an integer');
 
 function validateIdentifier(value, pattern, path, errors) {
   if (!requireString(value, path, errors)) {
