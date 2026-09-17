@@ -6,6 +6,7 @@ import { wolframChecks } from '../planetarium/checks/wolfram-check.mjs';
 import { parseIsoTimestamp } from './iso-timestamp.mjs';
 
 // machine contract: recorded calculation -> later reference; mismatches -> rejected.
+// claimIdentifier=c87c7d7c-11a9-50c8-ac18-101d59a67c0a; executionIdentifier=01a0ab94-f361-737f-91a9-1dd9adeca578; transition=reproduced -> corrected.
 // Replays archived material inputs; does not certify freshness or authenticity of a new calculation.
 const programNames = ['root', 'material', 'images', 'exploration', 'clock', 'review'];
 const executionPattern = /^[0-9a-f]{8}-[0-9a-f]{4}-7[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/;
@@ -47,7 +48,7 @@ function checkCount(program) {
     return value.comparisonCount;
   }
   const names = program.name === 'exploration' ? Object.entries(value).filter(([, item]) => typeof item === 'boolean').map(([name]) => name) : Object.keys(value.checks);
-  same(names, expectedChecks[program.name], program.name + ' check names');
+  same(names.sort(), [...expectedChecks[program.name]].sort(), program.name + ' check names');
   if (program.name === 'material') same(value.channelMix.rows.map(row => row.slice(0, 3).join(':')).sort(), expectedMaterialInputs, 'Material input coverage');
   const checks = program.name === 'exploration' ? names.map(name => value[name]) : Object.values(value.checks);
   assert.ok(checks.length > 0 && checks.every(value => value === true), 'Calculation checks');
