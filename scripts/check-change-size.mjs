@@ -8,17 +8,15 @@ export function checkChangeSize(base, head = 'HEAD', directory = process.cwd()) 
   if (!base) throw new Error('A base revision is required.');
   const revision = reference => git('rev-parse', '--verify', '--end-of-options', `${reference}^{commit}`);
   const baseRevision = revision(base), headRevision = revision(head);
-  const range = `${baseRevision}...${headRevision}`;
-  const changes = git('diff', '--numstat', '--no-renames', '-z', range).split('\0').filter(Boolean);
-  const objectRows = git('diff', '--raw', '--no-renames', '--abbrev=40', '-z', range).split('\0').filter(Boolean);
-  const contentObjects = objectRows.flatMap((row, index) => {
-    if (index % 2) return [];
-    const [oldMode, newMode, oldObject, newObject, status] = row.slice(1).split(' ');
-    return status === 'A' ? [[newMode, newObject]] : status === 'D' ? [[oldMode, oldObject]] : [[oldMode, oldObject], [newMode, newObject]];
-  });
+  const changes = git('diff', '--numstat', '--no-renames', '-z', `${baseRevision}...${headRevision}`).split('\0').filter(Boolean);
   const counts = changes.map(row => row.split('\t').slice(0, 2).map(Number));
-  const binary = counts.some(pair => pair.some(value => !Number.isSafeInteger(value) || value < 0)) ||
-    contentObjects.some(([mode, object]) => mode === '160000' || execFileSync('git', ['cat-file', 'blob', object], { cwd: directory }).includes(0));
+  const binary = counts.flat().some(value => !Number.isSafeInteger(value) || value < 0) ||
+    git('diff', '--raw', '--no-renames', '--abbrev=40', '-z', `${baseRevision}...${headRevision}`).split('\0')
+      .filter((row, index) => row && index % 2 === 0).some(row => {
+        const [oldMode, newMode, oldObject, newObject] = row.slice(1).split(' ');
+        return [[oldMode, oldObject], [newMode, newObject]].some(([mode, object]) => mode !== '000000' &&
+          (mode === '160000' || execFileSync('git', ['cat-file', 'blob', object], { cwd: directory }).includes(0)));
+      });
   const changedLines = binary ? null : counts.flat().reduce((sum, value) => sum + value, 0);
   return { record_type: 'change_size_check', recordIdentifier: claimIdentifier('bounded-change-verification'),
     executionIdentifier: uuidVersionSeven(), recordedAt: new Date().toISOString(), baseRevision, headRevision, changedLines, changedPaths: changes.length,
