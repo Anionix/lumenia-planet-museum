@@ -24,37 +24,3 @@ export function reviewEvidence(supportCount, contradictionCount, stale) {
   if (contradictionCount > 0) return 'fail';
   return supportCount > 0 ? 'pass' : 'blocked';
 }
-
-export function sampleRequest(request) {
-  const numericKeys = ['index', 'elapsed', 'seed', 'firstChannel', 'secondChannel', 'supportCount', 'contradictionCount'];
-  const booleanKeys = ['reducedMotion', 'playing', 'stale'];
-  if (!exactKeys(request, ['parameters', ...numericKeys, ...booleanKeys]) ||
-      !validateMaterialParameters(request.parameters) ||
-      !numericKeys.every(key => natural(request[key], key === 'elapsed' ? 120000000 : 1000000)) ||
-      !booleanKeys.every(key => typeof request[key] === 'boolean') ||
-      request.firstChannel > 255 || request.secondChannel > 255) return { accepted: false };
-  const parameters = request.parameters;
-  return {
-    accepted: true,
-    tileCoordinate: request.index % parameters.gridStep,
-    mirrorCoordinate: 100 - parameters.opacityPercent,
-    gridCoordinate: parameters.gridStep * request.index,
-    haloAngle: 30 * (request.index % 12),
-    orthogonalAngle: 90 * (request.index % 4),
-    routeAngle: 45 * (request.index % 8),
-    planeNormal: ['horizontal', 'vertical', 'depth'][request.index % 3],
-    paletteIndex: request.index % parameters.paletteSize,
-    motionPhase: request.reducedMotion ? 0 : request.elapsed % parameters.durationMilliseconds,
-    playing: !request.playing,
-    channelMixNumerator: (100 - parameters.opacityPercent) * request.firstChannel +
-      parameters.opacityPercent * request.secondChannel,
-    foldLeftWidth: 20 + request.seed % 10,
-    foldRightWidth: 40 + request.seed % 10,
-    evidenceDecision: reviewEvidence(request.supportCount, request.contradictionCount, request.stale),
-  };
-}
-
-export function makeRequest(parameters, overrides = {}) {
-  return { parameters, index: 0, elapsed: 0, seed: 0, reducedMotion: false, playing: false,
-    firstChannel: 0, secondChannel: 255, supportCount: 1, contradictionCount: 0, stale: false, ...overrides };
-}
