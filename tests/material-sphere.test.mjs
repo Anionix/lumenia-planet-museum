@@ -20,11 +20,6 @@ const request = (components = [3, 2], extras = {}) => ({ profileIdentifier: prof
 test('Material Sphere application uses current source-bound mathematical evidence', async () => {
   assert.equal((await sourceManifest()).sourceRevision, report.sourceRevision);
 });
-test('Temporary numerical copies match originals until cleanup', async () => {
-  for (const file of ['kernel.mjs', 'dimension.mjs']) assert.equal(
-    await readFile(new URL('../web/artwork/material-sphere-computation/' + file, import.meta.url), 'utf8'),
-    await readFile(new URL('../planetarium/lib/' + file, import.meta.url), 'utf8'));
-});
 test('All fifteen generated Plumeria schemas equal the current checked recipes', async () => {
   assert.equal(knowledge.profiles.length, 15);
   assert.ok(knowledge.profiles.map(compileMaterialSphere).every(recipe => recipe.layers.length > 0));
