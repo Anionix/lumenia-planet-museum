@@ -53,13 +53,8 @@ test('Character receipt boundary accepts a complete synthetic record without cla
   const { directory } = await fixture(t);
   assert.equal((await inspectCharacterAsset(directory)).status, 'pass');
 });
-test('Character admission rejects sixteen unique but unrecognized direction labels', async t => {
-  const { directory } = await fixture(t, ({ reports }) => {
-    reports['direction-semantics.json'].directions[0].expected = 'unknown direction';
-  });
-  assert.equal((await inspectCharacterAsset(directory)).status, 'fail');
-});
 for (const [name, mutate] of [
+  ['sixteen unique but unrecognized direction labels', ({ reports }) => { reports['direction-semantics.json'].directions[0].expected = 'unknown direction'; }],
   ['wrong person', ({ receipt }) => { receipt.personIdentifier = 'another person'; }],
   ['unbound decoded image', ({ reports }) => { reports['validation-extended.json'].imageSha256 = '0'.repeat(64); }],
   ['missing axis evidence', ({ reports }) => { reports['direction-semantics.json'].directions[1].horizontalEvidence = ''; }],
