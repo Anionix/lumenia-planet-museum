@@ -1,7 +1,7 @@
 # machine contract: duplicated line decoding -> review shared parseJsonLines; never automatic rewriting.
 id: 2a88f7e1-43c3-5690-ba8a-97d99f738e8c
 language: JavaScript
-severity: warning
+severity: error
 message: JSON Linesの読み込みは既存のparseJsonLinesを再利用できるか確認してください。
 note: https://ast-grep.github.io/guide/pattern-syntax.html
 rule:
