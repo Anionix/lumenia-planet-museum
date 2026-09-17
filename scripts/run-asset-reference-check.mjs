@@ -53,8 +53,7 @@ try {
   for (const name of ['GltfpackOptimizationGate', 'GltfValidatorConformanceGate', 'ThreeLoaderCompatibilityGate'])
     if (!observations.some(item => evidence.gateNames[item.gateIdentifier] === 'Lumenia.' + name)) add(name, null, error.message, ['asset evidence availability']);
 }
-const after = await sourceManifest();
-if (after.sourceRevision !== manifest.sourceRevision) throw new Error('Source changed during reference inspection');
+if ((await sourceManifest()).sourceRevision !== manifest.sourceRevision) throw new Error('Source changed during reference inspection');
 const result = verificationResult(registry, context.sourceRevision, executionIdentifier, observations);
 await saveReport('asset-reference-report', result, evidence);
 console.log(JSON.stringify({ status: result.status, scope: evidence.scope, gates: observations.length }));

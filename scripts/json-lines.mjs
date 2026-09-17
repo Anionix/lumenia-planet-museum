@@ -8,8 +8,7 @@ export function parseJsonLines(text) {
   if (typeof text !== 'string') throw new TypeError('JSON Lines requires text or UTF-8 bytes.');
   if (text.startsWith('\uFEFF')) throw new Error('JSON Lines must not contain a byte order mark.');
   if (!text) return [];
-  const lines = text.replace(/\n$/, '').split('\n');
-  return lines.map((line, index) => {
+  return text.replace(/\n$/, '').split('\n').map((line, index) => {
     try { return JSON.parse(line); }
     catch { throw new Error(`Invalid JSON Lines record at line ${index + 1}.`); }
   });

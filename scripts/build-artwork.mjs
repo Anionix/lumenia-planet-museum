@@ -93,9 +93,8 @@ const extensions = new Set(assetJson.extensionsUsed ?? []);
 const nodesPreserved = assetJson.nodes?.some(node => node.name === 'LumeniaOrbit' && node.extras?.claimIdentifier === claimIdentifier('Lumenia.OrbitAsset'));
 evidence.output = { path: outputPath, sha256: digest(outputBytes), byteLength: outputBytes.length, extensions: [...extensions], nodesPreserved };
 evidence.validator = validation;
-const inspected = inspectGlb(outputBytes.buffer.slice(outputBytes.byteOffset, outputBytes.byteOffset + outputBytes.byteLength));
 const manifest = validateArtworkManifest({ artifactIdentifier: claimIdentifier('Lumenia.OrbitAsset'), stage: 'validated', resource: '/artworks/orbit.glb',
-  sha256: digest(outputBytes), flags: { ...inspected.flags, requiresNamedNodes: true, requiresExtras: true },
+  sha256: digest(outputBytes), flags: { ...inspectGlb(outputBytes.buffer.slice(outputBytes.byteOffset, outputBytes.byteOffset + outputBytes.byteLength)).flags, requiresNamedNodes: true, requiresExtras: true },
   options: { hasMeshoptDecoder: true, hasKtx2Loader: false, hasDracoLoader: false, keepsNamedNodes: true, keepsExtras: true } });
 const lean = manifest ? spawnSync(path.join(projectRoot, '.lake/build/bin/lumenia_boundary'), [],
   { input: JSON.stringify({ ...manifest.flags, ...manifest.options }) + '\n', encoding: 'utf8', timeout: 10000 }) : null;
