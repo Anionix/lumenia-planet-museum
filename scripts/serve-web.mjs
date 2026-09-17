@@ -30,8 +30,7 @@ const server = http.createServer(async (request, response) => {
     if (!content || content.modified !== modified) {
       const bytes = await readFile(file);
       // Already compressed pictures must not block every request with another compression pass.
-      const textAsset = /\.(html|[cm]?js|css|jsonl?|txt|md|map|svg)$/.test(file);
-      content = { bytes, modified, brotli: textAsset ? brotliCompressSync(bytes, { params: { [constants.BROTLI_PARAM_QUALITY]: 11 } }) : null };
+      content = { bytes, modified, brotli: /\.(html|[cm]?js|css|jsonl?|txt|md|map|svg)$/.test(file) ? brotliCompressSync(bytes, { params: { [constants.BROTLI_PARAM_QUALITY]: 11 } }) : null };
       cache.set(file, content);
     }
     const compressed = content.brotli !== null && /\bbr\b/.test(request.headers['accept-encoding'] ?? '');

@@ -383,8 +383,7 @@ export { expectedMeasurementProfile };
 export function evaluateObservation(observation, requiredRevision) {
   if (observation.sourceRevision !== requiredRevision) return 'staleEvidence';
   if (observation.observedValue === null || observation.limit === null) return 'blocked';
-  const withinLimit = typeof observation.observedValue === 'number'
+  return (typeof observation.observedValue === 'number'
     ? observation.observedValue <= observation.limit
-    : observation.observedValue === observation.limit;
-  return withinLimit ? 'pass' : 'fail';
+    : observation.observedValue === observation.limit) ? 'pass' : 'fail';
 }

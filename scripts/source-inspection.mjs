@@ -69,11 +69,10 @@ export function inspectSources(sources) {
         }
         if (ts.isPropertyAccessExpression(node) && styleNamespaces.has(node.expression.getText(source))) {
           const call = node.parent, declaration = call.parent;
-          const atModuleScope = ts.isCallExpression(call) && call.expression === node && ['create', 'keyframes'].includes(node.name.text) &&
+          if (!(ts.isCallExpression(call) && call.expression === node && ['create', 'keyframes'].includes(node.name.text) &&
             ts.isVariableDeclaration(declaration) && declaration.initializer === call &&
             ts.isVariableDeclarationList(declaration.parent) && (declaration.parent.flags & ts.NodeFlags.Const) !== 0 &&
-            ts.isVariableStatement(declaration.parent.parent) && ts.isSourceFile(declaration.parent.parent.parent);
-          if (!atModuleScope) add('plumeriaScope', node, 'css.create and css.keyframes must initialize module-level const declarations; aliases and other APIs need an explicit contract extension');
+            ts.isVariableStatement(declaration.parent.parent) && ts.isSourceFile(declaration.parent.parent.parent))) add('plumeriaScope', node, 'css.create and css.keyframes must initialize module-level const declarations; aliases and other APIs need an explicit contract extension');
         }
         if (ts.isJsxAttribute(node)) {
           const name = node.name.getText(source);

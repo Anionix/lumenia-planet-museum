@@ -16,9 +16,8 @@ export async function captureLanguageServerReceipt(...overrides) {
   const registry = JSON.parse(await readFile(path.join(projectRoot, 'contracts/claims.json'), 'utf8'));
   const proofs = registry.declarations.filter(item => item.kind === 'theorem');
   const first = proofs[0], file_path = path.join(projectRoot, first.sourcePath);
-  const lines = (await readFile(file_path, 'utf8')).split('\n');
   const name = first.name.split('.').at(-1);
-  const line = lines.findIndex(text => text.startsWith('theorem ' + name + ' ')) + 1;
+  const line = (await readFile(file_path, 'utf8')).split('\n').findIndex(text => text.startsWith('theorem ' + name + ' ')) + 1;
   // The Lean outline supplies the closing position; do not guess proof-end lines.
   const requests = [
     { tool: 'lean_build', target: 'project', arguments: { lean_project_path: projectRoot } },
