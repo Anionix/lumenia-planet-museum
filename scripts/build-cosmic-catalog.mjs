@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { readFile, writeFile, copyFile, mkdir } from 'node:fs/promises';
+import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { projectRoot } from './source-revision.mjs';
@@ -118,8 +118,6 @@ export async function buildCosmicCatalog() {
     await mkdir(path.dirname(path.join(projectRoot, file)), { recursive: true });
     await writeFile(path.join(projectRoot, file), content);
   }
-  for (const filename of ['threejs-reference-adapter.mjs'])
-    await copyFile(path.join(projectRoot, 'planetarium/lib', filename), path.join(projectRoot, 'web/artwork', filename));
   const report = { executionIdentifier, recordedAt: new Date().toISOString(), people: summaries.length,
     semanticCoordinates: summaries.filter(item => item.semanticPosition).length,
     unspecifiedDates: summaries.filter(item => item.period.kind === 'unspecified').map(item => item.canonicalName),

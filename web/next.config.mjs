@@ -28,7 +28,7 @@ export default withPlumeria({
           for (const module of statistics.compilation.modules) collect(module);
           const modules = [...collected].map(module => ({
             identifier: module.identifier(), resource: module.resource ?? null,
-            transformedSource: module.resource?.startsWith(path.join(projectRoot, 'web'))
+            transformedSource: ['web', 'planetarium/lib'].some(directory => module.resource?.startsWith(path.join(projectRoot, directory)))
               ? String(module.originalSource()?.source() ?? '') : null,
           }));
           mkdirSync(path.join(projectRoot, 'reports'), { recursive: true });
