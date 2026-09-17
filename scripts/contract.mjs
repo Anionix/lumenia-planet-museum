@@ -145,6 +145,23 @@ function validateMeasurementProfile(value, path, errors) {
   }
   return true;
 }
+function validateVerificationFields(value, path, errors) {
+  validateIdentifier(value.artifactIdentifier, uuidv5Pattern, path + '.artifactIdentifier', errors);
+  validateStringArray(
+    value.claimIdentifiers,
+    path + '.claimIdentifiers',
+    errors,
+    (item, itemPath, itemErrors) => validateIdentifier(item, uuidv5Pattern, itemPath, itemErrors),
+  );
+  validateStringArray(value.proofTargets, path + '.proofTargets', errors);
+  if (
+    typeof value.sourceRevision !== 'string' ||
+    !sourceRevisionPattern.test(value.sourceRevision)
+  ) {
+    errors.push(path + '.sourceRevision: expected a source content digest or a full commit identifier');
+  }
+  validateMeasurementProfile(value.measurementProfile, path + '.measurementProfile', errors);
+}
 
 function validateVerificationRequest(value, errors) {
   const path = 'verificationRequest';
@@ -161,21 +178,7 @@ function validateVerificationRequest(value, errors) {
   }
   hasOnlyKeys(value, allowedKeys, path, errors);
   requireKeys(value, [...allowedKeys], path, errors);
-  validateIdentifier(value.artifactIdentifier, uuidv5Pattern, path + '.artifactIdentifier', errors);
-  validateStringArray(
-    value.claimIdentifiers,
-    path + '.claimIdentifiers',
-    errors,
-    (item, itemPath, itemErrors) => validateIdentifier(item, uuidv5Pattern, itemPath, itemErrors),
-  );
-  validateStringArray(value.proofTargets, path + '.proofTargets', errors);
-  if (
-    typeof value.sourceRevision !== 'string' ||
-    !sourceRevisionPattern.test(value.sourceRevision)
-  ) {
-    errors.push(path + '.sourceRevision: expected a source content digest or a full commit identifier');
-  }
-  validateMeasurementProfile(value.measurementProfile, path + '.measurementProfile', errors);
+  validateVerificationFields(value, path, errors);
 }
 
 function validateObservation(value, path, errors) {
@@ -261,21 +264,7 @@ function validateVerificationResult(value, errors) {
   }
   hasOnlyKeys(value, allowedKeys, path, errors);
   requireKeys(value, [...allowedKeys], path, errors);
-  validateIdentifier(value.artifactIdentifier, uuidv5Pattern, path + '.artifactIdentifier', errors);
-  validateStringArray(
-    value.claimIdentifiers,
-    path + '.claimIdentifiers',
-    errors,
-    (item, itemPath, itemErrors) => validateIdentifier(item, uuidv5Pattern, itemPath, itemErrors),
-  );
-  validateStringArray(value.proofTargets, path + '.proofTargets', errors);
-  if (
-    typeof value.sourceRevision !== 'string' ||
-    !sourceRevisionPattern.test(value.sourceRevision)
-  ) {
-    errors.push(path + '.sourceRevision: expected a source content digest or a full commit identifier');
-  }
-  validateMeasurementProfile(value.measurementProfile, path + '.measurementProfile', errors);
+  validateVerificationFields(value, path, errors);
   validateIdentifier(value.executionIdentifier, uuidv7Pattern, path + '.executionIdentifier', errors);
   if (!Number.isFinite(parseIsoTimestamp(value.createdAt))) {
     errors.push(path + '.createdAt: expected an ISO date-time');
